@@ -7,7 +7,10 @@
     "slug": "aider"
   },
   "form_factor": {
-    "value": "CLI pair-programming agent",
+    "values": [
+      "CLI",
+      "Coding agent"
+    ],
     "source_url": "https://aider.chat/#:~:text=AI%20pair%20programming",
     "comment": "Placeholder row; verify details before treating as complete."
   },
@@ -96,5 +99,10 @@
     "support": "unknown",
     "source_url": "https://aider.chat/#:~:text=AI%20pair%20programming",
     "comment": "Placeholder pending sourced verification."
+  },
+  "pricing": {
+    "value": "",
+    "source_url": "https://aider.chat/#:~:text=AI%20pair%20programming",
+    "comment": "Pricing source link; exact price not normalized in this matrix."
   }
 }

@@ -7,7 +7,12 @@
     "slug": "claude-code"
   },
   "form_factor": {
-    "value": "CLI, IDE integrations, and SDK",
+    "values": [
+      "CLI",
+      "IDE",
+      "Extension",
+      "SDK"
+    ],
     "source_url": "https://docs.anthropic.com/en/docs/claude-code/overview#:~:text=Claude%20Code",
     "comment": ""
   },
@@ -96,5 +101,10 @@
     "source_url": "https://docs.anthropic.com/en/docs/claude-code/third-party-integrations#:~:text=third-party",
     "comment": "Supports Bedrock/Vertex and related integrations, not arbitrary providers in the same way as OpenAI-compatible CLIs."
   },
-  "notes": ""
+  "notes": "",
+  "pricing": {
+    "value": "",
+    "source_url": "https://docs.anthropic.com/en/docs/claude-code/overview#:~:text=Claude%20Code",
+    "comment": "Pricing source link; exact price not normalized in this matrix."
+  }
 }

@@ -7,7 +7,9 @@
     "slug": "antigravity-cli"
   },
   "form_factor": {
-    "value": "CLI",
+    "values": [
+      "CLI"
+    ],
     "source_url": "https://antigravity.google/docs/cli-getting-started#:~:text=agy",
     "comment": "Installed as the agy command."
   },
@@ -96,5 +98,10 @@
     "source_url": "https://antigravity.google/docs/cli-features#:~:text=--print",
     "comment": "No arbitrary provider configuration found in public CLI help/docs."
   },
-  "notes": "Distinct from Gemini CLI and the older Antigravity IDE."
+  "notes": "Distinct from Gemini CLI and the older Antigravity IDE.",
+  "pricing": {
+    "value": "",
+    "source_url": "https://antigravity.google/#:~:text=Antigravity",
+    "comment": "Pricing source link; exact price not normalized in this matrix."
+  }
 }

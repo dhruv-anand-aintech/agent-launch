@@ -7,7 +7,11 @@
     "slug": "codex-cli"
   },
   "form_factor": {
-    "value": "CLI and hosted coding agent",
+    "values": [
+      "CLI",
+      "Hosted agent",
+      "Coding agent"
+    ],
     "source_url": "https://developers.openai.com/codex/#:~:text=Codex",
     "comment": ""
   },
@@ -96,5 +100,10 @@
     "source_url": "https://github.com/openai/codex#:~:text=model_provider",
     "comment": "Supports custom model providers in config."
   },
-  "notes": ""
+  "notes": "",
+  "pricing": {
+    "value": "",
+    "source_url": "https://openai.com/codex/pricing#:~:text=pricing",
+    "comment": "Pricing source link; exact price not normalized in this matrix."
+  }
 }

@@ -7,7 +7,9 @@
     "slug": "gemini-cli"
   },
   "form_factor": {
-    "value": "CLI",
+    "values": [
+      "CLI"
+    ],
     "source_url": "https://google-gemini.github.io/gemini-cli/#:~:text=Gemini%20CLI",
     "comment": ""
   },
@@ -96,5 +98,10 @@
     "source_url": "https://google-gemini.github.io/gemini-cli/docs/cli/configuration.html#:~:text=providers",
     "comment": "Primarily Gemini/Google-oriented provider configuration."
   },
-  "notes": "Kept as an explicit agent-launch option, but excluded from random selection in this repo."
+  "notes": "Kept as an explicit agent-launch option, but excluded from random selection in this repo.",
+  "pricing": {
+    "value": "",
+    "source_url": "https://github.com/google-gemini/gemini-cli#:~:text=Gemini%20CLI",
+    "comment": "Pricing source link; exact price not normalized in this matrix."
+  }
 }

@@ -8,7 +8,10 @@
       "slug": "aider"
     },
     "form_factor": {
-      "value": "CLI pair-programming agent",
+      "values": [
+        "CLI",
+        "Coding agent"
+      ],
       "source_url": "https://aider.chat/#:~:text=AI%20pair%20programming",
       "comment": "Placeholder row; verify details before treating as complete."
     },
@@ -97,6 +100,11 @@
       "support": "unknown",
       "source_url": "https://aider.chat/#:~:text=AI%20pair%20programming",
       "comment": "Placeholder pending sourced verification."
+    },
+    "pricing": {
+      "value": "",
+      "source_url": "https://aider.chat/#:~:text=AI%20pair%20programming",
+      "comment": "Pricing source link; exact price not normalized in this matrix."
     }
   },
   {
@@ -108,7 +116,11 @@
       "slug": "amp"
     },
     "form_factor": {
-      "value": "CLI/TUI coding agent",
+      "values": [
+        "CLI",
+        "Terminal UI",
+        "Coding agent"
+      ],
       "source_url": "https://ampcode.app/#:~:text=CLI%2FTUI%20Install",
       "comment": "Placeholder row; verify details before treating as complete."
     },
@@ -197,6 +209,11 @@
       "support": "unknown",
       "source_url": "https://ampcode.app/#:~:text=CLI%2FTUI%20Install",
       "comment": "Placeholder pending sourced verification."
+    },
+    "pricing": {
+      "value": "",
+      "source_url": "https://ampcode.app/#:~:text=CLI%2FTUI%20Install",
+      "comment": "Pricing source link; exact price not normalized in this matrix."
     }
   },
   {
@@ -208,7 +225,9 @@
       "slug": "antigravity-cli"
     },
     "form_factor": {
-      "value": "CLI",
+      "values": [
+        "CLI"
+      ],
       "source_url": "https://antigravity.google/docs/cli-getting-started#:~:text=agy",
       "comment": "Installed as the agy command."
     },
@@ -297,7 +316,12 @@
       "source_url": "https://antigravity.google/docs/cli-features#:~:text=--print",
       "comment": "No arbitrary provider configuration found in public CLI help/docs."
     },
-    "notes": "Distinct from Gemini CLI and the older Antigravity IDE."
+    "notes": "Distinct from Gemini CLI and the older Antigravity IDE.",
+    "pricing": {
+      "value": "",
+      "source_url": "https://antigravity.google/#:~:text=Antigravity",
+      "comment": "Pricing source link; exact price not normalized in this matrix."
+    }
   },
   {
     "name": "Antigravity IDE",
@@ -308,7 +332,9 @@
       "slug": "antigravity-ide"
     },
     "form_factor": {
-      "value": "IDE",
+      "values": [
+        "IDE"
+      ],
       "source_url": "https://antigravity.google/#:~:text=CLI",
       "comment": "Google Antigravity IDE surface."
     },
@@ -397,7 +423,12 @@
       "source_url": "https://antigravity.google/docs/#:~:text=providers",
       "comment": ""
     },
-    "notes": "Included as a distinct IDE surface because it is not the same as the new agy CLI."
+    "notes": "Included as a distinct IDE surface because it is not the same as the new agy CLI.",
+    "pricing": {
+      "value": "",
+      "source_url": "https://antigravity.google/#:~:text=Antigravity",
+      "comment": "Pricing source link; exact price not normalized in this matrix."
+    }
   },
   {
     "name": "Claude Code",
@@ -408,7 +439,12 @@
       "slug": "claude-code"
     },
     "form_factor": {
-      "value": "CLI, IDE integrations, and SDK",
+      "values": [
+        "CLI",
+        "IDE",
+        "Extension",
+        "SDK"
+      ],
       "source_url": "https://docs.anthropic.com/en/docs/claude-code/overview#:~:text=Claude%20Code",
       "comment": ""
     },
@@ -497,7 +533,12 @@
       "source_url": "https://docs.anthropic.com/en/docs/claude-code/third-party-integrations#:~:text=third-party",
       "comment": "Supports Bedrock/Vertex and related integrations, not arbitrary providers in the same way as OpenAI-compatible CLIs."
     },
-    "notes": ""
+    "notes": "",
+    "pricing": {
+      "value": "",
+      "source_url": "https://docs.anthropic.com/en/docs/claude-code/overview#:~:text=Claude%20Code",
+      "comment": "Pricing source link; exact price not normalized in this matrix."
+    }
   },
   {
     "name": "Cline",
@@ -508,7 +549,11 @@
       "slug": "cline"
     },
     "form_factor": {
-      "value": "IDE extension coding agent",
+      "values": [
+        "IDE",
+        "Extension",
+        "Coding agent"
+      ],
       "source_url": "https://cline.bot/#:~:text=autonomous%20coding%20agent",
       "comment": "Placeholder row; verify details before treating as complete."
     },
@@ -597,6 +642,11 @@
       "support": "unknown",
       "source_url": "https://cline.bot/#:~:text=autonomous%20coding%20agent",
       "comment": "Placeholder pending sourced verification."
+    },
+    "pricing": {
+      "value": "",
+      "source_url": "https://cline.bot/#:~:text=autonomous%20coding%20agent",
+      "comment": "Pricing source link; exact price not normalized in this matrix."
     }
   },
   {
@@ -608,7 +658,11 @@
       "slug": "codex-cli"
     },
     "form_factor": {
-      "value": "CLI and hosted coding agent",
+      "values": [
+        "CLI",
+        "Hosted agent",
+        "Coding agent"
+      ],
       "source_url": "https://developers.openai.com/codex/#:~:text=Codex",
       "comment": ""
     },
@@ -697,7 +751,12 @@
       "source_url": "https://github.com/openai/codex#:~:text=model_provider",
       "comment": "Supports custom model providers in config."
     },
-    "notes": ""
+    "notes": "",
+    "pricing": {
+      "value": "",
+      "source_url": "https://openai.com/codex/pricing#:~:text=pricing",
+      "comment": "Pricing source link; exact price not normalized in this matrix."
+    }
   },
   {
     "name": "Cursor Agent CLI",
@@ -708,7 +767,10 @@
       "slug": "cursor-agent"
     },
     "form_factor": {
-      "value": "CLI for Cursor Agent",
+      "values": [
+        "CLI",
+        "Coding agent"
+      ],
       "source_url": "https://docs.cursor.com/en/cli/overview#:~:text=CLI",
       "comment": "Installed as cursor-agent or agent on this machine."
     },
@@ -797,7 +859,12 @@
       "source_url": "https://docs.cursor.com/en/settings/models#:~:text=models",
       "comment": "Cursor supports custom API keys/models in settings."
     },
-    "notes": "This entry is for the CLI agent surface, not the full IDE."
+    "notes": "This entry is for the CLI agent surface, not the full IDE.",
+    "pricing": {
+      "value": "",
+      "source_url": "https://cursor.com/pricing#:~:text=pricing",
+      "comment": "Pricing source link; exact price not normalized in this matrix."
+    }
   },
   {
     "name": "Cursor IDE",
@@ -808,7 +875,9 @@
       "slug": "cursor-ide"
     },
     "form_factor": {
-      "value": "IDE",
+      "values": [
+        "IDE"
+      ],
       "source_url": "https://cursor.com/#:~:text=AI%20code%20editor",
       "comment": "VS Code-derived AI IDE."
     },
@@ -897,7 +966,12 @@
       "source_url": "https://docs.cursor.com/en/settings/models#:~:text=models",
       "comment": "Supports custom API keys/models."
     },
-    "notes": "IDE surface included because the comparison covers coding agents, CLIs, and IDEs."
+    "notes": "IDE surface included because the comparison covers coding agents, CLIs, and IDEs.",
+    "pricing": {
+      "value": "",
+      "source_url": "https://cursor.com/pricing#:~:text=pricing",
+      "comment": "Pricing source link; exact price not normalized in this matrix."
+    }
   },
   {
     "name": "Devin",
@@ -908,7 +982,10 @@
       "slug": "devin"
     },
     "form_factor": {
-      "value": "Hosted software engineering agent",
+      "values": [
+        "Hosted agent",
+        "Coding agent"
+      ],
       "source_url": "https://devin.ai/#:~:text=AI%20software%20engineer",
       "comment": "Placeholder row; verify details before treating as complete."
     },
@@ -997,6 +1074,11 @@
       "support": "unknown",
       "source_url": "https://devin.ai/#:~:text=AI%20software%20engineer",
       "comment": "Placeholder pending sourced verification."
+    },
+    "pricing": {
+      "value": "",
+      "source_url": "https://devin.ai/#:~:text=AI%20software%20engineer",
+      "comment": "Pricing source link; exact price not normalized in this matrix."
     }
   },
   {
@@ -1008,7 +1090,9 @@
       "slug": "gemini-cli"
     },
     "form_factor": {
-      "value": "CLI",
+      "values": [
+        "CLI"
+      ],
       "source_url": "https://google-gemini.github.io/gemini-cli/#:~:text=Gemini%20CLI",
       "comment": ""
     },
@@ -1097,7 +1181,12 @@
       "source_url": "https://google-gemini.github.io/gemini-cli/docs/cli/configuration.html#:~:text=providers",
       "comment": "Primarily Gemini/Google-oriented provider configuration."
     },
-    "notes": "Kept as an explicit agent-launch option, but excluded from random selection in this repo."
+    "notes": "Kept as an explicit agent-launch option, but excluded from random selection in this repo.",
+    "pricing": {
+      "value": "",
+      "source_url": "https://github.com/google-gemini/gemini-cli#:~:text=Gemini%20CLI",
+      "comment": "Pricing source link; exact price not normalized in this matrix."
+    }
   },
   {
     "name": "GitHub Copilot coding agent",
@@ -1108,7 +1197,11 @@
       "slug": "github-copilot-coding-agent"
     },
     "form_factor": {
-      "value": "Hosted coding agent and IDE assistant",
+      "values": [
+        "IDE",
+        "Hosted agent",
+        "Coding agent"
+      ],
       "source_url": "https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent#:~:text=coding%20agent",
       "comment": "Placeholder row; verify details before treating as complete."
     },
@@ -1197,6 +1290,11 @@
       "support": "unknown",
       "source_url": "https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent#:~:text=coding%20agent",
       "comment": "Placeholder pending sourced verification."
+    },
+    "pricing": {
+      "value": "",
+      "source_url": "https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent#:~:text=coding%20agent",
+      "comment": "Pricing source link; exact price not normalized in this matrix."
     }
   },
   {
@@ -1208,7 +1306,12 @@
       "slug": "kilo-code"
     },
     "form_factor": {
-      "value": "IDE extension and CLI coding agent",
+      "values": [
+        "CLI",
+        "IDE",
+        "Extension",
+        "Coding agent"
+      ],
       "source_url": "https://kilo.ai/docs/getting-started#:~:text=works%20wherever%20you%20do",
       "comment": "Placeholder row; verify details before treating as complete."
     },
@@ -1297,6 +1400,11 @@
       "support": "unknown",
       "source_url": "https://kilo.ai/docs/getting-started#:~:text=works%20wherever%20you%20do",
       "comment": "Placeholder pending sourced verification."
+    },
+    "pricing": {
+      "value": "",
+      "source_url": "https://kilo.ai/docs/getting-started#:~:text=works%20wherever%20you%20do",
+      "comment": "Pricing source link; exact price not normalized in this matrix."
     }
   },
   {
@@ -1308,7 +1416,10 @@
       "slug": "kimi-cli"
     },
     "form_factor": {
-      "value": "CLI coding agent",
+      "values": [
+        "CLI",
+        "Coding agent"
+      ],
       "source_url": "https://kimi-ai.chat/guide/kimi-cli/#:~:text=Kimi%20Code%20CLI",
       "comment": "Placeholder row; verify details before treating as complete."
     },
@@ -1397,6 +1508,11 @@
       "support": "unknown",
       "source_url": "https://kimi-ai.chat/guide/kimi-cli/#:~:text=Kimi%20Code%20CLI",
       "comment": "Placeholder pending sourced verification."
+    },
+    "pricing": {
+      "value": "",
+      "source_url": "https://kimi-ai.chat/guide/kimi-cli/#:~:text=Kimi%20Code%20CLI",
+      "comment": "Pricing source link; exact price not normalized in this matrix."
     }
   },
   {
@@ -1408,7 +1524,10 @@
       "slug": "opencode"
     },
     "form_factor": {
-      "value": "Terminal UI and CLI",
+      "values": [
+        "CLI",
+        "Terminal UI"
+      ],
       "source_url": "https://opencode.ai/docs/#:~:text=terminal",
       "comment": ""
     },
@@ -1497,7 +1616,12 @@
       "source_url": "https://opencode.ai/docs/providers/#:~:text=providers",
       "comment": "Supports many providers and custom provider configuration."
     },
-    "notes": ""
+    "notes": "",
+    "pricing": {
+      "value": "",
+      "source_url": "https://opencode.ai/docs#:~:text=opencode",
+      "comment": "Pricing source link; exact price not normalized in this matrix."
+    }
   },
   {
     "name": "Qwen Code",
@@ -1508,7 +1632,10 @@
       "slug": "qwen-code"
     },
     "form_factor": {
-      "value": "CLI coding agent",
+      "values": [
+        "CLI",
+        "Coding agent"
+      ],
       "source_url": "https://github.com/QwenLM/qwen-code#:~:text=terminal",
       "comment": "Placeholder row; verify details before treating as complete."
     },
@@ -1597,6 +1724,11 @@
       "support": "unknown",
       "source_url": "https://github.com/QwenLM/qwen-code#:~:text=terminal",
       "comment": "Placeholder pending sourced verification."
+    },
+    "pricing": {
+      "value": "",
+      "source_url": "https://github.com/QwenLM/qwen-code#:~:text=terminal",
+      "comment": "Pricing source link; exact price not normalized in this matrix."
     }
   },
   {
@@ -1608,7 +1740,11 @@
       "slug": "roo-code"
     },
     "form_factor": {
-      "value": "IDE extension coding agent",
+      "values": [
+        "IDE",
+        "Extension",
+        "Coding agent"
+      ],
       "source_url": "https://roocode.com/#:~:text=AI%20coding%20assistant",
       "comment": "Placeholder row; verify details before treating as complete."
     },
@@ -1697,6 +1833,11 @@
       "support": "unknown",
       "source_url": "https://roocode.com/#:~:text=AI%20coding%20assistant",
       "comment": "Placeholder pending sourced verification."
+    },
+    "pricing": {
+      "value": "",
+      "source_url": "https://roocode.com/#:~:text=AI%20coding%20assistant",
+      "comment": "Pricing source link; exact price not normalized in this matrix."
     }
   },
   {
@@ -1708,7 +1849,10 @@
       "slug": "windsurf"
     },
     "form_factor": {
-      "value": "IDE and coding agent",
+      "values": [
+        "IDE",
+        "Coding agent"
+      ],
       "source_url": "https://windsurf.com/#:~:text=Windsurf",
       "comment": "Placeholder row; verify details before treating as complete."
     },
@@ -1797,6 +1941,11 @@
       "support": "unknown",
       "source_url": "https://windsurf.com/#:~:text=Windsurf",
       "comment": "Placeholder pending sourced verification."
+    },
+    "pricing": {
+      "value": "",
+      "source_url": "https://windsurf.com/#:~:text=Windsurf",
+      "comment": "Pricing source link; exact price not normalized in this matrix."
     }
   }
 ]

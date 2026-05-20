@@ -7,7 +7,10 @@
     "slug": "opencode"
   },
   "form_factor": {
-    "value": "Terminal UI and CLI",
+    "values": [
+      "CLI",
+      "Terminal UI"
+    ],
     "source_url": "https://opencode.ai/docs/#:~:text=terminal",
     "comment": ""
   },
@@ -96,5 +99,10 @@
     "source_url": "https://opencode.ai/docs/providers/#:~:text=providers",
     "comment": "Supports many providers and custom provider configuration."
   },
-  "notes": ""
+  "notes": "",
+  "pricing": {
+    "value": "",
+    "source_url": "https://opencode.ai/docs#:~:text=opencode",
+    "comment": "Pricing source link; exact price not normalized in this matrix."
+  }
 }

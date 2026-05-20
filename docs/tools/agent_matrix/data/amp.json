@@ -7,7 +7,11 @@
     "slug": "amp"
   },
   "form_factor": {
-    "value": "CLI/TUI coding agent",
+    "values": [
+      "CLI",
+      "Terminal UI",
+      "Coding agent"
+    ],
     "source_url": "https://ampcode.app/#:~:text=CLI%2FTUI%20Install",
     "comment": "Placeholder row; verify details before treating as complete."
   },
@@ -96,5 +100,10 @@
     "support": "unknown",
     "source_url": "https://ampcode.app/#:~:text=CLI%2FTUI%20Install",
     "comment": "Placeholder pending sourced verification."
+  },
+  "pricing": {
+    "value": "",
+    "source_url": "https://ampcode.app/#:~:text=CLI%2FTUI%20Install",
+    "comment": "Pricing source link; exact price not normalized in this matrix."
   }
 }

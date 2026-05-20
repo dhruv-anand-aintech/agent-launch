@@ -16,9 +16,10 @@
   "properties": {
     "name": {"type": "string", "$comment": "About | Name | Product or coding-agent surface."},
     "links": {"allOf": [{"$ref": "#/$defs/links"}], "$comment": "About | Links | Product links and stable slug."},
-    "form_factor": {"allOf": [{"$ref": "#/$defs/stringWithSource"}], "$comment": "About | Form Factor | CLI, IDE, extension, terminal UI, hosted agent, or hybrid."},
+    "form_factor": {"allOf": [{"$ref": "#/$defs/stringListWithSource"}], "$comment": "About | Form Factor | CLI, IDE, extension, terminal UI, hosted agent, or hybrid."},
     "released_in": {"allOf": [{"$ref": "#/$defs/stringWithSource"}], "$comment": "About | Released | First public release month and year for this surface."},
     "latest_major_update": {"allOf": [{"$ref": "#/$defs/stringWithSource"}], "$comment": "About | Latest Major Update | Most recent major public update captured in this dataset."},
+    "pricing": {"allOf": [{"$ref": "#/$defs/stringWithSource"}], "$comment": "About | Pricing | Pricing source."},
     "rules": {"allOf": [{"$ref": "#/$defs/featureWithSource"}], "$comment": "Context | Rules | Persistent project or global instruction files."},
     "skills": {"allOf": [{"$ref": "#/$defs/featureWithSource"}], "$comment": "Context | Skills | Reusable skill folders, commands, playbooks, or agent capabilities."},
     "hooks": {"allOf": [{"$ref": "#/$defs/featureWithSource"}], "$comment": "Automation | Hooks | User-configurable lifecycle hooks or event hooks."},
@@ -61,6 +62,15 @@
       "required": ["value", "source_url", "comment"],
       "properties": {
         "value": {"type": "string"},
+        "source_url": {"type": "string"},
+        "comment": {"type": "string"}
+      }
+    },
+    "stringListWithSource": {
+      "type": "object",
+      "required": ["values", "source_url", "comment"],
+      "properties": {
+        "values": {"type": "array", "items": {"type": "string"}},
         "source_url": {"type": "string"},
         "comment": {"type": "string"}
       }

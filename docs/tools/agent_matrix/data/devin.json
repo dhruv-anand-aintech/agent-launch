@@ -7,7 +7,10 @@
     "slug": "devin"
   },
   "form_factor": {
-    "value": "Hosted software engineering agent",
+    "values": [
+      "Hosted agent",
+      "Coding agent"
+    ],
     "source_url": "https://devin.ai/#:~:text=AI%20software%20engineer",
     "comment": "Placeholder row; verify details before treating as complete."
   },
@@ -96,5 +99,10 @@
     "support": "unknown",
     "source_url": "https://devin.ai/#:~:text=AI%20software%20engineer",
     "comment": "Placeholder pending sourced verification."
+  },
+  "pricing": {
+    "value": "",
+    "source_url": "https://devin.ai/#:~:text=AI%20software%20engineer",
+    "comment": "Pricing source link; exact price not normalized in this matrix."
   }
 }

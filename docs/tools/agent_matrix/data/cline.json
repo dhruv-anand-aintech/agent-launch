@@ -7,7 +7,11 @@
     "slug": "cline"
   },
   "form_factor": {
-    "value": "IDE extension coding agent",
+    "values": [
+      "IDE",
+      "Extension",
+      "Coding agent"
+    ],
     "source_url": "https://cline.bot/#:~:text=autonomous%20coding%20agent",
     "comment": "Placeholder row; verify details before treating as complete."
   },
@@ -96,5 +100,10 @@
     "support": "unknown",
     "source_url": "https://cline.bot/#:~:text=autonomous%20coding%20agent",
     "comment": "Placeholder pending sourced verification."
+  },
+  "pricing": {
+    "value": "",
+    "source_url": "https://cline.bot/#:~:text=autonomous%20coding%20agent",
+    "comment": "Pricing source link; exact price not normalized in this matrix."
   }
 }

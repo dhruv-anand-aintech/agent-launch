@@ -7,7 +7,9 @@
     "slug": "cursor-ide"
   },
   "form_factor": {
-    "value": "IDE",
+    "values": [
+      "IDE"
+    ],
     "source_url": "https://cursor.com/#:~:text=AI%20code%20editor",
     "comment": "VS Code-derived AI IDE."
   },
@@ -96,5 +98,10 @@
     "source_url": "https://docs.cursor.com/en/settings/models#:~:text=models",
     "comment": "Supports custom API keys/models."
   },
-  "notes": "IDE surface included because the comparison covers coding agents, CLIs, and IDEs."
+  "notes": "IDE surface included because the comparison covers coding agents, CLIs, and IDEs.",
+  "pricing": {
+    "value": "",
+    "source_url": "https://cursor.com/pricing#:~:text=pricing",
+    "comment": "Pricing source link; exact price not normalized in this matrix."
+  }
 }

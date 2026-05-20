@@ -7,7 +7,10 @@
     "slug": "cursor-agent"
   },
   "form_factor": {
-    "value": "CLI for Cursor Agent",
+    "values": [
+      "CLI",
+      "Coding agent"
+    ],
     "source_url": "https://docs.cursor.com/en/cli/overview#:~:text=CLI",
     "comment": "Installed as cursor-agent or agent on this machine."
   },
@@ -96,5 +99,10 @@
     "source_url": "https://docs.cursor.com/en/settings/models#:~:text=models",
     "comment": "Cursor supports custom API keys/models in settings."
   },
-  "notes": "This entry is for the CLI agent surface, not the full IDE."
+  "notes": "This entry is for the CLI agent surface, not the full IDE.",
+  "pricing": {
+    "value": "",
+    "source_url": "https://cursor.com/pricing#:~:text=pricing",
+    "comment": "Pricing source link; exact price not normalized in this matrix."
+  }
 }

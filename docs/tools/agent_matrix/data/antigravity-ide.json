@@ -7,7 +7,9 @@
     "slug": "antigravity-ide"
   },
   "form_factor": {
-    "value": "IDE",
+    "values": [
+      "IDE"
+    ],
     "source_url": "https://antigravity.google/#:~:text=CLI",
     "comment": "Google Antigravity IDE surface."
   },
@@ -96,5 +98,10 @@
     "source_url": "https://antigravity.google/docs/#:~:text=providers",
     "comment": ""
   },
-  "notes": "Included as a distinct IDE surface because it is not the same as the new agy CLI."
+  "notes": "Included as a distinct IDE surface because it is not the same as the new agy CLI.",
+  "pricing": {
+    "value": "",
+    "source_url": "https://antigravity.google/#:~:text=Antigravity",
+    "comment": "Pricing source link; exact price not normalized in this matrix."
+  }
 }

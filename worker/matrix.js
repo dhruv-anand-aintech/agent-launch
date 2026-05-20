@@ -63,7 +63,7 @@ function render() {
     .hero p { margin: 0; color: var(--muted); max-width: 920px; font-size: 15px; line-height: 1.55; }
     .meta-row { margin-top: 18px; display: flex; gap: 12px; flex-wrap: wrap; align-items: center; color: var(--muted); font-size: 13px; }
     .pill { border: 1px solid var(--line); padding: 6px 9px; background: #fff; }
-    .layout { display: grid; grid-template-columns: 260px 1fr; height: calc(100vh - 58px); overflow: hidden; }
+    .layout { display: grid; grid-template-columns: 280px 1fr; height: calc(100vh - 58px); overflow: hidden; }
     aside { border-right: 1px solid var(--line); background: #fbf8ef; padding: 16px 14px; height: 100%; overflow: auto; }
     .filter-title { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; font-weight: 700; }
     .filter-block { border-top: 1px solid var(--line); padding: 13px 0; }
@@ -87,10 +87,16 @@ function render() {
     }
     thead tr:nth-child(2) th { top: 35px; }
     .group-heading { background: #e2d8c5; color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: 0; }
-    th:first-child, td:first-child { position: sticky; left: 0; z-index: 6; background: var(--panel); min-width: 210px; max-width: 210px; }
-    th:first-child { z-index: 18; background: #e8decc; }
+    tbody td:first-child { position: sticky; left: 0; z-index: 6; background: var(--panel); min-width: 160px; max-width: 160px; }
+    thead tr:nth-child(2) th:first-child { position: sticky; left: 0; z-index: 18; background: #e8decc; min-width: 160px; max-width: 160px; }
     .agent-name { font-weight: 700; margin-bottom: 5px; }
-    .agent-links { display: flex; gap: 8px; color: var(--muted); font-size: 12px; }
+    .agent-links { display: flex; gap: 5px; color: var(--muted); font-size: 12px; }
+    .icon-link {
+      display: inline-grid; place-items: center; width: 17px; height: 17px; border: 1px solid var(--line);
+      color: var(--muted); font-size: 11px; line-height: 1; background: #fff;
+    }
+    .tag-list { display: flex; flex-wrap: wrap; gap: 4px; }
+    .tag { border: 1px solid var(--line); background: #fff; padding: 2px 5px; font-size: 12px; }
     .support { display: inline-flex; align-items: center; gap: 6px; font-weight: 700; }
     .dot { width: 18px; height: 18px; display: inline-grid; place-items: center; border-radius: 50%; color: #fff; font-size: 11px; }
     .full .dot { background: var(--accent); }
@@ -149,11 +155,16 @@ function render() {
       </div>
       <div class="filter-block">
         <h2>Support</h2>
-        <label><input type="checkbox" data-support="rules"> Rules</label>
-        <label><input type="checkbox" data-support="skills"> Skills</label>
-        <label><input type="checkbox" data-support="hooks"> Hooks</label>
-        <label><input type="checkbox" data-support="mcp_servers"> MCP</label>
-        <label><input type="checkbox" data-support="custom_model_provider"> Arbitrary models</label>
+        <label><input type="checkbox" data-support-level="full"> Full</label>
+        <label><input type="checkbox" data-support-level="partial"> Partial</label>
+      </div>
+      <div class="filter-block">
+        <h2>Categories</h2>
+        <label><input type="checkbox" data-support-key="rules"> Rules</label>
+        <label><input type="checkbox" data-support-key="skills"> Skills</label>
+        <label><input type="checkbox" data-support-key="hooks"> Hooks</label>
+        <label><input type="checkbox" data-support-key="mcp_servers"> MCP</label>
+        <label><input type="checkbox" data-support-key="custom_model_provider"> Arbitrary models</label>
       </div>
     </aside>
     <main>
@@ -169,18 +180,26 @@ function render() {
   <script type="application/json" id="payload">${payload}</script>
   <script>
     const { matrix, columns, groups } = JSON.parse(document.getElementById('payload').textContent);
-    const state = { group: 'All', search: '', forms: new Set(), support: new Set(), showPlaceholders: false };
+    const state = { group: 'All', search: '', forms: new Set(), supportKeys: new Set(), supportLevels: new Set(), showPlaceholders: false };
     const featureKeys = new Set(['rules','skills','hooks','mcp_servers','custom_commands','subagents','model_selection','approval_mode','sandbox_mode','resume','non_interactive','output_format','statusline','telemetry','custom_model_provider']);
-    const formFactors = [...new Set(matrix.map(row => row.form_factor.value))].sort();
+    const formFactors = [...new Set(matrix.flatMap(row => row.form_factor.values || [row.form_factor.value]).filter(Boolean))].sort();
     const glyph = { full: '✔', partial: '◐', none: '✕', unknown: '?', '': '—' };
 
     function cell(row, column) {
       const value = row[column.key];
       if (column.key === 'name') {
         return '<td><div class="agent-name">' + esc(row.name) + '</div><div class="agent-links">' +
-          link(row.links.docs, 'docs') + link(row.links.github, 'github') + link(row.links.website, 'site') + '</div></td>';
+          iconLink(row.links.docs, 'D', 'Docs') + iconLink(row.links.github, 'G', 'GitHub') + iconLink(row.links.website, '↗', 'Website') + '</div></td>';
       }
       if (!value) return '<td class="blank">—</td>';
+      if (column.key === 'form_factor') {
+        const values = value.values || (value.value ? [value.value] : []);
+        return '<td><div class="tag-list">' + values.map(item => '<span class="tag">' + esc(item) + '</span>').join('') + '</div>' +
+          source(value.source_url) + note(value.comment) + '</td>';
+      }
+      if (column.key === 'pricing') {
+        return '<td>' + source(value.source_url) + '</td>';
+      }
       if (featureKeys.has(column.key)) {
         const support = value.support || '';
         return '<td><span class="support ' + support + '"><span class="dot">' + glyph[support] + '</span>' + label(support) + '</span>' +
@@ -197,6 +216,7 @@ function render() {
     function note(value) { return value ? '<div class="cell-note">' + esc(value) + '</div>' : ''; }
     function source(url) { return url ? '<a class="source" href="' + esc(url) + '" target="_blank" rel="noreferrer" aria-label="Open source" title="Open source">↗</a>' : ''; }
     function link(url, text) { return url ? '<a href="' + esc(url) + '" target="_blank" rel="noreferrer">' + text + '</a>' : ''; }
+    function iconLink(url, glyph, label) { return url ? '<a class="icon-link" href="' + esc(url) + '" target="_blank" rel="noreferrer" aria-label="' + esc(label) + '" title="' + esc(label) + '">' + glyph + '</a>' : ''; }
 
     function visibleColumns() {
       return state.group === 'All' ? columns : columns.filter(column => column.group === 'About' || column.group === state.group);
@@ -207,9 +227,16 @@ function render() {
         const isPlaceholder = (row.notes || '').toLowerCase().includes('placeholder row');
         if (isPlaceholder && !state.showPlaceholders) return false;
         if (state.search && !haystack.includes(state.search.toLowerCase())) return false;
-        if (state.forms.size && !state.forms.has(row.form_factor.value)) return false;
-        for (const key of state.support) {
-          if (!['full','partial'].includes(row[key]?.support)) return false;
+        const rowForms = row.form_factor.values || [row.form_factor.value];
+        if (state.forms.size && !rowForms.some(form => state.forms.has(form))) return false;
+        for (const key of state.supportKeys) {
+          const support = row[key]?.support || '';
+          const allowed = state.supportLevels.size ? state.supportLevels : new Set(['full', 'partial']);
+          if (!allowed.has(support)) return false;
+        }
+        if (!state.supportKeys.size && state.supportLevels.size) {
+          const hasLevel = [...featureKeys].some(key => state.supportLevels.has(row[key]?.support || ''));
+          if (!hasLevel) return false;
         }
         return true;
       });
@@ -260,9 +287,11 @@ function render() {
       renderTable();
     });
     document.querySelector('aside').addEventListener('change', event => {
-      const key = event.target.dataset.support;
-      if (!key) return;
-      event.target.checked ? state.support.add(key) : state.support.delete(key);
+      const key = event.target.dataset.supportKey;
+      const level = event.target.dataset.supportLevel;
+      if (!key && !level) return;
+      if (key) event.target.checked ? state.supportKeys.add(key) : state.supportKeys.delete(key);
+      if (level) event.target.checked ? state.supportLevels.add(level) : state.supportLevels.delete(level);
       renderTable();
     });
     document.getElementById('showPlaceholders').addEventListener('change', event => {
@@ -270,7 +299,7 @@ function render() {
       renderTable();
     });
     document.getElementById('reset').addEventListener('click', () => {
-      state.search = ''; state.forms.clear(); state.support.clear(); state.showPlaceholders = false;
+      state.search = ''; state.forms.clear(); state.supportKeys.clear(); state.supportLevels.clear(); state.showPlaceholders = false;
       document.getElementById('search').value = '';
       document.querySelectorAll('input[type="checkbox"]').forEach(input => input.checked = false);
       renderTable();

@@ -7,7 +7,12 @@
     "slug": "kilo-code"
   },
   "form_factor": {
-    "value": "IDE extension and CLI coding agent",
+    "values": [
+      "CLI",
+      "IDE",
+      "Extension",
+      "Coding agent"
+    ],
     "source_url": "https://kilo.ai/docs/getting-started#:~:text=works%20wherever%20you%20do",
     "comment": "Placeholder row; verify details before treating as complete."
   },
@@ -96,5 +101,10 @@
     "support": "unknown",
     "source_url": "https://kilo.ai/docs/getting-started#:~:text=works%20wherever%20you%20do",
     "comment": "Placeholder pending sourced verification."
+  },
+  "pricing": {
+    "value": "",
+    "source_url": "https://kilo.ai/docs/getting-started#:~:text=works%20wherever%20you%20do",
+    "comment": "Pricing source link; exact price not normalized in this matrix."
   }
 }

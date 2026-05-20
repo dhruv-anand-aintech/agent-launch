@@ -7,7 +7,11 @@
     "slug": "github-copilot-coding-agent"
   },
   "form_factor": {
-    "value": "Hosted coding agent and IDE assistant",
+    "values": [
+      "IDE",
+      "Hosted agent",
+      "Coding agent"
+    ],
     "source_url": "https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent#:~:text=coding%20agent",
     "comment": "Placeholder row; verify details before treating as complete."
   },
@@ -96,5 +100,10 @@
     "support": "unknown",
     "source_url": "https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent#:~:text=coding%20agent",
     "comment": "Placeholder pending sourced verification."
+  },
+  "pricing": {
+    "value": "",
+    "source_url": "https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent#:~:text=coding%20agent",
+    "comment": "Pricing source link; exact price not normalized in this matrix."
   }
 }

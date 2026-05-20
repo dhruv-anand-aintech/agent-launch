@@ -7,7 +7,10 @@
     "slug": "windsurf"
   },
   "form_factor": {
-    "value": "IDE and coding agent",
+    "values": [
+      "IDE",
+      "Coding agent"
+    ],
     "source_url": "https://windsurf.com/#:~:text=Windsurf",
     "comment": "Placeholder row; verify details before treating as complete."
   },
@@ -96,5 +99,10 @@
     "support": "unknown",
     "source_url": "https://windsurf.com/#:~:text=Windsurf",
     "comment": "Placeholder pending sourced verification."
+  },
+  "pricing": {
+    "value": "",
+    "source_url": "https://windsurf.com/#:~:text=Windsurf",
+    "comment": "Pricing source link; exact price not normalized in this matrix."
   }
 }
