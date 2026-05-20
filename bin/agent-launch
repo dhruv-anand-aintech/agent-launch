@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import os
+import random
 import shlex
 import subprocess
 import sys
@@ -28,6 +29,7 @@ AGENTS: dict[str, AgentSpec] = {
 }
 
 
+AGENT_CHOICES = tuple(sorted((*AGENTS.keys(), "random")))
 MODES = ("default", "ask", "plan", "auto", "danger")
 MODEL_CLASSES = ("fast", "pro")
 
@@ -47,9 +49,9 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser.add_argument(
         "-a",
         "--agent",
-        choices=sorted(AGENTS.keys()),
+        choices=AGENT_CHOICES,
         default=os.environ.get("AGENT_LAUNCH_AGENT", "codex"),
-        help="Agent CLI to launch. Defaults to AGENT_LAUNCH_AGENT or codex.",
+        help="Agent CLI to launch. Use random to select a concrete backend uniformly. Defaults to AGENT_LAUNCH_AGENT or codex.",
     )
     parser.add_argument(
         "-C",
@@ -129,6 +131,8 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     )
     args, unknown_args = parser.parse_known_args(argv)
     args.passthrough_args = unknown_args + passthrough_args
+    if args.agent == "random":
+        args.agent = random.choice(tuple(sorted(AGENTS.keys())))
     return args
 
 
@@ -311,6 +315,7 @@ def print_mappings() -> None:
             f"  {name}: executable={spec.executable}, fast={spec.fast_model}, "
             f"pro={spec.pro_model}, default={spec.default_model_class} ({default_model})"
         )
+    print("  random: uniformly selects one of claude, codex, cursor, gemini, opencode at runtime")
     print("\nModes:")
     for mode in MODES:
         print(f"  {mode}")

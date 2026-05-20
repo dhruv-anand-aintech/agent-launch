@@ -8,6 +8,7 @@ agents=(
   'cursor:Cursor Agent'
   'gemini:Gemini CLI'
   'opencode:OpenCode'
+  'random:Uniform random concrete agent'
 )
 
 modes=(
