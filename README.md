@@ -25,6 +25,11 @@ It normalizes the common controls that usually differ across these tools:
 
 This installs `bin/agent-launch` to `~/.local/bin/agent-launch`.
 It also installs zsh completions to `~/.zfunc/_agent-launch`.
+If Oh My Zsh is present, it also installs an explicit binding snippet to:
+
+```text
+~/.oh-my-zsh/custom/agent-launch.zsh
+```
 
 If `agent-launch` is not found after install, add this to your shell startup file:
 
@@ -58,6 +63,13 @@ compinit
 ```
 
 If you use Oh My Zsh, put the `fpath=...` line before `source "$ZSH/oh-my-zsh.sh"` when possible, or before any existing `compinit` call.
+
+If your `fpath` is configured after Oh My Zsh is loaded, add an explicit binding after that `fpath` line:
+
+```sh
+autoload -Uz _agent-launch 2>/dev/null
+(( $+functions[compdef] )) && compdef _agent-launch agent-launch
+```
 
 If completions do not appear in an already-open shell, reload completion state:
 
