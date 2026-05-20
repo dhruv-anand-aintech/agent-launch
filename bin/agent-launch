@@ -21,6 +21,7 @@ class AgentSpec:
 
 
 AGENTS: dict[str, AgentSpec] = {
+    "antigravity": AgentSpec("agy", "", "", "pro"),
     "codex": AgentSpec("codex", "gpt-5.4-mini", "gpt-5.5", "pro"),
     "claude": AgentSpec("claude", "sonnet", "opus", "pro"),
     "gemini": AgentSpec("gemini", "gemini-2.5-flash", "gemini-2.5-pro", "pro"),
@@ -30,6 +31,7 @@ AGENTS: dict[str, AgentSpec] = {
 
 
 AGENT_CHOICES = tuple(sorted((*AGENTS.keys(), "random")))
+RANDOM_AGENTS = ("antigravity", "claude", "codex", "cursor", "opencode")
 MODES = ("default", "ask", "plan", "auto", "danger")
 MODEL_CLASSES = ("fast", "pro")
 
@@ -44,7 +46,7 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
 
     parser = argparse.ArgumentParser(
         prog="agent-launch",
-        description="Launch Codex, Claude Code, Gemini CLI, OpenCode, or Cursor Agent with a shared interface.",
+        description="Launch Antigravity CLI, Codex, Claude Code, Gemini CLI, OpenCode, or Cursor Agent with a shared interface.",
     )
     parser.add_argument(
         "-a",
@@ -87,7 +89,7 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
         "-m",
         "--mode",
         choices=MODES,
-        default=os.environ.get("AGENT_LAUNCH_MODE", "default"),
+        default=os.environ.get("AGENT_LAUNCH_MODE", "danger"),
         help="Normalized permission/interaction mode.",
     )
     parser.add_argument(
@@ -132,7 +134,7 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     args, unknown_args = parser.parse_known_args(argv)
     args.passthrough_args = unknown_args + passthrough_args
     if args.agent == "random":
-        args.agent = random.choice(tuple(sorted(AGENTS.keys())))
+        args.agent = random.choice(RANDOM_AGENTS)
     return args
 
 
@@ -179,6 +181,12 @@ def mode_flags(agent: str, mode: str, non_interactive: bool) -> list[str]:
             "ask": ["--permission-mode", "default"],
             "plan": ["--permission-mode", "plan"],
             "auto": ["--permission-mode", "auto"],
+            "danger": ["--dangerously-skip-permissions"],
+        },
+        "antigravity": {
+            "ask": [],
+            "plan": ["--sandbox"],
+            "auto": [],
             "danger": ["--dangerously-skip-permissions"],
         },
         "gemini": {
@@ -257,6 +265,23 @@ def build_command(args: argparse.Namespace) -> list[str]:
         if prompt:
             cmd.append(prompt)
 
+    elif agent == "antigravity":
+        cmd += ["--add-dir", args.cwd]
+        cmd += mode_flags(agent, args.mode, non_interactive)
+        append_passthrough(cmd, args)
+        if args.resume is not None:
+            if args.resume:
+                cmd += ["--conversation", args.resume]
+            else:
+                cmd += ["--continue"]
+        if prompt:
+            if non_interactive:
+                cmd += ["--print", prompt]
+            else:
+                cmd += ["--prompt-interactive", prompt]
+        elif non_interactive:
+            cmd += ["--print"]
+
     elif agent == "gemini":
         cmd += ["--include-directories", args.cwd, "--skip-trust"]
         cmd += mode_flags(agent, args.mode, non_interactive)
@@ -311,11 +336,14 @@ def print_mappings() -> None:
     print("Agents:")
     for name, spec in AGENTS.items():
         default_model = getattr(spec, f"{spec.default_model_class}_model")
-        print(
-            f"  {name}: executable={spec.executable}, fast={spec.fast_model}, "
-            f"pro={spec.pro_model}, default={spec.default_model_class} ({default_model})"
-        )
-    print("  random: uniformly selects one of claude, codex, cursor, gemini, opencode at runtime")
+        if default_model:
+            print(
+                f"  {name}: executable={spec.executable}, fast={spec.fast_model}, "
+                f"pro={spec.pro_model}, default={spec.default_model_class} ({default_model})"
+            )
+        else:
+            print(f"  {name}: executable={spec.executable}, model flag unsupported")
+    print("  random: uniformly selects one of antigravity, claude, codex, cursor, opencode at runtime")
     print("\nModes:")
     for mode in MODES:
         print(f"  {mode}")

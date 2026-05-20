@@ -2,12 +2,13 @@
 
 One command for launching the local coding-agent CLIs installed on this machine:
 
+- Antigravity CLI (`agy`)
 - Codex CLI (`codex`)
 - Claude Code (`claude`)
 - Gemini CLI (`gemini`)
 - OpenCode (`opencode`)
 - Cursor Agent (`agent`, exposed as `--agent cursor`)
-- Random selection across the above (`--agent random`)
+- Random selection across Antigravity CLI, Codex, Claude Code, OpenCode, and Cursor Agent (`--agent random`)
 
 It normalizes the common controls that usually differ across these tools:
 
@@ -17,6 +18,8 @@ It normalizes the common controls that usually differ across these tools:
 - permission/interaction mode
 - model class (`fast` or `pro`)
 - session resume
+
+By default, `agent-launch` starts agents in `danger` mode unless `AGENT_LAUNCH_MODE` or `--mode` overrides it.
 
 ## Install
 
@@ -44,6 +47,7 @@ export PATH="$HOME/.local/bin:$PATH"
 agent-launch --agent codex --non-interactive --mode danger -C ~/Code/my-repo --prompt 'run tests and fix failures'
 agent-launch --agent claude --interactive --mode plan -C ~/Code/my-repo 'inspect this repo'
 agent-launch --agent cursor --non-interactive --model-class fast -C ~/Code/my-repo --prompt 'summarize the codebase'
+agent-launch --agent antigravity --dry-run --mode danger -C ~/Code/my-repo --prompt 'implement the task'
 agent-launch --agent gemini --dry-run --mode auto --model-class pro -C ~/Code/my-repo --prompt 'implement the task'
 agent-launch --agent random --interactive -C ~/Code/my-repo --prompt 'inspect this repo'
 ```
@@ -59,13 +63,13 @@ agent-launch -a claude -i -m plan -C ~/Code/my-repo 'review this change'
 
 | Option | Meaning |
 | --- | --- |
-| `--agent` / `-a` | `codex`, `claude`, `gemini`, `opencode`, `cursor`, or `random` |
+| `--agent` / `-a` | `antigravity`, `codex`, `claude`, `gemini`, `opencode`, `cursor`, or `random` |
 | `--interactive` / `-i` | Start an interactive TUI/session |
 | `--non-interactive` / `-n` | Run headlessly and print the result |
 | `--prompt` / `-p` | Initial prompt |
 | positional text | Prompt text when `--prompt` is omitted |
 | `--cwd` / `-C` | Workspace/working directory |
-| `--mode` / `-m` | `default`, `ask`, `plan`, `auto`, or `danger` |
+| `--mode` / `-m` | `default`, `ask`, `plan`, `auto`, or `danger`; defaults to `AGENT_LAUNCH_MODE` or `danger` |
 | `--model-class` | `fast` or `pro` |
 | `--model` | Explicit backend model string; overrides `--model-class` |
 | `--no-model` | Do not pass a model flag |
@@ -98,7 +102,7 @@ agent-launch --mode <TAB>
 agent-launch --model-class <TAB>
 ```
 
-Completion is intentionally scoped to `agent-launch` itself. It does not shell out to Codex, Claude, Gemini, OpenCode, or Cursor to discover their full native option sets. Backend-specific flags should be passed after `--`.
+Completion is intentionally scoped to `agent-launch` itself. It does not shell out to Antigravity, Codex, Claude, Gemini, OpenCode, or Cursor to discover their full native option sets. Backend-specific flags should be passed after `--`.
 
 For zsh users, completions work when the installed completion directory is in `fpath` before `compinit` runs. The installer writes:
 
@@ -153,6 +157,7 @@ Backend flag mapping:
 
 | Agent | `ask` | `plan` | `auto` | `danger` |
 | --- | --- | --- | --- | --- |
+| Antigravity CLI | backend default | `--sandbox` | backend default | `--dangerously-skip-permissions` |
 | Codex | `-s read-only` | `-s read-only` plus `-a never` in non-interactive mode | `-a never` in non-interactive mode, `-a on-request` interactively | `-a never -s danger-full-access` in non-interactive mode, `--dangerously-bypass-approvals-and-sandbox` interactively |
 | Claude Code | `--permission-mode default` | `--permission-mode plan` | `--permission-mode auto` | `--dangerously-skip-permissions` |
 | Gemini CLI | `--approval-mode default` | `--approval-mode plan` | `--approval-mode auto_edit` | `--yolo` |
@@ -176,13 +181,14 @@ Built-in defaults:
 
 | Agent | Fast | Pro | Default |
 | --- | --- | --- | --- |
+| Antigravity CLI | backend configured model | backend configured model | backend configured model |
 | Codex | `gpt-5.4-mini` | `gpt-5.5` | `pro` |
 | Claude Code | `sonnet` | `opus` | `pro` |
 | Gemini CLI | `gemini-2.5-flash` | `gemini-2.5-pro` | `pro` |
 | OpenCode | `anthropic/claude-sonnet-4-5` | `anthropic/claude-opus-4-1` | `pro` |
 | Cursor Agent | `composer-2.5-fast` | `composer-2` | `pro` |
 
-`--agent random` chooses one concrete backend uniformly at runtime from `claude`, `codex`, `cursor`, `gemini`, and `opencode`, then uses that backend's normal fast/pro mapping.
+`--agent random` chooses one concrete backend uniformly at runtime from `antigravity`, `claude`, `codex`, `cursor`, and `opencode`, then uses that backend's normal fast/pro mapping where supported. Gemini CLI remains available explicitly via `--agent gemini`, but is not in the random pool.
 
 You can override these without editing the script:
 

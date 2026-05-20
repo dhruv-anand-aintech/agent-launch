@@ -3,6 +3,7 @@
 local -a agents modes model_classes common_models
 
 agents=(
+  'antigravity:Antigravity CLI'
   'claude:Claude Code'
   'codex:Codex CLI'
   'cursor:Cursor Agent'
