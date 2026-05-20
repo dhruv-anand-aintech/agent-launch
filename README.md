@@ -43,16 +43,32 @@ agent-launch --mode <TAB>
 agent-launch --model-class <TAB>
 ```
 
+For zsh users, completions work when the installed completion directory is in `fpath` before `compinit` runs. The installer writes:
+
+```text
+~/.zfunc/_agent-launch
+```
+
+Add this to `~/.zshrc` if your shell does not already load `~/.zfunc`:
+
+```sh
+fpath=("$HOME/.zfunc" $fpath)
+autoload -Uz compinit
+compinit
+```
+
+If you use Oh My Zsh, put the `fpath=...` line before `source "$ZSH/oh-my-zsh.sh"` when possible, or before any existing `compinit` call.
+
 If completions do not appear in an already-open shell, reload completion state:
 
 ```sh
 autoload -Uz compinit && compinit
 ```
 
-If `~/.zfunc` is not already in your zsh `fpath`, add this before `compinit` in your `.zshrc`:
+If zsh has cached an older completion definition, rebuild the completion dump:
 
 ```sh
-fpath=("$HOME/.zfunc" $fpath)
+rm -f ~/.zcompdump*
 autoload -Uz compinit && compinit
 ```
 
@@ -89,7 +105,20 @@ agent-launch -a claude -i -m plan -C ~/Code/my-repo 'review this change'
 | `--resume [id]` | Resume a previous session |
 | `--dry-run` | Print translated backend command without running it |
 | `--extra` | Append raw backend arguments; repeat as needed |
+| `--` | Pass all following arguments through to the selected backend CLI |
 | `--print-mappings` | Show built-in agent/model mappings |
+
+## Backend Argument Pass-Through
+
+Arguments after `--` are passed directly to the selected backend CLI. This is useful for backend-specific flags that `agent-launch` does not normalize.
+
+```sh
+agent-launch -a claude -n -p 'summarize' -- --output-format json --max-budget-usd 1
+agent-launch -a codex -n -p 'review' -- --json
+agent-launch -a opencode -n -p 'work' -- --format json --title scratch
+```
+
+Unknown wrapper arguments before `--` are also forwarded when they can be parsed safely, but `--` is the reliable form for flags with values.
 
 ## Mode Mapping
 

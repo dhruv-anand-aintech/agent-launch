@@ -51,6 +51,7 @@ _arguments -s -S \
   '--dry-run[print translated backend command without running it]' \
   '--extra[append raw backend arguments]:backend args:' \
   '--print-mappings[show built-in agent/model mappings]' \
+  '--[pass all following arguments through to the selected backend CLI]' \
   '*:prompt text:_normal' && return
 
 case "$state" in
