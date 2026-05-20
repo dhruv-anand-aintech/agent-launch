@@ -1,0 +1,315 @@
+#!/usr/bin/env python3
+"""Launch common coding-agent CLIs through one normalized interface."""
+
+from __future__ import annotations
+
+import argparse
+import os
+import shlex
+import subprocess
+from dataclasses import dataclass
+
+
+@dataclass(frozen=True)
+class AgentSpec:
+    executable: str
+    fast_model: str
+    pro_model: str
+    default_model_class: str = "pro"
+
+
+AGENTS: dict[str, AgentSpec] = {
+    "codex": AgentSpec("codex", "gpt-5.4-mini", "gpt-5.5", "pro"),
+    "claude": AgentSpec("claude", "sonnet", "opus", "pro"),
+    "gemini": AgentSpec("gemini", "gemini-2.5-flash", "gemini-2.5-pro", "pro"),
+    "opencode": AgentSpec("opencode", "anthropic/claude-sonnet-4-5", "anthropic/claude-opus-4-1", "pro"),
+    "cursor": AgentSpec("agent", "composer-2.5-fast", "composer-2", "pro"),
+}
+
+
+MODES = ("default", "ask", "plan", "auto", "danger")
+MODEL_CLASSES = ("fast", "pro")
+
+
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(
+        prog="agent-launch",
+        description="Launch Codex, Claude Code, Gemini CLI, OpenCode, or Cursor Agent with a shared interface.",
+    )
+    parser.add_argument(
+        "-a",
+        "--agent",
+        choices=sorted(AGENTS.keys()),
+        default=os.environ.get("AGENT_LAUNCH_AGENT", "codex"),
+        help="Agent CLI to launch. Defaults to AGENT_LAUNCH_AGENT or codex.",
+    )
+    parser.add_argument(
+        "-C",
+        "--cwd",
+        default=os.getcwd(),
+        help="Working directory/workspace for the agent. Defaults to current directory.",
+    )
+    parser.add_argument(
+        "-p",
+        "--prompt",
+        default=None,
+        help="Initial prompt. If omitted, remaining positional text is used.",
+    )
+    parser.add_argument(
+        "prompt_parts",
+        nargs="*",
+        help="Initial prompt text, used when --prompt is not provided.",
+    )
+    run_mode = parser.add_mutually_exclusive_group()
+    run_mode.add_argument(
+        "-i",
+        "--interactive",
+        action="store_true",
+        help="Start interactive mode. This is the default.",
+    )
+    run_mode.add_argument(
+        "-n",
+        "--non-interactive",
+        action="store_true",
+        help="Run headless/non-interactively and print output.",
+    )
+    parser.add_argument(
+        "-m",
+        "--mode",
+        choices=MODES,
+        default=os.environ.get("AGENT_LAUNCH_MODE", "default"),
+        help="Normalized permission/interaction mode.",
+    )
+    parser.add_argument(
+        "--model-class",
+        choices=MODEL_CLASSES,
+        default=None,
+        help="Use the agent's normalized fast or pro model. Defaults per agent.",
+    )
+    parser.add_argument(
+        "--model",
+        default=None,
+        help="Explicit backend model string. Overrides --model-class.",
+    )
+    parser.add_argument(
+        "--no-model",
+        action="store_true",
+        help="Do not pass any model flag to the backend.",
+    )
+    parser.add_argument(
+        "--resume",
+        nargs="?",
+        const="",
+        default=None,
+        help="Resume a prior session. With no value, use the backend's picker/latest behavior where available.",
+    )
+    parser.add_argument(
+        "--dry-run",
+        action="store_true",
+        help="Print the translated command without executing it.",
+    )
+    parser.add_argument(
+        "--extra",
+        action="append",
+        default=[],
+        help="Extra raw argument to append to the backend command. Repeat as needed.",
+    )
+    parser.add_argument(
+        "--print-mappings",
+        action="store_true",
+        help="Print normalized mode/model mappings and exit.",
+    )
+    return parser.parse_args()
+
+
+def env_key(agent: str, model_class: str) -> str:
+    return f"AGENT_LAUNCH_{agent.upper()}_{model_class.upper()}_MODEL"
+
+
+def resolve_model(agent: str, args: argparse.Namespace) -> str | None:
+    if args.no_model:
+        return None
+    if args.model:
+        return args.model
+
+    spec = AGENTS[agent]
+    model_class = args.model_class or os.environ.get("AGENT_LAUNCH_MODEL_CLASS") or spec.default_model_class
+    if model_class not in MODEL_CLASSES:
+        raise SystemExit(f"Unknown model class {model_class!r}; expected one of: {', '.join(MODEL_CLASSES)}")
+
+    return os.environ.get(env_key(agent, model_class)) or getattr(spec, f"{model_class}_model")
+
+
+def prompt_from(args: argparse.Namespace) -> str | None:
+    if args.prompt is not None:
+        return args.prompt
+    if args.prompt_parts:
+        return " ".join(args.prompt_parts)
+    return None
+
+
+def mode_flags(agent: str, mode: str, non_interactive: bool) -> list[str]:
+    if mode == "default":
+        return []
+
+    mappings: dict[str, dict[str, list[str]]] = {
+        "codex": {
+            "ask": ["-s", "read-only"],
+            "plan": ["-a", "never", "-s", "read-only"] if non_interactive else ["-s", "read-only"],
+            "auto": ["-a", "never"] if non_interactive else ["-a", "on-request"],
+            "danger": ["-a", "never", "-s", "danger-full-access"]
+            if non_interactive
+            else ["--dangerously-bypass-approvals-and-sandbox"],
+        },
+        "claude": {
+            "ask": ["--permission-mode", "default"],
+            "plan": ["--permission-mode", "plan"],
+            "auto": ["--permission-mode", "auto"],
+            "danger": ["--dangerously-skip-permissions"],
+        },
+        "gemini": {
+            "ask": ["--approval-mode", "default"],
+            "plan": ["--approval-mode", "plan"],
+            "auto": ["--approval-mode", "auto_edit"],
+            "danger": ["--yolo"],
+        },
+        "opencode": {
+            "ask": ["--agent", "ask"],
+            "plan": ["--agent", "plan"],
+            "auto": [],
+            "danger": ["--dangerously-skip-permissions"] if non_interactive else [],
+        },
+        "cursor": {
+            "ask": ["--mode", "ask"],
+            "plan": ["--mode", "plan"],
+            "auto": ["--force"],
+            "danger": ["--yolo", "--sandbox", "disabled"],
+        },
+    }
+    return mappings[agent][mode]
+
+
+def append_model(cmd: list[str], agent: str, model: str | None) -> None:
+    if not model:
+        return
+    if agent in {"codex", "claude", "gemini", "opencode", "cursor"}:
+        cmd += ["--model", model]
+
+
+def build_command(args: argparse.Namespace) -> list[str]:
+    agent = args.agent
+    spec = AGENTS[agent]
+    prompt = prompt_from(args)
+    non_interactive = args.non_interactive
+    model = resolve_model(agent, args)
+    cmd = [spec.executable]
+
+    if agent == "codex":
+        if non_interactive:
+            cmd += ["exec", "-C", args.cwd, "--skip-git-repo-check"]
+        else:
+            cmd += ["-C", args.cwd]
+        cmd += mode_flags(agent, args.mode, non_interactive)
+        append_model(cmd, agent, model)
+        if args.resume is not None:
+            cmd = [spec.executable, "exec" if non_interactive else "resume"]
+            if non_interactive:
+                cmd += ["resume"]
+            if args.resume:
+                cmd.append(args.resume)
+            elif non_interactive:
+                cmd.append("--last")
+        if prompt and args.resume is None:
+            cmd.append(prompt)
+
+    elif agent == "claude":
+        cmd += ["--add-dir", args.cwd]
+        cmd += mode_flags(agent, args.mode, non_interactive)
+        append_model(cmd, agent, model)
+        if args.resume is not None:
+            cmd += ["--resume"]
+            if args.resume:
+                cmd.append(args.resume)
+        if non_interactive:
+            cmd += ["--print"]
+        if prompt:
+            cmd.append(prompt)
+
+    elif agent == "gemini":
+        cmd += ["--include-directories", args.cwd, "--skip-trust"]
+        cmd += mode_flags(agent, args.mode, non_interactive)
+        append_model(cmd, agent, model)
+        if args.resume is not None:
+            cmd += ["--resume", args.resume or "latest"]
+        if prompt:
+            if non_interactive:
+                cmd += ["--prompt", prompt]
+            else:
+                cmd += ["--prompt-interactive", prompt]
+
+    elif agent == "opencode":
+        if non_interactive:
+            cmd += ["run", "--dir", args.cwd]
+        else:
+            cmd += [args.cwd]
+        cmd += mode_flags(agent, args.mode, non_interactive)
+        append_model(cmd, agent, model)
+        if args.resume is not None:
+            if args.resume:
+                cmd += ["--session", args.resume]
+            else:
+                cmd += ["--continue"]
+        if prompt:
+            if non_interactive:
+                cmd.append(prompt)
+            else:
+                cmd += ["--prompt", prompt]
+
+    elif agent == "cursor":
+        cmd += ["--workspace", args.cwd]
+        cmd += mode_flags(agent, args.mode, non_interactive)
+        append_model(cmd, agent, model)
+        if args.resume is not None:
+            if args.resume:
+                cmd += ["--resume", args.resume]
+            else:
+                cmd += ["--continue"]
+        if non_interactive:
+            cmd += ["--print", "--trust"]
+        if prompt:
+            cmd.append(prompt)
+
+    for raw in args.extra:
+        cmd.extend(shlex.split(raw))
+    return cmd
+
+
+def print_mappings() -> None:
+    print("Agents:")
+    for name, spec in AGENTS.items():
+        default_model = getattr(spec, f"{spec.default_model_class}_model")
+        print(
+            f"  {name}: executable={spec.executable}, fast={spec.fast_model}, "
+            f"pro={spec.pro_model}, default={spec.default_model_class} ({default_model})"
+        )
+    print("\nModes:")
+    for mode in MODES:
+        print(f"  {mode}")
+    print("\nUse --dry-run to inspect exact backend flags for a specific agent/mode.")
+
+
+def main() -> int:
+    args = parse_args()
+    if args.print_mappings:
+        print_mappings()
+        return 0
+    cmd = build_command(args)
+    if args.dry_run:
+        print(shlex.join(cmd))
+        return 0
+    os.chdir(args.cwd)
+    return subprocess.call(cmd)
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
