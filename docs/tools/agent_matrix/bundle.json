@@ -1,0 +1,1802 @@
+[
+  {
+    "name": "Aider",
+    "links": {
+      "docs": "https://aider.chat/docs/",
+      "github": "https://github.com/Aider-AI/aider",
+      "website": "https://aider.chat/",
+      "slug": "aider"
+    },
+    "form_factor": {
+      "value": "CLI pair-programming agent",
+      "source_url": "https://aider.chat/#:~:text=AI%20pair%20programming",
+      "comment": "Placeholder row; verify details before treating as complete."
+    },
+    "released_in": {
+      "value": "TBD",
+      "source_url": "https://aider.chat/#:~:text=AI%20pair%20programming",
+      "comment": "Placeholder pending exact public release month/year."
+    },
+    "latest_major_update": {
+      "value": "TBD",
+      "source_url": "https://aider.chat/#:~:text=AI%20pair%20programming",
+      "comment": "Placeholder pending latest major update research."
+    },
+    "notes": "Placeholder row added to track a released coding-agent surface. Open issue should fill exact sourced feature cells.",
+    "rules": {
+      "support": "unknown",
+      "source_url": "https://aider.chat/#:~:text=AI%20pair%20programming",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "skills": {
+      "support": "unknown",
+      "source_url": "https://aider.chat/#:~:text=AI%20pair%20programming",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "hooks": {
+      "support": "unknown",
+      "source_url": "https://aider.chat/#:~:text=AI%20pair%20programming",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "mcp_servers": {
+      "support": "unknown",
+      "source_url": "https://aider.chat/#:~:text=AI%20pair%20programming",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "custom_commands": {
+      "support": "unknown",
+      "source_url": "https://aider.chat/#:~:text=AI%20pair%20programming",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "subagents": {
+      "support": "unknown",
+      "source_url": "https://aider.chat/#:~:text=AI%20pair%20programming",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "model_selection": {
+      "support": "unknown",
+      "source_url": "https://aider.chat/#:~:text=AI%20pair%20programming",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "approval_mode": {
+      "support": "unknown",
+      "source_url": "https://aider.chat/#:~:text=AI%20pair%20programming",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "sandbox_mode": {
+      "support": "unknown",
+      "source_url": "https://aider.chat/#:~:text=AI%20pair%20programming",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "resume": {
+      "support": "unknown",
+      "source_url": "https://aider.chat/#:~:text=AI%20pair%20programming",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "non_interactive": {
+      "support": "unknown",
+      "source_url": "https://aider.chat/#:~:text=AI%20pair%20programming",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "output_format": {
+      "support": "unknown",
+      "source_url": "https://aider.chat/#:~:text=AI%20pair%20programming",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "statusline": {
+      "support": "unknown",
+      "source_url": "https://aider.chat/#:~:text=AI%20pair%20programming",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "telemetry": {
+      "support": "unknown",
+      "source_url": "https://aider.chat/#:~:text=AI%20pair%20programming",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "custom_model_provider": {
+      "support": "unknown",
+      "source_url": "https://aider.chat/#:~:text=AI%20pair%20programming",
+      "comment": "Placeholder pending sourced verification."
+    }
+  },
+  {
+    "name": "Amp",
+    "links": {
+      "docs": "https://ampcode.com/manual",
+      "github": "",
+      "website": "https://ampcode.app/",
+      "slug": "amp"
+    },
+    "form_factor": {
+      "value": "CLI/TUI coding agent",
+      "source_url": "https://ampcode.app/#:~:text=CLI%2FTUI%20Install",
+      "comment": "Placeholder row; verify details before treating as complete."
+    },
+    "released_in": {
+      "value": "TBD",
+      "source_url": "https://ampcode.app/#:~:text=CLI%2FTUI%20Install",
+      "comment": "Placeholder pending exact public release month/year."
+    },
+    "latest_major_update": {
+      "value": "TBD",
+      "source_url": "https://ampcode.app/#:~:text=CLI%2FTUI%20Install",
+      "comment": "Placeholder pending latest major update research."
+    },
+    "notes": "Placeholder row added to track a released coding-agent surface. Open issue should fill exact sourced feature cells.",
+    "rules": {
+      "support": "unknown",
+      "source_url": "https://ampcode.app/#:~:text=CLI%2FTUI%20Install",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "skills": {
+      "support": "unknown",
+      "source_url": "https://ampcode.app/#:~:text=CLI%2FTUI%20Install",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "hooks": {
+      "support": "unknown",
+      "source_url": "https://ampcode.app/#:~:text=CLI%2FTUI%20Install",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "mcp_servers": {
+      "support": "unknown",
+      "source_url": "https://ampcode.app/#:~:text=CLI%2FTUI%20Install",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "custom_commands": {
+      "support": "unknown",
+      "source_url": "https://ampcode.app/#:~:text=CLI%2FTUI%20Install",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "subagents": {
+      "support": "unknown",
+      "source_url": "https://ampcode.app/#:~:text=CLI%2FTUI%20Install",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "model_selection": {
+      "support": "unknown",
+      "source_url": "https://ampcode.app/#:~:text=CLI%2FTUI%20Install",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "approval_mode": {
+      "support": "unknown",
+      "source_url": "https://ampcode.app/#:~:text=CLI%2FTUI%20Install",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "sandbox_mode": {
+      "support": "unknown",
+      "source_url": "https://ampcode.app/#:~:text=CLI%2FTUI%20Install",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "resume": {
+      "support": "unknown",
+      "source_url": "https://ampcode.app/#:~:text=CLI%2FTUI%20Install",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "non_interactive": {
+      "support": "unknown",
+      "source_url": "https://ampcode.app/#:~:text=CLI%2FTUI%20Install",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "output_format": {
+      "support": "unknown",
+      "source_url": "https://ampcode.app/#:~:text=CLI%2FTUI%20Install",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "statusline": {
+      "support": "unknown",
+      "source_url": "https://ampcode.app/#:~:text=CLI%2FTUI%20Install",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "telemetry": {
+      "support": "unknown",
+      "source_url": "https://ampcode.app/#:~:text=CLI%2FTUI%20Install",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "custom_model_provider": {
+      "support": "unknown",
+      "source_url": "https://ampcode.app/#:~:text=CLI%2FTUI%20Install",
+      "comment": "Placeholder pending sourced verification."
+    }
+  },
+  {
+    "name": "Antigravity CLI",
+    "links": {
+      "docs": "https://antigravity.google/docs/cli-features",
+      "github": "",
+      "website": "https://antigravity.google/",
+      "slug": "antigravity-cli"
+    },
+    "form_factor": {
+      "value": "CLI",
+      "source_url": "https://antigravity.google/docs/cli-getting-started#:~:text=agy",
+      "comment": "Installed as the agy command."
+    },
+    "released_in": {
+      "value": "May 2026",
+      "source_url": "https://antigravity.google/docs/cli-getting-started#:~:text=install.sh",
+      "comment": "Standalone CLI installer and docs."
+    },
+    "latest_major_update": {
+      "value": "May 2026",
+      "source_url": "https://antigravity.google/docs/cli-features#:~:text=plugins",
+      "comment": "Standalone CLI with plugin layout, rules, skills, hooks, and MCP."
+    },
+    "rules": {
+      "support": "full",
+      "source_url": "https://antigravity.google/docs/cli-features#:~:text=rules",
+      "comment": "Plugin rules live under plugin rules directories."
+    },
+    "skills": {
+      "support": "full",
+      "source_url": "https://antigravity.google/docs/cli-features#:~:text=skills",
+      "comment": "Plugin skills are supported."
+    },
+    "hooks": {
+      "support": "full",
+      "source_url": "https://antigravity.google/docs/cli-features#:~:text=hooks",
+      "comment": "Plugin hooks are supported."
+    },
+    "mcp_servers": {
+      "support": "full",
+      "source_url": "https://antigravity.google/docs/cli-features#:~:text=mcp_config.json",
+      "comment": "Plugin mcp_config.json is supported."
+    },
+    "custom_commands": {
+      "support": "partial",
+      "source_url": "https://antigravity.google/docs/cli-features#:~:text=plugins",
+      "comment": "Implemented through plugin-provided capabilities rather than a classic slash-command folder."
+    },
+    "subagents": {
+      "support": "unknown",
+      "source_url": "https://antigravity.google/docs/cli-features#:~:text=subagents",
+      "comment": ""
+    },
+    "model_selection": {
+      "support": "none",
+      "source_url": "https://antigravity.google/docs/cli-features#:~:text=--print",
+      "comment": "agy --help does not expose a model flag as of this dataset."
+    },
+    "approval_mode": {
+      "support": "partial",
+      "source_url": "https://antigravity.google/docs/cli-features#:~:text=dangerously-skip-permissions",
+      "comment": "Supports --dangerously-skip-permissions."
+    },
+    "sandbox_mode": {
+      "support": "partial",
+      "source_url": "https://antigravity.google/docs/cli-features#:~:text=--sandbox",
+      "comment": "Supports --sandbox for terminal restrictions."
+    },
+    "resume": {
+      "support": "full",
+      "source_url": "https://antigravity.google/docs/cli-features#:~:text=--continue",
+      "comment": "Supports --continue and --conversation."
+    },
+    "non_interactive": {
+      "support": "full",
+      "source_url": "https://antigravity.google/docs/cli-features#:~:text=--print",
+      "comment": "Supports --print / --prompt."
+    },
+    "output_format": {
+      "support": "unknown",
+      "source_url": "https://antigravity.google/docs/cli-features#:~:text=output",
+      "comment": ""
+    },
+    "statusline": {
+      "support": "unknown",
+      "source_url": "https://antigravity.google/docs/cli-features#:~:text=status%20line",
+      "comment": ""
+    },
+    "telemetry": {
+      "support": "unknown",
+      "source_url": "https://antigravity.google/docs/cli-features#:~:text=telemetry",
+      "comment": ""
+    },
+    "custom_model_provider": {
+      "support": "none",
+      "source_url": "https://antigravity.google/docs/cli-features#:~:text=--print",
+      "comment": "No arbitrary provider configuration found in public CLI help/docs."
+    },
+    "notes": "Distinct from Gemini CLI and the older Antigravity IDE."
+  },
+  {
+    "name": "Antigravity IDE",
+    "links": {
+      "docs": "https://antigravity.google/docs/",
+      "github": "",
+      "website": "https://antigravity.google/",
+      "slug": "antigravity-ide"
+    },
+    "form_factor": {
+      "value": "IDE",
+      "source_url": "https://antigravity.google/#:~:text=CLI",
+      "comment": "Google Antigravity IDE surface."
+    },
+    "released_in": {
+      "value": "2025",
+      "source_url": "https://antigravity.google/#:~:text=released",
+      "comment": "Exact public release month not confirmed in public docs captured for this dataset."
+    },
+    "latest_major_update": {
+      "value": "May 2026",
+      "source_url": "https://antigravity.google/docs/cli-getting-started#:~:text=update",
+      "comment": "New standalone CLI split documented separately from the IDE."
+    },
+    "rules": {
+      "support": "partial",
+      "source_url": "https://antigravity.google/docs/#:~:text=rules",
+      "comment": "IDE has persistent agent context, but not the same plugin rules path as Antigravity CLI."
+    },
+    "skills": {
+      "support": "partial",
+      "source_url": "https://antigravity.google/docs/#:~:text=skills",
+      "comment": "Local IDE data includes skills, but public docs are less explicit than CLI plugin docs."
+    },
+    "hooks": {
+      "support": "unknown",
+      "source_url": "https://antigravity.google/docs/#:~:text=hooks",
+      "comment": ""
+    },
+    "mcp_servers": {
+      "support": "partial",
+      "source_url": "https://antigravity.google/docs/#:~:text=MCP",
+      "comment": "Local IDE data includes mcp_config.json, but CLI plugin MCP is documented more clearly."
+    },
+    "custom_commands": {
+      "support": "partial",
+      "source_url": "https://antigravity.google/docs/#:~:text=commands",
+      "comment": "Global workflows are present in local IDE data."
+    },
+    "subagents": {
+      "support": "unknown",
+      "source_url": "https://antigravity.google/docs/#:~:text=subagents",
+      "comment": ""
+    },
+    "model_selection": {
+      "support": "unknown",
+      "source_url": "https://antigravity.google/docs/#:~:text=model",
+      "comment": ""
+    },
+    "approval_mode": {
+      "support": "unknown",
+      "source_url": "https://antigravity.google/docs/#:~:text=approval",
+      "comment": ""
+    },
+    "sandbox_mode": {
+      "support": "unknown",
+      "source_url": "https://antigravity.google/docs/#:~:text=sandbox",
+      "comment": ""
+    },
+    "resume": {
+      "support": "full",
+      "source_url": "https://antigravity.google/docs/#:~:text=resume",
+      "comment": "IDE stores conversation/brain state."
+    },
+    "non_interactive": {
+      "support": "none",
+      "source_url": "https://antigravity.google/docs/cli-getting-started#:~:text=print",
+      "comment": "Use Antigravity CLI for headless use."
+    },
+    "output_format": {
+      "support": "unknown",
+      "source_url": "https://antigravity.google/docs/#:~:text=output",
+      "comment": ""
+    },
+    "statusline": {
+      "support": "unknown",
+      "source_url": "https://antigravity.google/docs/#:~:text=status%20line",
+      "comment": ""
+    },
+    "telemetry": {
+      "support": "unknown",
+      "source_url": "https://antigravity.google/docs/#:~:text=telemetry",
+      "comment": ""
+    },
+    "custom_model_provider": {
+      "support": "unknown",
+      "source_url": "https://antigravity.google/docs/#:~:text=providers",
+      "comment": ""
+    },
+    "notes": "Included as a distinct IDE surface because it is not the same as the new agy CLI."
+  },
+  {
+    "name": "Claude Code",
+    "links": {
+      "docs": "https://docs.anthropic.com/en/docs/claude-code/overview",
+      "github": "https://github.com/anthropics/claude-code",
+      "website": "https://www.anthropic.com/claude-code",
+      "slug": "claude-code"
+    },
+    "form_factor": {
+      "value": "CLI, IDE integrations, and SDK",
+      "source_url": "https://docs.anthropic.com/en/docs/claude-code/overview#:~:text=Claude%20Code",
+      "comment": ""
+    },
+    "released_in": {
+      "value": "February 2025",
+      "source_url": "https://www.anthropic.com/news/claude-3-7-sonnet#:~:text=Claude%20Code",
+      "comment": "Claude Code was introduced as a limited research preview."
+    },
+    "latest_major_update": {
+      "value": "May 2026",
+      "source_url": "https://docs.anthropic.com/en/docs/claude-code/overview#:~:text=Claude%20Code",
+      "comment": "Current docs cover CLI, SDK, hooks, skills, and settings."
+    },
+    "rules": {
+      "support": "full",
+      "source_url": "https://docs.anthropic.com/en/docs/claude-code/memory#:~:text=CLAUDE.md",
+      "comment": "Uses CLAUDE.md memory files."
+    },
+    "skills": {
+      "support": "full",
+      "source_url": "https://docs.anthropic.com/en/docs/claude-code/skills#:~:text=skills",
+      "comment": "Supports skills."
+    },
+    "hooks": {
+      "support": "full",
+      "source_url": "https://docs.anthropic.com/en/docs/claude-code/hooks#:~:text=hooks",
+      "comment": "Supports lifecycle hooks."
+    },
+    "mcp_servers": {
+      "support": "full",
+      "source_url": "https://docs.anthropic.com/en/docs/claude-code/mcp#:~:text=MCP",
+      "comment": "Supports MCP servers."
+    },
+    "custom_commands": {
+      "support": "full",
+      "source_url": "https://docs.anthropic.com/en/docs/claude-code/slash-commands#:~:text=slash%20commands",
+      "comment": "Supports slash commands."
+    },
+    "subagents": {
+      "support": "full",
+      "source_url": "https://docs.anthropic.com/en/docs/claude-code/sub-agents#:~:text=subagents",
+      "comment": "Supports custom subagents."
+    },
+    "model_selection": {
+      "support": "full",
+      "source_url": "https://docs.anthropic.com/en/docs/claude-code/settings#:~:text=model",
+      "comment": "Model can be configured."
+    },
+    "approval_mode": {
+      "support": "full",
+      "source_url": "https://docs.anthropic.com/en/docs/claude-code/settings#:~:text=permission",
+      "comment": "Permission mode is configurable."
+    },
+    "sandbox_mode": {
+      "support": "partial",
+      "source_url": "https://docs.anthropic.com/en/docs/claude-code/settings#:~:text=permissions",
+      "comment": "Permissions and allowed tools provide sandbox-like controls."
+    },
+    "resume": {
+      "support": "full",
+      "source_url": "https://docs.anthropic.com/en/docs/claude-code/cli-reference#:~:text=--resume",
+      "comment": "Supports --resume."
+    },
+    "non_interactive": {
+      "support": "full",
+      "source_url": "https://docs.anthropic.com/en/docs/claude-code/cli-reference#:~:text=--print",
+      "comment": "Supports --print."
+    },
+    "output_format": {
+      "support": "full",
+      "source_url": "https://docs.anthropic.com/en/docs/claude-code/cli-reference#:~:text=output-format",
+      "comment": "Supports output format controls."
+    },
+    "statusline": {
+      "support": "full",
+      "source_url": "https://docs.anthropic.com/en/docs/claude-code/statusline#:~:text=status%20line",
+      "comment": "Supports custom status line."
+    },
+    "telemetry": {
+      "support": "full",
+      "source_url": "https://docs.anthropic.com/en/docs/claude-code/settings#:~:text=telemetry",
+      "comment": "Settings include telemetry and privacy controls."
+    },
+    "custom_model_provider": {
+      "support": "partial",
+      "source_url": "https://docs.anthropic.com/en/docs/claude-code/third-party-integrations#:~:text=third-party",
+      "comment": "Supports Bedrock/Vertex and related integrations, not arbitrary providers in the same way as OpenAI-compatible CLIs."
+    },
+    "notes": ""
+  },
+  {
+    "name": "Cline",
+    "links": {
+      "docs": "https://docs.cline.bot/",
+      "github": "https://github.com/cline/cline",
+      "website": "https://cline.bot/",
+      "slug": "cline"
+    },
+    "form_factor": {
+      "value": "IDE extension coding agent",
+      "source_url": "https://cline.bot/#:~:text=autonomous%20coding%20agent",
+      "comment": "Placeholder row; verify details before treating as complete."
+    },
+    "released_in": {
+      "value": "TBD",
+      "source_url": "https://cline.bot/#:~:text=autonomous%20coding%20agent",
+      "comment": "Placeholder pending exact public release month/year."
+    },
+    "latest_major_update": {
+      "value": "TBD",
+      "source_url": "https://cline.bot/#:~:text=autonomous%20coding%20agent",
+      "comment": "Placeholder pending latest major update research."
+    },
+    "notes": "Placeholder row added to track a released coding-agent surface. Open issue should fill exact sourced feature cells.",
+    "rules": {
+      "support": "unknown",
+      "source_url": "https://cline.bot/#:~:text=autonomous%20coding%20agent",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "skills": {
+      "support": "unknown",
+      "source_url": "https://cline.bot/#:~:text=autonomous%20coding%20agent",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "hooks": {
+      "support": "unknown",
+      "source_url": "https://cline.bot/#:~:text=autonomous%20coding%20agent",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "mcp_servers": {
+      "support": "unknown",
+      "source_url": "https://cline.bot/#:~:text=autonomous%20coding%20agent",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "custom_commands": {
+      "support": "unknown",
+      "source_url": "https://cline.bot/#:~:text=autonomous%20coding%20agent",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "subagents": {
+      "support": "unknown",
+      "source_url": "https://cline.bot/#:~:text=autonomous%20coding%20agent",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "model_selection": {
+      "support": "unknown",
+      "source_url": "https://cline.bot/#:~:text=autonomous%20coding%20agent",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "approval_mode": {
+      "support": "unknown",
+      "source_url": "https://cline.bot/#:~:text=autonomous%20coding%20agent",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "sandbox_mode": {
+      "support": "unknown",
+      "source_url": "https://cline.bot/#:~:text=autonomous%20coding%20agent",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "resume": {
+      "support": "unknown",
+      "source_url": "https://cline.bot/#:~:text=autonomous%20coding%20agent",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "non_interactive": {
+      "support": "unknown",
+      "source_url": "https://cline.bot/#:~:text=autonomous%20coding%20agent",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "output_format": {
+      "support": "unknown",
+      "source_url": "https://cline.bot/#:~:text=autonomous%20coding%20agent",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "statusline": {
+      "support": "unknown",
+      "source_url": "https://cline.bot/#:~:text=autonomous%20coding%20agent",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "telemetry": {
+      "support": "unknown",
+      "source_url": "https://cline.bot/#:~:text=autonomous%20coding%20agent",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "custom_model_provider": {
+      "support": "unknown",
+      "source_url": "https://cline.bot/#:~:text=autonomous%20coding%20agent",
+      "comment": "Placeholder pending sourced verification."
+    }
+  },
+  {
+    "name": "OpenAI Codex CLI",
+    "links": {
+      "docs": "https://developers.openai.com/codex/",
+      "github": "https://github.com/openai/codex",
+      "website": "https://openai.com/codex/",
+      "slug": "codex-cli"
+    },
+    "form_factor": {
+      "value": "CLI and hosted coding agent",
+      "source_url": "https://developers.openai.com/codex/#:~:text=Codex",
+      "comment": ""
+    },
+    "released_in": {
+      "value": "April 2025",
+      "source_url": "https://github.com/openai/codex#:~:text=Codex%20CLI",
+      "comment": "Open-source CLI public release."
+    },
+    "latest_major_update": {
+      "value": "May 2026",
+      "source_url": "https://developers.openai.com/codex/changelog/#:~:text=changelog",
+      "comment": "Captured from current Codex docs/changelog state."
+    },
+    "rules": {
+      "support": "full",
+      "source_url": "https://developers.openai.com/codex/agents-md/#:~:text=AGENTS.md",
+      "comment": "Uses AGENTS.md instructions."
+    },
+    "skills": {
+      "support": "full",
+      "source_url": "https://developers.openai.com/codex/skills/#:~:text=Skills",
+      "comment": "Supports SKILL.md-based skills."
+    },
+    "hooks": {
+      "support": "full",
+      "source_url": "https://developers.openai.com/codex/hooks/#:~:text=Hooks",
+      "comment": "Supports Codex hooks."
+    },
+    "mcp_servers": {
+      "support": "full",
+      "source_url": "https://developers.openai.com/codex/mcp/#:~:text=MCP",
+      "comment": "Supports MCP servers."
+    },
+    "custom_commands": {
+      "support": "partial",
+      "source_url": "https://developers.openai.com/codex/cli/#:~:text=CLI",
+      "comment": "CLI supports slash-like workflows through prompts and tooling, but not a first-class command folder in this matrix."
+    },
+    "subagents": {
+      "support": "full",
+      "source_url": "https://developers.openai.com/codex/skills/#:~:text=Skills",
+      "comment": "Codex supports sub-agent/delegation workflows in agent contexts."
+    },
+    "model_selection": {
+      "support": "full",
+      "source_url": "https://github.com/openai/codex#:~:text=model",
+      "comment": "CLI accepts model configuration/flags."
+    },
+    "approval_mode": {
+      "support": "full",
+      "source_url": "https://github.com/openai/codex#:~:text=approval",
+      "comment": "Approval policy can be configured."
+    },
+    "sandbox_mode": {
+      "support": "full",
+      "source_url": "https://github.com/openai/codex#:~:text=sandbox",
+      "comment": "Filesystem sandbox modes can be configured."
+    },
+    "resume": {
+      "support": "full",
+      "source_url": "https://github.com/openai/codex#:~:text=resume",
+      "comment": "Supports resume."
+    },
+    "non_interactive": {
+      "support": "full",
+      "source_url": "https://github.com/openai/codex#:~:text=exec",
+      "comment": "Supports exec/headless use."
+    },
+    "output_format": {
+      "support": "full",
+      "source_url": "https://github.com/openai/codex#:~:text=json",
+      "comment": "CLI supports structured output modes."
+    },
+    "statusline": {
+      "support": "full",
+      "source_url": "https://developers.openai.com/codex/#:~:text=statusline",
+      "comment": "Supports statusline configuration in local CLI settings."
+    },
+    "telemetry": {
+      "support": "full",
+      "source_url": "https://github.com/openai/codex#:~:text=telemetry",
+      "comment": "Telemetry settings are documented in the CLI repository."
+    },
+    "custom_model_provider": {
+      "support": "full",
+      "source_url": "https://github.com/openai/codex#:~:text=model_provider",
+      "comment": "Supports custom model providers in config."
+    },
+    "notes": ""
+  },
+  {
+    "name": "Cursor Agent CLI",
+    "links": {
+      "docs": "https://docs.cursor.com/en/cli/overview",
+      "github": "",
+      "website": "https://cursor.com/",
+      "slug": "cursor-agent"
+    },
+    "form_factor": {
+      "value": "CLI for Cursor Agent",
+      "source_url": "https://docs.cursor.com/en/cli/overview#:~:text=CLI",
+      "comment": "Installed as cursor-agent or agent on this machine."
+    },
+    "released_in": {
+      "value": "2025",
+      "source_url": "https://docs.cursor.com/en/cli/overview#:~:text=CLI",
+      "comment": "Exact month not confirmed in public docs captured for this dataset."
+    },
+    "latest_major_update": {
+      "value": "May 2026",
+      "source_url": "https://docs.cursor.com/en/cli/overview#:~:text=CLI",
+      "comment": "Current CLI docs and local versioned binary state."
+    },
+    "rules": {
+      "support": "full",
+      "source_url": "https://docs.cursor.com/en/context/rules#:~:text=rules",
+      "comment": "Uses Cursor rules."
+    },
+    "skills": {
+      "support": "full",
+      "source_url": "https://docs.cursor.com/en/context/skills#:~:text=skills",
+      "comment": "Supports skills."
+    },
+    "hooks": {
+      "support": "unknown",
+      "source_url": "https://docs.cursor.com/en/cli/overview#:~:text=hooks",
+      "comment": ""
+    },
+    "mcp_servers": {
+      "support": "full",
+      "source_url": "https://docs.cursor.com/en/context/mcp#:~:text=MCP",
+      "comment": "Supports MCP."
+    },
+    "custom_commands": {
+      "support": "full",
+      "source_url": "https://docs.cursor.com/en/context/rules#:~:text=commands",
+      "comment": "Cursor supports reusable context/rule workflows; command support varies by surface."
+    },
+    "subagents": {
+      "support": "partial",
+      "source_url": "https://docs.cursor.com/en/cli/overview#:~:text=subagents",
+      "comment": "Agent tasks are supported; first-class named subagents are not modeled like Claude Code."
+    },
+    "model_selection": {
+      "support": "full",
+      "source_url": "https://docs.cursor.com/en/cli/reference#:~:text=model",
+      "comment": "CLI exposes model controls."
+    },
+    "approval_mode": {
+      "support": "full",
+      "source_url": "https://docs.cursor.com/en/cli/reference#:~:text=yolo",
+      "comment": "Modes/force/yolo controls are exposed."
+    },
+    "sandbox_mode": {
+      "support": "full",
+      "source_url": "https://docs.cursor.com/en/cli/reference#:~:text=sandbox",
+      "comment": "Sandbox controls are exposed."
+    },
+    "resume": {
+      "support": "full",
+      "source_url": "https://docs.cursor.com/en/cli/reference#:~:text=resume",
+      "comment": "Supports continuation/resume workflows."
+    },
+    "non_interactive": {
+      "support": "full",
+      "source_url": "https://docs.cursor.com/en/cli/reference#:~:text=print",
+      "comment": "Supports print/headless mode."
+    },
+    "output_format": {
+      "support": "partial",
+      "source_url": "https://docs.cursor.com/en/cli/reference#:~:text=output",
+      "comment": ""
+    },
+    "statusline": {
+      "support": "unknown",
+      "source_url": "https://docs.cursor.com/en/cli/overview#:~:text=status%20line",
+      "comment": ""
+    },
+    "telemetry": {
+      "support": "full",
+      "source_url": "https://docs.cursor.com/en/account/privacy#:~:text=telemetry",
+      "comment": "Cursor documents privacy settings."
+    },
+    "custom_model_provider": {
+      "support": "full",
+      "source_url": "https://docs.cursor.com/en/settings/models#:~:text=models",
+      "comment": "Cursor supports custom API keys/models in settings."
+    },
+    "notes": "This entry is for the CLI agent surface, not the full IDE."
+  },
+  {
+    "name": "Cursor IDE",
+    "links": {
+      "docs": "https://docs.cursor.com/",
+      "github": "",
+      "website": "https://cursor.com/",
+      "slug": "cursor-ide"
+    },
+    "form_factor": {
+      "value": "IDE",
+      "source_url": "https://cursor.com/#:~:text=AI%20code%20editor",
+      "comment": "VS Code-derived AI IDE."
+    },
+    "released_in": {
+      "value": "2023",
+      "source_url": "https://cursor.com/#:~:text=Cursor",
+      "comment": "Exact month not confirmed in public docs captured for this dataset."
+    },
+    "latest_major_update": {
+      "value": "May 2026",
+      "source_url": "https://docs.cursor.com/#:~:text=Cursor",
+      "comment": "Current docs capture rules, skills, MCP, models, and agent workflows."
+    },
+    "rules": {
+      "support": "full",
+      "source_url": "https://docs.cursor.com/en/context/rules#:~:text=rules",
+      "comment": "Supports project and user rules."
+    },
+    "skills": {
+      "support": "full",
+      "source_url": "https://docs.cursor.com/en/context/skills#:~:text=skills",
+      "comment": "Supports skills."
+    },
+    "hooks": {
+      "support": "unknown",
+      "source_url": "https://docs.cursor.com/#:~:text=hooks",
+      "comment": ""
+    },
+    "mcp_servers": {
+      "support": "full",
+      "source_url": "https://docs.cursor.com/en/context/mcp#:~:text=MCP",
+      "comment": "Supports MCP."
+    },
+    "custom_commands": {
+      "support": "partial",
+      "source_url": "https://docs.cursor.com/en/context/rules#:~:text=commands",
+      "comment": "Reusable workflows are mostly rules/context driven."
+    },
+    "subagents": {
+      "support": "partial",
+      "source_url": "https://docs.cursor.com/#:~:text=subagents",
+      "comment": "Supports agentic workflows but not Claude-style named subagents in this matrix."
+    },
+    "model_selection": {
+      "support": "full",
+      "source_url": "https://docs.cursor.com/en/settings/models#:~:text=models",
+      "comment": "Supports model settings."
+    },
+    "approval_mode": {
+      "support": "full",
+      "source_url": "https://docs.cursor.com/#:~:text=approval",
+      "comment": "Agent modes expose approval controls."
+    },
+    "sandbox_mode": {
+      "support": "partial",
+      "source_url": "https://docs.cursor.com/#:~:text=sandbox",
+      "comment": "IDE trust and agent controls provide partial sandboxing."
+    },
+    "resume": {
+      "support": "full",
+      "source_url": "https://docs.cursor.com/#:~:text=resume",
+      "comment": "Composer/chat history supports continuation."
+    },
+    "non_interactive": {
+      "support": "none",
+      "source_url": "https://docs.cursor.com/#:~:text=print",
+      "comment": "Use Cursor Agent CLI for headless use."
+    },
+    "output_format": {
+      "support": "none",
+      "source_url": "https://docs.cursor.com/#:~:text=output",
+      "comment": ""
+    },
+    "statusline": {
+      "support": "partial",
+      "source_url": "https://code.visualstudio.com/docs/getstarted/userinterface#:~:text=status%20line",
+      "comment": "Inherited/editor status bar customization, not an agent-specific statusline."
+    },
+    "telemetry": {
+      "support": "full",
+      "source_url": "https://docs.cursor.com/en/account/privacy#:~:text=telemetry",
+      "comment": "Cursor documents privacy settings."
+    },
+    "custom_model_provider": {
+      "support": "full",
+      "source_url": "https://docs.cursor.com/en/settings/models#:~:text=models",
+      "comment": "Supports custom API keys/models."
+    },
+    "notes": "IDE surface included because the comparison covers coding agents, CLIs, and IDEs."
+  },
+  {
+    "name": "Devin",
+    "links": {
+      "docs": "https://docs.devin.ai/",
+      "github": "",
+      "website": "https://devin.ai/",
+      "slug": "devin"
+    },
+    "form_factor": {
+      "value": "Hosted software engineering agent",
+      "source_url": "https://devin.ai/#:~:text=AI%20software%20engineer",
+      "comment": "Placeholder row; verify details before treating as complete."
+    },
+    "released_in": {
+      "value": "TBD",
+      "source_url": "https://devin.ai/#:~:text=AI%20software%20engineer",
+      "comment": "Placeholder pending exact public release month/year."
+    },
+    "latest_major_update": {
+      "value": "TBD",
+      "source_url": "https://devin.ai/#:~:text=AI%20software%20engineer",
+      "comment": "Placeholder pending latest major update research."
+    },
+    "notes": "Placeholder row added to track a released coding-agent surface. Open issue should fill exact sourced feature cells.",
+    "rules": {
+      "support": "unknown",
+      "source_url": "https://devin.ai/#:~:text=AI%20software%20engineer",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "skills": {
+      "support": "unknown",
+      "source_url": "https://devin.ai/#:~:text=AI%20software%20engineer",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "hooks": {
+      "support": "unknown",
+      "source_url": "https://devin.ai/#:~:text=AI%20software%20engineer",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "mcp_servers": {
+      "support": "unknown",
+      "source_url": "https://devin.ai/#:~:text=AI%20software%20engineer",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "custom_commands": {
+      "support": "unknown",
+      "source_url": "https://devin.ai/#:~:text=AI%20software%20engineer",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "subagents": {
+      "support": "unknown",
+      "source_url": "https://devin.ai/#:~:text=AI%20software%20engineer",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "model_selection": {
+      "support": "unknown",
+      "source_url": "https://devin.ai/#:~:text=AI%20software%20engineer",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "approval_mode": {
+      "support": "unknown",
+      "source_url": "https://devin.ai/#:~:text=AI%20software%20engineer",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "sandbox_mode": {
+      "support": "unknown",
+      "source_url": "https://devin.ai/#:~:text=AI%20software%20engineer",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "resume": {
+      "support": "unknown",
+      "source_url": "https://devin.ai/#:~:text=AI%20software%20engineer",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "non_interactive": {
+      "support": "unknown",
+      "source_url": "https://devin.ai/#:~:text=AI%20software%20engineer",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "output_format": {
+      "support": "unknown",
+      "source_url": "https://devin.ai/#:~:text=AI%20software%20engineer",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "statusline": {
+      "support": "unknown",
+      "source_url": "https://devin.ai/#:~:text=AI%20software%20engineer",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "telemetry": {
+      "support": "unknown",
+      "source_url": "https://devin.ai/#:~:text=AI%20software%20engineer",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "custom_model_provider": {
+      "support": "unknown",
+      "source_url": "https://devin.ai/#:~:text=AI%20software%20engineer",
+      "comment": "Placeholder pending sourced verification."
+    }
+  },
+  {
+    "name": "Gemini CLI",
+    "links": {
+      "docs": "https://google-gemini.github.io/gemini-cli/",
+      "github": "https://github.com/google-gemini/gemini-cli",
+      "website": "https://blog.google/technology/developers/introducing-gemini-cli-open-source-ai-agent/",
+      "slug": "gemini-cli"
+    },
+    "form_factor": {
+      "value": "CLI",
+      "source_url": "https://google-gemini.github.io/gemini-cli/#:~:text=Gemini%20CLI",
+      "comment": ""
+    },
+    "released_in": {
+      "value": "June 2025",
+      "source_url": "https://blog.google/technology/developers/introducing-gemini-cli-open-source-ai-agent/#:~:text=Gemini%20CLI",
+      "comment": "Public open-source Gemini CLI launch."
+    },
+    "latest_major_update": {
+      "value": "May 2026",
+      "source_url": "https://antigravity.google/docs/cli-getting-started#:~:text=Antigravity%20CLI",
+      "comment": "Google points CLI users toward the newer Antigravity CLI for the latest standalone CLI surface."
+    },
+    "rules": {
+      "support": "full",
+      "source_url": "https://google-gemini.github.io/gemini-cli/docs/cli/configuration.html#:~:text=GEMINI.md",
+      "comment": "Uses GEMINI.md context files."
+    },
+    "skills": {
+      "support": "partial",
+      "source_url": "https://google-gemini.github.io/gemini-cli/docs/tools/#:~:text=tools",
+      "comment": "Extensible through tools/extensions rather than the same SKILL.md contract."
+    },
+    "hooks": {
+      "support": "full",
+      "source_url": "https://google-gemini.github.io/gemini-cli/docs/cli/configuration.html#:~:text=hooks",
+      "comment": "Supports hooks in settings."
+    },
+    "mcp_servers": {
+      "support": "full",
+      "source_url": "https://google-gemini.github.io/gemini-cli/docs/tools/mcp-server.html#:~:text=MCP",
+      "comment": "Supports MCP servers."
+    },
+    "custom_commands": {
+      "support": "full",
+      "source_url": "https://google-gemini.github.io/gemini-cli/docs/cli/commands.html#:~:text=commands",
+      "comment": "Supports commands."
+    },
+    "subagents": {
+      "support": "unknown",
+      "source_url": "https://google-gemini.github.io/gemini-cli/#:~:text=subagents",
+      "comment": ""
+    },
+    "model_selection": {
+      "support": "full",
+      "source_url": "https://google-gemini.github.io/gemini-cli/docs/cli/configuration.html#:~:text=model",
+      "comment": "Model can be configured."
+    },
+    "approval_mode": {
+      "support": "full",
+      "source_url": "https://google-gemini.github.io/gemini-cli/docs/cli/configuration.html#:~:text=approval",
+      "comment": "Approval mode is configurable."
+    },
+    "sandbox_mode": {
+      "support": "full",
+      "source_url": "https://google-gemini.github.io/gemini-cli/docs/cli/configuration.html#:~:text=sandbox",
+      "comment": "Sandbox settings are documented."
+    },
+    "resume": {
+      "support": "full",
+      "source_url": "https://google-gemini.github.io/gemini-cli/docs/cli/commands.html#:~:text=resume",
+      "comment": "Supports resume workflows."
+    },
+    "non_interactive": {
+      "support": "full",
+      "source_url": "https://google-gemini.github.io/gemini-cli/docs/cli/commands.html#:~:text=prompt",
+      "comment": "Supports prompt/headless use."
+    },
+    "output_format": {
+      "support": "partial",
+      "source_url": "https://google-gemini.github.io/gemini-cli/docs/cli/commands.html#:~:text=output",
+      "comment": ""
+    },
+    "statusline": {
+      "support": "unknown",
+      "source_url": "https://google-gemini.github.io/gemini-cli/docs/cli/configuration.html#:~:text=status%20line",
+      "comment": ""
+    },
+    "telemetry": {
+      "support": "full",
+      "source_url": "https://google-gemini.github.io/gemini-cli/docs/telemetry/#:~:text=telemetry",
+      "comment": "Telemetry is documented."
+    },
+    "custom_model_provider": {
+      "support": "partial",
+      "source_url": "https://google-gemini.github.io/gemini-cli/docs/cli/configuration.html#:~:text=providers",
+      "comment": "Primarily Gemini/Google-oriented provider configuration."
+    },
+    "notes": "Kept as an explicit agent-launch option, but excluded from random selection in this repo."
+  },
+  {
+    "name": "GitHub Copilot coding agent",
+    "links": {
+      "docs": "https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent",
+      "github": "https://github.com/features/copilot",
+      "website": "https://github.com/features/copilot",
+      "slug": "github-copilot-coding-agent"
+    },
+    "form_factor": {
+      "value": "Hosted coding agent and IDE assistant",
+      "source_url": "https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent#:~:text=coding%20agent",
+      "comment": "Placeholder row; verify details before treating as complete."
+    },
+    "released_in": {
+      "value": "TBD",
+      "source_url": "https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent#:~:text=coding%20agent",
+      "comment": "Placeholder pending exact public release month/year."
+    },
+    "latest_major_update": {
+      "value": "TBD",
+      "source_url": "https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent#:~:text=coding%20agent",
+      "comment": "Placeholder pending latest major update research."
+    },
+    "notes": "Placeholder row added to track a released coding-agent surface. Open issue should fill exact sourced feature cells.",
+    "rules": {
+      "support": "unknown",
+      "source_url": "https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent#:~:text=coding%20agent",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "skills": {
+      "support": "unknown",
+      "source_url": "https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent#:~:text=coding%20agent",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "hooks": {
+      "support": "unknown",
+      "source_url": "https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent#:~:text=coding%20agent",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "mcp_servers": {
+      "support": "unknown",
+      "source_url": "https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent#:~:text=coding%20agent",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "custom_commands": {
+      "support": "unknown",
+      "source_url": "https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent#:~:text=coding%20agent",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "subagents": {
+      "support": "unknown",
+      "source_url": "https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent#:~:text=coding%20agent",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "model_selection": {
+      "support": "unknown",
+      "source_url": "https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent#:~:text=coding%20agent",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "approval_mode": {
+      "support": "unknown",
+      "source_url": "https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent#:~:text=coding%20agent",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "sandbox_mode": {
+      "support": "unknown",
+      "source_url": "https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent#:~:text=coding%20agent",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "resume": {
+      "support": "unknown",
+      "source_url": "https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent#:~:text=coding%20agent",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "non_interactive": {
+      "support": "unknown",
+      "source_url": "https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent#:~:text=coding%20agent",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "output_format": {
+      "support": "unknown",
+      "source_url": "https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent#:~:text=coding%20agent",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "statusline": {
+      "support": "unknown",
+      "source_url": "https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent#:~:text=coding%20agent",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "telemetry": {
+      "support": "unknown",
+      "source_url": "https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent#:~:text=coding%20agent",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "custom_model_provider": {
+      "support": "unknown",
+      "source_url": "https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent#:~:text=coding%20agent",
+      "comment": "Placeholder pending sourced verification."
+    }
+  },
+  {
+    "name": "Kilo Code",
+    "links": {
+      "docs": "https://kilo.ai/docs/getting-started",
+      "github": "https://github.com/Kilo-Org/kilocode",
+      "website": "https://kilo.ai/",
+      "slug": "kilo-code"
+    },
+    "form_factor": {
+      "value": "IDE extension and CLI coding agent",
+      "source_url": "https://kilo.ai/docs/getting-started#:~:text=works%20wherever%20you%20do",
+      "comment": "Placeholder row; verify details before treating as complete."
+    },
+    "released_in": {
+      "value": "TBD",
+      "source_url": "https://kilo.ai/docs/getting-started#:~:text=works%20wherever%20you%20do",
+      "comment": "Placeholder pending exact public release month/year."
+    },
+    "latest_major_update": {
+      "value": "TBD",
+      "source_url": "https://kilo.ai/docs/getting-started#:~:text=works%20wherever%20you%20do",
+      "comment": "Placeholder pending latest major update research."
+    },
+    "notes": "Placeholder row added to track a released coding-agent surface. Open issue should fill exact sourced feature cells.",
+    "rules": {
+      "support": "unknown",
+      "source_url": "https://kilo.ai/docs/getting-started#:~:text=works%20wherever%20you%20do",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "skills": {
+      "support": "unknown",
+      "source_url": "https://kilo.ai/docs/getting-started#:~:text=works%20wherever%20you%20do",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "hooks": {
+      "support": "unknown",
+      "source_url": "https://kilo.ai/docs/getting-started#:~:text=works%20wherever%20you%20do",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "mcp_servers": {
+      "support": "unknown",
+      "source_url": "https://kilo.ai/docs/getting-started#:~:text=works%20wherever%20you%20do",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "custom_commands": {
+      "support": "unknown",
+      "source_url": "https://kilo.ai/docs/getting-started#:~:text=works%20wherever%20you%20do",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "subagents": {
+      "support": "unknown",
+      "source_url": "https://kilo.ai/docs/getting-started#:~:text=works%20wherever%20you%20do",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "model_selection": {
+      "support": "unknown",
+      "source_url": "https://kilo.ai/docs/getting-started#:~:text=works%20wherever%20you%20do",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "approval_mode": {
+      "support": "unknown",
+      "source_url": "https://kilo.ai/docs/getting-started#:~:text=works%20wherever%20you%20do",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "sandbox_mode": {
+      "support": "unknown",
+      "source_url": "https://kilo.ai/docs/getting-started#:~:text=works%20wherever%20you%20do",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "resume": {
+      "support": "unknown",
+      "source_url": "https://kilo.ai/docs/getting-started#:~:text=works%20wherever%20you%20do",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "non_interactive": {
+      "support": "unknown",
+      "source_url": "https://kilo.ai/docs/getting-started#:~:text=works%20wherever%20you%20do",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "output_format": {
+      "support": "unknown",
+      "source_url": "https://kilo.ai/docs/getting-started#:~:text=works%20wherever%20you%20do",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "statusline": {
+      "support": "unknown",
+      "source_url": "https://kilo.ai/docs/getting-started#:~:text=works%20wherever%20you%20do",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "telemetry": {
+      "support": "unknown",
+      "source_url": "https://kilo.ai/docs/getting-started#:~:text=works%20wherever%20you%20do",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "custom_model_provider": {
+      "support": "unknown",
+      "source_url": "https://kilo.ai/docs/getting-started#:~:text=works%20wherever%20you%20do",
+      "comment": "Placeholder pending sourced verification."
+    }
+  },
+  {
+    "name": "Kimi CLI",
+    "links": {
+      "docs": "https://kimi-ai.chat/guide/kimi-cli/",
+      "github": "",
+      "website": "https://kimi.moonshot.cn/",
+      "slug": "kimi-cli"
+    },
+    "form_factor": {
+      "value": "CLI coding agent",
+      "source_url": "https://kimi-ai.chat/guide/kimi-cli/#:~:text=Kimi%20Code%20CLI",
+      "comment": "Placeholder row; verify details before treating as complete."
+    },
+    "released_in": {
+      "value": "TBD",
+      "source_url": "https://kimi-ai.chat/guide/kimi-cli/#:~:text=Kimi%20Code%20CLI",
+      "comment": "Placeholder pending exact public release month/year."
+    },
+    "latest_major_update": {
+      "value": "TBD",
+      "source_url": "https://kimi-ai.chat/guide/kimi-cli/#:~:text=Kimi%20Code%20CLI",
+      "comment": "Placeholder pending latest major update research."
+    },
+    "notes": "Placeholder row added to track a released coding-agent surface. Open issue should fill exact sourced feature cells.",
+    "rules": {
+      "support": "unknown",
+      "source_url": "https://kimi-ai.chat/guide/kimi-cli/#:~:text=Kimi%20Code%20CLI",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "skills": {
+      "support": "unknown",
+      "source_url": "https://kimi-ai.chat/guide/kimi-cli/#:~:text=Kimi%20Code%20CLI",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "hooks": {
+      "support": "unknown",
+      "source_url": "https://kimi-ai.chat/guide/kimi-cli/#:~:text=Kimi%20Code%20CLI",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "mcp_servers": {
+      "support": "unknown",
+      "source_url": "https://kimi-ai.chat/guide/kimi-cli/#:~:text=Kimi%20Code%20CLI",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "custom_commands": {
+      "support": "unknown",
+      "source_url": "https://kimi-ai.chat/guide/kimi-cli/#:~:text=Kimi%20Code%20CLI",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "subagents": {
+      "support": "unknown",
+      "source_url": "https://kimi-ai.chat/guide/kimi-cli/#:~:text=Kimi%20Code%20CLI",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "model_selection": {
+      "support": "unknown",
+      "source_url": "https://kimi-ai.chat/guide/kimi-cli/#:~:text=Kimi%20Code%20CLI",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "approval_mode": {
+      "support": "unknown",
+      "source_url": "https://kimi-ai.chat/guide/kimi-cli/#:~:text=Kimi%20Code%20CLI",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "sandbox_mode": {
+      "support": "unknown",
+      "source_url": "https://kimi-ai.chat/guide/kimi-cli/#:~:text=Kimi%20Code%20CLI",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "resume": {
+      "support": "unknown",
+      "source_url": "https://kimi-ai.chat/guide/kimi-cli/#:~:text=Kimi%20Code%20CLI",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "non_interactive": {
+      "support": "unknown",
+      "source_url": "https://kimi-ai.chat/guide/kimi-cli/#:~:text=Kimi%20Code%20CLI",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "output_format": {
+      "support": "unknown",
+      "source_url": "https://kimi-ai.chat/guide/kimi-cli/#:~:text=Kimi%20Code%20CLI",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "statusline": {
+      "support": "unknown",
+      "source_url": "https://kimi-ai.chat/guide/kimi-cli/#:~:text=Kimi%20Code%20CLI",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "telemetry": {
+      "support": "unknown",
+      "source_url": "https://kimi-ai.chat/guide/kimi-cli/#:~:text=Kimi%20Code%20CLI",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "custom_model_provider": {
+      "support": "unknown",
+      "source_url": "https://kimi-ai.chat/guide/kimi-cli/#:~:text=Kimi%20Code%20CLI",
+      "comment": "Placeholder pending sourced verification."
+    }
+  },
+  {
+    "name": "OpenCode",
+    "links": {
+      "docs": "https://opencode.ai/docs/",
+      "github": "https://github.com/sst/opencode",
+      "website": "https://opencode.ai/",
+      "slug": "opencode"
+    },
+    "form_factor": {
+      "value": "Terminal UI and CLI",
+      "source_url": "https://opencode.ai/docs/#:~:text=terminal",
+      "comment": ""
+    },
+    "released_in": {
+      "value": "2025",
+      "source_url": "https://github.com/sst/opencode#:~:text=opencode",
+      "comment": "Exact public launch month not confirmed in public docs captured for this dataset."
+    },
+    "latest_major_update": {
+      "value": "May 2026",
+      "source_url": "https://opencode.ai/docs/#:~:text=opencode",
+      "comment": "Current docs capture config, agents, MCP, and providers."
+    },
+    "rules": {
+      "support": "full",
+      "source_url": "https://opencode.ai/docs/config/#:~:text=instructions",
+      "comment": "Supports instruction/config files."
+    },
+    "skills": {
+      "support": "full",
+      "source_url": "https://opencode.ai/docs/skills/#:~:text=skills",
+      "comment": "Supports skills."
+    },
+    "hooks": {
+      "support": "full",
+      "source_url": "https://opencode.ai/docs/config/#:~:text=hooks",
+      "comment": "Config supports commands/hooks workflows."
+    },
+    "mcp_servers": {
+      "support": "full",
+      "source_url": "https://opencode.ai/docs/mcp-servers/#:~:text=MCP",
+      "comment": "Supports MCP servers."
+    },
+    "custom_commands": {
+      "support": "full",
+      "source_url": "https://opencode.ai/docs/commands/#:~:text=commands",
+      "comment": "Supports commands."
+    },
+    "subagents": {
+      "support": "full",
+      "source_url": "https://opencode.ai/docs/agents/#:~:text=agents",
+      "comment": "Supports custom agents."
+    },
+    "model_selection": {
+      "support": "full",
+      "source_url": "https://opencode.ai/docs/providers/#:~:text=providers",
+      "comment": "Supports provider/model selection."
+    },
+    "approval_mode": {
+      "support": "full",
+      "source_url": "https://opencode.ai/docs/config/#:~:text=permission",
+      "comment": "Permission controls are configurable."
+    },
+    "sandbox_mode": {
+      "support": "partial",
+      "source_url": "https://opencode.ai/docs/config/#:~:text=permission",
+      "comment": "Permission model controls tool access."
+    },
+    "resume": {
+      "support": "full",
+      "source_url": "https://opencode.ai/docs/cli/#:~:text=session",
+      "comment": "Supports session options."
+    },
+    "non_interactive": {
+      "support": "full",
+      "source_url": "https://opencode.ai/docs/cli/#:~:text=run",
+      "comment": "Supports run mode."
+    },
+    "output_format": {
+      "support": "full",
+      "source_url": "https://opencode.ai/docs/cli/#:~:text=format",
+      "comment": "CLI supports format options."
+    },
+    "statusline": {
+      "support": "unknown",
+      "source_url": "https://opencode.ai/docs/config/#:~:text=status%20line",
+      "comment": ""
+    },
+    "telemetry": {
+      "support": "full",
+      "source_url": "https://opencode.ai/docs/config/#:~:text=telemetry",
+      "comment": "Config includes telemetry-related settings."
+    },
+    "custom_model_provider": {
+      "support": "full",
+      "source_url": "https://opencode.ai/docs/providers/#:~:text=providers",
+      "comment": "Supports many providers and custom provider configuration."
+    },
+    "notes": ""
+  },
+  {
+    "name": "Qwen Code",
+    "links": {
+      "docs": "https://qwenlm.github.io/qwen-code-docs/en/users/overview",
+      "github": "https://github.com/QwenLM/qwen-code",
+      "website": "https://qwenlm.github.io/qwen-code-docs/",
+      "slug": "qwen-code"
+    },
+    "form_factor": {
+      "value": "CLI coding agent",
+      "source_url": "https://github.com/QwenLM/qwen-code#:~:text=terminal",
+      "comment": "Placeholder row; verify details before treating as complete."
+    },
+    "released_in": {
+      "value": "TBD",
+      "source_url": "https://github.com/QwenLM/qwen-code#:~:text=terminal",
+      "comment": "Placeholder pending exact public release month/year."
+    },
+    "latest_major_update": {
+      "value": "TBD",
+      "source_url": "https://github.com/QwenLM/qwen-code#:~:text=terminal",
+      "comment": "Placeholder pending latest major update research."
+    },
+    "notes": "Placeholder row added to track a released coding-agent surface. Open issue should fill exact sourced feature cells.",
+    "rules": {
+      "support": "unknown",
+      "source_url": "https://github.com/QwenLM/qwen-code#:~:text=terminal",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "skills": {
+      "support": "unknown",
+      "source_url": "https://github.com/QwenLM/qwen-code#:~:text=terminal",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "hooks": {
+      "support": "unknown",
+      "source_url": "https://github.com/QwenLM/qwen-code#:~:text=terminal",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "mcp_servers": {
+      "support": "unknown",
+      "source_url": "https://github.com/QwenLM/qwen-code#:~:text=terminal",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "custom_commands": {
+      "support": "unknown",
+      "source_url": "https://github.com/QwenLM/qwen-code#:~:text=terminal",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "subagents": {
+      "support": "unknown",
+      "source_url": "https://github.com/QwenLM/qwen-code#:~:text=terminal",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "model_selection": {
+      "support": "unknown",
+      "source_url": "https://github.com/QwenLM/qwen-code#:~:text=terminal",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "approval_mode": {
+      "support": "unknown",
+      "source_url": "https://github.com/QwenLM/qwen-code#:~:text=terminal",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "sandbox_mode": {
+      "support": "unknown",
+      "source_url": "https://github.com/QwenLM/qwen-code#:~:text=terminal",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "resume": {
+      "support": "unknown",
+      "source_url": "https://github.com/QwenLM/qwen-code#:~:text=terminal",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "non_interactive": {
+      "support": "unknown",
+      "source_url": "https://github.com/QwenLM/qwen-code#:~:text=terminal",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "output_format": {
+      "support": "unknown",
+      "source_url": "https://github.com/QwenLM/qwen-code#:~:text=terminal",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "statusline": {
+      "support": "unknown",
+      "source_url": "https://github.com/QwenLM/qwen-code#:~:text=terminal",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "telemetry": {
+      "support": "unknown",
+      "source_url": "https://github.com/QwenLM/qwen-code#:~:text=terminal",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "custom_model_provider": {
+      "support": "unknown",
+      "source_url": "https://github.com/QwenLM/qwen-code#:~:text=terminal",
+      "comment": "Placeholder pending sourced verification."
+    }
+  },
+  {
+    "name": "Roo Code",
+    "links": {
+      "docs": "https://docs.roocode.com/",
+      "github": "https://github.com/RooCodeInc/Roo-Code",
+      "website": "https://roocode.com/",
+      "slug": "roo-code"
+    },
+    "form_factor": {
+      "value": "IDE extension coding agent",
+      "source_url": "https://roocode.com/#:~:text=AI%20coding%20assistant",
+      "comment": "Placeholder row; verify details before treating as complete."
+    },
+    "released_in": {
+      "value": "TBD",
+      "source_url": "https://roocode.com/#:~:text=AI%20coding%20assistant",
+      "comment": "Placeholder pending exact public release month/year."
+    },
+    "latest_major_update": {
+      "value": "TBD",
+      "source_url": "https://roocode.com/#:~:text=AI%20coding%20assistant",
+      "comment": "Placeholder pending latest major update research."
+    },
+    "notes": "Placeholder row added to track a released coding-agent surface. Open issue should fill exact sourced feature cells.",
+    "rules": {
+      "support": "unknown",
+      "source_url": "https://roocode.com/#:~:text=AI%20coding%20assistant",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "skills": {
+      "support": "unknown",
+      "source_url": "https://roocode.com/#:~:text=AI%20coding%20assistant",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "hooks": {
+      "support": "unknown",
+      "source_url": "https://roocode.com/#:~:text=AI%20coding%20assistant",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "mcp_servers": {
+      "support": "unknown",
+      "source_url": "https://roocode.com/#:~:text=AI%20coding%20assistant",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "custom_commands": {
+      "support": "unknown",
+      "source_url": "https://roocode.com/#:~:text=AI%20coding%20assistant",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "subagents": {
+      "support": "unknown",
+      "source_url": "https://roocode.com/#:~:text=AI%20coding%20assistant",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "model_selection": {
+      "support": "unknown",
+      "source_url": "https://roocode.com/#:~:text=AI%20coding%20assistant",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "approval_mode": {
+      "support": "unknown",
+      "source_url": "https://roocode.com/#:~:text=AI%20coding%20assistant",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "sandbox_mode": {
+      "support": "unknown",
+      "source_url": "https://roocode.com/#:~:text=AI%20coding%20assistant",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "resume": {
+      "support": "unknown",
+      "source_url": "https://roocode.com/#:~:text=AI%20coding%20assistant",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "non_interactive": {
+      "support": "unknown",
+      "source_url": "https://roocode.com/#:~:text=AI%20coding%20assistant",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "output_format": {
+      "support": "unknown",
+      "source_url": "https://roocode.com/#:~:text=AI%20coding%20assistant",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "statusline": {
+      "support": "unknown",
+      "source_url": "https://roocode.com/#:~:text=AI%20coding%20assistant",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "telemetry": {
+      "support": "unknown",
+      "source_url": "https://roocode.com/#:~:text=AI%20coding%20assistant",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "custom_model_provider": {
+      "support": "unknown",
+      "source_url": "https://roocode.com/#:~:text=AI%20coding%20assistant",
+      "comment": "Placeholder pending sourced verification."
+    }
+  },
+  {
+    "name": "Windsurf Cascade",
+    "links": {
+      "docs": "https://docs.windsurf.com/",
+      "github": "",
+      "website": "https://windsurf.com/",
+      "slug": "windsurf"
+    },
+    "form_factor": {
+      "value": "IDE and coding agent",
+      "source_url": "https://windsurf.com/#:~:text=Windsurf",
+      "comment": "Placeholder row; verify details before treating as complete."
+    },
+    "released_in": {
+      "value": "TBD",
+      "source_url": "https://windsurf.com/#:~:text=Windsurf",
+      "comment": "Placeholder pending exact public release month/year."
+    },
+    "latest_major_update": {
+      "value": "TBD",
+      "source_url": "https://windsurf.com/#:~:text=Windsurf",
+      "comment": "Placeholder pending latest major update research."
+    },
+    "notes": "Placeholder row added to track a released coding-agent surface. Open issue should fill exact sourced feature cells.",
+    "rules": {
+      "support": "unknown",
+      "source_url": "https://windsurf.com/#:~:text=Windsurf",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "skills": {
+      "support": "unknown",
+      "source_url": "https://windsurf.com/#:~:text=Windsurf",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "hooks": {
+      "support": "unknown",
+      "source_url": "https://windsurf.com/#:~:text=Windsurf",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "mcp_servers": {
+      "support": "unknown",
+      "source_url": "https://windsurf.com/#:~:text=Windsurf",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "custom_commands": {
+      "support": "unknown",
+      "source_url": "https://windsurf.com/#:~:text=Windsurf",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "subagents": {
+      "support": "unknown",
+      "source_url": "https://windsurf.com/#:~:text=Windsurf",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "model_selection": {
+      "support": "unknown",
+      "source_url": "https://windsurf.com/#:~:text=Windsurf",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "approval_mode": {
+      "support": "unknown",
+      "source_url": "https://windsurf.com/#:~:text=Windsurf",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "sandbox_mode": {
+      "support": "unknown",
+      "source_url": "https://windsurf.com/#:~:text=Windsurf",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "resume": {
+      "support": "unknown",
+      "source_url": "https://windsurf.com/#:~:text=Windsurf",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "non_interactive": {
+      "support": "unknown",
+      "source_url": "https://windsurf.com/#:~:text=Windsurf",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "output_format": {
+      "support": "unknown",
+      "source_url": "https://windsurf.com/#:~:text=Windsurf",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "statusline": {
+      "support": "unknown",
+      "source_url": "https://windsurf.com/#:~:text=Windsurf",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "telemetry": {
+      "support": "unknown",
+      "source_url": "https://windsurf.com/#:~:text=Windsurf",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "custom_model_provider": {
+      "support": "unknown",
+      "source_url": "https://windsurf.com/#:~:text=Windsurf",
+      "comment": "Placeholder pending sourced verification."
+    }
+  }
+]

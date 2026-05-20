@@ -1,0 +1,100 @@
+{
+  "name": "Kilo Code",
+  "links": {
+    "docs": "https://kilo.ai/docs/getting-started",
+    "github": "https://github.com/Kilo-Org/kilocode",
+    "website": "https://kilo.ai/",
+    "slug": "kilo-code"
+  },
+  "form_factor": {
+    "value": "IDE extension and CLI coding agent",
+    "source_url": "https://kilo.ai/docs/getting-started#:~:text=works%20wherever%20you%20do",
+    "comment": "Placeholder row; verify details before treating as complete."
+  },
+  "released_in": {
+    "value": "TBD",
+    "source_url": "https://kilo.ai/docs/getting-started#:~:text=works%20wherever%20you%20do",
+    "comment": "Placeholder pending exact public release month/year."
+  },
+  "latest_major_update": {
+    "value": "TBD",
+    "source_url": "https://kilo.ai/docs/getting-started#:~:text=works%20wherever%20you%20do",
+    "comment": "Placeholder pending latest major update research."
+  },
+  "notes": "Placeholder row added to track a released coding-agent surface. Open issue should fill exact sourced feature cells.",
+  "rules": {
+    "support": "unknown",
+    "source_url": "https://kilo.ai/docs/getting-started#:~:text=works%20wherever%20you%20do",
+    "comment": "Placeholder pending sourced verification."
+  },
+  "skills": {
+    "support": "unknown",
+    "source_url": "https://kilo.ai/docs/getting-started#:~:text=works%20wherever%20you%20do",
+    "comment": "Placeholder pending sourced verification."
+  },
+  "hooks": {
+    "support": "unknown",
+    "source_url": "https://kilo.ai/docs/getting-started#:~:text=works%20wherever%20you%20do",
+    "comment": "Placeholder pending sourced verification."
+  },
+  "mcp_servers": {
+    "support": "unknown",
+    "source_url": "https://kilo.ai/docs/getting-started#:~:text=works%20wherever%20you%20do",
+    "comment": "Placeholder pending sourced verification."
+  },
+  "custom_commands": {
+    "support": "unknown",
+    "source_url": "https://kilo.ai/docs/getting-started#:~:text=works%20wherever%20you%20do",
+    "comment": "Placeholder pending sourced verification."
+  },
+  "subagents": {
+    "support": "unknown",
+    "source_url": "https://kilo.ai/docs/getting-started#:~:text=works%20wherever%20you%20do",
+    "comment": "Placeholder pending sourced verification."
+  },
+  "model_selection": {
+    "support": "unknown",
+    "source_url": "https://kilo.ai/docs/getting-started#:~:text=works%20wherever%20you%20do",
+    "comment": "Placeholder pending sourced verification."
+  },
+  "approval_mode": {
+    "support": "unknown",
+    "source_url": "https://kilo.ai/docs/getting-started#:~:text=works%20wherever%20you%20do",
+    "comment": "Placeholder pending sourced verification."
+  },
+  "sandbox_mode": {
+    "support": "unknown",
+    "source_url": "https://kilo.ai/docs/getting-started#:~:text=works%20wherever%20you%20do",
+    "comment": "Placeholder pending sourced verification."
+  },
+  "resume": {
+    "support": "unknown",
+    "source_url": "https://kilo.ai/docs/getting-started#:~:text=works%20wherever%20you%20do",
+    "comment": "Placeholder pending sourced verification."
+  },
+  "non_interactive": {
+    "support": "unknown",
+    "source_url": "https://kilo.ai/docs/getting-started#:~:text=works%20wherever%20you%20do",
+    "comment": "Placeholder pending sourced verification."
+  },
+  "output_format": {
+    "support": "unknown",
+    "source_url": "https://kilo.ai/docs/getting-started#:~:text=works%20wherever%20you%20do",
+    "comment": "Placeholder pending sourced verification."
+  },
+  "statusline": {
+    "support": "unknown",
+    "source_url": "https://kilo.ai/docs/getting-started#:~:text=works%20wherever%20you%20do",
+    "comment": "Placeholder pending sourced verification."
+  },
+  "telemetry": {
+    "support": "unknown",
+    "source_url": "https://kilo.ai/docs/getting-started#:~:text=works%20wherever%20you%20do",
+    "comment": "Placeholder pending sourced verification."
+  },
+  "custom_model_provider": {
+    "support": "unknown",
+    "source_url": "https://kilo.ai/docs/getting-started#:~:text=works%20wherever%20you%20do",
+    "comment": "Placeholder pending sourced verification."
+  }
+}

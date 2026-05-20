@@ -1,0 +1,100 @@
+{
+  "name": "Antigravity IDE",
+  "links": {
+    "docs": "https://antigravity.google/docs/",
+    "github": "",
+    "website": "https://antigravity.google/",
+    "slug": "antigravity-ide"
+  },
+  "form_factor": {
+    "value": "IDE",
+    "source_url": "https://antigravity.google/#:~:text=CLI",
+    "comment": "Google Antigravity IDE surface."
+  },
+  "released_in": {
+    "value": "2025",
+    "source_url": "https://antigravity.google/#:~:text=released",
+    "comment": "Exact public release month not confirmed in public docs captured for this dataset."
+  },
+  "latest_major_update": {
+    "value": "May 2026",
+    "source_url": "https://antigravity.google/docs/cli-getting-started#:~:text=update",
+    "comment": "New standalone CLI split documented separately from the IDE."
+  },
+  "rules": {
+    "support": "partial",
+    "source_url": "https://antigravity.google/docs/#:~:text=rules",
+    "comment": "IDE has persistent agent context, but not the same plugin rules path as Antigravity CLI."
+  },
+  "skills": {
+    "support": "partial",
+    "source_url": "https://antigravity.google/docs/#:~:text=skills",
+    "comment": "Local IDE data includes skills, but public docs are less explicit than CLI plugin docs."
+  },
+  "hooks": {
+    "support": "unknown",
+    "source_url": "https://antigravity.google/docs/#:~:text=hooks",
+    "comment": ""
+  },
+  "mcp_servers": {
+    "support": "partial",
+    "source_url": "https://antigravity.google/docs/#:~:text=MCP",
+    "comment": "Local IDE data includes mcp_config.json, but CLI plugin MCP is documented more clearly."
+  },
+  "custom_commands": {
+    "support": "partial",
+    "source_url": "https://antigravity.google/docs/#:~:text=commands",
+    "comment": "Global workflows are present in local IDE data."
+  },
+  "subagents": {
+    "support": "unknown",
+    "source_url": "https://antigravity.google/docs/#:~:text=subagents",
+    "comment": ""
+  },
+  "model_selection": {
+    "support": "unknown",
+    "source_url": "https://antigravity.google/docs/#:~:text=model",
+    "comment": ""
+  },
+  "approval_mode": {
+    "support": "unknown",
+    "source_url": "https://antigravity.google/docs/#:~:text=approval",
+    "comment": ""
+  },
+  "sandbox_mode": {
+    "support": "unknown",
+    "source_url": "https://antigravity.google/docs/#:~:text=sandbox",
+    "comment": ""
+  },
+  "resume": {
+    "support": "full",
+    "source_url": "https://antigravity.google/docs/#:~:text=resume",
+    "comment": "IDE stores conversation/brain state."
+  },
+  "non_interactive": {
+    "support": "none",
+    "source_url": "https://antigravity.google/docs/cli-getting-started#:~:text=print",
+    "comment": "Use Antigravity CLI for headless use."
+  },
+  "output_format": {
+    "support": "unknown",
+    "source_url": "https://antigravity.google/docs/#:~:text=output",
+    "comment": ""
+  },
+  "statusline": {
+    "support": "unknown",
+    "source_url": "https://antigravity.google/docs/#:~:text=status%20line",
+    "comment": ""
+  },
+  "telemetry": {
+    "support": "unknown",
+    "source_url": "https://antigravity.google/docs/#:~:text=telemetry",
+    "comment": ""
+  },
+  "custom_model_provider": {
+    "support": "unknown",
+    "source_url": "https://antigravity.google/docs/#:~:text=providers",
+    "comment": ""
+  },
+  "notes": "Included as a distinct IDE surface because it is not the same as the new agy CLI."
+}

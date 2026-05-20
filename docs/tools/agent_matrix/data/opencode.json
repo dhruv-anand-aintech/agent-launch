@@ -1,0 +1,100 @@
+{
+  "name": "OpenCode",
+  "links": {
+    "docs": "https://opencode.ai/docs/",
+    "github": "https://github.com/sst/opencode",
+    "website": "https://opencode.ai/",
+    "slug": "opencode"
+  },
+  "form_factor": {
+    "value": "Terminal UI and CLI",
+    "source_url": "https://opencode.ai/docs/#:~:text=terminal",
+    "comment": ""
+  },
+  "released_in": {
+    "value": "2025",
+    "source_url": "https://github.com/sst/opencode#:~:text=opencode",
+    "comment": "Exact public launch month not confirmed in public docs captured for this dataset."
+  },
+  "latest_major_update": {
+    "value": "May 2026",
+    "source_url": "https://opencode.ai/docs/#:~:text=opencode",
+    "comment": "Current docs capture config, agents, MCP, and providers."
+  },
+  "rules": {
+    "support": "full",
+    "source_url": "https://opencode.ai/docs/config/#:~:text=instructions",
+    "comment": "Supports instruction/config files."
+  },
+  "skills": {
+    "support": "full",
+    "source_url": "https://opencode.ai/docs/skills/#:~:text=skills",
+    "comment": "Supports skills."
+  },
+  "hooks": {
+    "support": "full",
+    "source_url": "https://opencode.ai/docs/config/#:~:text=hooks",
+    "comment": "Config supports commands/hooks workflows."
+  },
+  "mcp_servers": {
+    "support": "full",
+    "source_url": "https://opencode.ai/docs/mcp-servers/#:~:text=MCP",
+    "comment": "Supports MCP servers."
+  },
+  "custom_commands": {
+    "support": "full",
+    "source_url": "https://opencode.ai/docs/commands/#:~:text=commands",
+    "comment": "Supports commands."
+  },
+  "subagents": {
+    "support": "full",
+    "source_url": "https://opencode.ai/docs/agents/#:~:text=agents",
+    "comment": "Supports custom agents."
+  },
+  "model_selection": {
+    "support": "full",
+    "source_url": "https://opencode.ai/docs/providers/#:~:text=providers",
+    "comment": "Supports provider/model selection."
+  },
+  "approval_mode": {
+    "support": "full",
+    "source_url": "https://opencode.ai/docs/config/#:~:text=permission",
+    "comment": "Permission controls are configurable."
+  },
+  "sandbox_mode": {
+    "support": "partial",
+    "source_url": "https://opencode.ai/docs/config/#:~:text=permission",
+    "comment": "Permission model controls tool access."
+  },
+  "resume": {
+    "support": "full",
+    "source_url": "https://opencode.ai/docs/cli/#:~:text=session",
+    "comment": "Supports session options."
+  },
+  "non_interactive": {
+    "support": "full",
+    "source_url": "https://opencode.ai/docs/cli/#:~:text=run",
+    "comment": "Supports run mode."
+  },
+  "output_format": {
+    "support": "full",
+    "source_url": "https://opencode.ai/docs/cli/#:~:text=format",
+    "comment": "CLI supports format options."
+  },
+  "statusline": {
+    "support": "unknown",
+    "source_url": "https://opencode.ai/docs/config/#:~:text=status%20line",
+    "comment": ""
+  },
+  "telemetry": {
+    "support": "full",
+    "source_url": "https://opencode.ai/docs/config/#:~:text=telemetry",
+    "comment": "Config includes telemetry-related settings."
+  },
+  "custom_model_provider": {
+    "support": "full",
+    "source_url": "https://opencode.ai/docs/providers/#:~:text=providers",
+    "comment": "Supports many providers and custom provider configuration."
+  },
+  "notes": ""
+}

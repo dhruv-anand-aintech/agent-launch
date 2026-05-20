@@ -1,0 +1,4 @@
+name = "agent-launch-matrix"
+main = "worker/matrix.js"
+compatibility_date = "2026-05-20"
+workers_dev = true

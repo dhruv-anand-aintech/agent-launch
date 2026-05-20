@@ -1,0 +1,100 @@
+{
+  "name": "Gemini CLI",
+  "links": {
+    "docs": "https://google-gemini.github.io/gemini-cli/",
+    "github": "https://github.com/google-gemini/gemini-cli",
+    "website": "https://blog.google/technology/developers/introducing-gemini-cli-open-source-ai-agent/",
+    "slug": "gemini-cli"
+  },
+  "form_factor": {
+    "value": "CLI",
+    "source_url": "https://google-gemini.github.io/gemini-cli/#:~:text=Gemini%20CLI",
+    "comment": ""
+  },
+  "released_in": {
+    "value": "June 2025",
+    "source_url": "https://blog.google/technology/developers/introducing-gemini-cli-open-source-ai-agent/#:~:text=Gemini%20CLI",
+    "comment": "Public open-source Gemini CLI launch."
+  },
+  "latest_major_update": {
+    "value": "May 2026",
+    "source_url": "https://antigravity.google/docs/cli-getting-started#:~:text=Antigravity%20CLI",
+    "comment": "Google points CLI users toward the newer Antigravity CLI for the latest standalone CLI surface."
+  },
+  "rules": {
+    "support": "full",
+    "source_url": "https://google-gemini.github.io/gemini-cli/docs/cli/configuration.html#:~:text=GEMINI.md",
+    "comment": "Uses GEMINI.md context files."
+  },
+  "skills": {
+    "support": "partial",
+    "source_url": "https://google-gemini.github.io/gemini-cli/docs/tools/#:~:text=tools",
+    "comment": "Extensible through tools/extensions rather than the same SKILL.md contract."
+  },
+  "hooks": {
+    "support": "full",
+    "source_url": "https://google-gemini.github.io/gemini-cli/docs/cli/configuration.html#:~:text=hooks",
+    "comment": "Supports hooks in settings."
+  },
+  "mcp_servers": {
+    "support": "full",
+    "source_url": "https://google-gemini.github.io/gemini-cli/docs/tools/mcp-server.html#:~:text=MCP",
+    "comment": "Supports MCP servers."
+  },
+  "custom_commands": {
+    "support": "full",
+    "source_url": "https://google-gemini.github.io/gemini-cli/docs/cli/commands.html#:~:text=commands",
+    "comment": "Supports commands."
+  },
+  "subagents": {
+    "support": "unknown",
+    "source_url": "https://google-gemini.github.io/gemini-cli/#:~:text=subagents",
+    "comment": ""
+  },
+  "model_selection": {
+    "support": "full",
+    "source_url": "https://google-gemini.github.io/gemini-cli/docs/cli/configuration.html#:~:text=model",
+    "comment": "Model can be configured."
+  },
+  "approval_mode": {
+    "support": "full",
+    "source_url": "https://google-gemini.github.io/gemini-cli/docs/cli/configuration.html#:~:text=approval",
+    "comment": "Approval mode is configurable."
+  },
+  "sandbox_mode": {
+    "support": "full",
+    "source_url": "https://google-gemini.github.io/gemini-cli/docs/cli/configuration.html#:~:text=sandbox",
+    "comment": "Sandbox settings are documented."
+  },
+  "resume": {
+    "support": "full",
+    "source_url": "https://google-gemini.github.io/gemini-cli/docs/cli/commands.html#:~:text=resume",
+    "comment": "Supports resume workflows."
+  },
+  "non_interactive": {
+    "support": "full",
+    "source_url": "https://google-gemini.github.io/gemini-cli/docs/cli/commands.html#:~:text=prompt",
+    "comment": "Supports prompt/headless use."
+  },
+  "output_format": {
+    "support": "partial",
+    "source_url": "https://google-gemini.github.io/gemini-cli/docs/cli/commands.html#:~:text=output",
+    "comment": ""
+  },
+  "statusline": {
+    "support": "unknown",
+    "source_url": "https://google-gemini.github.io/gemini-cli/docs/cli/configuration.html#:~:text=status%20line",
+    "comment": ""
+  },
+  "telemetry": {
+    "support": "full",
+    "source_url": "https://google-gemini.github.io/gemini-cli/docs/telemetry/#:~:text=telemetry",
+    "comment": "Telemetry is documented."
+  },
+  "custom_model_provider": {
+    "support": "partial",
+    "source_url": "https://google-gemini.github.io/gemini-cli/docs/cli/configuration.html#:~:text=providers",
+    "comment": "Primarily Gemini/Google-oriented provider configuration."
+  },
+  "notes": "Kept as an explicit agent-launch option, but excluded from random selection in this repo."
+}

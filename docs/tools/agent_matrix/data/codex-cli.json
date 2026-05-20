@@ -1,0 +1,100 @@
+{
+  "name": "OpenAI Codex CLI",
+  "links": {
+    "docs": "https://developers.openai.com/codex/",
+    "github": "https://github.com/openai/codex",
+    "website": "https://openai.com/codex/",
+    "slug": "codex-cli"
+  },
+  "form_factor": {
+    "value": "CLI and hosted coding agent",
+    "source_url": "https://developers.openai.com/codex/#:~:text=Codex",
+    "comment": ""
+  },
+  "released_in": {
+    "value": "April 2025",
+    "source_url": "https://github.com/openai/codex#:~:text=Codex%20CLI",
+    "comment": "Open-source CLI public release."
+  },
+  "latest_major_update": {
+    "value": "May 2026",
+    "source_url": "https://developers.openai.com/codex/changelog/#:~:text=changelog",
+    "comment": "Captured from current Codex docs/changelog state."
+  },
+  "rules": {
+    "support": "full",
+    "source_url": "https://developers.openai.com/codex/agents-md/#:~:text=AGENTS.md",
+    "comment": "Uses AGENTS.md instructions."
+  },
+  "skills": {
+    "support": "full",
+    "source_url": "https://developers.openai.com/codex/skills/#:~:text=Skills",
+    "comment": "Supports SKILL.md-based skills."
+  },
+  "hooks": {
+    "support": "full",
+    "source_url": "https://developers.openai.com/codex/hooks/#:~:text=Hooks",
+    "comment": "Supports Codex hooks."
+  },
+  "mcp_servers": {
+    "support": "full",
+    "source_url": "https://developers.openai.com/codex/mcp/#:~:text=MCP",
+    "comment": "Supports MCP servers."
+  },
+  "custom_commands": {
+    "support": "partial",
+    "source_url": "https://developers.openai.com/codex/cli/#:~:text=CLI",
+    "comment": "CLI supports slash-like workflows through prompts and tooling, but not a first-class command folder in this matrix."
+  },
+  "subagents": {
+    "support": "full",
+    "source_url": "https://developers.openai.com/codex/skills/#:~:text=Skills",
+    "comment": "Codex supports sub-agent/delegation workflows in agent contexts."
+  },
+  "model_selection": {
+    "support": "full",
+    "source_url": "https://github.com/openai/codex#:~:text=model",
+    "comment": "CLI accepts model configuration/flags."
+  },
+  "approval_mode": {
+    "support": "full",
+    "source_url": "https://github.com/openai/codex#:~:text=approval",
+    "comment": "Approval policy can be configured."
+  },
+  "sandbox_mode": {
+    "support": "full",
+    "source_url": "https://github.com/openai/codex#:~:text=sandbox",
+    "comment": "Filesystem sandbox modes can be configured."
+  },
+  "resume": {
+    "support": "full",
+    "source_url": "https://github.com/openai/codex#:~:text=resume",
+    "comment": "Supports resume."
+  },
+  "non_interactive": {
+    "support": "full",
+    "source_url": "https://github.com/openai/codex#:~:text=exec",
+    "comment": "Supports exec/headless use."
+  },
+  "output_format": {
+    "support": "full",
+    "source_url": "https://github.com/openai/codex#:~:text=json",
+    "comment": "CLI supports structured output modes."
+  },
+  "statusline": {
+    "support": "full",
+    "source_url": "https://developers.openai.com/codex/#:~:text=statusline",
+    "comment": "Supports statusline configuration in local CLI settings."
+  },
+  "telemetry": {
+    "support": "full",
+    "source_url": "https://github.com/openai/codex#:~:text=telemetry",
+    "comment": "Telemetry settings are documented in the CLI repository."
+  },
+  "custom_model_provider": {
+    "support": "full",
+    "source_url": "https://github.com/openai/codex#:~:text=model_provider",
+    "comment": "Supports custom model providers in config."
+  },
+  "notes": ""
+}

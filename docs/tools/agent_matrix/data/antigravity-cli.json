@@ -1,0 +1,100 @@
+{
+  "name": "Antigravity CLI",
+  "links": {
+    "docs": "https://antigravity.google/docs/cli-features",
+    "github": "",
+    "website": "https://antigravity.google/",
+    "slug": "antigravity-cli"
+  },
+  "form_factor": {
+    "value": "CLI",
+    "source_url": "https://antigravity.google/docs/cli-getting-started#:~:text=agy",
+    "comment": "Installed as the agy command."
+  },
+  "released_in": {
+    "value": "May 2026",
+    "source_url": "https://antigravity.google/docs/cli-getting-started#:~:text=install.sh",
+    "comment": "Standalone CLI installer and docs."
+  },
+  "latest_major_update": {
+    "value": "May 2026",
+    "source_url": "https://antigravity.google/docs/cli-features#:~:text=plugins",
+    "comment": "Standalone CLI with plugin layout, rules, skills, hooks, and MCP."
+  },
+  "rules": {
+    "support": "full",
+    "source_url": "https://antigravity.google/docs/cli-features#:~:text=rules",
+    "comment": "Plugin rules live under plugin rules directories."
+  },
+  "skills": {
+    "support": "full",
+    "source_url": "https://antigravity.google/docs/cli-features#:~:text=skills",
+    "comment": "Plugin skills are supported."
+  },
+  "hooks": {
+    "support": "full",
+    "source_url": "https://antigravity.google/docs/cli-features#:~:text=hooks",
+    "comment": "Plugin hooks are supported."
+  },
+  "mcp_servers": {
+    "support": "full",
+    "source_url": "https://antigravity.google/docs/cli-features#:~:text=mcp_config.json",
+    "comment": "Plugin mcp_config.json is supported."
+  },
+  "custom_commands": {
+    "support": "partial",
+    "source_url": "https://antigravity.google/docs/cli-features#:~:text=plugins",
+    "comment": "Implemented through plugin-provided capabilities rather than a classic slash-command folder."
+  },
+  "subagents": {
+    "support": "unknown",
+    "source_url": "https://antigravity.google/docs/cli-features#:~:text=subagents",
+    "comment": ""
+  },
+  "model_selection": {
+    "support": "none",
+    "source_url": "https://antigravity.google/docs/cli-features#:~:text=--print",
+    "comment": "agy --help does not expose a model flag as of this dataset."
+  },
+  "approval_mode": {
+    "support": "partial",
+    "source_url": "https://antigravity.google/docs/cli-features#:~:text=dangerously-skip-permissions",
+    "comment": "Supports --dangerously-skip-permissions."
+  },
+  "sandbox_mode": {
+    "support": "partial",
+    "source_url": "https://antigravity.google/docs/cli-features#:~:text=--sandbox",
+    "comment": "Supports --sandbox for terminal restrictions."
+  },
+  "resume": {
+    "support": "full",
+    "source_url": "https://antigravity.google/docs/cli-features#:~:text=--continue",
+    "comment": "Supports --continue and --conversation."
+  },
+  "non_interactive": {
+    "support": "full",
+    "source_url": "https://antigravity.google/docs/cli-features#:~:text=--print",
+    "comment": "Supports --print / --prompt."
+  },
+  "output_format": {
+    "support": "unknown",
+    "source_url": "https://antigravity.google/docs/cli-features#:~:text=output",
+    "comment": ""
+  },
+  "statusline": {
+    "support": "unknown",
+    "source_url": "https://antigravity.google/docs/cli-features#:~:text=status%20line",
+    "comment": ""
+  },
+  "telemetry": {
+    "support": "unknown",
+    "source_url": "https://antigravity.google/docs/cli-features#:~:text=telemetry",
+    "comment": ""
+  },
+  "custom_model_provider": {
+    "support": "none",
+    "source_url": "https://antigravity.google/docs/cli-features#:~:text=--print",
+    "comment": "No arbitrary provider configuration found in public CLI help/docs."
+  },
+  "notes": "Distinct from Gemini CLI and the older Antigravity IDE."
+}

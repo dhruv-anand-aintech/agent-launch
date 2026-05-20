@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "agent_matrix/schema/agent",
+  "type": "object",
+  "required": [
+    "name",
+    "links",
+    "form_factor",
+    "released_in",
+    "latest_major_update",
+    "rules",
+    "skills",
+    "hooks",
+    "custom_model_provider"
+  ],
+  "properties": {
+    "name": {"type": "string", "$comment": "About | Name | Product or coding-agent surface."},
+    "links": {"allOf": [{"$ref": "#/$defs/links"}], "$comment": "About | Links | Product links and stable slug."},
+    "form_factor": {"allOf": [{"$ref": "#/$defs/stringWithSource"}], "$comment": "About | Form Factor | CLI, IDE, extension, terminal UI, hosted agent, or hybrid."},
+    "released_in": {"allOf": [{"$ref": "#/$defs/stringWithSource"}], "$comment": "About | Released | First public release month and year for this surface."},
+    "latest_major_update": {"allOf": [{"$ref": "#/$defs/stringWithSource"}], "$comment": "About | Latest Major Update | Most recent major public update captured in this dataset."},
+    "rules": {"allOf": [{"$ref": "#/$defs/featureWithSource"}], "$comment": "Context | Rules | Persistent project or global instruction files."},
+    "skills": {"allOf": [{"$ref": "#/$defs/featureWithSource"}], "$comment": "Context | Skills | Reusable skill folders, commands, playbooks, or agent capabilities."},
+    "hooks": {"allOf": [{"$ref": "#/$defs/featureWithSource"}], "$comment": "Automation | Hooks | User-configurable lifecycle hooks or event hooks."},
+    "mcp_servers": {"allOf": [{"$ref": "#/$defs/featureWithSource"}], "$comment": "Integration | MCP | Model Context Protocol server support."},
+    "custom_commands": {"allOf": [{"$ref": "#/$defs/featureWithSource"}], "$comment": "Automation | Commands | User-defined slash/custom commands."},
+    "subagents": {"allOf": [{"$ref": "#/$defs/featureWithSource"}], "$comment": "Automation | Subagents | First-class custom or delegated subagent support."},
+    "model_selection": {"allOf": [{"$ref": "#/$defs/featureWithSource"}], "$comment": "Settings | Model | Explicit model selection in CLI/settings."},
+    "approval_mode": {"allOf": [{"$ref": "#/$defs/featureWithSource"}], "$comment": "Settings | Approvals | Approval or permission-mode controls."},
+    "sandbox_mode": {"allOf": [{"$ref": "#/$defs/featureWithSource"}], "$comment": "Settings | Sandbox | Filesystem/network/terminal sandbox controls."},
+    "resume": {"allOf": [{"$ref": "#/$defs/featureWithSource"}], "$comment": "Settings | Resume | Resume or continue previous sessions."},
+    "non_interactive": {"allOf": [{"$ref": "#/$defs/featureWithSource"}], "$comment": "Settings | Headless | Non-interactive print/run mode."},
+    "output_format": {"allOf": [{"$ref": "#/$defs/featureWithSource"}], "$comment": "Settings | Output Format | Machine-readable or alternate output format controls."},
+    "statusline": {"allOf": [{"$ref": "#/$defs/featureWithSource"}], "$comment": "Settings | Status Line | User-configurable CLI status line or equivalent."},
+    "telemetry": {"allOf": [{"$ref": "#/$defs/featureWithSource"}], "$comment": "Settings | Telemetry | User-visible telemetry/privacy settings."},
+    "custom_model_provider": {"allOf": [{"$ref": "#/$defs/featureWithSource"}], "$comment": "Models | Arbitrary Models | Ability to plug in arbitrary model providers or OpenAI-compatible endpoints."},
+    "notes": {"type": "string", "$comment": "About | Notes | Short caveats for interpretation."}
+  },
+  "$defs": {
+    "links": {
+      "type": "object",
+      "required": ["docs", "github", "website", "slug"],
+      "properties": {
+        "docs": {"type": "string"},
+        "github": {"type": "string"},
+        "website": {"type": "string"},
+        "slug": {"type": "string"}
+      }
+    },
+    "featureWithSource": {
+      "type": "object",
+      "required": ["support", "source_url", "comment"],
+      "properties": {
+        "support": {"enum": ["", "none", "partial", "full", "unknown"]},
+        "source_url": {"type": "string"},
+        "comment": {"type": "string"}
+      }
+    },
+    "stringWithSource": {
+      "type": "object",
+      "required": ["value", "source_url", "comment"],
+      "properties": {
+        "value": {"type": "string"},
+        "source_url": {"type": "string"},
+        "comment": {"type": "string"}
+      }
+    }
+  }
+}

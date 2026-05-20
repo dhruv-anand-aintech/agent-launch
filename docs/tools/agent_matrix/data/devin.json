@@ -1,0 +1,100 @@
+{
+  "name": "Devin",
+  "links": {
+    "docs": "https://docs.devin.ai/",
+    "github": "",
+    "website": "https://devin.ai/",
+    "slug": "devin"
+  },
+  "form_factor": {
+    "value": "Hosted software engineering agent",
+    "source_url": "https://devin.ai/#:~:text=AI%20software%20engineer",
+    "comment": "Placeholder row; verify details before treating as complete."
+  },
+  "released_in": {
+    "value": "TBD",
+    "source_url": "https://devin.ai/#:~:text=AI%20software%20engineer",
+    "comment": "Placeholder pending exact public release month/year."
+  },
+  "latest_major_update": {
+    "value": "TBD",
+    "source_url": "https://devin.ai/#:~:text=AI%20software%20engineer",
+    "comment": "Placeholder pending latest major update research."
+  },
+  "notes": "Placeholder row added to track a released coding-agent surface. Open issue should fill exact sourced feature cells.",
+  "rules": {
+    "support": "unknown",
+    "source_url": "https://devin.ai/#:~:text=AI%20software%20engineer",
+    "comment": "Placeholder pending sourced verification."
+  },
+  "skills": {
+    "support": "unknown",
+    "source_url": "https://devin.ai/#:~:text=AI%20software%20engineer",
+    "comment": "Placeholder pending sourced verification."
+  },
+  "hooks": {
+    "support": "unknown",
+    "source_url": "https://devin.ai/#:~:text=AI%20software%20engineer",
+    "comment": "Placeholder pending sourced verification."
+  },
+  "mcp_servers": {
+    "support": "unknown",
+    "source_url": "https://devin.ai/#:~:text=AI%20software%20engineer",
+    "comment": "Placeholder pending sourced verification."
+  },
+  "custom_commands": {
+    "support": "unknown",
+    "source_url": "https://devin.ai/#:~:text=AI%20software%20engineer",
+    "comment": "Placeholder pending sourced verification."
+  },
+  "subagents": {
+    "support": "unknown",
+    "source_url": "https://devin.ai/#:~:text=AI%20software%20engineer",
+    "comment": "Placeholder pending sourced verification."
+  },
+  "model_selection": {
+    "support": "unknown",
+    "source_url": "https://devin.ai/#:~:text=AI%20software%20engineer",
+    "comment": "Placeholder pending sourced verification."
+  },
+  "approval_mode": {
+    "support": "unknown",
+    "source_url": "https://devin.ai/#:~:text=AI%20software%20engineer",
+    "comment": "Placeholder pending sourced verification."
+  },
+  "sandbox_mode": {
+    "support": "unknown",
+    "source_url": "https://devin.ai/#:~:text=AI%20software%20engineer",
+    "comment": "Placeholder pending sourced verification."
+  },
+  "resume": {
+    "support": "unknown",
+    "source_url": "https://devin.ai/#:~:text=AI%20software%20engineer",
+    "comment": "Placeholder pending sourced verification."
+  },
+  "non_interactive": {
+    "support": "unknown",
+    "source_url": "https://devin.ai/#:~:text=AI%20software%20engineer",
+    "comment": "Placeholder pending sourced verification."
+  },
+  "output_format": {
+    "support": "unknown",
+    "source_url": "https://devin.ai/#:~:text=AI%20software%20engineer",
+    "comment": "Placeholder pending sourced verification."
+  },
+  "statusline": {
+    "support": "unknown",
+    "source_url": "https://devin.ai/#:~:text=AI%20software%20engineer",
+    "comment": "Placeholder pending sourced verification."
+  },
+  "telemetry": {
+    "support": "unknown",
+    "source_url": "https://devin.ai/#:~:text=AI%20software%20engineer",
+    "comment": "Placeholder pending sourced verification."
+  },
+  "custom_model_provider": {
+    "support": "unknown",
+    "source_url": "https://devin.ai/#:~:text=AI%20software%20engineer",
+    "comment": "Placeholder pending sourced verification."
+  }
+}

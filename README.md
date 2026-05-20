@@ -91,6 +91,10 @@ agent-launch -a opencode -n -p 'work' -- --format json --title scratch
 
 Unknown wrapper arguments before `--` are also forwarded when they can be parsed safely, but `--` is the reliable form for flags with values.
 
+## Feature Matrix
+
+The coding-agent/CLI/IDE feature matrix lives in [`docs/tools/agent_matrix`](docs/tools/agent_matrix/README.md). It stores one JSON file per agent surface, plus a schema and generated bundle, following the same data-first pattern as Superlinked's VectorHub comparison table.
+
 ## Shell Completion
 
 The installer adds zsh completion support. After installing, a new shell should complete:
