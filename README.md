@@ -48,6 +48,8 @@ agent-launch --mode <TAB>
 agent-launch --model-class <TAB>
 ```
 
+Completion is intentionally scoped to `agent-launch` itself. It does not shell out to Codex, Claude, Gemini, OpenCode, or Cursor to discover their full native option sets. Backend-specific flags should be passed after `--`.
+
 For zsh users, completions work when the installed completion directory is in `fpath` before `compinit` runs. The installer writes:
 
 ```text
