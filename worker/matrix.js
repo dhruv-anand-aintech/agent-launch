@@ -85,11 +85,12 @@ function render() {
       position: sticky; top: 0; z-index: 12; background: #eee7d8; text-align: left;
       font-weight: 700; color: #2a241b; box-shadow: inset 0 -1px 0 var(--line-strong);
     }
+    thead tr:nth-child(2) th { top: 35px; }
+    .group-heading { background: #e2d8c5; color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: 0; }
     th:first-child, td:first-child { position: sticky; left: 0; z-index: 6; background: var(--panel); min-width: 210px; max-width: 210px; }
     th:first-child { z-index: 18; background: #e8decc; }
     .agent-name { font-weight: 700; margin-bottom: 5px; }
     .agent-links { display: flex; gap: 8px; color: var(--muted); font-size: 12px; }
-    .group-label { display: block; font-size: 10px; text-transform: uppercase; color: var(--muted); font-weight: 700; margin-bottom: 2px; }
     .support { display: inline-flex; align-items: center; gap: 6px; font-weight: 700; }
     .dot { width: 18px; height: 18px; display: inline-grid; place-items: center; border-radius: 50%; color: #fff; font-size: 11px; }
     .full .dot { background: var(--accent); }
@@ -139,6 +140,10 @@ function render() {
       <div class="filter-title"><span>Filters</span><button class="tab" id="reset">Reset</button></div>
       <input id="search" type="search" placeholder="Search agents or notes">
       <div class="filter-block">
+        <h2>Rows</h2>
+        <label><input type="checkbox" id="showPlaceholders"> Show placeholders</label>
+      </div>
+      <div class="filter-block">
         <h2>Form factor</h2>
         <div id="formFilters"></div>
       </div>
@@ -164,7 +169,7 @@ function render() {
   <script type="application/json" id="payload">${payload}</script>
   <script>
     const { matrix, columns, groups } = JSON.parse(document.getElementById('payload').textContent);
-    const state = { group: 'All', search: '', forms: new Set(), support: new Set() };
+    const state = { group: 'All', search: '', forms: new Set(), support: new Set(), showPlaceholders: false };
     const featureKeys = new Set(['rules','skills','hooks','mcp_servers','custom_commands','subagents','model_selection','approval_mode','sandbox_mode','resume','non_interactive','output_format','statusline','telemetry','custom_model_provider']);
     const formFactors = [...new Set(matrix.map(row => row.form_factor.value))].sort();
     const glyph = { full: '✔', partial: '◐', none: '✕', unknown: '?', '': '—' };
@@ -199,6 +204,8 @@ function render() {
     function visibleRows() {
       return matrix.filter(row => {
         const haystack = JSON.stringify(row).toLowerCase();
+        const isPlaceholder = (row.notes || '').toLowerCase().includes('placeholder row');
+        if (isPlaceholder && !state.showPlaceholders) return false;
         if (state.search && !haystack.includes(state.search.toLowerCase())) return false;
         if (state.forms.size && !state.forms.has(row.form_factor.value)) return false;
         for (const key of state.support) {
@@ -206,6 +213,14 @@ function render() {
         }
         return true;
       });
+    }
+    function columnGroups(cols) {
+      return cols.reduce((acc, col) => {
+        const last = acc[acc.length - 1];
+        if (last && last.group === col.group) last.span += 1;
+        else acc.push({ group: col.group, span: 1 });
+        return acc;
+      }, []);
     }
     function renderTabs() {
       document.getElementById('tabs').innerHTML = ['All', ...groups].map(group =>
@@ -225,8 +240,11 @@ function render() {
         document.getElementById('table').innerHTML = '<tbody><tr><td class="empty">No agents match these filters.</td></tr></tbody>';
         return;
       }
+      const groupHeader = columnGroups(cols).map(group =>
+        '<th class="group-heading" colspan="' + group.span + '">' + esc(group.group) + '</th>'
+      ).join('');
       document.getElementById('table').innerHTML =
-        '<thead><tr>' + cols.map(col => '<th><span class="group-label">' + esc(col.group) + '</span>' + esc(col.label) + '</th>').join('') + '</tr></thead>' +
+        '<thead><tr>' + groupHeader + '</tr><tr>' + cols.map(col => '<th>' + esc(col.label) + '</th>').join('') + '</tr></thead>' +
         '<tbody>' + rows.map(row => '<tr>' + cols.map(col => cell(row, col)).join('') + '</tr>').join('') + '</tbody>';
     }
     function renderAll() { renderTabs(); renderTable(); }
@@ -247,8 +265,12 @@ function render() {
       event.target.checked ? state.support.add(key) : state.support.delete(key);
       renderTable();
     });
+    document.getElementById('showPlaceholders').addEventListener('change', event => {
+      state.showPlaceholders = event.target.checked;
+      renderTable();
+    });
     document.getElementById('reset').addEventListener('click', () => {
-      state.search = ''; state.forms.clear(); state.support.clear();
+      state.search = ''; state.forms.clear(); state.support.clear(); state.showPlaceholders = false;
       document.getElementById('search').value = '';
       document.querySelectorAll('input[type="checkbox"]').forEach(input => input.checked = false);
       renderTable();
