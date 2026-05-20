@@ -37,6 +37,54 @@ If `agent-launch` is not found after install, add this to your shell startup fil
 export PATH="$HOME/.local/bin:$PATH"
 ```
 
+## Usage
+
+```sh
+agent-launch --agent codex --non-interactive --mode danger -C ~/Code/my-repo --prompt 'run tests and fix failures'
+agent-launch --agent claude --interactive --mode plan -C ~/Code/my-repo 'inspect this repo'
+agent-launch --agent cursor --non-interactive --model-class fast -C ~/Code/my-repo --prompt 'summarize the codebase'
+agent-launch --agent gemini --dry-run --mode auto --model-class pro -C ~/Code/my-repo --prompt 'implement the task'
+```
+
+Short flags:
+
+```sh
+agent-launch -a codex -n -m danger -C ~/Code/my-repo -p 'run tests'
+agent-launch -a claude -i -m plan -C ~/Code/my-repo 'review this change'
+```
+
+## Options
+
+| Option | Meaning |
+| --- | --- |
+| `--agent` / `-a` | `codex`, `claude`, `gemini`, `opencode`, or `cursor` |
+| `--interactive` / `-i` | Start an interactive TUI/session |
+| `--non-interactive` / `-n` | Run headlessly and print the result |
+| `--prompt` / `-p` | Initial prompt |
+| positional text | Prompt text when `--prompt` is omitted |
+| `--cwd` / `-C` | Workspace/working directory |
+| `--mode` / `-m` | `default`, `ask`, `plan`, `auto`, or `danger` |
+| `--model-class` | `fast` or `pro` |
+| `--model` | Explicit backend model string; overrides `--model-class` |
+| `--no-model` | Do not pass a model flag |
+| `--resume [id]` | Resume a previous session |
+| `--dry-run` | Print translated backend command without running it |
+| `--extra` | Append raw backend arguments; repeat as needed |
+| `--` | Pass all following arguments through to the selected backend CLI |
+| `--print-mappings` | Show built-in agent/model mappings |
+
+## Backend Argument Pass-Through
+
+Arguments after `--` are passed directly to the selected backend CLI. This is useful for backend-specific flags that `agent-launch` does not normalize.
+
+```sh
+agent-launch -a claude -n -p 'summarize' -- --output-format json --max-budget-usd 1
+agent-launch -a codex -n -p 'review' -- --json
+agent-launch -a opencode -n -p 'work' -- --format json --title scratch
+```
+
+Unknown wrapper arguments before `--` are also forwarded when they can be parsed safely, but `--` is the reliable form for flags with values.
+
 ## Shell Completion
 
 The installer adds zsh completion support. After installing, a new shell should complete:
@@ -86,53 +134,6 @@ rm -f ~/.zcompdump*
 autoload -Uz compinit && compinit
 ```
 
-## Usage
-
-```sh
-agent-launch --agent codex --non-interactive --mode danger -C ~/Code/my-repo --prompt 'run tests and fix failures'
-agent-launch --agent claude --interactive --mode plan -C ~/Code/my-repo 'inspect this repo'
-agent-launch --agent cursor --non-interactive --model-class fast -C ~/Code/my-repo --prompt 'summarize the codebase'
-agent-launch --agent gemini --dry-run --mode auto --model-class pro -C ~/Code/my-repo --prompt 'implement the task'
-```
-
-Short flags:
-
-```sh
-agent-launch -a codex -n -m danger -C ~/Code/my-repo -p 'run tests'
-agent-launch -a claude -i -m plan -C ~/Code/my-repo 'review this change'
-```
-
-## Options
-
-| Option | Meaning |
-| --- | --- |
-| `--agent` / `-a` | `codex`, `claude`, `gemini`, `opencode`, or `cursor` |
-| `--interactive` / `-i` | Start an interactive TUI/session |
-| `--non-interactive` / `-n` | Run headlessly and print the result |
-| `--prompt` / `-p` | Initial prompt |
-| positional text | Prompt text when `--prompt` is omitted |
-| `--cwd` / `-C` | Workspace/working directory |
-| `--mode` / `-m` | `default`, `ask`, `plan`, `auto`, or `danger` |
-| `--model-class` | `fast` or `pro` |
-| `--model` | Explicit backend model string; overrides `--model-class` |
-| `--no-model` | Do not pass a model flag |
-| `--resume [id]` | Resume a previous session |
-| `--dry-run` | Print translated backend command without running it |
-| `--extra` | Append raw backend arguments; repeat as needed |
-| `--` | Pass all following arguments through to the selected backend CLI |
-| `--print-mappings` | Show built-in agent/model mappings |
-
-## Backend Argument Pass-Through
-
-Arguments after `--` are passed directly to the selected backend CLI. This is useful for backend-specific flags that `agent-launch` does not normalize.
-
-```sh
-agent-launch -a claude -n -p 'summarize' -- --output-format json --max-budget-usd 1
-agent-launch -a codex -n -p 'review' -- --json
-agent-launch -a opencode -n -p 'work' -- --format json --title scratch
-```
-
-Unknown wrapper arguments before `--` are also forwarded when they can be parsed safely, but `--` is the reliable form for flags with values.
 
 ## Mode Mapping
 
