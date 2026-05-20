@@ -24,11 +24,36 @@ It normalizes the common controls that usually differ across these tools:
 ```
 
 This installs `bin/agent-launch` to `~/.local/bin/agent-launch`.
+It also installs zsh completions to `~/.zfunc/_agent-launch`.
 
 If `agent-launch` is not found after install, add this to your shell startup file:
 
 ```sh
 export PATH="$HOME/.local/bin:$PATH"
+```
+
+## Shell Completion
+
+The installer adds zsh completion support. After installing, a new shell should complete:
+
+```sh
+agent-launch -<TAB>
+agent-launch -a <TAB>
+agent-launch --mode <TAB>
+agent-launch --model-class <TAB>
+```
+
+If completions do not appear in an already-open shell, reload completion state:
+
+```sh
+autoload -Uz compinit && compinit
+```
+
+If `~/.zfunc` is not already in your zsh `fpath`, add this before `compinit` in your `.zshrc`:
+
+```sh
+fpath=("$HOME/.zfunc" $fpath)
+autoload -Uz compinit && compinit
 ```
 
 ## Usage

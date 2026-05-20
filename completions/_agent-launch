@@ -1,0 +1,69 @@
+#compdef agent-launch
+
+local -a agents modes model_classes common_models
+
+agents=(
+  'claude:Claude Code'
+  'codex:Codex CLI'
+  'cursor:Cursor Agent'
+  'gemini:Gemini CLI'
+  'opencode:OpenCode'
+)
+
+modes=(
+  'default:Backend defaults'
+  'ask:Read-mostly Q&A mode'
+  'plan:Planning/read-only mode'
+  'auto:Autonomous edit/approval mode'
+  'danger:Maximum local autonomy'
+)
+
+model_classes=(
+  'fast:Lower-latency model'
+  'pro:Stronger model'
+)
+
+common_models=(
+  'gpt-5.4-mini:Codex fast default'
+  'gpt-5.5:Codex pro default'
+  'sonnet:Claude fast default'
+  'opus:Claude pro default'
+  'gemini-2.5-flash:Gemini fast default'
+  'gemini-2.5-pro:Gemini pro default'
+  'anthropic/claude-sonnet-4-5:OpenCode fast default'
+  'anthropic/claude-opus-4-1:OpenCode pro default'
+  'composer-2.5-fast:Cursor fast default'
+  'composer-2:Cursor pro default'
+)
+
+_arguments -s -S \
+  '(-h --help)'{-h,--help}'[show help]' \
+  '(-a --agent)'{-a,--agent}'[agent CLI to launch]:agent:->agents' \
+  '(-C --cwd)'{-C,--cwd}'[working directory/workspace]:directory:_files -/' \
+  '(-p --prompt)'{-p,--prompt}'[initial prompt]:prompt:' \
+  '(-i --interactive -n --non-interactive)'{-i,--interactive}'[start interactive mode]' \
+  '(-n --non-interactive -i --interactive)'{-n,--non-interactive}'[run headlessly and print output]' \
+  '(-m --mode)'{-m,--mode}'[normalized permission/interaction mode]:mode:->modes' \
+  '--model-class[normalized model class]:model class:->model_classes' \
+  '--model[explicit backend model string]:model:->models' \
+  '--no-model[do not pass any model flag]' \
+  '--resume[resume a prior session]:session id:' \
+  '--dry-run[print translated backend command without running it]' \
+  '--extra[append raw backend arguments]:backend args:' \
+  '--print-mappings[show built-in agent/model mappings]' \
+  '*:prompt text:_normal' && return
+
+case "$state" in
+  agents)
+    _describe -t agents 'agent' agents
+    ;;
+  modes)
+    _describe -t modes 'mode' modes
+    ;;
+  model_classes)
+    _describe -t model-classes 'model class' model_classes
+    ;;
+  models)
+    _describe -t models 'model' common_models
+    ;;
+esac
