@@ -24,6 +24,22 @@ By default, `agent-launch` starts agents in `danger` mode unless `AGENT_LAUNCH_M
 
 ## Install
 
+Primary install path:
+
+```sh
+npm install -g github:dhruv-anand-aintech/agent-launch
+```
+
+This installs the `agent-launch` command through npm's global bin directory. If your shell cannot find it, check `npm bin -g` and ensure that directory is on `PATH`.
+
+Update later with:
+
+```sh
+npm install -g github:dhruv-anand-aintech/agent-launch
+```
+
+Manual/local checkout install:
+
 ```sh
 ./install.sh
 ```

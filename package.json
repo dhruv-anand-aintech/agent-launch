@@ -3,6 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
+  "bin": {
+    "agent-launch": "bin/agent-launch"
+  },
+  "files": [
+    "bin/agent-launch",
+    "completions",
+    "install.sh",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
     "matrix:validate": "python docs/tools/agent_matrix/data_utils.py validate",
     "matrix:bundle": "python docs/tools/agent_matrix/data_utils.py bundle",
