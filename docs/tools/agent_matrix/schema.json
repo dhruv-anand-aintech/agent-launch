@@ -30,6 +30,7 @@
     "approval_mode": {"allOf": [{"$ref": "#/$defs/featureWithSource"}], "$comment": "Settings | Approvals | Approval or permission-mode controls."},
     "sandbox_mode": {"allOf": [{"$ref": "#/$defs/featureWithSource"}], "$comment": "Settings | Sandbox | Filesystem/network/terminal sandbox controls."},
     "resume": {"allOf": [{"$ref": "#/$defs/featureWithSource"}], "$comment": "Settings | Resume | Resume or continue previous sessions."},
+    "continue": {"allOf": [{"$ref": "#/$defs/featureWithSource"}], "$comment": "Settings | Continue | Continue the latest/current session without specifying an ID."},
     "non_interactive": {"allOf": [{"$ref": "#/$defs/featureWithSource"}], "$comment": "Settings | Headless | Non-interactive print/run mode."},
     "output_format": {"allOf": [{"$ref": "#/$defs/featureWithSource"}], "$comment": "Settings | Output Format | Machine-readable or alternate output format controls."},
     "statusline": {"allOf": [{"$ref": "#/$defs/featureWithSource"}], "$comment": "Settings | Status Line | User-configurable CLI status line or equivalent."},

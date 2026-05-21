@@ -181,7 +181,7 @@ function render() {
   <script>
     const { matrix, columns, groups } = JSON.parse(document.getElementById('payload').textContent);
     const state = { group: 'All', search: '', forms: new Set(), supportKeys: new Set(), supportLevels: new Set(), showPlaceholders: false };
-    const featureKeys = new Set(['rules','skills','hooks','mcp_servers','custom_commands','subagents','model_selection','approval_mode','sandbox_mode','resume','non_interactive','output_format','statusline','telemetry','custom_model_provider']);
+    const featureKeys = new Set(['rules','skills','hooks','mcp_servers','custom_commands','subagents','model_selection','approval_mode','sandbox_mode','resume','continue','non_interactive','output_format','statusline','telemetry','custom_model_provider']);
     const formFactors = [...new Set(matrix.flatMap(row => row.form_factor.values || [row.form_factor.value]).filter(Boolean))].sort();
     const glyph = { full: '✔', partial: '◐', none: '✕', unknown: '?', '': '—' };
 

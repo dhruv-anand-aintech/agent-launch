@@ -73,6 +73,11 @@
     "source_url": "https://antigravity.google/docs/#:~:text=resume",
     "comment": "IDE stores conversation/brain state."
   },
+  "continue": {
+    "support": "full",
+    "source_url": "https://antigravity.google/docs/#:~:text=resume",
+    "comment": "IDE conversation state can be continued from existing history."
+  },
   "non_interactive": {
     "support": "none",
     "source_url": "https://antigravity.google/docs/cli-getting-started#:~:text=print",

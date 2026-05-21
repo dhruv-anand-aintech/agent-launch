@@ -73,6 +73,11 @@
     "source_url": "https://docs.cursor.com/#:~:text=resume",
     "comment": "Composer/chat history supports continuation."
   },
+  "continue": {
+    "support": "full",
+    "source_url": "https://docs.cursor.com/#:~:text=resume",
+    "comment": "Composer/chat history supports continuing existing conversations."
+  },
   "non_interactive": {
     "support": "none",
     "source_url": "https://docs.cursor.com/#:~:text=print",

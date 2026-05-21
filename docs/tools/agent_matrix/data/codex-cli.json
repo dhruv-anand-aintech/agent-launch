@@ -75,6 +75,11 @@
     "source_url": "https://github.com/openai/codex#:~:text=resume",
     "comment": "Supports resume."
   },
+  "continue": {
+    "support": "full",
+    "source_url": "https://github.com/openai/codex#:~:text=resume",
+    "comment": "Supports continuing a previous session through resume/latest-session workflows."
+  },
   "non_interactive": {
     "support": "full",
     "source_url": "https://github.com/openai/codex#:~:text=exec",

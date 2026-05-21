@@ -73,6 +73,11 @@
     "source_url": "https://google-gemini.github.io/gemini-cli/docs/cli/commands.html#:~:text=resume",
     "comment": "Supports resume workflows."
   },
+  "continue": {
+    "support": "full",
+    "source_url": "https://google-gemini.github.io/gemini-cli/docs/cli/commands.html#:~:text=resume",
+    "comment": "Supports continuing a previous session through resume/latest-session workflows."
+  },
   "non_interactive": {
     "support": "full",
     "source_url": "https://google-gemini.github.io/gemini-cli/docs/cli/commands.html#:~:text=prompt",

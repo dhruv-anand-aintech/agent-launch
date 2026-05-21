@@ -74,6 +74,11 @@
     "source_url": "https://opencode.ai/docs/cli/#:~:text=session",
     "comment": "Supports session options."
   },
+  "continue": {
+    "support": "full",
+    "source_url": "https://opencode.ai/docs/cli/#:~:text=session",
+    "comment": "Supports --continue and explicit session selection."
+  },
   "non_interactive": {
     "support": "full",
     "source_url": "https://opencode.ai/docs/cli/#:~:text=run",

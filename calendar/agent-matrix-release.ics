@@ -1,0 +1,32 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//agent-launch//Agent Matrix Release Plan//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:agent-matrix-work-week-20260525@agent-launch
+DTSTAMP:20260520T194930Z
+DTSTART:20260525T043000Z
+DTEND:20260525T050000Z
+SUMMARY:Work on coding agent comparison site
+DESCRIPTION:Continue refining the coding agent comparison matrix this week. Focus on source-backed feature coverage, placeholder issue cleanup, pricing sources, custom domain polish, and launch copy.
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:Work on coding agent comparison site
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:agent-matrix-release-20260529@agent-launch
+DTSTAMP:20260520T194930Z
+DTSTART:20260529T113000Z
+DTEND:20260529T123000Z
+SUMMARY:Release coding agent comparison site
+DESCRIPTION:Release compare.ainorthstar.tech. Post angle: VectorHub-style comparison tables required manual maintenance and coding; this coding-agent matrix was spun up in a day or two using agentic development, repo-backed data, highlighted citations, and Cloudflare deployment.
+BEGIN:VALARM
+TRIGGER:-PT1H
+ACTION:DISPLAY
+DESCRIPTION:Release coding agent comparison site
+END:VALARM
+END:VEVENT
+END:VCALENDAR

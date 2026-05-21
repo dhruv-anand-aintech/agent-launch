@@ -76,6 +76,11 @@
     "source_url": "https://docs.anthropic.com/en/docs/claude-code/cli-reference#:~:text=--resume",
     "comment": "Supports --resume."
   },
+  "continue": {
+    "support": "full",
+    "source_url": "https://docs.anthropic.com/en/docs/claude-code/cli-reference#:~:text=--resume",
+    "comment": "Supports --continue for the most recent conversation."
+  },
   "non_interactive": {
     "support": "full",
     "source_url": "https://docs.anthropic.com/en/docs/claude-code/cli-reference#:~:text=--print",

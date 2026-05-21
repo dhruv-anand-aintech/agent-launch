@@ -17,20 +17,20 @@ Support values:
 | `unknown` | Not enough public evidence yet |
 | empty string | Intentionally unfilled |
 
-Initial columns include name, form factor, release date, latest major update, rules, skills, hooks, individual settings, and arbitrary model provider support.
+Initial columns include name, form factor, release date, latest major update, rules, skills, hooks, resume/continue controls, individual settings, and arbitrary model provider support.
 
 ## Current Rows
 
-| Name | Form factor | Released | Latest major update | Rules | Skills | Hooks | MCP | Arbitrary models |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Antigravity CLI | CLI | May 2026 | May 2026 | full | full | full | full | none |
-| Antigravity IDE | IDE | 2025 | May 2026 | partial | partial | unknown | partial | unknown |
-| Claude Code | CLI, IDE integrations, and SDK | February 2025 | May 2026 | full | full | full | full | partial |
-| Cursor Agent CLI | CLI for Cursor Agent | 2025 | May 2026 | full | full | unknown | full | full |
-| Cursor IDE | IDE | 2023 | May 2026 | full | full | unknown | full | full |
-| Gemini CLI | CLI | June 2025 | May 2026 | full | partial | full | full | partial |
-| OpenAI Codex CLI | CLI and hosted coding agent | April 2025 | May 2026 | full | full | full | full | full |
-| OpenCode | Terminal UI and CLI | 2025 | May 2026 | full | full | full | full | full |
+| Name | Form factor | Released | Latest major update | Rules | Skills | Hooks | MCP | Resume | Continue | Arbitrary models |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Antigravity CLI | CLI | May 2026 | May 2026 | full | full | full | full | full | full | none |
+| Antigravity IDE | IDE | 2025 | May 2026 | partial | partial | unknown | partial | full | full | unknown |
+| Claude Code | CLI, IDE integrations, and SDK | February 2025 | May 2026 | full | full | full | full | full | full | partial |
+| Cursor Agent CLI | CLI for Cursor Agent | 2025 | May 2026 | full | full | unknown | full | full | full | full |
+| Cursor IDE | IDE | 2023 | May 2026 | full | full | unknown | full | full | full | full |
+| Gemini CLI | CLI | June 2025 | May 2026 | full | partial | full | full | full | full | partial |
+| OpenAI Codex CLI | CLI and hosted coding agent | April 2025 | May 2026 | full | full | full | full | full | full | full |
+| OpenCode | Terminal UI and CLI | 2025 | May 2026 | full | full | full | full | full | full | full |
 
 ## Placeholder Rows
 

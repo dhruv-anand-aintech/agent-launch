@@ -76,6 +76,11 @@
       "source_url": "https://aider.chat/#:~:text=AI%20pair%20programming",
       "comment": "Placeholder pending sourced verification."
     },
+    "continue": {
+      "support": "unknown",
+      "source_url": "https://aider.chat/#:~:text=AI%20pair%20programming",
+      "comment": "Placeholder pending sourced verification."
+    },
     "non_interactive": {
       "support": "unknown",
       "source_url": "https://aider.chat/#:~:text=AI%20pair%20programming",
@@ -181,6 +186,11 @@
       "comment": "Placeholder pending sourced verification."
     },
     "resume": {
+      "support": "unknown",
+      "source_url": "https://ampcode.app/#:~:text=CLI%2FTUI%20Install",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "continue": {
       "support": "unknown",
       "source_url": "https://ampcode.app/#:~:text=CLI%2FTUI%20Install",
       "comment": "Placeholder pending sourced verification."
@@ -291,6 +301,11 @@
       "source_url": "https://antigravity.google/docs/cli-features#:~:text=--continue",
       "comment": "Supports --continue and --conversation."
     },
+    "continue": {
+      "support": "full",
+      "source_url": "https://antigravity.google/docs/cli-features#:~:text=--continue",
+      "comment": "Supports --continue for latest conversation and --conversation for a specific conversation."
+    },
     "non_interactive": {
       "support": "full",
       "source_url": "https://antigravity.google/docs/cli-features#:~:text=--print",
@@ -397,6 +412,11 @@
       "support": "full",
       "source_url": "https://antigravity.google/docs/#:~:text=resume",
       "comment": "IDE stores conversation/brain state."
+    },
+    "continue": {
+      "support": "full",
+      "source_url": "https://antigravity.google/docs/#:~:text=resume",
+      "comment": "IDE conversation state can be continued from existing history."
     },
     "non_interactive": {
       "support": "none",
@@ -508,6 +528,11 @@
       "source_url": "https://docs.anthropic.com/en/docs/claude-code/cli-reference#:~:text=--resume",
       "comment": "Supports --resume."
     },
+    "continue": {
+      "support": "full",
+      "source_url": "https://docs.anthropic.com/en/docs/claude-code/cli-reference#:~:text=--resume",
+      "comment": "Supports --continue for the most recent conversation."
+    },
     "non_interactive": {
       "support": "full",
       "source_url": "https://docs.anthropic.com/en/docs/claude-code/cli-reference#:~:text=--print",
@@ -614,6 +639,11 @@
       "comment": "Placeholder pending sourced verification."
     },
     "resume": {
+      "support": "unknown",
+      "source_url": "https://cline.bot/#:~:text=autonomous%20coding%20agent",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "continue": {
       "support": "unknown",
       "source_url": "https://cline.bot/#:~:text=autonomous%20coding%20agent",
       "comment": "Placeholder pending sourced verification."
@@ -726,6 +756,11 @@
       "source_url": "https://github.com/openai/codex#:~:text=resume",
       "comment": "Supports resume."
     },
+    "continue": {
+      "support": "full",
+      "source_url": "https://github.com/openai/codex#:~:text=resume",
+      "comment": "Supports continuing a previous session through resume/latest-session workflows."
+    },
     "non_interactive": {
       "support": "full",
       "source_url": "https://github.com/openai/codex#:~:text=exec",
@@ -834,6 +869,11 @@
       "source_url": "https://docs.cursor.com/en/cli/reference#:~:text=resume",
       "comment": "Supports continuation/resume workflows."
     },
+    "continue": {
+      "support": "full",
+      "source_url": "https://docs.cursor.com/en/cli/reference#:~:text=resume",
+      "comment": "Supports --continue and explicit --resume workflows."
+    },
     "non_interactive": {
       "support": "full",
       "source_url": "https://docs.cursor.com/en/cli/reference#:~:text=print",
@@ -940,6 +980,11 @@
       "support": "full",
       "source_url": "https://docs.cursor.com/#:~:text=resume",
       "comment": "Composer/chat history supports continuation."
+    },
+    "continue": {
+      "support": "full",
+      "source_url": "https://docs.cursor.com/#:~:text=resume",
+      "comment": "Composer/chat history supports continuing existing conversations."
     },
     "non_interactive": {
       "support": "none",
@@ -1050,6 +1095,11 @@
       "source_url": "https://devin.ai/#:~:text=AI%20software%20engineer",
       "comment": "Placeholder pending sourced verification."
     },
+    "continue": {
+      "support": "unknown",
+      "source_url": "https://devin.ai/#:~:text=AI%20software%20engineer",
+      "comment": "Placeholder pending sourced verification."
+    },
     "non_interactive": {
       "support": "unknown",
       "source_url": "https://devin.ai/#:~:text=AI%20software%20engineer",
@@ -1155,6 +1205,11 @@
       "support": "full",
       "source_url": "https://google-gemini.github.io/gemini-cli/docs/cli/commands.html#:~:text=resume",
       "comment": "Supports resume workflows."
+    },
+    "continue": {
+      "support": "full",
+      "source_url": "https://google-gemini.github.io/gemini-cli/docs/cli/commands.html#:~:text=resume",
+      "comment": "Supports continuing a previous session through resume/latest-session workflows."
     },
     "non_interactive": {
       "support": "full",
@@ -1262,6 +1317,11 @@
       "comment": "Placeholder pending sourced verification."
     },
     "resume": {
+      "support": "unknown",
+      "source_url": "https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent#:~:text=coding%20agent",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "continue": {
       "support": "unknown",
       "source_url": "https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent#:~:text=coding%20agent",
       "comment": "Placeholder pending sourced verification."
@@ -1376,6 +1436,11 @@
       "source_url": "https://kilo.ai/docs/getting-started#:~:text=works%20wherever%20you%20do",
       "comment": "Placeholder pending sourced verification."
     },
+    "continue": {
+      "support": "unknown",
+      "source_url": "https://kilo.ai/docs/getting-started#:~:text=works%20wherever%20you%20do",
+      "comment": "Placeholder pending sourced verification."
+    },
     "non_interactive": {
       "support": "unknown",
       "source_url": "https://kilo.ai/docs/getting-started#:~:text=works%20wherever%20you%20do",
@@ -1480,6 +1545,11 @@
       "comment": "Placeholder pending sourced verification."
     },
     "resume": {
+      "support": "unknown",
+      "source_url": "https://kimi-ai.chat/guide/kimi-cli/#:~:text=Kimi%20Code%20CLI",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "continue": {
       "support": "unknown",
       "source_url": "https://kimi-ai.chat/guide/kimi-cli/#:~:text=Kimi%20Code%20CLI",
       "comment": "Placeholder pending sourced verification."
@@ -1591,6 +1661,11 @@
       "source_url": "https://opencode.ai/docs/cli/#:~:text=session",
       "comment": "Supports session options."
     },
+    "continue": {
+      "support": "full",
+      "source_url": "https://opencode.ai/docs/cli/#:~:text=session",
+      "comment": "Supports --continue and explicit session selection."
+    },
     "non_interactive": {
       "support": "full",
       "source_url": "https://opencode.ai/docs/cli/#:~:text=run",
@@ -1696,6 +1771,11 @@
       "comment": "Placeholder pending sourced verification."
     },
     "resume": {
+      "support": "unknown",
+      "source_url": "https://github.com/QwenLM/qwen-code#:~:text=terminal",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "continue": {
       "support": "unknown",
       "source_url": "https://github.com/QwenLM/qwen-code#:~:text=terminal",
       "comment": "Placeholder pending sourced verification."
@@ -1809,6 +1889,11 @@
       "source_url": "https://roocode.com/#:~:text=AI%20coding%20assistant",
       "comment": "Placeholder pending sourced verification."
     },
+    "continue": {
+      "support": "unknown",
+      "source_url": "https://roocode.com/#:~:text=AI%20coding%20assistant",
+      "comment": "Placeholder pending sourced verification."
+    },
     "non_interactive": {
       "support": "unknown",
       "source_url": "https://roocode.com/#:~:text=AI%20coding%20assistant",
@@ -1913,6 +1998,11 @@
       "comment": "Placeholder pending sourced verification."
     },
     "resume": {
+      "support": "unknown",
+      "source_url": "https://windsurf.com/#:~:text=Windsurf",
+      "comment": "Placeholder pending sourced verification."
+    },
+    "continue": {
       "support": "unknown",
       "source_url": "https://windsurf.com/#:~:text=Windsurf",
       "comment": "Placeholder pending sourced verification."
