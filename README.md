@@ -18,6 +18,7 @@ It normalizes the common controls that usually differ across these tools:
 - permission/interaction mode
 - model class (`fast` or `pro`)
 - session resume
+- latest-session continue
 
 By default, `agent-launch` starts agents in `danger` mode unless `AGENT_LAUNCH_MODE` or `--mode` overrides it.
 
@@ -63,7 +64,7 @@ agent-launch -a claude -i -m plan -C ~/Code/my-repo 'review this change'
 
 | Option | Meaning |
 | --- | --- |
-| `--agent` / `-a` | `antigravity`, `codex`, `claude`, `gemini`, `opencode`, `cursor`, or `random` |
+| `--agent` / `-a` | `antigravity`, `codex`, `claude`, `gemini`, `opencode`, `cursor`, or `random`; defaults to `random` |
 | `--interactive` / `-i` | Start an interactive TUI/session |
 | `--non-interactive` / `-n` | Run headlessly and print the result |
 | `--prompt` / `-p` | Initial prompt |
@@ -74,6 +75,7 @@ agent-launch -a claude -i -m plan -C ~/Code/my-repo 'review this change'
 | `--model` | Explicit backend model string; overrides `--model-class` |
 | `--no-model` | Do not pass a model flag |
 | `--resume [id]` | Resume a previous session |
+| `--continue` | Continue the latest/current session |
 | `--dry-run` | Print translated backend command without running it |
 | `--extra` | Append raw backend arguments; repeat as needed |
 | `--` | Pass all following arguments through to the selected backend CLI |
@@ -186,11 +188,13 @@ Built-in defaults:
 | Agent | Fast | Pro | Default |
 | --- | --- | --- | --- |
 | Antigravity CLI | backend configured model | backend configured model | backend configured model |
-| Codex | `gpt-5.4-mini` | `gpt-5.5` | `pro` |
+| Codex | `gpt-5.4-mini` | `gpt-5.5` with low reasoning effort | `pro` |
 | Claude Code | `sonnet` | `opus` | `pro` |
 | Gemini CLI | `gemini-2.5-flash` | `gemini-2.5-pro` | `pro` |
-| OpenCode | `anthropic/claude-sonnet-4-5` | `anthropic/claude-opus-4-1` | `pro` |
-| Cursor Agent | `composer-2.5-fast` | `composer-2` | `pro` |
+| OpenCode | `opencode-go/deepseek-v4-flash` | `opencode-go/deepseek-v4-pro` | `pro` |
+| Cursor Agent | `composer-2.5-fast` | `composer-2.5` | `pro` |
+
+Antigravity CLI does not expose a launch-time model flag in `agy --help`; set its default model interactively with `/model`, which persists across sessions.
 
 `--agent random` chooses one concrete backend uniformly at runtime from `antigravity`, `claude`, `codex`, `cursor`, and `opencode`, then uses that backend's normal fast/pro mapping where supported. Gemini CLI remains available explicitly via `--agent gemini`, but is not in the random pool.
 
@@ -225,6 +229,7 @@ For Codex, pass the actual UUID, not the full `rollout-...jsonl` filename stem:
 
 ```sh
 agent-launch -a codex --resume 019e29c8-f222-7e70-9697-1219a6e0c06b
+agent-launch -a claude --continue
 ```
 
 ## Safety

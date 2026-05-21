@@ -32,10 +32,10 @@ common_models=(
   'opus:Claude pro default'
   'gemini-2.5-flash:Gemini fast default'
   'gemini-2.5-pro:Gemini pro default'
-  'anthropic/claude-sonnet-4-5:OpenCode fast default'
-  'anthropic/claude-opus-4-1:OpenCode pro default'
+  'opencode-go/deepseek-v4-flash:OpenCode fast default'
+  'opencode-go/deepseek-v4-pro:OpenCode pro default'
   'composer-2.5-fast:Cursor fast default'
-  'composer-2:Cursor pro default'
+  'composer-2.5:Cursor pro default'
 )
 
 _arguments -s -S \
@@ -50,6 +50,7 @@ _arguments -s -S \
   '--model[explicit backend model string]:model:->models' \
   '--no-model[do not pass any model flag]' \
   '--resume[resume a prior session]:session id:' \
+  '--continue[continue the latest/current session]' \
   '--dry-run[print translated backend command without running it]' \
   '--extra[append raw backend arguments]:backend args:' \
   '--print-mappings[show built-in agent/model mappings]' \

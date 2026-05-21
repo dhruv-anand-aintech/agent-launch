@@ -25,8 +25,8 @@ AGENTS: dict[str, AgentSpec] = {
     "codex": AgentSpec("codex", "gpt-5.4-mini", "gpt-5.5", "pro"),
     "claude": AgentSpec("claude", "sonnet", "opus", "pro"),
     "gemini": AgentSpec("gemini", "gemini-2.5-flash", "gemini-2.5-pro", "pro"),
-    "opencode": AgentSpec("opencode", "anthropic/claude-sonnet-4-5", "anthropic/claude-opus-4-1", "pro"),
-    "cursor": AgentSpec("agent", "composer-2.5-fast", "composer-2", "pro"),
+    "opencode": AgentSpec("opencode", "opencode-go/deepseek-v4-flash", "opencode-go/deepseek-v4-pro", "pro"),
+    "cursor": AgentSpec("agent", "composer-2.5-fast", "composer-2.5", "pro"),
 }
 
 
@@ -52,8 +52,8 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
         "-a",
         "--agent",
         choices=AGENT_CHOICES,
-        default=os.environ.get("AGENT_LAUNCH_AGENT", "codex"),
-        help="Agent CLI to launch. Use random to select a concrete backend uniformly. Defaults to AGENT_LAUNCH_AGENT or codex.",
+        default=os.environ.get("AGENT_LAUNCH_AGENT") or "random",
+        help="Agent CLI to launch. Use random to select a concrete backend uniformly. Defaults to AGENT_LAUNCH_AGENT or random.",
     )
     parser.add_argument(
         "-C",
@@ -116,6 +116,12 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
         help="Resume a prior session. With no value, use the backend's picker/latest behavior where available.",
     )
     parser.add_argument(
+        "--continue",
+        dest="continue_session",
+        action="store_true",
+        help="Continue the latest/current session where the selected backend supports it.",
+    )
+    parser.add_argument(
         "--dry-run",
         action="store_true",
         help="Print the translated command without executing it.",
@@ -132,6 +138,10 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
         help="Print normalized mode/model mappings and exit.",
     )
     args, unknown_args = parser.parse_known_args(argv)
+    if args.agent not in AGENT_CHOICES:
+        parser.error(f"unknown agent {args.agent!r}; expected one of: {', '.join(AGENT_CHOICES)}")
+    if args.resume is not None and args.continue_session:
+        parser.error("--resume and --continue cannot be used together")
     args.passthrough_args = unknown_args + passthrough_args
     if args.agent == "random":
         args.agent = random.choice(RANDOM_AGENTS)
@@ -142,6 +152,14 @@ def env_key(agent: str, model_class: str) -> str:
     return f"AGENT_LAUNCH_{agent.upper()}_{model_class.upper()}_MODEL"
 
 
+def resolve_model_class(agent: str, args: argparse.Namespace) -> str:
+    spec = AGENTS[agent]
+    model_class = args.model_class or os.environ.get("AGENT_LAUNCH_MODEL_CLASS") or spec.default_model_class
+    if model_class not in MODEL_CLASSES:
+        raise SystemExit(f"Unknown model class {model_class!r}; expected one of: {', '.join(MODEL_CLASSES)}")
+    return model_class
+
+
 def resolve_model(agent: str, args: argparse.Namespace) -> str | None:
     if args.no_model:
         return None
@@ -149,10 +167,7 @@ def resolve_model(agent: str, args: argparse.Namespace) -> str | None:
         return args.model
 
     spec = AGENTS[agent]
-    model_class = args.model_class or os.environ.get("AGENT_LAUNCH_MODEL_CLASS") or spec.default_model_class
-    if model_class not in MODEL_CLASSES:
-        raise SystemExit(f"Unknown model class {model_class!r}; expected one of: {', '.join(MODEL_CLASSES)}")
-
+    model_class = resolve_model_class(agent, args)
     return os.environ.get(env_key(agent, model_class)) or getattr(spec, f"{model_class}_model")
 
 
@@ -218,6 +233,11 @@ def append_model(cmd: list[str], agent: str, model: str | None) -> None:
         cmd += ["--model", model]
 
 
+def append_reasoning_effort(cmd: list[str], agent: str, model_class: str, model: str | None) -> None:
+    if agent == "codex" and model_class == "pro" and model == "gpt-5.5":
+        cmd += ["-c", "model_reasoning_effort=low"]
+
+
 def append_passthrough(cmd: list[str], args: argparse.Namespace) -> None:
     for raw in args.extra:
         cmd.extend(shlex.split(raw))
@@ -230,25 +250,39 @@ def build_command(args: argparse.Namespace) -> list[str]:
     prompt = prompt_from(args)
     non_interactive = args.non_interactive
     model = resolve_model(agent, args)
+    model_class = resolve_model_class(agent, args)
+    resume_requested = args.resume is not None
+    continue_session = args.continue_session
+    resume_id = args.resume if args.resume else None
     cmd = [spec.executable]
 
     if agent == "codex":
-        if non_interactive:
-            cmd += ["exec", "-C", args.cwd, "--skip-git-repo-check"]
-        else:
-            cmd += ["-C", args.cwd]
-        cmd += mode_flags(agent, args.mode, non_interactive)
-        append_model(cmd, agent, model)
-        append_passthrough(cmd, args)
-        if args.resume is not None:
-            cmd = [spec.executable, "exec" if non_interactive else "resume"]
+        if resume_requested or continue_session:
+            cmd += ["exec" if non_interactive else "resume"]
             if non_interactive:
-                cmd += ["resume"]
-            if args.resume:
-                cmd.append(args.resume)
-            elif non_interactive:
+                cmd += ["resume", "-C", args.cwd, "--skip-git-repo-check"]
+            else:
+                cmd += ["-C", args.cwd]
+            cmd += mode_flags(agent, args.mode, non_interactive)
+            append_model(cmd, agent, model)
+            append_reasoning_effort(cmd, agent, model_class, model)
+            append_passthrough(cmd, args)
+            if resume_id:
+                cmd.append(resume_id)
+            elif continue_session or non_interactive:
                 cmd.append("--last")
-        if prompt and args.resume is None:
+        else:
+            if non_interactive:
+                cmd += ["exec", "-C", args.cwd, "--skip-git-repo-check"]
+            else:
+                cmd += ["-C", args.cwd]
+            cmd += mode_flags(agent, args.mode, non_interactive)
+            append_model(cmd, agent, model)
+            append_reasoning_effort(cmd, agent, model_class, model)
+            append_passthrough(cmd, args)
+            if prompt:
+                cmd.append(prompt)
+        if prompt and (resume_requested or continue_session):
             cmd.append(prompt)
 
     elif agent == "claude":
@@ -256,10 +290,12 @@ def build_command(args: argparse.Namespace) -> list[str]:
         cmd += mode_flags(agent, args.mode, non_interactive)
         append_model(cmd, agent, model)
         append_passthrough(cmd, args)
-        if args.resume is not None:
+        if resume_id:
+            cmd += ["--resume", resume_id]
+        elif continue_session:
+            cmd += ["--continue"]
+        elif resume_requested:
             cmd += ["--resume"]
-            if args.resume:
-                cmd.append(args.resume)
         if non_interactive:
             cmd += ["--print"]
         if prompt:
@@ -269,9 +305,9 @@ def build_command(args: argparse.Namespace) -> list[str]:
         cmd += ["--add-dir", args.cwd]
         cmd += mode_flags(agent, args.mode, non_interactive)
         append_passthrough(cmd, args)
-        if args.resume is not None:
-            if args.resume:
-                cmd += ["--conversation", args.resume]
+        if resume_requested or continue_session:
+            if resume_id:
+                cmd += ["--conversation", resume_id]
             else:
                 cmd += ["--continue"]
         if prompt:
@@ -287,8 +323,8 @@ def build_command(args: argparse.Namespace) -> list[str]:
         cmd += mode_flags(agent, args.mode, non_interactive)
         append_model(cmd, agent, model)
         append_passthrough(cmd, args)
-        if args.resume is not None:
-            cmd += ["--resume", args.resume or "latest"]
+        if resume_requested or continue_session:
+            cmd += ["--resume", resume_id or "latest"]
         if prompt:
             if non_interactive:
                 cmd += ["--prompt", prompt]
@@ -303,9 +339,9 @@ def build_command(args: argparse.Namespace) -> list[str]:
         cmd += mode_flags(agent, args.mode, non_interactive)
         append_model(cmd, agent, model)
         append_passthrough(cmd, args)
-        if args.resume is not None:
-            if args.resume:
-                cmd += ["--session", args.resume]
+        if resume_requested or continue_session:
+            if resume_id:
+                cmd += ["--session", resume_id]
             else:
                 cmd += ["--continue"]
         if prompt:
@@ -319,9 +355,9 @@ def build_command(args: argparse.Namespace) -> list[str]:
         cmd += mode_flags(agent, args.mode, non_interactive)
         append_model(cmd, agent, model)
         append_passthrough(cmd, args)
-        if args.resume is not None:
-            if args.resume:
-                cmd += ["--resume", args.resume]
+        if resume_requested or continue_session:
+            if resume_id:
+                cmd += ["--resume", resume_id]
             else:
                 cmd += ["--continue"]
         if non_interactive:
@@ -344,6 +380,7 @@ def print_mappings() -> None:
         else:
             print(f"  {name}: executable={spec.executable}, model flag unsupported")
     print("  random: uniformly selects one of antigravity, claude, codex, cursor, opencode at runtime")
+    print("  codex pro: adds -c model_reasoning_effort=low when using gpt-5.5")
     print("\nModes:")
     for mode in MODES:
         print(f"  {mode}")
