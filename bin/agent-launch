@@ -26,13 +26,46 @@ AGENTS: dict[str, AgentSpec] = {
     "claude": AgentSpec("claude", "sonnet", "opus", "pro"),
     "gemini": AgentSpec("gemini", "gemini-2.5-flash", "gemini-2.5-pro", "pro"),
     "opencode": AgentSpec("opencode", "opencode-go/deepseek-v4-flash", "opencode-go/deepseek-v4-pro", "pro"),
-    "cursor": AgentSpec("agent", "composer-2.5-fast", "composer-2.5", "pro"),
+    "cursor": AgentSpec("agent", "composer-2.5-fast", "composer-2.5-fast", "fast"),
 }
 
 
 AGENT_CHOICES = tuple(sorted((*AGENTS.keys(), "random")))
-RANDOM_AGENTS = ("antigravity", "claude", "codex", "cursor", "opencode")
+RANDOM_AGENTS = ("claude", "codex", "cursor", "opencode")
 MODES = ("default", "ask", "plan", "auto", "danger")
+
+
+def random_state_path() -> str:
+    state_home = os.environ.get("XDG_STATE_HOME") or os.path.expanduser("~/.local/state")
+    return os.path.join(state_home, "agent-launch", "last-random-agent")
+
+
+def read_last_random_agent() -> str | None:
+    try:
+        with open(random_state_path(), encoding="utf-8") as handle:
+            last = handle.read().strip()
+    except OSError:
+        return None
+    return last if last in RANDOM_AGENTS else None
+
+
+def write_last_random_agent(agent: str) -> None:
+    path = random_state_path()
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    with open(path, "w", encoding="utf-8") as handle:
+        handle.write(f"{agent}\n")
+
+
+def choose_random_agent() -> str:
+    pool = list(RANDOM_AGENTS)
+    last = read_last_random_agent()
+    if last and len(pool) > 1:
+        pool = [agent for agent in pool if agent != last]
+    choice = random.choice(pool)
+    write_last_random_agent(choice)
+    return choice
+
+
 MODEL_CLASSES = ("fast", "pro")
 
 
@@ -144,7 +177,7 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
         parser.error("--resume and --continue cannot be used together")
     args.passthrough_args = unknown_args + passthrough_args
     if args.agent == "random":
-        args.agent = random.choice(RANDOM_AGENTS)
+        args.agent = choose_random_agent()
     return args
 
 
@@ -379,7 +412,10 @@ def print_mappings() -> None:
             )
         else:
             print(f"  {name}: executable={spec.executable}, model flag unsupported")
-    print("  random: uniformly selects one of antigravity, claude, codex, cursor, opencode at runtime")
+    print(
+        "  random: uniformly selects one of claude, codex, cursor, opencode at runtime "
+        "(never the same as the previous random pick)"
+    )
     print("  codex pro: adds -c model_reasoning_effort=low when using gpt-5.5")
     print("\nModes:")
     for mode in MODES:

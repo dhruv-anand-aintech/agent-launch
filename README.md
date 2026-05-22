@@ -8,7 +8,7 @@ One command for launching the local coding-agent CLIs installed on this machine:
 - Gemini CLI (`gemini`)
 - OpenCode (`opencode`)
 - Cursor Agent (`agent`, exposed as `--agent cursor`)
-- Random selection across Antigravity CLI, Codex, Claude Code, OpenCode, and Cursor Agent (`--agent random`)
+- Random selection across Codex, Claude Code, OpenCode, and Cursor Agent (`--agent random`), avoiding the same backend on consecutive runs
 
 It normalizes the common controls that usually differ across these tools:
 
@@ -208,11 +208,11 @@ Built-in defaults:
 | Claude Code | `sonnet` | `opus` | `pro` |
 | Gemini CLI | `gemini-2.5-flash` | `gemini-2.5-pro` | `pro` |
 | OpenCode | `opencode-go/deepseek-v4-flash` | `opencode-go/deepseek-v4-pro` | `pro` |
-| Cursor Agent | `composer-2.5-fast` | `composer-2.5` | `pro` |
+| Cursor Agent | `composer-2.5-fast` | `composer-2.5-fast` | `fast` |
 
 Antigravity CLI does not expose a launch-time model flag in `agy --help`; set its default model interactively with `/model`, which persists across sessions.
 
-`--agent random` chooses one concrete backend uniformly at runtime from `antigravity`, `claude`, `codex`, `cursor`, and `opencode`, then uses that backend's normal fast/pro mapping where supported. Gemini CLI remains available explicitly via `--agent gemini`, but is not in the random pool.
+`--agent random` chooses one concrete backend uniformly at runtime from `claude`, `codex`, `cursor`, and `opencode`, then uses that backend's normal fast/pro mapping where supported. Consecutive random launches never repeat the immediately previous pick (state is stored under `$XDG_STATE_HOME/agent-launch/last-random-agent`, defaulting to `~/.local/state`). Antigravity CLI and Gemini CLI remain available explicitly via `--agent antigravity` and `--agent gemini`, but are not in the random pool.
 
 You can override these without editing the script:
 
