@@ -1,4 +1,4 @@
-#compdef agent-launch
+#compdef agent-launch agl
 
 local -a agents modes model_classes common_models
 

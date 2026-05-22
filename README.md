@@ -30,7 +30,7 @@ Primary install path:
 npm install -g github:dhruv-anand-aintech/agent-launch
 ```
 
-This installs the `agent-launch` command through npm's global bin directory. If your shell cannot find it, check `npm bin -g` and ensure that directory is on `PATH`.
+This installs the `agent-launch` command (with `agl` as a short alias) through npm's global bin directory. If your shell cannot find them, check `npm bin -g` and ensure that directory is on `PATH`.
 
 Update later with:
 
@@ -44,8 +44,8 @@ Manual/local checkout install:
 ./install.sh
 ```
 
-This installs `bin/agent-launch` to `~/.local/bin/agent-launch`.
-It also installs zsh completions to `~/.zfunc/_agent-launch`.
+This installs `bin/agent-launch` to `~/.local/bin/agent-launch` and symlinks `~/.local/bin/agl` to it as a short alias.
+It also installs zsh completions to `~/.zfunc/_agent-launch` (bound to both `agent-launch` and `agl`).
 If Oh My Zsh is present, it also installs an explicit binding snippet to:
 
 ```text
@@ -59,6 +59,12 @@ export PATH="$HOME/.local/bin:$PATH"
 ```
 
 ## Usage
+
+`agl` is a short alias for `agent-launch` and is installed alongside it — the two are interchangeable:
+
+```sh
+agl -a claude -i -C ~/Code/my-repo 'inspect this repo'
+```
 
 ```sh
 agent-launch --agent codex --non-interactive --mode danger -C ~/Code/my-repo --prompt 'run tests and fix failures'

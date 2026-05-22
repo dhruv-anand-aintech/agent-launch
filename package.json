@@ -4,7 +4,8 @@
   "private": true,
   "type": "module",
   "bin": {
-    "agent-launch": "bin/agent-launch"
+    "agent-launch": "bin/agent-launch",
+    "agl": "bin/agent-launch"
   },
   "files": [
     "bin/agent-launch",
