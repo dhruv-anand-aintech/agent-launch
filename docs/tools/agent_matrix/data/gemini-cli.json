@@ -22,7 +22,7 @@
   "latest_major_update": {
     "value": "May '26",
     "source_url": "https://antigravity.google/docs/cli-getting-started#:~:text=Antigravity%20CLI",
-    "comment": "Google points CLI users toward the newer Antigravity CLI for the latest standalone CLI surface."
+    "comment": "Google points CLI users toward Antigravity (agy CLI) for the latest standalone CLI surface."
   },
   "rules": {
     "support": "full",
@@ -104,7 +104,7 @@
     "source_url": "https://google-gemini.github.io/gemini-cli/docs/cli/configuration.html#:~:text=providers",
     "comment": "Primarily Gemini/Google-oriented provider configuration."
   },
-  "notes": "Deprecated: Google points new CLI work to Antigravity CLI. Kept as an explicit agent-launch option, but excluded from random selection in this repo. Headless/scripting mode only; no published agent embed SDK.",
+  "notes": "Deprecated: Google points new CLI work to Antigravity. Kept as an explicit agent-launch option, but excluded from random selection in this repo. Headless/scripting mode only; no published agent embed SDK.",
   "pricing": {
     "value": "Free (Apache-2.0), Gemini API usage billed separately",
     "source_url": "https://ai.google.dev/pricing#:~:text=Gemini%20API",

@@ -236,54 +236,55 @@
     }
   },
   {
-    "name": "Antigravity CLI",
+    "name": "Antigravity",
     "links": {
-      "docs": "https://antigravity.google/docs/cli-features",
+      "docs": "https://antigravity.google/docs/",
       "github": "",
       "website": "https://antigravity.google/",
-      "slug": "antigravity-cli"
+      "slug": "antigravity"
     },
     "form_factor": {
       "values": [
-        "CLI"
+        "CLI",
+        "IDE"
       ],
       "source_url": "https://antigravity.google/docs/cli-getting-started#:~:text=agy",
-      "comment": "Installed as the agy command."
+      "comment": "Google Antigravity IDE plus standalone agy CLI (plugin layout, rules, skills, hooks, MCP)."
     },
     "released_in": {
-      "value": "May '26",
-      "source_url": "https://antigravity.google/docs/cli-getting-started#:~:text=install.sh",
-      "comment": "Standalone CLI installer and docs."
+      "value": "2025",
+      "source_url": "https://antigravity.google/#:~:text=released",
+      "comment": "IDE public release in 2025; standalone agy CLI documented May 2026."
     },
     "latest_major_update": {
       "value": "May '26",
       "source_url": "https://antigravity.google/docs/cli-features#:~:text=plugins",
-      "comment": "Standalone CLI with plugin layout, rules, skills, hooks, and MCP."
+      "comment": "CLI plugin system and IDE agent surfaces updated together in current docs."
     },
     "rules": {
       "support": "full",
       "source_url": "https://antigravity.google/docs/cli-features#:~:text=rules",
-      "comment": "Plugin rules live under plugin rules directories."
+      "comment": "Full plugin rules on CLI; IDE has persistent agent context with overlapping rules support."
     },
     "skills": {
       "support": "full",
       "source_url": "https://antigravity.google/docs/cli-features#:~:text=skills",
-      "comment": "Plugin skills are supported."
+      "comment": "Plugin skills on CLI; IDE local data includes skills with less public doc detail."
     },
     "hooks": {
       "support": "full",
       "source_url": "https://antigravity.google/docs/cli-features#:~:text=hooks",
-      "comment": "Plugin hooks are supported."
+      "comment": "Plugin hooks documented on CLI."
     },
     "mcp_servers": {
       "support": "full",
       "source_url": "https://antigravity.google/docs/cli-features#:~:text=mcp_config.json",
-      "comment": "Plugin mcp_config.json is supported."
+      "comment": "CLI plugin mcp_config.json; IDE also ships MCP configuration."
     },
     "custom_commands": {
       "support": "partial",
       "source_url": "https://antigravity.google/docs/cli-features#:~:text=plugins",
-      "comment": "Implemented through plugin-provided capabilities rather than a classic slash-command folder."
+      "comment": "CLI via plugin capabilities; IDE via global workflows rather than classic slash-command folders."
     },
     "subagents": {
       "support": "unknown",
@@ -291,34 +292,34 @@
       "comment": ""
     },
     "model_selection": {
-      "support": "none",
-      "source_url": "https://antigravity.google/docs/cli-features#:~:text=--print",
-      "comment": "agy --help does not expose a model flag as of this dataset."
+      "support": "unknown",
+      "source_url": "https://antigravity.google/docs/#:~:text=model",
+      "comment": "IDE model UI exists; agy --help does not expose a model flag as of this dataset."
     },
     "approval_mode": {
       "support": "partial",
       "source_url": "https://antigravity.google/docs/cli-features#:~:text=dangerously-skip-permissions",
-      "comment": "Supports --dangerously-skip-permissions."
+      "comment": "CLI supports --dangerously-skip-permissions; IDE approval behavior not fully documented."
     },
     "sandbox_mode": {
       "support": "partial",
       "source_url": "https://antigravity.google/docs/cli-features#:~:text=--sandbox",
-      "comment": "Supports --sandbox for terminal restrictions."
+      "comment": "CLI supports --sandbox for terminal restrictions."
     },
     "resume": {
       "support": "full",
       "source_url": "https://antigravity.google/docs/cli-features#:~:text=--continue",
-      "comment": "Supports --continue and --conversation."
+      "comment": "CLI --continue/--conversation; IDE stores conversation/brain state."
     },
     "continue": {
       "support": "full",
       "source_url": "https://antigravity.google/docs/cli-features#:~:text=--continue",
-      "comment": "Supports --continue for latest conversation and --conversation for a specific conversation."
+      "comment": "CLI --continue for latest conversation; IDE continues from existing history."
     },
     "non_interactive": {
       "support": "full",
       "source_url": "https://antigravity.google/docs/cli-features#:~:text=--print",
-      "comment": "Supports --print / --prompt."
+      "comment": "CLI supports --print / --prompt; IDE is interactive-first."
     },
     "output_format": {
       "support": "unknown",
@@ -336,137 +337,20 @@
       "comment": ""
     },
     "custom_model_provider": {
-      "support": "none",
-      "source_url": "https://antigravity.google/docs/cli-features#:~:text=--print",
+      "support": "unknown",
+      "source_url": "https://antigravity.google/docs/#:~:text=providers",
       "comment": "No arbitrary provider configuration found in public CLI help/docs."
     },
-    "notes": "Distinct from Gemini CLI and the older Antigravity IDE. No published programmatic SDK found.",
+    "notes": "Google Antigravity spans an agentic IDE and the agy CLI. Distinct from deprecated Gemini CLI. No published programmatic SDK.",
     "pricing": {
       "value": "Free (generous weekly rate limits), Google AI Pro/Ultra (undisclosed), Organization (consumption-based via Google Cloud)",
       "source_url": "https://antigravity.google/pricing#:~:text=For%20Individuals",
-      "comment": "Free tier includes Gemini 3.5 Flash, 3.1 Pro, 3 Flash, Claude Sonnet & Opus 4.6, gpt-oss-120b. Pro/Ultra tiers offer more generous rate limits. Organization via Google Cloud with consumption-based pricing."
+      "comment": "Free tier includes Gemini 3.5 Flash, 3.1 Pro, 3 Flash, Claude Sonnet & Opus 4.6, gpt-oss-120b. Pro/Ultra tiers offer more generous rate limits."
     },
     "hosted_agent": {
       "support": "none",
       "source_url": "https://antigravity.google/docs/cli-features#:~:text=plugins",
-      "comment": "Local CLI tool."
-    }
-  },
-  {
-    "name": "Antigravity IDE",
-    "links": {
-      "docs": "https://antigravity.google/docs/",
-      "github": "",
-      "website": "https://antigravity.google/",
-      "slug": "antigravity-ide"
-    },
-    "form_factor": {
-      "values": [
-        "IDE"
-      ],
-      "source_url": "https://antigravity.google/#:~:text=CLI",
-      "comment": "Google Antigravity IDE surface."
-    },
-    "released_in": {
-      "value": "2025",
-      "source_url": "https://antigravity.google/#:~:text=released",
-      "comment": "Exact public release month not confirmed in public docs captured for this dataset."
-    },
-    "latest_major_update": {
-      "value": "May '26",
-      "source_url": "https://antigravity.google/docs/cli-getting-started#:~:text=update",
-      "comment": "New standalone CLI split documented separately from the IDE."
-    },
-    "rules": {
-      "support": "partial",
-      "source_url": "https://antigravity.google/docs/#:~:text=rules",
-      "comment": "IDE has persistent agent context, but not the same plugin rules path as Antigravity CLI."
-    },
-    "skills": {
-      "support": "partial",
-      "source_url": "https://antigravity.google/docs/#:~:text=skills",
-      "comment": "Local IDE data includes skills, but public docs are less explicit than CLI plugin docs."
-    },
-    "hooks": {
-      "support": "unknown",
-      "source_url": "https://antigravity.google/docs/#:~:text=hooks",
-      "comment": ""
-    },
-    "mcp_servers": {
-      "support": "partial",
-      "source_url": "https://antigravity.google/docs/#:~:text=MCP",
-      "comment": "Local IDE data includes mcp_config.json, but CLI plugin MCP is documented more clearly."
-    },
-    "custom_commands": {
-      "support": "partial",
-      "source_url": "https://antigravity.google/docs/#:~:text=commands",
-      "comment": "Global workflows are present in local IDE data."
-    },
-    "subagents": {
-      "support": "unknown",
-      "source_url": "https://antigravity.google/docs/#:~:text=subagents",
-      "comment": ""
-    },
-    "model_selection": {
-      "support": "unknown",
-      "source_url": "https://antigravity.google/docs/#:~:text=model",
-      "comment": ""
-    },
-    "approval_mode": {
-      "support": "unknown",
-      "source_url": "https://antigravity.google/docs/#:~:text=approval",
-      "comment": ""
-    },
-    "sandbox_mode": {
-      "support": "unknown",
-      "source_url": "https://antigravity.google/docs/#:~:text=sandbox",
-      "comment": ""
-    },
-    "resume": {
-      "support": "full",
-      "source_url": "https://antigravity.google/docs/#:~:text=resume",
-      "comment": "IDE stores conversation/brain state."
-    },
-    "continue": {
-      "support": "full",
-      "source_url": "https://antigravity.google/docs/#:~:text=resume",
-      "comment": "IDE conversation state can be continued from existing history."
-    },
-    "non_interactive": {
-      "support": "none",
-      "source_url": "https://antigravity.google/docs/cli-getting-started#:~:text=print",
-      "comment": "Use Antigravity CLI for headless use."
-    },
-    "output_format": {
-      "support": "unknown",
-      "source_url": "https://antigravity.google/docs/#:~:text=output",
-      "comment": ""
-    },
-    "statusline": {
-      "support": "unknown",
-      "source_url": "https://antigravity.google/docs/#:~:text=status%20line",
-      "comment": ""
-    },
-    "telemetry": {
-      "support": "unknown",
-      "source_url": "https://antigravity.google/docs/#:~:text=telemetry",
-      "comment": ""
-    },
-    "custom_model_provider": {
-      "support": "unknown",
-      "source_url": "https://antigravity.google/docs/#:~:text=providers",
-      "comment": ""
-    },
-    "notes": "Included as a distinct IDE surface because it is not the same as the new agy CLI. No published programmatic SDK found.",
-    "pricing": {
-      "value": "Free (generous weekly rate limits), Google AI Pro/Ultra (undisclosed), Organization (consumption-based via Google Cloud)",
-      "source_url": "https://antigravity.google/pricing#:~:text=For%20Individuals",
-      "comment": "Same pricing as Antigravity CLI. Free tier with generous weekly rate limits; Pro/Ultra tiers available."
-    },
-    "hosted_agent": {
-      "support": "none",
-      "source_url": "https://antigravity.google/#:~:text=CLI",
-      "comment": "Local IDE surface."
+      "comment": "Local IDE and CLI surfaces."
     }
   },
   {
@@ -1092,7 +976,7 @@
     "latest_major_update": {
       "value": "May '26",
       "source_url": "https://antigravity.google/docs/cli-getting-started#:~:text=Antigravity%20CLI",
-      "comment": "Google points CLI users toward the newer Antigravity CLI for the latest standalone CLI surface."
+      "comment": "Google points CLI users toward Antigravity (agy CLI) for the latest standalone CLI surface."
     },
     "rules": {
       "support": "full",
@@ -1174,7 +1058,7 @@
       "source_url": "https://google-gemini.github.io/gemini-cli/docs/cli/configuration.html#:~:text=providers",
       "comment": "Primarily Gemini/Google-oriented provider configuration."
     },
-    "notes": "Deprecated: Google points new CLI work to Antigravity CLI. Kept as an explicit agent-launch option, but excluded from random selection in this repo. Headless/scripting mode only; no published agent embed SDK.",
+    "notes": "Deprecated: Google points new CLI work to Antigravity. Kept as an explicit agent-launch option, but excluded from random selection in this repo. Headless/scripting mode only; no published agent embed SDK.",
     "pricing": {
       "value": "Free (Apache-2.0), Gemini API usage billed separately",
       "source_url": "https://ai.google.dev/pricing#:~:text=Gemini%20API",

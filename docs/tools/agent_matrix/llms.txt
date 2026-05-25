@@ -1,13 +1,12 @@
 # Coding Agent Feature Matrix
-> Compare 17 coding agents, CLIs, and IDEs across features.
+> Compare 16 coding agents, CLIs, and IDEs across features.
 > https://compare.ainorthstar.tech | Updated 2026-05-25
 
 Agent             Rel    FF     Rul   Skl   Hks   MCP   Cmd   Sub   Mod   App   San   Res   Con   Hdl   Fmt   Sta   Tel   Hst  BYOM
 -----------------------------------------------------------------------------------------------------------------------------------
 Aider             Jun '2 CLI        ~     ~     ~     N     N     ~     Y     ~     N     N     ~     Y     N     N     Y     N     Y
 Amp               May '2 CLI/Ext    Y     Y     Y     Y     N     Y     ~     ~     N     Y     Y     Y     Y     N     ?     N     ~
-Antigravity CLI   May '2 CLI        Y     Y     Y     Y     ~     ?     N     ~     ~     Y     Y     Y     ?     ?     ?     N     N
-Antigravity IDE   2025  IDE        ~     ~     ?     ~     ~     ?     ?     ?     ?     Y     Y     N     ?     ?     ?     N     ?
+Antigravity       2025  CLI/IDE    Y     Y     Y     Y     ~     ?     ?     ~     ~     Y     Y     Y     ?     ?     ?     N     ?
 Claude Code       Feb '2 CLI/IDE    Y     Y     Y     Y     Y     Y     Y     Y     ~     Y     Y     Y     Y     Y     Y     ~     ~
 Cline             Jul '2 CLI/IDE    Y     Y     Y     Y     Y     Y     Y     Y     ~     Y     ~     Y     Y     N     Y     N     Y
 OpenAI Codex CLI  Apr '2 CLI/Ext    Y     Y     Y     Y     ~     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y
@@ -81,57 +80,31 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Pricing: Usage-based with free tier
 - Notes: Amp is opinionated and aggressively removes features it considers obsolete (custom commands, slash commands, themes). Focuses on frontier models. Plugin API provides extensive extensibility for those who need it. Closed-source product; some auxiliary tools open source on GitHub.
 
-### Antigravity CLI
-- Docs: https://antigravity.google/docs/cli-features
-- Website: https://antigravity.google/
-- Form factor: CLI
-- Released: May '26
-- Latest update: May '26
-- Rules: full — Plugin rules live under plugin rules directories.
-- Skills: full — Plugin skills are supported.
-- Hooks: full — Plugin hooks are supported.
-- Mcp Servers: full — Plugin mcp_config.json is supported.
-- Custom Commands: partial — Implemented through plugin-provided capabilities rather than a classic slash-command folder.
-- Subagents: unknown
-- Model Selection: none — agy --help does not expose a model flag as of this dataset.
-- Approval Mode: partial — Supports --dangerously-skip-permissions.
-- Sandbox Mode: partial — Supports --sandbox for terminal restrictions.
-- Resume: full — Supports --continue and --conversation.
-- Continue: full — Supports --continue for latest conversation and --conversation for a specific conversation.
-- Non Interactive: full — Supports --print / --prompt.
-- Output Format: unknown
-- Statusline: unknown
-- Telemetry: unknown
-- Hosted Agent: none — Local CLI tool.
-- Custom Model Provider: none — No arbitrary provider configuration found in public CLI help/docs.
-- Pricing: Free (generous weekly rate limits), Google AI Pro/Ultra (undisclosed), Organization (consumption-based via Google Cloud)
-- Notes: Distinct from Gemini CLI and the older Antigravity IDE. No published programmatic SDK found.
-
-### Antigravity IDE
+### Antigravity
 - Docs: https://antigravity.google/docs/
 - Website: https://antigravity.google/
-- Form factor: IDE
+- Form factor: CLI, IDE
 - Released: 2025
 - Latest update: May '26
-- Rules: partial — IDE has persistent agent context, but not the same plugin rules path as Antigravity CLI.
-- Skills: partial — Local IDE data includes skills, but public docs are less explicit than CLI plugin docs.
-- Hooks: unknown
-- Mcp Servers: partial — Local IDE data includes mcp_config.json, but CLI plugin MCP is documented more clearly.
-- Custom Commands: partial — Global workflows are present in local IDE data.
+- Rules: full — Full plugin rules on CLI; IDE has persistent agent context with overlapping rules support.
+- Skills: full — Plugin skills on CLI; IDE local data includes skills with less public doc detail.
+- Hooks: full — Plugin hooks documented on CLI.
+- Mcp Servers: full — CLI plugin mcp_config.json; IDE also ships MCP configuration.
+- Custom Commands: partial — CLI via plugin capabilities; IDE via global workflows rather than classic slash-command folders.
 - Subagents: unknown
-- Model Selection: unknown
-- Approval Mode: unknown
-- Sandbox Mode: unknown
-- Resume: full — IDE stores conversation/brain state.
-- Continue: full — IDE conversation state can be continued from existing history.
-- Non Interactive: none — Use Antigravity CLI for headless use.
+- Model Selection: unknown — IDE model UI exists; agy --help does not expose a model flag as of this dataset.
+- Approval Mode: partial — CLI supports --dangerously-skip-permissions; IDE approval behavior not fully documented.
+- Sandbox Mode: partial — CLI supports --sandbox for terminal restrictions.
+- Resume: full — CLI --continue/--conversation; IDE stores conversation/brain state.
+- Continue: full — CLI --continue for latest conversation; IDE continues from existing history.
+- Non Interactive: full — CLI supports --print / --prompt; IDE is interactive-first.
 - Output Format: unknown
 - Statusline: unknown
 - Telemetry: unknown
-- Hosted Agent: none — Local IDE surface.
-- Custom Model Provider: unknown
+- Hosted Agent: none — Local IDE and CLI surfaces.
+- Custom Model Provider: unknown — No arbitrary provider configuration found in public CLI help/docs.
 - Pricing: Free (generous weekly rate limits), Google AI Pro/Ultra (undisclosed), Organization (consumption-based via Google Cloud)
-- Notes: Included as a distinct IDE surface because it is not the same as the new agy CLI. No published programmatic SDK found.
+- Notes: Google Antigravity spans an agentic IDE and the agy CLI. Distinct from deprecated Gemini CLI. No published programmatic SDK.
 
 ### Claude Code
 - Docs: https://docs.anthropic.com/en/docs/claude-code/overview
@@ -290,7 +263,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Hosted Agent: none — Local CLI tool backed by Google Gemini API.
 - Custom Model Provider: partial — Primarily Gemini/Google-oriented provider configuration.
 - Pricing: Free (Apache-2.0), Gemini API usage billed separately
-- Notes: Deprecated: Google points new CLI work to Antigravity CLI. Kept as an explicit agent-launch option, but excluded from random selection in this repo. Headless/scripting mode only; no published agent embed SDK.
+- Notes: Deprecated: Google points new CLI work to Antigravity. Kept as an explicit agent-launch option, but excluded from random selection in this repo. Headless/scripting mode only; no published agent embed SDK.
 
 ### GitHub Copilot
 - Docs: https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent

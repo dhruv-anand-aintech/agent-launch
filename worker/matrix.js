@@ -24,7 +24,7 @@ function faviconUrl(agent) {
 }
 
 function metaTags() {
-  const desc = "Compare 17 coding agents, AI coding CLIs, and IDEs across 17 features. Each cell sourced from official docs.";
+  const desc = "Compare 16 coding agents, AI coding CLIs, and IDEs across 17 features. Each cell sourced from official docs.";
   return `
     <meta name="description" content="${htmlEscape(desc)}">
     <meta name="robots" content="index, follow">
@@ -213,7 +213,7 @@ function sortFormFactors(vals) {
 }
 
 // Pinned agents (always at top), then rest sorted by full-feature count
-const PINNED = ['Claude Code','OpenAI Codex CLI','Cursor','OpenCode','Antigravity CLI','Antigravity IDE'];
+const PINNED = ['Claude Code','OpenAI Codex CLI','Cursor','OpenCode','Antigravity'];
 const ALL_FEATS = featureCols.map(function(c){return c.key});
 function rankAgent(i) {
   var agent = matrix[i];

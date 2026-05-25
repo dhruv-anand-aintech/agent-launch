@@ -25,8 +25,7 @@ Columns span metadata (name, form factor, release, pricing), context (rules, ski
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | Aider | CLI | June 2023 | August 2025 | partial | partial | partial | none | none | full |
 | Amp | CLI, Extension, SDK | May 2025 | May 2026 | full | full | full | full | none | partial |
-| Antigravity CLI | CLI | May 2026 | May 2026 | full | full | full | full | none | none |
-| Antigravity IDE | IDE | 2025 | May 2026 | partial | partial | unknown | partial | none | unknown |
+| Antigravity | CLI, IDE | 2025 | May 2026 | full | full | full | full | none | unknown |
 | Claude Code | CLI, IDE, Extension, SDK | February 2025 | May 2026 | full | full | full | full | partial | partial |
 | Cline | IDE, Extension, CLI, SDK | July 2024 | May 2026 | full | full | full | full | none | full |
 | Cursor | IDE, CLI, Extension, SDK | 2023 | May 2026 | full | full | unknown | full | full | full |
