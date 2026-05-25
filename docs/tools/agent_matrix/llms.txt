@@ -9,18 +9,18 @@ Amp               May '2 CLI/Ext    Y     Y     Y     Y     N     Y     ~     ~ 
 Antigravity CLI   May '2 CLI        Y     Y     Y     Y     ~     ?     N     ~     ~     Y     Y     Y     ?     ?     ?     N     N
 Antigravity IDE   2025  IDE        ~     ~     ?     ~     ~     ?     ?     ?     ?     Y     Y     N     ?     ?     ?     N     ?
 Claude Code       Feb '2 CLI/IDE    Y     Y     Y     Y     Y     Y     Y     Y     ~     Y     Y     Y     Y     Y     Y     ~     ~
-Cline             Jul '2 IDE/Ext    Y     Y     Y     Y     Y     Y     Y     Y     ~     Y     ~     Y     Y     N     Y     N     Y
+Cline             Jul '2 CLI/IDE    Y     Y     Y     Y     Y     Y     Y     Y     ~     Y     ~     Y     Y     N     Y     N     Y
 OpenAI Codex CLI  Apr '2 CLI/Ext    Y     Y     Y     Y     ~     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y
-Cursor            2023  IDE/CLI    Y     Y     ?     Y     Y     ~     Y     Y     Y     Y     Y     Y     ~     ~     Y     Y     Y
-Devin             Dec '2 Extensi    Y     Y     Y     Y     Y     Y     ?     ~     Y     Y     Y     Y     ~     N     ?     Y     ?
+Cursor            2023  CLI/IDE    Y     Y     ?     Y     Y     ~     Y     Y     Y     Y     Y     Y     ~     ~     Y     Y     Y
+Devin             Dec '2 CLI/Ext    Y     Y     Y     Y     Y     Y     ?     ~     Y     Y     Y     Y     ~     N     ?     Y     ?
 Gemini CLI        Jun '2 CLI        Y     ~     Y     Y     Y     ?     Y     Y     Y     Y     Y     Y     ~     ?     Y     N     ~
-GitHub Copilot    Jun '2 IDE/Ext    Y     Y     Y     Y     ~     Y     Y     ~     ~     Y     Y     Y     ~     N     ~     Y     Y
+GitHub Copilot    Jun '2 CLI/IDE    Y     Y     Y     Y     ~     Y     Y     ~     ~     Y     Y     Y     ~     N     ~     Y     Y
 Kilo Code         Feb '2 CLI/IDE    Y     Y     Y     Y     Y     Y     Y     Y     ~     Y     Y     Y     Y     N     Y     ~     Y
 Kimi CLI          Oct '2 CLI/Ext    Y     Y     ~     Y     ~     Y     Y     Y     N     Y     Y     Y     Y     Y     ?     N     Y
 OpenCode          2025  CLI/SDK    Y     Y     Y     Y     Y     Y     Y     Y     ~     Y     Y     Y     Y     ?     Y     N     Y
 Qwen Code         Jun '2 CLI/Ext    Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     ~     Y
-Roo Code          Mid-20 IDE/Ext    Y     Y     N     Y     Y     Y     Y     Y     N     ~     Y     Y     ~     N     Y     N     Y
-Windsurf Cascade  Nov '2 IDE/Ext    Y     Y     Y     Y     Y     Y     Y     Y     ~     Y     Y     ~     ~     ~     ~     Y     ~
+Roo Code          Mid-20 CLI/IDE    Y     Y     N     Y     Y     Y     Y     Y     N     ~     Y     Y     ~     N     Y     N     Y
+Windsurf Cascade  Nov '2 CLI/IDE    Y     Y     Y     Y     Y     Y     Y     Y     ~     Y     Y     ~     ~     ~     ~     Y     ~
 
 ## Feature legend
 Code = Y: full | ~: partial | N: none | ?: unknown |  : 
@@ -163,7 +163,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Docs: https://docs.cline.bot/
 - GitHub: https://github.com/cline/cline
 - Website: https://cline.bot/
-- Form factor: IDE, Extension, CLI, SDK
+- Form factor: CLI, IDE, Extension, SDK
 - Released: Jul '24
 - Latest update: May '26
 - Rules: full — Rich rule system: .clinerules/ directory, global ~/Documents/Cline/Rules/, conditional rules with YAML frontmatter globs, auto-detection of .cursorrules, .windsurfrules, AGENTS.md.
@@ -215,7 +215,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 ### Cursor
 - Docs: https://docs.cursor.com/
 - Website: https://cursor.com/
-- Form factor: IDE, CLI, Extension, SDK
+- Form factor: CLI, IDE, Extension, SDK
 - Released: 2023
 - Latest update: May '26
 - Rules: full — Supports project and user rules.
@@ -241,7 +241,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 ### Devin
 - Docs: https://docs.devin.ai/
 - Website: https://devin.ai/
-- Form factor: Extension, CLI, Web, SDK
+- Form factor: CLI, Extension, SDK, Web
 - Released: Dec '24
 - Latest update: Feb '26
 - Rules: full — AGENTS.md files in repos, Knowledge (persistent org-level instructions with trigger descriptions), Skills & Rules settings.
@@ -269,6 +269,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - GitHub: https://github.com/google-gemini/gemini-cli
 - Website: https://blog.google/technology/developers/introducing-gemini-cli-open-source-ai-agent/
 - Form factor: CLI
+- Status: Deprecated
 - Released: Jun '25
 - Latest update: May '26
 - Rules: full — Uses GEMINI.md context files.
@@ -289,13 +290,13 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Hosted Agent: none — Local CLI tool backed by Google Gemini API.
 - Custom Model Provider: partial — Primarily Gemini/Google-oriented provider configuration.
 - Pricing: Free (Apache-2.0), Gemini API usage billed separately
-- Notes: Kept as an explicit agent-launch option, but excluded from random selection in this repo. Headless/scripting mode only; no published agent embed SDK (unlike Codex/Cursor SDKs).
+- Notes: Deprecated: Google points new CLI work to Antigravity CLI. Kept as an explicit agent-launch option, but excluded from random selection in this repo. Headless/scripting mode only; no published agent embed SDK.
 
 ### GitHub Copilot
 - Docs: https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent
 - GitHub: https://github.com/features/copilot
 - Website: https://github.com/features/copilot
-- Form factor: IDE, Extension, CLI, SDK
+- Form factor: CLI, IDE, Extension, SDK
 - Released: Jun '25
 - Latest update: May '26
 - Rules: full — Multiple layers: .github/copilot-instructions.md (repo-wide), path-specific .github/instructions/**, AGENTS.md, CLAUDE.md, GEMINI.md, personal instructions, org-level.
@@ -429,7 +430,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Docs: https://docs.roocode.com/
 - GitHub: https://github.com/RooCodeInc/Roo-Code
 - Website: https://roocode.com/
-- Form factor: IDE, Extension, CLI
+- Form factor: CLI, IDE, Extension
 - Released: Mid-2025
 - Latest update: May '26
 - Rules: full — Comprehensive: .roorules, .roo/rules/, .clinerules fallback, ~/.roo/rules/ global dir, AGENTS.md/AGENT.md support, mode-specific rules via rules-{modeSlug}.
@@ -455,7 +456,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 ### Windsurf Cascade
 - Docs: https://docs.windsurf.com/
 - Website: https://windsurf.com/
-- Form factor: IDE, Extension, CLI
+- Form factor: CLI, IDE, Extension
 - Released: Nov '24
 - Latest update: Apr '26
 - Rules: full — Three scopes: Global (~/.codeium/windsurf/memories/global_rules.md, always-on), Workspace (.windsurf/rules/*.md with frontmatter modes), System (/etc/windsurf/rules/*.md). AGENTS.md support.

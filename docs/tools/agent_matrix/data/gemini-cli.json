@@ -1,5 +1,6 @@
 {
   "name": "Gemini CLI",
+  "deprecated": true,
   "links": {
     "docs": "https://google-gemini.github.io/gemini-cli/",
     "github": "https://github.com/google-gemini/gemini-cli",
@@ -103,7 +104,7 @@
     "source_url": "https://google-gemini.github.io/gemini-cli/docs/cli/configuration.html#:~:text=providers",
     "comment": "Primarily Gemini/Google-oriented provider configuration."
   },
-  "notes": "Kept as an explicit agent-launch option, but excluded from random selection in this repo. Headless/scripting mode only; no published agent embed SDK (unlike Codex/Cursor SDKs).",
+  "notes": "Deprecated: Google points new CLI work to Antigravity CLI. Kept as an explicit agent-launch option, but excluded from random selection in this repo. Headless/scripting mode only; no published agent embed SDK.",
   "pricing": {
     "value": "Free (Apache-2.0), Gemini API usage billed separately",
     "source_url": "https://ai.google.dev/pricing#:~:text=Gemini%20API",

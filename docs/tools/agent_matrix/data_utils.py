@@ -18,6 +18,14 @@ def _required_keys(schema: dict) -> list[str]:
     return list(schema.get("required", []))
 
 
+FORM_FACTOR_ORDER = ["CLI", "IDE", "Extension", "SDK", "Web"]
+
+
+def _sort_form_factors(values: list[str]) -> list[str]:
+    rank = {v: i for i, v in enumerate(FORM_FACTOR_ORDER)}
+    return sorted(values, key=lambda v: (rank.get(v, 99), v))
+
+
 def _validate_feature(name: str, key: str, value: object) -> None:
     if not isinstance(value, dict):
         raise ValueError(f"{name}: {key} must be an object")
@@ -111,7 +119,8 @@ def generate_llms_txt(bundle_path: str, output_path: str) -> None:
     lines.append("-" * len(hdr))
 
     for row in rows:
-        ff = row.get("form_factor", {}).get("values", [row.get("form_factor", {}).get("value", "")])
+        ff_raw = row.get("form_factor", {}).get("values", [row.get("form_factor", {}).get("value", "")])
+        ff = _sort_form_factors([v for v in ff_raw if v])
         ff_str = "/".join(ff)[:7] if ff else ""
         rel = row.get("released_in", {}).get("value", "")[:6]
         vals = "  ".join(
@@ -139,8 +148,10 @@ def generate_llms_txt(bundle_path: str, output_path: str) -> None:
             lines.append(f"- Website: {links['website']}")
         ff = row.get("form_factor", {})
         if ff.get("values") or ff.get("value"):
-            vals = ff.get("values") or [ff["value"]]
+            vals = _sort_form_factors(ff.get("values") or [ff["value"]])
             lines.append(f"- Form factor: {', '.join(vals)}")
+        if row.get("deprecated"):
+            lines.append("- Status: Deprecated")
         if row.get("released_in", {}).get("value"):
             lines.append(f"- Released: {row['released_in']['value']}")
         if row.get("latest_major_update", {}).get("value"):

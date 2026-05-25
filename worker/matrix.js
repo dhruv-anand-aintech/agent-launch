@@ -50,7 +50,7 @@ ${metaTags()}
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 * { box-sizing: border-box; }
-body { margin: 0; background: var(--bg); color: var(--ink); }
+body { margin: 0; min-height: 100vh; display: flex; flex-direction: column; background: var(--bg); color: var(--ink); }
 a { color: inherit; text-decoration: none; }
 .topbar {
   height: 44px; display: flex; align-items: center; justify-content: space-between;
@@ -69,7 +69,7 @@ a { color: inherit; text-decoration: none; }
 .hero p { margin: 0; color: var(--muted); font-size: 12px; }
 .meta-row { margin-top: 6px; display: flex; gap: 6px; flex-wrap: wrap; }
 .pill { border: 1px solid var(--line); padding: 3px 7px; background: #fff; font-size: 11px; color: var(--muted); }
-.table-wrap { overflow: auto; height: calc(100vh - 44px); position: relative; }
+.table-wrap { flex: 1; overflow: auto; min-height: 0; position: relative; }
 table { border-collapse: separate; border-spacing: 0; background: var(--panel); }
 thead { position: sticky; top: 0; z-index: 20; }
 th {
@@ -88,7 +88,10 @@ th.agent-col.drag-over { background: #d5cdbb; }
 th.agent-col.hidden-col { opacity: .25; }
 .row-label.dragging { opacity: .4; }
 .row-label.drag-over { outline: 2px dashed var(--accent); outline-offset: -2px; }
+.fav-box { display: inline-block; background: #fff; border-radius: 6px; line-height: 0; box-shadow: inset 0 0 0 1px var(--line); }
 th.agent-col .fav { width: 32px; height: 32px; vertical-align: middle; border-radius: 6px; }
+th.agent-col.deprecated-col { opacity: .42; }
+th.agent-col.deprecated-col .agent-full::after { content: " (deprecated)"; font-weight: 400; }
 th.agent-col .agent-full { display: none; position: absolute; left: 50%; transform: translateX(-50%);
   top: calc(100% + 2px); background: #2a241b; color: #f6f4ee; font-size: 10px; padding: 2px 6px;
   border-radius: 3px; white-space: nowrap; z-index: 30; pointer-events: none; }
@@ -134,6 +137,14 @@ td.cell-wrap .dot {
 td.value { font-size: 10px; color: var(--muted); }
 .form-tags { display: flex; flex-wrap: wrap; gap: 1px; justify-content: center; }
 .form-tag { border: 1px solid var(--line); background: #fff; padding: 1px 2px; font-size: 8px; }
+.form-tag.deprecated-tag { color: var(--warn); border-color: #d4a574; }
+.site-footer {
+  flex-shrink: 0; display: flex; align-items: center; justify-content: center; gap: 8px;
+  padding: 6px 14px; background: rgba(255,253,248,.95); border-top: 1px solid var(--line);
+}
+.site-footer-copy { font-size: 10px; color: var(--muted); white-space: nowrap; }
+.site-footer-copy a { color: var(--ink); text-decoration: none; }
+.site-footer-copy a:hover { text-decoration: underline; }
 .tri {
   position: absolute; top: 0; right: 0; width: 14px; height: 14px;
   cursor: pointer; z-index: 2;
@@ -171,6 +182,9 @@ td.value { font-size: 10px; color: var(--muted); }
 <tbody id="tbody"></tbody>
 </table>
 </div>
+<footer class="site-footer">
+  <span class="site-footer-copy">© 2026 <a href="https://ainorthstartech.com" target="_blank" rel="noopener noreferrer">AI Northstar Tech</a> Private Limited, All Rights Reserved.</span>
+</footer>
 <script type="application/json" id="payload">${payload}</script>
 <script>
 function agentDomain(agent) {
@@ -188,12 +202,23 @@ let rowOrder = [];
 let hidden = new Set();
 let rowSort = null;
 const SORT_ORDER = { full:0, partial:1, none:2, unknown:3, "":4 };
+const FORM_FACTOR_ORDER = ['CLI','IDE','Extension','SDK','Web'];
+function sortFormFactors(vals) {
+  var rank = {};
+  FORM_FACTOR_ORDER.forEach(function(v,i){rank[v]=i});
+  return vals.slice().sort(function(a,b){
+    var ra = rank[a]!==undefined?rank[a]:99, rb = rank[b]!==undefined?rank[b]:99;
+    return ra-rb || String(a).localeCompare(String(b));
+  });
+}
 
 // Pinned agents (always at top), then rest sorted by full-feature count
 const PINNED = ['Claude Code','OpenAI Codex CLI','Cursor','OpenCode','Antigravity CLI','Antigravity IDE'];
 const ALL_FEATS = featureCols.map(function(c){return c.key});
 function rankAgent(i) {
-  var agent = matrix[i], p = PINNED.indexOf(agent.name);
+  var agent = matrix[i];
+  if (agent.deprecated) return 2000 + i;
+  var p = PINNED.indexOf(agent.name);
   if (p !== -1) return -1000 + p;
   var cnt = 0;
   ALL_FEATS.forEach(function(k){if((agent[k]||{}).support==='full')cnt++});
@@ -228,13 +253,18 @@ function favimg(agent, idx) {
   var d = agentDomain(agent), ini = agentInitials(agent.name), c = COLORS[idx%COLORS.length];
   var fallback = avatarSvg(ini, c, 32);
   var src = d ? 'https://www.google.com/s2/favicons?domain='+esc(encodeURIComponent(d))+'&sz=64' : '';
-  if (!src) return fallback;
-  return '<span style="display:inline-block;position:relative;line-height:0"><img class="fav" src="'+src+'" alt="" width="32" height="32" loading="lazy" onerror="var p=this.parentElement;this.style.display=\\x27none\\x27;var s=p.querySelector(\\x27.fav-av\\x27);if(s)s.style.display=\\x27inline\\x27"><span class="fav-av" style="display:none">'+fallback+'</span></span>';
+  if (!src) return '<span class="fav-box">'+fallback+'</span>';
+  return '<span class="fav-box" style="position:relative"><img class="fav" src="'+src+'" alt="" width="32" height="32" loading="lazy" onerror="var p=this.parentElement;this.style.display=\\x27none\\x27;var s=p.querySelector(\\x27.fav-av\\x27);if(s)s.style.display=\\x27inline\\x27"><span class="fav-av" style="display:none">'+fallback+'</span></span>';
 }
 function cell(agent, col) {
   var v = agent[col.key];
   if (!v) return '<td>&mdash;</td>';
-  if (col.key==='form_factor') return '<td class="cell-wrap"><div class="form-tags">'+(v.values||[v.value]).map(function(x){return '<span class="form-tag">'+esc(x)+'</span>'}).join('')+'</div></td>';
+  if (col.key==='form_factor') {
+    var tags = sortFormFactors((v.values||[v.value]).filter(Boolean));
+    var tagHtml = tags.map(function(x){return '<span class="form-tag">'+esc(x)+'</span>'}).join('');
+    if (agent.deprecated) tagHtml += '<span class="form-tag deprecated-tag">deprecated</span>';
+    return '<td class="cell-wrap"><div class="form-tags">'+tagHtml+'</div></td>';
+  }
   var tip = v.comment ? '<span class="cell-tip">'+esc(v.comment)+'</span>' : '';
   var src = v.source_url ? '<a class="tri" href="'+esc(v.source_url)+'" target="_blank" rel="noreferrer" title="Open source" aria-label="Open source"></a>' : '';
   if (featureCols.includes(col)) {
@@ -246,8 +276,8 @@ function cell(agent, col) {
 }
 function renderHeader() {
   document.getElementById('headerRow').innerHTML = '<th class="corner"></th>'+colOrder.map(function(i){
-    var agent = matrix[i], hc = hidden.has(i)?' hidden-col':'';
-    return '<th class="agent-col'+hc+'" data-idx="'+i+'" draggable="true" onclick="toggleCol('+i+')" title="Click to toggle visibility">'+
+    var agent = matrix[i], hc = hidden.has(i)?' hidden-col':'', dep = agent.deprecated?' deprecated-col':'';
+    return '<th class="agent-col'+hc+dep+'" data-idx="'+i+'" draggable="true" onclick="toggleCol('+i+')" title="Click to toggle visibility">'+
       favimg(agent, i)+'<span class="eye">'+(hidden.has(i)?'&#8855;':'&#9679;')+'</span><div class="agent-full">'+esc(agent.name)+'</div></th>';
   }).join(''); setupColDrag();
 }
