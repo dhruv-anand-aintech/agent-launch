@@ -10,10 +10,11 @@
     "values": [
       "CLI",
       "IDE",
-      "Extension"
+      "Extension",
+      "SDK"
     ],
-    "source_url": "https://kilo.ai/#:~:text=Kilo%3A%20The%20Open%20Source%20AI%20Coding%20Agent%20for%20VS%20Code%2C%20JetBrains%2C%20and%20your%20CLI",
-    "comment": "VS Code extension, JetBrains plugin, CLI, Cloud Agents."
+    "source_url": "https://opencode.ai/docs/sdk/#:~:text=SDK",
+    "comment": "VS Code extension, JetBrains plugin, CLI, Cloud Agents. OpenCode fork; programmatic control via @opencode-ai/sdk against the Kilo/OpenCode server."
   },
   "released_in": {
     "value": "Feb '26",

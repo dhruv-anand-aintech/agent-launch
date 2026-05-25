@@ -9,10 +9,11 @@
   "form_factor": {
     "values": [
       "CLI",
-      "Extension"
+      "Extension",
+      "SDK"
     ],
-    "source_url": "https://ampcode.com/manual#:~:text=Amp%20is%20the%20frontier%20coding%20agent%20for%20your%20terminal%20and%20editor",
-    "comment": "CLI TUI + IDE extensions (VS Code, JetBrains, Neovim, Zed)."
+    "source_url": "https://ampcode.com/manual/sdk#:~:text=SDK",
+    "comment": "CLI TUI + IDE extensions (VS Code, JetBrains, Neovim, Zed) + @ampcode/sdk (TypeScript) and amp-sdk (Python)."
   },
   "released_in": {
     "value": "May '25",

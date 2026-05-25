@@ -10,10 +10,11 @@
     "values": [
       "Extension",
       "CLI",
-      "Web"
+      "Web",
+      "SDK"
     ],
-    "source_url": "https://docs.devin.ai/get-started/devin-intro#:~:text=Devin%20is%20also%20available%20via%20the%20Devin%20API",
-    "comment": "Web app + VS Code extension + CLI + Slack/Teams + API."
+    "source_url": "https://docs.devin.ai/api-reference/overview#:~:text=API",
+    "comment": "Web app + VS Code extension + CLI + Slack/Teams + REST API and official devin-sdk (Python)."
   },
   "released_in": {
     "value": "Dec '24",

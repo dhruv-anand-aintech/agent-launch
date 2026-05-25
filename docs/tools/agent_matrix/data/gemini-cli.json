@@ -103,7 +103,7 @@
     "source_url": "https://google-gemini.github.io/gemini-cli/docs/cli/configuration.html#:~:text=providers",
     "comment": "Primarily Gemini/Google-oriented provider configuration."
   },
-  "notes": "Kept as an explicit agent-launch option, but excluded from random selection in this repo.",
+  "notes": "Kept as an explicit agent-launch option, but excluded from random selection in this repo. Headless/scripting mode only; no published agent embed SDK (unlike Codex/Cursor SDKs).",
   "pricing": {
     "value": "Free (Apache-2.0), Gemini API usage billed separately",
     "source_url": "https://ai.google.dev/pricing#:~:text=Gemini%20API",

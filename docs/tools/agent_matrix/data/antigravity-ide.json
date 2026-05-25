@@ -103,7 +103,7 @@
     "source_url": "https://antigravity.google/docs/#:~:text=providers",
     "comment": ""
   },
-  "notes": "Included as a distinct IDE surface because it is not the same as the new agy CLI.",
+  "notes": "Included as a distinct IDE surface because it is not the same as the new agy CLI. No published programmatic SDK found.",
   "pricing": {
     "value": "Free (generous weekly rate limits), Google AI Pro/Ultra (undisclosed), Organization (consumption-based via Google Cloud)",
     "source_url": "https://antigravity.google/pricing#:~:text=For%20Individuals",

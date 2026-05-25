@@ -24,18 +24,19 @@ Columns span metadata (name, form factor, release, pricing), context (rules, ski
 | Name | Form factor | Released | Latest major update | Rules | Skills | Hooks | MCP | Hosted agent | Arbitrary models |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | Aider | CLI | June 2023 | August 2025 | partial | partial | partial | none | none | full |
-| Amp | CLI, Extension | May 2025 | May 2026 | full | full | full | full | none | partial |
+| Amp | CLI, Extension, SDK | May 2025 | May 2026 | full | full | full | full | none | partial |
 | Antigravity CLI | CLI | May 2026 | May 2026 | full | full | full | full | none | none |
 | Antigravity IDE | IDE | 2025 | May 2026 | partial | partial | unknown | partial | none | unknown |
 | Claude Code | CLI, IDE, Extension, SDK | February 2025 | May 2026 | full | full | full | full | partial | partial |
-| Cline | IDE, Extension, CLI | July 2024 | May 2026 | full | full | full | full | none | full |
-| Cursor | IDE, CLI, Extension | 2023 | May 2026 | full | full | unknown | full | full | full |
-| GitHub Copilot | IDE, Extension, CLI | June 2025 | May 2026 | full | full | full | full | full | full |
-| Kilo Code | CLI, IDE, Extension | February 2026 | May 2026 | full | full | full | full | partial | full |
-| Kimi CLI | CLI, Extension | October 2025 | May 2026 | full | full | partial | full | none | full |
-| OpenAI Codex CLI | CLI, Extension | April 2025 | May 2026 | full | full | full | full | full | full |
-| OpenCode | CLI | 2025 | May 2026 | full | full | full | full | none | full |
-| Qwen Code | CLI, Extension | June 2025 | May 2026 | full | full | full | full | partial | full |
+| Cline | IDE, Extension, CLI, SDK | July 2024 | May 2026 | full | full | full | full | none | full |
+| Cursor | IDE, CLI, Extension, SDK | 2023 | May 2026 | full | full | unknown | full | full | full |
+| Devin | Extension, CLI, Web, SDK | December 2024 | May 2026 | partial | partial | unknown | partial | full | unknown |
+| GitHub Copilot | IDE, Extension, CLI, SDK | June 2025 | May 2026 | full | full | full | full | full | full |
+| Kilo Code | CLI, IDE, Extension, SDK | February 2026 | May 2026 | full | full | full | full | partial | full |
+| Kimi CLI | CLI, Extension, SDK | October 2025 | May 2026 | full | full | partial | full | none | full |
+| OpenAI Codex CLI | CLI, Extension, SDK | April 2025 | May 2026 | full | full | full | full | full | full |
+| OpenCode | CLI, SDK | 2025 | May 2026 | full | full | full | full | none | full |
+| Qwen Code | CLI, Extension, SDK | June 2025 | May 2026 | full | full | full | full | partial | full |
 | Roo Code | IDE, Extension, CLI | Mid-2025 | May 2026 | full | full | none | full | none | full |
 | Windsurf Cascade | IDE, Extension, CLI | November 2024 | April 2026 | full | full | full | full | full | partial |
 
@@ -53,4 +54,8 @@ Bundle:
 python docs/tools/agent_matrix/data_utils.py bundle
 ```
 
+Deploy (compare.ainorthstar.tech): pushes to `main` that touch `docs/tools/agent_matrix/**`, `worker/matrix.js`, or `wrangler.toml` run `.github/workflows/deploy-matrix.yml`. Add repo secret `CLOUDFLARE_API_TOKEN` with Workers deploy permission.
+
 Each non-obvious cell should carry a `source_url` and a short `comment` when the support level needs interpretation.
+
+**SDK** in form factor means a published library to embed or drive the agent programmatically (e.g. `@cursor/sdk`, `@openai/codex-sdk`), not headless CLI flags or enterprise analytics APIs alone.

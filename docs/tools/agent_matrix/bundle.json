@@ -104,7 +104,7 @@
       "source_url": "https://aider.chat/docs/llms.html#:~:text=Aider%20can%20connect%20to%20most%20LLMs",
       "comment": "Connects to any LLM via litellm. Supports OpenAI, Anthropic, Gemini, DeepSeek, Ollama, OpenRouter, any OpenAI-compatible endpoint, and more."
     },
-    "notes": "Aider is a mature open-source CLI coding agent (45k+ stars) since June 2023. Deep git integration, repo mapping for codebase context, extensive LLM provider support through litellm. Notable gaps vs newer agents: no MCP, no user-defined slash commands, no sandbox, no subagent delegation, no resume/continue flags, no structured output. Apache-2.0 licensed.",
+    "notes": "Aider is a mature open-source CLI coding agent (45k+ stars) since June 2023. Deep git integration, repo mapping for codebase context, extensive LLM provider support through litellm. No published embed SDK (CLI/scripting only). Notable gaps vs newer agents: no MCP, no user-defined slash commands, no sandbox, no subagent delegation, no resume/continue flags, no structured output. Apache-2.0 licensed.",
     "pricing": {
       "value": "Free (Apache-2.0)",
       "source_url": "https://github.com/Aider-AI/aider#:~:text=License-Apache-2.0",
@@ -127,10 +127,11 @@
     "form_factor": {
       "values": [
         "CLI",
-        "Extension"
+        "Extension",
+        "SDK"
       ],
-      "source_url": "https://ampcode.com/manual#:~:text=Amp%20is%20the%20frontier%20coding%20agent%20for%20your%20terminal%20and%20editor",
-      "comment": "CLI TUI + IDE extensions (VS Code, JetBrains, Neovim, Zed)."
+      "source_url": "https://ampcode.com/manual/sdk#:~:text=SDK",
+      "comment": "CLI TUI + IDE extensions (VS Code, JetBrains, Neovim, Zed) + @ampcode/sdk (TypeScript) and amp-sdk (Python)."
     },
     "released_in": {
       "value": "May '25",
@@ -339,7 +340,7 @@
       "source_url": "https://antigravity.google/docs/cli-features#:~:text=--print",
       "comment": "No arbitrary provider configuration found in public CLI help/docs."
     },
-    "notes": "Distinct from Gemini CLI and the older Antigravity IDE.",
+    "notes": "Distinct from Gemini CLI and the older Antigravity IDE. No published programmatic SDK found.",
     "pricing": {
       "value": "Free (generous weekly rate limits), Google AI Pro/Ultra (undisclosed), Organization (consumption-based via Google Cloud)",
       "source_url": "https://antigravity.google/pricing#:~:text=For%20Individuals",
@@ -456,7 +457,7 @@
       "source_url": "https://antigravity.google/docs/#:~:text=providers",
       "comment": ""
     },
-    "notes": "Included as a distinct IDE surface because it is not the same as the new agy CLI.",
+    "notes": "Included as a distinct IDE surface because it is not the same as the new agy CLI. No published programmatic SDK found.",
     "pricing": {
       "value": "Free (generous weekly rate limits), Google AI Pro/Ultra (undisclosed), Organization (consumption-based via Google Cloud)",
       "source_url": "https://antigravity.google/pricing#:~:text=For%20Individuals",
@@ -600,10 +601,11 @@
       "values": [
         "IDE",
         "Extension",
-        "CLI"
+        "CLI",
+        "SDK"
       ],
-      "source_url": "https://cline.bot/#:~:text=One%20open%20source%20agent%20runtime.%20Use%20it%20in%20your%20editor%2C%20your%20terminal%2C%20or%20embed%20it%20in%20your%20own%20products",
-      "comment": "VS Code extension, JetBrains plugin, CLI, SDK, Kanban board."
+      "source_url": "https://docs.cline.bot/sdk/overview#:~:text=SDK",
+      "comment": "VS Code extension, JetBrains plugin, CLI, and @cline/sdk for embedding the agent runtime in apps and CI."
     },
     "released_in": {
       "value": "Jul '24",
@@ -718,10 +720,11 @@
     "form_factor": {
       "values": [
         "CLI",
-        "Extension"
+        "Extension",
+        "SDK"
       ],
-      "source_url": "https://developers.openai.com/codex/#:~:text=Codex",
-      "comment": "CLI + Open VSX extension + hosted on platform.openai.com."
+      "source_url": "https://developers.openai.com/codex/sdk#:~:text=SDK",
+      "comment": "CLI + Open VSX extension + hosted on platform.openai.com. TypeScript (@openai/codex-sdk) and experimental Python SDKs for programmatic control."
     },
     "released_in": {
       "value": "Apr '25",
@@ -837,10 +840,11 @@
       "values": [
         "IDE",
         "CLI",
-        "Extension"
+        "Extension",
+        "SDK"
       ],
-      "source_url": "https://cursor.com/#:~:text=AI%20code%20editor",
-      "comment": "VS Code-derived AI IDE with standalone CLI (cursor-agent) for headless use."
+      "source_url": "https://cursor.com/docs/sdk/typescript#:~:text=SDK",
+      "comment": "VS Code-derived AI IDE with standalone CLI (cursor-agent) and @cursor/sdk (TypeScript/Python) for programmatic local or cloud agents."
     },
     "released_in": {
       "value": "2023",
@@ -937,7 +941,7 @@
       "source_url": "https://docs.cursor.com/en/settings/models#:~:text=models",
       "comment": "Supports custom API keys/models in IDE and CLI."
     },
-    "notes": "Cursor is a VS Code-derived AI IDE with a companion CLI (cursor-agent) for headless/CI use. The CLI shares the IDE's feature surface for rules, skills, MCP, and models.",
+    "notes": "Cursor is a VS Code-derived AI IDE with a companion CLI (cursor-agent) for headless/CI use and @cursor/sdk for programmatic local/cloud agents.",
     "pricing": {
       "value": "Pro $20/mo, Business $40/user/mo",
       "source_url": "https://www.cursor.com/pricing#:~:text=Pricing",
@@ -956,10 +960,11 @@
       "values": [
         "Extension",
         "CLI",
-        "Web"
+        "Web",
+        "SDK"
       ],
-      "source_url": "https://docs.devin.ai/get-started/devin-intro#:~:text=Devin%20is%20also%20available%20via%20the%20Devin%20API",
-      "comment": "Web app + VS Code extension + CLI + Slack/Teams + API."
+      "source_url": "https://docs.devin.ai/api-reference/overview#:~:text=API",
+      "comment": "Web app + VS Code extension + CLI + Slack/Teams + REST API and official devin-sdk (Python)."
     },
     "released_in": {
       "value": "Dec '24",
@@ -1168,7 +1173,7 @@
       "source_url": "https://google-gemini.github.io/gemini-cli/docs/cli/configuration.html#:~:text=providers",
       "comment": "Primarily Gemini/Google-oriented provider configuration."
     },
-    "notes": "Kept as an explicit agent-launch option, but excluded from random selection in this repo.",
+    "notes": "Kept as an explicit agent-launch option, but excluded from random selection in this repo. Headless/scripting mode only; no published agent embed SDK (unlike Codex/Cursor SDKs).",
     "pricing": {
       "value": "Free (Apache-2.0), Gemini API usage billed separately",
       "source_url": "https://ai.google.dev/pricing#:~:text=Gemini%20API",
@@ -1192,10 +1197,11 @@
       "values": [
         "IDE",
         "Extension",
-        "CLI"
+        "CLI",
+        "SDK"
       ],
-      "source_url": "https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent#:~:text=Copilot%20cloud%20agent%20works%20autonomously%20in%20a%20GitHub%20Actions-powered%20environment",
-      "comment": "IDE agent mode (VS Code, JetBrains, Xcode, Neovim, Eclipse) + CLI + hosted cloud agent."
+      "source_url": "https://docs.github.com/en/copilot/how-tos/copilot-sdk#:~:text=Copilot%20SDK",
+      "comment": "IDE agent mode (VS Code, JetBrains, Xcode, Neovim, Eclipse) + CLI + hosted cloud agent + @github/copilot-sdk (public preview)."
     },
     "released_in": {
       "value": "Jun '25",
@@ -1311,10 +1317,11 @@
       "values": [
         "CLI",
         "IDE",
-        "Extension"
+        "Extension",
+        "SDK"
       ],
-      "source_url": "https://kilo.ai/#:~:text=Kilo%3A%20The%20Open%20Source%20AI%20Coding%20Agent%20for%20VS%20Code%2C%20JetBrains%2C%20and%20your%20CLI",
-      "comment": "VS Code extension, JetBrains plugin, CLI, Cloud Agents."
+      "source_url": "https://opencode.ai/docs/sdk/#:~:text=SDK",
+      "comment": "VS Code extension, JetBrains plugin, CLI, Cloud Agents. OpenCode fork; programmatic control via @opencode-ai/sdk against the Kilo/OpenCode server."
     },
     "released_in": {
       "value": "Feb '26",
@@ -1429,10 +1436,11 @@
     "form_factor": {
       "values": [
         "CLI",
-        "Extension"
+        "Extension",
+        "SDK"
       ],
-      "source_url": "https://www.kimi.com/code/docs/en/kimi-code-cli/getting-started.html#:~:text=Kimi%20Code%20CLI%20is%20an%20AI%20agent%20that%20runs%20in%20the%20terminal",
-      "comment": "CLI + VS Code + Zed + JetBrains via ACP."
+      "source_url": "https://github.com/MoonshotAI/kimi-agent-sdk#:~:text=SDK",
+      "comment": "CLI + VS Code + Zed + JetBrains via ACP, plus @moonshot-ai/kimi-agent-sdk (Node/Go/Python)."
     },
     "released_in": {
       "value": "Oct '25",
@@ -1546,10 +1554,11 @@
     },
     "form_factor": {
       "values": [
-        "CLI"
+        "CLI",
+        "SDK"
       ],
-      "source_url": "https://opencode.ai/docs/#:~:text=terminal",
-      "comment": "Terminal UI and CLI."
+      "source_url": "https://opencode.ai/docs/sdk/#:~:text=SDK",
+      "comment": "Terminal UI and CLI plus @opencode-ai/sdk for programmatic server/session control."
     },
     "released_in": {
       "value": "2025",
@@ -1664,10 +1673,11 @@
     "form_factor": {
       "values": [
         "CLI",
-        "Extension"
+        "Extension",
+        "SDK"
       ],
-      "source_url": "https://github.com/QwenLM/qwen-code#:~:text=As%20an%20open-source%20terminal%20agent%2C%20you%20can%20use%20Qwen%20Code%20in%20five%20primary%20ways%3A",
-      "comment": "CLI + VS Code + Zed + JetBrains via ACP."
+      "source_url": "https://qwenlm-qwen-code.mintlify.app/sdk/quick-start#:~:text=SDK",
+      "comment": "CLI + VS Code + Zed + JetBrains via ACP, plus @qwen-code/sdk (TypeScript) and Python SDK."
     },
     "released_in": {
       "value": "Jun '25",
@@ -1878,7 +1888,7 @@
       "source_url": "https://docs.roocode.com/providers/openai-compatible#:~:text=OpenAI%20Compatible",
       "comment": "OpenAI Compatible provider for arbitrary API endpoints. LiteLLM routing. 22+ built-in providers. Debug proxy support. Model-agnostic."
     },
-    "notes": "Roo Code was a popular Cline fork (24k stars, 574k VS Code installs) that was shut down on May 15, 2026. The repository is now archived and read-only. The original team moved to Roomote (roomote.dev). Community forks include ZooCode and Cline.",
+    "notes": "Roo Code was a popular Cline fork (24k stars, 574k VS Code installs) that was shut down on May 15, 2026. The repository is now archived and read-only. VS Code extension-host API only; no standalone npm agent SDK. Community forks include ZooCode and Cline.",
     "pricing": {
       "value": "Free (Apache-2.0)",
       "source_url": "https://docs.roocode.com/faq#:~:text=The%20Roo%20Code%20extension%20is%20free%20and%20open%2Dsource",
@@ -1997,7 +2007,7 @@
       "source_url": "https://windsurf.com/changelog#:~:text=BYOK%20(Anthropic%20Key)",
       "comment": "BYOK for Anthropic models (Claude Sonnet 4, Opus 4) for Free/Pro users. No generic custom OpenAI-compatible endpoint configuration documented."
     },
-    "notes": "Windsurf by Codeium (acquired by Cognition AI in April 2026) is a standalone VS Code fork IDE with integrated coding agent (Cascade). The Devin integration added cloud agent capabilities. Competes directly with Cursor IDE.",
+    "notes": "Windsurf by Codeium (acquired by Cognition AI in April 2026) is a standalone VS Code fork IDE with integrated coding agent (Cascade). Enterprise analytics API only; no agent embed SDK. Competes directly with Cursor IDE.",
     "pricing": {
       "value": "Free $0, Pro $20/mo, Max $200/mo, Teams $40/user/mo",
       "source_url": "https://windsurf.com/pricing#compare-plans#:~:text=Compare%20Plans",

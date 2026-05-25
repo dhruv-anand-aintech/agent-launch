@@ -105,7 +105,7 @@
     "source_url": "https://windsurf.com/changelog#:~:text=BYOK%20(Anthropic%20Key)",
     "comment": "BYOK for Anthropic models (Claude Sonnet 4, Opus 4) for Free/Pro users. No generic custom OpenAI-compatible endpoint configuration documented."
   },
-  "notes": "Windsurf by Codeium (acquired by Cognition AI in April 2026) is a standalone VS Code fork IDE with integrated coding agent (Cascade). The Devin integration added cloud agent capabilities. Competes directly with Cursor IDE.",
+  "notes": "Windsurf by Codeium (acquired by Cognition AI in April 2026) is a standalone VS Code fork IDE with integrated coding agent (Cascade). Enterprise analytics API only; no agent embed SDK. Competes directly with Cursor IDE.",
   "pricing": {
     "value": "Free $0, Pro $20/mo, Max $200/mo, Teams $40/user/mo",
     "source_url": "https://windsurf.com/pricing#compare-plans#:~:text=Compare%20Plans",

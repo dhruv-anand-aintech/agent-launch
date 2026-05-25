@@ -103,7 +103,7 @@
     "source_url": "https://aider.chat/docs/llms.html#:~:text=Aider%20can%20connect%20to%20most%20LLMs",
     "comment": "Connects to any LLM via litellm. Supports OpenAI, Anthropic, Gemini, DeepSeek, Ollama, OpenRouter, any OpenAI-compatible endpoint, and more."
   },
-  "notes": "Aider is a mature open-source CLI coding agent (45k+ stars) since June 2023. Deep git integration, repo mapping for codebase context, extensive LLM provider support through litellm. Notable gaps vs newer agents: no MCP, no user-defined slash commands, no sandbox, no subagent delegation, no resume/continue flags, no structured output. Apache-2.0 licensed.",
+  "notes": "Aider is a mature open-source CLI coding agent (45k+ stars) since June 2023. Deep git integration, repo mapping for codebase context, extensive LLM provider support through litellm. No published embed SDK (CLI/scripting only). Notable gaps vs newer agents: no MCP, no user-defined slash commands, no sandbox, no subagent delegation, no resume/continue flags, no structured output. Apache-2.0 licensed.",
   "pricing": {
     "value": "Free (Apache-2.0)",
     "source_url": "https://github.com/Aider-AI/aider#:~:text=License-Apache-2.0",

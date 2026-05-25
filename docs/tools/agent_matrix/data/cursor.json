@@ -10,10 +10,11 @@
     "values": [
       "IDE",
       "CLI",
-      "Extension"
+      "Extension",
+      "SDK"
     ],
-    "source_url": "https://cursor.com/#:~:text=AI%20code%20editor",
-    "comment": "VS Code-derived AI IDE with standalone CLI (cursor-agent) for headless use."
+    "source_url": "https://cursor.com/docs/sdk/typescript#:~:text=SDK",
+    "comment": "VS Code-derived AI IDE with standalone CLI (cursor-agent) and @cursor/sdk (TypeScript/Python) for programmatic local or cloud agents."
   },
   "released_in": {
     "value": "2023",
@@ -110,7 +111,7 @@
     "source_url": "https://docs.cursor.com/en/settings/models#:~:text=models",
     "comment": "Supports custom API keys/models in IDE and CLI."
   },
-  "notes": "Cursor is a VS Code-derived AI IDE with a companion CLI (cursor-agent) for headless/CI use. The CLI shares the IDE's feature surface for rules, skills, MCP, and models.",
+  "notes": "Cursor is a VS Code-derived AI IDE with a companion CLI (cursor-agent) for headless/CI use and @cursor/sdk for programmatic local/cloud agents.",
   "pricing": {
     "value": "Pro $20/mo, Business $40/user/mo",
     "source_url": "https://www.cursor.com/pricing#:~:text=Pricing",

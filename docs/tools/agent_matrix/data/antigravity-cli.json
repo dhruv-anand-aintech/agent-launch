@@ -103,7 +103,7 @@
     "source_url": "https://antigravity.google/docs/cli-features#:~:text=--print",
     "comment": "No arbitrary provider configuration found in public CLI help/docs."
   },
-  "notes": "Distinct from Gemini CLI and the older Antigravity IDE.",
+  "notes": "Distinct from Gemini CLI and the older Antigravity IDE. No published programmatic SDK found.",
   "pricing": {
     "value": "Free (generous weekly rate limits), Google AI Pro/Ultra (undisclosed), Organization (consumption-based via Google Cloud)",
     "source_url": "https://antigravity.google/pricing#:~:text=For%20Individuals",

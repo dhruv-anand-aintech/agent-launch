@@ -1,6 +1,6 @@
 # Coding Agent Feature Matrix
 > Compare 17 coding agents, CLIs, and IDEs across features.
-> https://compare.ainorthstar.tech | Updated 2026-05-23
+> https://compare.ainorthstar.tech | Updated 2026-05-25
 
 Agent             Rel    FF     Rul   Skl   Hks   MCP   Cmd   Sub   Mod   App   San   Res   Con   Hdl   Fmt   Sta   Tel   Hst  BYOM
 -----------------------------------------------------------------------------------------------------------------------------------
@@ -17,7 +17,7 @@ Gemini CLI        Jun '2 CLI        Y     ~     Y     Y     Y     ?     Y     Y 
 GitHub Copilot    Jun '2 IDE/Ext    Y     Y     Y     Y     ~     Y     Y     ~     ~     Y     Y     Y     ~     N     ~     Y     Y
 Kilo Code         Feb '2 CLI/IDE    Y     Y     Y     Y     Y     Y     Y     Y     ~     Y     Y     Y     Y     N     Y     ~     Y
 Kimi CLI          Oct '2 CLI/Ext    Y     Y     ~     Y     ~     Y     Y     Y     N     Y     Y     Y     Y     Y     ?     N     Y
-OpenCode          2025  CLI        Y     Y     Y     Y     Y     Y     Y     Y     ~     Y     Y     Y     Y     ?     Y     N     Y
+OpenCode          2025  CLI/SDK    Y     Y     Y     Y     Y     Y     Y     Y     ~     Y     Y     Y     Y     ?     Y     N     Y
 Qwen Code         Jun '2 CLI/Ext    Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     ~     Y
 Roo Code          Mid-20 IDE/Ext    Y     Y     N     Y     Y     Y     Y     Y     N     ~     Y     Y     ~     N     Y     N     Y
 Windsurf Cascade  Nov '2 IDE/Ext    Y     Y     Y     Y     Y     Y     Y     Y     ~     Y     Y     ~     ~     ~     ~     Y     ~
@@ -53,12 +53,12 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Hosted Agent: none — Runs entirely locally via pip. No hosted agent platform.
 - Custom Model Provider: full — Connects to any LLM via litellm. Supports OpenAI, Anthropic, Gemini, DeepSeek, Ollama, OpenRouter, any OpenAI-compatible endpoint, and more.
 - Pricing: Free (Apache-2.0)
-- Notes: Aider is a mature open-source CLI coding agent (45k+ stars) since June 2023. Deep git integration, repo mapping for codebase context, extensive LLM provider support through litellm. Notable gaps vs newer agents: no MCP, no user-defined slash commands, no sandbox, no subagent delegation, no resume/continue flags, no structured output. Apache-2.0 licensed.
+- Notes: Aider is a mature open-source CLI coding agent (45k+ stars) since June 2023. Deep git integration, repo mapping for codebase context, extensive LLM provider support through litellm. No published embed SDK (CLI/scripting only). Notable gaps vs newer agents: no MCP, no user-defined slash commands, no sandbox, no subagent delegation, no resume/continue flags, no structured output. Apache-2.0 licensed.
 
 ### Amp
 - Docs: https://ampcode.com/manual
 - Website: https://ampcode.app/
-- Form factor: CLI, Extension
+- Form factor: CLI, Extension, SDK
 - Released: May '25
 - Latest update: May '26
 - Rules: full — Full support via AGENTS.md files (plural). Scanned from cwd, parent dirs, subtrees, $HOME/.config/amp/, /etc/ampcode/. Supports @-mentions, globs, YAML frontmatter.
@@ -105,7 +105,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Hosted Agent: none — Local CLI tool.
 - Custom Model Provider: none — No arbitrary provider configuration found in public CLI help/docs.
 - Pricing: Free (generous weekly rate limits), Google AI Pro/Ultra (undisclosed), Organization (consumption-based via Google Cloud)
-- Notes: Distinct from Gemini CLI and the older Antigravity IDE.
+- Notes: Distinct from Gemini CLI and the older Antigravity IDE. No published programmatic SDK found.
 
 ### Antigravity IDE
 - Docs: https://antigravity.google/docs/
@@ -131,7 +131,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Hosted Agent: none — Local IDE surface.
 - Custom Model Provider: unknown
 - Pricing: Free (generous weekly rate limits), Google AI Pro/Ultra (undisclosed), Organization (consumption-based via Google Cloud)
-- Notes: Included as a distinct IDE surface because it is not the same as the new agy CLI.
+- Notes: Included as a distinct IDE surface because it is not the same as the new agy CLI. No published programmatic SDK found.
 
 ### Claude Code
 - Docs: https://docs.anthropic.com/en/docs/claude-code/overview
@@ -163,7 +163,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Docs: https://docs.cline.bot/
 - GitHub: https://github.com/cline/cline
 - Website: https://cline.bot/
-- Form factor: IDE, Extension, CLI
+- Form factor: IDE, Extension, CLI, SDK
 - Released: Jul '24
 - Latest update: May '26
 - Rules: full — Rich rule system: .clinerules/ directory, global ~/Documents/Cline/Rules/, conditional rules with YAML frontmatter globs, auto-detection of .cursorrules, .windsurfrules, AGENTS.md.
@@ -190,7 +190,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Docs: https://developers.openai.com/codex/
 - GitHub: https://github.com/openai/codex
 - Website: https://openai.com/codex/
-- Form factor: CLI, Extension
+- Form factor: CLI, Extension, SDK
 - Released: Apr '25
 - Latest update: May '26
 - Rules: full — Uses AGENTS.md instructions.
@@ -215,7 +215,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 ### Cursor
 - Docs: https://docs.cursor.com/
 - Website: https://cursor.com/
-- Form factor: IDE, CLI, Extension
+- Form factor: IDE, CLI, Extension, SDK
 - Released: 2023
 - Latest update: May '26
 - Rules: full — Supports project and user rules.
@@ -236,12 +236,12 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Hosted Agent: full — CLI agent can execute in Cursor's cloud runtime.
 - Custom Model Provider: full — Supports custom API keys/models in IDE and CLI.
 - Pricing: Pro $20/mo, Business $40/user/mo
-- Notes: Cursor is a VS Code-derived AI IDE with a companion CLI (cursor-agent) for headless/CI use. The CLI shares the IDE's feature surface for rules, skills, MCP, and models.
+- Notes: Cursor is a VS Code-derived AI IDE with a companion CLI (cursor-agent) for headless/CI use and @cursor/sdk for programmatic local/cloud agents.
 
 ### Devin
 - Docs: https://docs.devin.ai/
 - Website: https://devin.ai/
-- Form factor: Extension, CLI, Web
+- Form factor: Extension, CLI, Web, SDK
 - Released: Dec '24
 - Latest update: Feb '26
 - Rules: full — AGENTS.md files in repos, Knowledge (persistent org-level instructions with trigger descriptions), Skills & Rules settings.
@@ -289,13 +289,13 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Hosted Agent: none — Local CLI tool backed by Google Gemini API.
 - Custom Model Provider: partial — Primarily Gemini/Google-oriented provider configuration.
 - Pricing: Free (Apache-2.0), Gemini API usage billed separately
-- Notes: Kept as an explicit agent-launch option, but excluded from random selection in this repo.
+- Notes: Kept as an explicit agent-launch option, but excluded from random selection in this repo. Headless/scripting mode only; no published agent embed SDK (unlike Codex/Cursor SDKs).
 
 ### GitHub Copilot
 - Docs: https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent
 - GitHub: https://github.com/features/copilot
 - Website: https://github.com/features/copilot
-- Form factor: IDE, Extension, CLI
+- Form factor: IDE, Extension, CLI, SDK
 - Released: Jun '25
 - Latest update: May '26
 - Rules: full — Multiple layers: .github/copilot-instructions.md (repo-wide), path-specific .github/instructions/**, AGENTS.md, CLAUDE.md, GEMINI.md, personal instructions, org-level.
@@ -322,7 +322,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Docs: https://kilo.ai/docs/getting-started
 - GitHub: https://github.com/Kilo-Org/kilocode
 - Website: https://kilo.ai/
-- Form factor: CLI, IDE, Extension
+- Form factor: CLI, IDE, Extension, SDK
 - Released: Feb '26
 - Latest update: May '26
 - Rules: full — Full support: Project Rules (via instructions key in kilo.jsonc), Global Rules (same in ~/.config/kilo/kilo.jsonc), AGENTS.md, CLAUDE.md, CONTEXT.md.
@@ -349,7 +349,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Docs: https://www.kimi.com/code/docs/en/kimi-code-cli/getting-started.html
 - GitHub: https://github.com/MoonshotAI/kimi-cli
 - Website: https://kimi.moonshot.cn/
-- Form factor: CLI, Extension
+- Form factor: CLI, Extension, SDK
 - Released: Oct '25
 - Latest update: May '26
 - Rules: full — Full AGENTS.md support. Hierarchical loading from git root to working dir, including .kimi/AGENTS.md at each level (32 KiB budget). /init command auto-generates AGENTS.md.
@@ -376,7 +376,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Docs: https://opencode.ai/docs/
 - GitHub: https://github.com/sst/opencode
 - Website: https://opencode.ai/
-- Form factor: CLI
+- Form factor: CLI, SDK
 - Released: 2025
 - Latest update: May '26
 - Rules: full — Supports instruction/config files.
@@ -402,7 +402,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Docs: https://qwenlm.github.io/qwen-code-docs/en/users/overview
 - GitHub: https://github.com/QwenLM/qwen-code
 - Website: https://qwenlm.github.io/qwen-code-docs/
-- Form factor: CLI, Extension
+- Form factor: CLI, Extension, SDK
 - Released: Jun '25
 - Latest update: May '26
 - Rules: full — Hierarchical context files (QWEN.md) at project/user levels. Custom system prompts via --system-prompt and --append-system-prompt. Layered config across system/user/project/env/cli.
@@ -450,7 +450,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Hosted Agent: none — Runs locally as VS Code extension or CLI. Project is now archived.
 - Custom Model Provider: full — OpenAI Compatible provider for arbitrary API endpoints. LiteLLM routing. 22+ built-in providers. Debug proxy support. Model-agnostic.
 - Pricing: Free (Apache-2.0)
-- Notes: Roo Code was a popular Cline fork (24k stars, 574k VS Code installs) that was shut down on May 15, 2026. The repository is now archived and read-only. The original team moved to Roomote (roomote.dev). Community forks include ZooCode and Cline.
+- Notes: Roo Code was a popular Cline fork (24k stars, 574k VS Code installs) that was shut down on May 15, 2026. The repository is now archived and read-only. VS Code extension-host API only; no standalone npm agent SDK. Community forks include ZooCode and Cline.
 
 ### Windsurf Cascade
 - Docs: https://docs.windsurf.com/
@@ -476,4 +476,4 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Hosted Agent: full — Devin cloud agent integration provides managed agent platform.
 - Custom Model Provider: partial — BYOK for Anthropic models (Claude Sonnet 4, Opus 4) for Free/Pro users. No generic custom OpenAI-compatible endpoint configuration documented.
 - Pricing: Free $0, Pro $20/mo, Max $200/mo, Teams $40/user/mo
-- Notes: Windsurf by Codeium (acquired by Cognition AI in April 2026) is a standalone VS Code fork IDE with integrated coding agent (Cascade). The Devin integration added cloud agent capabilities. Competes directly with Cursor IDE.
+- Notes: Windsurf by Codeium (acquired by Cognition AI in April 2026) is a standalone VS Code fork IDE with integrated coding agent (Cascade). Enterprise analytics API only; no agent embed SDK. Competes directly with Cursor IDE.

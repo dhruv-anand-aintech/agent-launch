@@ -1,0 +1,41 @@
+name: Deploy compare matrix
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "docs/tools/agent_matrix/**"
+      - "worker/matrix.js"
+      - "wrangler.toml"
+      - "package.json"
+      - "package-lock.json"
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: npm ci
+
+      - run: npm run matrix:validate
+      - run: npm run matrix:bundle
+      - run: npm run matrix:llms-txt
+
+      - name: Deploy to Cloudflare Workers
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          command: deploy --config wrangler.toml

@@ -9,10 +9,11 @@
   "form_factor": {
     "values": [
       "CLI",
-      "Extension"
+      "Extension",
+      "SDK"
     ],
-    "source_url": "https://developers.openai.com/codex/#:~:text=Codex",
-    "comment": "CLI + Open VSX extension + hosted on platform.openai.com."
+    "source_url": "https://developers.openai.com/codex/sdk#:~:text=SDK",
+    "comment": "CLI + Open VSX extension + hosted on platform.openai.com. TypeScript (@openai/codex-sdk) and experimental Python SDKs for programmatic control."
   },
   "released_in": {
     "value": "Apr '25",

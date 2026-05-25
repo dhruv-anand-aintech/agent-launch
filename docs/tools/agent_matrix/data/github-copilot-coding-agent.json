@@ -10,10 +10,11 @@
     "values": [
       "IDE",
       "Extension",
-      "CLI"
+      "CLI",
+      "SDK"
     ],
-    "source_url": "https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent#:~:text=Copilot%20cloud%20agent%20works%20autonomously%20in%20a%20GitHub%20Actions-powered%20environment",
-    "comment": "IDE agent mode (VS Code, JetBrains, Xcode, Neovim, Eclipse) + CLI + hosted cloud agent."
+    "source_url": "https://docs.github.com/en/copilot/how-tos/copilot-sdk#:~:text=Copilot%20SDK",
+    "comment": "IDE agent mode (VS Code, JetBrains, Xcode, Neovim, Eclipse) + CLI + hosted cloud agent + @github/copilot-sdk (public preview)."
   },
   "released_in": {
     "value": "Jun '25",

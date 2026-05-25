@@ -10,10 +10,11 @@
     "values": [
       "IDE",
       "Extension",
-      "CLI"
+      "CLI",
+      "SDK"
     ],
-    "source_url": "https://cline.bot/#:~:text=One%20open%20source%20agent%20runtime.%20Use%20it%20in%20your%20editor%2C%20your%20terminal%2C%20or%20embed%20it%20in%20your%20own%20products",
-    "comment": "VS Code extension, JetBrains plugin, CLI, SDK, Kanban board."
+    "source_url": "https://docs.cline.bot/sdk/overview#:~:text=SDK",
+    "comment": "VS Code extension, JetBrains plugin, CLI, and @cline/sdk for embedding the agent runtime in apps and CI."
   },
   "released_in": {
     "value": "Jul '24",

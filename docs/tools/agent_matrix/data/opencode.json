@@ -8,10 +8,11 @@
   },
   "form_factor": {
     "values": [
-      "CLI"
+      "CLI",
+      "SDK"
     ],
-    "source_url": "https://opencode.ai/docs/#:~:text=terminal",
-    "comment": "Terminal UI and CLI."
+    "source_url": "https://opencode.ai/docs/sdk/#:~:text=SDK",
+    "comment": "Terminal UI and CLI plus @opencode-ai/sdk for programmatic server/session control."
   },
   "released_in": {
     "value": "2025",

@@ -9,10 +9,11 @@
   "form_factor": {
     "values": [
       "CLI",
-      "Extension"
+      "Extension",
+      "SDK"
     ],
-    "source_url": "https://www.kimi.com/code/docs/en/kimi-code-cli/getting-started.html#:~:text=Kimi%20Code%20CLI%20is%20an%20AI%20agent%20that%20runs%20in%20the%20terminal",
-    "comment": "CLI + VS Code + Zed + JetBrains via ACP."
+    "source_url": "https://github.com/MoonshotAI/kimi-agent-sdk#:~:text=SDK",
+    "comment": "CLI + VS Code + Zed + JetBrains via ACP, plus @moonshot-ai/kimi-agent-sdk (Node/Go/Python)."
   },
   "released_in": {
     "value": "Oct '25",
