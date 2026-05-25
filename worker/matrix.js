@@ -110,8 +110,11 @@ th.agent-col.hidden-col .eye { opacity: 1; color: var(--none); }
 tbody td { padding: 3px 4px; font-size: 11px; text-align: center; vertical-align: middle;
   border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 td.cell-wrap { position: relative; cursor: default; }
+td.cell-wrap.has-source { cursor: pointer; }
 td.cell-wrap:hover { outline: 1.5px solid var(--line-strong); outline-offset: -1px; }
-td.cell-wrap a { display: block; color: inherit; }
+td.cell-wrap .cell-value,
+td.cell-wrap .support,
+td.cell-wrap .form-tags { position: relative; z-index: 1; pointer-events: none; }
 td.cell-wrap .dot {
   display: inline-flex; align-items: center; justify-content: center;
   width: 16px; height: 16px; border-radius: 50%; color: #fff; font-size: 9px; line-height: 1;
@@ -161,17 +164,17 @@ td.value { font-size: 9px; color: var(--muted); line-height: 1.25; white-space: 
 .site-footer-copy { font-size: 10px; color: var(--muted); white-space: nowrap; }
 .site-footer-copy a { color: var(--ink); text-decoration: none; }
 .site-footer-copy a:hover { text-decoration: underline; }
-.tri {
-  position: absolute; top: 0; right: 0; width: 14px; height: 14px;
-  cursor: pointer; z-index: 2;
+.cell-link {
+  position: absolute; inset: 0; z-index: 2;
 }
-.tri::after {
-  content: ""; position: absolute; top: 0; right: 0; width: 0; height: 0;
+.source-mark {
+  position: absolute; top: 0; right: 0; z-index: 3;
+  width: 0; height: 0; pointer-events: none;
   border-style: solid; border-width: 0 6px 6px 0;
   border-color: transparent var(--line-strong) transparent transparent;
-  opacity: .35; pointer-events: none;
+  opacity: .35;
 }
-.cell-wrap:hover .tri::after { opacity: 1; }
+.cell-wrap:hover .source-mark { opacity: 1; }
 .hidden { display: none; }
 </style>
 </head>
@@ -311,12 +314,15 @@ function cell(agent, col) {
     return '<td class="cell-wrap"><div class="form-tags">'+tagHtml+'</div></td>';
   }
   var tip = v.comment ? '<span class="cell-tip">'+esc(v.comment)+'</span>' : '';
-  var src = v.source_url ? '<a class="tri" href="'+esc(v.source_url)+'" target="_blank" rel="noreferrer" title="Open source" aria-label="Open source"></a>' : '';
-  if (featureCols.includes(col)) {
+  var hasSrc = !!v.source_url;
+  var link = hasSrc ? '<a class="cell-link" href="'+esc(v.source_url)+'" target="_blank" rel="noreferrer" title="Open source" aria-label="Open source"></a>' : '';
+  var mark = hasSrc ? '<span class="source-mark" aria-hidden="true"></span>' : '';
+  var wrapCls = 'cell-wrap'+(hasSrc?' has-source':'');
+  if (featureCols.some(function(c){ return c.key===col.key; })) {
     var g = {full:'&#10003;',partial:'&#9678;',none:'&#10005;',unknown:'?','':'—'};
-    return '<td class="cell-wrap"><span class="support '+(v.support||'')+'"><span class="dot">'+(g[v.support||'']||'?')+'</span></span>'+src+tip+'</td>';
+    return '<td class="'+wrapCls+'">'+link+'<span class="support '+(v.support||'')+'"><span class="dot">'+(g[v.support||'']||'?')+'</span></span>'+mark+tip+'</td>';
   }
-  if (v.value!==undefined) return '<td class="cell-wrap value">'+esc(v.value)+src+tip+'</td>';
+  if (v.value!==undefined) return '<td class="'+wrapCls+' value"><span class="cell-value">'+esc(v.value)+'</span>'+link+mark+tip+'</td>';
   return '<td>'+esc(v)+'</td>';
 }
 function renderHeader() {
