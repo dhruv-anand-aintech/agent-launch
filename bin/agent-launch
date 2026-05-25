@@ -423,6 +423,16 @@ def print_mappings() -> None:
     print("\nUse --dry-run to inspect exact backend flags for a specific agent/mode.")
 
 
+def run_command(args: argparse.Namespace, cmd: list[str]) -> int:
+    print(f"agent-launch executing: {shlex.join(cmd)}", file=sys.stderr, flush=True)
+    os.chdir(args.cwd)
+    if args.non_interactive:
+        return subprocess.call(cmd)
+    # Replace this wrapper so Codex/Claude/Cursor inherit a real controlling TTY.
+    os.execvp(cmd[0], cmd)
+    return 127
+
+
 def main() -> int:
     args = parse_args()
     if args.print_mappings:
@@ -432,9 +442,7 @@ def main() -> int:
     if args.dry_run:
         print(shlex.join(cmd))
         return 0
-    print(f"agent-launch executing: {shlex.join(cmd)}", file=sys.stderr, flush=True)
-    os.chdir(args.cwd)
-    return subprocess.call(cmd)
+    return run_command(args, cmd)
 
 
 if __name__ == "__main__":
