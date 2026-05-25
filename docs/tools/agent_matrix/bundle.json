@@ -17,12 +17,14 @@
     "released_in": {
       "value": "Jun '23",
       "source_url": "https://github.com/Aider-AI/aider/releases/tag/v0.5.0#:~:text=v0.5.0",
-      "comment": "First public release v0.5.0 on June 7, 2023."
+      "comment": "First public release v0.5.0 on June 7, 2023.",
+      "sort_date": "2023-06-07"
     },
     "latest_major_update": {
-      "value": "Aug '25",
+      "value": "May '26",
       "source_url": "https://github.com/Aider-AI/aider/releases/tag/v0.86.0#:~:text=Expanded%20GPT-5%20model%20support%20across%20family%20variants",
-      "comment": "Latest tagged release v0.86.0 (Aug 9, 2025). Main branch is actively developed beyond that."
+      "comment": "Latest tagged release v0.86.0 (Aug 9, 2025). Main branch is actively developed beyond that.",
+      "sort_date": "2026-05-22"
     },
     "rules": {
       "support": "partial",
@@ -136,12 +138,14 @@
     "released_in": {
       "value": "May '25",
       "source_url": "https://ampcode.com/chronicle#:~:text=May%2015%2C%202025%20Amp%20Is%20Now%20Available%20To%20Everyone",
-      "comment": "Publicly launched May 15, 2025 (no waitlist). Originally built inside Sourcegraph, spun off as Amp Frontier Corporation."
+      "comment": "Publicly launched May 15, 2025 (no waitlist). Originally built inside Sourcegraph, spun off as Amp Frontier Corporation.",
+      "sort_date": "2025-05-01"
     },
     "latest_major_update": {
       "value": "May '26",
       "source_url": "https://ampcode.com/news/neo#:~:text=May%206%2C%202026%20Amp%2C%20Rebuilt",
-      "comment": "May 6, 2026 \u2014 'Amp, Rebuilt' (codename Neo). Complete CLI rewrite with new architecture: remote-controllable, plugin-powered, auto-compaction."
+      "comment": "May 6, 2026 \u2014 'Amp, Rebuilt' (codename Neo). Complete CLI rewrite with new architecture: remote-controllable, plugin-powered, auto-compaction.",
+      "sort_date": "2026-05-01"
     },
     "rules": {
       "support": "full",
@@ -254,12 +258,14 @@
     "released_in": {
       "value": "2025",
       "source_url": "https://antigravity.google/#:~:text=released",
-      "comment": "IDE public release in 2025; standalone agy CLI documented May 2026."
+      "comment": "IDE public release in 2025; standalone agy CLI documented May 2026.",
+      "sort_date": "2025-01-01"
     },
     "latest_major_update": {
       "value": "May '26",
       "source_url": "https://antigravity.google/docs/cli-features#:~:text=plugins",
-      "comment": "CLI plugin system and IDE agent surfaces updated together in current docs."
+      "comment": "CLI plugin system and IDE agent surfaces updated together in current docs.",
+      "sort_date": "2026-05-01"
     },
     "rules": {
       "support": "full",
@@ -374,12 +380,14 @@
     "released_in": {
       "value": "Feb '25",
       "source_url": "https://www.anthropic.com/news/claude-3-7-sonnet#:~:text=Claude%20Code",
-      "comment": "Claude Code was introduced as a limited research preview."
+      "comment": "Claude Code was introduced as a limited research preview.",
+      "sort_date": "2025-02-01"
     },
     "latest_major_update": {
       "value": "May '26",
       "source_url": "https://docs.anthropic.com/en/docs/claude-code/overview#:~:text=Claude%20Code",
-      "comment": "Current docs cover CLI, SDK, hooks, skills, and settings."
+      "comment": "Current docs cover CLI, SDK, hooks, skills, and settings.",
+      "sort_date": "2026-05-01"
     },
     "rules": {
       "support": "full",
@@ -494,12 +502,14 @@
     "released_in": {
       "value": "Jul '24",
       "source_url": "https://github.com/cline/cline/releases?page=27#:~:text=v1.0.4%2C%2028%20Jul%2001%3A14",
-      "comment": "Initial release was v1.0.4 on July 28, 2024 (originally named 'Claude Dev' by Saoud Rizwan). 8M+ installs by May 2026."
+      "comment": "Initial release was v1.0.4 on July 28, 2024 (originally named 'Claude Dev' by Saoud Rizwan). 8M+ installs by May 2026.",
+      "sort_date": "2024-07-01"
     },
     "latest_major_update": {
       "value": "May '26",
       "source_url": "https://github.com/cline/cline/releases#:~:text=CLI%20v3.0.10%20Latest%2C%20May%2022%2C%202026",
-      "comment": "CLI at v3.0.10 (May 22, 2026), VS Code extension at v3.84.0 (May 19, 2026). Rapid release cadence."
+      "comment": "CLI at v3.0.10 (May 22, 2026), VS Code extension at v3.84.0 (May 19, 2026). Rapid release cadence.",
+      "sort_date": "2026-05-01"
     },
     "rules": {
       "support": "full",
@@ -613,12 +623,14 @@
     "released_in": {
       "value": "Apr '25",
       "source_url": "https://github.com/openai/codex#:~:text=Codex%20CLI",
-      "comment": "Open-source CLI public release."
+      "comment": "Open-source CLI public release.",
+      "sort_date": "2025-04-01"
     },
     "latest_major_update": {
       "value": "May '26",
       "source_url": "https://developers.openai.com/codex/changelog/#:~:text=changelog",
-      "comment": "Captured from current Codex docs/changelog state."
+      "comment": "Captured from current Codex docs/changelog state.",
+      "sort_date": "2026-05-01"
     },
     "rules": {
       "support": "full",
@@ -733,12 +745,14 @@
     "released_in": {
       "value": "2023",
       "source_url": "https://cursor.com/#:~:text=Cursor",
-      "comment": "IDE launched ~2023; CLI surface added later (2025)."
+      "comment": "IDE launched ~2023; CLI surface added later (2025).",
+      "sort_date": "2023-01-01"
     },
     "latest_major_update": {
       "value": "May '26",
       "source_url": "https://docs.cursor.com/#:~:text=Cursor",
-      "comment": "Current docs capture rules, skills, MCP, models, and agent workflows."
+      "comment": "Current docs capture rules, skills, MCP, models, and agent workflows.",
+      "sort_date": "2026-05-01"
     },
     "rules": {
       "support": "full",
@@ -827,9 +841,9 @@
     },
     "notes": "Cursor is a VS Code-derived AI IDE with a companion CLI (cursor-agent) for headless/CI use and @cursor/sdk for programmatic local/cloud agents.",
     "pricing": {
-      "value": "Pro $20/mo, Business $40/user/mo",
-      "source_url": "https://www.cursor.com/pricing#:~:text=Pricing",
-      "comment": "Cursor IDE pricing: Pro $20/mo, Business $40/user/mo. Includes agent usage."
+      "value": "Pro $20, Pro+ $60, Ultra $200/mo",
+      "source_url": "https://cursor.com/help/models-and-usage/usage-limits#:~:text=Pro%20Plus",
+      "comment": "Individual: Pro $20/mo ($20 API usage), Pro+ $60/mo ($70 API usage), Ultra $200/mo ($400 API usage). Teams $40/user/mo."
     }
   },
   {
@@ -853,12 +867,14 @@
     "released_in": {
       "value": "Dec '24",
       "source_url": "https://cognition.ai/blog/devin-generally-available#:~:text=Today%20we%27re%20making%20Devin%20generally%20available%20starting%20at%20%24500%20a%20month",
-      "comment": "First publicly demoed March 2024. Made Generally Available (GA) on December 10, 2024."
+      "comment": "First publicly demoed March 2024. Made Generally Available (GA) on December 10, 2024.",
+      "sort_date": "2024-12-01"
     },
     "latest_major_update": {
       "value": "Feb '26",
       "source_url": "https://cognition.ai/blog/introducing-devin-2-2#:~:text=Today%20we%27re%20releasing%20Devin%202.2%2C%20one%20of%20our%20biggest%20updates",
-      "comment": "Devin 2.2 (Feb 24, 2026): 3x faster startup, end-to-end desktop testing, Devin Review Autofix, redesigned UI. Continuous weekly releases since."
+      "comment": "Devin 2.2 (Feb 24, 2026): 3x faster startup, end-to-end desktop testing, Devin Review Autofix, redesigned UI. Continuous weekly releases since.",
+      "sort_date": "2026-02-01"
     },
     "rules": {
       "support": "full",
@@ -971,12 +987,14 @@
     "released_in": {
       "value": "Jun '25",
       "source_url": "https://blog.google/technology/developers/introducing-gemini-cli-open-source-ai-agent/#:~:text=Gemini%20CLI",
-      "comment": "Public open-source Gemini CLI launch."
+      "comment": "Public open-source Gemini CLI launch.",
+      "sort_date": "2025-06-01"
     },
     "latest_major_update": {
       "value": "May '26",
       "source_url": "https://antigravity.google/docs/cli-getting-started#:~:text=Antigravity%20CLI",
-      "comment": "Google points CLI users toward Antigravity (agy CLI) for the latest standalone CLI surface."
+      "comment": "Google points CLI users toward Antigravity (agy CLI) for the latest standalone CLI surface.",
+      "sort_date": "2026-05-01"
     },
     "rules": {
       "support": "full",
@@ -1091,12 +1109,14 @@
     "released_in": {
       "value": "Jun '25",
       "source_url": "https://docs.github.com/en/copilot/concepts/billing/copilot-requests#:~:text=Billing%20for%20premium%20requests%20began%20on%20June%2018%2C%202025",
-      "comment": "Announced at GitHub Universe (Oct/Nov 2024) in preview. GA billing launch: June 18, 2025 when premium request billing began."
+      "comment": "Announced at GitHub Universe (Oct/Nov 2024) in preview. GA billing launch: June 18, 2025 when premium request billing began.",
+      "sort_date": "2025-06-01"
     },
     "latest_major_update": {
       "value": "May '26",
       "source_url": "https://docs.github.com/en/copilot/how-tos/github-copilot-app#:~:text=GitHub%20Copilot%20app%20%3A%20A%20desktop%20application%20for%20agent-driven%20development",
-      "comment": "Copilot desktop app (technical preview): parallel agent sessions, PR lifecycle, scheduled workflows. Third-party agent support added. Usage-based billing announced."
+      "comment": "Copilot desktop app (technical preview): parallel agent sessions, PR lifecycle, scheduled workflows. Third-party agent support added. Usage-based billing announced.",
+      "sort_date": "2026-05-01"
     },
     "rules": {
       "support": "full",
@@ -1211,12 +1231,14 @@
     "released_in": {
       "value": "Feb '26",
       "source_url": "https://github.com/Kilo-Org/kilocode#:~:text=Created%3A%202025-03-10T15%3A34%3A26Z",
-      "comment": "Repository created 2025-03-10. First stable public release effectively Feb 2026 (v1.0.25). v7 rewrite announced May 2026."
+      "comment": "Repository created 2025-03-10. First stable public release effectively Feb 2026 (v1.0.25). v7 rewrite announced May 2026.",
+      "sort_date": "2026-02-01"
     },
     "latest_major_update": {
       "value": "May '26",
       "source_url": "https://github.com/Kilo-Org/kilocode/releases#:~:text=v7.2.52",
-      "comment": "Latest release: v7.2.52 (2026-05-11). v7.x series started with v7.0.26 (2026-02-23). 98+ releases total."
+      "comment": "Latest release: v7.2.52 (2026-05-11). v7.x series started with v7.0.26 (2026-02-23). 98+ releases total.",
+      "sort_date": "2026-05-01"
     },
     "rules": {
       "support": "full",
@@ -1330,12 +1352,14 @@
     "released_in": {
       "value": "Oct '25",
       "source_url": "https://github.com/MoonshotAI/kimi-cli/releases#:~:text=0.34",
-      "comment": "First public release v0.34 on 2025-10-21. Reached v1.0 on 2026-01-27. Latest: v1.44.0 (2026-05-14)."
+      "comment": "First public release v0.34 on 2025-10-21. Reached v1.0 on 2026-01-27. Latest: v1.44.0 (2026-05-14).",
+      "sort_date": "2025-10-01"
     },
     "latest_major_update": {
       "value": "May '26",
       "source_url": "https://github.com/MoonshotAI/kimi-cli/releases/tag/1.44.0#:~:text=1.44.0",
-      "comment": "v1.44.0 (2026-05-14). Very active development: 97 releases in ~7 months. Rapid iteration pace."
+      "comment": "v1.44.0 (2026-05-14). Very active development: 97 releases in ~7 months. Rapid iteration pace.",
+      "sort_date": "2026-05-01"
     },
     "rules": {
       "support": "full",
@@ -1448,12 +1472,14 @@
     "released_in": {
       "value": "2025",
       "source_url": "https://github.com/sst/opencode#:~:text=opencode",
-      "comment": "Exact public launch month not confirmed in public docs captured for this dataset."
+      "comment": "Exact public launch month not confirmed in public docs captured for this dataset.",
+      "sort_date": "2025-01-01"
     },
     "latest_major_update": {
       "value": "May '26",
       "source_url": "https://opencode.ai/docs/#:~:text=opencode",
-      "comment": "Current docs capture config, agents, MCP, and providers."
+      "comment": "Current docs capture config, agents, MCP, and providers.",
+      "sort_date": "2026-05-01"
     },
     "rules": {
       "support": "full",
@@ -1567,12 +1593,14 @@
     "released_in": {
       "value": "Jun '25",
       "source_url": "https://github.com/QwenLM/qwen-code#:~:text=Release%20v0.16.0%20Latest",
-      "comment": "GitHub repo created 2025-06-26. Earliest releases (v0.0.5+) shortly after. Currently at v0.16.0 (2026-05-21)."
+      "comment": "GitHub repo created 2025-06-26. Earliest releases (v0.0.5+) shortly after. Currently at v0.16.0 (2026-05-21).",
+      "sort_date": "2025-06-01"
     },
     "latest_major_update": {
       "value": "May '26",
       "source_url": "https://github.com/QwenLM/qwen-code#:~:text=Release%20v0.16.0%20Latest",
-      "comment": "Latest release v0.16.0 (May 21, 2026). 453 releases, 5,944 commits as of May 2026."
+      "comment": "Latest release v0.16.0 (May 21, 2026). 453 releases, 5,944 commits as of May 2026.",
+      "sort_date": "2026-05-01"
     },
     "rules": {
       "support": "full",
@@ -1691,7 +1719,8 @@
     "latest_major_update": {
       "value": "May '26",
       "source_url": "https://github.com/RooCodeInc/Roo-Code/releases/tag/v3.54.0#:~:text=Release%20v3.54.0",
-      "comment": "Final release v3.54.0 on May 15, 2026 (shutdown/sunsetting release). Repository archived, read-only."
+      "comment": "Final release v3.54.0 on May 15, 2026 (shutdown/sunsetting release). Repository archived, read-only.",
+      "sort_date": "2026-05-01"
     },
     "rules": {
       "support": "full",
@@ -1805,12 +1834,14 @@
     "released_in": {
       "value": "Nov '24",
       "source_url": "https://windsurf.com/blog/windsurf-2-0#:~:text=Windsurf%202.0%3A%20Introducing%20the%20Agent%20Command%20Center%20and%20Devin%20in%20Windsurf",
-      "comment": "Originally launched as 'Codeium' IDE, rebranded to 'Windsurf' ~November 2024. Windsurf 2.0 shipped April 15, 2026."
+      "comment": "Originally launched as 'Codeium' IDE, rebranded to 'Windsurf' ~November 2024. Windsurf 2.0 shipped April 15, 2026.",
+      "sort_date": "2024-11-01"
     },
     "latest_major_update": {
       "value": "Apr '26",
       "source_url": "https://windsurf.com/blog/windsurf-2-0#:~:text=Windsurf%202.0%3A%20Introducing%20the%20Agent%20Command%20Center%20and%20Devin%20in%20Windsurf",
-      "comment": "Windsurf 2.0 (April 15, 2026): Agent Command Center (Kanban board), Devin cloud agent integration, Spaces. Latest patch: v2.3.9 (May 17, 2026)."
+      "comment": "Windsurf 2.0 (April 15, 2026): Agent Command Center (Kanban board), Devin cloud agent integration, Spaces. Latest patch: v2.3.9 (May 17, 2026).",
+      "sort_date": "2026-04-01"
     },
     "rules": {
       "support": "full",

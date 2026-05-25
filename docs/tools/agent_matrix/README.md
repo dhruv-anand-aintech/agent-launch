@@ -5,6 +5,7 @@ This directory is the source-of-truth dataset for a coding-agent/CLI/IDE compari
 - `schema.json` defines columns and groups. The `$comment` values use `Group | Column | Description`.
 - `data/*.json` contains one product/surface per file.
 - `bundle.json` is generated from the individual files for website or app consumption.
+- `icons/` holds manually curated favicons served by the compare worker (`aider.png`, `amp.svg`) when Google’s favicon service fails for a domain.
 - `data_utils.py` validates the local support vocabulary and bundles the JSON files.
 
 Support values:
@@ -47,13 +48,15 @@ Validate:
 python docs/tools/agent_matrix/data_utils.py validate
 ```
 
-Bundle:
+Bundle (fetches GitHub release/commit dates for sort keys; optional `GITHUB_TOKEN` avoids rate limits):
 
 ```sh
 python docs/tools/agent_matrix/data_utils.py bundle
 ```
 
-Deploy (compare.ainorthstar.tech): pushes to `main` that touch `docs/tools/agent_matrix/**`, `worker/matrix.js`, or `wrangler.toml` run `.github/workflows/deploy-matrix.yml`. Add repo secret `CLOUDFLARE_API_TOKEN` with Workers deploy permission.
+On the compare site, click **Released** or **Latest Major Update** row labels to sort agent columns by date. Non-deprecated agents with a real `links.github` repo get `sort_date` from GitHub (oldest release or repo `created_at` for release; latest default-branch commit for update). Deprecated agents and products without a repo URL keep curated display values and parsed fallback dates only.
+
+Deploy (compare.ainorthstar.tech): pushes to `main` that touch `docs/tools/agent_matrix/**`, `worker/matrix.js`, or `wrangler.toml` run `.github/workflows/deploy-matrix.yml`. Add repo secrets `CLOUDFLARE_API_TOKEN` (Workers deploy) and optionally `GITHUB_TOKEN` (bundle date enrichment).
 
 Each non-obvious cell should carry a `source_url` and a short `comment` when the support level needs interpretation.
 

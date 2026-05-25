@@ -33,7 +33,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Website: https://aider.chat/
 - Form factor: CLI
 - Released: Jun '23
-- Latest update: Aug '25
+- Latest update: May '26
 - Rules: partial — Supports CONVENTIONS.md loaded via --read or .aider.conf.yml. No equivalent of a persistent auto-loaded CLAUDE.md file.
 - Skills: partial — Has /save and /load commands to persist/replay sequences of slash commands. Not a full reusable skill system like Cursor skills.
 - Hooks: partial — Only git pre-commit hook bypass via --git-commit-verify. No lifecycle hooks (session-start, session-end, etc.).
@@ -208,7 +208,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Telemetry: full — Cursor documents privacy settings.
 - Hosted Agent: full — CLI agent can execute in Cursor's cloud runtime.
 - Custom Model Provider: full — Supports custom API keys/models in IDE and CLI.
-- Pricing: Pro $20/mo, Business $40/user/mo
+- Pricing: Pro $20, Pro+ $60, Ultra $200/mo
 - Notes: Cursor is a VS Code-derived AI IDE with a companion CLI (cursor-agent) for headless/CI use and @cursor/sdk for programmatic local/cloud agents.
 
 ### Devin

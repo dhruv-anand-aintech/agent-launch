@@ -3,6 +3,10 @@ main = "worker/matrix.js"
 compatibility_date = "2026-05-20"
 workers_dev = true
 
+[assets]
+directory = "docs/tools/agent_matrix/icons"
+binding = "ASSETS"
+
 [[routes]]
 pattern = "compare.ainorthstar.tech"
 custom_domain = true

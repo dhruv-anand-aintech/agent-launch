@@ -32,6 +32,8 @@ jobs:
 
       - run: npm run matrix:validate
       - run: npm run matrix:bundle
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - run: npm run matrix:llms-txt
 
       - name: Deploy to Cloudflare Workers

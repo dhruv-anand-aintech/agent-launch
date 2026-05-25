@@ -18,9 +18,16 @@ function agentDomain(agent) {
   try { return new URL(u).hostname.replace(/^www\./, ""); } catch { return ""; }
 }
 
-function faviconUrl(agent) {
+const FAVICON_OVERRIDES = {
+  aider: "/aider.png",
+  amp: "/amp.svg",
+};
+
+function faviconSrc(agent) {
+  const slug = agent.links?.slug;
+  if (slug && FAVICON_OVERRIDES[slug]) return FAVICON_OVERRIDES[slug];
   const d = agentDomain(agent);
-  return d ? `https://www.google.com/s2/favicons?domain=${encodeURIComponent(d)}&sz=16` : "";
+  return d ? `https://www.google.com/s2/favicons?domain=${encodeURIComponent(d)}&sz=64` : "";
 }
 
 function metaTags() {
@@ -35,7 +42,7 @@ function metaTags() {
 }
 
 function render() {
-  const payload = JSON.stringify({ matrix, columns, groups }).replaceAll("</", "<\\/");
+  const payload = JSON.stringify({ matrix, columns, groups, faviconOverrides: FAVICON_OVERRIDES }).replaceAll("</", "<\\/");
   return `<!doctype html>
 <html lang="en">
 <head>
@@ -78,7 +85,7 @@ th {
   padding: 0; vertical-align: middle; text-align: center; position: relative;
   user-select: none;
 }
-th.corner { position: sticky; left: 0; z-index: 25; background: #e8decc; min-width: 100px; }
+th.corner { position: sticky; left: 0; z-index: 25; background: #e8decc; min-width: 156px; width: 156px; }
 th.agent-col {
   min-width: 44px; max-width: 44px; height: 44px; cursor: pointer;
   transition: opacity .15s;
@@ -115,18 +122,27 @@ td.cell-wrap .dot {
 .unknown .dot { background: var(--unknown); }
 .row-label {
   position: sticky; left: 0; z-index: 5; background: var(--panel);
-  text-align: left; font-size: 11px; font-weight: 600; padding: 3px 6px !important;
-  min-width: 100px; max-width: 100px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  text-align: left; font-size: 11px; font-weight: 600; padding: 3px 8px !important;
+  min-width: 156px; max-width: 156px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
   cursor: pointer; user-select: none;
+}
+.row-label:hover .row-label-tip { display: block; }
+.row-label-tip {
+  display: none; position: absolute; left: 8px; top: calc(100% + 4px);
+  background: #2a241b; color: #f6f4ee; font-size: 10px; line-height: 1.3; padding: 3px 6px;
+  border-radius: 3px; z-index: 50; pointer-events: none; max-width: 240px; white-space: normal;
+  outline: 1px solid #555; font-weight: 400;
 }
 .row-label .arrow { font-size: 8px; margin-right: 3px; color: var(--muted); }
 .row-label.filter-active { color: var(--accent); }
 .row-label.filter-active .arrow { color: var(--accent); }
-.group-head td {
-  background: #e2d8c5; font-size: 9px; text-transform: uppercase; letter-spacing: .03em;
-  color: var(--muted); padding: 2px 4px !important; font-weight: 600;
+.group-head .row-label.group-row-label {
+  font-size: 9px; text-transform: uppercase; letter-spacing: .03em;
+  color: var(--muted); font-weight: 600; cursor: default; background: #e2d8c5;
 }
-.group-head td:first-child { position: sticky; left: 0; z-index: 6; background: #e2d8c5; }
+.group-head .group-spacer {
+  background: #e2d8c5; padding: 2px 4px !important; border-bottom: 1px solid var(--line);
+}
 .cell-tip {
   display: none; position: absolute; bottom: calc(100% + 4px); left: 50%; transform: translateX(-50%);
   background: #2a241b; color: #f6f4ee; font-size: 10px; line-height: 1.3; padding: 3px 6px;
@@ -134,7 +150,7 @@ td.cell-wrap .dot {
   outline: 1px solid #555; text-align: left; font-weight: 400;
 }
 .cell-wrap:hover .cell-tip { display: block; }
-td.value { font-size: 10px; color: var(--muted); }
+td.value { font-size: 9px; color: var(--muted); line-height: 1.25; white-space: normal; max-width: 110px; }
 .form-tags { display: flex; flex-wrap: wrap; gap: 1px; justify-content: center; }
 .form-tag { border: 1px solid var(--line); background: #fff; padding: 1px 2px; font-size: 8px; }
 .form-tag.deprecated-tag { color: var(--warn); border-color: #d4a574; }
@@ -191,10 +207,12 @@ function agentDomain(agent) {
   var u = agent.links.website || agent.links.docs || "";
   try { return new URL(u).hostname.replace(/^www\\./, ""); } catch(e) { return ""; }
 }
-const { matrix, columns, groups } = JSON.parse(document.getElementById('payload').textContent);
+const { matrix, columns, groups, faviconOverrides } = JSON.parse(document.getElementById('payload').textContent);
 const metaCols = new Set(['name','form_factor','released_in','latest_major_update','pricing','notes']);
 const featureCols = columns.filter(c => !metaCols.has(c.key));
 const aboutCols = columns.filter(c => metaCols.has(c.key) && c.key !== 'name' && c.key !== 'notes');
+const DATE_SORT_ROWS = new Set(['released_in','latest_major_update']);
+const MONTH_MAP = {Jan:1,Feb:2,Mar:3,Apr:4,May:5,Jun:6,Jul:7,Aug:8,Sep:9,Oct:10,Nov:11,Dec:12};
 
 const COOKIE = 'agmat_state';
 let colOrder = [];
@@ -210,6 +228,26 @@ function sortFormFactors(vals) {
     var ra = rank[a]!==undefined?rank[a]:99, rb = rank[b]!==undefined?rank[b]:99;
     return ra-rb || String(a).localeCompare(String(b));
   });
+}
+function parseDisplayDate(value) {
+  var v = String(value || '').trim();
+  if (!v) return 0;
+  var m = v.match(/^([A-Za-z]{3})\s*['\u2019](\d{2})$/);
+  if (m && MONTH_MAP[m[1]]) return Date.UTC(2000 + parseInt(m[2],10), MONTH_MAP[m[1]] - 1, 1);
+  if (/^\d{4}$/.test(v)) return Date.UTC(parseInt(v,10), 0, 1);
+  if (/^\d{4}-\d{2}-\d{2}$/.test(v)) return Date.parse(v + 'T12:00:00Z') || 0;
+  return 0;
+}
+function dateSortKey(agent, key) {
+  var field = agent[key] || {};
+  if (field.sort_date) return Date.parse(field.sort_date + 'T12:00:00Z') || 0;
+  return parseDisplayDate(field.value);
+}
+function sortableLabelHtml(label, key) {
+  var isSort = rowSort && rowSort.key === key;
+  var active = isSort ? ' filter-active' : '';
+  var arrow = isSort ? (rowSort.asc ? '&#9650;' : '&#9660;') : '&#9654;';
+  return '<td class="row-label'+active+'" data-rowkey="'+key+'" onclick="cycleSort('+"'"+key+"'"+')" title="Sort columns by this date"><span class="row-label-tip">'+esc(label)+'</span><span class="arrow">'+arrow+'</span>'+esc(label)+'</td>';
 }
 
 // Pinned agents (always at top), then rest sorted by full-feature count
@@ -240,6 +278,9 @@ function saveState() {
   document.cookie = COOKIE + '=' + encodeURIComponent(JSON.stringify({cols:colOrder, rows:rowOrder})) + ';path=/;max-age=31536000';
 }
 function esc(v) { return String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+function rowLabelCell(label, extraClass, extraAttrs) {
+  return '<td class="row-label'+extraClass+'"'+extraAttrs+'><span class="row-label-tip">'+esc(label)+'</span>'+esc(label)+'</td>';
+}
 var COLORS = ['#176b5b','#2d4f9e','#9a3c32','#a35f00','#4a6fa5','#7b4f9e','#27ae60','#8e44ad','#d35400','#16a085','#2c3e50','#f39c12','#1abc9c','#34495e','#e74c3c','#2980b9','#c0392b'];
 function agentInitials(name) {
   var p = name.split(/\s+/);
@@ -250,11 +291,15 @@ function avatarSvg(ini, c, size) {
   return '<svg width="'+s+'" height="'+s+'" viewBox="0 0 '+s+' '+s+'" xmlns="http://www.w3.org/2000/svg"><rect width="'+s+'" height="'+s+'" rx="'+r+'" fill="'+c+'"/><text x="'+s/2+'" y="'+s/2+'" text-anchor="middle" dominant-baseline="central" fill="white" font-size="'+fs+'" font-weight="700" font-family="Inter,sans-serif">'+ini+'</text></svg>';
 }
 function favimg(agent, idx) {
-  var d = agentDomain(agent), ini = agentInitials(agent.name), c = COLORS[idx%COLORS.length];
+  var ini = agentInitials(agent.name), c = COLORS[idx%COLORS.length];
   var fallback = avatarSvg(ini, c, 32);
-  var src = d ? 'https://www.google.com/s2/favicons?domain='+esc(encodeURIComponent(d))+'&sz=64' : '';
+  var slug = (agent.links && agent.links.slug) || '';
+  var src = faviconOverrides[slug] || (function(){
+    var d = agentDomain(agent);
+    return d ? 'https://www.google.com/s2/favicons?domain='+esc(encodeURIComponent(d))+'&sz=64' : '';
+  })();
   if (!src) return '<span class="fav-box">'+fallback+'</span>';
-  return '<span class="fav-box" style="position:relative"><img class="fav" src="'+src+'" alt="" width="32" height="32" loading="lazy" onerror="var p=this.parentElement;this.style.display=\\x27none\\x27;var s=p.querySelector(\\x27.fav-av\\x27);if(s)s.style.display=\\x27inline\\x27"><span class="fav-av" style="display:none">'+fallback+'</span></span>';
+  return '<span class="fav-box" style="position:relative"><img class="fav" src="'+esc(src)+'" alt="" width="32" height="32" loading="lazy" onerror="var p=this.parentElement;this.style.display=\\x27none\\x27;var s=p.querySelector(\\x27.fav-av\\x27);if(s)s.style.display=\\x27inline\\x27"><span class="fav-av" style="display:none">'+fallback+'</span></span>';
 }
 function cell(agent, col) {
   var v = agent[col.key];
@@ -286,11 +331,21 @@ function renderBody() {
   var vc = visibleCols();
   if (rowSort) {
     var key = rowSort.key;
-    vc = vc.slice().sort(function(a,b){var va=SORT_ORDER[(matrix[a][key]||{}).support||'']||4,vb=SORT_ORDER[(matrix[b][key]||{}).support||'']||4;return rowSort.asc?va-vb:vb-va});
+    if (DATE_SORT_ROWS.has(key)) {
+      vc = vc.slice().sort(function(a,b){
+        var va = dateSortKey(matrix[a], key), vb = dateSortKey(matrix[b], key);
+        return rowSort.asc ? va - vb : vb - va;
+      });
+    } else {
+      vc = vc.slice().sort(function(a,b){var va=SORT_ORDER[(matrix[a][key]||{}).support||'']||4,vb=SORT_ORDER[(matrix[b][key]||{}).support||'']||4;return rowSort.asc?va-vb:vb-va});
+    }
   }
   var rows = [];
-  rows.push('<tr class="group-head"><td colspan="'+(vc.length+1)+'">About</td></tr>');
-  aboutCols.forEach(function(col){rows.push('<tr><td class="row-label">'+esc(col.label)+'</td>'+vc.map(function(i){return cell(matrix[i],col)}).join('')+'</tr>')});
+  rows.push('<tr class="group-head">'+rowLabelCell('About',' group-row-label','')+vc.map(function(){return '<td class="group-spacer"></td>'}).join('')+'</tr>');
+  aboutCols.forEach(function(col){
+    var label = DATE_SORT_ROWS.has(col.key) ? sortableLabelHtml(col.label, col.key) : rowLabelCell(col.label,'','');
+    rows.push('<tr>'+label+vc.map(function(i){return cell(matrix[i],col)}).join('')+'</tr>');
+  });
   // Feature rows in saved order, grouped
   var used = {};
   rowOrder.forEach(function(key){
@@ -299,7 +354,7 @@ function renderBody() {
     var isSort = rowSort && rowSort.key===key;
     var active = isSort?' filter-active':'';
     var arrow = isSort?(rowSort.asc?'&#9650;':'&#9660;'):'&#9654;';
-    var labelHtml = '<td class="row-label'+active+'" draggable="true" data-rowkey="'+key+'" onclick="cycleSort('+"'"+key+"'"+')" title="Sort columns by this feature"><span class="arrow">'+arrow+'</span>'+esc(col.label)+'</td>';
+    var labelHtml = '<td class="row-label'+active+'" draggable="true" data-rowkey="'+key+'" onclick="cycleSort('+"'"+key+"'"+')" title="Sort columns by this feature"><span class="row-label-tip">'+esc(col.label)+'</span><span class="arrow">'+arrow+'</span>'+esc(col.label)+'</td>';
     var cells = vc.map(function(i){
       if (!isSort) return cell(matrix[i],col);
       var s = (matrix[i][col.key]||{}).support||'';
@@ -366,8 +421,12 @@ function renderSitemap() {
 const bundleJson = JSON.stringify(matrix, null, 2);
 
 export default {
-  fetch(request) {
+  async fetch(request, env) {
     const url = new URL(request.url);
+    const iconPath = url.pathname;
+    if (iconPath === "/aider.png" || iconPath === "/amp.svg") {
+      if (env.ASSETS) return env.ASSETS.fetch(request);
+    }
     if (url.pathname === "/llms.txt") return new Response(llmsTxt, {headers: {"content-type":"text/plain; charset=utf-8","cache-control":"public, max-age=300"}});
     if (url.pathname === "/robots.txt") return new Response(renderRobots(), {headers: {"content-type":"text/plain; charset=utf-8","cache-control":"public, max-age=86400"}});
     if (url.pathname === "/sitemap.xml") return new Response(renderSitemap(), {headers: {"content-type":"application/xml; charset=utf-8","cache-control":"public, max-age=3600"}});

@@ -6,7 +6,14 @@ from __future__ import annotations
 import argparse
 import glob
 import json
+import os
+import re
+import sys
+import time
+import urllib.error
+import urllib.request
 from collections import OrderedDict
+from datetime import datetime
 from pathlib import Path
 
 
@@ -19,6 +26,24 @@ def _required_keys(schema: dict) -> list[str]:
 
 
 FORM_FACTOR_ORDER = ["CLI", "IDE", "Extension", "SDK", "Web"]
+GITHUB_API = "https://api.github.com"
+MONTH_MAP = {
+    "Jan": 1,
+    "Feb": 2,
+    "Mar": 3,
+    "Apr": 4,
+    "May": 5,
+    "Jun": 6,
+    "Jul": 7,
+    "Aug": 8,
+    "Sep": 9,
+    "Oct": 10,
+    "Nov": 11,
+    "Dec": 12,
+}
+GITHUB_PATH_BLOCKLIST = frozenset(
+    {"features", "organizations", "apps", "marketplace", "login", "settings", "topics", "collections"}
+)
 
 
 def _sort_form_factors(values: list[str]) -> list[str]:
@@ -68,6 +93,155 @@ def validate(schema_path: str, data_glob: str) -> None:
                     raise ValueError(f"{filename}: {key}.source_url must include a text-fragment highlight")
 
 
+def parse_display_date(value: str) -> str | None:
+    """Parse display strings like Jun '23 or 2023 into YYYY-MM-DD."""
+    v = (value or "").strip()
+    if not v:
+        return None
+    m = re.match(r"^([A-Za-z]{3})\s*['\u2019](\d{2})$", v)
+    if m:
+        month = MONTH_MAP.get(m.group(1).title())
+        if not month:
+            return None
+        year = 2000 + int(m.group(2))
+        return f"{year:04d}-{month:02d}-01"
+    if re.fullmatch(r"\d{4}", v):
+        return f"{v}-01-01"
+    if re.fullmatch(r"\d{4}-\d{2}-\d{2}", v):
+        return v
+    return None
+
+
+def format_short_date(iso_date: str) -> str:
+    dt = datetime.strptime(iso_date[:10], "%Y-%m-%d")
+    return dt.strftime("%b '%y")
+
+
+def parse_github_repo(url: str) -> tuple[str, str] | None:
+    if not url or "github.com" not in url:
+        return None
+    parts = [p for p in url.split("github.com/", 1)[-1].split("?")[0].split("#")[0].strip("/").split("/") if p]
+    if len(parts) < 2:
+        return None
+    owner, repo = parts[0], parts[1]
+    if owner in GITHUB_PATH_BLOCKLIST:
+        return None
+    return owner, repo
+
+
+def _github_headers(token: str | None) -> dict[str, str]:
+    headers = {
+        "Accept": "application/vnd.github+json",
+        "User-Agent": "agent-launch-matrix",
+        "X-GitHub-Api-Version": "2022-11-28",
+    }
+    if token:
+        headers["Authorization"] = f"Bearer {token}"
+    return headers
+
+
+def github_json(path: str, token: str | None = None) -> object:
+    req = urllib.request.Request(f"{GITHUB_API}{path}", headers=_github_headers(token))
+    try:
+        with urllib.request.urlopen(req, timeout=30) as resp:
+            return json.loads(resp.read().decode("utf-8"))
+    except urllib.error.HTTPError as exc:
+        if exc.code == 403:
+            raise RuntimeError("GitHub API rate limit; set GITHUB_TOKEN for bundle") from exc
+        raise
+
+
+def fetch_repo_created_at(owner: str, repo: str, token: str | None) -> str | None:
+    data = github_json(f"/repos/{owner}/{repo}", token)
+    if isinstance(data, dict) and data.get("created_at"):
+        return data["created_at"][:10]
+    return None
+
+
+def fetch_oldest_release_date(owner: str, repo: str, token: str | None) -> str | None:
+    oldest: str | None = None
+    page = 1
+    while page <= 10:
+        batch = github_json(f"/repos/{owner}/{repo}/releases?per_page=100&page={page}", token)
+        if not isinstance(batch, list) or not batch:
+            break
+        for release in batch:
+            pub = release.get("published_at") or release.get("created_at")
+            if not pub:
+                continue
+            day = pub[:10]
+            if oldest is None or day < oldest:
+                oldest = day
+        if len(batch) < 100:
+            break
+        page += 1
+        time.sleep(0.2)
+    return oldest
+
+
+def fetch_latest_commit_date(owner: str, repo: str, token: str | None) -> str | None:
+    batch = github_json(f"/repos/{owner}/{repo}/commits?per_page=1", token)
+    if not isinstance(batch, list) or not batch:
+        return None
+    commit = batch[0].get("commit") or {}
+    for key in ("committer", "author"):
+        meta = commit.get(key) or {}
+        if meta.get("date"):
+            return meta["date"][:10]
+    return None
+
+
+def _set_sort_date(field: dict, iso_date: str | None) -> None:
+    if iso_date:
+        field["sort_date"] = iso_date
+
+
+def _ensure_sort_date_from_value(row: dict, key: str) -> None:
+    field = row.get(key)
+    if not isinstance(field, dict) or field.get("sort_date"):
+        return
+    parsed = parse_display_date(field.get("value", ""))
+    if parsed:
+        field["sort_date"] = parsed
+
+
+def enrich_github_dates(rows: list[dict]) -> None:
+    token = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN")
+    for row in rows:
+        name = row.get("name", "?")
+        for key in ("released_in", "latest_major_update"):
+            _ensure_sort_date_from_value(row, key)
+
+        if row.get("deprecated"):
+            continue
+
+        links = row.get("links") or {}
+        repo = parse_github_repo(links.get("github", ""))
+        if not repo:
+            continue
+
+        owner, repo_name = repo
+        try:
+            oldest_release = fetch_oldest_release_date(owner, repo_name, token)
+            latest_commit = fetch_latest_commit_date(owner, repo_name, token)
+            if not oldest_release:
+                oldest_release = fetch_repo_created_at(owner, repo_name, token)
+        except Exception as exc:
+            print(f"  warn: {name}: GitHub dates skipped ({exc})", file=sys.stderr)
+            continue
+
+        released = row.get("released_in")
+        if isinstance(released, dict) and oldest_release:
+            _set_sort_date(released, oldest_release)
+
+        updated = row.get("latest_major_update")
+        if isinstance(updated, dict) and latest_commit:
+            _set_sort_date(updated, latest_commit)
+            updated["value"] = format_short_date(latest_commit)
+
+        time.sleep(0.15)
+
+
 def bundle(schema_path: str, data_glob: str, output_path: str) -> None:
     schema = _load_json(schema_path)
     properties = schema.get("properties", {})
@@ -77,6 +251,7 @@ def bundle(schema_path: str, data_glob: str, output_path: str) -> None:
         if spec.get("allOf", [{}])[0].get("$ref", "").endswith("featureWithSource")
     ]
     rows = [_load_json(name) for name in sorted(glob.glob(data_glob))]
+    enrich_github_dates(rows)
     Path(output_path).write_text(json.dumps(rows, indent=2) + "\n", encoding="utf-8")
 
     return rows, sorted(feature_keys), sorted(properties.keys())
