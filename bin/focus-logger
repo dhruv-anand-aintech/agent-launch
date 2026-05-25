@@ -1,0 +1,151 @@
+#!/usr/bin/env python3
+"""Monitor macOS frontmost-application changes to diagnose focus stealing."""
+
+from __future__ import annotations
+
+import argparse
+import datetime
+import os
+import signal
+import subprocess
+import sys
+import time
+
+
+def get_frontmost_app() -> str | None:
+    """Return the name of the current frontmost application."""
+    # Try lsappinfo first (fast, no AppleScript overhead)
+    try:
+        front = subprocess.run(
+            ["lsappinfo", "front"],
+            capture_output=True,
+            text=True,
+            timeout=2,
+        )
+        if front.returncode == 0:
+            asn = front.stdout.strip()
+            if asn:
+                info = subprocess.run(
+                    ["lsappinfo", "info", "-only", "name", asn],
+                    capture_output=True,
+                    text=True,
+                    timeout=2,
+                )
+                if info.returncode == 0:
+                    line = info.stdout.strip()
+                    if '"' in line:
+                        # Extract quoted name:  "LSDisplayName"="Foo" -> Foo
+                        parts = line.split('"')
+                        if len(parts) >= 4:
+                            return parts[-2]
+    except (subprocess.TimeoutExpired, FileNotFoundError):
+        pass
+
+    # Fallback to AppleScript
+    script = 'tell application "System Events" to get name of first application process whose frontmost is true'
+    result = subprocess.run(
+        ["osascript", "-e", script],
+        capture_output=True,
+        text=True,
+        timeout=5,
+    )
+    if result.returncode == 0:
+        return result.stdout.strip() or None
+    return None
+
+
+def format_duration(seconds: float) -> str:
+    if seconds < 1:
+        return f"{seconds * 1000:.0f}ms"
+    if seconds < 60:
+        return f"{seconds:.1f}s"
+    return f"{seconds / 60:.1f}m"
+
+
+def main(argv: list[str] | None = None) -> int:
+    parser = argparse.ArgumentParser(
+        description="Log macOS frontmost-application changes.",
+    )
+    parser.add_argument(
+        "-i",
+        "--interval",
+        type=float,
+        default=0.2,
+        help="Polling interval in seconds (default: 0.2)",
+    )
+    parser.add_argument(
+        "-o",
+        "--output",
+        metavar="FILE",
+        default=None,
+        help="Append log lines to FILE instead of stdout only",
+    )
+    parser.add_argument(
+        "--show-duration",
+        action="store_true",
+        help="Print how long the previous app held focus",
+    )
+    parser.add_argument(
+        "--csv",
+        action="store_true",
+        help="Output in CSV format: timestamp,application,duration_ms",
+    )
+    args = parser.parse_args(argv)
+
+    log_path = args.output
+    log_handle = open(log_path, "a") if log_path else None
+
+    current_app: str | None = None
+    gained_at: float | None = None
+    running = True
+
+    def handle_signal(_signum: int, _frame: object) -> None:
+        nonlocal running
+        running = False
+
+    signal.signal(signal.SIGINT, handle_signal)
+    signal.signal(signal.SIGTERM, handle_signal)
+
+    if not args.csv:
+        print(f"Monitoring focus changes every {args.interval}s…")
+        if log_handle:
+            print(f"Logging to {log_path}")
+        print("Press Ctrl+C to stop")
+        sys.stdout.flush()
+
+    try:
+        while running:
+            new_app = get_frontmost_app()
+            now = time.time()
+
+            if new_app and new_app != current_app:
+                dt = datetime.datetime.now()
+                if args.csv:
+                    duration_ms = int((now - gained_at) * 1000) if gained_at else ""
+                    line = f"{dt.isoformat()},{new_app},{duration_ms}"
+                else:
+                    ts = dt.strftime("%H:%M:%S.%f")[:-3]
+                    parts = [f"[{ts}] {new_app}"]
+                    if args.show_duration and gained_at is not None:
+                        parts.append(f"(previous held for {format_duration(now - gained_at)})")
+                    line = " ".join(parts)
+
+                print(line)
+                sys.stdout.flush()
+                if log_handle:
+                    log_handle.write(line + "\n")
+                    log_handle.flush()
+
+                current_app = new_app
+                gained_at = now
+
+            time.sleep(args.interval)
+    finally:
+        if log_handle:
+            log_handle.close()
+
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

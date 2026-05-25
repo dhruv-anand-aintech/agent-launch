@@ -1,0 +1,13 @@
+#compdef focus-logger fl
+
+local -a opts
+
+opts=(
+  '(-h --help)'{-h,--help}'[show help]'
+  '(-i --interval)'{-i,--interval}'[polling interval in seconds]:interval:'
+  '(-o --output)'{-o,--output}'[append log to file]:file:_files'
+  '--show-duration[print how long previous app held focus]'
+  '--csv[output in CSV format]'
+)
+
+_arguments -s -S $opts

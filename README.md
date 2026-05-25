@@ -243,6 +243,35 @@ AGENT_LAUNCH_GEMINI_FAST_MODEL=gemini-2.5-flash-lite agent-launch -a gemini --mo
 
 Use `--model <backend-model>` for one-off overrides, or `--no-model` to let the backend choose.
 
+## Focus Logger
+
+A small bundled utility to diagnose which macOS application steals focus.
+
+```sh
+focus-logger
+```
+
+Logs every frontmost-application change with a timestamp:
+
+```
+Monitoring focus changes every 0.2s…
+Press Ctrl+C to stop
+[14:32:01.234] Terminal
+[14:32:05.678] Cursor
+[14:32:05.912] Finder
+```
+
+Common flags:
+
+| Flag | Description |
+| --- | --- |
+| `-i 0.05` | Poll every 50 ms (default 200 ms) |
+| `-o log.txt` | Also append to a file |
+| `--show-duration` | Print how long the previous app held focus |
+| `--csv` | Output `timestamp,app,duration_ms` for analysis |
+
+`fl` is installed as a short alias for `focus-logger`.
+
 ## Resume Notes
 
 The wrapper translates `--resume` to each backend's native resume flag.
