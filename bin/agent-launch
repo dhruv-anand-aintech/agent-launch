@@ -432,6 +432,7 @@ def main() -> int:
     if args.dry_run:
         print(shlex.join(cmd))
         return 0
+    print(f"agent-launch executing: {shlex.join(cmd)}", file=sys.stderr, flush=True)
     os.chdir(args.cwd)
     return subprocess.call(cmd)
 
