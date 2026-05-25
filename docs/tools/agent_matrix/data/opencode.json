@@ -8,11 +8,10 @@
   },
   "form_factor": {
     "values": [
-      "CLI",
-      "Terminal UI"
+      "CLI"
     ],
     "source_url": "https://opencode.ai/docs/#:~:text=terminal",
-    "comment": ""
+    "comment": "Terminal UI and CLI."
   },
   "released_in": {
     "value": "2025",
@@ -20,7 +19,7 @@
     "comment": "Exact public launch month not confirmed in public docs captured for this dataset."
   },
   "latest_major_update": {
-    "value": "May 2026",
+    "value": "May '26",
     "source_url": "https://opencode.ai/docs/#:~:text=opencode",
     "comment": "Current docs capture config, agents, MCP, and providers."
   },
@@ -106,8 +105,13 @@
   },
   "notes": "",
   "pricing": {
-    "value": "",
-    "source_url": "https://opencode.ai/docs#:~:text=opencode",
-    "comment": "Pricing source link; exact price not normalized in this matrix."
+    "value": "Free (MIT, BYOK), Go $10/mo (first month $5), Zen pay-per-token (min $20), Enterprise per-seat",
+    "source_url": "https://opencode.ai/docs/zen/#:~:text=Pricing",
+    "comment": "Free tier: bring your own API key + limited free models. Go ($10/mo): curated open-source models with usage caps. Zen: pay-per-token access to all models (min $20 top-up). Enterprise: per-seat custom pricing."
+  },
+  "hosted_agent": {
+    "support": "none",
+    "source_url": "https://opencode.ai/docs/#:~:text=terminal",
+    "comment": "Runs entirely locally."
   }
 }

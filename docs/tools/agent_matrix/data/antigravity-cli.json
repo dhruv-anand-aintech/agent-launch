@@ -14,12 +14,12 @@
     "comment": "Installed as the agy command."
   },
   "released_in": {
-    "value": "May 2026",
+    "value": "May '26",
     "source_url": "https://antigravity.google/docs/cli-getting-started#:~:text=install.sh",
     "comment": "Standalone CLI installer and docs."
   },
   "latest_major_update": {
-    "value": "May 2026",
+    "value": "May '26",
     "source_url": "https://antigravity.google/docs/cli-features#:~:text=plugins",
     "comment": "Standalone CLI with plugin layout, rules, skills, hooks, and MCP."
   },
@@ -105,8 +105,13 @@
   },
   "notes": "Distinct from Gemini CLI and the older Antigravity IDE.",
   "pricing": {
-    "value": "",
-    "source_url": "https://antigravity.google/#:~:text=Antigravity",
-    "comment": "Pricing source link; exact price not normalized in this matrix."
+    "value": "Free (generous weekly rate limits), Google AI Pro/Ultra (undisclosed), Organization (consumption-based via Google Cloud)",
+    "source_url": "https://antigravity.google/pricing#:~:text=For%20Individuals",
+    "comment": "Free tier includes Gemini 3.5 Flash, 3.1 Pro, 3 Flash, Claude Sonnet & Opus 4.6, gpt-oss-120b. Pro/Ultra tiers offer more generous rate limits. Organization via Google Cloud with consumption-based pricing."
+  },
+  "hosted_agent": {
+    "support": "none",
+    "source_url": "https://antigravity.google/docs/cli-features#:~:text=plugins",
+    "comment": "Local CLI tool."
   }
 }

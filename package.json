@@ -17,7 +17,8 @@
   "scripts": {
     "matrix:validate": "python docs/tools/agent_matrix/data_utils.py validate",
     "matrix:bundle": "python docs/tools/agent_matrix/data_utils.py bundle",
-    "deploy:matrix": "npm run matrix:validate && npm run matrix:bundle && wrangler deploy --config wrangler.toml"
+    "matrix:llms-txt": "python docs/tools/agent_matrix/data_utils.py llms-txt",
+    "deploy:matrix": "npm run matrix:validate && npm run matrix:bundle && npm run matrix:llms-txt && wrangler deploy --config wrangler.toml"
   },
   "devDependencies": {
     "wrangler": "^4.18.0"

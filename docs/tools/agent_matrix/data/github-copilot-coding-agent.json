@@ -1,5 +1,5 @@
 {
-  "name": "GitHub Copilot coding agent",
+  "name": "GitHub Copilot",
   "links": {
     "docs": "https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent",
     "github": "https://github.com/features/copilot",
@@ -9,106 +9,111 @@
   "form_factor": {
     "values": [
       "IDE",
-      "Hosted agent",
-      "Coding agent"
+      "Extension",
+      "CLI"
     ],
-    "source_url": "https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent#:~:text=coding%20agent",
-    "comment": "Placeholder row; verify details before treating as complete."
+    "source_url": "https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent#:~:text=Copilot%20cloud%20agent%20works%20autonomously%20in%20a%20GitHub%20Actions-powered%20environment",
+    "comment": "IDE agent mode (VS Code, JetBrains, Xcode, Neovim, Eclipse) + CLI + hosted cloud agent."
   },
   "released_in": {
-    "value": "TBD",
-    "source_url": "https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent#:~:text=coding%20agent",
-    "comment": "Placeholder pending exact public release month/year."
+    "value": "Jun '25",
+    "source_url": "https://docs.github.com/en/copilot/concepts/billing/copilot-requests#:~:text=Billing%20for%20premium%20requests%20began%20on%20June%2018%2C%202025",
+    "comment": "Announced at GitHub Universe (Oct/Nov 2024) in preview. GA billing launch: June 18, 2025 when premium request billing began."
   },
   "latest_major_update": {
-    "value": "TBD",
-    "source_url": "https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent#:~:text=coding%20agent",
-    "comment": "Placeholder pending latest major update research."
+    "value": "May '26",
+    "source_url": "https://docs.github.com/en/copilot/how-tos/github-copilot-app#:~:text=GitHub%20Copilot%20app%20%3A%20A%20desktop%20application%20for%20agent-driven%20development",
+    "comment": "Copilot desktop app (technical preview): parallel agent sessions, PR lifecycle, scheduled workflows. Third-party agent support added. Usage-based billing announced."
   },
-  "notes": "Placeholder row added to track a released coding-agent surface. Open issue should fill exact sourced feature cells.",
   "rules": {
-    "support": "unknown",
-    "source_url": "https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent#:~:text=coding%20agent",
-    "comment": "Placeholder pending sourced verification."
+    "support": "full",
+    "source_url": "https://docs.github.com/en/copilot/concepts/prompting/response-customization#:~:text=Repository-wide%20custom%20instructions%3A%20copilot-instructions.md%20in%20.github",
+    "comment": "Multiple layers: .github/copilot-instructions.md (repo-wide), path-specific .github/instructions/**, AGENTS.md, CLAUDE.md, GEMINI.md, personal instructions, org-level."
   },
   "skills": {
-    "support": "unknown",
-    "source_url": "https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent#:~:text=coding%20agent",
-    "comment": "Placeholder pending sourced verification."
+    "support": "full",
+    "source_url": "https://docs.github.com/en/copilot/concepts/agents/about-agent-skills#:~:text=Agent%20skills%20are%20folders%20of%20instructions%2C%20scripts%2C%20and%20resources",
+    "comment": "Open Agent Skills standard. .github/skills, .claude/skills, .agents/skills. Personal skills in ~/.copilot/skills. gh skill CLI for discovery/install."
   },
   "hooks": {
-    "support": "unknown",
-    "source_url": "https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent#:~:text=coding%20agent",
-    "comment": "Placeholder pending sourced verification."
+    "support": "full",
+    "source_url": "https://docs.github.com/en/copilot/concepts/agents/hooks#:~:text=Hooks%20are%20a%20way%20of%20executing%20custom%20shell%20commands%20at%20strategic%20points%20in%20an%20agent%27s%20workflow",
+    "comment": "Full lifecycle hook system: sessionStart, sessionEnd, userPromptSubmitted, preToolUse (approve/deny), postToolUse, agentStop, subagentStop, errorOccurred. .github/hooks/*.json."
   },
   "mcp_servers": {
-    "support": "unknown",
-    "source_url": "https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent#:~:text=coding%20agent",
-    "comment": "Placeholder pending sourced verification."
+    "support": "full",
+    "source_url": "https://docs.github.com/en/copilot/how-tos/use-copilot-agents/cloud-agent/extend-cloud-agent-with-mcp#:~:text=Connect%20Copilot%20cloud%20agent%20to%20external%20tools%20and%20data%20sources%20through%20the%20Model%20Context%20Protocol",
+    "comment": "Full MCP in cloud agent, CLI, and IDE. Supports local, stdio, http, sse transports. Built-in GitHub MCP server. Enterprise allowlist controls."
   },
   "custom_commands": {
-    "support": "unknown",
-    "source_url": "https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent#:~:text=coding%20agent",
-    "comment": "Placeholder pending sourced verification."
+    "support": "partial",
+    "source_url": "https://docs.github.com/en/copilot/using-github-copilot/copilot-chat/asking-github-copilot-questions-in-your-ide#:~:text=Use%20slash%20commands%20to%20avoid%20writing%20complex%20prompts%20for%20common%20scenarios",
+    "comment": "Built-in slash commands in IDE (/fix, /tests, /explain, /help) and CLI (/delegate, /pr, /resume). Prompt files (*.prompt.md) for reusable snippets. No user-defined custom slash commands."
   },
   "subagents": {
-    "support": "unknown",
-    "source_url": "https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent#:~:text=coding%20agent",
-    "comment": "Placeholder pending sourced verification."
+    "support": "full",
+    "source_url": "https://docs.github.com/en/copilot/using-github-copilot/copilot-chat/asking-github-copilot-questions-in-your-ide#:~:text=You%20can%20use%20subagents%20to%20delegate%20tasks%20to%20an%20isolated%20agent%20with%20its%20own%20context%20window",
+    "comment": "Subagents in VS Code and JetBrains IDE agent mode. Isolated context window. Invocation: automatic, direct, or via #runSubagent. Cannot create sub-subagents."
   },
   "model_selection": {
-    "support": "unknown",
-    "source_url": "https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent#:~:text=coding%20agent",
-    "comment": "Placeholder pending sourced verification."
+    "support": "full",
+    "source_url": "https://docs.github.com/en/copilot/how-tos/use-ai-models/change-the-chat-model#:~:text=Choose%20from%20a%20selection%20of%20models%2C%20each%20with%20its%20own%20particular%20strengths",
+    "comment": "Models from Anthropic, Google, OpenAI, xAI. Auto model selection available. Each model has a premium request multiplier."
   },
   "approval_mode": {
-    "support": "unknown",
-    "source_url": "https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent#:~:text=coding%20agent",
-    "comment": "Placeholder pending sourced verification."
+    "support": "partial",
+    "source_url": "https://docs.github.com/en/copilot/how-tos/github-copilot-app/agent-sessions#:~:text=Interactive%3A%20You%20and%20the%20agent%20work%20together.%20The%20agent%20suggests%20changes%20and%20waits%20for%20your%20input%20before%20proceeding",
+    "comment": "Desktop app has Interactive, Plan, and Autopilot modes. preToolUse hook can approve/deny. No universal 'always ask before X' toggle."
   },
   "sandbox_mode": {
-    "support": "unknown",
-    "source_url": "https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent#:~:text=coding%20agent",
-    "comment": "Placeholder pending sourced verification."
+    "support": "partial",
+    "source_url": "https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent#:~:text=Copilot%20cloud%20agent%20has%20access%20to%20its%20own%20ephemeral%20development%20environment%2C%20powered%20by%20GitHub%20Actions",
+    "comment": "Cloud agent runs in ephemeral GitHub Actions environment (natural sandbox). CLI has tool permission controls. No explicit sandbox toggle."
   },
   "resume": {
-    "support": "unknown",
-    "source_url": "https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent#:~:text=coding%20agent",
-    "comment": "Placeholder pending sourced verification."
+    "support": "full",
+    "source_url": "https://docs.github.com/en/copilot/how-tos/copilot-cli/use-copilot-cli/chronicle#:~:text=copilot%20--resume%20to%20open%20a%20session%20picker",
+    "comment": "CLI: copilot --resume opens session picker, copilot --resume SESSION-ID jumps to specific session. /resume during interactive session."
   },
   "continue": {
-    "support": "unknown",
-    "source_url": "https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent#:~:text=coding%20agent",
-    "comment": "Placeholder pending sourced verification."
+    "support": "full",
+    "source_url": "https://docs.github.com/en/copilot/how-tos/copilot-cli/use-copilot-cli/chronicle#:~:text=copilot%20--continue%20to%20resume%20your%20most%20recent%20session",
+    "comment": "CLI: copilot --continue resumes most recent session directly. IDE agent sessions persistent. Desktop app sessions in sidebar."
   },
   "non_interactive": {
-    "support": "unknown",
-    "source_url": "https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent#:~:text=coding%20agent",
-    "comment": "Placeholder pending sourced verification."
+    "support": "full",
+    "source_url": "https://docs.github.com/en/copilot/how-tos/copilot-cli/automate-copilot-cli/run-cli-programmatically#:~:text=Use%20Copilot%20CLI%20in%20the%20terminal%2C%20in%20scripts%2C%20or%20in%20Actions%20workflows",
+    "comment": "CLI programmatic/scripted usage in GitHub Actions. --non-interactive mode. Copilot SDK for API-based integration."
   },
   "output_format": {
-    "support": "unknown",
-    "source_url": "https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent#:~:text=coding%20agent",
-    "comment": "Placeholder pending sourced verification."
+    "support": "partial",
+    "source_url": "https://docs.github.com/en/copilot/how-tos/copilot-sdk#:~:text=Learn%20how%20to%20customize%20your%20Copilot%20experience%20using%20Copilot%20SDK",
+    "comment": "Copilot SDK provides programmatic access with structured responses. No documented --json flag for general CLI output."
   },
   "statusline": {
-    "support": "unknown",
-    "source_url": "https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent#:~:text=coding%20agent",
-    "comment": "Placeholder pending sourced verification."
+    "support": "none",
+    "source_url": "",
+    "comment": "No statusline feature documented anywhere in GitHub Copilot's documentation."
   },
   "telemetry": {
-    "support": "unknown",
-    "source_url": "https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent#:~:text=coding%20agent",
-    "comment": "Placeholder pending sourced verification."
+    "support": "partial",
+    "source_url": "https://docs.github.com/en/copilot/concepts/agents/enterprise-management#:~:text=Track%20activity%20with%20detailed%20audit%20logs%20and%20enforce%20governance%20by%20managing%20agents%20from%20a%20single%20control%20plane",
+    "comment": "Enterprise audit logging, agent session monitoring. Data retention: prompts retained 28 days. Users can opt out of training data. No granular telemetry UI."
   },
   "custom_model_provider": {
-    "support": "unknown",
-    "source_url": "https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent#:~:text=coding%20agent",
-    "comment": "Placeholder pending sourced verification."
+    "support": "full",
+    "source_url": "https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models#:~:text=Use%20a%20model%20from%20an%20external%20provider%20of%20your%20choice%20in%20Copilot%20by%20supplying%20your%20own%20API%20key",
+    "comment": "BYOK in CLI: env vars for provider type, base URL, API key. OpenAI-compatible endpoints, Azure OpenAI, Anthropic, local models via Ollama."
   },
+  "notes": "GitHub Copilot's agent capabilities span IDE, cloud, and CLI. The cloud agent is unique: runs in ephemeral GitHub Actions environment. Desktop app (preview) adds parallel agent sessions. Ecosystem is rapidly evolving with weekly feature drops.",
   "pricing": {
-    "value": "",
-    "source_url": "https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent#:~:text=coding%20agent",
-    "comment": "Pricing source link; exact price not normalized in this matrix."
+    "value": "Free $0, Pro $10/mo, Pro+ $39/mo, Business $19/user/mo, Enterprise $39/user/mo",
+    "source_url": "https://github.com/features/copilot/plans#:~:text=Free%20%240%2C%20Pro%20%2410%2Fmonth%2C%20Pro%2B%20%2439%2Fmonth",
+    "comment": "Free: $0/mo (50 premium requests). Pro: $10/mo (300 premium requests). Pro+: $39/mo (1500 premium requests). Usage-based billing starting June 2026."
+  },
+  "hosted_agent": {
+    "support": "full",
+    "source_url": "https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent#:~:text=Copilot%20cloud%20agent%20works%20autonomously%20in%20a%20GitHub%20Actions-powered%20environment",
+    "comment": "Copilot Cloud Agent runs autonomously in GitHub Actions-powered ephemeral environment."
   }
 }

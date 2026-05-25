@@ -9,19 +9,18 @@
   "form_factor": {
     "values": [
       "CLI",
-      "Hosted agent",
-      "Coding agent"
+      "Extension"
     ],
     "source_url": "https://developers.openai.com/codex/#:~:text=Codex",
-    "comment": ""
+    "comment": "CLI + Open VSX extension + hosted on platform.openai.com."
   },
   "released_in": {
-    "value": "April 2025",
+    "value": "Apr '25",
     "source_url": "https://github.com/openai/codex#:~:text=Codex%20CLI",
     "comment": "Open-source CLI public release."
   },
   "latest_major_update": {
-    "value": "May 2026",
+    "value": "May '26",
     "source_url": "https://developers.openai.com/codex/changelog/#:~:text=changelog",
     "comment": "Captured from current Codex docs/changelog state."
   },
@@ -107,8 +106,13 @@
   },
   "notes": "",
   "pricing": {
-    "value": "",
-    "source_url": "https://openai.com/codex/pricing#:~:text=pricing",
-    "comment": "Pricing source link; exact price not normalized in this matrix."
+    "value": "Free (limited), Plus $20/mo, Pro $100-200/mo, Business pay-as-you-go, API usage-based",
+    "source_url": "https://developers.openai.com/codex/pricing#:~:text=Codex%20is%20included%20in%20ChatGPT%20Free",
+    "comment": "Free tier has limited Codex access. Plus ($20/mo) includes 15-350 local messages/5h. Pro $100/mo at 5x limits ($200/mo at 20x). Business at pay-as-you-go token credits. API key at per-token pricing."
+  },
+  "hosted_agent": {
+    "support": "full",
+    "source_url": "https://github.com/openai/codex#:~:text=Codex%20CLI",
+    "comment": "Can run locally or on platform.openai.com managed infrastructure."
   }
 }

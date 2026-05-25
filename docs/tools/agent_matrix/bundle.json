@@ -9,107 +9,111 @@
     },
     "form_factor": {
       "values": [
-        "CLI",
-        "Coding agent"
+        "CLI"
       ],
-      "source_url": "https://aider.chat/#:~:text=AI%20pair%20programming",
-      "comment": "Placeholder row; verify details before treating as complete."
+      "source_url": "https://github.com/Aider-AI/aider#:~:text=aider%20is%20AI%20pair%20programming%20in%20your%20terminal",
+      "comment": "CLI terminal app."
     },
     "released_in": {
-      "value": "TBD",
-      "source_url": "https://aider.chat/#:~:text=AI%20pair%20programming",
-      "comment": "Placeholder pending exact public release month/year."
+      "value": "Jun '23",
+      "source_url": "https://github.com/Aider-AI/aider/releases/tag/v0.5.0#:~:text=v0.5.0",
+      "comment": "First public release v0.5.0 on June 7, 2023."
     },
     "latest_major_update": {
-      "value": "TBD",
-      "source_url": "https://aider.chat/#:~:text=AI%20pair%20programming",
-      "comment": "Placeholder pending latest major update research."
+      "value": "Aug '25",
+      "source_url": "https://github.com/Aider-AI/aider/releases/tag/v0.86.0#:~:text=Expanded%20GPT-5%20model%20support%20across%20family%20variants",
+      "comment": "Latest tagged release v0.86.0 (Aug 9, 2025). Main branch is actively developed beyond that."
     },
-    "notes": "Placeholder row added to track a released coding-agent surface. Open issue should fill exact sourced feature cells.",
     "rules": {
-      "support": "unknown",
-      "source_url": "https://aider.chat/#:~:text=AI%20pair%20programming",
-      "comment": "Placeholder pending sourced verification."
+      "support": "partial",
+      "source_url": "https://aider.chat/docs/usage/conventions.html#:~:text=The%20easiest%20way%20to%20do%20that%20with%20aider%20is%20to%20simply%20create%20a%20small%20markdown%20file",
+      "comment": "Supports CONVENTIONS.md loaded via --read or .aider.conf.yml. No equivalent of a persistent auto-loaded CLAUDE.md file."
     },
     "skills": {
-      "support": "unknown",
-      "source_url": "https://aider.chat/#:~:text=AI%20pair%20programming",
-      "comment": "Placeholder pending sourced verification."
+      "support": "partial",
+      "source_url": "https://aider.chat/docs/usage/commands.html#:~:text=/save%20%3Cfname%3E%20command%20will%20make%20a%20file%20of%20/add%20and%20/read-only%20commands",
+      "comment": "Has /save and /load commands to persist/replay sequences of slash commands. Not a full reusable skill system like Cursor skills."
     },
     "hooks": {
-      "support": "unknown",
-      "source_url": "https://aider.chat/#:~:text=AI%20pair%20programming",
-      "comment": "Placeholder pending sourced verification."
+      "support": "partial",
+      "source_url": "https://aider.chat/docs/config/options.html#:~:text=--git-commit-verify%0AEnable/disable%20git%20pre-commit%20hooks%20with%20--no-verify",
+      "comment": "Only git pre-commit hook bypass via --git-commit-verify. No lifecycle hooks (session-start, session-end, etc.)."
     },
     "mcp_servers": {
-      "support": "unknown",
-      "source_url": "https://aider.chat/#:~:text=AI%20pair%20programming",
-      "comment": "Placeholder pending sourced verification."
+      "support": "none",
+      "source_url": "https://github.com/Aider-AI/aider#:~:text=aider%20is%20AI%20pair%20programming%20in%20your%20terminal",
+      "comment": "No MCP (Model Context Protocol) support detected in documentation, codebase, or feature listings."
     },
     "custom_commands": {
-      "support": "unknown",
-      "source_url": "https://aider.chat/#:~:text=AI%20pair%20programming",
-      "comment": "Placeholder pending sourced verification."
+      "support": "none",
+      "source_url": "https://aider.chat/docs/usage/commands.html#:~:text=Aider%20supports%20commands%20from%20within%20the%20chat%2C%20which%20all%20start%20with%20/",
+      "comment": "40+ built-in slash commands but no mechanism for users to define custom slash commands."
     },
     "subagents": {
-      "support": "unknown",
-      "source_url": "https://aider.chat/#:~:text=AI%20pair%20programming",
-      "comment": "Placeholder pending sourced verification."
+      "support": "partial",
+      "source_url": "https://aider.chat/docs/usage/modes.html#:~:text=Architect%20mode%20and%20the%20editor%20model",
+      "comment": "Architect/Editor mode uses two models but no general subagent delegation system. No spawning of independent worker agents."
     },
     "model_selection": {
-      "support": "unknown",
-      "source_url": "https://aider.chat/#:~:text=AI%20pair%20programming",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://aider.chat/docs/config/options.html#:~:text=--model%20MODEL%0ASpecify%20the%20model%20to%20use%20for%20the%20main%20chat",
+      "comment": "Full model selection via --model, --weak-model, --editor-model. In-chat /model command. Model aliases supported."
     },
     "approval_mode": {
-      "support": "unknown",
-      "source_url": "https://aider.chat/#:~:text=AI%20pair%20programming",
-      "comment": "Placeholder pending sourced verification."
+      "support": "partial",
+      "source_url": "https://aider.chat/docs/config/options.html#:~:text=--yes-always%0AAlways%20say%20yes%20to%20every%20confirmation",
+      "comment": "Has --yes-always to auto-accept all confirmations. No granular approval mode like Cursor's always/accept-tool/plan-then-act."
     },
     "sandbox_mode": {
-      "support": "unknown",
-      "source_url": "https://aider.chat/#:~:text=AI%20pair%20programming",
-      "comment": "Placeholder pending sourced verification."
+      "support": "none",
+      "source_url": "https://aider.chat/docs/config/options.html#:~:text=--dry-run%0APerform%20a%20dry%20run%20without%20modifying%20files",
+      "comment": "No filesystem or network sandbox. Has --dry-run flag that prevents file modification. Aider edits files directly in the working git repo."
     },
     "resume": {
-      "support": "unknown",
-      "source_url": "https://aider.chat/#:~:text=AI%20pair%20programming",
-      "comment": "Placeholder pending sourced verification."
+      "support": "none",
+      "source_url": "https://aider.chat/docs/config/options.html#:~:text=--restore-chat-history%0ARestore%20the%20previous%20chat%20history%20messages",
+      "comment": "No --resume flag. Has --restore-chat-history which restores previous chat messages but does not resume session state."
     },
     "continue": {
-      "support": "unknown",
-      "source_url": "https://aider.chat/#:~:text=AI%20pair%20programming",
-      "comment": "Placeholder pending sourced verification."
+      "support": "partial",
+      "source_url": "https://aider.chat/docs/config/options.html#:~:text=--restore-chat-history%0ARestore%20the%20previous%20chat%20history%20messages",
+      "comment": "No --continue flag for auto-resuming the latest session. --restore-chat-history restores message history but is manual."
     },
     "non_interactive": {
-      "support": "unknown",
-      "source_url": "https://aider.chat/#:~:text=AI%20pair%20programming",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://aider.chat/docs/config/options.html#:~:text=--message%20COMMAND%0ASpecify%20a%20single%20message%20to%20send%20the%20LLM%2C%20process%20reply%20then%20exit",
+      "comment": "Full non-interactive mode via --message/-m (send instruction, edit files, exit). Also --apply, --commit, --lint, --test."
     },
     "output_format": {
-      "support": "unknown",
-      "source_url": "https://aider.chat/#:~:text=AI%20pair%20programming",
-      "comment": "Placeholder pending sourced verification."
+      "support": "none",
+      "source_url": "https://aider.chat/docs/config/options.html#:~:text=--no-pretty%0ADisable%20pretty%2C%20colorized%20output",
+      "comment": "No structured machine-readable output format (JSON, etc.). Has --no-pretty for plain text, --verbose for debug info."
     },
     "statusline": {
-      "support": "unknown",
-      "source_url": "https://aider.chat/#:~:text=AI%20pair%20programming",
-      "comment": "Placeholder pending sourced verification."
+      "support": "none",
+      "source_url": "https://aider.chat/docs/config/options.html#:~:text=--user-input-color%20VALUE%0ASet%20the%20color%20for%20user%20input",
+      "comment": "No configurable status line. Has extensive color customization but no status bar/line concept."
     },
     "telemetry": {
-      "support": "unknown",
-      "source_url": "https://aider.chat/#:~:text=AI%20pair%20programming",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://aider.chat/docs/more/analytics.html#:~:text=Analytics%20are%20only%20collected%20if%20you%20agree%20and%20opt-in",
+      "comment": "Opt-in anonymous analytics via PostHog. Permanently disable with --analytics-disable. Never collects code/chat/keys."
     },
     "custom_model_provider": {
-      "support": "unknown",
-      "source_url": "https://aider.chat/#:~:text=AI%20pair%20programming",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://aider.chat/docs/llms.html#:~:text=Aider%20can%20connect%20to%20most%20LLMs",
+      "comment": "Connects to any LLM via litellm. Supports OpenAI, Anthropic, Gemini, DeepSeek, Ollama, OpenRouter, any OpenAI-compatible endpoint, and more."
     },
+    "notes": "Aider is a mature open-source CLI coding agent (45k+ stars) since June 2023. Deep git integration, repo mapping for codebase context, extensive LLM provider support through litellm. Notable gaps vs newer agents: no MCP, no user-defined slash commands, no sandbox, no subagent delegation, no resume/continue flags, no structured output. Apache-2.0 licensed.",
     "pricing": {
-      "value": "",
-      "source_url": "https://aider.chat/#:~:text=AI%20pair%20programming",
-      "comment": "Pricing source link; exact price not normalized in this matrix."
+      "value": "Free (Apache-2.0)",
+      "source_url": "https://github.com/Aider-AI/aider#:~:text=License-Apache-2.0",
+      "comment": "Free and open source under Apache 2.0. Users pay only for LLM API usage through their own API keys."
+    },
+    "hosted_agent": {
+      "support": "none",
+      "source_url": "https://github.com/Aider-AI/aider#:~:text=aider%20is%20AI%20pair%20programming%20in%20your%20terminal",
+      "comment": "Runs entirely locally via pip. No hosted agent platform."
     }
   },
   {
@@ -123,107 +127,111 @@
     "form_factor": {
       "values": [
         "CLI",
-        "Terminal UI",
-        "Coding agent"
+        "Extension"
       ],
-      "source_url": "https://ampcode.app/#:~:text=CLI%2FTUI%20Install",
-      "comment": "Placeholder row; verify details before treating as complete."
+      "source_url": "https://ampcode.com/manual#:~:text=Amp%20is%20the%20frontier%20coding%20agent%20for%20your%20terminal%20and%20editor",
+      "comment": "CLI TUI + IDE extensions (VS Code, JetBrains, Neovim, Zed)."
     },
     "released_in": {
-      "value": "TBD",
-      "source_url": "https://ampcode.app/#:~:text=CLI%2FTUI%20Install",
-      "comment": "Placeholder pending exact public release month/year."
+      "value": "May '25",
+      "source_url": "https://ampcode.com/chronicle#:~:text=May%2015%2C%202025%20Amp%20Is%20Now%20Available%20To%20Everyone",
+      "comment": "Publicly launched May 15, 2025 (no waitlist). Originally built inside Sourcegraph, spun off as Amp Frontier Corporation."
     },
     "latest_major_update": {
-      "value": "TBD",
-      "source_url": "https://ampcode.app/#:~:text=CLI%2FTUI%20Install",
-      "comment": "Placeholder pending latest major update research."
+      "value": "May '26",
+      "source_url": "https://ampcode.com/news/neo#:~:text=May%206%2C%202026%20Amp%2C%20Rebuilt",
+      "comment": "May 6, 2026 \u2014 'Amp, Rebuilt' (codename Neo). Complete CLI rewrite with new architecture: remote-controllable, plugin-powered, auto-compaction."
     },
-    "notes": "Placeholder row added to track a released coding-agent surface. Open issue should fill exact sourced feature cells.",
     "rules": {
-      "support": "unknown",
-      "source_url": "https://ampcode.app/#:~:text=CLI%2FTUI%20Install",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://ampcode.com/manual#AGENTS.md#:~:text=Amp%20looks%20in%20AGENTS.md%20files%20for%20guidance",
+      "comment": "Full support via AGENTS.md files (plural). Scanned from cwd, parent dirs, subtrees, $HOME/.config/amp/, /etc/ampcode/. Supports @-mentions, globs, YAML frontmatter."
     },
     "skills": {
-      "support": "unknown",
-      "source_url": "https://ampcode.app/#:~:text=CLI%2FTUI%20Install",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://ampcode.com/manual#agent-skills#:~:text=Skills%20are%20packages%20of%20instructions%20and%20resources",
+      "comment": "Full support. Skills are directories with SKILL.md + YAML frontmatter. Locations: .agents/skills/ (project), ~/.config/agents/skills/ (user). Can bundle MCP servers via mcp.json."
     },
     "hooks": {
-      "support": "unknown",
-      "source_url": "https://ampcode.app/#:~:text=CLI%2FTUI%20Install",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://ampcode.com/manual#plugins#:~:text=Handle%20events%20%E2%80%94%20amp.on(...)%20for%20tool%20calls%2C%20tool%20results%2C%20and%20agent%20lifecycle%20events",
+      "comment": "Full support via Plugin API (TypeScript). Events: session.start, agent.start, tool.call, tool.result, agent.end. Plugins can respond with allow/reject/modify/synthesize actions."
     },
     "mcp_servers": {
-      "support": "unknown",
-      "source_url": "https://ampcode.app/#:~:text=CLI%2FTUI%20Install",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://ampcode.com/manual#mcp#:~:text=You%20can%20add%20additional%20tools%20using%20MCP%20servers",
+      "comment": "Full support. Add via CLI (amp mcp add) or config. Local (command/args/env) and remote (url/headers) servers. OAuth auto-flow. Skill bundling for lazy loading."
     },
     "custom_commands": {
-      "support": "unknown",
-      "source_url": "https://ampcode.app/#:~:text=CLI%2FTUI%20Install",
-      "comment": "Placeholder pending sourced verification."
+      "support": "none",
+      "source_url": "https://ampcode.com/news/slashing-custom-commands#:~:text=We're%20removing%20custom%20commands%20in%20favor%20of%20skills",
+      "comment": "Removed January 29, 2026. Replaced by skills and command palette (Ctrl+O) instead of slash commands."
     },
     "subagents": {
-      "support": "unknown",
-      "source_url": "https://ampcode.app/#:~:text=CLI%2FTUI%20Install",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://ampcode.com/manual#subagents#:~:text=Amp%20can%20spawn%20subagents%20(via%20the%20Task%20tool)",
+      "comment": "Full support. Spawned via Task tool. Built-in specialized subagents: Oracle (GPT-5.4), Librarian (code search), Painter (image gen), Review, Search."
     },
     "model_selection": {
-      "support": "unknown",
-      "source_url": "https://ampcode.app/#:~:text=CLI%2FTUI%20Install",
-      "comment": "Placeholder pending sourced verification."
+      "support": "partial",
+      "source_url": "https://ampcode.com/models#:~:text=Agent%20Modes",
+      "comment": "Pre-set modes (smart=Claude Opus 4.7, deep=GPT-5.5 reasoning, rush=GPT-5.5 no-reasoning, free=mixed). You choose the mode, not the exact model."
     },
     "approval_mode": {
-      "support": "unknown",
-      "source_url": "https://ampcode.app/#:~:text=CLI%2FTUI%20Install",
-      "comment": "Placeholder pending sourced verification."
+      "support": "partial",
+      "source_url": "https://ampcode.com/news/neo#:~:text=Amp%20will%20no%20longer%20ask%20for%20permission%20before%20running%20tools",
+      "comment": "Default: no approval (dangerously-allow-all is now default). Custom approval policies possible via Plugin API (tool.call event)."
     },
     "sandbox_mode": {
-      "support": "unknown",
-      "source_url": "https://ampcode.app/#:~:text=CLI%2FTUI%20Install",
-      "comment": "Placeholder pending sourced verification."
+      "support": "none",
+      "source_url": "https://ampcode.com/manual#:~:text=If%20you%20regularly%20work%20with%20untrusted%20sources%2C%20consider%20creating%20a%20custom%20policy%20plugin%2C%20or%20using%20an%20isolated%20development%20environment",
+      "comment": "No built-in sandbox. Documentation suggests external isolated dev environments for untrusted code."
     },
     "resume": {
-      "support": "unknown",
-      "source_url": "https://ampcode.app/#:~:text=CLI%2FTUI%20Install",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://ampcode.com/news/new-threads-without-leaving-the-cli#:~:text=You%20can%20now%20start%20new%20threads%20and%20continue%20old%20threads%20without%20leaving%20your%20CLI%20session",
+      "comment": "Full support. 'amp threads continue [thread id]' documented. Thread referencing (@T-xxx or URL) across sessions."
     },
     "continue": {
-      "support": "unknown",
-      "source_url": "https://ampcode.app/#:~:text=CLI%2FTUI%20Install",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://ampcode.com/news/new-threads-without-leaving-the-cli#:~:text=%2Fcontinue",
+      "comment": "Full support. /continue command in CLI to pick old threads. Threads persist at ampcode.com/threads."
     },
     "non_interactive": {
-      "support": "unknown",
-      "source_url": "https://ampcode.app/#:~:text=CLI%2FTUI%20Install",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://ampcode.com/manual#cli-non-interactive-environments#:~:text=For%20non-interactive%20environments%20(e.g.%20scripts%2C%20CI/CD%20pipelines)%2C%20set%20your%20access%20token",
+      "comment": "Full support. amp --execute / amp -x for headless mode. Set AMP_API_KEY env var for CI/CD. Auto-detects piped stdout."
     },
     "output_format": {
-      "support": "unknown",
-      "source_url": "https://ampcode.app/#:~:text=CLI%2FTUI%20Install",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://ampcode.com/manual#cli-streaming-json#:~:text=Stream%20JSON%20Output",
+      "comment": "Full support. --stream-json flag with --execute for Claude Code-compatible NDJSON streaming output. Multiple schema types."
     },
     "statusline": {
-      "support": "unknown",
-      "source_url": "https://ampcode.app/#:~:text=CLI%2FTUI%20Install",
-      "comment": "Placeholder pending sourced verification."
+      "support": "none",
+      "source_url": "https://ampcode.com/news/neo#:~:text=Themes%3A%20Custom%20themes%20made%20it%20harder%20to%20keep%20the%20CLI%20legible",
+      "comment": "Not supported. Custom themes removed in the May 6, 2026 rebuild. No statusline customization."
     },
     "telemetry": {
       "support": "unknown",
-      "source_url": "https://ampcode.app/#:~:text=CLI%2FTUI%20Install",
-      "comment": "Placeholder pending sourced verification."
+      "source_url": "",
+      "comment": "No explicit telemetry settings found in documentation. No on/off telemetry toggle mentioned in manual or settings."
     },
     "custom_model_provider": {
-      "support": "unknown",
-      "source_url": "https://ampcode.app/#:~:text=CLI%2FTUI%20Install",
-      "comment": "Placeholder pending sourced verification."
+      "support": "partial",
+      "source_url": "https://ampcode.com/manual#mcp#:~:text=You%20can%20add%20additional%20tools%20using%20MCP%20servers",
+      "comment": "No BYOM for the main agent (picks models per mode from providers). MCP servers can connect to external tools, and Plugin API allows custom tool registration."
     },
+    "notes": "Amp is opinionated and aggressively removes features it considers obsolete (custom commands, slash commands, themes). Focuses on frontier models. Plugin API provides extensive extensibility for those who need it. Closed-source product; some auxiliary tools open source on GitHub.",
     "pricing": {
-      "value": "",
-      "source_url": "https://ampcode.app/#:~:text=CLI%2FTUI%20Install",
-      "comment": "Pricing source link; exact price not normalized in this matrix."
+      "value": "Usage-based with free tier",
+      "source_url": "https://ampcode.com/manual#pricing#:~:text=Amp%20charges%20you%20based%20on%20your%20actual%20usage%20of%20LLMs",
+      "comment": "Usage-based: pay-as-you-go with zero markup on API costs for individuals. Minimum $5 credit purchase. Free mode (ad-supported, no longer shows ads). Enterprise: 50% markup + $1,000 one-time fee."
+    },
+    "hosted_agent": {
+      "support": "none",
+      "source_url": "https://ampcode.com/manual#:~:text=Amp%20is%20the%20frontier%20coding%20agent%20for%20your%20terminal%20and%20editor",
+      "comment": "CLI runs locally. Threads shared via web but no managed agent platform."
     }
   },
   {
@@ -242,12 +250,12 @@
       "comment": "Installed as the agy command."
     },
     "released_in": {
-      "value": "May 2026",
+      "value": "May '26",
       "source_url": "https://antigravity.google/docs/cli-getting-started#:~:text=install.sh",
       "comment": "Standalone CLI installer and docs."
     },
     "latest_major_update": {
-      "value": "May 2026",
+      "value": "May '26",
       "source_url": "https://antigravity.google/docs/cli-features#:~:text=plugins",
       "comment": "Standalone CLI with plugin layout, rules, skills, hooks, and MCP."
     },
@@ -333,9 +341,14 @@
     },
     "notes": "Distinct from Gemini CLI and the older Antigravity IDE.",
     "pricing": {
-      "value": "",
-      "source_url": "https://antigravity.google/#:~:text=Antigravity",
-      "comment": "Pricing source link; exact price not normalized in this matrix."
+      "value": "Free (generous weekly rate limits), Google AI Pro/Ultra (undisclosed), Organization (consumption-based via Google Cloud)",
+      "source_url": "https://antigravity.google/pricing#:~:text=For%20Individuals",
+      "comment": "Free tier includes Gemini 3.5 Flash, 3.1 Pro, 3 Flash, Claude Sonnet & Opus 4.6, gpt-oss-120b. Pro/Ultra tiers offer more generous rate limits. Organization via Google Cloud with consumption-based pricing."
+    },
+    "hosted_agent": {
+      "support": "none",
+      "source_url": "https://antigravity.google/docs/cli-features#:~:text=plugins",
+      "comment": "Local CLI tool."
     }
   },
   {
@@ -359,7 +372,7 @@
       "comment": "Exact public release month not confirmed in public docs captured for this dataset."
     },
     "latest_major_update": {
-      "value": "May 2026",
+      "value": "May '26",
       "source_url": "https://antigravity.google/docs/cli-getting-started#:~:text=update",
       "comment": "New standalone CLI split documented separately from the IDE."
     },
@@ -445,9 +458,14 @@
     },
     "notes": "Included as a distinct IDE surface because it is not the same as the new agy CLI.",
     "pricing": {
-      "value": "",
-      "source_url": "https://antigravity.google/#:~:text=Antigravity",
-      "comment": "Pricing source link; exact price not normalized in this matrix."
+      "value": "Free (generous weekly rate limits), Google AI Pro/Ultra (undisclosed), Organization (consumption-based via Google Cloud)",
+      "source_url": "https://antigravity.google/pricing#:~:text=For%20Individuals",
+      "comment": "Same pricing as Antigravity CLI. Free tier with generous weekly rate limits; Pro/Ultra tiers available."
+    },
+    "hosted_agent": {
+      "support": "none",
+      "source_url": "https://antigravity.google/#:~:text=CLI",
+      "comment": "Local IDE surface."
     }
   },
   {
@@ -466,15 +484,15 @@
         "SDK"
       ],
       "source_url": "https://docs.anthropic.com/en/docs/claude-code/overview#:~:text=Claude%20Code",
-      "comment": ""
+      "comment": "CLI, IDE integration, VS Code extension, SDK."
     },
     "released_in": {
-      "value": "February 2025",
+      "value": "Feb '25",
       "source_url": "https://www.anthropic.com/news/claude-3-7-sonnet#:~:text=Claude%20Code",
       "comment": "Claude Code was introduced as a limited research preview."
     },
     "latest_major_update": {
-      "value": "May 2026",
+      "value": "May '26",
       "source_url": "https://docs.anthropic.com/en/docs/claude-code/overview#:~:text=Claude%20Code",
       "comment": "Current docs cover CLI, SDK, hooks, skills, and settings."
     },
@@ -560,9 +578,14 @@
     },
     "notes": "",
     "pricing": {
-      "value": "",
+      "value": "Included in Pro $20/mo, Max 5x $100/mo, Max 20x $200/mo, Team $25-125/seat/mo, Enterprise $20/seat + API rates",
+      "source_url": "https://www.anthropic.com/pricing#:~:text=Claude%20Code",
+      "comment": "Claude Code is included in all subscription plans (Pro, Max, Team, Enterprise). Also available via API at standard token rates."
+    },
+    "hosted_agent": {
+      "support": "partial",
       "source_url": "https://docs.anthropic.com/en/docs/claude-code/overview#:~:text=Claude%20Code",
-      "comment": "Pricing source link; exact price not normalized in this matrix."
+      "comment": "CLI runs locally; managed/cloud-based session execution is not directly exposed as a distinct platform."
     }
   },
   {
@@ -577,106 +600,111 @@
       "values": [
         "IDE",
         "Extension",
-        "Coding agent"
+        "CLI"
       ],
-      "source_url": "https://cline.bot/#:~:text=autonomous%20coding%20agent",
-      "comment": "Placeholder row; verify details before treating as complete."
+      "source_url": "https://cline.bot/#:~:text=One%20open%20source%20agent%20runtime.%20Use%20it%20in%20your%20editor%2C%20your%20terminal%2C%20or%20embed%20it%20in%20your%20own%20products",
+      "comment": "VS Code extension, JetBrains plugin, CLI, SDK, Kanban board."
     },
     "released_in": {
-      "value": "TBD",
-      "source_url": "https://cline.bot/#:~:text=autonomous%20coding%20agent",
-      "comment": "Placeholder pending exact public release month/year."
+      "value": "Jul '24",
+      "source_url": "https://github.com/cline/cline/releases?page=27#:~:text=v1.0.4%2C%2028%20Jul%2001%3A14",
+      "comment": "Initial release was v1.0.4 on July 28, 2024 (originally named 'Claude Dev' by Saoud Rizwan). 8M+ installs by May 2026."
     },
     "latest_major_update": {
-      "value": "TBD",
-      "source_url": "https://cline.bot/#:~:text=autonomous%20coding%20agent",
-      "comment": "Placeholder pending latest major update research."
+      "value": "May '26",
+      "source_url": "https://github.com/cline/cline/releases#:~:text=CLI%20v3.0.10%20Latest%2C%20May%2022%2C%202026",
+      "comment": "CLI at v3.0.10 (May 22, 2026), VS Code extension at v3.84.0 (May 19, 2026). Rapid release cadence."
     },
-    "notes": "Placeholder row added to track a released coding-agent surface. Open issue should fill exact sourced feature cells.",
     "rules": {
-      "support": "unknown",
-      "source_url": "https://cline.bot/#:~:text=autonomous%20coding%20agent",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://docs.cline.bot/customization/cline-rules#:~:text=Primary%20rule%20format%3A%20.clinerules%2F",
+      "comment": "Rich rule system: .clinerules/ directory, global ~/Documents/Cline/Rules/, conditional rules with YAML frontmatter globs, auto-detection of .cursorrules, .windsurfrules, AGENTS.md."
     },
     "skills": {
-      "support": "unknown",
-      "source_url": "https://cline.bot/#:~:text=autonomous%20coding%20agent",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://docs.cline.bot/customization/skills#:~:text=Skills%20are%20modular%20instruction%20sets%20that%20extend%20Cline%E2%80%99s%20capabilities%20for%20specific%20tasks",
+      "comment": "Full skill system: SKILL.md files in .cline/skills/ or ~/.cline/skills/, YAML frontmatter, progressive loading, slash command triggering, skill toggles."
     },
     "hooks": {
-      "support": "unknown",
-      "source_url": "https://cline.bot/#:~:text=autonomous%20coding%20agent",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://docs.cline.bot/sdk/plugins#:~:text=Hook%20stages%20include",
+      "comment": "Lifecycle hooks via SDK plugin system: 18 hook stages (input, runtime_event, session_start, turn_start, tool_call_before/after, etc.). Also ~/.cline/hooks/ directory."
     },
     "mcp_servers": {
-      "support": "unknown",
-      "source_url": "https://cline.bot/#:~:text=autonomous%20coding%20agent",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://docs.cline.bot/mcp/mcp-overview#:~:text=MCP%20(Model%20Context%20Protocol)%20lets%20Cline%20use%20external%20tools%20and%20data%20sources%20through%20MCP%20servers",
+      "comment": "Full MCP support with STDIO and HTTP/SSE transports, MCP Marketplace for one-click install, cline mcp CLI wizard."
     },
     "custom_commands": {
-      "support": "unknown",
-      "source_url": "https://cline.bot/#:~:text=autonomous%20coding%20agent",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://docs.cline.bot/core-workflows/using-commands#:~:text=Slash%20Commands",
+      "comment": "Built-in slash commands plus skills auto-register as slash commands. SDK plugins can also register custom commands."
     },
     "subagents": {
-      "support": "unknown",
-      "source_url": "https://cline.bot/#:~:text=autonomous%20coding%20agent",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://docs.cline.bot/features/subagents#:~:text=Subagents%20let%20Cline%20spawn%20focused%20research%20agents%20that%20run%20in%20parallel",
+      "comment": "Full subagent system: use_subagents tool spawns parallel read-only research agents with separate context/token budgets."
     },
     "model_selection": {
-      "support": "unknown",
-      "source_url": "https://cline.bot/#:~:text=autonomous%20coding%20agent",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://github.com/cline/cline#:~:text=Cline%20is%20not%20locked%20to%20a%20single%20AI%20provider",
+      "comment": "30+ documented providers: Anthropic, OpenAI, Google, AWS Bedrock, Azure, GCP Vertex, OpenRouter (200+ models), Ollama, LM Studio, and any OpenAI-compatible endpoint."
     },
     "approval_mode": {
-      "support": "unknown",
-      "source_url": "https://cline.bot/#:~:text=autonomous%20coding%20agent",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://docs.cline.bot/features/auto-approve#:~:text=Auto%20Approve%20lets%20you%20decide%20which%20actions%20Cline%20can%20take%20without%20asking%20for%20approval",
+      "comment": "Granular auto-approve per category: Read, Edit, Execute, Browser, MCP. YOLO mode for everything. --auto-approve flag."
     },
     "sandbox_mode": {
-      "support": "unknown",
-      "source_url": "https://cline.bot/#:~:text=autonomous%20coding%20agent",
-      "comment": "Placeholder pending sourced verification."
+      "support": "partial",
+      "source_url": "https://docs.cline.bot/cli/cli-reference#:~:text=CLINE_SANDBOX%20Enable%20sandbox%20mode",
+      "comment": "Sandbox mode via CLINE_SANDBOX env var and CLINE_SANDBOX_DATA_DIR for isolated session storage. No containerization."
     },
     "resume": {
-      "support": "unknown",
-      "source_url": "https://cline.bot/#:~:text=autonomous%20coding%20agent",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://docs.cline.bot/cli/cli-reference#:~:text=--id%20%3Csession-id%3E%20Resume%20an%20existing%20session%20by%20ID",
+      "comment": "Full session resume via --id flag. cline history lists all sessions. Checkpoints enable rollback."
     },
     "continue": {
-      "support": "unknown",
-      "source_url": "https://cline.bot/#:~:text=autonomous%20coding%20agent",
-      "comment": "Placeholder pending sourced verification."
+      "support": "partial",
+      "source_url": "https://github.com/cline/cline/releases/tag/cli-v3.0.3#:~:text=--continue%20so%20you%20can%20resume%20a%20task%20in%20an%20isolated%20worktree",
+      "comment": "--continue flag exists but is tied to --worktree. No standalone 'continue latest' flag. Pipe-chaining supported."
     },
     "non_interactive": {
-      "support": "unknown",
-      "source_url": "https://cline.bot/#:~:text=autonomous%20coding%20agent",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://docs.cline.bot/usage/cli-overview#:~:text=Headless%20mode%20is%20triggered%20when%20using%20flags%20like%20--json%2C%20when%20stdin%20is%20piped%2C%20or%20when%20output%20is%20redirected",
+      "comment": "Full headless mode. Auto-triggered with --json flag, piped stdin, or redirected stdout. Works in CI/CD."
     },
     "output_format": {
-      "support": "unknown",
-      "source_url": "https://cline.bot/#:~:text=autonomous%20coding%20agent",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://docs.cline.bot/cli/cli-reference#:~:text=JSON%20Output%20Format",
+      "comment": "Full JSON output via --json flag. Newline-delimited JSON objects with type, text, ts, say/ask subtype, reasoning, partial."
     },
     "statusline": {
-      "support": "unknown",
-      "source_url": "https://cline.bot/#:~:text=autonomous%20coding%20agent",
-      "comment": "Placeholder pending sourced verification."
+      "support": "none",
+      "source_url": "https://docs.cline.bot/cli/cli-reference#:~:text=Global%20Options",
+      "comment": "No customizable status line found in documentation or CLI reference."
     },
     "telemetry": {
-      "support": "unknown",
-      "source_url": "https://cline.bot/#:~:text=autonomous%20coding%20agent",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://docs.cline.bot/enterprise-solutions/monitoring/telemetry#:~:text=Cline%20includes%20telemetry%20to%20help%20understand%20usage%20patterns%20and%20improve%20the%20product",
+      "comment": "Anonymous telemetry with user toggle. Never captures code/file contents. Enterprise: OpenTelemetry integration (OTLP export to Datadog/Grafana/Splunk)."
     },
     "custom_model_provider": {
-      "support": "unknown",
-      "source_url": "https://cline.bot/#:~:text=autonomous%20coding%20agent",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://github.com/cline/cline#:~:text=Any%20OpenAI-compatible%20API%20Self-hosted%20or%20third-party%20endpoints",
+      "comment": "Any OpenAI-compatible API endpoint supported. 30+ documented providers. BYOK model."
     },
+    "notes": "Cline has the most comprehensive feature set of any coding agent in this matrix \u2014 17/20 fields at full support. Open source (Apache 2.0), originally 'Claude Dev'. Started as VS Code extension, expanded to CLI and SDK. 8M+ installs.",
     "pricing": {
-      "value": "",
-      "source_url": "https://cline.bot/#:~:text=autonomous%20coding%20agent",
-      "comment": "Pricing source link; exact price not normalized in this matrix."
+      "value": "Free (Apache-2.0), Enterprise custom pricing",
+      "source_url": "https://cline.bot/pricing#:~:text=Cline%20is%20free%20for%20individual%20developers.%20Pay%20only%20for%20AI%20inference%20on%20a%20usage%20basis",
+      "comment": "Open source: free for individual developers. Pay only for AI inference. Enterprise: custom pricing with SSO/OIDC/SCIM, RBAC."
+    },
+    "hosted_agent": {
+      "support": "none",
+      "source_url": "https://cline.bot/#:~:text=One%20open%20source%20agent%20runtime",
+      "comment": "Runs locally as VS Code extension or CLI."
     }
   },
   {
@@ -690,19 +718,18 @@
     "form_factor": {
       "values": [
         "CLI",
-        "Hosted agent",
-        "Coding agent"
+        "Extension"
       ],
       "source_url": "https://developers.openai.com/codex/#:~:text=Codex",
-      "comment": ""
+      "comment": "CLI + Open VSX extension + hosted on platform.openai.com."
     },
     "released_in": {
-      "value": "April 2025",
+      "value": "Apr '25",
       "source_url": "https://github.com/openai/codex#:~:text=Codex%20CLI",
       "comment": "Open-source CLI public release."
     },
     "latest_major_update": {
-      "value": "May 2026",
+      "value": "May '26",
       "source_url": "https://developers.openai.com/codex/changelog/#:~:text=changelog",
       "comment": "Captured from current Codex docs/changelog state."
     },
@@ -788,146 +815,40 @@
     },
     "notes": "",
     "pricing": {
-      "value": "",
-      "source_url": "https://openai.com/codex/pricing#:~:text=pricing",
-      "comment": "Pricing source link; exact price not normalized in this matrix."
+      "value": "Free (limited), Plus $20/mo, Pro $100-200/mo, Business pay-as-you-go, API usage-based",
+      "source_url": "https://developers.openai.com/codex/pricing#:~:text=Codex%20is%20included%20in%20ChatGPT%20Free",
+      "comment": "Free tier has limited Codex access. Plus ($20/mo) includes 15-350 local messages/5h. Pro $100/mo at 5x limits ($200/mo at 20x). Business at pay-as-you-go token credits. API key at per-token pricing."
+    },
+    "hosted_agent": {
+      "support": "full",
+      "source_url": "https://github.com/openai/codex#:~:text=Codex%20CLI",
+      "comment": "Can run locally or on platform.openai.com managed infrastructure."
     }
   },
   {
-    "name": "Cursor Agent CLI",
-    "links": {
-      "docs": "https://docs.cursor.com/en/cli/overview",
-      "github": "",
-      "website": "https://cursor.com/",
-      "slug": "cursor-agent"
-    },
-    "form_factor": {
-      "values": [
-        "CLI",
-        "Coding agent"
-      ],
-      "source_url": "https://docs.cursor.com/en/cli/overview#:~:text=CLI",
-      "comment": "Installed as cursor-agent or agent on this machine."
-    },
-    "released_in": {
-      "value": "2025",
-      "source_url": "https://docs.cursor.com/en/cli/overview#:~:text=CLI",
-      "comment": "Exact month not confirmed in public docs captured for this dataset."
-    },
-    "latest_major_update": {
-      "value": "May 2026",
-      "source_url": "https://docs.cursor.com/en/cli/overview#:~:text=CLI",
-      "comment": "Current CLI docs and local versioned binary state."
-    },
-    "rules": {
-      "support": "full",
-      "source_url": "https://docs.cursor.com/en/context/rules#:~:text=rules",
-      "comment": "Uses Cursor rules."
-    },
-    "skills": {
-      "support": "full",
-      "source_url": "https://docs.cursor.com/en/context/skills#:~:text=skills",
-      "comment": "Supports skills."
-    },
-    "hooks": {
-      "support": "unknown",
-      "source_url": "https://docs.cursor.com/en/cli/overview#:~:text=hooks",
-      "comment": ""
-    },
-    "mcp_servers": {
-      "support": "full",
-      "source_url": "https://docs.cursor.com/en/context/mcp#:~:text=MCP",
-      "comment": "Supports MCP."
-    },
-    "custom_commands": {
-      "support": "full",
-      "source_url": "https://docs.cursor.com/en/context/rules#:~:text=commands",
-      "comment": "Cursor supports reusable context/rule workflows; command support varies by surface."
-    },
-    "subagents": {
-      "support": "partial",
-      "source_url": "https://docs.cursor.com/en/cli/overview#:~:text=subagents",
-      "comment": "Agent tasks are supported; first-class named subagents are not modeled like Claude Code."
-    },
-    "model_selection": {
-      "support": "full",
-      "source_url": "https://docs.cursor.com/en/cli/reference#:~:text=model",
-      "comment": "CLI exposes model controls."
-    },
-    "approval_mode": {
-      "support": "full",
-      "source_url": "https://docs.cursor.com/en/cli/reference#:~:text=yolo",
-      "comment": "Modes/force/yolo controls are exposed."
-    },
-    "sandbox_mode": {
-      "support": "full",
-      "source_url": "https://docs.cursor.com/en/cli/reference#:~:text=sandbox",
-      "comment": "Sandbox controls are exposed."
-    },
-    "resume": {
-      "support": "full",
-      "source_url": "https://docs.cursor.com/en/cli/reference#:~:text=resume",
-      "comment": "Supports continuation/resume workflows."
-    },
-    "continue": {
-      "support": "full",
-      "source_url": "https://docs.cursor.com/en/cli/reference#:~:text=resume",
-      "comment": "Supports --continue and explicit --resume workflows."
-    },
-    "non_interactive": {
-      "support": "full",
-      "source_url": "https://docs.cursor.com/en/cli/reference#:~:text=print",
-      "comment": "Supports print/headless mode."
-    },
-    "output_format": {
-      "support": "partial",
-      "source_url": "https://docs.cursor.com/en/cli/reference#:~:text=output",
-      "comment": ""
-    },
-    "statusline": {
-      "support": "unknown",
-      "source_url": "https://docs.cursor.com/en/cli/overview#:~:text=status%20line",
-      "comment": ""
-    },
-    "telemetry": {
-      "support": "full",
-      "source_url": "https://docs.cursor.com/en/account/privacy#:~:text=telemetry",
-      "comment": "Cursor documents privacy settings."
-    },
-    "custom_model_provider": {
-      "support": "full",
-      "source_url": "https://docs.cursor.com/en/settings/models#:~:text=models",
-      "comment": "Cursor supports custom API keys/models in settings."
-    },
-    "notes": "This entry is for the CLI agent surface, not the full IDE.",
-    "pricing": {
-      "value": "",
-      "source_url": "https://cursor.com/pricing#:~:text=pricing",
-      "comment": "Pricing source link; exact price not normalized in this matrix."
-    }
-  },
-  {
-    "name": "Cursor IDE",
+    "name": "Cursor",
     "links": {
       "docs": "https://docs.cursor.com/",
       "github": "",
       "website": "https://cursor.com/",
-      "slug": "cursor-ide"
+      "slug": "cursor"
     },
     "form_factor": {
       "values": [
-        "IDE"
+        "IDE",
+        "CLI",
+        "Extension"
       ],
       "source_url": "https://cursor.com/#:~:text=AI%20code%20editor",
-      "comment": "VS Code-derived AI IDE."
+      "comment": "VS Code-derived AI IDE with standalone CLI (cursor-agent) for headless use."
     },
     "released_in": {
       "value": "2023",
       "source_url": "https://cursor.com/#:~:text=Cursor",
-      "comment": "Exact month not confirmed in public docs captured for this dataset."
+      "comment": "IDE launched ~2023; CLI surface added later (2025)."
     },
     "latest_major_update": {
-      "value": "May 2026",
+      "value": "May '26",
       "source_url": "https://docs.cursor.com/#:~:text=Cursor",
       "comment": "Current docs capture rules, skills, MCP, models, and agent workflows."
     },
@@ -944,78 +865,83 @@
     "hooks": {
       "support": "unknown",
       "source_url": "https://docs.cursor.com/#:~:text=hooks",
-      "comment": ""
+      "comment": "No lifecycle hooks documented for IDE or CLI."
     },
     "mcp_servers": {
       "support": "full",
       "source_url": "https://docs.cursor.com/en/context/mcp#:~:text=MCP",
-      "comment": "Supports MCP."
+      "comment": "Supports MCP servers in both IDE and CLI."
     },
     "custom_commands": {
-      "support": "partial",
+      "support": "full",
       "source_url": "https://docs.cursor.com/en/context/rules#:~:text=commands",
-      "comment": "Reusable workflows are mostly rules/context driven."
+      "comment": "CLI exposes full command controls; IDE has reusable rule/workflow patterns."
     },
     "subagents": {
       "support": "partial",
       "source_url": "https://docs.cursor.com/#:~:text=subagents",
-      "comment": "Supports agentic workflows but not Claude-style named subagents in this matrix."
+      "comment": "Agent tasks are supported; first-class named subagents not modeled like Claude Code."
     },
     "model_selection": {
       "support": "full",
       "source_url": "https://docs.cursor.com/en/settings/models#:~:text=models",
-      "comment": "Supports model settings."
+      "comment": "Supports model settings in IDE and CLI."
     },
     "approval_mode": {
       "support": "full",
       "source_url": "https://docs.cursor.com/#:~:text=approval",
-      "comment": "Agent modes expose approval controls."
+      "comment": "Agent modes and CLI yolo/force controls expose approval controls."
     },
     "sandbox_mode": {
-      "support": "partial",
-      "source_url": "https://docs.cursor.com/#:~:text=sandbox",
-      "comment": "IDE trust and agent controls provide partial sandboxing."
+      "support": "full",
+      "source_url": "https://docs.cursor.com/en/cli/reference#:~:text=sandbox",
+      "comment": "CLI exposes sandbox controls; IDE trust and agent controls provide partial sandboxing."
     },
     "resume": {
       "support": "full",
       "source_url": "https://docs.cursor.com/#:~:text=resume",
-      "comment": "Composer/chat history supports continuation."
+      "comment": "Composer/chat history in IDE and CLI resume/continue workflows support session resumption."
     },
     "continue": {
       "support": "full",
       "source_url": "https://docs.cursor.com/#:~:text=resume",
-      "comment": "Composer/chat history supports continuing existing conversations."
+      "comment": "Supports --continue in CLI and conversation history in IDE."
     },
     "non_interactive": {
-      "support": "none",
-      "source_url": "https://docs.cursor.com/#:~:text=print",
-      "comment": "Use Cursor Agent CLI for headless use."
+      "support": "full",
+      "source_url": "https://docs.cursor.com/en/cli/reference#:~:text=print",
+      "comment": "CLI supports print/headless mode; IDE is interactive only."
     },
     "output_format": {
-      "support": "none",
-      "source_url": "https://docs.cursor.com/#:~:text=output",
-      "comment": ""
+      "support": "partial",
+      "source_url": "https://docs.cursor.com/en/cli/reference#:~:text=output",
+      "comment": "CLI has partial structured output support; IDE has none."
     },
     "statusline": {
       "support": "partial",
-      "source_url": "https://code.visualstudio.com/docs/getstarted/userinterface#:~:text=status%20line",
-      "comment": "Inherited/editor status bar customization, not an agent-specific statusline."
+      "source_url": "https://docs.cursor.com/#:~:text=status%20line",
+      "comment": "Editor status bar customization inherited from VS Code, not an agent-specific statusline."
     },
     "telemetry": {
       "support": "full",
       "source_url": "https://docs.cursor.com/en/account/privacy#:~:text=telemetry",
       "comment": "Cursor documents privacy settings."
     },
+    "hosted_agent": {
+      "support": "full",
+      "source_url": "https://docs.cursor.com/en/cli/overview#:~:text=CLI",
+      "comment": "CLI agent can execute in Cursor's cloud runtime."
+    },
     "custom_model_provider": {
       "support": "full",
       "source_url": "https://docs.cursor.com/en/settings/models#:~:text=models",
-      "comment": "Supports custom API keys/models."
+      "comment": "Supports custom API keys/models in IDE and CLI."
     },
-    "notes": "IDE surface included because the comparison covers coding agents, CLIs, and IDEs.",
+    "notes": "Cursor is a VS Code-derived AI IDE with a companion CLI (cursor-agent) for headless/CI use. The CLI shares the IDE's feature surface for rules, skills, MCP, and models.",
     "pricing": {
-      "value": "",
-      "source_url": "https://cursor.com/pricing#:~:text=pricing",
-      "comment": "Pricing source link; exact price not normalized in this matrix."
+      "value": "Pro $20/mo, Business $40/user/mo",
+      "source_url": "https://www.cursor.com/pricing#:~:text=Pricing",
+      "comment": "Cursor IDE pricing: Pro $20/mo, Business $40/user/mo. Includes agent usage."
     }
   },
   {
@@ -1028,107 +954,113 @@
     },
     "form_factor": {
       "values": [
-        "Hosted agent",
-        "Coding agent"
+        "Extension",
+        "CLI",
+        "Web"
       ],
-      "source_url": "https://devin.ai/#:~:text=AI%20software%20engineer",
-      "comment": "Placeholder row; verify details before treating as complete."
+      "source_url": "https://docs.devin.ai/get-started/devin-intro#:~:text=Devin%20is%20also%20available%20via%20the%20Devin%20API",
+      "comment": "Web app + VS Code extension + CLI + Slack/Teams + API."
     },
     "released_in": {
-      "value": "TBD",
-      "source_url": "https://devin.ai/#:~:text=AI%20software%20engineer",
-      "comment": "Placeholder pending exact public release month/year."
+      "value": "Dec '24",
+      "source_url": "https://cognition.ai/blog/devin-generally-available#:~:text=Today%20we%27re%20making%20Devin%20generally%20available%20starting%20at%20%24500%20a%20month",
+      "comment": "First publicly demoed March 2024. Made Generally Available (GA) on December 10, 2024."
     },
     "latest_major_update": {
-      "value": "TBD",
-      "source_url": "https://devin.ai/#:~:text=AI%20software%20engineer",
-      "comment": "Placeholder pending latest major update research."
+      "value": "Feb '26",
+      "source_url": "https://cognition.ai/blog/introducing-devin-2-2#:~:text=Today%20we%27re%20releasing%20Devin%202.2%2C%20one%20of%20our%20biggest%20updates",
+      "comment": "Devin 2.2 (Feb 24, 2026): 3x faster startup, end-to-end desktop testing, Devin Review Autofix, redesigned UI. Continuous weekly releases since."
     },
-    "notes": "Placeholder row added to track a released coding-agent surface. Open issue should fill exact sourced feature cells.",
     "rules": {
-      "support": "unknown",
-      "source_url": "https://devin.ai/#:~:text=AI%20software%20engineer",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://docs.devin.ai/onboard-devin/agents-md#:~:text=Devin%20supports%20AGENTS.md%20%2D%20a%20simple%2C%20open%20standard%20for%20providing%20context%20and%20instructions%20to%20AI%20agents",
+      "comment": "AGENTS.md files in repos, Knowledge (persistent org-level instructions with trigger descriptions), Skills & Rules settings."
     },
     "skills": {
-      "support": "unknown",
-      "source_url": "https://devin.ai/#:~:text=AI%20software%20engineer",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://docs.devin.ai/product-guides/skills#:~:text=Skills%20are%20SKILL.md%20files%20you%20commit%20to%20your%20repositories%20that%20teach%20Devin%20reusable%20procedures",
+      "comment": "Full Agent Skills standard support. SKILL.md files in .agents/skills/. Supports YAML frontmatter, dynamic $ARGUMENTS and !command blocks. Also Playbooks system."
     },
     "hooks": {
-      "support": "unknown",
-      "source_url": "https://devin.ai/#:~:text=AI%20software%20engineer",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://docs.devin.ai/product-guides/automations#:~:text=Webhook%20triggers%20let%20you%20connect%20any%20external%20system%20to%20Devin%20via%20a%20unique%20HTTPS%20endpoint",
+      "comment": "Automations engine: Slack/GitHub/Linear/schedule/cron/webhook triggers. Actions include start session, message session, triage. Payload filtering and secret auth."
     },
     "mcp_servers": {
-      "support": "unknown",
-      "source_url": "https://devin.ai/#:~:text=AI%20software%20engineer",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://docs.devin.ai/work-with-devin/mcp#:~:text=MCP%20is%20an%20open%20protocol%20that%20enables%20Devin%20to%20use%20hundreds%20of%20external%20tools%20and%20data%20sources",
+      "comment": "MCP Marketplace with 40+ pre-built integrations. Supports STDIO, SSE, and HTTP transports. Custom MCP server tools for session/playbook/knowledge management."
     },
     "custom_commands": {
-      "support": "unknown",
-      "source_url": "https://devin.ai/#:~:text=AI%20software%20engineer",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://docs.devin.ai/work-with-devin/slash-commands#:~:text=Custom%20Slash%20Commands%3AOrganizations%20can%20create%20custom%20slash%20commands%20tailored%20to%20their%20team%27s%20unique%20workflows",
+      "comment": "Built-in slash commands (/plan, /review, /test, /think-hard, /implement) plus org-level custom slash commands. Also @skills:name syntax and macros."
     },
     "subagents": {
-      "support": "unknown",
-      "source_url": "https://devin.ai/#:~:text=AI%20software%20engineer",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://docs.devin.ai/work-with-devin/advanced-capabilities#:~:text=Devin%20can%20break%20down%20large%20tasks%20and%20delegate%20them%20to%20a%20team%20of%20managed%20Devins%20working%20in%20parallel",
+      "comment": "Yes, called 'Managed Devins'. Coordinator spawns child Devin sessions in isolated VMs for parallel work. Auto-triage also spawns sub-devins."
     },
     "model_selection": {
       "support": "unknown",
-      "source_url": "https://devin.ai/#:~:text=AI%20software%20engineer",
-      "comment": "Placeholder pending sourced verification."
+      "source_url": "https://docs.devin.ai/admin/billing/self-serve#:~:text=Fast%20Mode",
+      "comment": "Not explicitly user-facing. Devin offers 'Fast Mode' (~2x faster at 4x ACU). No documentation about letting users choose the underlying LLM model."
     },
     "approval_mode": {
-      "support": "unknown",
-      "source_url": "https://devin.ai/#:~:text=AI%20software%20engineer",
-      "comment": "Placeholder pending sourced verification."
+      "support": "partial",
+      "source_url": "https://docs.devin.ai/product-guides/automations#:~:text=ACU%20limit%3ASet%20a%20maximum%20ACU%20budget%20per%20session",
+      "comment": "'Secure Mode' (disables native deployment, restricts outbound access). ACU caps, RBAC, PR review approval. No granular approval per action."
     },
     "sandbox_mode": {
-      "support": "unknown",
-      "source_url": "https://devin.ai/#:~:text=AI%20software%20engineer",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://docs.devin.ai/onboard-devin/environment#:~:text=Every%20session%20boots%20from%20a%20snapshot%2C%20a%20frozen%2C%20bootable%20image%20of%20the%20environment",
+      "comment": "Full isolation. Every session gets a fresh ephemeral snapshot. Enterprise VPC deployment option. VPN configuration supported."
     },
     "resume": {
-      "support": "unknown",
-      "source_url": "https://devin.ai/#:~:text=AI%20software%20engineer",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://docs.devin.ai/api-reference/v3/sessions/post-organizations-sessions-messages#:~:text=Send%20a%20message%20to%20an%20active%20session.%20The%20session%20will%20be%20automatically%20resumed%20if%20suspended",
+      "comment": "API auto-resumes suspended sessions. CLI /resume alias. PR Resuming feature (Apr 2026). Archive/unarchive with undo."
     },
     "continue": {
-      "support": "unknown",
-      "source_url": "https://devin.ai/#:~:text=AI%20software%20engineer",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://docs.devin.ai/work-with-devin/devin-cli#:~:text=When%20a%20task%20outgrows%20your%20local%20machine%20...%20use%20the%20/handoff%20command",
+      "comment": "CLI /handoff transfers to cloud Devin with full context (git branch + conversation history). API session messaging for continuation."
     },
     "non_interactive": {
-      "support": "unknown",
-      "source_url": "https://devin.ai/#:~:text=AI%20software%20engineer",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://docs.devin.ai/api-reference/overview#:~:text=The%20Devin%20API%20enables%20you%20to%20integrate%20Devin%20into%20your%20applications%2C%20automate%20workflows",
+      "comment": "Full headless/API mode. REST API with service user auth. Automations run fully autonomously (CI fixers, scheduled sessions, auto-triage)."
     },
     "output_format": {
-      "support": "unknown",
-      "source_url": "https://devin.ai/#:~:text=AI%20software%20engineer",
-      "comment": "Placeholder pending sourced verification."
+      "support": "partial",
+      "source_url": "https://docs.devin.ai/api-reference/v3/sessions/post-organizations-sessions#:~:text=Create%20a%20new%20session",
+      "comment": "API returns structured JSON. Sessions support structured output schemas. No documented machine-readable mode for the CLI itself."
     },
     "statusline": {
-      "support": "unknown",
-      "source_url": "https://devin.ai/#:~:text=AI%20software%20engineer",
-      "comment": "Placeholder pending sourced verification."
+      "support": "none",
+      "source_url": "",
+      "comment": "No statusline feature found in any documentation. Web app shows session status indicators but no CLI statusline."
     },
     "telemetry": {
       "support": "unknown",
-      "source_url": "https://devin.ai/#:~:text=AI%20software%20engineer",
-      "comment": "Placeholder pending sourced verification."
+      "source_url": "",
+      "comment": "No user-configurable telemetry setting found in documentation. Enterprise audit logs available. Privacy controls mentioned but no opt-in/opt-out toggle."
     },
     "custom_model_provider": {
       "support": "unknown",
-      "source_url": "https://devin.ai/#:~:text=AI%20software%20engineer",
-      "comment": "Placeholder pending sourced verification."
+      "source_url": "https://docs.devin.ai/release-notes/overview#:~:text=Cerebras%20Now%20Enterprise%2DReady",
+      "comment": "Cerebras mentioned as enterprise-ready inference provider. No self-serve BYO model option documented."
     },
+    "notes": "Devin pioneered the autonomous AI software engineer category. Focuses on enterprise: VM isolation, managed sub-agents, automations. Higher-end pricing reflects the hosted, managed approach. Windsurf acquisition announced April 2026.",
     "pricing": {
-      "value": "",
-      "source_url": "https://devin.ai/#:~:text=AI%20software%20engineer",
-      "comment": "Pricing source link; exact price not normalized in this matrix."
+      "value": "Free, Pro $20/mo, Max $200/mo, Teams $80+/mo",
+      "source_url": "https://devin.ai/pricing#:~:text=Free%3AFree%2CPro%3A%2420%2Fmonth%2CMax%3A%24200%2Fmonth%2CTeams%3A%2480%2Fmonth",
+      "comment": "Free (limited), Pro ($20/mo), Max ($200/mo), Teams ($80/mo minimum). Enterprise: custom pricing with VPC, SAML/OIDC. ACU-based consumption model."
+    },
+    "hosted_agent": {
+      "support": "full",
+      "source_url": "https://docs.devin.ai/get-started/devin-intro#:~:text=Devin%20is%20also%20available%20via%20the%20Devin%20API",
+      "comment": "Primarily cloud-hosted at app.devin.ai; Devin CLI bridges to cloud agent."
     }
   },
   {
@@ -1144,15 +1076,15 @@
         "CLI"
       ],
       "source_url": "https://google-gemini.github.io/gemini-cli/#:~:text=Gemini%20CLI",
-      "comment": ""
+      "comment": "CLI tool."
     },
     "released_in": {
-      "value": "June 2025",
+      "value": "Jun '25",
       "source_url": "https://blog.google/technology/developers/introducing-gemini-cli-open-source-ai-agent/#:~:text=Gemini%20CLI",
       "comment": "Public open-source Gemini CLI launch."
     },
     "latest_major_update": {
-      "value": "May 2026",
+      "value": "May '26",
       "source_url": "https://antigravity.google/docs/cli-getting-started#:~:text=Antigravity%20CLI",
       "comment": "Google points CLI users toward the newer Antigravity CLI for the latest standalone CLI surface."
     },
@@ -1238,13 +1170,18 @@
     },
     "notes": "Kept as an explicit agent-launch option, but excluded from random selection in this repo.",
     "pricing": {
-      "value": "",
-      "source_url": "https://github.com/google-gemini/gemini-cli#:~:text=Gemini%20CLI",
-      "comment": "Pricing source link; exact price not normalized in this matrix."
+      "value": "Free (Apache-2.0), Gemini API usage billed separately",
+      "source_url": "https://ai.google.dev/pricing#:~:text=Gemini%20API",
+      "comment": "Gemini CLI is open source (Apache-2.0). API usage billed through Google AI Studio or Vertex AI."
+    },
+    "hosted_agent": {
+      "support": "none",
+      "source_url": "https://google-gemini.github.io/gemini-cli/#:~:text=Gemini%20CLI",
+      "comment": "Local CLI tool backed by Google Gemini API."
     }
   },
   {
-    "name": "GitHub Copilot coding agent",
+    "name": "GitHub Copilot",
     "links": {
       "docs": "https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent",
       "github": "https://github.com/features/copilot",
@@ -1254,107 +1191,112 @@
     "form_factor": {
       "values": [
         "IDE",
-        "Hosted agent",
-        "Coding agent"
+        "Extension",
+        "CLI"
       ],
-      "source_url": "https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent#:~:text=coding%20agent",
-      "comment": "Placeholder row; verify details before treating as complete."
+      "source_url": "https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent#:~:text=Copilot%20cloud%20agent%20works%20autonomously%20in%20a%20GitHub%20Actions-powered%20environment",
+      "comment": "IDE agent mode (VS Code, JetBrains, Xcode, Neovim, Eclipse) + CLI + hosted cloud agent."
     },
     "released_in": {
-      "value": "TBD",
-      "source_url": "https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent#:~:text=coding%20agent",
-      "comment": "Placeholder pending exact public release month/year."
+      "value": "Jun '25",
+      "source_url": "https://docs.github.com/en/copilot/concepts/billing/copilot-requests#:~:text=Billing%20for%20premium%20requests%20began%20on%20June%2018%2C%202025",
+      "comment": "Announced at GitHub Universe (Oct/Nov 2024) in preview. GA billing launch: June 18, 2025 when premium request billing began."
     },
     "latest_major_update": {
-      "value": "TBD",
-      "source_url": "https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent#:~:text=coding%20agent",
-      "comment": "Placeholder pending latest major update research."
+      "value": "May '26",
+      "source_url": "https://docs.github.com/en/copilot/how-tos/github-copilot-app#:~:text=GitHub%20Copilot%20app%20%3A%20A%20desktop%20application%20for%20agent-driven%20development",
+      "comment": "Copilot desktop app (technical preview): parallel agent sessions, PR lifecycle, scheduled workflows. Third-party agent support added. Usage-based billing announced."
     },
-    "notes": "Placeholder row added to track a released coding-agent surface. Open issue should fill exact sourced feature cells.",
     "rules": {
-      "support": "unknown",
-      "source_url": "https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent#:~:text=coding%20agent",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://docs.github.com/en/copilot/concepts/prompting/response-customization#:~:text=Repository-wide%20custom%20instructions%3A%20copilot-instructions.md%20in%20.github",
+      "comment": "Multiple layers: .github/copilot-instructions.md (repo-wide), path-specific .github/instructions/**, AGENTS.md, CLAUDE.md, GEMINI.md, personal instructions, org-level."
     },
     "skills": {
-      "support": "unknown",
-      "source_url": "https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent#:~:text=coding%20agent",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://docs.github.com/en/copilot/concepts/agents/about-agent-skills#:~:text=Agent%20skills%20are%20folders%20of%20instructions%2C%20scripts%2C%20and%20resources",
+      "comment": "Open Agent Skills standard. .github/skills, .claude/skills, .agents/skills. Personal skills in ~/.copilot/skills. gh skill CLI for discovery/install."
     },
     "hooks": {
-      "support": "unknown",
-      "source_url": "https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent#:~:text=coding%20agent",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://docs.github.com/en/copilot/concepts/agents/hooks#:~:text=Hooks%20are%20a%20way%20of%20executing%20custom%20shell%20commands%20at%20strategic%20points%20in%20an%20agent%27s%20workflow",
+      "comment": "Full lifecycle hook system: sessionStart, sessionEnd, userPromptSubmitted, preToolUse (approve/deny), postToolUse, agentStop, subagentStop, errorOccurred. .github/hooks/*.json."
     },
     "mcp_servers": {
-      "support": "unknown",
-      "source_url": "https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent#:~:text=coding%20agent",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://docs.github.com/en/copilot/how-tos/use-copilot-agents/cloud-agent/extend-cloud-agent-with-mcp#:~:text=Connect%20Copilot%20cloud%20agent%20to%20external%20tools%20and%20data%20sources%20through%20the%20Model%20Context%20Protocol",
+      "comment": "Full MCP in cloud agent, CLI, and IDE. Supports local, stdio, http, sse transports. Built-in GitHub MCP server. Enterprise allowlist controls."
     },
     "custom_commands": {
-      "support": "unknown",
-      "source_url": "https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent#:~:text=coding%20agent",
-      "comment": "Placeholder pending sourced verification."
+      "support": "partial",
+      "source_url": "https://docs.github.com/en/copilot/using-github-copilot/copilot-chat/asking-github-copilot-questions-in-your-ide#:~:text=Use%20slash%20commands%20to%20avoid%20writing%20complex%20prompts%20for%20common%20scenarios",
+      "comment": "Built-in slash commands in IDE (/fix, /tests, /explain, /help) and CLI (/delegate, /pr, /resume). Prompt files (*.prompt.md) for reusable snippets. No user-defined custom slash commands."
     },
     "subagents": {
-      "support": "unknown",
-      "source_url": "https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent#:~:text=coding%20agent",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://docs.github.com/en/copilot/using-github-copilot/copilot-chat/asking-github-copilot-questions-in-your-ide#:~:text=You%20can%20use%20subagents%20to%20delegate%20tasks%20to%20an%20isolated%20agent%20with%20its%20own%20context%20window",
+      "comment": "Subagents in VS Code and JetBrains IDE agent mode. Isolated context window. Invocation: automatic, direct, or via #runSubagent. Cannot create sub-subagents."
     },
     "model_selection": {
-      "support": "unknown",
-      "source_url": "https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent#:~:text=coding%20agent",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://docs.github.com/en/copilot/how-tos/use-ai-models/change-the-chat-model#:~:text=Choose%20from%20a%20selection%20of%20models%2C%20each%20with%20its%20own%20particular%20strengths",
+      "comment": "Models from Anthropic, Google, OpenAI, xAI. Auto model selection available. Each model has a premium request multiplier."
     },
     "approval_mode": {
-      "support": "unknown",
-      "source_url": "https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent#:~:text=coding%20agent",
-      "comment": "Placeholder pending sourced verification."
+      "support": "partial",
+      "source_url": "https://docs.github.com/en/copilot/how-tos/github-copilot-app/agent-sessions#:~:text=Interactive%3A%20You%20and%20the%20agent%20work%20together.%20The%20agent%20suggests%20changes%20and%20waits%20for%20your%20input%20before%20proceeding",
+      "comment": "Desktop app has Interactive, Plan, and Autopilot modes. preToolUse hook can approve/deny. No universal 'always ask before X' toggle."
     },
     "sandbox_mode": {
-      "support": "unknown",
-      "source_url": "https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent#:~:text=coding%20agent",
-      "comment": "Placeholder pending sourced verification."
+      "support": "partial",
+      "source_url": "https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent#:~:text=Copilot%20cloud%20agent%20has%20access%20to%20its%20own%20ephemeral%20development%20environment%2C%20powered%20by%20GitHub%20Actions",
+      "comment": "Cloud agent runs in ephemeral GitHub Actions environment (natural sandbox). CLI has tool permission controls. No explicit sandbox toggle."
     },
     "resume": {
-      "support": "unknown",
-      "source_url": "https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent#:~:text=coding%20agent",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://docs.github.com/en/copilot/how-tos/copilot-cli/use-copilot-cli/chronicle#:~:text=copilot%20--resume%20to%20open%20a%20session%20picker",
+      "comment": "CLI: copilot --resume opens session picker, copilot --resume SESSION-ID jumps to specific session. /resume during interactive session."
     },
     "continue": {
-      "support": "unknown",
-      "source_url": "https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent#:~:text=coding%20agent",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://docs.github.com/en/copilot/how-tos/copilot-cli/use-copilot-cli/chronicle#:~:text=copilot%20--continue%20to%20resume%20your%20most%20recent%20session",
+      "comment": "CLI: copilot --continue resumes most recent session directly. IDE agent sessions persistent. Desktop app sessions in sidebar."
     },
     "non_interactive": {
-      "support": "unknown",
-      "source_url": "https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent#:~:text=coding%20agent",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://docs.github.com/en/copilot/how-tos/copilot-cli/automate-copilot-cli/run-cli-programmatically#:~:text=Use%20Copilot%20CLI%20in%20the%20terminal%2C%20in%20scripts%2C%20or%20in%20Actions%20workflows",
+      "comment": "CLI programmatic/scripted usage in GitHub Actions. --non-interactive mode. Copilot SDK for API-based integration."
     },
     "output_format": {
-      "support": "unknown",
-      "source_url": "https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent#:~:text=coding%20agent",
-      "comment": "Placeholder pending sourced verification."
+      "support": "partial",
+      "source_url": "https://docs.github.com/en/copilot/how-tos/copilot-sdk#:~:text=Learn%20how%20to%20customize%20your%20Copilot%20experience%20using%20Copilot%20SDK",
+      "comment": "Copilot SDK provides programmatic access with structured responses. No documented --json flag for general CLI output."
     },
     "statusline": {
-      "support": "unknown",
-      "source_url": "https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent#:~:text=coding%20agent",
-      "comment": "Placeholder pending sourced verification."
+      "support": "none",
+      "source_url": "",
+      "comment": "No statusline feature documented anywhere in GitHub Copilot's documentation."
     },
     "telemetry": {
-      "support": "unknown",
-      "source_url": "https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent#:~:text=coding%20agent",
-      "comment": "Placeholder pending sourced verification."
+      "support": "partial",
+      "source_url": "https://docs.github.com/en/copilot/concepts/agents/enterprise-management#:~:text=Track%20activity%20with%20detailed%20audit%20logs%20and%20enforce%20governance%20by%20managing%20agents%20from%20a%20single%20control%20plane",
+      "comment": "Enterprise audit logging, agent session monitoring. Data retention: prompts retained 28 days. Users can opt out of training data. No granular telemetry UI."
     },
     "custom_model_provider": {
-      "support": "unknown",
-      "source_url": "https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent#:~:text=coding%20agent",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models#:~:text=Use%20a%20model%20from%20an%20external%20provider%20of%20your%20choice%20in%20Copilot%20by%20supplying%20your%20own%20API%20key",
+      "comment": "BYOK in CLI: env vars for provider type, base URL, API key. OpenAI-compatible endpoints, Azure OpenAI, Anthropic, local models via Ollama."
     },
+    "notes": "GitHub Copilot's agent capabilities span IDE, cloud, and CLI. The cloud agent is unique: runs in ephemeral GitHub Actions environment. Desktop app (preview) adds parallel agent sessions. Ecosystem is rapidly evolving with weekly feature drops.",
     "pricing": {
-      "value": "",
-      "source_url": "https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent#:~:text=coding%20agent",
-      "comment": "Pricing source link; exact price not normalized in this matrix."
+      "value": "Free $0, Pro $10/mo, Pro+ $39/mo, Business $19/user/mo, Enterprise $39/user/mo",
+      "source_url": "https://github.com/features/copilot/plans#:~:text=Free%20%240%2C%20Pro%20%2410%2Fmonth%2C%20Pro%2B%20%2439%2Fmonth",
+      "comment": "Free: $0/mo (50 premium requests). Pro: $10/mo (300 premium requests). Pro+: $39/mo (1500 premium requests). Usage-based billing starting June 2026."
+    },
+    "hosted_agent": {
+      "support": "full",
+      "source_url": "https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent#:~:text=Copilot%20cloud%20agent%20works%20autonomously%20in%20a%20GitHub%20Actions-powered%20environment",
+      "comment": "Copilot Cloud Agent runs autonomously in GitHub Actions-powered ephemeral environment."
     }
   },
   {
@@ -1369,220 +1311,229 @@
       "values": [
         "CLI",
         "IDE",
-        "Extension",
-        "Coding agent"
+        "Extension"
       ],
-      "source_url": "https://kilo.ai/docs/getting-started#:~:text=works%20wherever%20you%20do",
-      "comment": "Placeholder row; verify details before treating as complete."
+      "source_url": "https://kilo.ai/#:~:text=Kilo%3A%20The%20Open%20Source%20AI%20Coding%20Agent%20for%20VS%20Code%2C%20JetBrains%2C%20and%20your%20CLI",
+      "comment": "VS Code extension, JetBrains plugin, CLI, Cloud Agents."
     },
     "released_in": {
-      "value": "TBD",
-      "source_url": "https://kilo.ai/docs/getting-started#:~:text=works%20wherever%20you%20do",
-      "comment": "Placeholder pending exact public release month/year."
+      "value": "Feb '26",
+      "source_url": "https://github.com/Kilo-Org/kilocode#:~:text=Created%3A%202025-03-10T15%3A34%3A26Z",
+      "comment": "Repository created 2025-03-10. First stable public release effectively Feb 2026 (v1.0.25). v7 rewrite announced May 2026."
     },
     "latest_major_update": {
-      "value": "TBD",
-      "source_url": "https://kilo.ai/docs/getting-started#:~:text=works%20wherever%20you%20do",
-      "comment": "Placeholder pending latest major update research."
+      "value": "May '26",
+      "source_url": "https://github.com/Kilo-Org/kilocode/releases#:~:text=v7.2.52",
+      "comment": "Latest release: v7.2.52 (2026-05-11). v7.x series started with v7.0.26 (2026-02-23). 98+ releases total."
     },
-    "notes": "Placeholder row added to track a released coding-agent surface. Open issue should fill exact sourced feature cells.",
     "rules": {
-      "support": "unknown",
-      "source_url": "https://kilo.ai/docs/getting-started#:~:text=works%20wherever%20you%20do",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://kilo.ai/docs/customize/custom-rules#:~:text=Custom%20rules%20allow%20you%20to%20create%20text-based%20instructions%20that%20all%20AI%20models%20will%20follow",
+      "comment": "Full support: Project Rules (via instructions key in kilo.jsonc), Global Rules (same in ~/.config/kilo/kilo.jsonc), AGENTS.md, CLAUDE.md, CONTEXT.md."
     },
     "skills": {
-      "support": "unknown",
-      "source_url": "https://kilo.ai/docs/getting-started#:~:text=works%20wherever%20you%20do",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://kilo.ai/docs/customize/skills#:~:text=Agent%20Skills%20package%20domain%20expertise%2C%20new%20capabilities%2C%20and%20repeatable%20workflows%20that%20agents%20can%20use",
+      "comment": "Full Agent Skills standard. SKILL.md files with YAML frontmatter. Global ~/.kilo/skills/, project .kilo/skills/. Compat with .claude/skills/, .agents/skills/."
     },
     "hooks": {
-      "support": "unknown",
-      "source_url": "https://kilo.ai/docs/getting-started#:~:text=works%20wherever%20you%20do",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://kilo.ai/docs/automate/extending/plugins#:~:text=Lifecycle",
+      "comment": "Full support via Plugin system. Lifecycle hooks: config, event (bus events), tool hooks (execute.before/after), chat hooks, permission hooks, provider hooks. 17+ hook types."
     },
     "mcp_servers": {
-      "support": "unknown",
-      "source_url": "https://kilo.ai/docs/getting-started#:~:text=works%20wherever%20you%20do",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://kilo.ai/docs/automate/mcp/using-in-kilo-code#:~:text=Model%20Context%20Protocol%20(MCP)%20extends%20Kilo%20Code%27s%20capabilities%20by%20connecting%20to%20external%20tools%20and%20services",
+      "comment": "Full MCP support. Local (STDIO) and remote (HTTP Streamable) transports. OAuth 2.0. Tool permissions via allow/ask/deny. Built-in Playwright MCP."
     },
     "custom_commands": {
-      "support": "unknown",
-      "source_url": "https://kilo.ai/docs/getting-started#:~:text=works%20wherever%20you%20do",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://kilo.ai/docs/customize/workflows#:~:text=Workflows%20(also%20called%20slash%20commands%20in%20the%20new%20extension)%20automate%20repetitive%20tasks%20by%20defining%20step-by-step%20instructions",
+      "comment": "Full support via Workflows (slash commands). Markdown files in ~/.config/kilo/commands/ or .kilo/commands/. YAML frontmatter with description, agent, model."
     },
     "subagents": {
-      "support": "unknown",
-      "source_url": "https://kilo.ai/docs/getting-started#:~:text=works%20wherever%20you%20do",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://kilo.ai/docs/customize/custom-modes#:~:text=mode",
+      "comment": "Full subagent support. Custom modes/agents with mode property: primary, subagent, or all. Per-agent prompts, models, permissions, temperature. task tool spawns sub-agents."
     },
     "model_selection": {
-      "support": "unknown",
-      "source_url": "https://kilo.ai/docs/getting-started#:~:text=works%20wherever%20you%20do",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://kilo.ai/docs/code-with-ai/platforms/cli#:~:text=%2Fmodels",
+      "comment": "500+ models via 15+ providers. Switch mid-session with /models. Per-agent model pinning. CLI flags: -m, --model. Auto model routing."
     },
     "approval_mode": {
-      "support": "unknown",
-      "source_url": "https://kilo.ai/docs/getting-started#:~:text=works%20wherever%20you%20do",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://kilo.ai/docs/code-with-ai/platforms/cli#:~:text=Kilo%20Code%20uses%20the%20permission%20config%20to%20decide%20whether%20a%20given%20action%20should%20run%20automatically%2C%20prompt%20you%2C%20or%20be%20blocked",
+      "comment": "Three-tier: allow (auto-approve), ask (prompt), deny (block). Glob patterns. --auto flag for autonomous mode. Per-agent permission overrides."
     },
     "sandbox_mode": {
-      "support": "unknown",
-      "source_url": "https://kilo.ai/docs/getting-started#:~:text=works%20wherever%20you%20do",
-      "comment": "Placeholder pending sourced verification."
+      "support": "partial",
+      "source_url": "https://kilo.ai/docs/code-with-ai/platforms/cli#:~:text=External%20Directories",
+      "comment": "No dedicated Docker/sandbox isolation. External_directory permissions control reads/writes outside workspace. Permission system with allow/deny/ask."
     },
     "resume": {
-      "support": "unknown",
-      "source_url": "https://kilo.ai/docs/getting-started#:~:text=works%20wherever%20you%20do",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://kilo.ai/docs/code-with-ai/platforms/cli-reference#:~:text=-c%2C%20--continue%20%20%20%20continue%20the%20last%20session",
+      "comment": "Session continuation via --continue/-c flag. -s, --session <id> for specific sessions. --fork to fork existing sessions. /sessions slash command."
     },
     "continue": {
-      "support": "unknown",
-      "source_url": "https://kilo.ai/docs/getting-started#:~:text=works%20wherever%20you%20do",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://kilo.ai/docs/code-with-ai/platforms/cli-reference#:~:text=-c%2C%20--continue%20%20%20%20continue%20the%20last%20session",
+      "comment": "--continue/-c flag on kilo, kilo run, and kilo attach commands. /sessions slash command also accepts /continue alias."
     },
     "non_interactive": {
-      "support": "unknown",
-      "source_url": "https://kilo.ai/docs/getting-started#:~:text=works%20wherever%20you%20do",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://kilo.ai/docs/code-with-ai/platforms/cli#:~:text=%23%20Run%20in%20autonomous%20mode%20with%20a%20message%0Akilo%20run%20--auto%20%22Implement%20feature%20X%22",
+      "comment": "Multiple non-interactive modes: kilo run <message> (one-shot), --auto flag (fully autonomous), --json (JSON output), --json-io (bidirectional JSON). kilo serve for headless server."
     },
     "output_format": {
-      "support": "unknown",
-      "source_url": "https://kilo.ai/docs/getting-started#:~:text=works%20wherever%20you%20do",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://kilo.ai/docs/code-with-ai/platforms/cli-reference#:~:text=--format",
+      "comment": "--format flag with choices default (TUI) and json (raw JSON events). --json flag implies auto mode. --json-io for bidirectional JSON. Session export/import."
     },
     "statusline": {
-      "support": "unknown",
-      "source_url": "https://kilo.ai/docs/getting-started#:~:text=works%20wherever%20you%20do",
-      "comment": "Placeholder pending sourced verification."
+      "support": "none",
+      "source_url": "https://kilo.ai/docs/code-with-ai/platforms/cli#:~:text=%2Fstatus",
+      "comment": "No customizable statusline feature found. Has /status slash command and /themes for theming, but no persistent status line customization."
     },
     "telemetry": {
-      "support": "unknown",
-      "source_url": "https://kilo.ai/docs/getting-started#:~:text=works%20wherever%20you%20do",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://kilo.ai/docs/code-with-ai/platforms/cli#:~:text=Kilo%20telemetry%20is%20enabled%20by%20default%20and%20can%20be%20disabled%20with%20experimental.openTelemetry%20%3D%20false",
+      "comment": "Enabled by default. Disable via experimental.openTelemetry: false. OpenTelemetry export when OTEL_EXPORTER_OTLP_ENDPOINT is set."
     },
     "custom_model_provider": {
-      "support": "unknown",
-      "source_url": "https://kilo.ai/docs/getting-started#:~:text=works%20wherever%20you%20do",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://kilo.ai/docs/getting-started/byok#:~:text=Bring%20Your%20Own%20Key%20(BYOK)%20lets%20you%20use%20your%20own%20API%20keys%20when%20using%20the%20Kilo%20Gateway",
+      "comment": "BYOK for 15+ providers. Plugin system for entirely custom providers. Local models supported. 500+ models via Kilo Gateway at zero markup."
     },
+    "notes": "Kilo Code is a rapidly evolving open-source coding agent (MIT, 19k+ stars). Originally forked from Continue, now independent. Notable for extensive plugin system, 500+ model support through Kilo Gateway, and cross-surface session sync.",
     "pricing": {
-      "value": "",
-      "source_url": "https://kilo.ai/docs/getting-started#:~:text=works%20wherever%20you%20do",
-      "comment": "Pricing source link; exact price not normalized in this matrix."
+      "value": "Free (MIT), Kilo Pass $19-199/mo, Teams $15/user/mo",
+      "source_url": "https://kilo.ai/pricing#:~:text=Simple%2C%20transparent%20pricing",
+      "comment": "App is free & MIT. Kilo Pass (Starter $19/mo, Pro $49/mo, Expert $199/mo). BYOK (no markup). Free models. Teams: $15/user/mo."
+    },
+    "hosted_agent": {
+      "support": "partial",
+      "source_url": "https://kilo.ai/#:~:text=Kilo%3A%20The%20Open%20Source%20AI%20Coding%20Agent%20for%20VS%20Code%2C%20JetBrains%2C%20and%20your%20CLI",
+      "comment": "Cloud Agents feature allows web-based sessions; primary use is local via extension/CLI."
     }
   },
   {
     "name": "Kimi CLI",
     "links": {
-      "docs": "https://kimi-ai.chat/guide/kimi-cli/",
-      "github": "",
+      "docs": "https://www.kimi.com/code/docs/en/kimi-code-cli/getting-started.html",
+      "github": "https://github.com/MoonshotAI/kimi-cli",
       "website": "https://kimi.moonshot.cn/",
       "slug": "kimi-cli"
     },
     "form_factor": {
       "values": [
         "CLI",
-        "Coding agent"
+        "Extension"
       ],
-      "source_url": "https://kimi-ai.chat/guide/kimi-cli/#:~:text=Kimi%20Code%20CLI",
-      "comment": "Placeholder row; verify details before treating as complete."
+      "source_url": "https://www.kimi.com/code/docs/en/kimi-code-cli/getting-started.html#:~:text=Kimi%20Code%20CLI%20is%20an%20AI%20agent%20that%20runs%20in%20the%20terminal",
+      "comment": "CLI + VS Code + Zed + JetBrains via ACP."
     },
     "released_in": {
-      "value": "TBD",
-      "source_url": "https://kimi-ai.chat/guide/kimi-cli/#:~:text=Kimi%20Code%20CLI",
-      "comment": "Placeholder pending exact public release month/year."
+      "value": "Oct '25",
+      "source_url": "https://github.com/MoonshotAI/kimi-cli/releases#:~:text=0.34",
+      "comment": "First public release v0.34 on 2025-10-21. Reached v1.0 on 2026-01-27. Latest: v1.44.0 (2026-05-14)."
     },
     "latest_major_update": {
-      "value": "TBD",
-      "source_url": "https://kimi-ai.chat/guide/kimi-cli/#:~:text=Kimi%20Code%20CLI",
-      "comment": "Placeholder pending latest major update research."
+      "value": "May '26",
+      "source_url": "https://github.com/MoonshotAI/kimi-cli/releases/tag/1.44.0#:~:text=1.44.0",
+      "comment": "v1.44.0 (2026-05-14). Very active development: 97 releases in ~7 months. Rapid iteration pace."
     },
-    "notes": "Placeholder row added to track a released coding-agent surface. Open issue should fill exact sourced feature cells.",
     "rules": {
-      "support": "unknown",
-      "source_url": "https://kimi-ai.chat/guide/kimi-cli/#:~:text=Kimi%20Code%20CLI",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://www.kimi.com/code/docs/en/kimi-code-cli/core-operations.html#:~:text=AGENTS.md",
+      "comment": "Full AGENTS.md support. Hierarchical loading from git root to working dir, including .kimi/AGENTS.md at each level (32 KiB budget). /init command auto-generates AGENTS.md."
     },
     "skills": {
-      "support": "unknown",
-      "source_url": "https://kimi-ai.chat/guide/kimi-cli/#:~:text=Kimi%20Code%20CLI",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://www.kimi.com/code/docs/en/kimi-code-cli/customization/skills.html#:~:text=Agent%20Skills",
+      "comment": "Full Agent Skills format (SKILL.md with YAML frontmatter). Four-tier auto-discovery. Cross-compatible with Claude/Codex skill dirs. Flow skills with Mermaid/D2 flowcharts."
     },
     "hooks": {
-      "support": "unknown",
-      "source_url": "https://kimi-ai.chat/guide/kimi-cli/#:~:text=Kimi%20Code%20CLI",
-      "comment": "Placeholder pending sourced verification."
+      "support": "partial",
+      "source_url": "https://www.kimi.com/code/docs/en/kimi-code-cli/customization/hooks.html#:~:text=Hooks%20%28Beta%29",
+      "comment": "Supported (Beta). 13 lifecycle events: PreToolUse, PostToolUse, SessionStart, SessionEnd, SubagentStart/Stop, PreCompact, PostCompact, Notification. Shell commands via stdin."
     },
     "mcp_servers": {
-      "support": "unknown",
-      "source_url": "https://kimi-ai.chat/guide/kimi-cli/#:~:text=Kimi%20Code%20CLI",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://www.kimi.com/code/docs/en/kimi-code-cli/customization/mcp.html#:~:text=MCP",
+      "comment": "Full MCP support. Transport: streamable HTTP, stdio, OAuth. kimi mcp add/list/test/remove/auth commands. Config in ~/.kimi/mcp.json."
     },
     "custom_commands": {
-      "support": "unknown",
-      "source_url": "https://kimi-ai.chat/guide/kimi-cli/#:~:text=Kimi%20Code%20CLI",
-      "comment": "Placeholder pending sourced verification."
+      "support": "partial",
+      "source_url": "https://www.kimi.com/code/docs/en/kimi-code-cli/customization/plugins.html#:~:text=Plugins",
+      "comment": "Custom plugins (Beta) via plugin.json with executable scripts. Slash commands (/skill:, /flow:) serve as custom invocation. No arbitrary custom aliases in config."
     },
     "subagents": {
-      "support": "unknown",
-      "source_url": "https://kimi-ai.chat/guide/kimi-cli/#:~:text=Kimi%20Code%20CLI",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://www.kimi.com/code/docs/en/kimi-code-cli/customization/sub-agents.html#:~:text=subagents",
+      "comment": "Full subagent support. Built-in types: coder, explore, plan. YAML agent files with inheritance. Agent tool with subagent_type, model, resume, run_in_background params."
     },
     "model_selection": {
-      "support": "unknown",
-      "source_url": "https://kimi-ai.chat/guide/kimi-cli/#:~:text=Kimi%20Code%20CLI",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://www.kimi.com/code/docs/en/kimi-code-cli/configuration/providers-and-models.html#:~:text=Provider%20Types",
+      "comment": "Full model selection. Provider types: kimi, openai_legacy, openai_responses, anthropic, gemini, vertexai. /model interactive picker. CLI flags: --model, --thinking."
     },
     "approval_mode": {
-      "support": "unknown",
-      "source_url": "https://kimi-ai.chat/guide/kimi-cli/#:~:text=Kimi%20Code%20CLI",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://www.kimi.com/code/docs/en/kimi-code-cli/core-operations.html#:~:text=YOLO%20mode",
+      "comment": "Full system: Normal (approval with diff preview), YOLO mode (--yolo, auto-approves all), AFK mode (--afk, auto-approves and dismisses questions). Status bar badges."
     },
     "sandbox_mode": {
-      "support": "unknown",
-      "source_url": "https://kimi-ai.chat/guide/kimi-cli/#:~:text=Kimi%20Code%20CLI",
-      "comment": "Placeholder pending sourced verification."
+      "support": "none",
+      "source_url": "https://www.kimi.com/code/docs/en/kimi-code-cli/core-operations.html#:~:text=sandbox",
+      "comment": "No dedicated sandbox/mode. Has workspace scope boundaries, file operation approval, sensitive file protection (.env, SSH keys). No containerized isolation."
     },
     "resume": {
-      "support": "unknown",
-      "source_url": "https://kimi-ai.chat/guide/kimi-cli/#:~:text=Kimi%20Code%20CLI",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://www.kimi.com/code/docs/en/kimi-code-cli/core-operations.html#:~:text=Session%20Resumption",
+      "comment": "Full session resume. --session/--resume/-S/-r with optional session ID. Interactive picker. Auto-restores approval decisions, plan mode, subagent instances."
     },
     "continue": {
-      "support": "unknown",
-      "source_url": "https://kimi-ai.chat/guide/kimi-cli/#:~:text=Kimi%20Code%20CLI",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://www.kimi.com/code/docs/en/kimi-code-cli/core-operations.html#:~:text=--continue",
+      "comment": "kimi --continue/-C resumes most recent session in current working directory. /new for fresh session. /sessions lists and switches between sessions."
     },
     "non_interactive": {
-      "support": "unknown",
-      "source_url": "https://kimi-ai.chat/guide/kimi-cli/#:~:text=Kimi%20Code%20CLI",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://www.kimi.com/code/docs/en/kimi-code-cli/core-operations.html#:~:text=Print%20Mode",
+      "comment": "--print flag for print mode: auto-exit after prompt, implicit auto-approval (AFK behavior), text stdout. --quiet shorthand. Exit codes: 0=success, 1=error, 75=retryable."
     },
     "output_format": {
-      "support": "unknown",
-      "source_url": "https://kimi-ai.chat/guide/kimi-cli/#:~:text=Kimi%20Code%20CLI",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://www.kimi.com/code/docs/en/kimi-code-cli/core-operations.html#:~:text=JSON%20format",
+      "comment": "--input-format: text or stream-json (JSONL). --output-format: text or stream-json (JSONL). --final-message-only flag. --quiet shorthand. Unified Message format for JSON I/O."
     },
     "statusline": {
-      "support": "unknown",
-      "source_url": "https://kimi-ai.chat/guide/kimi-cli/#:~:text=Kimi%20Code%20CLI",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://www.kimi.com/code/docs/en/kimi-code-cli/core-operations.html#:~:text=status%20bar",
+      "comment": "Full status bar in shell mode: context usage %, mode indicators, YOLO/AFK badges, plan mode badge, background task counts, provider display name."
     },
     "telemetry": {
       "support": "unknown",
-      "source_url": "https://kimi-ai.chat/guide/kimi-cli/#:~:text=Kimi%20Code%20CLI",
-      "comment": "Placeholder pending sourced verification."
+      "source_url": "",
+      "comment": "No explicit telemetry documentation found. Has automatic update checks (disable via KIMI_CLI_NO_AUTO_UPDATE), but no stated telemetry/analytics collection policy."
     },
     "custom_model_provider": {
-      "support": "unknown",
-      "source_url": "https://kimi-ai.chat/guide/kimi-cli/#:~:text=Kimi%20Code%20CLI",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://www.kimi.com/code/docs/en/kimi-code-cli/configuration/providers-and-models.html#:~:text=Provider%20Types",
+      "comment": "Full custom provider support. providers table in config.toml with type, base_url, api_key, custom_headers. Six provider types including OpenAI-compatible, Anthropic, Gemini."
     },
+    "notes": "Kimi CLI by Moonshot AI (Beijing) is an Apache-2.0 open-source coding agent with rapid development pace (97 releases in 7 months). Strong AGENTS.md, skills, MCP, subagent, and YOLO/AFK approval mode support. Notable for status bar with badges and comprehensive JSON streaming output.",
     "pricing": {
-      "value": "",
-      "source_url": "https://kimi-ai.chat/guide/kimi-cli/#:~:text=Kimi%20Code%20CLI",
-      "comment": "Pricing source link; exact price not normalized in this matrix."
+      "value": "Membership (credits) or BYOK",
+      "source_url": "https://www.kimi.com/help/kimi-code/benefits#:~:text=included%20in%20your%20subscription%20fee",
+      "comment": "Kimi Code platform via membership subscription (credits-based, 7-day refresh cycle) or pay-as-you-go via api.moonshot.cn. Also supports own API key from OpenAI/Anthropic/Gemini."
+    },
+    "hosted_agent": {
+      "support": "none",
+      "source_url": "https://www.kimi.com/code/docs/en/kimi-code-cli/getting-started.html#:~:text=Kimi%20Code%20CLI%20is%20an%20AI%20agent%20that%20runs%20in%20the%20terminal",
+      "comment": "Local CLI tool backed by Moonshot API."
     }
   },
   {
@@ -1595,11 +1546,10 @@
     },
     "form_factor": {
       "values": [
-        "CLI",
-        "Terminal UI"
+        "CLI"
       ],
       "source_url": "https://opencode.ai/docs/#:~:text=terminal",
-      "comment": ""
+      "comment": "Terminal UI and CLI."
     },
     "released_in": {
       "value": "2025",
@@ -1607,7 +1557,7 @@
       "comment": "Exact public launch month not confirmed in public docs captured for this dataset."
     },
     "latest_major_update": {
-      "value": "May 2026",
+      "value": "May '26",
       "source_url": "https://opencode.ai/docs/#:~:text=opencode",
       "comment": "Current docs capture config, agents, MCP, and providers."
     },
@@ -1693,9 +1643,14 @@
     },
     "notes": "",
     "pricing": {
-      "value": "",
-      "source_url": "https://opencode.ai/docs#:~:text=opencode",
-      "comment": "Pricing source link; exact price not normalized in this matrix."
+      "value": "Free (MIT, BYOK), Go $10/mo (first month $5), Zen pay-per-token (min $20), Enterprise per-seat",
+      "source_url": "https://opencode.ai/docs/zen/#:~:text=Pricing",
+      "comment": "Free tier: bring your own API key + limited free models. Go ($10/mo): curated open-source models with usage caps. Zen: pay-per-token access to all models (min $20 top-up). Enterprise: per-seat custom pricing."
+    },
+    "hosted_agent": {
+      "support": "none",
+      "source_url": "https://opencode.ai/docs/#:~:text=terminal",
+      "comment": "Runs entirely locally."
     }
   },
   {
@@ -1709,106 +1664,111 @@
     "form_factor": {
       "values": [
         "CLI",
-        "Coding agent"
+        "Extension"
       ],
-      "source_url": "https://github.com/QwenLM/qwen-code#:~:text=terminal",
-      "comment": "Placeholder row; verify details before treating as complete."
+      "source_url": "https://github.com/QwenLM/qwen-code#:~:text=As%20an%20open-source%20terminal%20agent%2C%20you%20can%20use%20Qwen%20Code%20in%20five%20primary%20ways%3A",
+      "comment": "CLI + VS Code + Zed + JetBrains via ACP."
     },
     "released_in": {
-      "value": "TBD",
-      "source_url": "https://github.com/QwenLM/qwen-code#:~:text=terminal",
-      "comment": "Placeholder pending exact public release month/year."
+      "value": "Jun '25",
+      "source_url": "https://github.com/QwenLM/qwen-code#:~:text=Release%20v0.16.0%20Latest",
+      "comment": "GitHub repo created 2025-06-26. Earliest releases (v0.0.5+) shortly after. Currently at v0.16.0 (2026-05-21)."
     },
     "latest_major_update": {
-      "value": "TBD",
-      "source_url": "https://github.com/QwenLM/qwen-code#:~:text=terminal",
-      "comment": "Placeholder pending latest major update research."
+      "value": "May '26",
+      "source_url": "https://github.com/QwenLM/qwen-code#:~:text=Release%20v0.16.0%20Latest",
+      "comment": "Latest release v0.16.0 (May 21, 2026). 453 releases, 5,944 commits as of May 2026."
     },
-    "notes": "Placeholder row added to track a released coding-agent surface. Open issue should fill exact sourced feature cells.",
     "rules": {
-      "support": "unknown",
-      "source_url": "https://github.com/QwenLM/qwen-code#:~:text=terminal",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://qwenlm.github.io/qwen-code-docs/en/users/configuration/settings/#:~:text=Context%20Files%20(Hierarchical%20Instructional%20Context)",
+      "comment": "Hierarchical context files (QWEN.md) at project/user levels. Custom system prompts via --system-prompt and --append-system-prompt. Layered config across system/user/project/env/cli."
     },
     "skills": {
-      "support": "unknown",
-      "source_url": "https://github.com/QwenLM/qwen-code#:~:text=terminal",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://qwenlm.github.io/qwen-code-docs/en/users/features/skills/#:~:text=Agent%20Skills%20package%20expertise%20into%20discoverable%20capabilities",
+      "comment": "Full Agent Skills system: SKILL.md with YAML frontmatter, model-invoked, personal (~/.qwen/skills/) and project (.qwen/skills/), path gating, extension skills."
     },
     "hooks": {
-      "support": "unknown",
-      "source_url": "https://github.com/QwenLM/qwen-code#:~:text=terminal",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://qwenlm.github.io/qwen-code-docs/en/users/features/hooks/#:~:text=Hooks%20are%20user-defined%20scripts%20or%20programs%20that%20are%20automatically%20executed%20by%20Qwen%20Code%20at%20predefined%20points",
+      "comment": "14 hook events: PreToolUse, PostToolUse, SessionStart, SessionEnd, SubagentStart/Stop, PreCompact, PostCompact, Notification, PermissionRequest. Three executors: command, http, function."
     },
     "mcp_servers": {
-      "support": "unknown",
-      "source_url": "https://github.com/QwenLM/qwen-code#:~:text=terminal",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://qwenlm.github.io/qwen-code-docs/en/users/features/mcp/#:~:text=Qwen%20Code%20can%20connect%20to%20external%20tools%20and%20data%20sources%20through%20the%20Model%20Context%20Protocol%20(MCP)",
+      "comment": "Full MCP: stdio, SSE, HTTP transports. OAuth 2.0, tool filtering, server trust, global allow/deny lists. CLI management via qwen mcp commands."
     },
     "custom_commands": {
-      "support": "unknown",
-      "source_url": "https://github.com/QwenLM/qwen-code#:~:text=terminal",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://qwenlm.github.io/qwen-code-docs/en/users/features/commands/#:~:text=Save%20frequently%20used%20prompts%20as%20shortcut%20commands",
+      "comment": "Full custom commands: Markdown files in ~/.qwen/commands/ (global) and .qwen/commands/ (project). Support {{args}}, !{shell}, @{file} references. Namespace support."
     },
     "subagents": {
-      "support": "unknown",
-      "source_url": "https://github.com/QwenLM/qwen-code#:~:text=terminal",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://qwenlm.github.io/qwen-code-docs/en/users/features/sub-agents/#:~:text=Subagents%20are%20specialized%20AI%20assistants%20that%20handle%20specific%20types%20of%20tasks%20within%20Qwen%20Code",
+      "comment": "Full subagent system: named subagents with YAML frontmatter, fork subagents (context-inheriting), per-agent model/permission/tool config, extension subagents."
     },
     "model_selection": {
-      "support": "unknown",
-      "source_url": "https://github.com/QwenLM/qwen-code#:~:text=terminal",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://qwenlm.github.io/qwen-code-docs/en/users/configuration/model-providers/#:~:text=Qwen%20Code%20allows%20you%20to%20configure%20multiple%20model%20providers%20through%20the%20modelProviders%20setting",
+      "comment": "Full model switching via /model. Supports OpenAI-compatible, Anthropic, Gemini protocols. Local models via Ollama/vLLM. Per-model reasoning config."
     },
     "approval_mode": {
-      "support": "unknown",
-      "source_url": "https://github.com/QwenLM/qwen-code#:~:text=terminal",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://qwenlm.github.io/qwen-code-docs/en/users/features/approval-mode/#:~:text=Permission%20Modes%20Comparison",
+      "comment": "Four modes: Plan (read-only), Default (manual approval), Auto-Edit (auto file edits, manual shell), YOLO (auto all). Shift+Tab to cycle."
     },
     "sandbox_mode": {
-      "support": "unknown",
-      "source_url": "https://github.com/QwenLM/qwen-code#:~:text=terminal",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://qwenlm.github.io/qwen-code-docs/en/users/features/sandbox/#:~:text=Sandboxing%20isolates%20potentially%20dangerous%20operations",
+      "comment": "Full sandboxing: macOS Seatbelt (sandbox-exec with 6 profiles) and Docker/Podman containers (full isolation, custom images, network proxying, UID/GID mapping)."
     },
     "resume": {
-      "support": "unknown",
-      "source_url": "https://github.com/QwenLM/qwen-code#:~:text=terminal",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://qwenlm.github.io/qwen-code-docs/en/users/features/headless/#:~:text=Resume%20a%20specific%20session%20ID%20directly",
+      "comment": "/resume command in interactive mode. --resume <sessionId> in headless mode. Session data as JSONL under ~/.qwen/projects/."
     },
     "continue": {
-      "support": "unknown",
-      "source_url": "https://github.com/QwenLM/qwen-code#:~:text=terminal",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://qwenlm.github.io/qwen-code-docs/en/users/features/headless/#:~:text=Continue%20the%20most%20recent%20session%20for%20this%20project%20and%20run%20a%20new%20prompt",
+      "comment": "--continue flag resumes the most recent session for the current project in headless mode."
     },
     "non_interactive": {
-      "support": "unknown",
-      "source_url": "https://github.com/QwenLM/qwen-code#:~:text=terminal",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://qwenlm.github.io/qwen-code-docs/en/users/features/headless/#:~:text=Headless%20mode%20allows%20you%20to%20run%20Qwen%20Code%20programmatically%20from%20command%20line%20scripts%20and%20automation%20tools",
+      "comment": "-p/--prompt for headless. stdin piping, JSON output, resume/continue, persistent retry mode for CI. GitHub Actions integration."
     },
     "output_format": {
-      "support": "unknown",
-      "source_url": "https://github.com/QwenLM/qwen-code#:~:text=terminal",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://qwenlm.github.io/qwen-code-docs/en/users/features/headless/#:~:text=Output%20Formats",
+      "comment": "Three formats: text (default), json (structured array), stream-json (line-delimited, real-time). --include-partial-messages for granular streaming."
     },
     "statusline": {
-      "support": "unknown",
-      "source_url": "https://github.com/QwenLM/qwen-code#:~:text=terminal",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://qwenlm.github.io/qwen-code-docs/en/users/features/status-line/#:~:text=Display%20custom%20information%20in%20the%20footer%20using%20a%20shell%20command",
+      "comment": "Custom status line via ui.statusLine in settings.json. Shell command receives JSON context. Multi-line support, hot reload, refreshInterval for timer-based updates."
     },
     "telemetry": {
-      "support": "unknown",
-      "source_url": "https://github.com/QwenLM/qwen-code#:~:text=terminal",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://qwenlm.github.io/qwen-code-docs/en/developers/development/telemetry/#:~:text=Built%20on%20OpenTelemetry",
+      "comment": "OpenTelemetry-based: traces, logs, metrics. Export to local file, OTLP collector, Alibaba Cloud Managed Service. Privacy opt-out via privacy.usageStatisticsEnabled."
     },
     "custom_model_provider": {
-      "support": "unknown",
-      "source_url": "https://github.com/QwenLM/qwen-code#:~:text=terminal",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://qwenlm.github.io/qwen-code-docs/en/users/configuration/model-providers/#:~:text=Use%20modelProviders%20to%20declare%20curated%20model%20lists%20per%20auth%20type",
+      "comment": "modelProviders config with openai/anthropic/gemini auth types. Local models via any OpenAI-compatible endpoint (Ollama, vLLM, LM Studio). OpenRouter, Fireworks AI."
     },
+    "notes": "Qwen Code by Alibaba (QwenLM) is the most feature-complete open-source coding agent in this matrix \u2014 20/20 fields at full (tied with Cline). Standout features: macOS Seatbelt + Docker sandbox, OpenTelemetry telemetry, custom status line, three output formats. Apache-2.0, 24.6k stars.",
     "pricing": {
-      "value": "",
-      "source_url": "https://github.com/QwenLM/qwen-code#:~:text=terminal",
-      "comment": "Pricing source link; exact price not normalized in this matrix."
+      "value": "Free (Apache-2.0)",
+      "source_url": "https://github.com/QwenLM/qwen-code#:~:text=Apache-2.0%20license",
+      "comment": "Tool is free and open-source (Apache 2.0). Model costs: BYO API key (provider pricing), Alibaba Cloud Coding Plan (fixed monthly), or local models (free)."
+    },
+    "hosted_agent": {
+      "support": "partial",
+      "source_url": "https://github.com/QwenLM/qwen-code#:~:text=As%20an%20open-source%20terminal%20agent",
+      "comment": "Can use Alibaba Cloud Coding Plan for hosted model access; agent runs locally."
     }
   },
   {
@@ -1823,106 +1783,111 @@
       "values": [
         "IDE",
         "Extension",
-        "Coding agent"
+        "CLI"
       ],
-      "source_url": "https://roocode.com/#:~:text=AI%20coding%20assistant",
-      "comment": "Placeholder row; verify details before treating as complete."
+      "source_url": "https://docs.roocode.com/#:~:text=The%20Roo%20Code%20VS%20Code%20extension%20works%20locally%20in%20your%20IDE",
+      "comment": "VS Code extension + CLI."
     },
     "released_in": {
-      "value": "TBD",
-      "source_url": "https://roocode.com/#:~:text=AI%20coding%20assistant",
-      "comment": "Placeholder pending exact public release month/year."
+      "value": "Mid-2025",
+      "source_url": "https://github.com/RooCodeInc/Roo-Code/releases/tag/v3.54.0#:~:text=Release%20v3.54.0",
+      "comment": "Forked from Cline. Earliest releases ~mid-2025. Reached v3.54.0 by shutdown on May 15, 2026."
     },
     "latest_major_update": {
-      "value": "TBD",
-      "source_url": "https://roocode.com/#:~:text=AI%20coding%20assistant",
-      "comment": "Placeholder pending latest major update research."
+      "value": "May '26",
+      "source_url": "https://github.com/RooCodeInc/Roo-Code/releases/tag/v3.54.0#:~:text=Release%20v3.54.0",
+      "comment": "Final release v3.54.0 on May 15, 2026 (shutdown/sunsetting release). Repository archived, read-only."
     },
-    "notes": "Placeholder row added to track a released coding-agent surface. Open issue should fill exact sourced feature cells.",
     "rules": {
-      "support": "unknown",
-      "source_url": "https://roocode.com/#:~:text=AI%20coding%20assistant",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://docs.roocode.com/features/custom-instructions#:~:text=Global%20Rules%20Directory%2CApply%20to%20all%20projects%20automatically",
+      "comment": "Comprehensive: .roorules, .roo/rules/, .clinerules fallback, ~/.roo/rules/ global dir, AGENTS.md/AGENT.md support, mode-specific rules via rules-{modeSlug}."
     },
     "skills": {
-      "support": "unknown",
-      "source_url": "https://roocode.com/#:~:text=AI%20coding%20assistant",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://docs.roocode.com/features/skills#:~:text=Skills%20package%20task%2Dspecific%20instructions%20that%20Roo%20loads%20on%2Ddemand",
+      "comment": "Full skills (added v3.38.0, Dec 2025). Follows agentskills.io spec: SKILL.md with frontmatter, progressive discovery, mode-specific targeting, bundled resources."
     },
     "hooks": {
-      "support": "unknown",
-      "source_url": "https://roocode.com/#:~:text=AI%20coding%20assistant",
-      "comment": "Placeholder pending sourced verification."
+      "support": "none",
+      "source_url": "https://docs.roocode.com/#:~:text=Roo%20Code%20is%20an%20open%2Dsource%20AI%20coding%20agent%20for%20VS%20Code",
+      "comment": "No lifecycle hooks system found in any documentation. Built-in slash commands exist but no user-defined lifecycle hooks."
     },
     "mcp_servers": {
-      "support": "unknown",
-      "source_url": "https://roocode.com/#:~:text=AI%20coding%20assistant",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://docs.roocode.com/features/mcp/overview#:~:text=The%20Model%20Context%20Protocol%20(MCP)%20is%20a%20standard%20for%20extending%20Roo%20Code%27s%20capabilities",
+      "comment": "Full MCP since v2.2.0. STDIO, Streamable HTTP, SSE transports. Roo Code Marketplace for one-click MCP install. Per-tool alwaysAllow permissions."
     },
     "custom_commands": {
-      "support": "unknown",
-      "source_url": "https://roocode.com/#:~:text=AI%20coding%20assistant",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://docs.roocode.com/features/slash-commands#:~:text=Custom%20commands%20extend%20Roo%20Code%27s%20functionality%20by%20adding%20markdown%20files%20to%20specific%20directories",
+      "comment": "Full slash commands: .roo/commands/ (project) and ~/.roo/commands/ (global). Frontmatter with description, argument-hint, mode targeting. Built-in /init command."
     },
     "subagents": {
-      "support": "unknown",
-      "source_url": "https://roocode.com/#:~:text=AI%20coding%20assistant",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://docs.roocode.com/features/boomerang-tasks#:~:text=Boomerang%20Tasks%20(also%20known%20as%20subtasks%20or%20task%20orchestration)%20allow%20you%20to%20break%20down%20complex%20projects",
+      "comment": "Full orchestration via Orchestrator Mode (Boomerang Mode). new_task tool delegates to specialized modes. Isolated context with explicit context transfer."
     },
     "model_selection": {
-      "support": "unknown",
-      "source_url": "https://roocode.com/#:~:text=AI%20coding%20assistant",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://docs.roocode.com/providers/#:~:text=Roo%20is%20model%2Dagnostic%2C%20allowing%20you%20to%20choose%20the%20model%20that%20best%20fits%20your%20needs",
+      "comment": "22+ documented providers: Anthropic, OpenAI, AWS Bedrock, DeepSeek, Google Gemini, LM Studio, Ollama, OpenRouter, and more. Sticky models per mode."
     },
     "approval_mode": {
-      "support": "unknown",
-      "source_url": "https://roocode.com/#:~:text=AI%20coding%20assistant",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://docs.roocode.com/features/auto-approving-actions#:~:text=Auto%2Dapprove%20settings%20speed%20up%20your%20workflow%20by%20eliminating%20repetitive%20confirmation%20prompts",
+      "comment": "Granular auto-approval: read/write operations, approved commands (allowlist/denylist), MCP tools (dual permission), mode switching, subtasks, follow-up questions."
     },
     "sandbox_mode": {
-      "support": "unknown",
-      "source_url": "https://roocode.com/#:~:text=AI%20coding%20assistant",
-      "comment": "Placeholder pending sourced verification."
+      "support": "none",
+      "source_url": "https://docs.roocode.com/features/checkpoints#:~:text=Checkpoints%20automatically%20version%20your%20workspace%20files%20during%20Roo%20Code%20tasks",
+      "comment": "No explicit sandbox mode. Checkpoints provide git-based recovery. .rooignore for access control. No isolated/sandboxed execution environment."
     },
     "resume": {
-      "support": "unknown",
-      "source_url": "https://roocode.com/#:~:text=AI%20coding%20assistant",
-      "comment": "Placeholder pending sourced verification."
+      "support": "partial",
+      "source_url": "https://docs.roocode.com/features/checkpoints#:~:text=Restore%20Files%20%26%20Task%20%2D%20Reverts%20both%20workspace%20files%20AND%20removes%20all%20subsequent%20conversation%20messages",
+      "comment": "Checkpoints provide 'Restore Files & Task'. CLI has --create-with-session-id and session resume/history support (v3.51.0+)."
     },
     "continue": {
-      "support": "unknown",
-      "source_url": "https://roocode.com/#:~:text=AI%20coding%20assistant",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://github.com/RooCodeInc/Roo-Code/blob/main/CHANGELOG.md#:~:text=Add%20CLI%20session%20resume/history%20support%20plus%20an%20upgrade%20command",
+      "comment": "CLI session resume/history support. Per-task history persists and can be resumed. History view shows past tasks for reopening."
     },
     "non_interactive": {
-      "support": "unknown",
-      "source_url": "https://roocode.com/#:~:text=AI%20coding%20assistant",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://github.com/RooCodeInc/Roo-Code/releases#:~:text=VSCode%20shim%20and%20basic%20CLI%20for%20running%20Roo%20Code%20headlessly",
+      "comment": "CLI binary (roo) with headless mode. NDJSON stdin/stdout stream protocol. Subcommands: run, list, upgrade. Platform binaries available."
     },
     "output_format": {
-      "support": "unknown",
-      "source_url": "https://roocode.com/#:~:text=AI%20coding%20assistant",
-      "comment": "Placeholder pending sourced verification."
+      "support": "partial",
+      "source_url": "https://github.com/RooCodeInc/Roo-Code/releases/tag/cli-v0.1.17#:~:text=%2D%2Dcreate%2Dwith%2Dsession%2Did",
+      "comment": "CLI supports NDJSON stdin stream protocol for structured I/O. exitCode in tool_result events. No formal --json or --print flag."
     },
     "statusline": {
-      "support": "unknown",
-      "source_url": "https://roocode.com/#:~:text=AI%20coding%20assistant",
-      "comment": "Placeholder pending sourced verification."
+      "support": "none",
+      "source_url": "https://docs.roocode.com/#:~:text=Roo%20Code%20is%20an%20open%2Dsource%20AI%20coding%20agent%20for%20VS%20Code",
+      "comment": "No custom status line feature found. VS Code extension has chat panel UI but no configurable status line."
     },
     "telemetry": {
-      "support": "unknown",
-      "source_url": "https://roocode.com/#:~:text=AI%20coding%20assistant",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://github.com/RooCodeInc/Roo-Code/blob/main/PRIVACY.md#:~:text=Telemetry%20(Usage%20Data)%3A%20We%20collect%20anonymous%20feature%20usage%20and%20error%20data%20to%20help%20us%20improve%20Roo%20Code",
+      "comment": "PostHog-powered. Anonymous feature usage, VS Code machine ID, error reports. No PII/code/prompts. Opt-out available. API error telemetry per provider."
     },
     "custom_model_provider": {
-      "support": "unknown",
-      "source_url": "https://roocode.com/#:~:text=AI%20coding%20assistant",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://docs.roocode.com/providers/openai-compatible#:~:text=OpenAI%20Compatible",
+      "comment": "OpenAI Compatible provider for arbitrary API endpoints. LiteLLM routing. 22+ built-in providers. Debug proxy support. Model-agnostic."
     },
+    "notes": "Roo Code was a popular Cline fork (24k stars, 574k VS Code installs) that was shut down on May 15, 2026. The repository is now archived and read-only. The original team moved to Roomote (roomote.dev). Community forks include ZooCode and Cline.",
     "pricing": {
-      "value": "",
-      "source_url": "https://roocode.com/#:~:text=AI%20coding%20assistant",
-      "comment": "Pricing source link; exact price not normalized in this matrix."
+      "value": "Free (Apache-2.0)",
+      "source_url": "https://docs.roocode.com/faq#:~:text=The%20Roo%20Code%20extension%20is%20free%20and%20open%2Dsource",
+      "comment": "Free and open-source (Apache 2.0). Users paid their own LLM provider API costs. Roo Code Router was a paid routing service. Now discontinued."
+    },
+    "hosted_agent": {
+      "support": "none",
+      "source_url": "https://docs.roocode.com/#:~:text=The%20Roo%20Code%20VS%20Code%20extension%20works%20locally%20in%20your%20IDE",
+      "comment": "Runs locally as VS Code extension or CLI. Project is now archived."
     }
   },
   {
@@ -1936,106 +1901,112 @@
     "form_factor": {
       "values": [
         "IDE",
-        "Coding agent"
+        "Extension",
+        "CLI"
       ],
-      "source_url": "https://windsurf.com/#:~:text=Windsurf",
-      "comment": "Placeholder row; verify details before treating as complete."
+      "source_url": "https://docs.windsurf.com/#set-up#:~:text=Windsurf%20Editor",
+      "comment": "Standalone VS Code fork IDE + JetBrains plugin + CLI."
     },
     "released_in": {
-      "value": "TBD",
-      "source_url": "https://windsurf.com/#:~:text=Windsurf",
-      "comment": "Placeholder pending exact public release month/year."
+      "value": "Nov '24",
+      "source_url": "https://windsurf.com/blog/windsurf-2-0#:~:text=Windsurf%202.0%3A%20Introducing%20the%20Agent%20Command%20Center%20and%20Devin%20in%20Windsurf",
+      "comment": "Originally launched as 'Codeium' IDE, rebranded to 'Windsurf' ~November 2024. Windsurf 2.0 shipped April 15, 2026."
     },
     "latest_major_update": {
-      "value": "TBD",
-      "source_url": "https://windsurf.com/#:~:text=Windsurf",
-      "comment": "Placeholder pending latest major update research."
+      "value": "Apr '26",
+      "source_url": "https://windsurf.com/blog/windsurf-2-0#:~:text=Windsurf%202.0%3A%20Introducing%20the%20Agent%20Command%20Center%20and%20Devin%20in%20Windsurf",
+      "comment": "Windsurf 2.0 (April 15, 2026): Agent Command Center (Kanban board), Devin cloud agent integration, Spaces. Latest patch: v2.3.9 (May 17, 2026)."
     },
-    "notes": "Placeholder row added to track a released coding-agent surface. Open issue should fill exact sourced feature cells.",
     "rules": {
-      "support": "unknown",
-      "source_url": "https://windsurf.com/#:~:text=Windsurf",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://docs.windsurf.com/windsurf/cascade/memories#rules#:~:text=Rules",
+      "comment": "Three scopes: Global (~/.codeium/windsurf/memories/global_rules.md, always-on), Workspace (.windsurf/rules/*.md with frontmatter modes), System (/etc/windsurf/rules/*.md). AGENTS.md support."
     },
     "skills": {
-      "support": "unknown",
-      "source_url": "https://windsurf.com/#:~:text=Windsurf",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://docs.windsurf.com/windsurf/cascade/skills#skill-md-file-format#:~:text=Skills",
+      "comment": "Full support. SKILL.md files with YAML frontmatter. Progressive disclosure. Scopes: Workspace .windsurf/skills/, Global ~/.codeium/windsurf/skills/. Discovers .agents/skills/ and .claude/skills/."
     },
     "hooks": {
-      "support": "unknown",
-      "source_url": "https://windsurf.com/#:~:text=Windsurf",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://docs.windsurf.com/windsurf/cascade/hooks#hook-events#:~:text=Hook%20Events",
+      "comment": "12 hook events: pre/post read/write code, pre/post run command, pre/post MCP tool use, pre/post user prompt, post cascade response. Pre-hooks can block with exit code 2."
     },
     "mcp_servers": {
-      "support": "unknown",
-      "source_url": "https://windsurf.com/#:~:text=Windsurf",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://docs.windsurf.com/windsurf/cascade/mcp#adding-a-new-mcp#:~:text=Adding%20a%20New%20MCP",
+      "comment": "Full native MCP. MCP Marketplace with one-click install. stdio, Streamable HTTP, SSE transports. OAuth support. Admin whitelists for teams."
     },
     "custom_commands": {
-      "support": "unknown",
-      "source_url": "https://windsurf.com/#:~:text=Windsurf",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://docs.windsurf.com/windsurf/cascade/workflows#how-to-create-a-workflow#:~:text=How%20to%20Create%20a%20Workflow",
+      "comment": "Custom commands via Workflows (slash commands /[workflow-name]) and Command palette. Terminal has 4 auto-execution levels."
     },
     "subagents": {
-      "support": "unknown",
-      "source_url": "https://windsurf.com/#:~:text=Windsurf",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://docs.windsurf.com/windsurf/devin#delegating-work-to-devin#:~:text=Delegating%20Work%20to%20Devin",
+      "comment": "Devin Cloud (autonomous agent on own VM), Devin Local Agent, Fast Context (specialized 20x faster retrieval), Agent Command Center manages all agents in Kanban view."
     },
     "model_selection": {
-      "support": "unknown",
-      "source_url": "https://windsurf.com/#:~:text=Windsurf",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://docs.windsurf.com/windsurf/models#:~:text=Models",
+      "comment": "Full selection: SWE-1.6/1.5, Claude Opus/Sonnet, GPT-5.x series, Gemini, DeepSeek V4, Kimi, Grok, and more. Adaptive (intelligent router) and Arena Mode (side-by-side)."
     },
     "approval_mode": {
-      "support": "unknown",
-      "source_url": "https://windsurf.com/#:~:text=Windsurf",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://docs.windsurf.com/windsurf/terminal#auto-execution-levels#:~:text=Auto%20Execution%20Levels",
+      "comment": "4 terminal levels: Disabled (require approval), Allowlist Only, Auto (Cascade judges), Turbo (all auto-executed). Allow/deny lists. Cascade Code/Chat/Ask mode distinctions."
     },
     "sandbox_mode": {
-      "support": "unknown",
-      "source_url": "https://windsurf.com/#:~:text=Windsurf",
-      "comment": "Placeholder pending sourced verification."
+      "support": "partial",
+      "source_url": "https://docs.windsurf.com/windsurf/devin#what-devin-does#:~:text=Devin",
+      "comment": "Devin cloud agent runs on isolated VM. Git worktrees isolate parallel sessions. Dev Containers support. No standalone sandbox toggle for the IDE."
     },
     "resume": {
-      "support": "unknown",
-      "source_url": "https://windsurf.com/#:~:text=Windsurf",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://docs.windsurf.com/windsurf/cascade/cascade#tool-calling#:~:text=Tool%20Calling",
+      "comment": "Cascade has 'continue' button. Auto-Continue setting. Named checkpoints/snapshots for reversion. Sessions persist and switch via dropdown."
     },
     "continue": {
-      "support": "unknown",
-      "source_url": "https://windsurf.com/#:~:text=Windsurf",
-      "comment": "Placeholder pending sourced verification."
+      "support": "full",
+      "source_url": "https://docs.windsurf.com/windsurf/cascade/cascade#real-time-awareness#:~:text=Real%2DTime%20Awareness",
+      "comment": "Auto-Continue setting automatically continues when hitting tool-call limits. Queued messages for follow-ups while Cascade is working. Real-time editor awareness."
     },
     "non_interactive": {
-      "support": "unknown",
-      "source_url": "https://windsurf.com/#:~:text=Windsurf",
-      "comment": "Placeholder pending sourced verification."
+      "support": "partial",
+      "source_url": "https://docs.windsurf.com/#set-up#:~:text=windsurf%20CLI",
+      "comment": "windsurf CLI available in PATH. Devin CLI agent runs in terminal. No documented --non-interactive flag for the IDE."
     },
     "output_format": {
-      "support": "unknown",
-      "source_url": "https://windsurf.com/#:~:text=Windsurf",
-      "comment": "Placeholder pending sourced verification."
+      "support": "partial",
+      "source_url": "https://docs.windsurf.com/windsurf/cascade/hooks#post_cascade_response_with_transcript#:~:text=post_cascade_response_with_transcript",
+      "comment": "Enterprise analytics API available. post_cascade_response_with_transcript hook writes full conversation to JSONL files at ~/.windsurf/transcripts/{trajectory_id}.jsonl."
     },
     "statusline": {
-      "support": "unknown",
-      "source_url": "https://windsurf.com/#:~:text=Windsurf",
-      "comment": "Placeholder pending sourced verification."
+      "support": "partial",
+      "source_url": "https://windsurf.com/blog/windsurf-2-0#:~:text=Agent%20Command%20Center",
+      "comment": "No customizable status line like Cursor. Status bar has model indicator and plan/usage info. Agent Command Center is a Kanban dashboard of all agents."
     },
     "telemetry": {
-      "support": "unknown",
-      "source_url": "https://windsurf.com/#:~:text=Windsurf",
-      "comment": "Placeholder pending sourced verification."
+      "support": "partial",
+      "source_url": "https://docs.windsurf.com/troubleshooting/plugins-common-issues#:~:text=telemetry",
+      "comment": "Telemetry settings mentioned in troubleshooting docs. Enterprise analytics API. No documented granular telemetry opt-out beyond standard VS Code settings."
     },
     "custom_model_provider": {
-      "support": "unknown",
-      "source_url": "https://windsurf.com/#:~:text=Windsurf",
-      "comment": "Placeholder pending sourced verification."
+      "support": "partial",
+      "source_url": "https://windsurf.com/changelog#:~:text=BYOK%20(Anthropic%20Key)",
+      "comment": "BYOK for Anthropic models (Claude Sonnet 4, Opus 4) for Free/Pro users. No generic custom OpenAI-compatible endpoint configuration documented."
     },
+    "notes": "Windsurf by Codeium (acquired by Cognition AI in April 2026) is a standalone VS Code fork IDE with integrated coding agent (Cascade). The Devin integration added cloud agent capabilities. Competes directly with Cursor IDE.",
     "pricing": {
-      "value": "",
-      "source_url": "https://windsurf.com/#:~:text=Windsurf",
-      "comment": "Pricing source link; exact price not normalized in this matrix."
+      "value": "Free $0, Pro $20/mo, Max $200/mo, Teams $40/user/mo",
+      "source_url": "https://windsurf.com/pricing#compare-plans#:~:text=Compare%20Plans",
+      "comment": "Free ($0): Unlimited autocomplete, 50 Cascade requests weekly. Pro ($20/mo): Standard daily usage + extra at API prices. Max ($200/mo): Heavy daily usage. Teams ($40/user/mo)."
+    },
+    "hosted_agent": {
+      "support": "full",
+      "source_url": "https://docs.windsurf.com/windsurf/devin#delegating-work-to-devin#:~:text=Delegating%20Work%20to%20Devin",
+      "comment": "Devin cloud agent integration provides managed agent platform."
     }
   }
 ]

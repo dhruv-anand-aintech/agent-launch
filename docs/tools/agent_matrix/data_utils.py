@@ -60,12 +60,111 @@ def validate(schema_path: str, data_glob: str) -> None:
                     raise ValueError(f"{filename}: {key}.source_url must include a text-fragment highlight")
 
 
-def bundle(data_glob: str, output_path: str) -> None:
+def bundle(schema_path: str, data_glob: str, output_path: str) -> None:
+    schema = _load_json(schema_path)
+    properties = schema.get("properties", {})
+    feature_keys = [
+        key
+        for key, spec in properties.items()
+        if spec.get("allOf", [{}])[0].get("$ref", "").endswith("featureWithSource")
+    ]
     rows = [_load_json(name) for name in sorted(glob.glob(data_glob))]
     Path(output_path).write_text(json.dumps(rows, indent=2) + "\n", encoding="utf-8")
 
+    return rows, sorted(feature_keys), sorted(properties.keys())
+
+
+def generate_llms_txt(bundle_path: str, output_path: str) -> None:
+    schema = _load_json(Path(bundle_path).parent / "schema.json")
+    properties = schema.get("properties", {})
+    feature_keys = [
+        key
+        for key, spec in properties.items()
+        if spec.get("allOf", [{}])[0].get("$ref", "").endswith("featureWithSource")
+    ]
+    meta_keys = {"name", "form_factor", "released_in", "latest_major_update", "pricing", "notes", "links", "hosted_agent"}
+    meta_keys.add("hosted_agent")
+    meta_cols = [k for k in properties if k in meta_keys and k != "links"]
+
+    rows = _load_json(bundle_path)
+
+    lines: list[str] = []
+    lines.append("# Coding Agent Feature Matrix")
+    lines.append(f"> Compare {len(rows)} coding agents, CLIs, and IDEs across features.")
+    lines.append(f"> https://compare.ainorthstar.tech | Updated {__import__('datetime').date.today()}")
+    lines.append("")
+
+    col_width = max(len(r["name"]) for r in rows)
+    feature_short = {
+        "rules": "Rul", "skills": "Skl", "hooks": "Hks",
+        "mcp_servers": "MCP", "custom_commands": "Cmd", "subagents": "Sub",
+        "model_selection": "Mod", "approval_mode": "App", "sandbox_mode": "San",
+        "resume": "Res", "continue": "Con", "non_interactive": "Hdl",
+        "output_format": "Fmt", "statusline": "Sta", "telemetry": "Tel",
+        "hosted_agent": "Hst", "custom_model_provider": "BYOM",
+    }
+    fkeys = [k for k in feature_keys if k in feature_short]
+    glyph = {"full": "Y", "partial": "~", "none": "N", "unknown": "?", "": " "}
+
+    hdr = f"{'Agent':<{col_width}}  Rel    FF{'':4s}" + "  ".join(f"{feature_short[k]:>4}" for k in fkeys)
+    lines.append(hdr)
+    lines.append("-" * len(hdr))
+
+    for row in rows:
+        ff = row.get("form_factor", {}).get("values", [row.get("form_factor", {}).get("value", "")])
+        ff_str = "/".join(ff)[:7] if ff else ""
+        rel = row.get("released_in", {}).get("value", "")[:6]
+        vals = "  ".join(
+            f"{glyph.get(row.get(k, {}).get('support', ''), '?'):>4}"
+            for k in fkeys
+        )
+        lines.append(f"{row['name']:<{col_width}}  {rel:<5} {ff_str:<8}{vals}")
+
+    lines.append("")
+    lines.append("## Feature legend")
+    lines.append(f"{'Code':>4} = {' | '.join(f'{v}: {k}' for k,v in glyph.items())}")
+    lines.append("FF = Form factor (CLI/IDE/Ext/SDK/Web)")
+    lines.append("")
+
+    lines.append("## Agent details")
+    for row in rows:
+        lines.append("")
+        links = row.get("links", {})
+        lines.append(f"### {row['name']}")
+        if links.get("docs"):
+            lines.append(f"- Docs: {links['docs']}")
+        if links.get("github"):
+            lines.append(f"- GitHub: {links['github']}")
+        if links.get("website"):
+            lines.append(f"- Website: {links['website']}")
+        ff = row.get("form_factor", {})
+        if ff.get("values") or ff.get("value"):
+            vals = ff.get("values") or [ff["value"]]
+            lines.append(f"- Form factor: {', '.join(vals)}")
+        if row.get("released_in", {}).get("value"):
+            lines.append(f"- Released: {row['released_in']['value']}")
+        if row.get("latest_major_update", {}).get("value"):
+            lines.append(f"- Latest update: {row['latest_major_update']['value']}")
+        for key in fkeys:
+            val = row.get(key, {})
+            support = val.get("support", "")
+            c = val.get("comment", "")
+            label = key.replace("_", " ").title()
+            line = f"- {label}: {support if support else 'blank'}"
+            if c:
+                line += f" — {c}"
+            lines.append(line)
+        if row.get("pricing", {}).get("value"):
+            lines.append(f"- Pricing: {row['pricing']['value']}")
+        if row.get("notes"):
+            lines.append(f"- Notes: {row['notes']}")
+
+    Path(output_path).write_text("\n".join(lines) + "\n", encoding="utf-8")
+    print(f"  ✓ llms.txt written ({output_path})")
+
 
 def main() -> int:
+    import datetime
     parser = argparse.ArgumentParser(description="Manage coding-agent matrix JSON data.")
     sub = parser.add_subparsers(dest="command", required=True)
 
@@ -74,14 +173,21 @@ def main() -> int:
     validate_cmd.add_argument("--data-glob", default="docs/tools/agent_matrix/data/*.json")
 
     bundle_cmd = sub.add_parser("bundle")
+    bundle_cmd.add_argument("--schema", default="docs/tools/agent_matrix/schema.json")
     bundle_cmd.add_argument("--data-glob", default="docs/tools/agent_matrix/data/*.json")
     bundle_cmd.add_argument("--output", default="docs/tools/agent_matrix/bundle.json")
+
+    llms_cmd = sub.add_parser("llms-txt")
+    llms_cmd.add_argument("--bundle", default="docs/tools/agent_matrix/bundle.json")
+    llms_cmd.add_argument("--output", default="docs/tools/agent_matrix/llms.txt")
 
     args = parser.parse_args()
     if args.command == "validate":
         validate(args.schema, args.data_glob)
     elif args.command == "bundle":
-        bundle(args.data_glob, args.output)
+        bundle(args.schema, args.data_glob, args.output)
+    elif args.command == "llms-txt":
+        generate_llms_txt(args.bundle, args.output)
     return 0
 
 

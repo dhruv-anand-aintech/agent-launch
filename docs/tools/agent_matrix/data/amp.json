@@ -9,106 +9,110 @@
   "form_factor": {
     "values": [
       "CLI",
-      "Terminal UI",
-      "Coding agent"
+      "Extension"
     ],
-    "source_url": "https://ampcode.app/#:~:text=CLI%2FTUI%20Install",
-    "comment": "Placeholder row; verify details before treating as complete."
+    "source_url": "https://ampcode.com/manual#:~:text=Amp%20is%20the%20frontier%20coding%20agent%20for%20your%20terminal%20and%20editor",
+    "comment": "CLI TUI + IDE extensions (VS Code, JetBrains, Neovim, Zed)."
   },
   "released_in": {
-    "value": "TBD",
-    "source_url": "https://ampcode.app/#:~:text=CLI%2FTUI%20Install",
-    "comment": "Placeholder pending exact public release month/year."
+    "value": "May '25",
+    "source_url": "https://ampcode.com/chronicle#:~:text=May%2015%2C%202025%20Amp%20Is%20Now%20Available%20To%20Everyone",
+    "comment": "Publicly launched May 15, 2025 (no waitlist). Originally built inside Sourcegraph, spun off as Amp Frontier Corporation."
   },
   "latest_major_update": {
-    "value": "TBD",
-    "source_url": "https://ampcode.app/#:~:text=CLI%2FTUI%20Install",
-    "comment": "Placeholder pending latest major update research."
+    "value": "May '26",
+    "source_url": "https://ampcode.com/news/neo#:~:text=May%206%2C%202026%20Amp%2C%20Rebuilt",
+    "comment": "May 6, 2026 \u2014 'Amp, Rebuilt' (codename Neo). Complete CLI rewrite with new architecture: remote-controllable, plugin-powered, auto-compaction."
   },
-  "notes": "Placeholder row added to track a released coding-agent surface. Open issue should fill exact sourced feature cells.",
   "rules": {
-    "support": "unknown",
-    "source_url": "https://ampcode.app/#:~:text=CLI%2FTUI%20Install",
-    "comment": "Placeholder pending sourced verification."
+    "support": "full",
+    "source_url": "https://ampcode.com/manual#AGENTS.md#:~:text=Amp%20looks%20in%20AGENTS.md%20files%20for%20guidance",
+    "comment": "Full support via AGENTS.md files (plural). Scanned from cwd, parent dirs, subtrees, $HOME/.config/amp/, /etc/ampcode/. Supports @-mentions, globs, YAML frontmatter."
   },
   "skills": {
-    "support": "unknown",
-    "source_url": "https://ampcode.app/#:~:text=CLI%2FTUI%20Install",
-    "comment": "Placeholder pending sourced verification."
+    "support": "full",
+    "source_url": "https://ampcode.com/manual#agent-skills#:~:text=Skills%20are%20packages%20of%20instructions%20and%20resources",
+    "comment": "Full support. Skills are directories with SKILL.md + YAML frontmatter. Locations: .agents/skills/ (project), ~/.config/agents/skills/ (user). Can bundle MCP servers via mcp.json."
   },
   "hooks": {
-    "support": "unknown",
-    "source_url": "https://ampcode.app/#:~:text=CLI%2FTUI%20Install",
-    "comment": "Placeholder pending sourced verification."
+    "support": "full",
+    "source_url": "https://ampcode.com/manual#plugins#:~:text=Handle%20events%20%E2%80%94%20amp.on(...)%20for%20tool%20calls%2C%20tool%20results%2C%20and%20agent%20lifecycle%20events",
+    "comment": "Full support via Plugin API (TypeScript). Events: session.start, agent.start, tool.call, tool.result, agent.end. Plugins can respond with allow/reject/modify/synthesize actions."
   },
   "mcp_servers": {
-    "support": "unknown",
-    "source_url": "https://ampcode.app/#:~:text=CLI%2FTUI%20Install",
-    "comment": "Placeholder pending sourced verification."
+    "support": "full",
+    "source_url": "https://ampcode.com/manual#mcp#:~:text=You%20can%20add%20additional%20tools%20using%20MCP%20servers",
+    "comment": "Full support. Add via CLI (amp mcp add) or config. Local (command/args/env) and remote (url/headers) servers. OAuth auto-flow. Skill bundling for lazy loading."
   },
   "custom_commands": {
-    "support": "unknown",
-    "source_url": "https://ampcode.app/#:~:text=CLI%2FTUI%20Install",
-    "comment": "Placeholder pending sourced verification."
+    "support": "none",
+    "source_url": "https://ampcode.com/news/slashing-custom-commands#:~:text=We're%20removing%20custom%20commands%20in%20favor%20of%20skills",
+    "comment": "Removed January 29, 2026. Replaced by skills and command palette (Ctrl+O) instead of slash commands."
   },
   "subagents": {
-    "support": "unknown",
-    "source_url": "https://ampcode.app/#:~:text=CLI%2FTUI%20Install",
-    "comment": "Placeholder pending sourced verification."
+    "support": "full",
+    "source_url": "https://ampcode.com/manual#subagents#:~:text=Amp%20can%20spawn%20subagents%20(via%20the%20Task%20tool)",
+    "comment": "Full support. Spawned via Task tool. Built-in specialized subagents: Oracle (GPT-5.4), Librarian (code search), Painter (image gen), Review, Search."
   },
   "model_selection": {
-    "support": "unknown",
-    "source_url": "https://ampcode.app/#:~:text=CLI%2FTUI%20Install",
-    "comment": "Placeholder pending sourced verification."
+    "support": "partial",
+    "source_url": "https://ampcode.com/models#:~:text=Agent%20Modes",
+    "comment": "Pre-set modes (smart=Claude Opus 4.7, deep=GPT-5.5 reasoning, rush=GPT-5.5 no-reasoning, free=mixed). You choose the mode, not the exact model."
   },
   "approval_mode": {
-    "support": "unknown",
-    "source_url": "https://ampcode.app/#:~:text=CLI%2FTUI%20Install",
-    "comment": "Placeholder pending sourced verification."
+    "support": "partial",
+    "source_url": "https://ampcode.com/news/neo#:~:text=Amp%20will%20no%20longer%20ask%20for%20permission%20before%20running%20tools",
+    "comment": "Default: no approval (dangerously-allow-all is now default). Custom approval policies possible via Plugin API (tool.call event)."
   },
   "sandbox_mode": {
-    "support": "unknown",
-    "source_url": "https://ampcode.app/#:~:text=CLI%2FTUI%20Install",
-    "comment": "Placeholder pending sourced verification."
+    "support": "none",
+    "source_url": "https://ampcode.com/manual#:~:text=If%20you%20regularly%20work%20with%20untrusted%20sources%2C%20consider%20creating%20a%20custom%20policy%20plugin%2C%20or%20using%20an%20isolated%20development%20environment",
+    "comment": "No built-in sandbox. Documentation suggests external isolated dev environments for untrusted code."
   },
   "resume": {
-    "support": "unknown",
-    "source_url": "https://ampcode.app/#:~:text=CLI%2FTUI%20Install",
-    "comment": "Placeholder pending sourced verification."
+    "support": "full",
+    "source_url": "https://ampcode.com/news/new-threads-without-leaving-the-cli#:~:text=You%20can%20now%20start%20new%20threads%20and%20continue%20old%20threads%20without%20leaving%20your%20CLI%20session",
+    "comment": "Full support. 'amp threads continue [thread id]' documented. Thread referencing (@T-xxx or URL) across sessions."
   },
   "continue": {
-    "support": "unknown",
-    "source_url": "https://ampcode.app/#:~:text=CLI%2FTUI%20Install",
-    "comment": "Placeholder pending sourced verification."
+    "support": "full",
+    "source_url": "https://ampcode.com/news/new-threads-without-leaving-the-cli#:~:text=%2Fcontinue",
+    "comment": "Full support. /continue command in CLI to pick old threads. Threads persist at ampcode.com/threads."
   },
   "non_interactive": {
-    "support": "unknown",
-    "source_url": "https://ampcode.app/#:~:text=CLI%2FTUI%20Install",
-    "comment": "Placeholder pending sourced verification."
+    "support": "full",
+    "source_url": "https://ampcode.com/manual#cli-non-interactive-environments#:~:text=For%20non-interactive%20environments%20(e.g.%20scripts%2C%20CI/CD%20pipelines)%2C%20set%20your%20access%20token",
+    "comment": "Full support. amp --execute / amp -x for headless mode. Set AMP_API_KEY env var for CI/CD. Auto-detects piped stdout."
   },
   "output_format": {
-    "support": "unknown",
-    "source_url": "https://ampcode.app/#:~:text=CLI%2FTUI%20Install",
-    "comment": "Placeholder pending sourced verification."
+    "support": "full",
+    "source_url": "https://ampcode.com/manual#cli-streaming-json#:~:text=Stream%20JSON%20Output",
+    "comment": "Full support. --stream-json flag with --execute for Claude Code-compatible NDJSON streaming output. Multiple schema types."
   },
   "statusline": {
-    "support": "unknown",
-    "source_url": "https://ampcode.app/#:~:text=CLI%2FTUI%20Install",
-    "comment": "Placeholder pending sourced verification."
+    "support": "none",
+    "source_url": "https://ampcode.com/news/neo#:~:text=Themes%3A%20Custom%20themes%20made%20it%20harder%20to%20keep%20the%20CLI%20legible",
+    "comment": "Not supported. Custom themes removed in the May 6, 2026 rebuild. No statusline customization."
   },
   "telemetry": {
     "support": "unknown",
-    "source_url": "https://ampcode.app/#:~:text=CLI%2FTUI%20Install",
-    "comment": "Placeholder pending sourced verification."
+    "source_url": "",
+    "comment": "No explicit telemetry settings found in documentation. No on/off telemetry toggle mentioned in manual or settings."
   },
   "custom_model_provider": {
-    "support": "unknown",
-    "source_url": "https://ampcode.app/#:~:text=CLI%2FTUI%20Install",
-    "comment": "Placeholder pending sourced verification."
+    "support": "partial",
+    "source_url": "https://ampcode.com/manual#mcp#:~:text=You%20can%20add%20additional%20tools%20using%20MCP%20servers",
+    "comment": "No BYOM for the main agent (picks models per mode from providers). MCP servers can connect to external tools, and Plugin API allows custom tool registration."
   },
+  "notes": "Amp is opinionated and aggressively removes features it considers obsolete (custom commands, slash commands, themes). Focuses on frontier models. Plugin API provides extensive extensibility for those who need it. Closed-source product; some auxiliary tools open source on GitHub.",
   "pricing": {
-    "value": "",
-    "source_url": "https://ampcode.app/#:~:text=CLI%2FTUI%20Install",
-    "comment": "Pricing source link; exact price not normalized in this matrix."
+    "value": "Usage-based with free tier",
+    "source_url": "https://ampcode.com/manual#pricing#:~:text=Amp%20charges%20you%20based%20on%20your%20actual%20usage%20of%20LLMs",
+    "comment": "Usage-based: pay-as-you-go with zero markup on API costs for individuals. Minimum $5 credit purchase. Free mode (ad-supported, no longer shows ads). Enterprise: 50% markup + $1,000 one-time fee."
+  },
+  "hosted_agent": {
+    "support": "none",
+    "source_url": "https://ampcode.com/manual#:~:text=Amp%20is%20the%20frontier%20coding%20agent%20for%20your%20terminal%20and%20editor",
+    "comment": "CLI runs locally. Threads shared via web but no managed agent platform."
   }
 }

@@ -10,105 +10,110 @@
     "values": [
       "IDE",
       "Extension",
-      "Coding agent"
+      "CLI"
     ],
-    "source_url": "https://roocode.com/#:~:text=AI%20coding%20assistant",
-    "comment": "Placeholder row; verify details before treating as complete."
+    "source_url": "https://docs.roocode.com/#:~:text=The%20Roo%20Code%20VS%20Code%20extension%20works%20locally%20in%20your%20IDE",
+    "comment": "VS Code extension + CLI."
   },
   "released_in": {
-    "value": "TBD",
-    "source_url": "https://roocode.com/#:~:text=AI%20coding%20assistant",
-    "comment": "Placeholder pending exact public release month/year."
+    "value": "Mid-2025",
+    "source_url": "https://github.com/RooCodeInc/Roo-Code/releases/tag/v3.54.0#:~:text=Release%20v3.54.0",
+    "comment": "Forked from Cline. Earliest releases ~mid-2025. Reached v3.54.0 by shutdown on May 15, 2026."
   },
   "latest_major_update": {
-    "value": "TBD",
-    "source_url": "https://roocode.com/#:~:text=AI%20coding%20assistant",
-    "comment": "Placeholder pending latest major update research."
+    "value": "May '26",
+    "source_url": "https://github.com/RooCodeInc/Roo-Code/releases/tag/v3.54.0#:~:text=Release%20v3.54.0",
+    "comment": "Final release v3.54.0 on May 15, 2026 (shutdown/sunsetting release). Repository archived, read-only."
   },
-  "notes": "Placeholder row added to track a released coding-agent surface. Open issue should fill exact sourced feature cells.",
   "rules": {
-    "support": "unknown",
-    "source_url": "https://roocode.com/#:~:text=AI%20coding%20assistant",
-    "comment": "Placeholder pending sourced verification."
+    "support": "full",
+    "source_url": "https://docs.roocode.com/features/custom-instructions#:~:text=Global%20Rules%20Directory%2CApply%20to%20all%20projects%20automatically",
+    "comment": "Comprehensive: .roorules, .roo/rules/, .clinerules fallback, ~/.roo/rules/ global dir, AGENTS.md/AGENT.md support, mode-specific rules via rules-{modeSlug}."
   },
   "skills": {
-    "support": "unknown",
-    "source_url": "https://roocode.com/#:~:text=AI%20coding%20assistant",
-    "comment": "Placeholder pending sourced verification."
+    "support": "full",
+    "source_url": "https://docs.roocode.com/features/skills#:~:text=Skills%20package%20task%2Dspecific%20instructions%20that%20Roo%20loads%20on%2Ddemand",
+    "comment": "Full skills (added v3.38.0, Dec 2025). Follows agentskills.io spec: SKILL.md with frontmatter, progressive discovery, mode-specific targeting, bundled resources."
   },
   "hooks": {
-    "support": "unknown",
-    "source_url": "https://roocode.com/#:~:text=AI%20coding%20assistant",
-    "comment": "Placeholder pending sourced verification."
+    "support": "none",
+    "source_url": "https://docs.roocode.com/#:~:text=Roo%20Code%20is%20an%20open%2Dsource%20AI%20coding%20agent%20for%20VS%20Code",
+    "comment": "No lifecycle hooks system found in any documentation. Built-in slash commands exist but no user-defined lifecycle hooks."
   },
   "mcp_servers": {
-    "support": "unknown",
-    "source_url": "https://roocode.com/#:~:text=AI%20coding%20assistant",
-    "comment": "Placeholder pending sourced verification."
+    "support": "full",
+    "source_url": "https://docs.roocode.com/features/mcp/overview#:~:text=The%20Model%20Context%20Protocol%20(MCP)%20is%20a%20standard%20for%20extending%20Roo%20Code%27s%20capabilities",
+    "comment": "Full MCP since v2.2.0. STDIO, Streamable HTTP, SSE transports. Roo Code Marketplace for one-click MCP install. Per-tool alwaysAllow permissions."
   },
   "custom_commands": {
-    "support": "unknown",
-    "source_url": "https://roocode.com/#:~:text=AI%20coding%20assistant",
-    "comment": "Placeholder pending sourced verification."
+    "support": "full",
+    "source_url": "https://docs.roocode.com/features/slash-commands#:~:text=Custom%20commands%20extend%20Roo%20Code%27s%20functionality%20by%20adding%20markdown%20files%20to%20specific%20directories",
+    "comment": "Full slash commands: .roo/commands/ (project) and ~/.roo/commands/ (global). Frontmatter with description, argument-hint, mode targeting. Built-in /init command."
   },
   "subagents": {
-    "support": "unknown",
-    "source_url": "https://roocode.com/#:~:text=AI%20coding%20assistant",
-    "comment": "Placeholder pending sourced verification."
+    "support": "full",
+    "source_url": "https://docs.roocode.com/features/boomerang-tasks#:~:text=Boomerang%20Tasks%20(also%20known%20as%20subtasks%20or%20task%20orchestration)%20allow%20you%20to%20break%20down%20complex%20projects",
+    "comment": "Full orchestration via Orchestrator Mode (Boomerang Mode). new_task tool delegates to specialized modes. Isolated context with explicit context transfer."
   },
   "model_selection": {
-    "support": "unknown",
-    "source_url": "https://roocode.com/#:~:text=AI%20coding%20assistant",
-    "comment": "Placeholder pending sourced verification."
+    "support": "full",
+    "source_url": "https://docs.roocode.com/providers/#:~:text=Roo%20is%20model%2Dagnostic%2C%20allowing%20you%20to%20choose%20the%20model%20that%20best%20fits%20your%20needs",
+    "comment": "22+ documented providers: Anthropic, OpenAI, AWS Bedrock, DeepSeek, Google Gemini, LM Studio, Ollama, OpenRouter, and more. Sticky models per mode."
   },
   "approval_mode": {
-    "support": "unknown",
-    "source_url": "https://roocode.com/#:~:text=AI%20coding%20assistant",
-    "comment": "Placeholder pending sourced verification."
+    "support": "full",
+    "source_url": "https://docs.roocode.com/features/auto-approving-actions#:~:text=Auto%2Dapprove%20settings%20speed%20up%20your%20workflow%20by%20eliminating%20repetitive%20confirmation%20prompts",
+    "comment": "Granular auto-approval: read/write operations, approved commands (allowlist/denylist), MCP tools (dual permission), mode switching, subtasks, follow-up questions."
   },
   "sandbox_mode": {
-    "support": "unknown",
-    "source_url": "https://roocode.com/#:~:text=AI%20coding%20assistant",
-    "comment": "Placeholder pending sourced verification."
+    "support": "none",
+    "source_url": "https://docs.roocode.com/features/checkpoints#:~:text=Checkpoints%20automatically%20version%20your%20workspace%20files%20during%20Roo%20Code%20tasks",
+    "comment": "No explicit sandbox mode. Checkpoints provide git-based recovery. .rooignore for access control. No isolated/sandboxed execution environment."
   },
   "resume": {
-    "support": "unknown",
-    "source_url": "https://roocode.com/#:~:text=AI%20coding%20assistant",
-    "comment": "Placeholder pending sourced verification."
+    "support": "partial",
+    "source_url": "https://docs.roocode.com/features/checkpoints#:~:text=Restore%20Files%20%26%20Task%20%2D%20Reverts%20both%20workspace%20files%20AND%20removes%20all%20subsequent%20conversation%20messages",
+    "comment": "Checkpoints provide 'Restore Files & Task'. CLI has --create-with-session-id and session resume/history support (v3.51.0+)."
   },
   "continue": {
-    "support": "unknown",
-    "source_url": "https://roocode.com/#:~:text=AI%20coding%20assistant",
-    "comment": "Placeholder pending sourced verification."
+    "support": "full",
+    "source_url": "https://github.com/RooCodeInc/Roo-Code/blob/main/CHANGELOG.md#:~:text=Add%20CLI%20session%20resume/history%20support%20plus%20an%20upgrade%20command",
+    "comment": "CLI session resume/history support. Per-task history persists and can be resumed. History view shows past tasks for reopening."
   },
   "non_interactive": {
-    "support": "unknown",
-    "source_url": "https://roocode.com/#:~:text=AI%20coding%20assistant",
-    "comment": "Placeholder pending sourced verification."
+    "support": "full",
+    "source_url": "https://github.com/RooCodeInc/Roo-Code/releases#:~:text=VSCode%20shim%20and%20basic%20CLI%20for%20running%20Roo%20Code%20headlessly",
+    "comment": "CLI binary (roo) with headless mode. NDJSON stdin/stdout stream protocol. Subcommands: run, list, upgrade. Platform binaries available."
   },
   "output_format": {
-    "support": "unknown",
-    "source_url": "https://roocode.com/#:~:text=AI%20coding%20assistant",
-    "comment": "Placeholder pending sourced verification."
+    "support": "partial",
+    "source_url": "https://github.com/RooCodeInc/Roo-Code/releases/tag/cli-v0.1.17#:~:text=%2D%2Dcreate%2Dwith%2Dsession%2Did",
+    "comment": "CLI supports NDJSON stdin stream protocol for structured I/O. exitCode in tool_result events. No formal --json or --print flag."
   },
   "statusline": {
-    "support": "unknown",
-    "source_url": "https://roocode.com/#:~:text=AI%20coding%20assistant",
-    "comment": "Placeholder pending sourced verification."
+    "support": "none",
+    "source_url": "https://docs.roocode.com/#:~:text=Roo%20Code%20is%20an%20open%2Dsource%20AI%20coding%20agent%20for%20VS%20Code",
+    "comment": "No custom status line feature found. VS Code extension has chat panel UI but no configurable status line."
   },
   "telemetry": {
-    "support": "unknown",
-    "source_url": "https://roocode.com/#:~:text=AI%20coding%20assistant",
-    "comment": "Placeholder pending sourced verification."
+    "support": "full",
+    "source_url": "https://github.com/RooCodeInc/Roo-Code/blob/main/PRIVACY.md#:~:text=Telemetry%20(Usage%20Data)%3A%20We%20collect%20anonymous%20feature%20usage%20and%20error%20data%20to%20help%20us%20improve%20Roo%20Code",
+    "comment": "PostHog-powered. Anonymous feature usage, VS Code machine ID, error reports. No PII/code/prompts. Opt-out available. API error telemetry per provider."
   },
   "custom_model_provider": {
-    "support": "unknown",
-    "source_url": "https://roocode.com/#:~:text=AI%20coding%20assistant",
-    "comment": "Placeholder pending sourced verification."
+    "support": "full",
+    "source_url": "https://docs.roocode.com/providers/openai-compatible#:~:text=OpenAI%20Compatible",
+    "comment": "OpenAI Compatible provider for arbitrary API endpoints. LiteLLM routing. 22+ built-in providers. Debug proxy support. Model-agnostic."
   },
+  "notes": "Roo Code was a popular Cline fork (24k stars, 574k VS Code installs) that was shut down on May 15, 2026. The repository is now archived and read-only. The original team moved to Roomote (roomote.dev). Community forks include ZooCode and Cline.",
   "pricing": {
-    "value": "",
-    "source_url": "https://roocode.com/#:~:text=AI%20coding%20assistant",
-    "comment": "Pricing source link; exact price not normalized in this matrix."
+    "value": "Free (Apache-2.0)",
+    "source_url": "https://docs.roocode.com/faq#:~:text=The%20Roo%20Code%20extension%20is%20free%20and%20open%2Dsource",
+    "comment": "Free and open-source (Apache 2.0). Users paid their own LLM provider API costs. Roo Code Router was a paid routing service. Now discontinued."
+  },
+  "hosted_agent": {
+    "support": "none",
+    "source_url": "https://docs.roocode.com/#:~:text=The%20Roo%20Code%20VS%20Code%20extension%20works%20locally%20in%20your%20IDE",
+    "comment": "Runs locally as VS Code extension or CLI. Project is now archived."
   }
 }

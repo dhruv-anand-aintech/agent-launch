@@ -8,106 +8,112 @@
   },
   "form_factor": {
     "values": [
-      "Hosted agent",
-      "Coding agent"
+      "Extension",
+      "CLI",
+      "Web"
     ],
-    "source_url": "https://devin.ai/#:~:text=AI%20software%20engineer",
-    "comment": "Placeholder row; verify details before treating as complete."
+    "source_url": "https://docs.devin.ai/get-started/devin-intro#:~:text=Devin%20is%20also%20available%20via%20the%20Devin%20API",
+    "comment": "Web app + VS Code extension + CLI + Slack/Teams + API."
   },
   "released_in": {
-    "value": "TBD",
-    "source_url": "https://devin.ai/#:~:text=AI%20software%20engineer",
-    "comment": "Placeholder pending exact public release month/year."
+    "value": "Dec '24",
+    "source_url": "https://cognition.ai/blog/devin-generally-available#:~:text=Today%20we%27re%20making%20Devin%20generally%20available%20starting%20at%20%24500%20a%20month",
+    "comment": "First publicly demoed March 2024. Made Generally Available (GA) on December 10, 2024."
   },
   "latest_major_update": {
-    "value": "TBD",
-    "source_url": "https://devin.ai/#:~:text=AI%20software%20engineer",
-    "comment": "Placeholder pending latest major update research."
+    "value": "Feb '26",
+    "source_url": "https://cognition.ai/blog/introducing-devin-2-2#:~:text=Today%20we%27re%20releasing%20Devin%202.2%2C%20one%20of%20our%20biggest%20updates",
+    "comment": "Devin 2.2 (Feb 24, 2026): 3x faster startup, end-to-end desktop testing, Devin Review Autofix, redesigned UI. Continuous weekly releases since."
   },
-  "notes": "Placeholder row added to track a released coding-agent surface. Open issue should fill exact sourced feature cells.",
   "rules": {
-    "support": "unknown",
-    "source_url": "https://devin.ai/#:~:text=AI%20software%20engineer",
-    "comment": "Placeholder pending sourced verification."
+    "support": "full",
+    "source_url": "https://docs.devin.ai/onboard-devin/agents-md#:~:text=Devin%20supports%20AGENTS.md%20%2D%20a%20simple%2C%20open%20standard%20for%20providing%20context%20and%20instructions%20to%20AI%20agents",
+    "comment": "AGENTS.md files in repos, Knowledge (persistent org-level instructions with trigger descriptions), Skills & Rules settings."
   },
   "skills": {
-    "support": "unknown",
-    "source_url": "https://devin.ai/#:~:text=AI%20software%20engineer",
-    "comment": "Placeholder pending sourced verification."
+    "support": "full",
+    "source_url": "https://docs.devin.ai/product-guides/skills#:~:text=Skills%20are%20SKILL.md%20files%20you%20commit%20to%20your%20repositories%20that%20teach%20Devin%20reusable%20procedures",
+    "comment": "Full Agent Skills standard support. SKILL.md files in .agents/skills/. Supports YAML frontmatter, dynamic $ARGUMENTS and !command blocks. Also Playbooks system."
   },
   "hooks": {
-    "support": "unknown",
-    "source_url": "https://devin.ai/#:~:text=AI%20software%20engineer",
-    "comment": "Placeholder pending sourced verification."
+    "support": "full",
+    "source_url": "https://docs.devin.ai/product-guides/automations#:~:text=Webhook%20triggers%20let%20you%20connect%20any%20external%20system%20to%20Devin%20via%20a%20unique%20HTTPS%20endpoint",
+    "comment": "Automations engine: Slack/GitHub/Linear/schedule/cron/webhook triggers. Actions include start session, message session, triage. Payload filtering and secret auth."
   },
   "mcp_servers": {
-    "support": "unknown",
-    "source_url": "https://devin.ai/#:~:text=AI%20software%20engineer",
-    "comment": "Placeholder pending sourced verification."
+    "support": "full",
+    "source_url": "https://docs.devin.ai/work-with-devin/mcp#:~:text=MCP%20is%20an%20open%20protocol%20that%20enables%20Devin%20to%20use%20hundreds%20of%20external%20tools%20and%20data%20sources",
+    "comment": "MCP Marketplace with 40+ pre-built integrations. Supports STDIO, SSE, and HTTP transports. Custom MCP server tools for session/playbook/knowledge management."
   },
   "custom_commands": {
-    "support": "unknown",
-    "source_url": "https://devin.ai/#:~:text=AI%20software%20engineer",
-    "comment": "Placeholder pending sourced verification."
+    "support": "full",
+    "source_url": "https://docs.devin.ai/work-with-devin/slash-commands#:~:text=Custom%20Slash%20Commands%3AOrganizations%20can%20create%20custom%20slash%20commands%20tailored%20to%20their%20team%27s%20unique%20workflows",
+    "comment": "Built-in slash commands (/plan, /review, /test, /think-hard, /implement) plus org-level custom slash commands. Also @skills:name syntax and macros."
   },
   "subagents": {
-    "support": "unknown",
-    "source_url": "https://devin.ai/#:~:text=AI%20software%20engineer",
-    "comment": "Placeholder pending sourced verification."
+    "support": "full",
+    "source_url": "https://docs.devin.ai/work-with-devin/advanced-capabilities#:~:text=Devin%20can%20break%20down%20large%20tasks%20and%20delegate%20them%20to%20a%20team%20of%20managed%20Devins%20working%20in%20parallel",
+    "comment": "Yes, called 'Managed Devins'. Coordinator spawns child Devin sessions in isolated VMs for parallel work. Auto-triage also spawns sub-devins."
   },
   "model_selection": {
     "support": "unknown",
-    "source_url": "https://devin.ai/#:~:text=AI%20software%20engineer",
-    "comment": "Placeholder pending sourced verification."
+    "source_url": "https://docs.devin.ai/admin/billing/self-serve#:~:text=Fast%20Mode",
+    "comment": "Not explicitly user-facing. Devin offers 'Fast Mode' (~2x faster at 4x ACU). No documentation about letting users choose the underlying LLM model."
   },
   "approval_mode": {
-    "support": "unknown",
-    "source_url": "https://devin.ai/#:~:text=AI%20software%20engineer",
-    "comment": "Placeholder pending sourced verification."
+    "support": "partial",
+    "source_url": "https://docs.devin.ai/product-guides/automations#:~:text=ACU%20limit%3ASet%20a%20maximum%20ACU%20budget%20per%20session",
+    "comment": "'Secure Mode' (disables native deployment, restricts outbound access). ACU caps, RBAC, PR review approval. No granular approval per action."
   },
   "sandbox_mode": {
-    "support": "unknown",
-    "source_url": "https://devin.ai/#:~:text=AI%20software%20engineer",
-    "comment": "Placeholder pending sourced verification."
+    "support": "full",
+    "source_url": "https://docs.devin.ai/onboard-devin/environment#:~:text=Every%20session%20boots%20from%20a%20snapshot%2C%20a%20frozen%2C%20bootable%20image%20of%20the%20environment",
+    "comment": "Full isolation. Every session gets a fresh ephemeral snapshot. Enterprise VPC deployment option. VPN configuration supported."
   },
   "resume": {
-    "support": "unknown",
-    "source_url": "https://devin.ai/#:~:text=AI%20software%20engineer",
-    "comment": "Placeholder pending sourced verification."
+    "support": "full",
+    "source_url": "https://docs.devin.ai/api-reference/v3/sessions/post-organizations-sessions-messages#:~:text=Send%20a%20message%20to%20an%20active%20session.%20The%20session%20will%20be%20automatically%20resumed%20if%20suspended",
+    "comment": "API auto-resumes suspended sessions. CLI /resume alias. PR Resuming feature (Apr 2026). Archive/unarchive with undo."
   },
   "continue": {
-    "support": "unknown",
-    "source_url": "https://devin.ai/#:~:text=AI%20software%20engineer",
-    "comment": "Placeholder pending sourced verification."
+    "support": "full",
+    "source_url": "https://docs.devin.ai/work-with-devin/devin-cli#:~:text=When%20a%20task%20outgrows%20your%20local%20machine%20...%20use%20the%20/handoff%20command",
+    "comment": "CLI /handoff transfers to cloud Devin with full context (git branch + conversation history). API session messaging for continuation."
   },
   "non_interactive": {
-    "support": "unknown",
-    "source_url": "https://devin.ai/#:~:text=AI%20software%20engineer",
-    "comment": "Placeholder pending sourced verification."
+    "support": "full",
+    "source_url": "https://docs.devin.ai/api-reference/overview#:~:text=The%20Devin%20API%20enables%20you%20to%20integrate%20Devin%20into%20your%20applications%2C%20automate%20workflows",
+    "comment": "Full headless/API mode. REST API with service user auth. Automations run fully autonomously (CI fixers, scheduled sessions, auto-triage)."
   },
   "output_format": {
-    "support": "unknown",
-    "source_url": "https://devin.ai/#:~:text=AI%20software%20engineer",
-    "comment": "Placeholder pending sourced verification."
+    "support": "partial",
+    "source_url": "https://docs.devin.ai/api-reference/v3/sessions/post-organizations-sessions#:~:text=Create%20a%20new%20session",
+    "comment": "API returns structured JSON. Sessions support structured output schemas. No documented machine-readable mode for the CLI itself."
   },
   "statusline": {
-    "support": "unknown",
-    "source_url": "https://devin.ai/#:~:text=AI%20software%20engineer",
-    "comment": "Placeholder pending sourced verification."
+    "support": "none",
+    "source_url": "",
+    "comment": "No statusline feature found in any documentation. Web app shows session status indicators but no CLI statusline."
   },
   "telemetry": {
     "support": "unknown",
-    "source_url": "https://devin.ai/#:~:text=AI%20software%20engineer",
-    "comment": "Placeholder pending sourced verification."
+    "source_url": "",
+    "comment": "No user-configurable telemetry setting found in documentation. Enterprise audit logs available. Privacy controls mentioned but no opt-in/opt-out toggle."
   },
   "custom_model_provider": {
     "support": "unknown",
-    "source_url": "https://devin.ai/#:~:text=AI%20software%20engineer",
-    "comment": "Placeholder pending sourced verification."
+    "source_url": "https://docs.devin.ai/release-notes/overview#:~:text=Cerebras%20Now%20Enterprise%2DReady",
+    "comment": "Cerebras mentioned as enterprise-ready inference provider. No self-serve BYO model option documented."
   },
+  "notes": "Devin pioneered the autonomous AI software engineer category. Focuses on enterprise: VM isolation, managed sub-agents, automations. Higher-end pricing reflects the hosted, managed approach. Windsurf acquisition announced April 2026.",
   "pricing": {
-    "value": "",
-    "source_url": "https://devin.ai/#:~:text=AI%20software%20engineer",
-    "comment": "Pricing source link; exact price not normalized in this matrix."
+    "value": "Free, Pro $20/mo, Max $200/mo, Teams $80+/mo",
+    "source_url": "https://devin.ai/pricing#:~:text=Free%3AFree%2CPro%3A%2420%2Fmonth%2CMax%3A%24200%2Fmonth%2CTeams%3A%2480%2Fmonth",
+    "comment": "Free (limited), Pro ($20/mo), Max ($200/mo), Teams ($80/mo minimum). Enterprise: custom pricing with VPC, SAML/OIDC. ACU-based consumption model."
+  },
+  "hosted_agent": {
+    "support": "full",
+    "source_url": "https://docs.devin.ai/get-started/devin-intro#:~:text=Devin%20is%20also%20available%20via%20the%20Devin%20API",
+    "comment": "Primarily cloud-hosted at app.devin.ai; Devin CLI bridges to cloud agent."
   }
 }

@@ -19,7 +19,7 @@
     "comment": "Exact public release month not confirmed in public docs captured for this dataset."
   },
   "latest_major_update": {
-    "value": "May 2026",
+    "value": "May '26",
     "source_url": "https://antigravity.google/docs/cli-getting-started#:~:text=update",
     "comment": "New standalone CLI split documented separately from the IDE."
   },
@@ -105,8 +105,13 @@
   },
   "notes": "Included as a distinct IDE surface because it is not the same as the new agy CLI.",
   "pricing": {
-    "value": "",
-    "source_url": "https://antigravity.google/#:~:text=Antigravity",
-    "comment": "Pricing source link; exact price not normalized in this matrix."
+    "value": "Free (generous weekly rate limits), Google AI Pro/Ultra (undisclosed), Organization (consumption-based via Google Cloud)",
+    "source_url": "https://antigravity.google/pricing#:~:text=For%20Individuals",
+    "comment": "Same pricing as Antigravity CLI. Free tier with generous weekly rate limits; Pro/Ultra tiers available."
+  },
+  "hosted_agent": {
+    "support": "none",
+    "source_url": "https://antigravity.google/#:~:text=CLI",
+    "comment": "Local IDE surface."
   }
 }

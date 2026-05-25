@@ -17,35 +17,27 @@ Support values:
 | `unknown` | Not enough public evidence yet |
 | empty string | Intentionally unfilled |
 
-Initial columns include name, form factor, release date, latest major update, rules, skills, hooks, resume/continue controls, individual settings, and arbitrary model provider support.
+Columns span metadata (name, form factor, release, pricing), context (rules, skills), automation (hooks, commands, subagents), settings (model, approvals, sandbox, resume, continue, headless, output, statusline, telemetry), models (arbitrary providers), and platform (hosted agent).
 
-## Current Rows
+## Rows
 
-| Name | Form factor | Released | Latest major update | Rules | Skills | Hooks | MCP | Resume | Continue | Arbitrary models |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Antigravity CLI | CLI | May 2026 | May 2026 | full | full | full | full | full | full | none |
-| Antigravity IDE | IDE | 2025 | May 2026 | partial | partial | unknown | partial | full | full | unknown |
-| Claude Code | CLI, IDE integrations, and SDK | February 2025 | May 2026 | full | full | full | full | full | full | partial |
-| Cursor Agent CLI | CLI for Cursor Agent | 2025 | May 2026 | full | full | unknown | full | full | full | full |
-| Cursor IDE | IDE | 2023 | May 2026 | full | full | unknown | full | full | full | full |
-| Gemini CLI | CLI | June 2025 | May 2026 | full | partial | full | full | full | full | partial |
-| OpenAI Codex CLI | CLI and hosted coding agent | April 2025 | May 2026 | full | full | full | full | full | full | full |
-| OpenCode | Terminal UI and CLI | 2025 | May 2026 | full | full | full | full | full | full | full |
-
-## Placeholder Rows
-
-These released tools have placeholder rows with `unknown` feature support until their tracking issues are filled with sourced data:
-
-- Aider (`data/aider.json`)
-- Amp (`data/amp.json`)
-- Cline (`data/cline.json`)
-- Devin (`data/devin.json`)
-- GitHub Copilot coding agent (`data/github-copilot-coding-agent.json`)
-- Kilo Code (`data/kilo-code.json`)
-- Kimi CLI (`data/kimi-cli.json`)
-- Qwen Code (`data/qwen-code.json`)
-- Roo Code (`data/roo-code.json`)
-- Windsurf (`data/windsurf.json`)
+| Name | Form factor | Released | Latest major update | Rules | Skills | Hooks | MCP | Hosted agent | Arbitrary models |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Aider | CLI | June 2023 | August 2025 | partial | partial | partial | none | none | full |
+| Amp | CLI, Extension | May 2025 | May 2026 | full | full | full | full | none | partial |
+| Antigravity CLI | CLI | May 2026 | May 2026 | full | full | full | full | none | none |
+| Antigravity IDE | IDE | 2025 | May 2026 | partial | partial | unknown | partial | none | unknown |
+| Claude Code | CLI, IDE, Extension, SDK | February 2025 | May 2026 | full | full | full | full | partial | partial |
+| Cline | IDE, Extension, CLI | July 2024 | May 2026 | full | full | full | full | none | full |
+| Cursor | IDE, CLI, Extension | 2023 | May 2026 | full | full | unknown | full | full | full |
+| GitHub Copilot | IDE, Extension, CLI | June 2025 | May 2026 | full | full | full | full | full | full |
+| Kilo Code | CLI, IDE, Extension | February 2026 | May 2026 | full | full | full | full | partial | full |
+| Kimi CLI | CLI, Extension | October 2025 | May 2026 | full | full | partial | full | none | full |
+| OpenAI Codex CLI | CLI, Extension | April 2025 | May 2026 | full | full | full | full | full | full |
+| OpenCode | CLI | 2025 | May 2026 | full | full | full | full | none | full |
+| Qwen Code | CLI, Extension | June 2025 | May 2026 | full | full | full | full | partial | full |
+| Roo Code | IDE, Extension, CLI | Mid-2025 | May 2026 | full | full | none | full | none | full |
+| Windsurf Cascade | IDE, Extension, CLI | November 2024 | April 2026 | full | full | full | full | full | partial |
 
 ## Maintenance
 

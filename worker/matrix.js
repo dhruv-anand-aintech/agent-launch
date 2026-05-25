@@ -1,26 +1,37 @@
 import matrix from "../docs/tools/agent_matrix/bundle.json";
+import llmsTxt from "../docs/tools/agent_matrix/llms.txt";
 import schema from "../docs/tools/agent_matrix/schema.json";
 
 const columns = Object.entries(schema.properties)
   .filter(([key]) => !["links", "notes"].includes(key))
   .map(([key, value]) => {
-    const parts = (value.$comment || "").split("|").map((part) => part.trim());
-    return {
-      key,
-      group: parts[0] || "Other",
-      label: parts[1] || key,
-      description: parts[2] || "",
-    };
+    const parts = (value.$comment || "").split("|").map(p => p.trim());
+    return { key, group: parts[0] || "Other", label: parts[1] || key, description: parts[2] || "" };
   });
 
-const groups = [...new Set(columns.map((column) => column.group))];
+const groups = [...new Set(columns.map(c => c.group))];
 
-function htmlEscape(value) {
-  return String(value ?? "")
-    .replaceAll("&", "&amp;")
-    .replaceAll("<", "&lt;")
-    .replaceAll(">", "&gt;")
-    .replaceAll('"', "&quot;");
+function htmlEscape(v) { return String(v ?? "").replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;").replaceAll('"',"&quot;"); }
+
+function agentDomain(agent) {
+  const u = agent.links.website || agent.links.docs || "";
+  try { return new URL(u).hostname.replace(/^www\./, ""); } catch { return ""; }
+}
+
+function faviconUrl(agent) {
+  const d = agentDomain(agent);
+  return d ? `https://www.google.com/s2/favicons?domain=${encodeURIComponent(d)}&sz=16` : "";
+}
+
+function metaTags() {
+  const desc = "Compare 17 coding agents, AI coding CLIs, and IDEs across 17 features. Each cell sourced from official docs.";
+  return `
+    <meta name="description" content="${htmlEscape(desc)}">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://compare.ainorthstar.tech">
+    <meta property="og:title" content="Coding Agent Feature Matrix">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Coding Agent Feature Matrix">`;
 }
 
 function render() {
@@ -28,294 +39,309 @@ function render() {
   return `<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Coding Agent Feature Matrix</title>
-  <style>
-    :root {
-      color-scheme: light;
-      --bg: #f6f4ee;
-      --panel: #fffdf8;
-      --ink: #17130d;
-      --muted: #766f63;
-      --line: #ded7c9;
-      --line-strong: #bdb3a2;
-      --accent: #176b5b;
-      --accent-2: #2d4f9e;
-      --warn: #a35f00;
-      --none: #9a3c32;
-      --unknown: #8a8173;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
-    * { box-sizing: border-box; }
-    body { margin: 0; background: var(--bg); color: var(--ink); }
-    a { color: inherit; text-decoration: none; }
-    .topbar {
-      height: 58px; display: flex; align-items: center; justify-content: space-between;
-      padding: 0 22px; border-bottom: 1px solid var(--line); background: rgba(255,253,248,.92);
-      position: sticky; top: 0; z-index: 30; backdrop-filter: blur(10px);
-    }
-    .brand { display: flex; gap: 10px; align-items: center; font-weight: 700; letter-spacing: .01em; }
-    .mark { width: 28px; height: 28px; border: 1px solid var(--ink); display: grid; place-items: center; font-size: 13px; }
-    .topnav { display: flex; gap: 18px; color: var(--muted); font-size: 14px; }
-    .hero { padding: 30px 22px 18px; border-bottom: 1px solid var(--line); background: var(--panel); }
-    .hero h1 { font-size: 34px; line-height: 1.05; margin: 0 0 10px; letter-spacing: 0; max-width: 900px; }
-    .hero p { margin: 0; color: var(--muted); max-width: 920px; font-size: 15px; line-height: 1.55; }
-    .meta-row { margin-top: 18px; display: flex; gap: 12px; flex-wrap: wrap; align-items: center; color: var(--muted); font-size: 13px; }
-    .pill { border: 1px solid var(--line); padding: 6px 9px; background: #fff; }
-    .layout { display: grid; grid-template-columns: 280px 1fr; height: calc(100vh - 58px); overflow: hidden; }
-    aside { border-right: 1px solid var(--line); background: #fbf8ef; padding: 16px 14px; height: 100%; overflow: auto; }
-    .filter-title { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; font-weight: 700; }
-    .filter-block { border-top: 1px solid var(--line); padding: 13px 0; }
-    .filter-block h2 { font-size: 13px; margin: 0 0 9px; color: var(--ink); }
-    label { display: flex; align-items: center; gap: 8px; min-height: 26px; color: var(--muted); font-size: 13px; cursor: pointer; }
-    input[type="search"] { width: 100%; height: 36px; border: 1px solid var(--line-strong); background: #fff; padding: 0 10px; font: inherit; }
-    input[type="checkbox"] { accent-color: var(--accent); }
-    main { display: grid; grid-template-rows: auto 1fr; min-width: 0; min-height: 0; overflow: hidden; }
-    .toolbar { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 13px 16px; border-bottom: 1px solid var(--line); background: var(--bg); z-index: 20; }
-    .tabs { display: flex; gap: 6px; overflow: auto; }
-    .tab { border: 1px solid var(--line); background: #fff; padding: 7px 10px; font-size: 13px; cursor: pointer; white-space: nowrap; }
-    .tab.active { background: var(--ink); color: #fff; border-color: var(--ink); }
-    .count { color: var(--muted); font-size: 13px; white-space: nowrap; }
-    .table-wrap { overflow: auto; min-height: 0; position: relative; }
-    table { border-collapse: separate; border-spacing: 0; min-width: 2200px; width: max-content; background: var(--panel); }
-    th, td { border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 9px 10px; font-size: 13px; vertical-align: top; max-width: 190px; }
-    thead { z-index: 12; }
-    th {
-      position: sticky; top: 0; z-index: 12; background: #eee7d8; text-align: left;
-      font-weight: 700; color: #2a241b; box-shadow: inset 0 -1px 0 var(--line-strong);
-    }
-    thead tr:nth-child(2) th { top: 35px; }
-    .group-heading { background: #e2d8c5; color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: 0; }
-    tbody td:first-child { position: sticky; left: 0; z-index: 6; background: var(--panel); min-width: 160px; max-width: 160px; }
-    thead tr:nth-child(2) th:first-child { position: sticky; left: 0; z-index: 18; background: #e8decc; min-width: 160px; max-width: 160px; }
-    .agent-name { font-weight: 700; margin-bottom: 5px; }
-    .agent-links { display: flex; gap: 5px; color: var(--muted); font-size: 12px; }
-    .icon-link {
-      display: inline-grid; place-items: center; width: 17px; height: 17px; border: 1px solid var(--line);
-      color: var(--muted); font-size: 11px; line-height: 1; background: #fff;
-    }
-    .tag-list { display: flex; flex-wrap: wrap; gap: 4px; }
-    .tag { border: 1px solid var(--line); background: #fff; padding: 2px 5px; font-size: 12px; }
-    .support { display: inline-flex; align-items: center; gap: 6px; font-weight: 700; }
-    .dot { width: 18px; height: 18px; display: inline-grid; place-items: center; border-radius: 50%; color: #fff; font-size: 11px; }
-    .full .dot { background: var(--accent); }
-    .partial .dot { background: var(--warn); }
-    .none .dot { background: var(--none); }
-    .unknown .dot { background: var(--unknown); }
-    .blank { color: var(--muted); }
-    .source {
-      display: inline-grid; place-items: center; width: 14px; height: 14px; margin-left: 5px;
-      color: var(--accent-2); font-size: 11px; line-height: 1; vertical-align: text-top;
-    }
-    .source:hover { color: var(--accent); }
-    .cell-note { color: var(--muted); font-size: 12px; line-height: 1.35; margin-top: 4px; }
-    .value-cell { line-height: 1.35; }
-    .empty { padding: 30px; color: var(--muted); }
-    @media (max-width: 850px) {
-      .topnav { display: none; }
-      .layout { grid-template-columns: 1fr; }
-      .layout { height: auto; overflow: visible; }
-      aside { height: auto; border-right: 0; border-bottom: 1px solid var(--line); }
-      main { min-height: 70vh; }
-      .table-wrap { height: 70vh; }
-      .hero h1 { font-size: 28px; }
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Coding Agent Feature Matrix</title>
+${metaTags()}
+<style>
+:root {
+  color-scheme: light; --bg: #f6f4ee; --panel: #fffdf8; --ink: #17130d; --muted: #766f63;
+  --line: #ded7c9; --line-strong: #bdb3a2; --accent: #176b5b; --warn: #a35f00; --none: #9a3c32; --unknown: #8a8173;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); }
+a { color: inherit; text-decoration: none; }
+.topbar {
+  height: 44px; display: flex; align-items: center; justify-content: space-between;
+  padding: 0 14px; border-bottom: 1px solid var(--line); background: rgba(255,253,248,.92);
+  position: sticky; top: 0; z-index: 30; backdrop-filter: blur(10px);
+}
+.brand { display: flex; gap: 6px; align-items: center; font-weight: 700; font-size: 13px; }
+.mark { width: 20px; height: 20px; border: 1px solid var(--ink); display: grid; place-items: center; font-size: 10px; }
+.topnav { display: flex; gap: 8px; align-items: center; }
+.gh-btn {
+  display: inline-flex; align-items: center; gap: 4px; border: 1px solid var(--line);
+  background: #fff; padding: 3px 8px; font-size: 12px; color: var(--ink); white-space: nowrap;
+}
+.gh-btn:hover { background: #f0eeeb; }
+.hero { padding: 10px 14px 8px; border-bottom: 1px solid var(--line); background: var(--panel); }
+.hero p { margin: 0; color: var(--muted); font-size: 12px; }
+.meta-row { margin-top: 6px; display: flex; gap: 6px; flex-wrap: wrap; }
+.pill { border: 1px solid var(--line); padding: 3px 7px; background: #fff; font-size: 11px; color: var(--muted); }
+.table-wrap { overflow: auto; height: calc(100vh - 44px); position: relative; }
+table { border-collapse: separate; border-spacing: 0; background: var(--panel); }
+thead { position: sticky; top: 0; z-index: 20; }
+th {
+  background: #eee7d8; color: #2a241b; font-weight: 700; font-size: 10px;
+  border-right: 1px solid var(--line); border-bottom: 1px solid var(--line-strong);
+  padding: 0; vertical-align: middle; text-align: center; position: relative;
+  user-select: none;
+}
+th.corner { position: sticky; left: 0; z-index: 25; background: #e8decc; min-width: 100px; }
+th.agent-col {
+  min-width: 44px; max-width: 44px; height: 44px; cursor: pointer;
+  transition: opacity .15s;
+}
+th.agent-col.dragging { opacity: .4; }
+th.agent-col.drag-over { background: #d5cdbb; }
+th.agent-col.hidden-col { opacity: .25; }
+.row-label.dragging { opacity: .4; }
+.row-label.drag-over { outline: 2px dashed var(--accent); outline-offset: -2px; }
+th.agent-col .fav { width: 32px; height: 32px; vertical-align: middle; border-radius: 6px; }
+th.agent-col .agent-full { display: none; position: absolute; left: 50%; transform: translateX(-50%);
+  top: calc(100% + 2px); background: #2a241b; color: #f6f4ee; font-size: 10px; padding: 2px 6px;
+  border-radius: 3px; white-space: nowrap; z-index: 30; pointer-events: none; }
+th.agent-col:hover .agent-full { display: block; }
+th.agent-col .eye {
+  position: absolute; top: 1px; right: 2px; font-size: 9px; color: var(--muted); opacity: .5; pointer-events: none;
+}
+th.agent-col.hidden-col .eye { opacity: 1; color: var(--none); }
+tbody td { padding: 3px 4px; font-size: 11px; text-align: center; vertical-align: middle;
+  border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+td.cell-wrap { position: relative; cursor: default; }
+td.cell-wrap:hover { outline: 1.5px solid var(--line-strong); outline-offset: -1px; }
+td.cell-wrap a { display: block; color: inherit; }
+td.cell-wrap .dot {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 16px; height: 16px; border-radius: 50%; color: #fff; font-size: 9px; line-height: 1;
+}
+.full .dot { background: var(--accent); }
+.partial .dot { background: var(--warn); }
+.none .dot { background: var(--none); }
+.unknown .dot { background: var(--unknown); }
+.row-label {
+  position: sticky; left: 0; z-index: 5; background: var(--panel);
+  text-align: left; font-size: 11px; font-weight: 600; padding: 3px 6px !important;
+  min-width: 100px; max-width: 100px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  cursor: pointer; user-select: none;
+}
+.row-label .arrow { font-size: 8px; margin-right: 3px; color: var(--muted); }
+.row-label.filter-active { color: var(--accent); }
+.row-label.filter-active .arrow { color: var(--accent); }
+.group-head td {
+  background: #e2d8c5; font-size: 9px; text-transform: uppercase; letter-spacing: .03em;
+  color: var(--muted); padding: 2px 4px !important; font-weight: 600;
+}
+.group-head td:first-child { position: sticky; left: 0; z-index: 6; background: #e2d8c5; }
+.cell-tip {
+  display: none; position: absolute; bottom: calc(100% + 4px); left: 50%; transform: translateX(-50%);
+  background: #2a241b; color: #f6f4ee; font-size: 10px; line-height: 1.3; padding: 3px 6px;
+  border-radius: 3px; z-index: 50; pointer-events: none; max-width: 260px; white-space: normal;
+  outline: 1px solid #555; text-align: left; font-weight: 400;
+}
+.cell-wrap:hover .cell-tip { display: block; }
+td.value { font-size: 10px; color: var(--muted); }
+.form-tags { display: flex; flex-wrap: wrap; gap: 1px; justify-content: center; }
+.form-tag { border: 1px solid var(--line); background: #fff; padding: 1px 2px; font-size: 8px; }
+.tri {
+  position: absolute; top: 0; right: 0; width: 14px; height: 14px;
+  cursor: pointer; z-index: 2;
+}
+.tri::after {
+  content: ""; position: absolute; top: 0; right: 0; width: 0; height: 0;
+  border-style: solid; border-width: 0 6px 6px 0;
+  border-color: transparent var(--line-strong) transparent transparent;
+  opacity: .35; pointer-events: none;
+}
+.cell-wrap:hover .tri::after { opacity: 1; }
+.hidden { display: none; }
+</style>
 </head>
 <body>
-  <header class="topbar">
-    <a class="brand" href="/"><span class="mark">AL</span><span>agent-launch</span></a>
-    <nav class="topnav">
-      <a href="https://github.com/dhruv-anand-aintech/agent-launch">GitHub</a>
-      <a href="#matrix">Matrix</a>
-      <a href="#sources">Sources</a>
-    </nav>
-  </header>
-  <section class="hero">
-    <h1>Coding agent feature matrix</h1>
-    <p>Compare coding agents, CLIs, and IDEs across rules, skills, hooks, MCP, model configuration, session controls, and automation surfaces. Each sourced cell links to highlighted source text where available.</p>
-    <div class="meta-row" id="sources">
-      <span class="pill">Data from this repo</span>
-      <span class="pill">${htmlEscape(matrix.length)} agents</span>
-      <span class="pill">Updated ${new Date().toISOString().slice(0, 10)}</span>
-    </div>
-  </section>
-  <div class="layout" id="matrix">
-    <aside>
-      <div class="filter-title"><span>Filters</span><button class="tab" id="reset">Reset</button></div>
-      <input id="search" type="search" placeholder="Search agents or notes">
-      <div class="filter-block">
-        <h2>Rows</h2>
-        <label><input type="checkbox" id="showPlaceholders"> Show placeholders</label>
-      </div>
-      <div class="filter-block">
-        <h2>Form factor</h2>
-        <div id="formFilters"></div>
-      </div>
-      <div class="filter-block">
-        <h2>Support</h2>
-        <label><input type="checkbox" data-support-level="full"> Full</label>
-        <label><input type="checkbox" data-support-level="partial"> Partial</label>
-      </div>
-      <div class="filter-block">
-        <h2>Categories</h2>
-        <label><input type="checkbox" data-support-key="rules"> Rules</label>
-        <label><input type="checkbox" data-support-key="skills"> Skills</label>
-        <label><input type="checkbox" data-support-key="hooks"> Hooks</label>
-        <label><input type="checkbox" data-support-key="mcp_servers"> MCP</label>
-        <label><input type="checkbox" data-support-key="custom_model_provider"> Arbitrary models</label>
-      </div>
-    </aside>
-    <main>
-      <div class="toolbar">
-        <div class="tabs" id="tabs"></div>
-        <div class="count" id="count"></div>
-      </div>
-      <div class="table-wrap">
-        <table id="table"></table>
-      </div>
-    </main>
+<header class="topbar">
+  <a class="brand" href="/"><span class="mark">AL</span><span>Coding Agent Feature Matrix</span></a>
+  <nav class="topnav">
+    <a href="https://github.com/dhruv-anand-aintech/agent-launch" class="gh-btn" target="_blank" rel="noreferrer">
+      <svg width="13" height="13" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+      Star
+    </a>
+  </nav>
+</header>
+<section class="hero">
+  <p>Compare ${htmlEscape(matrix.length)} AI coding agents across 17 features. Hover a column for agent name, drag to reorder, click to toggle visibility.</p>
+  <div class="meta-row">
+    <span class="pill">${htmlEscape(matrix.length)} agents</span>
+    <span class="pill">Updated ${new Date().toISOString().slice(0, 10)}</span>
   </div>
-  <script type="application/json" id="payload">${payload}</script>
-  <script>
-    const { matrix, columns, groups } = JSON.parse(document.getElementById('payload').textContent);
-    const state = { group: 'All', search: '', forms: new Set(), supportKeys: new Set(), supportLevels: new Set(), showPlaceholders: false };
-    const featureKeys = new Set(['rules','skills','hooks','mcp_servers','custom_commands','subagents','model_selection','approval_mode','sandbox_mode','resume','continue','non_interactive','output_format','statusline','telemetry','custom_model_provider']);
-    const formFactors = [...new Set(matrix.flatMap(row => row.form_factor.values || [row.form_factor.value]).filter(Boolean))].sort();
-    const glyph = { full: '✔', partial: '◐', none: '✕', unknown: '?', '': '—' };
+</section>
+<div class="table-wrap">
+<table>
+<thead><tr id="headerRow"></tr></thead>
+<tbody id="tbody"></tbody>
+</table>
+</div>
+<script type="application/json" id="payload">${payload}</script>
+<script>
+function agentDomain(agent) {
+  var u = agent.links.website || agent.links.docs || "";
+  try { return new URL(u).hostname.replace(/^www\\./, ""); } catch(e) { return ""; }
+}
+const { matrix, columns, groups } = JSON.parse(document.getElementById('payload').textContent);
+const metaCols = new Set(['name','form_factor','released_in','latest_major_update','pricing','notes']);
+const featureCols = columns.filter(c => !metaCols.has(c.key));
+const aboutCols = columns.filter(c => metaCols.has(c.key) && c.key !== 'name' && c.key !== 'notes');
 
-    function cell(row, column) {
-      const value = row[column.key];
-      if (column.key === 'name') {
-        return '<td><div class="agent-name">' + esc(row.name) + '</div><div class="agent-links">' +
-          iconLink(row.links.docs, 'D', 'Docs') + iconLink(row.links.github, 'G', 'GitHub') + iconLink(row.links.website, '↗', 'Website') + '</div></td>';
-      }
-      if (!value) return '<td class="blank">—</td>';
-      if (column.key === 'form_factor') {
-        const values = value.values || (value.value ? [value.value] : []);
-        return '<td><div class="tag-list">' + values.map(item => '<span class="tag">' + esc(item) + '</span>').join('') + '</div>' +
-          source(value.source_url) + note(value.comment) + '</td>';
-      }
-      if (column.key === 'pricing') {
-        return '<td>' + source(value.source_url) + '</td>';
-      }
-      if (featureKeys.has(column.key)) {
-        const support = value.support || '';
-        return '<td><span class="support ' + support + '"><span class="dot">' + glyph[support] + '</span>' + label(support) + '</span>' +
-          source(value.source_url) + note(value.comment) + '</td>';
-      }
-      if (value.value !== undefined) {
-        return '<td class="value-cell">' + esc(value.value) + source(value.source_url) + note(value.comment) + '</td>';
-      }
-      return '<td>' + esc(value) + '</td>';
-    }
+const COOKIE = 'agmat_state';
+let colOrder = [];
+let rowOrder = [];
+let hidden = new Set();
+let rowSort = null;
+const SORT_ORDER = { full:0, partial:1, none:2, unknown:3, "":4 };
 
-    function esc(value) { return String(value || '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
-    function label(value) { return value ? value[0].toUpperCase() + value.slice(1) : 'Blank'; }
-    function note(value) { return value ? '<div class="cell-note">' + esc(value) + '</div>' : ''; }
-    function source(url) { return url ? '<a class="source" href="' + esc(url) + '" target="_blank" rel="noreferrer" aria-label="Open source" title="Open source">↗</a>' : ''; }
-    function link(url, text) { return url ? '<a href="' + esc(url) + '" target="_blank" rel="noreferrer">' + text + '</a>' : ''; }
-    function iconLink(url, glyph, label) { return url ? '<a class="icon-link" href="' + esc(url) + '" target="_blank" rel="noreferrer" aria-label="' + esc(label) + '" title="' + esc(label) + '">' + glyph + '</a>' : ''; }
+// Pinned agents (always at top), then rest sorted by full-feature count
+const PINNED = ['Claude Code','OpenAI Codex CLI','Cursor','OpenCode','Antigravity CLI','Antigravity IDE'];
+const ALL_FEATS = featureCols.map(function(c){return c.key});
+function rankAgent(i) {
+  var agent = matrix[i], p = PINNED.indexOf(agent.name);
+  if (p !== -1) return -1000 + p;
+  var cnt = 0;
+  ALL_FEATS.forEach(function(k){if((agent[k]||{}).support==='full')cnt++});
+  return -cnt;
+}
 
-    function visibleColumns() {
-      return state.group === 'All' ? columns : columns.filter(column => column.group === 'About' || column.group === state.group);
+function loadState() {
+  var def = { cols: matrix.map(function(_,i){return i}).sort(function(a,b){return rankAgent(a)-rankAgent(b)}), rows: featureCols.map(function(c){return c.key}) };
+  try {
+    var c = document.cookie.split('; ').find(r => r.startsWith(COOKIE+'='));
+    if (c) { var p = JSON.parse(decodeURIComponent(c.split('=')[1]));
+      if (Array.isArray(p.cols) && p.cols.length===matrix.length) def.cols = p.cols;
+      if (Array.isArray(p.rows) && p.rows.length===featureCols.length) def.rows = p.rows;
     }
-    function visibleRows() {
-      return matrix.filter(row => {
-        const haystack = JSON.stringify(row).toLowerCase();
-        const isPlaceholder = (row.notes || '').toLowerCase().includes('placeholder row');
-        if (isPlaceholder && !state.showPlaceholders) return false;
-        if (state.search && !haystack.includes(state.search.toLowerCase())) return false;
-        const rowForms = row.form_factor.values || [row.form_factor.value];
-        if (state.forms.size && !rowForms.some(form => state.forms.has(form))) return false;
-        for (const key of state.supportKeys) {
-          const support = row[key]?.support || '';
-          const allowed = state.supportLevels.size ? state.supportLevels : new Set(['full', 'partial']);
-          if (!allowed.has(support)) return false;
-        }
-        if (!state.supportKeys.size && state.supportLevels.size) {
-          const hasLevel = [...featureKeys].some(key => state.supportLevels.has(row[key]?.support || ''));
-          if (!hasLevel) return false;
-        }
-        return true;
-      });
-    }
-    function columnGroups(cols) {
-      return cols.reduce((acc, col) => {
-        const last = acc[acc.length - 1];
-        if (last && last.group === col.group) last.span += 1;
-        else acc.push({ group: col.group, span: 1 });
-        return acc;
-      }, []);
-    }
-    function renderTabs() {
-      document.getElementById('tabs').innerHTML = ['All', ...groups].map(group =>
-        '<button class="tab ' + (state.group === group ? 'active' : '') + '" data-group="' + esc(group) + '">' + esc(group) + '</button>'
-      ).join('');
-    }
-    function renderFilters() {
-      document.getElementById('formFilters').innerHTML = formFactors.map(form =>
-        '<label><input type="checkbox" data-form="' + esc(form) + '"> ' + esc(form) + '</label>'
-      ).join('');
-    }
-    function renderTable() {
-      const rows = visibleRows();
-      const cols = visibleColumns();
-      document.getElementById('count').textContent = rows.length + ' agents';
-      if (!rows.length) {
-        document.getElementById('table').innerHTML = '<tbody><tr><td class="empty">No agents match these filters.</td></tr></tbody>';
-        return;
-      }
-      const groupHeader = columnGroups(cols).map(group =>
-        '<th class="group-heading" colspan="' + group.span + '">' + esc(group.group) + '</th>'
-      ).join('');
-      document.getElementById('table').innerHTML =
-        '<thead><tr>' + groupHeader + '</tr><tr>' + cols.map(col => '<th>' + esc(col.label) + '</th>').join('') + '</tr></thead>' +
-        '<tbody>' + rows.map(row => '<tr>' + cols.map(col => cell(row, col)).join('') + '</tr>').join('') + '</tbody>';
-    }
-    function renderAll() { renderTabs(); renderTable(); }
-    renderFilters(); renderAll();
-    document.getElementById('search').addEventListener('input', event => { state.search = event.target.value; renderTable(); });
-    document.getElementById('tabs').addEventListener('click', event => {
-      if (event.target.dataset.group) { state.group = event.target.dataset.group; renderAll(); }
+  } catch(e) {}
+  return def;
+}
+function saveState() {
+  document.cookie = COOKIE + '=' + encodeURIComponent(JSON.stringify({cols:colOrder, rows:rowOrder})) + ';path=/;max-age=31536000';
+}
+function esc(v) { return String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+var COLORS = ['#176b5b','#2d4f9e','#9a3c32','#a35f00','#4a6fa5','#7b4f9e','#27ae60','#8e44ad','#d35400','#16a085','#2c3e50','#f39c12','#1abc9c','#34495e','#e74c3c','#2980b9','#c0392b'];
+function agentInitials(name) {
+  var p = name.split(/\s+/);
+  return p.length===1 ? name.slice(0,2).toUpperCase() : (p[0][0]+p[1][0]).toUpperCase();
+}
+function avatarSvg(ini, c, size) {
+  var s = size||32, r = Math.round(s/5), fs = Math.round(s*0.44);
+  return '<svg width="'+s+'" height="'+s+'" viewBox="0 0 '+s+' '+s+'" xmlns="http://www.w3.org/2000/svg"><rect width="'+s+'" height="'+s+'" rx="'+r+'" fill="'+c+'"/><text x="'+s/2+'" y="'+s/2+'" text-anchor="middle" dominant-baseline="central" fill="white" font-size="'+fs+'" font-weight="700" font-family="Inter,sans-serif">'+ini+'</text></svg>';
+}
+function favimg(agent, idx) {
+  var d = agentDomain(agent), ini = agentInitials(agent.name), c = COLORS[idx%COLORS.length];
+  var fallback = avatarSvg(ini, c, 32);
+  var src = d ? 'https://www.google.com/s2/favicons?domain='+esc(encodeURIComponent(d))+'&sz=64' : '';
+  if (!src) return fallback;
+  return '<span style="display:inline-block;position:relative;line-height:0"><img class="fav" src="'+src+'" alt="" width="32" height="32" loading="lazy" onerror="var p=this.parentElement;this.style.display=\\x27none\\x27;var s=p.querySelector(\\x27.fav-av\\x27);if(s)s.style.display=\\x27inline\\x27"><span class="fav-av" style="display:none">'+fallback+'</span></span>';
+}
+function cell(agent, col) {
+  var v = agent[col.key];
+  if (!v) return '<td>&mdash;</td>';
+  if (col.key==='form_factor') return '<td class="cell-wrap"><div class="form-tags">'+(v.values||[v.value]).map(function(x){return '<span class="form-tag">'+esc(x)+'</span>'}).join('')+'</div></td>';
+  var tip = v.comment ? '<span class="cell-tip">'+esc(v.comment)+'</span>' : '';
+  var src = v.source_url ? '<a class="tri" href="'+esc(v.source_url)+'" target="_blank" rel="noreferrer" title="Open source" aria-label="Open source"></a>' : '';
+  if (featureCols.includes(col)) {
+    var g = {full:'&#10003;',partial:'&#9678;',none:'&#10005;',unknown:'?','':'—'};
+    return '<td class="cell-wrap"><span class="support '+(v.support||'')+'"><span class="dot">'+(g[v.support||'']||'?')+'</span></span>'+src+tip+'</td>';
+  }
+  if (v.value!==undefined) return '<td class="cell-wrap value">'+esc(v.value)+src+tip+'</td>';
+  return '<td>'+esc(v)+'</td>';
+}
+function renderHeader() {
+  document.getElementById('headerRow').innerHTML = '<th class="corner"></th>'+colOrder.map(function(i){
+    var agent = matrix[i], hc = hidden.has(i)?' hidden-col':'';
+    return '<th class="agent-col'+hc+'" data-idx="'+i+'" draggable="true" onclick="toggleCol('+i+')" title="Click to toggle visibility">'+
+      favimg(agent, i)+'<span class="eye">'+(hidden.has(i)?'&#8855;':'&#9679;')+'</span><div class="agent-full">'+esc(agent.name)+'</div></th>';
+  }).join(''); setupColDrag();
+}
+function visibleCols() { return colOrder.filter(function(i){return !hidden.has(i)}); }
+function renderBody() {
+  var vc = visibleCols();
+  if (rowSort) {
+    var key = rowSort.key;
+    vc = vc.slice().sort(function(a,b){var va=SORT_ORDER[(matrix[a][key]||{}).support||'']||4,vb=SORT_ORDER[(matrix[b][key]||{}).support||'']||4;return rowSort.asc?va-vb:vb-va});
+  }
+  var rows = [];
+  rows.push('<tr class="group-head"><td colspan="'+(vc.length+1)+'">About</td></tr>');
+  aboutCols.forEach(function(col){rows.push('<tr><td class="row-label">'+esc(col.label)+'</td>'+vc.map(function(i){return cell(matrix[i],col)}).join('')+'</tr>')});
+  // Feature rows in saved order, grouped
+  var used = {};
+  rowOrder.forEach(function(key){
+    var col = featureCols.find(function(c){return c.key===key});
+    if (!col||used[key]) return; used[key]=true;
+    var isSort = rowSort && rowSort.key===key;
+    var active = isSort?' filter-active':'';
+    var arrow = isSort?(rowSort.asc?'&#9650;':'&#9660;'):'&#9654;';
+    var labelHtml = '<td class="row-label'+active+'" draggable="true" data-rowkey="'+key+'" onclick="cycleSort('+"'"+key+"'"+')" title="Sort columns by this feature"><span class="arrow">'+arrow+'</span>'+esc(col.label)+'</td>';
+    var cells = vc.map(function(i){
+      if (!isSort) return cell(matrix[i],col);
+      var s = (matrix[i][col.key]||{}).support||'';
+      return cell(matrix[i],col);
+    }).join('');
+    rows.push('<tr>'+labelHtml+cells+'</tr>');
+  });
+  document.getElementById('tbody').innerHTML = rows.join('');
+  setupRowDrag();
+}
+function toggleCol(i) { hidden.has(i)?hidden.delete(i):hidden.add(i); renderHeader(); renderBody(); }
+function cycleSort(key) {
+  if (rowSort && rowSort.key===key) { if (rowSort.asc) rowSort.asc=false; else rowSort=null; }
+  else rowSort = {key:key, asc:true};
+  renderBody();
+}
+function setupColDrag() {
+  document.querySelectorAll('th.agent-col').forEach(function(th){
+    th.addEventListener('dragstart',function(e){this.classList.add('dragging');e.dataTransfer.setData('text/col',this.dataset.idx)});
+    th.addEventListener('dragend',function(){this.classList.remove('dragging')});
+    th.addEventListener('dragover',function(e){e.preventDefault();this.classList.add('drag-over')});
+    th.addEventListener('dragleave',function(){this.classList.remove('drag-over')});
+    th.addEventListener('drop',function(e){e.preventDefault();this.classList.remove('drag-over');
+      var from=parseInt(e.dataTransfer.getData('text/col')),to=parseInt(this.dataset.idx);
+      if (isNaN(from)||isNaN(to)||from===to) return;
+      var fp=colOrder.indexOf(from),tp=colOrder.indexOf(to);
+      if (fp===-1||tp===-1) return;
+      colOrder.splice(fp,1);colOrder.splice(tp,0,from);saveState();renderHeader();renderBody();
     });
-    document.getElementById('formFilters').addEventListener('change', event => {
-      const form = event.target.dataset.form;
-      if (!form) return;
-      event.target.checked ? state.forms.add(form) : state.forms.delete(form);
-      renderTable();
+  });
+}
+function setupRowDrag() {
+  document.querySelectorAll('.row-label[draggable]').forEach(function(td){
+    td.addEventListener('dragstart',function(e){this.classList.add('dragging');e.dataTransfer.setData('text/row',this.dataset.rowkey)});
+    td.addEventListener('dragend',function(){this.classList.remove('dragging')});
+    td.addEventListener('dragover',function(e){e.preventDefault();this.classList.add('drag-over')});
+    td.addEventListener('dragleave',function(){this.classList.remove('drag-over')});
+    td.addEventListener('drop',function(e){e.preventDefault();this.classList.remove('drag-over');
+      var from=e.dataTransfer.getData('text/row'),to=this.dataset.rowkey;
+      if (!from||!to||from===to) return;
+      var fp=rowOrder.indexOf(from),tp=rowOrder.indexOf(to);
+      if (fp===-1||tp===-1) return;
+      rowOrder.splice(fp,1);rowOrder.splice(tp,0,from);saveState();renderBody();
     });
-    document.querySelector('aside').addEventListener('change', event => {
-      const key = event.target.dataset.supportKey;
-      const level = event.target.dataset.supportLevel;
-      if (!key && !level) return;
-      if (key) event.target.checked ? state.supportKeys.add(key) : state.supportKeys.delete(key);
-      if (level) event.target.checked ? state.supportLevels.add(level) : state.supportLevels.delete(level);
-      renderTable();
-    });
-    document.getElementById('showPlaceholders').addEventListener('change', event => {
-      state.showPlaceholders = event.target.checked;
-      renderTable();
-    });
-    document.getElementById('reset').addEventListener('click', () => {
-      state.search = ''; state.forms.clear(); state.supportKeys.clear(); state.supportLevels.clear(); state.showPlaceholders = false;
-      document.getElementById('search').value = '';
-      document.querySelectorAll('input[type="checkbox"]').forEach(input => input.checked = false);
-      renderTable();
-    });
-  </script>
+  });
+}
+var state = loadState(); colOrder = state.cols; rowOrder = state.rows;
+renderHeader(); renderBody();
+</script>
 </body>
 </html>`;
 }
 
+function renderRobots() {
+  return `User-agent: *\nAllow: /\nSitemap: https://compare.ainorthstar.tech/sitemap.xml\n`;
+}
+function renderSitemap() {
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://compare.ainorthstar.tech/</loc><lastmod>${new Date().toISOString().slice(0,10)}</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+</urlset>`;
+}
+
+const bundleJson = JSON.stringify(matrix, null, 2);
+
 export default {
-  fetch() {
-    return new Response(render(), {
-      headers: {
-        "content-type": "text/html; charset=utf-8",
-        "cache-control": "public, max-age=300",
-      },
-    });
+  fetch(request) {
+    const url = new URL(request.url);
+    if (url.pathname === "/llms.txt") return new Response(llmsTxt, {headers: {"content-type":"text/plain; charset=utf-8","cache-control":"public, max-age=300"}});
+    if (url.pathname === "/robots.txt") return new Response(renderRobots(), {headers: {"content-type":"text/plain; charset=utf-8","cache-control":"public, max-age=86400"}});
+    if (url.pathname === "/sitemap.xml") return new Response(renderSitemap(), {headers: {"content-type":"application/xml; charset=utf-8","cache-control":"public, max-age=3600"}});
+    if (url.pathname === "/bundle.json") return new Response(bundleJson, {headers: {"content-type":"application/json; charset=utf-8","cache-control":"public, max-age=300","access-control-allow-origin":"*"}});
+    return new Response(render(), {headers: {"content-type":"text/html; charset=utf-8","cache-control":"public, max-age=300"}});
   },
 };

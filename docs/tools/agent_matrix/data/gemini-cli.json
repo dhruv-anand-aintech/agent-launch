@@ -11,15 +11,15 @@
       "CLI"
     ],
     "source_url": "https://google-gemini.github.io/gemini-cli/#:~:text=Gemini%20CLI",
-    "comment": ""
+    "comment": "CLI tool."
   },
   "released_in": {
-    "value": "June 2025",
+    "value": "Jun '25",
     "source_url": "https://blog.google/technology/developers/introducing-gemini-cli-open-source-ai-agent/#:~:text=Gemini%20CLI",
     "comment": "Public open-source Gemini CLI launch."
   },
   "latest_major_update": {
-    "value": "May 2026",
+    "value": "May '26",
     "source_url": "https://antigravity.google/docs/cli-getting-started#:~:text=Antigravity%20CLI",
     "comment": "Google points CLI users toward the newer Antigravity CLI for the latest standalone CLI surface."
   },
@@ -105,8 +105,13 @@
   },
   "notes": "Kept as an explicit agent-launch option, but excluded from random selection in this repo.",
   "pricing": {
-    "value": "",
-    "source_url": "https://github.com/google-gemini/gemini-cli#:~:text=Gemini%20CLI",
-    "comment": "Pricing source link; exact price not normalized in this matrix."
+    "value": "Free (Apache-2.0), Gemini API usage billed separately",
+    "source_url": "https://ai.google.dev/pricing#:~:text=Gemini%20API",
+    "comment": "Gemini CLI is open source (Apache-2.0). API usage billed through Google AI Studio or Vertex AI."
+  },
+  "hosted_agent": {
+    "support": "none",
+    "source_url": "https://google-gemini.github.io/gemini-cli/#:~:text=Gemini%20CLI",
+    "comment": "Local CLI tool backed by Google Gemini API."
   }
 }

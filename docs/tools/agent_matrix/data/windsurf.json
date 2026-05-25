@@ -9,105 +9,111 @@
   "form_factor": {
     "values": [
       "IDE",
-      "Coding agent"
+      "Extension",
+      "CLI"
     ],
-    "source_url": "https://windsurf.com/#:~:text=Windsurf",
-    "comment": "Placeholder row; verify details before treating as complete."
+    "source_url": "https://docs.windsurf.com/#set-up#:~:text=Windsurf%20Editor",
+    "comment": "Standalone VS Code fork IDE + JetBrains plugin + CLI."
   },
   "released_in": {
-    "value": "TBD",
-    "source_url": "https://windsurf.com/#:~:text=Windsurf",
-    "comment": "Placeholder pending exact public release month/year."
+    "value": "Nov '24",
+    "source_url": "https://windsurf.com/blog/windsurf-2-0#:~:text=Windsurf%202.0%3A%20Introducing%20the%20Agent%20Command%20Center%20and%20Devin%20in%20Windsurf",
+    "comment": "Originally launched as 'Codeium' IDE, rebranded to 'Windsurf' ~November 2024. Windsurf 2.0 shipped April 15, 2026."
   },
   "latest_major_update": {
-    "value": "TBD",
-    "source_url": "https://windsurf.com/#:~:text=Windsurf",
-    "comment": "Placeholder pending latest major update research."
+    "value": "Apr '26",
+    "source_url": "https://windsurf.com/blog/windsurf-2-0#:~:text=Windsurf%202.0%3A%20Introducing%20the%20Agent%20Command%20Center%20and%20Devin%20in%20Windsurf",
+    "comment": "Windsurf 2.0 (April 15, 2026): Agent Command Center (Kanban board), Devin cloud agent integration, Spaces. Latest patch: v2.3.9 (May 17, 2026)."
   },
-  "notes": "Placeholder row added to track a released coding-agent surface. Open issue should fill exact sourced feature cells.",
   "rules": {
-    "support": "unknown",
-    "source_url": "https://windsurf.com/#:~:text=Windsurf",
-    "comment": "Placeholder pending sourced verification."
+    "support": "full",
+    "source_url": "https://docs.windsurf.com/windsurf/cascade/memories#rules#:~:text=Rules",
+    "comment": "Three scopes: Global (~/.codeium/windsurf/memories/global_rules.md, always-on), Workspace (.windsurf/rules/*.md with frontmatter modes), System (/etc/windsurf/rules/*.md). AGENTS.md support."
   },
   "skills": {
-    "support": "unknown",
-    "source_url": "https://windsurf.com/#:~:text=Windsurf",
-    "comment": "Placeholder pending sourced verification."
+    "support": "full",
+    "source_url": "https://docs.windsurf.com/windsurf/cascade/skills#skill-md-file-format#:~:text=Skills",
+    "comment": "Full support. SKILL.md files with YAML frontmatter. Progressive disclosure. Scopes: Workspace .windsurf/skills/, Global ~/.codeium/windsurf/skills/. Discovers .agents/skills/ and .claude/skills/."
   },
   "hooks": {
-    "support": "unknown",
-    "source_url": "https://windsurf.com/#:~:text=Windsurf",
-    "comment": "Placeholder pending sourced verification."
+    "support": "full",
+    "source_url": "https://docs.windsurf.com/windsurf/cascade/hooks#hook-events#:~:text=Hook%20Events",
+    "comment": "12 hook events: pre/post read/write code, pre/post run command, pre/post MCP tool use, pre/post user prompt, post cascade response. Pre-hooks can block with exit code 2."
   },
   "mcp_servers": {
-    "support": "unknown",
-    "source_url": "https://windsurf.com/#:~:text=Windsurf",
-    "comment": "Placeholder pending sourced verification."
+    "support": "full",
+    "source_url": "https://docs.windsurf.com/windsurf/cascade/mcp#adding-a-new-mcp#:~:text=Adding%20a%20New%20MCP",
+    "comment": "Full native MCP. MCP Marketplace with one-click install. stdio, Streamable HTTP, SSE transports. OAuth support. Admin whitelists for teams."
   },
   "custom_commands": {
-    "support": "unknown",
-    "source_url": "https://windsurf.com/#:~:text=Windsurf",
-    "comment": "Placeholder pending sourced verification."
+    "support": "full",
+    "source_url": "https://docs.windsurf.com/windsurf/cascade/workflows#how-to-create-a-workflow#:~:text=How%20to%20Create%20a%20Workflow",
+    "comment": "Custom commands via Workflows (slash commands /[workflow-name]) and Command palette. Terminal has 4 auto-execution levels."
   },
   "subagents": {
-    "support": "unknown",
-    "source_url": "https://windsurf.com/#:~:text=Windsurf",
-    "comment": "Placeholder pending sourced verification."
+    "support": "full",
+    "source_url": "https://docs.windsurf.com/windsurf/devin#delegating-work-to-devin#:~:text=Delegating%20Work%20to%20Devin",
+    "comment": "Devin Cloud (autonomous agent on own VM), Devin Local Agent, Fast Context (specialized 20x faster retrieval), Agent Command Center manages all agents in Kanban view."
   },
   "model_selection": {
-    "support": "unknown",
-    "source_url": "https://windsurf.com/#:~:text=Windsurf",
-    "comment": "Placeholder pending sourced verification."
+    "support": "full",
+    "source_url": "https://docs.windsurf.com/windsurf/models#:~:text=Models",
+    "comment": "Full selection: SWE-1.6/1.5, Claude Opus/Sonnet, GPT-5.x series, Gemini, DeepSeek V4, Kimi, Grok, and more. Adaptive (intelligent router) and Arena Mode (side-by-side)."
   },
   "approval_mode": {
-    "support": "unknown",
-    "source_url": "https://windsurf.com/#:~:text=Windsurf",
-    "comment": "Placeholder pending sourced verification."
+    "support": "full",
+    "source_url": "https://docs.windsurf.com/windsurf/terminal#auto-execution-levels#:~:text=Auto%20Execution%20Levels",
+    "comment": "4 terminal levels: Disabled (require approval), Allowlist Only, Auto (Cascade judges), Turbo (all auto-executed). Allow/deny lists. Cascade Code/Chat/Ask mode distinctions."
   },
   "sandbox_mode": {
-    "support": "unknown",
-    "source_url": "https://windsurf.com/#:~:text=Windsurf",
-    "comment": "Placeholder pending sourced verification."
+    "support": "partial",
+    "source_url": "https://docs.windsurf.com/windsurf/devin#what-devin-does#:~:text=Devin",
+    "comment": "Devin cloud agent runs on isolated VM. Git worktrees isolate parallel sessions. Dev Containers support. No standalone sandbox toggle for the IDE."
   },
   "resume": {
-    "support": "unknown",
-    "source_url": "https://windsurf.com/#:~:text=Windsurf",
-    "comment": "Placeholder pending sourced verification."
+    "support": "full",
+    "source_url": "https://docs.windsurf.com/windsurf/cascade/cascade#tool-calling#:~:text=Tool%20Calling",
+    "comment": "Cascade has 'continue' button. Auto-Continue setting. Named checkpoints/snapshots for reversion. Sessions persist and switch via dropdown."
   },
   "continue": {
-    "support": "unknown",
-    "source_url": "https://windsurf.com/#:~:text=Windsurf",
-    "comment": "Placeholder pending sourced verification."
+    "support": "full",
+    "source_url": "https://docs.windsurf.com/windsurf/cascade/cascade#real-time-awareness#:~:text=Real%2DTime%20Awareness",
+    "comment": "Auto-Continue setting automatically continues when hitting tool-call limits. Queued messages for follow-ups while Cascade is working. Real-time editor awareness."
   },
   "non_interactive": {
-    "support": "unknown",
-    "source_url": "https://windsurf.com/#:~:text=Windsurf",
-    "comment": "Placeholder pending sourced verification."
+    "support": "partial",
+    "source_url": "https://docs.windsurf.com/#set-up#:~:text=windsurf%20CLI",
+    "comment": "windsurf CLI available in PATH. Devin CLI agent runs in terminal. No documented --non-interactive flag for the IDE."
   },
   "output_format": {
-    "support": "unknown",
-    "source_url": "https://windsurf.com/#:~:text=Windsurf",
-    "comment": "Placeholder pending sourced verification."
+    "support": "partial",
+    "source_url": "https://docs.windsurf.com/windsurf/cascade/hooks#post_cascade_response_with_transcript#:~:text=post_cascade_response_with_transcript",
+    "comment": "Enterprise analytics API available. post_cascade_response_with_transcript hook writes full conversation to JSONL files at ~/.windsurf/transcripts/{trajectory_id}.jsonl."
   },
   "statusline": {
-    "support": "unknown",
-    "source_url": "https://windsurf.com/#:~:text=Windsurf",
-    "comment": "Placeholder pending sourced verification."
+    "support": "partial",
+    "source_url": "https://windsurf.com/blog/windsurf-2-0#:~:text=Agent%20Command%20Center",
+    "comment": "No customizable status line like Cursor. Status bar has model indicator and plan/usage info. Agent Command Center is a Kanban dashboard of all agents."
   },
   "telemetry": {
-    "support": "unknown",
-    "source_url": "https://windsurf.com/#:~:text=Windsurf",
-    "comment": "Placeholder pending sourced verification."
+    "support": "partial",
+    "source_url": "https://docs.windsurf.com/troubleshooting/plugins-common-issues#:~:text=telemetry",
+    "comment": "Telemetry settings mentioned in troubleshooting docs. Enterprise analytics API. No documented granular telemetry opt-out beyond standard VS Code settings."
   },
   "custom_model_provider": {
-    "support": "unknown",
-    "source_url": "https://windsurf.com/#:~:text=Windsurf",
-    "comment": "Placeholder pending sourced verification."
+    "support": "partial",
+    "source_url": "https://windsurf.com/changelog#:~:text=BYOK%20(Anthropic%20Key)",
+    "comment": "BYOK for Anthropic models (Claude Sonnet 4, Opus 4) for Free/Pro users. No generic custom OpenAI-compatible endpoint configuration documented."
   },
+  "notes": "Windsurf by Codeium (acquired by Cognition AI in April 2026) is a standalone VS Code fork IDE with integrated coding agent (Cascade). The Devin integration added cloud agent capabilities. Competes directly with Cursor IDE.",
   "pricing": {
-    "value": "",
-    "source_url": "https://windsurf.com/#:~:text=Windsurf",
-    "comment": "Pricing source link; exact price not normalized in this matrix."
+    "value": "Free $0, Pro $20/mo, Max $200/mo, Teams $40/user/mo",
+    "source_url": "https://windsurf.com/pricing#compare-plans#:~:text=Compare%20Plans",
+    "comment": "Free ($0): Unlimited autocomplete, 50 Cascade requests weekly. Pro ($20/mo): Standard daily usage + extra at API prices. Max ($200/mo): Heavy daily usage. Teams ($40/user/mo)."
+  },
+  "hosted_agent": {
+    "support": "full",
+    "source_url": "https://docs.windsurf.com/windsurf/devin#delegating-work-to-devin#:~:text=Delegating%20Work%20to%20Devin",
+    "comment": "Devin cloud agent integration provides managed agent platform."
   }
 }

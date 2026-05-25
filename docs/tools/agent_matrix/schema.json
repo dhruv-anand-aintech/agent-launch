@@ -35,6 +35,7 @@
     "output_format": {"allOf": [{"$ref": "#/$defs/featureWithSource"}], "$comment": "Settings | Output Format | Machine-readable or alternate output format controls."},
     "statusline": {"allOf": [{"$ref": "#/$defs/featureWithSource"}], "$comment": "Settings | Status Line | User-configurable CLI status line or equivalent."},
     "telemetry": {"allOf": [{"$ref": "#/$defs/featureWithSource"}], "$comment": "Settings | Telemetry | User-visible telemetry/privacy settings."},
+    "hosted_agent": {"allOf": [{"$ref": "#/$defs/featureWithSource"}], "$comment": "Platform | Hosted Agent | Managed cloud/hosted agent platform."},
     "custom_model_provider": {"allOf": [{"$ref": "#/$defs/featureWithSource"}], "$comment": "Models | Arbitrary Models | Ability to plug in arbitrary model providers or OpenAI-compatible endpoints."},
     "notes": {"type": "string", "$comment": "About | Notes | Short caveats for interpretation."}
   },

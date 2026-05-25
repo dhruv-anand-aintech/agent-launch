@@ -10,105 +10,110 @@
     "values": [
       "IDE",
       "Extension",
-      "Coding agent"
+      "CLI"
     ],
-    "source_url": "https://cline.bot/#:~:text=autonomous%20coding%20agent",
-    "comment": "Placeholder row; verify details before treating as complete."
+    "source_url": "https://cline.bot/#:~:text=One%20open%20source%20agent%20runtime.%20Use%20it%20in%20your%20editor%2C%20your%20terminal%2C%20or%20embed%20it%20in%20your%20own%20products",
+    "comment": "VS Code extension, JetBrains plugin, CLI, SDK, Kanban board."
   },
   "released_in": {
-    "value": "TBD",
-    "source_url": "https://cline.bot/#:~:text=autonomous%20coding%20agent",
-    "comment": "Placeholder pending exact public release month/year."
+    "value": "Jul '24",
+    "source_url": "https://github.com/cline/cline/releases?page=27#:~:text=v1.0.4%2C%2028%20Jul%2001%3A14",
+    "comment": "Initial release was v1.0.4 on July 28, 2024 (originally named 'Claude Dev' by Saoud Rizwan). 8M+ installs by May 2026."
   },
   "latest_major_update": {
-    "value": "TBD",
-    "source_url": "https://cline.bot/#:~:text=autonomous%20coding%20agent",
-    "comment": "Placeholder pending latest major update research."
+    "value": "May '26",
+    "source_url": "https://github.com/cline/cline/releases#:~:text=CLI%20v3.0.10%20Latest%2C%20May%2022%2C%202026",
+    "comment": "CLI at v3.0.10 (May 22, 2026), VS Code extension at v3.84.0 (May 19, 2026). Rapid release cadence."
   },
-  "notes": "Placeholder row added to track a released coding-agent surface. Open issue should fill exact sourced feature cells.",
   "rules": {
-    "support": "unknown",
-    "source_url": "https://cline.bot/#:~:text=autonomous%20coding%20agent",
-    "comment": "Placeholder pending sourced verification."
+    "support": "full",
+    "source_url": "https://docs.cline.bot/customization/cline-rules#:~:text=Primary%20rule%20format%3A%20.clinerules%2F",
+    "comment": "Rich rule system: .clinerules/ directory, global ~/Documents/Cline/Rules/, conditional rules with YAML frontmatter globs, auto-detection of .cursorrules, .windsurfrules, AGENTS.md."
   },
   "skills": {
-    "support": "unknown",
-    "source_url": "https://cline.bot/#:~:text=autonomous%20coding%20agent",
-    "comment": "Placeholder pending sourced verification."
+    "support": "full",
+    "source_url": "https://docs.cline.bot/customization/skills#:~:text=Skills%20are%20modular%20instruction%20sets%20that%20extend%20Cline%E2%80%99s%20capabilities%20for%20specific%20tasks",
+    "comment": "Full skill system: SKILL.md files in .cline/skills/ or ~/.cline/skills/, YAML frontmatter, progressive loading, slash command triggering, skill toggles."
   },
   "hooks": {
-    "support": "unknown",
-    "source_url": "https://cline.bot/#:~:text=autonomous%20coding%20agent",
-    "comment": "Placeholder pending sourced verification."
+    "support": "full",
+    "source_url": "https://docs.cline.bot/sdk/plugins#:~:text=Hook%20stages%20include",
+    "comment": "Lifecycle hooks via SDK plugin system: 18 hook stages (input, runtime_event, session_start, turn_start, tool_call_before/after, etc.). Also ~/.cline/hooks/ directory."
   },
   "mcp_servers": {
-    "support": "unknown",
-    "source_url": "https://cline.bot/#:~:text=autonomous%20coding%20agent",
-    "comment": "Placeholder pending sourced verification."
+    "support": "full",
+    "source_url": "https://docs.cline.bot/mcp/mcp-overview#:~:text=MCP%20(Model%20Context%20Protocol)%20lets%20Cline%20use%20external%20tools%20and%20data%20sources%20through%20MCP%20servers",
+    "comment": "Full MCP support with STDIO and HTTP/SSE transports, MCP Marketplace for one-click install, cline mcp CLI wizard."
   },
   "custom_commands": {
-    "support": "unknown",
-    "source_url": "https://cline.bot/#:~:text=autonomous%20coding%20agent",
-    "comment": "Placeholder pending sourced verification."
+    "support": "full",
+    "source_url": "https://docs.cline.bot/core-workflows/using-commands#:~:text=Slash%20Commands",
+    "comment": "Built-in slash commands plus skills auto-register as slash commands. SDK plugins can also register custom commands."
   },
   "subagents": {
-    "support": "unknown",
-    "source_url": "https://cline.bot/#:~:text=autonomous%20coding%20agent",
-    "comment": "Placeholder pending sourced verification."
+    "support": "full",
+    "source_url": "https://docs.cline.bot/features/subagents#:~:text=Subagents%20let%20Cline%20spawn%20focused%20research%20agents%20that%20run%20in%20parallel",
+    "comment": "Full subagent system: use_subagents tool spawns parallel read-only research agents with separate context/token budgets."
   },
   "model_selection": {
-    "support": "unknown",
-    "source_url": "https://cline.bot/#:~:text=autonomous%20coding%20agent",
-    "comment": "Placeholder pending sourced verification."
+    "support": "full",
+    "source_url": "https://github.com/cline/cline#:~:text=Cline%20is%20not%20locked%20to%20a%20single%20AI%20provider",
+    "comment": "30+ documented providers: Anthropic, OpenAI, Google, AWS Bedrock, Azure, GCP Vertex, OpenRouter (200+ models), Ollama, LM Studio, and any OpenAI-compatible endpoint."
   },
   "approval_mode": {
-    "support": "unknown",
-    "source_url": "https://cline.bot/#:~:text=autonomous%20coding%20agent",
-    "comment": "Placeholder pending sourced verification."
+    "support": "full",
+    "source_url": "https://docs.cline.bot/features/auto-approve#:~:text=Auto%20Approve%20lets%20you%20decide%20which%20actions%20Cline%20can%20take%20without%20asking%20for%20approval",
+    "comment": "Granular auto-approve per category: Read, Edit, Execute, Browser, MCP. YOLO mode for everything. --auto-approve flag."
   },
   "sandbox_mode": {
-    "support": "unknown",
-    "source_url": "https://cline.bot/#:~:text=autonomous%20coding%20agent",
-    "comment": "Placeholder pending sourced verification."
+    "support": "partial",
+    "source_url": "https://docs.cline.bot/cli/cli-reference#:~:text=CLINE_SANDBOX%20Enable%20sandbox%20mode",
+    "comment": "Sandbox mode via CLINE_SANDBOX env var and CLINE_SANDBOX_DATA_DIR for isolated session storage. No containerization."
   },
   "resume": {
-    "support": "unknown",
-    "source_url": "https://cline.bot/#:~:text=autonomous%20coding%20agent",
-    "comment": "Placeholder pending sourced verification."
+    "support": "full",
+    "source_url": "https://docs.cline.bot/cli/cli-reference#:~:text=--id%20%3Csession-id%3E%20Resume%20an%20existing%20session%20by%20ID",
+    "comment": "Full session resume via --id flag. cline history lists all sessions. Checkpoints enable rollback."
   },
   "continue": {
-    "support": "unknown",
-    "source_url": "https://cline.bot/#:~:text=autonomous%20coding%20agent",
-    "comment": "Placeholder pending sourced verification."
+    "support": "partial",
+    "source_url": "https://github.com/cline/cline/releases/tag/cli-v3.0.3#:~:text=--continue%20so%20you%20can%20resume%20a%20task%20in%20an%20isolated%20worktree",
+    "comment": "--continue flag exists but is tied to --worktree. No standalone 'continue latest' flag. Pipe-chaining supported."
   },
   "non_interactive": {
-    "support": "unknown",
-    "source_url": "https://cline.bot/#:~:text=autonomous%20coding%20agent",
-    "comment": "Placeholder pending sourced verification."
+    "support": "full",
+    "source_url": "https://docs.cline.bot/usage/cli-overview#:~:text=Headless%20mode%20is%20triggered%20when%20using%20flags%20like%20--json%2C%20when%20stdin%20is%20piped%2C%20or%20when%20output%20is%20redirected",
+    "comment": "Full headless mode. Auto-triggered with --json flag, piped stdin, or redirected stdout. Works in CI/CD."
   },
   "output_format": {
-    "support": "unknown",
-    "source_url": "https://cline.bot/#:~:text=autonomous%20coding%20agent",
-    "comment": "Placeholder pending sourced verification."
+    "support": "full",
+    "source_url": "https://docs.cline.bot/cli/cli-reference#:~:text=JSON%20Output%20Format",
+    "comment": "Full JSON output via --json flag. Newline-delimited JSON objects with type, text, ts, say/ask subtype, reasoning, partial."
   },
   "statusline": {
-    "support": "unknown",
-    "source_url": "https://cline.bot/#:~:text=autonomous%20coding%20agent",
-    "comment": "Placeholder pending sourced verification."
+    "support": "none",
+    "source_url": "https://docs.cline.bot/cli/cli-reference#:~:text=Global%20Options",
+    "comment": "No customizable status line found in documentation or CLI reference."
   },
   "telemetry": {
-    "support": "unknown",
-    "source_url": "https://cline.bot/#:~:text=autonomous%20coding%20agent",
-    "comment": "Placeholder pending sourced verification."
+    "support": "full",
+    "source_url": "https://docs.cline.bot/enterprise-solutions/monitoring/telemetry#:~:text=Cline%20includes%20telemetry%20to%20help%20understand%20usage%20patterns%20and%20improve%20the%20product",
+    "comment": "Anonymous telemetry with user toggle. Never captures code/file contents. Enterprise: OpenTelemetry integration (OTLP export to Datadog/Grafana/Splunk)."
   },
   "custom_model_provider": {
-    "support": "unknown",
-    "source_url": "https://cline.bot/#:~:text=autonomous%20coding%20agent",
-    "comment": "Placeholder pending sourced verification."
+    "support": "full",
+    "source_url": "https://github.com/cline/cline#:~:text=Any%20OpenAI-compatible%20API%20Self-hosted%20or%20third-party%20endpoints",
+    "comment": "Any OpenAI-compatible API endpoint supported. 30+ documented providers. BYOK model."
   },
+  "notes": "Cline has the most comprehensive feature set of any coding agent in this matrix \u2014 17/20 fields at full support. Open source (Apache 2.0), originally 'Claude Dev'. Started as VS Code extension, expanded to CLI and SDK. 8M+ installs.",
   "pricing": {
-    "value": "",
-    "source_url": "https://cline.bot/#:~:text=autonomous%20coding%20agent",
-    "comment": "Pricing source link; exact price not normalized in this matrix."
+    "value": "Free (Apache-2.0), Enterprise custom pricing",
+    "source_url": "https://cline.bot/pricing#:~:text=Cline%20is%20free%20for%20individual%20developers.%20Pay%20only%20for%20AI%20inference%20on%20a%20usage%20basis",
+    "comment": "Open source: free for individual developers. Pay only for AI inference. Enterprise: custom pricing with SSO/OIDC/SCIM, RBAC."
+  },
+  "hosted_agent": {
+    "support": "none",
+    "source_url": "https://cline.bot/#:~:text=One%20open%20source%20agent%20runtime",
+    "comment": "Runs locally as VS Code extension or CLI."
   }
 }
