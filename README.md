@@ -213,7 +213,7 @@ Built-in defaults:
 | Codex | `gpt-5.4-mini` | `gpt-5.5` with low reasoning effort | `pro` |
 | Claude Code | `sonnet` | `opus` | `pro` |
 | Gemini CLI | `gemini-2.5-flash` | `gemini-2.5-pro` | `pro` |
-| OpenCode | `opencode-go/deepseek-v4-flash` | `opencode-go/deepseek-v4-pro` | `pro` |
+| OpenCode | `opencode-go/deepseek-v4-flash` | `opencode-go/kimi-k2.6` | `pro` |
 | Cursor Agent | `composer-2.5-fast` | `composer-2.5-fast` | `fast` |
 
 Antigravity CLI does not expose a launch-time model flag in `agy --help`; set its default model interactively with `/model`, which persists across sessions.

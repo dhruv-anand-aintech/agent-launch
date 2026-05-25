@@ -25,7 +25,7 @@ AGENTS: dict[str, AgentSpec] = {
     "codex": AgentSpec("codex", "gpt-5.4-mini", "gpt-5.5", "pro"),
     "claude": AgentSpec("claude", "sonnet", "opus", "pro"),
     "gemini": AgentSpec("gemini", "gemini-2.5-flash", "gemini-2.5-pro", "pro"),
-    "opencode": AgentSpec("opencode", "opencode-go/deepseek-v4-flash", "opencode-go/deepseek-v4-pro", "pro"),
+    "opencode": AgentSpec("opencode", "opencode-go/deepseek-v4-flash", "opencode-go/kimi-k2.6", "pro"),
     "cursor": AgentSpec("agent", "composer-2.5-fast", "composer-2.5-fast", "fast"),
 }
 
