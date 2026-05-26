@@ -7,6 +7,7 @@ import argparse
 import os
 import random
 import shlex
+import shutil
 import subprocess
 import sys
 from dataclasses import dataclass
@@ -31,7 +32,7 @@ AGENTS: dict[str, AgentSpec] = {
 
 
 AGENT_CHOICES = tuple(sorted((*AGENTS.keys(), "random")))
-RANDOM_AGENTS = ("claude", "codex", "cursor", "opencode")
+RANDOM_AGENTS = ("antigravity", "claude", "codex", "cursor", "opencode")
 MODES = ("default", "ask", "plan", "auto", "danger")
 
 
@@ -56,11 +57,25 @@ def write_last_random_agent(agent: str) -> None:
         handle.write(f"{agent}\n")
 
 
+def is_agent_installed(agent: str) -> bool:
+    return shutil.which(AGENTS[agent].executable) is not None
+
+
+def installed_random_agents() -> tuple[str, ...]:
+    return tuple(agent for agent in RANDOM_AGENTS if is_agent_installed(agent))
+
+
 def choose_random_agent() -> str:
-    pool = list(RANDOM_AGENTS)
+    installed = installed_random_agents()
+    if not installed:
+        executables = ", ".join(f"{agent} ({AGENTS[agent].executable})" for agent in RANDOM_AGENTS)
+        raise SystemExit(f"No random-pool agents are installed on PATH. Install at least one of: {executables}")
+    pool = list(installed)
     last = read_last_random_agent()
     if last and len(pool) > 1:
         pool = [agent for agent in pool if agent != last]
+    if not pool:
+        pool = list(installed)
     choice = random.choice(pool)
     write_last_random_agent(choice)
     return choice
@@ -414,8 +429,8 @@ def print_mappings() -> None:
         else:
             print(f"  {name}: executable={spec.executable}, model flag unsupported")
     print(
-        "  random: uniformly selects one of claude, codex, cursor, opencode at runtime "
-        "(never the same as the previous random pick)"
+        "  random: uniformly selects one installed backend from antigravity, claude, codex, cursor, opencode "
+        "(never the same as the previous random pick when another installed option exists)"
     )
     print("  codex pro: adds -c model_reasoning_effort=low when using gpt-5.5")
     print("\nModes:")
