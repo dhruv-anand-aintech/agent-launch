@@ -22,6 +22,12 @@ It normalizes the common controls that usually differ across these tools:
 
 By default, `agent-launch` starts agents in `auto` mode unless `AGENT_LAUNCH_MODE` or `--mode` overrides it.
 
+## Demo
+
+<video src="https://raw.githubusercontent.com/dhruv-anand-aintech/agent-launch/main/docs/assets/agent-launch-demo.mp4" controls width="720" poster="docs/assets/agent-launch-demo-thumb.jpg"></video>
+
+[Watch the demo video](https://raw.githubusercontent.com/dhruv-anand-aintech/agent-launch/main/docs/assets/agent-launch-demo.mp4)
+
 ## Install
 
 Primary install path:
