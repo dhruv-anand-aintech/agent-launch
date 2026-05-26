@@ -20,7 +20,7 @@ It normalizes the common controls that usually differ across these tools:
 - session resume
 - latest-session continue
 
-By default, `agent-launch` starts agents in `danger` mode unless `AGENT_LAUNCH_MODE` or `--mode` overrides it.
+By default, `agent-launch` starts agents in `auto` mode unless `AGENT_LAUNCH_MODE` or `--mode` overrides it.
 
 ## Install
 
@@ -92,7 +92,7 @@ agent-launch -a claude -i -m plan -C ~/Code/my-repo 'review this change'
 | `--prompt` / `-p` | Initial prompt |
 | positional text | Prompt text when `--prompt` is omitted |
 | `--cwd` / `-C` | Workspace/working directory |
-| `--mode` / `-m` | `default`, `ask`, `plan`, `auto`, or `danger`; defaults to `AGENT_LAUNCH_MODE` or `danger` |
+| `--mode` / `-m` | `default`, `ask`, `plan`, `auto`, or `danger`; defaults to `AGENT_LAUNCH_MODE` or `auto` |
 | `--model-class` | `fast` or `pro` |
 | `--model` | Explicit backend model string; overrides `--model-class` |
 | `--no-model` | Do not pass a model flag |

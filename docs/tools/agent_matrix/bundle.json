@@ -381,13 +381,13 @@
       "value": "Feb '25",
       "source_url": "https://www.anthropic.com/news/claude-3-7-sonnet#:~:text=Claude%20Code",
       "comment": "Claude Code was introduced as a limited research preview.",
-      "sort_date": "2025-02-01"
+      "sort_date": "2025-12-19"
     },
     "latest_major_update": {
       "value": "May '26",
       "source_url": "https://docs.anthropic.com/en/docs/claude-code/overview#:~:text=Claude%20Code",
       "comment": "Current docs cover CLI, SDK, hooks, skills, and settings.",
-      "sort_date": "2026-05-01"
+      "sort_date": "2026-05-23"
     },
     "rules": {
       "support": "full",
@@ -503,13 +503,13 @@
       "value": "Jul '24",
       "source_url": "https://github.com/cline/cline/releases?page=27#:~:text=v1.0.4%2C%2028%20Jul%2001%3A14",
       "comment": "Initial release was v1.0.4 on July 28, 2024 (originally named 'Claude Dev' by Saoud Rizwan). 8M+ installs by May 2026.",
-      "sort_date": "2024-07-01"
+      "sort_date": "2024-07-28"
     },
     "latest_major_update": {
       "value": "May '26",
       "source_url": "https://github.com/cline/cline/releases#:~:text=CLI%20v3.0.10%20Latest%2C%20May%2022%2C%202026",
       "comment": "CLI at v3.0.10 (May 22, 2026), VS Code extension at v3.84.0 (May 19, 2026). Rapid release cadence.",
-      "sort_date": "2026-05-01"
+      "sort_date": "2026-05-25"
     },
     "rules": {
       "support": "full",
@@ -624,13 +624,13 @@
       "value": "Apr '25",
       "source_url": "https://github.com/openai/codex#:~:text=Codex%20CLI",
       "comment": "Open-source CLI public release.",
-      "sort_date": "2025-04-01"
+      "sort_date": "2025-04-30"
     },
     "latest_major_update": {
       "value": "May '26",
       "source_url": "https://developers.openai.com/codex/changelog/#:~:text=changelog",
       "comment": "Captured from current Codex docs/changelog state.",
-      "sort_date": "2026-05-01"
+      "sort_date": "2026-05-25"
     },
     "rules": {
       "support": "full",
@@ -1232,13 +1232,13 @@
       "value": "Feb '26",
       "source_url": "https://github.com/Kilo-Org/kilocode#:~:text=Created%3A%202025-03-10T15%3A34%3A26Z",
       "comment": "Repository created 2025-03-10. First stable public release effectively Feb 2026 (v1.0.25). v7 rewrite announced May 2026.",
-      "sort_date": "2026-02-01"
+      "sort_date": "2026-02-23"
     },
     "latest_major_update": {
       "value": "May '26",
       "source_url": "https://github.com/Kilo-Org/kilocode/releases#:~:text=v7.2.52",
       "comment": "Latest release: v7.2.52 (2026-05-11). v7.x series started with v7.0.26 (2026-02-23). 98+ releases total.",
-      "sort_date": "2026-05-01"
+      "sort_date": "2026-05-25"
     },
     "rules": {
       "support": "full",
@@ -1353,13 +1353,13 @@
       "value": "Oct '25",
       "source_url": "https://github.com/MoonshotAI/kimi-cli/releases#:~:text=0.34",
       "comment": "First public release v0.34 on 2025-10-21. Reached v1.0 on 2026-01-27. Latest: v1.44.0 (2026-05-14).",
-      "sort_date": "2025-10-01"
+      "sort_date": "2025-10-21"
     },
     "latest_major_update": {
       "value": "May '26",
       "source_url": "https://github.com/MoonshotAI/kimi-cli/releases/tag/1.44.0#:~:text=1.44.0",
       "comment": "v1.44.0 (2026-05-14). Very active development: 97 releases in ~7 months. Rapid iteration pace.",
-      "sort_date": "2026-05-01"
+      "sort_date": "2026-05-13"
     },
     "rules": {
       "support": "full",
@@ -1473,13 +1473,13 @@
       "value": "2025",
       "source_url": "https://github.com/sst/opencode#:~:text=opencode",
       "comment": "Exact public launch month not confirmed in public docs captured for this dataset.",
-      "sort_date": "2025-01-01"
+      "sort_date": "2025-05-14"
     },
     "latest_major_update": {
       "value": "May '26",
       "source_url": "https://opencode.ai/docs/#:~:text=opencode",
       "comment": "Current docs capture config, agents, MCP, and providers.",
-      "sort_date": "2026-05-01"
+      "sort_date": "2026-05-25"
     },
     "rules": {
       "support": "full",
@@ -1594,13 +1594,13 @@
       "value": "Jun '25",
       "source_url": "https://github.com/QwenLM/qwen-code#:~:text=Release%20v0.16.0%20Latest",
       "comment": "GitHub repo created 2025-06-26. Earliest releases (v0.0.5+) shortly after. Currently at v0.16.0 (2026-05-21).",
-      "sort_date": "2025-06-01"
+      "sort_date": "2025-08-01"
     },
     "latest_major_update": {
       "value": "May '26",
       "source_url": "https://github.com/QwenLM/qwen-code#:~:text=Release%20v0.16.0%20Latest",
       "comment": "Latest release v0.16.0 (May 21, 2026). 453 releases, 5,944 commits as of May 2026.",
-      "sort_date": "2026-05-01"
+      "sort_date": "2026-05-25"
     },
     "rules": {
       "support": "full",
@@ -1714,13 +1714,14 @@
     "released_in": {
       "value": "Mid-2025",
       "source_url": "https://github.com/RooCodeInc/Roo-Code/releases/tag/v3.54.0#:~:text=Release%20v3.54.0",
-      "comment": "Forked from Cline. Earliest releases ~mid-2025. Reached v3.54.0 by shutdown on May 15, 2026."
+      "comment": "Forked from Cline. Earliest releases ~mid-2025. Reached v3.54.0 by shutdown on May 15, 2026.",
+      "sort_date": "2025-03-19"
     },
     "latest_major_update": {
       "value": "May '26",
       "source_url": "https://github.com/RooCodeInc/Roo-Code/releases/tag/v3.54.0#:~:text=Release%20v3.54.0",
       "comment": "Final release v3.54.0 on May 15, 2026 (shutdown/sunsetting release). Repository archived, read-only.",
-      "sort_date": "2026-05-01"
+      "sort_date": "2026-05-15"
     },
     "rules": {
       "support": "full",
