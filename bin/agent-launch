@@ -235,7 +235,7 @@ def mode_flags(agent: str, mode: str, non_interactive: bool) -> list[str]:
         "codex": {
             "ask": ["-s", "read-only"],
             "plan": ["-a", "never", "-s", "read-only"] if non_interactive else ["-s", "read-only"],
-            "auto": ["-a", "never"] if non_interactive else ["-a", "on-request"],
+            "auto": ["-a", "never"],
             "danger": ["-a", "never", "-s", "danger-full-access"]
             if non_interactive
             else ["--dangerously-bypass-approvals-and-sandbox"],
