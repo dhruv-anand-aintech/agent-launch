@@ -14,7 +14,7 @@
       "Web",
       "Mac App"
     ],
-    "source_url": "https://code.claude.com/docs/en/quickstart#:~:text=CLI",
+    "source_url": "https://code.claude.com/docs/en/quickstart#source:~:text=CLI",
     "comment": "CLI, IDE integration, VS Code extension, SDK. Per-form-factor links: CLI: https://code.claude.com/docs/en/quickstart; Extension: https://code.claude.com/docs/en/ide-integrations; SDK: https://docs.anthropic.com/en/docs/claude-code/sdk; Web: https://claude.ai/code; Mac App: https://code.claude.com/docs/en/desktop-quickstart.",
     "links": {
       "CLI": "https://code.claude.com/docs/en/quickstart",
@@ -26,108 +26,108 @@
   },
   "released_in": {
     "value": "Feb '25",
-    "source_url": "https://www.anthropic.com/news/claude-3-7-sonnet#:~:text=Claude%20Code",
+    "source_url": "https://www.anthropic.com/news/claude-3-7-sonnet#source:~:text=Claude%20Code",
     "comment": "Claude Code was introduced as a limited research preview."
   },
   "latest_major_update": {
     "value": "May '26",
-    "source_url": "https://docs.anthropic.com/en/docs/claude-code/overview#:~:text=Claude%20Code",
+    "source_url": "https://docs.anthropic.com/en/docs/claude-code/overview#source:~:text=Claude%20Code",
     "comment": "Current docs cover CLI, SDK, hooks, skills, and settings."
   },
   "rules": {
     "support": "full",
-    "source_url": "https://docs.anthropic.com/en/docs/claude-code/memory#:~:text=CLAUDE.md",
+    "source_url": "https://docs.anthropic.com/en/docs/claude-code/memory#source:~:text=CLAUDE.md",
     "comment": "Uses CLAUDE.md memory files. Location: `CLAUDE.md` in repo tree, plus `~/.claude/CLAUDE.md` for user memory."
   },
   "skills": {
     "support": "full",
-    "source_url": "https://docs.anthropic.com/en/docs/claude-code/skills#:~:text=skills",
+    "source_url": "https://docs.anthropic.com/en/docs/claude-code/skills#source:~:text=skills",
     "comment": "Supports skills. Location: `.claude/skills/<name>/SKILL.md` or user-level `~/.claude/skills/<name>/SKILL.md`."
   },
   "hooks": {
     "support": "full",
-    "source_url": "https://docs.anthropic.com/en/docs/claude-code/hooks#:~:text=hooks",
+    "source_url": "https://docs.anthropic.com/en/docs/claude-code/hooks#source:~:text=hooks",
     "comment": "Supports lifecycle hooks."
   },
   "mcp_servers": {
     "support": "full",
-    "source_url": "https://docs.anthropic.com/en/docs/claude-code/mcp#:~:text=MCP",
+    "source_url": "https://docs.anthropic.com/en/docs/claude-code/mcp#source:~:text=MCP",
     "comment": "Supports MCP servers. Location: project `.mcp.json` or Claude Code MCP config via `claude mcp`."
   },
   "custom_commands": {
     "support": "full",
-    "source_url": "https://docs.anthropic.com/en/docs/claude-code/slash-commands#:~:text=slash%20commands",
+    "source_url": "https://docs.anthropic.com/en/docs/claude-code/slash-commands#source:~:text=slash%20commands",
     "comment": "Supports slash commands. Location: `.claude/commands/*.md` or `~/.claude/commands/*.md`."
   },
   "subagents": {
     "support": "full",
-    "source_url": "https://docs.anthropic.com/en/docs/claude-code/sub-agents#:~:text=subagents",
+    "source_url": "https://docs.anthropic.com/en/docs/claude-code/sub-agents#source:~:text=subagents",
     "comment": "Supports custom subagents."
   },
   "model_selection": {
     "support": "full",
-    "source_url": "https://docs.anthropic.com/en/docs/claude-code/settings#:~:text=model",
+    "source_url": "https://docs.anthropic.com/en/docs/claude-code/settings#source:~:text=model",
     "comment": "Model can be configured."
   },
   "approval_mode": {
     "support": "full",
-    "source_url": "https://docs.anthropic.com/en/docs/claude-code/settings#:~:text=permission",
+    "source_url": "https://docs.anthropic.com/en/docs/claude-code/settings#source:~:text=permission",
     "comment": "Permission mode is configurable."
   },
   "sandbox_mode": {
     "support": "partial",
-    "source_url": "https://docs.anthropic.com/en/docs/claude-code/settings#:~:text=permissions",
+    "source_url": "https://docs.anthropic.com/en/docs/claude-code/settings#source:~:text=permissions",
     "comment": "Permissions and allowed tools provide sandbox-like controls."
   },
   "resume": {
     "support": "full",
-    "source_url": "https://docs.anthropic.com/en/docs/claude-code/cli-reference#:~:text=--resume",
+    "source_url": "https://docs.anthropic.com/en/docs/claude-code/cli-reference#source:~:text=--resume",
     "comment": "Supports --resume."
   },
   "continue": {
     "support": "full",
-    "source_url": "https://docs.anthropic.com/en/docs/claude-code/cli-reference#:~:text=--resume",
+    "source_url": "https://docs.anthropic.com/en/docs/claude-code/cli-reference#source:~:text=--resume",
     "comment": "Supports --continue for the most recent conversation."
   },
   "non_interactive": {
     "support": "full",
-    "source_url": "https://docs.anthropic.com/en/docs/claude-code/cli-reference#:~:text=--print",
+    "source_url": "https://docs.anthropic.com/en/docs/claude-code/cli-reference#source:~:text=--print",
     "comment": "Supports --print."
   },
   "output_format": {
     "support": "full",
-    "source_url": "https://docs.anthropic.com/en/docs/claude-code/cli-reference#:~:text=output-format",
+    "source_url": "https://docs.anthropic.com/en/docs/claude-code/cli-reference#source:~:text=output-format",
     "comment": "Supports output format controls."
   },
   "statusline": {
     "support": "full",
-    "source_url": "https://docs.anthropic.com/en/docs/claude-code/statusline#:~:text=status%20line",
+    "source_url": "https://docs.anthropic.com/en/docs/claude-code/statusline#source:~:text=status%20line",
     "comment": "Supports custom status line."
   },
   "telemetry": {
     "support": "full",
-    "source_url": "https://docs.anthropic.com/en/docs/claude-code/settings#:~:text=telemetry",
+    "source_url": "https://docs.anthropic.com/en/docs/claude-code/settings#source:~:text=telemetry",
     "comment": "Settings include telemetry and privacy controls."
   },
   "custom_model_provider": {
     "support": "partial",
-    "source_url": "https://docs.anthropic.com/en/docs/claude-code/third-party-integrations#:~:text=third-party",
+    "source_url": "https://docs.anthropic.com/en/docs/claude-code/third-party-integrations#source:~:text=third-party",
     "comment": "Supports Bedrock/Vertex and related integrations, not arbitrary providers in the same way as OpenAI-compatible CLIs."
   },
   "notes": "",
   "pricing": {
     "value": "Included in Pro $20/mo, Max 5x $100/mo, Max 20x $200/mo, Team $25-125/seat/mo, Enterprise $20/seat + API rates",
-    "source_url": "https://www.anthropic.com/pricing#:~:text=Claude%20Code",
+    "source_url": "https://www.anthropic.com/pricing#source:~:text=Claude%20Code",
     "comment": "Claude Code is included in all subscription plans (Pro, Max, Team, Enterprise). Also available via API at standard token rates."
   },
   "hosted_agent": {
     "support": "partial",
-    "source_url": "https://docs.anthropic.com/en/docs/claude-code/overview#:~:text=Claude%20Code",
+    "source_url": "https://docs.anthropic.com/en/docs/claude-code/overview#source:~:text=Claude%20Code",
     "comment": "CLI runs locally; managed/cloud-based session execution is not directly exposed as a distinct platform."
   },
   "transcripts": {
     "support": "full",
-    "source_url": "https://code.claude.com/docs/en/settings#:~:text=transcript",
+    "source_url": "https://code.claude.com/docs/en/settings#source:~:text=transcript",
     "comment": "Location: Claude Code CLI transcripts are JSONL under `~/.claude/projects/<proj-path-dashes>/<sessionId>.jsonl`."
   }
 }

@@ -14,7 +14,7 @@
       "Web",
       "Mac App"
     ],
-    "source_url": "https://developers.openai.com/codex/cli/#:~:text=CLI",
+    "source_url": "https://developers.openai.com/codex/cli/#source:~:text=CLI",
     "comment": "CLI + Open VSX extension + hosted on platform.openai.com. TypeScript (@openai/codex-sdk) and experimental Python SDKs for programmatic control. Per-form-factor links: CLI: https://developers.openai.com/codex/cli/; Extension: https://developers.openai.com/codex/ide/; SDK: https://developers.openai.com/codex/sdk/; Web: https://chatgpt.com/codex; Mac App: https://developers.openai.com/codex/app/.",
     "links": {
       "CLI": "https://developers.openai.com/codex/cli/",
@@ -26,108 +26,108 @@
   },
   "released_in": {
     "value": "Apr '25",
-    "source_url": "https://github.com/openai/codex#:~:text=Codex%20CLI",
+    "source_url": "https://github.com/openai/codex#source:~:text=Codex%20CLI",
     "comment": "Open-source CLI public release."
   },
   "latest_major_update": {
     "value": "May '26",
-    "source_url": "https://developers.openai.com/codex/changelog/#:~:text=changelog",
+    "source_url": "https://developers.openai.com/codex/changelog/#source:~:text=changelog",
     "comment": "Captured from current Codex docs/changelog state."
   },
   "rules": {
     "support": "full",
-    "source_url": "https://developers.openai.com/codex/agents-md/#:~:text=AGENTS.md",
+    "source_url": "https://developers.openai.com/codex/agents-md/#source:~:text=AGENTS.md",
     "comment": "Uses AGENTS.md instructions. Location: `AGENTS.md` in repo tree, plus user/project Codex config for defaults."
   },
   "skills": {
     "support": "full",
-    "source_url": "https://developers.openai.com/codex/skills/#:~:text=Skills",
+    "source_url": "https://developers.openai.com/codex/skills/#source:~:text=Skills",
     "comment": "Supports SKILL.md-based skills. Location: `.codex/skills/<name>/SKILL.md`, `~/.codex/skills/<name>/SKILL.md`, or installed plugin skill folders."
   },
   "hooks": {
     "support": "full",
-    "source_url": "https://developers.openai.com/codex/hooks/#:~:text=Hooks",
+    "source_url": "https://developers.openai.com/codex/hooks/#source:~:text=Hooks",
     "comment": "Supports Codex hooks."
   },
   "mcp_servers": {
     "support": "full",
-    "source_url": "https://developers.openai.com/codex/mcp/#:~:text=MCP",
+    "source_url": "https://developers.openai.com/codex/mcp/#source:~:text=MCP",
     "comment": "Supports MCP servers. Location: `~/.codex/config.toml` under MCP/server configuration."
   },
   "custom_commands": {
     "support": "partial",
-    "source_url": "https://developers.openai.com/codex/cli/#:~:text=CLI",
+    "source_url": "https://developers.openai.com/codex/cli/#source:~:text=CLI",
     "comment": "CLI supports slash-like workflows through prompts and tooling, but not a first-class command folder in this matrix. Location: no separate command folder documented; command-like workflows are provided by prompts, skills, plugins, and CLI slash commands."
   },
   "subagents": {
     "support": "full",
-    "source_url": "https://developers.openai.com/codex/skills/#:~:text=Skills",
+    "source_url": "https://developers.openai.com/codex/skills/#source:~:text=Skills",
     "comment": "Codex supports sub-agent/delegation workflows in agent contexts."
   },
   "model_selection": {
     "support": "full",
-    "source_url": "https://github.com/openai/codex#:~:text=model",
+    "source_url": "https://github.com/openai/codex#source:~:text=model",
     "comment": "CLI accepts model configuration/flags."
   },
   "approval_mode": {
     "support": "full",
-    "source_url": "https://github.com/openai/codex#:~:text=approval",
+    "source_url": "https://github.com/openai/codex#source:~:text=approval",
     "comment": "Approval policy can be configured."
   },
   "sandbox_mode": {
     "support": "full",
-    "source_url": "https://github.com/openai/codex#:~:text=sandbox",
+    "source_url": "https://github.com/openai/codex#source:~:text=sandbox",
     "comment": "Filesystem sandbox modes can be configured."
   },
   "resume": {
     "support": "full",
-    "source_url": "https://github.com/openai/codex#:~:text=resume",
+    "source_url": "https://github.com/openai/codex#source:~:text=resume",
     "comment": "Supports resume."
   },
   "continue": {
     "support": "full",
-    "source_url": "https://github.com/openai/codex#:~:text=resume",
+    "source_url": "https://github.com/openai/codex#source:~:text=resume",
     "comment": "Supports continuing a previous session through resume/latest-session workflows."
   },
   "non_interactive": {
     "support": "full",
-    "source_url": "https://github.com/openai/codex#:~:text=exec",
+    "source_url": "https://github.com/openai/codex#source:~:text=exec",
     "comment": "Supports exec/headless use."
   },
   "output_format": {
     "support": "full",
-    "source_url": "https://github.com/openai/codex#:~:text=json",
+    "source_url": "https://github.com/openai/codex#source:~:text=json",
     "comment": "CLI supports structured output modes."
   },
   "statusline": {
     "support": "full",
-    "source_url": "https://developers.openai.com/codex/#:~:text=statusline",
+    "source_url": "https://developers.openai.com/codex/#source:~:text=statusline",
     "comment": "Supports statusline configuration in local CLI settings."
   },
   "telemetry": {
     "support": "full",
-    "source_url": "https://github.com/openai/codex#:~:text=telemetry",
+    "source_url": "https://github.com/openai/codex#source:~:text=telemetry",
     "comment": "Telemetry settings are documented in the CLI repository."
   },
   "custom_model_provider": {
     "support": "full",
-    "source_url": "https://github.com/openai/codex#:~:text=model_provider",
+    "source_url": "https://github.com/openai/codex#source:~:text=model_provider",
     "comment": "Supports custom model providers in config."
   },
   "notes": "",
   "pricing": {
     "value": "Free (limited), Plus $20/mo, Pro $100-200/mo, Business pay-as-you-go, API usage-based",
-    "source_url": "https://developers.openai.com/codex/pricing#:~:text=Codex%20is%20included%20in%20ChatGPT%20Free",
+    "source_url": "https://developers.openai.com/codex/pricing#source:~:text=Codex%20is%20included%20in%20ChatGPT%20Free",
     "comment": "Free tier has limited Codex access. Plus ($20/mo) includes 15-350 local messages/5h. Pro $100/mo at 5x limits ($200/mo at 20x). Business at pay-as-you-go token credits. API key at per-token pricing."
   },
   "hosted_agent": {
     "support": "full",
-    "source_url": "https://github.com/openai/codex#:~:text=Codex%20CLI",
+    "source_url": "https://github.com/openai/codex#source:~:text=Codex%20CLI",
     "comment": "Can run locally or on platform.openai.com managed infrastructure."
   },
   "transcripts": {
     "support": "full",
-    "source_url": "https://github.com/openai/codex#:~:text=sessions",
+    "source_url": "https://github.com/openai/codex#source:~:text=sessions",
     "comment": "Location: Codex session event streams are JSONL under `~/.codex/sessions/YYYY/MM/DD/rollout-<iso>-<id>.jsonl`."
   }
 }

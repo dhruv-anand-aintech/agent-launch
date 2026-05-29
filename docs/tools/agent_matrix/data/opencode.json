@@ -12,7 +12,7 @@
       "Extension",
       "SDK"
     ],
-    "source_url": "https://opencode.ai/docs/#:~:text=CLI",
+    "source_url": "https://opencode.ai/docs/#source:~:text=CLI",
     "comment": "Terminal UI and CLI plus @opencode-ai/sdk for programmatic server/session control. Per-form-factor links: CLI: https://opencode.ai/docs/; Extension: https://opencode.ai/docs/ide/; SDK: https://opencode.ai/docs/sdk/.",
     "links": {
       "CLI": "https://opencode.ai/docs/",
@@ -22,108 +22,108 @@
   },
   "released_in": {
     "value": "2025",
-    "source_url": "https://github.com/sst/opencode#:~:text=opencode",
+    "source_url": "https://github.com/sst/opencode#source:~:text=opencode",
     "comment": "Exact public launch month not confirmed in public docs captured for this dataset."
   },
   "latest_major_update": {
     "value": "May '26",
-    "source_url": "https://opencode.ai/docs/#:~:text=opencode",
+    "source_url": "https://opencode.ai/docs/#source:~:text=opencode",
     "comment": "Current docs capture config, agents, MCP, and providers."
   },
   "rules": {
     "support": "full",
-    "source_url": "https://opencode.ai/docs/config/#:~:text=instructions",
+    "source_url": "https://opencode.ai/docs/config/#source:~:text=instructions",
     "comment": "Supports instruction/config files. Location: `AGENTS.md` and opencode config files in the repo/user config scope."
   },
   "skills": {
     "support": "full",
-    "source_url": "https://opencode.ai/docs/skills/#:~:text=skills",
+    "source_url": "https://opencode.ai/docs/skills/#source:~:text=skills",
     "comment": "Supports skills. Location: opencode Agent Skills are stored as skill folders with `SKILL.md` according to the configured scope."
   },
   "hooks": {
     "support": "full",
-    "source_url": "https://opencode.ai/docs/config/#:~:text=hooks",
+    "source_url": "https://opencode.ai/docs/config/#source:~:text=hooks",
     "comment": "Config supports commands/hooks workflows."
   },
   "mcp_servers": {
     "support": "full",
-    "source_url": "https://opencode.ai/docs/mcp-servers/#:~:text=MCP",
+    "source_url": "https://opencode.ai/docs/mcp-servers/#source:~:text=MCP",
     "comment": "Supports MCP servers. Location: `opencode.json` / opencode config MCP server entries."
   },
   "custom_commands": {
     "support": "full",
-    "source_url": "https://opencode.ai/docs/commands/#:~:text=commands",
+    "source_url": "https://opencode.ai/docs/commands/#source:~:text=commands",
     "comment": "Supports commands. Location: opencode custom commands are configured under opencode command/config files, not shell aliases."
   },
   "subagents": {
     "support": "full",
-    "source_url": "https://opencode.ai/docs/agents/#:~:text=agents",
+    "source_url": "https://opencode.ai/docs/agents/#source:~:text=agents",
     "comment": "Supports custom agents."
   },
   "model_selection": {
     "support": "full",
-    "source_url": "https://opencode.ai/docs/providers/#:~:text=providers",
+    "source_url": "https://opencode.ai/docs/providers/#source:~:text=providers",
     "comment": "Supports provider/model selection."
   },
   "approval_mode": {
     "support": "full",
-    "source_url": "https://opencode.ai/docs/config/#:~:text=permission",
+    "source_url": "https://opencode.ai/docs/config/#source:~:text=permission",
     "comment": "Permission controls are configurable."
   },
   "sandbox_mode": {
     "support": "partial",
-    "source_url": "https://opencode.ai/docs/config/#:~:text=permission",
+    "source_url": "https://opencode.ai/docs/config/#source:~:text=permission",
     "comment": "Permission model controls tool access."
   },
   "resume": {
     "support": "full",
-    "source_url": "https://opencode.ai/docs/cli/#:~:text=session",
+    "source_url": "https://opencode.ai/docs/cli/#source:~:text=session",
     "comment": "Supports session options."
   },
   "continue": {
     "support": "full",
-    "source_url": "https://opencode.ai/docs/cli/#:~:text=session",
+    "source_url": "https://opencode.ai/docs/cli/#source:~:text=session",
     "comment": "Supports --continue and explicit session selection."
   },
   "non_interactive": {
     "support": "full",
-    "source_url": "https://opencode.ai/docs/cli/#:~:text=run",
+    "source_url": "https://opencode.ai/docs/cli/#source:~:text=run",
     "comment": "Supports run mode."
   },
   "output_format": {
     "support": "full",
-    "source_url": "https://opencode.ai/docs/cli/#:~:text=format",
+    "source_url": "https://opencode.ai/docs/cli/#source:~:text=format",
     "comment": "CLI supports format options."
   },
   "statusline": {
     "support": "unknown",
-    "source_url": "https://opencode.ai/docs/config/#:~:text=status%20line",
+    "source_url": "https://opencode.ai/docs/config/#source:~:text=status%20line",
     "comment": ""
   },
   "telemetry": {
     "support": "full",
-    "source_url": "https://opencode.ai/docs/config/#:~:text=telemetry",
+    "source_url": "https://opencode.ai/docs/config/#source:~:text=telemetry",
     "comment": "Config includes telemetry-related settings."
   },
   "custom_model_provider": {
     "support": "full",
-    "source_url": "https://opencode.ai/docs/providers/#:~:text=providers",
+    "source_url": "https://opencode.ai/docs/providers/#source:~:text=providers",
     "comment": "Supports many providers and custom provider configuration."
   },
   "notes": "",
   "pricing": {
     "value": "Free (MIT, BYOK), Go $10/mo (first month $5), Zen pay-per-token (min $20), Enterprise per-seat",
-    "source_url": "https://opencode.ai/docs/zen/#:~:text=Pricing",
+    "source_url": "https://opencode.ai/docs/zen/#source:~:text=Pricing",
     "comment": "Free tier: bring your own API key + limited free models. Go ($10/mo): curated open-source models with usage caps. Zen: pay-per-token access to all models (min $20 top-up). Enterprise: per-seat custom pricing."
   },
   "hosted_agent": {
     "support": "none",
-    "source_url": "https://opencode.ai/docs/#:~:text=terminal",
+    "source_url": "https://opencode.ai/docs/#source:~:text=terminal",
     "comment": "Runs entirely locally."
   },
   "transcripts": {
     "support": "full",
-    "source_url": "https://opencode.ai/docs/share/#:~:text=session",
+    "source_url": "https://opencode.ai/docs/share/#source:~:text=session",
     "comment": "Location: OpenCode stores sessions/messages in SQLite `~/.local/share/opencode/opencode.db`; legacy storage uses `~/.local/share/opencode/storage/session|message|part/`."
   }
 }

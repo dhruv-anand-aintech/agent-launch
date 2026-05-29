@@ -12,7 +12,7 @@
       "Extension",
       "Web"
     ],
-    "source_url": "https://docs.factory.ai/reference/cli-reference#:~:text=CLI",
+    "source_url": "https://docs.factory.ai/reference/cli-reference#source:~:text=CLI",
     "comment": "Droid CLI plus Factory App, IDE integrations, and Droid Computers. Per-form-factor links: CLI: https://docs.factory.ai/reference/cli-reference; Extension: https://docs.factory.ai/cli/integrations/ide-integrations; Web: https://app.factory.ai/.",
     "links": {
       "CLI": "https://docs.factory.ai/reference/cli-reference",
@@ -22,108 +22,108 @@
   },
   "released_in": {
     "value": "2025",
-    "source_url": "https://docs.factory.ai/reference/cli-reference#:~:text=Droid%20CLI%20Reference",
+    "source_url": "https://docs.factory.ai/reference/cli-reference#source:~:text=Droid%20CLI%20Reference",
     "comment": "Public docs cover current Droid CLI and Factory platform surfaces."
   },
   "latest_major_update": {
     "value": "May '26",
-    "source_url": "https://docs.factory.ai/reference/cli-reference#:~:text=Complete%20reference%20for%20the%20Droid%20CLI",
+    "source_url": "https://docs.factory.ai/reference/cli-reference#source:~:text=Complete%20reference%20for%20the%20Droid%20CLI",
     "comment": "Current CLI reference includes plugins, MCP, skills, hooks, worktrees, Droid Exec, and custom droids."
   },
   "rules": {
     "support": "full",
-    "source_url": "https://docs.factory.ai/reference/cli-reference#:~:text=AGENTS.md",
+    "source_url": "https://docs.factory.ai/reference/cli-reference#source:~:text=AGENTS.md",
     "comment": "AGENTS.md appears in Factory configuration docs. Location: `AGENTS.md` and `.factory/` project configuration."
   },
   "skills": {
     "support": "full",
-    "source_url": "https://docs.factory.ai/reference/cli-reference#:~:text=%2Fskills%20%60Manage%20and%20invoke%20skills",
+    "source_url": "https://docs.factory.ai/reference/cli-reference#source:~:text=%2Fskills%20%60Manage%20and%20invoke%20skills",
     "comment": "Skills can be managed and invoked from the CLI. Location: Factory Skills configuration in project/user Factory config; exact folder varies by scope."
   },
   "hooks": {
     "support": "full",
-    "source_url": "https://docs.factory.ai/reference/cli-reference#:~:text=%2Fhooks%20%60Manage%20lifecycle%20hooks",
+    "source_url": "https://docs.factory.ai/reference/cli-reference#source:~:text=%2Fhooks%20%60Manage%20lifecycle%20hooks",
     "comment": "Lifecycle hooks are first-class slash-command managed features."
   },
   "mcp_servers": {
     "support": "full",
-    "source_url": "https://docs.factory.ai/reference/cli-reference#:~:text=The%20%60%2Fmcp%60%20slash%20command%20opens%20an%20interactive%20manager",
+    "source_url": "https://docs.factory.ai/reference/cli-reference#source:~:text=The%20%60%2Fmcp%60%20slash%20command%20opens%20an%20interactive%20manager",
     "comment": "Supports stdio and HTTP MCP servers, registry browsing, env vars, and headers. Location: user `~/.factory/mcp.json` and project MCP configuration."
   },
   "custom_commands": {
     "support": "full",
-    "source_url": "https://docs.factory.ai/reference/cli-reference#:~:text=%2Fcommands%20%60Manage%20custom%20slash%20commands",
+    "source_url": "https://docs.factory.ai/reference/cli-reference#source:~:text=%2Fcommands%20%60Manage%20custom%20slash%20commands",
     "comment": "Custom slash commands are directly managed in the CLI. Location: Factory custom slash-command configuration in project/user Factory config."
   },
   "subagents": {
     "support": "full",
-    "source_url": "https://docs.factory.ai/reference/cli-reference#:~:text=%2Fdroids%20%60Manage%20custom%20droids",
+    "source_url": "https://docs.factory.ai/reference/cli-reference#source:~:text=%2Fdroids%20%60Manage%20custom%20droids",
     "comment": "Custom Droids are documented as subagents."
   },
   "model_selection": {
     "support": "full",
-    "source_url": "https://docs.factory.ai/reference/cli-reference#:~:text=%60-m%2C%20--model%20%3Cid%3E%60Select%20a%20specific",
+    "source_url": "https://docs.factory.ai/reference/cli-reference#source:~:text=%60-m%2C%20--model%20%3Cid%3E%60Select%20a%20specific",
     "comment": "Model IDs can be selected with -m/--model and /model."
   },
   "approval_mode": {
     "support": "full",
-    "source_url": "https://docs.factory.ai/reference/cli-reference#:~:text=%60--auto%20%3Clevel%3E%60Set%20autonomy%20level",
+    "source_url": "https://docs.factory.ai/reference/cli-reference#source:~:text=%60--auto%20%3Clevel%3E%60Set%20autonomy%20level",
     "comment": "Tiered autonomy levels control action permissions."
   },
   "sandbox_mode": {
     "support": "full",
-    "source_url": "https://docs.factory.ai/reference/cli-reference#:~:text=%60--skip-permissions-unsafe%60%20removes%20all%20safety%20checks.%20Use%20only%20in%20isolated%20environments",
+    "source_url": "https://docs.factory.ai/reference/cli-reference#source:~:text=%60--skip-permissions-unsafe%60%20removes%20all%20safety%20checks.%20Use%20only%20in%20isolated%20environments",
     "comment": "Docs include Sandbox Beta and unsafe mode guidance for disposable containers."
   },
   "resume": {
     "support": "full",
-    "source_url": "https://docs.factory.ai/reference/cli-reference#:~:text=%60droid%20--resume%20%5BsessionId%5D%60Resume%20a%20session",
+    "source_url": "https://docs.factory.ai/reference/cli-reference#source:~:text=%60droid%20--resume%20%5BsessionId%5D%60Resume%20a%20session",
     "comment": "Resume by session ID or last modified session."
   },
   "continue": {
     "support": "full",
-    "source_url": "https://docs.factory.ai/reference/cli-reference#:~:text=%60droid%20exec%20-s%20%3Cid%3E%20%22query%22%60Resume%20existing%20session",
+    "source_url": "https://docs.factory.ai/reference/cli-reference#source:~:text=%60droid%20exec%20-s%20%3Cid%3E%20%22query%22%60Resume%20existing%20session",
     "comment": "Exec can continue an existing session; interactive defaults to the last modified session."
   },
   "non_interactive": {
     "support": "full",
-    "source_url": "https://docs.factory.ai/reference/cli-reference#:~:text=Non-interactive%20(%60droid%20exec%60)%20-%20Single-shot%20execution",
+    "source_url": "https://docs.factory.ai/reference/cli-reference#source:~:text=Non-interactive%20(%60droid%20exec%60)%20-%20Single-shot%20execution",
     "comment": "droid exec is the headless automation mode."
   },
   "output_format": {
     "support": "full",
-    "source_url": "https://docs.factory.ai/reference/cli-reference#:~:text=%60--json%20%60Emit%20results%20as%20JSON",
+    "source_url": "https://docs.factory.ai/reference/cli-reference#source:~:text=%60--json%20%60Emit%20results%20as%20JSON",
     "comment": "Search supports JSON output; API and readiness endpoints expose structured data."
   },
   "statusline": {
     "support": "full",
-    "source_url": "https://docs.factory.ai/reference/cli-reference#:~:text=%2Fstatusline%20%60Configure%20custom%20status%20line",
+    "source_url": "https://docs.factory.ai/reference/cli-reference#source:~:text=%2Fstatusline%20%60Configure%20custom%20status%20line",
     "comment": "Custom status line is documented."
   },
   "telemetry": {
     "support": "unknown",
-    "source_url": "https://docs.factory.ai/reference/cli-reference#:~:text=Analytics%20API",
+    "source_url": "https://docs.factory.ai/reference/cli-reference#source:~:text=Analytics%20API",
     "comment": "Analytics/compliance APIs exist, but no user telemetry opt-out setting found."
   },
   "hosted_agent": {
     "support": "partial",
-    "source_url": "https://docs.factory.ai/reference/cli-reference#:~:text=Factory%20App",
+    "source_url": "https://docs.factory.ai/reference/cli-reference#source:~:text=Factory%20App",
     "comment": "Factory App and Droid Computers exist; CLI can register machines and run daemon/server flows."
   },
   "custom_model_provider": {
     "support": "full",
-    "source_url": "https://docs.factory.ai/reference/cli-reference#:~:text=For%20custom%20models%2C%20see",
+    "source_url": "https://docs.factory.ai/reference/cli-reference#source:~:text=For%20custom%20models%2C%20see",
     "comment": "Bring Your Own Key/custom model path is documented."
   },
   "pricing": {
     "value": "Factory plans; usage details in Factory pricing",
-    "source_url": "https://docs.factory.ai/reference/cli-reference#:~:text=Plans%20%26%20Pricing",
+    "source_url": "https://docs.factory.ai/reference/cli-reference#source:~:text=Plans%20%26%20Pricing",
     "comment": "CLI docs route to Factory plans and pricing."
   },
   "notes": "One of the most feature-dense CLI surfaces in this update: autonomy levels, worktrees, custom droids, plugins, MCP, statusline, skills, hooks, and headless exec.",
   "transcripts": {
     "support": "partial",
-    "source_url": "https://docs.factory.ai/reference/cli-reference#:~:text=droid%20search",
+    "source_url": "https://docs.factory.ai/reference/cli-reference#source:~:text=droid%20search",
     "comment": "Location: local searchable Droid session data is managed by Factory CLI; exact transcript database path is not documented in the CLI reference."
   }
 }

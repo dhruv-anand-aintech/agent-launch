@@ -60,8 +60,16 @@ def _validate_feature(name: str, key: str, value: object) -> None:
     for required in ("source_url", "comment"):
         if required not in value or not isinstance(value[required], str):
             raise ValueError(f"{name}: {key}.{required} must be a string")
-    if value.get("source_url") and "#:~:text=" not in value["source_url"]:
-        raise ValueError(f"{name}: {key}.source_url must include a text-fragment highlight")
+    _validate_source_url(name, key, value.get("source_url"))
+
+
+def _validate_source_url(name: str, key: str, source_url: object) -> None:
+    if not isinstance(source_url, str) or not source_url:
+        raise ValueError(f"{name}: {key}.source_url must be a non-empty string")
+    if "#:~:text=" in source_url:
+        raise ValueError(f"{name}: {key}.source_url must include a heading anchor before the text-fragment highlight")
+    if not re.search(r"#[^#?&:]+:~:text=", source_url):
+        raise ValueError(f"{name}: {key}.source_url must include #heading:~:text=...")
 
 
 def validate(schema_path: str, data_glob: str) -> None:
@@ -88,9 +96,8 @@ def validate(schema_path: str, data_glob: str) -> None:
             if key in data:
                 _validate_feature(filename, key, data[key])
         for key, value in data.items():
-            if isinstance(value, dict) and "source_url" in value and value["source_url"]:
-                if "#:~:text=" not in value["source_url"]:
-                    raise ValueError(f"{filename}: {key}.source_url must include a text-fragment highlight")
+            if isinstance(value, dict) and "source_url" in value:
+                _validate_source_url(filename, key, value["source_url"])
 
 
 def parse_display_date(value: str) -> str | None:

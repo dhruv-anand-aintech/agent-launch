@@ -12,7 +12,7 @@
       "Extension",
       "SDK"
     ],
-    "source_url": "https://github.com/MoonshotAI/kimi-cli#:~:text=CLI",
+    "source_url": "https://github.com/MoonshotAI/kimi-cli#source:~:text=CLI",
     "comment": "CLI + VS Code + Zed + JetBrains via ACP, plus @moonshot-ai/kimi-agent-sdk (Node/Go/Python). Per-form-factor links: CLI: https://github.com/MoonshotAI/kimi-cli; Extension: https://www.kimi.com/help/kimi-code/vscode-getting-started; SDK: https://github.com/MoonshotAI/kimi-agent-sdk.",
     "links": {
       "CLI": "https://github.com/MoonshotAI/kimi-cli",
@@ -22,108 +22,108 @@
   },
   "released_in": {
     "value": "Oct '25",
-    "source_url": "https://github.com/MoonshotAI/kimi-cli/releases#:~:text=0.34",
+    "source_url": "https://github.com/MoonshotAI/kimi-cli/releases#source:~:text=0.34",
     "comment": "First public release v0.34 on 2025-10-21. Reached v1.0 on 2026-01-27. Latest: v1.44.0 (2026-05-14)."
   },
   "latest_major_update": {
     "value": "May '26",
-    "source_url": "https://github.com/MoonshotAI/kimi-cli/releases/tag/1.44.0#:~:text=1.44.0",
+    "source_url": "https://github.com/MoonshotAI/kimi-cli/releases/tag/1.44.0#source:~:text=1.44.0",
     "comment": "v1.44.0 (2026-05-14). Very active development: 97 releases in ~7 months. Rapid iteration pace."
   },
   "rules": {
     "support": "full",
-    "source_url": "https://www.kimi.com/code/docs/en/kimi-code-cli/core-operations.html#:~:text=AGENTS.md",
+    "source_url": "https://www.kimi.com/code/docs/en/kimi-code-cli/core-operations.html#source:~:text=AGENTS.md",
     "comment": "Full AGENTS.md support. Hierarchical loading from git root to working dir, including .kimi/AGENTS.md at each level (32 KiB budget). /init command auto-generates AGENTS.md. Location: no public disk folder/file location found in docs reviewed."
   },
   "skills": {
     "support": "full",
-    "source_url": "https://www.kimi.com/code/docs/en/kimi-code-cli/customization/skills.html#:~:text=Agent%20Skills",
+    "source_url": "https://www.kimi.com/code/docs/en/kimi-code-cli/customization/skills.html#source:~:text=Agent%20Skills",
     "comment": "Full Agent Skills format (SKILL.md with YAML frontmatter). Four-tier auto-discovery. Cross-compatible with Claude/Codex skill dirs. Flow skills with Mermaid/D2 flowcharts. Location: no public disk folder/file location found in docs reviewed."
   },
   "hooks": {
     "support": "partial",
-    "source_url": "https://www.kimi.com/code/docs/en/kimi-code-cli/customization/hooks.html#:~:text=Hooks%20%28Beta%29",
+    "source_url": "https://www.kimi.com/code/docs/en/kimi-code-cli/customization/hooks.html#source:~:text=Hooks%20%28Beta%29",
     "comment": "Supported (Beta). 13 lifecycle events: PreToolUse, PostToolUse, SessionStart, SessionEnd, SubagentStart/Stop, PreCompact, PostCompact, Notification. Shell commands via stdin."
   },
   "mcp_servers": {
     "support": "full",
-    "source_url": "https://www.kimi.com/code/docs/en/kimi-code-cli/customization/mcp.html#:~:text=MCP",
+    "source_url": "https://www.kimi.com/code/docs/en/kimi-code-cli/customization/mcp.html#source:~:text=MCP",
     "comment": "Full MCP support. Transport: streamable HTTP, stdio, OAuth. kimi mcp add/list/test/remove/auth commands. Config in ~/.kimi/mcp.json. Location: no public disk folder/file location found in docs reviewed."
   },
   "custom_commands": {
     "support": "partial",
-    "source_url": "https://www.kimi.com/code/docs/en/kimi-code-cli/customization/plugins.html#:~:text=Plugins",
+    "source_url": "https://www.kimi.com/code/docs/en/kimi-code-cli/customization/plugins.html#source:~:text=Plugins",
     "comment": "Custom plugins (Beta) via plugin.json with executable scripts. Slash commands (/skill:, /flow:) serve as custom invocation. No arbitrary custom aliases in config. Location: no public disk folder/file location found in docs reviewed."
   },
   "subagents": {
     "support": "full",
-    "source_url": "https://www.kimi.com/code/docs/en/kimi-code-cli/customization/sub-agents.html#:~:text=subagents",
+    "source_url": "https://www.kimi.com/code/docs/en/kimi-code-cli/customization/sub-agents.html#source:~:text=subagents",
     "comment": "Full subagent support. Built-in types: coder, explore, plan. YAML agent files with inheritance. Agent tool with subagent_type, model, resume, run_in_background params."
   },
   "model_selection": {
     "support": "full",
-    "source_url": "https://www.kimi.com/code/docs/en/kimi-code-cli/configuration/providers-and-models.html#:~:text=Provider%20Types",
+    "source_url": "https://www.kimi.com/code/docs/en/kimi-code-cli/configuration/providers-and-models.html#source:~:text=Provider%20Types",
     "comment": "Full model selection. Provider types: kimi, openai_legacy, openai_responses, anthropic, gemini, vertexai. /model interactive picker. CLI flags: --model, --thinking."
   },
   "approval_mode": {
     "support": "full",
-    "source_url": "https://www.kimi.com/code/docs/en/kimi-code-cli/core-operations.html#:~:text=YOLO%20mode",
+    "source_url": "https://www.kimi.com/code/docs/en/kimi-code-cli/core-operations.html#source:~:text=YOLO%20mode",
     "comment": "Full system: Normal (approval with diff preview), YOLO mode (--yolo, auto-approves all), AFK mode (--afk, auto-approves and dismisses questions). Status bar badges."
   },
   "sandbox_mode": {
     "support": "none",
-    "source_url": "https://www.kimi.com/code/docs/en/kimi-code-cli/core-operations.html#:~:text=sandbox",
+    "source_url": "https://www.kimi.com/code/docs/en/kimi-code-cli/core-operations.html#source:~:text=sandbox",
     "comment": "No dedicated sandbox/mode. Has workspace scope boundaries, file operation approval, sensitive file protection (.env, SSH keys). No containerized isolation."
   },
   "resume": {
     "support": "full",
-    "source_url": "https://www.kimi.com/code/docs/en/kimi-code-cli/core-operations.html#:~:text=Session%20Resumption",
+    "source_url": "https://www.kimi.com/code/docs/en/kimi-code-cli/core-operations.html#source:~:text=Session%20Resumption",
     "comment": "Full session resume. --session/--resume/-S/-r with optional session ID. Interactive picker. Auto-restores approval decisions, plan mode, subagent instances."
   },
   "continue": {
     "support": "full",
-    "source_url": "https://www.kimi.com/code/docs/en/kimi-code-cli/core-operations.html#:~:text=--continue",
+    "source_url": "https://www.kimi.com/code/docs/en/kimi-code-cli/core-operations.html#source:~:text=--continue",
     "comment": "kimi --continue/-C resumes most recent session in current working directory. /new for fresh session. /sessions lists and switches between sessions."
   },
   "non_interactive": {
     "support": "full",
-    "source_url": "https://www.kimi.com/code/docs/en/kimi-code-cli/core-operations.html#:~:text=Print%20Mode",
+    "source_url": "https://www.kimi.com/code/docs/en/kimi-code-cli/core-operations.html#source:~:text=Print%20Mode",
     "comment": "--print flag for print mode: auto-exit after prompt, implicit auto-approval (AFK behavior), text stdout. --quiet shorthand. Exit codes: 0=success, 1=error, 75=retryable."
   },
   "output_format": {
     "support": "full",
-    "source_url": "https://www.kimi.com/code/docs/en/kimi-code-cli/core-operations.html#:~:text=JSON%20format",
+    "source_url": "https://www.kimi.com/code/docs/en/kimi-code-cli/core-operations.html#source:~:text=JSON%20format",
     "comment": "--input-format: text or stream-json (JSONL). --output-format: text or stream-json (JSONL). --final-message-only flag. --quiet shorthand. Unified Message format for JSON I/O."
   },
   "statusline": {
     "support": "full",
-    "source_url": "https://www.kimi.com/code/docs/en/kimi-code-cli/core-operations.html#:~:text=status%20bar",
+    "source_url": "https://www.kimi.com/code/docs/en/kimi-code-cli/core-operations.html#source:~:text=status%20bar",
     "comment": "Full status bar in shell mode: context usage %, mode indicators, YOLO/AFK badges, plan mode badge, background task counts, provider display name."
   },
   "telemetry": {
     "support": "unknown",
-    "source_url": "",
+    "source_url": "https://www.kimi.com/code/docs/en/kimi-code-cli/configuration/settings.html#settings:~:text=settings",
     "comment": "No explicit telemetry documentation found. Has automatic update checks (disable via KIMI_CLI_NO_AUTO_UPDATE), but no stated telemetry/analytics collection policy."
   },
   "custom_model_provider": {
     "support": "full",
-    "source_url": "https://www.kimi.com/code/docs/en/kimi-code-cli/configuration/providers-and-models.html#:~:text=Provider%20Types",
+    "source_url": "https://www.kimi.com/code/docs/en/kimi-code-cli/configuration/providers-and-models.html#source:~:text=Provider%20Types",
     "comment": "Full custom provider support. providers table in config.toml with type, base_url, api_key, custom_headers. Six provider types including OpenAI-compatible, Anthropic, Gemini."
   },
   "notes": "Kimi CLI by Moonshot AI (Beijing) is an Apache-2.0 open-source coding agent with rapid development pace (97 releases in 7 months). Strong AGENTS.md, skills, MCP, subagent, and YOLO/AFK approval mode support. Notable for status bar with badges and comprehensive JSON streaming output.",
   "pricing": {
     "value": "Membership (credits) or BYOK",
-    "source_url": "https://www.kimi.com/help/kimi-code/benefits#:~:text=included%20in%20your%20subscription%20fee",
+    "source_url": "https://www.kimi.com/help/kimi-code/benefits#source:~:text=included%20in%20your%20subscription%20fee",
     "comment": "Kimi Code platform via membership subscription (credits-based, 7-day refresh cycle) or pay-as-you-go via api.moonshot.cn. Also supports own API key from OpenAI/Anthropic/Gemini."
   },
   "hosted_agent": {
     "support": "none",
-    "source_url": "https://www.kimi.com/code/docs/en/kimi-code-cli/getting-started.html#:~:text=Kimi%20Code%20CLI%20is%20an%20AI%20agent%20that%20runs%20in%20the%20terminal",
+    "source_url": "https://www.kimi.com/code/docs/en/kimi-code-cli/getting-started.html#source:~:text=Kimi%20Code%20CLI%20is%20an%20AI%20agent%20that%20runs%20in%20the%20terminal",
     "comment": "Local CLI tool backed by Moonshot API."
   },
   "transcripts": {
     "support": "unknown",
-    "source_url": "https://www.kimi.com/code/docs/en/kimi-code-cli/getting-started.html#:~:text=session",
+    "source_url": "https://www.kimi.com/code/docs/en/kimi-code-cli/getting-started.html#source:~:text=session",
     "comment": "Location: transcript/session disk storage was not found in public docs reviewed."
   }
 }

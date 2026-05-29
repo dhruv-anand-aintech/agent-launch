@@ -12,7 +12,7 @@
       "IDE",
       "Web"
     ],
-    "source_url": "https://kiro.dev/cli/#:~:text=CLI",
+    "source_url": "https://kiro.dev/cli/#source:~:text=CLI",
     "comment": "Kiro spans IDE, CLI, Web, ACP-compatible IDE use, and automation. Per-form-factor links: CLI: https://kiro.dev/cli/; IDE: https://kiro.dev/downloads/; Web: https://app.kiro.dev/.",
     "links": {
       "CLI": "https://kiro.dev/cli/",
@@ -22,108 +22,108 @@
   },
   "released_in": {
     "value": "Jul '25",
-    "source_url": "https://kiro.dev/cli/#:~:text=Kiro%20IDE%20and%20Kiro%20CLI",
+    "source_url": "https://kiro.dev/cli/#source:~:text=Kiro%20IDE%20and%20Kiro%20CLI",
     "comment": "Kiro entered public preview in 2025; CLI docs are now first-class."
   },
   "latest_major_update": {
     "value": "May '26",
-    "source_url": "https://kiro.dev/docs/powers/create/#:~:text=POWER.md",
+    "source_url": "https://kiro.dev/docs/powers/create/#source:~:text=POWER.md",
     "comment": "Current docs include Powers, CLI hooks, custom agents, and ACP workflows."
   },
   "rules": {
     "support": "full",
-    "source_url": "https://kiro.dev/cli/#:~:text=agent%20steering",
+    "source_url": "https://kiro.dev/cli/#source:~:text=agent%20steering",
     "comment": "Steering files provide project/team instructions. Location: `.kiro/steering/` project steering files and global steering settings."
   },
   "skills": {
     "support": "full",
-    "source_url": "https://kiro.dev/cli/#:~:text=agent%20skills",
+    "source_url": "https://kiro.dev/cli/#source:~:text=agent%20skills",
     "comment": "Kiro CLI references agent skills and Powers. Location: Kiro Powers use `POWER.md`; agent skills/knowledge are managed in Kiro project configuration."
   },
   "hooks": {
     "support": "full",
-    "source_url": "https://kiro.dev/cli/#:~:text=Smart%20Hooks",
+    "source_url": "https://kiro.dev/cli/#source:~:text=Smart%20Hooks",
     "comment": "Smart hooks are documented as core CLI features."
   },
   "mcp_servers": {
     "support": "full",
-    "source_url": "https://kiro.dev/cli/#:~:text=native%20MCP%20support",
+    "source_url": "https://kiro.dev/cli/#source:~:text=native%20MCP%20support",
     "comment": "Native MCP support in IDE and CLI. Location: `.kiro/mcp.json` / Kiro MCP configuration."
   },
   "custom_commands": {
     "support": "full",
-    "source_url": "https://kiro.dev/cli/#:~:text=commands%20start%20with%20a%20forward%20slash",
+    "source_url": "https://kiro.dev/cli/#source:~:text=commands%20start%20with%20a%20forward%20slash",
     "comment": "CLI has slash commands and prompt/custom-agent workflows. Location: CLI slash commands are built in; custom agents/prompts are managed in Kiro custom-agent configuration."
   },
   "subagents": {
     "support": "full",
-    "source_url": "https://kiro.dev/docs/chat/subagents/#:~:text=Kiro%20has%20two%20built-in%20subagents",
+    "source_url": "https://kiro.dev/docs/chat/subagents/#source:~:text=Kiro%20has%20two%20built-in%20subagents",
     "comment": "Built-in subagents for context gathering and parallel general-purpose tasks."
   },
   "model_selection": {
     "support": "full",
-    "source_url": "https://kiro.dev/cli/#:~:text=%2Fmodel%60%20%7CDisplays%20available%20models%20and%20allows%20you%20to%20select",
+    "source_url": "https://kiro.dev/cli/#source:~:text=%2Fmodel%60%20%7CDisplays%20available%20models%20and%20allows%20you%20to%20select",
     "comment": "CLI /model displays and selects available models."
   },
   "approval_mode": {
     "support": "full",
-    "source_url": "https://kiro.dev/cli/#:~:text=pre-defined%20tool%20permissions",
+    "source_url": "https://kiro.dev/cli/#source:~:text=pre-defined%20tool%20permissions",
     "comment": "Custom agents can use predefined tool permissions and approved plans."
   },
   "sandbox_mode": {
     "support": "partial",
-    "source_url": "https://kiro.dev/cli/#:~:text=tool%20permissions",
+    "source_url": "https://kiro.dev/cli/#source:~:text=tool%20permissions",
     "comment": "Permissioning is documented; explicit local filesystem/network sandbox modes are not clear."
   },
   "resume": {
     "support": "full",
-    "source_url": "https://kiro.dev/cli/#:~:text=conversation%20persistence",
+    "source_url": "https://kiro.dev/cli/#source:~:text=conversation%20persistence",
     "comment": "Directory-based conversation persistence and /save /load."
   },
   "continue": {
     "support": "full",
-    "source_url": "https://kiro.dev/cli/#:~:text=automatically%20by%20preserving%20project-specific%20conversation%20history",
+    "source_url": "https://kiro.dev/cli/#source:~:text=automatically%20by%20preserving%20project-specific%20conversation%20history",
     "comment": "kiro chat preserves project conversation history for continuing work."
   },
   "non_interactive": {
     "support": "full",
-    "source_url": "https://kiro.dev/cli/#:~:text=kiro%20--print",
+    "source_url": "https://kiro.dev/cli/#source:~:text=kiro%20--print",
     "comment": "Headless --print examples are documented for CI/CD automation."
   },
   "output_format": {
     "support": "partial",
-    "source_url": "https://kiro.dev/cli/#:~:text=%2Fsave%60%20%7CExport%20conversation%20state%20to%20a%20JSON%20file",
+    "source_url": "https://kiro.dev/cli/#source:~:text=%2Fsave%60%20%7CExport%20conversation%20state%20to%20a%20JSON%20file",
     "comment": "Can export conversation state to JSON; no broad JSON stream mode found."
   },
   "statusline": {
     "support": "unknown",
-    "source_url": "https://kiro.dev/cli/#:~:text=command-line%20environment",
+    "source_url": "https://kiro.dev/cli/#source:~:text=command-line%20environment",
     "comment": "No user-configurable statusline docs found."
   },
   "telemetry": {
     "support": "unknown",
-    "source_url": "https://kiro.dev/cli/#:~:text=standard%20proprietary%20license",
+    "source_url": "https://kiro.dev/cli/#source:~:text=standard%20proprietary%20license",
     "comment": "No telemetry control found in the docs reviewed."
   },
   "hosted_agent": {
     "support": "partial",
-    "source_url": "https://kiro.dev/cli/#:~:text=Kiro%20IDE%2C%20Kiro%20CLI%2C%20Kiro%20Web",
+    "source_url": "https://kiro.dev/cli/#source:~:text=Kiro%20IDE%2C%20Kiro%20CLI%2C%20Kiro%20Web",
     "comment": "Kiro Web exists, but the public CLI docs emphasize local terminal operation."
   },
   "custom_model_provider": {
     "support": "none",
-    "source_url": "https://kiro.dev/cli/#:~:text=Claude%20frontier%20models",
+    "source_url": "https://kiro.dev/cli/#source:~:text=Claude%20frontier%20models",
     "comment": "Docs describe Kiro's model set/Auto agent, not arbitrary model providers."
   },
   "pricing": {
     "value": "Included in Kiro pricing tiers",
-    "source_url": "https://kiro.dev/cli/#:~:text=No.%20Kiro%20CLI%20pricing%20is%20included%20in%20the%20standard%20Kiro%20pricing%20tiers",
+    "source_url": "https://kiro.dev/cli/#source:~:text=No.%20Kiro%20CLI%20pricing%20is%20included%20in%20the%20standard%20Kiro%20pricing%20tiers",
     "comment": "CLI and IDE share Kiro subscription pricing."
   },
   "notes": "Spec/steering-first agentic IDE plus CLI. Particularly strong on steering, hooks, custom agents, ACP-compatible IDEs, and CI automation.",
   "transcripts": {
     "support": "partial",
-    "source_url": "https://kiro.dev/cli/#:~:text=conversation%20persistence",
+    "source_url": "https://kiro.dev/cli/#source:~:text=conversation%20persistence",
     "comment": "Location: Kiro CLI uses directory-based conversation persistence; exact transcript directory is not specified in the public docs reviewed."
   }
 }

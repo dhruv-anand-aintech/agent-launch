@@ -10,7 +10,7 @@
     "values": [
       "CLI"
     ],
-    "source_url": "https://aider.chat/docs/install.html#:~:text=CLI",
+    "source_url": "https://aider.chat/docs/install.html#source:~:text=CLI",
     "comment": "CLI terminal app. Per-form-factor links: CLI: https://aider.chat/docs/install.html.",
     "links": {
       "CLI": "https://aider.chat/docs/install.html"
@@ -18,108 +18,108 @@
   },
   "released_in": {
     "value": "Jun '23",
-    "source_url": "https://github.com/Aider-AI/aider/releases/tag/v0.5.0#:~:text=v0.5.0",
+    "source_url": "https://github.com/Aider-AI/aider/releases/tag/v0.5.0#source:~:text=v0.5.0",
     "comment": "First public release v0.5.0 on June 7, 2023."
   },
   "latest_major_update": {
     "value": "Aug '25",
-    "source_url": "https://github.com/Aider-AI/aider/releases/tag/v0.86.0#:~:text=Expanded%20GPT-5%20model%20support%20across%20family%20variants",
+    "source_url": "https://github.com/Aider-AI/aider/releases/tag/v0.86.0#source:~:text=Expanded%20GPT-5%20model%20support%20across%20family%20variants",
     "comment": "Latest tagged release v0.86.0 (Aug 9, 2025). Main branch is actively developed beyond that."
   },
   "rules": {
     "support": "partial",
-    "source_url": "https://aider.chat/docs/usage/conventions.html#:~:text=The%20easiest%20way%20to%20do%20that%20with%20aider%20is%20to%20simply%20create%20a%20small%20markdown%20file",
+    "source_url": "https://aider.chat/docs/usage/conventions.html#source:~:text=The%20easiest%20way%20to%20do%20that%20with%20aider%20is%20to%20simply%20create%20a%20small%20markdown%20file",
     "comment": "Supports CONVENTIONS.md loaded via --read or .aider.conf.yml. No equivalent of a persistent auto-loaded CLAUDE.md file. Location: `.aider.conf.yml`, `.aider.model.settings.yml`, `.aider.model.metadata.json`, and repo convention files; no AGENTS.md standard."
   },
   "skills": {
     "support": "partial",
-    "source_url": "https://aider.chat/docs/usage/commands.html#:~:text=/save%20%3Cfname%3E%20command%20will%20make%20a%20file%20of%20/add%20and%20/read-only%20commands",
+    "source_url": "https://aider.chat/docs/usage/commands.html#source:~:text=/save%20%3Cfname%3E%20command%20will%20make%20a%20file%20of%20/add%20and%20/read-only%20commands",
     "comment": "Has /save and /load commands to persist/replay sequences of slash commands. Not a full reusable skill system like Cursor skills. Location: no first-class skill folder; use repo files/prompts/conventions."
   },
   "hooks": {
     "support": "partial",
-    "source_url": "https://aider.chat/docs/config/options.html#:~:text=--git-commit-verify%0AEnable/disable%20git%20pre-commit%20hooks%20with%20--no-verify",
+    "source_url": "https://aider.chat/docs/config/options.html#source:~:text=--git-commit-verify%0AEnable/disable%20git%20pre-commit%20hooks%20with%20--no-verify",
     "comment": "Only git pre-commit hook bypass via --git-commit-verify. No lifecycle hooks (session-start, session-end, etc.)."
   },
   "mcp_servers": {
     "support": "none",
-    "source_url": "https://github.com/Aider-AI/aider#:~:text=aider%20is%20AI%20pair%20programming%20in%20your%20terminal",
+    "source_url": "https://github.com/Aider-AI/aider#source:~:text=aider%20is%20AI%20pair%20programming%20in%20your%20terminal",
     "comment": "No MCP (Model Context Protocol) support detected in documentation, codebase, or feature listings. Location: no MCP config for Aider."
   },
   "custom_commands": {
     "support": "none",
-    "source_url": "https://aider.chat/docs/usage/commands.html#:~:text=Aider%20supports%20commands%20from%20within%20the%20chat%2C%20which%20all%20start%20with%20/",
+    "source_url": "https://aider.chat/docs/usage/commands.html#source:~:text=Aider%20supports%20commands%20from%20within%20the%20chat%2C%20which%20all%20start%20with%20/",
     "comment": "40+ built-in slash commands but no mechanism for users to define custom slash commands. Location: no custom command folder; uses CLI flags/config."
   },
   "subagents": {
     "support": "partial",
-    "source_url": "https://aider.chat/docs/usage/modes.html#:~:text=Architect%20mode%20and%20the%20editor%20model",
+    "source_url": "https://aider.chat/docs/usage/modes.html#source:~:text=Architect%20mode%20and%20the%20editor%20model",
     "comment": "Architect/Editor mode uses two models but no general subagent delegation system. No spawning of independent worker agents."
   },
   "model_selection": {
     "support": "full",
-    "source_url": "https://aider.chat/docs/config/options.html#:~:text=--model%20MODEL%0ASpecify%20the%20model%20to%20use%20for%20the%20main%20chat",
+    "source_url": "https://aider.chat/docs/config/options.html#source:~:text=--model%20MODEL%0ASpecify%20the%20model%20to%20use%20for%20the%20main%20chat",
     "comment": "Full model selection via --model, --weak-model, --editor-model. In-chat /model command. Model aliases supported."
   },
   "approval_mode": {
     "support": "partial",
-    "source_url": "https://aider.chat/docs/config/options.html#:~:text=--yes-always%0AAlways%20say%20yes%20to%20every%20confirmation",
+    "source_url": "https://aider.chat/docs/config/options.html#source:~:text=--yes-always%0AAlways%20say%20yes%20to%20every%20confirmation",
     "comment": "Has --yes-always to auto-accept all confirmations. No granular approval mode like Cursor's always/accept-tool/plan-then-act."
   },
   "sandbox_mode": {
     "support": "none",
-    "source_url": "https://aider.chat/docs/config/options.html#:~:text=--dry-run%0APerform%20a%20dry%20run%20without%20modifying%20files",
+    "source_url": "https://aider.chat/docs/config/options.html#source:~:text=--dry-run%0APerform%20a%20dry%20run%20without%20modifying%20files",
     "comment": "No filesystem or network sandbox. Has --dry-run flag that prevents file modification. Aider edits files directly in the working git repo."
   },
   "resume": {
     "support": "none",
-    "source_url": "https://aider.chat/docs/config/options.html#:~:text=--restore-chat-history%0ARestore%20the%20previous%20chat%20history%20messages",
+    "source_url": "https://aider.chat/docs/config/options.html#source:~:text=--restore-chat-history%0ARestore%20the%20previous%20chat%20history%20messages",
     "comment": "No --resume flag. Has --restore-chat-history which restores previous chat messages but does not resume session state."
   },
   "continue": {
     "support": "partial",
-    "source_url": "https://aider.chat/docs/config/options.html#:~:text=--restore-chat-history%0ARestore%20the%20previous%20chat%20history%20messages",
+    "source_url": "https://aider.chat/docs/config/options.html#source:~:text=--restore-chat-history%0ARestore%20the%20previous%20chat%20history%20messages",
     "comment": "No --continue flag for auto-resuming the latest session. --restore-chat-history restores message history but is manual."
   },
   "non_interactive": {
     "support": "full",
-    "source_url": "https://aider.chat/docs/config/options.html#:~:text=--message%20COMMAND%0ASpecify%20a%20single%20message%20to%20send%20the%20LLM%2C%20process%20reply%20then%20exit",
+    "source_url": "https://aider.chat/docs/config/options.html#source:~:text=--message%20COMMAND%0ASpecify%20a%20single%20message%20to%20send%20the%20LLM%2C%20process%20reply%20then%20exit",
     "comment": "Full non-interactive mode via --message/-m (send instruction, edit files, exit). Also --apply, --commit, --lint, --test."
   },
   "output_format": {
     "support": "none",
-    "source_url": "https://aider.chat/docs/config/options.html#:~:text=--no-pretty%0ADisable%20pretty%2C%20colorized%20output",
+    "source_url": "https://aider.chat/docs/config/options.html#source:~:text=--no-pretty%0ADisable%20pretty%2C%20colorized%20output",
     "comment": "No structured machine-readable output format (JSON, etc.). Has --no-pretty for plain text, --verbose for debug info."
   },
   "statusline": {
     "support": "none",
-    "source_url": "https://aider.chat/docs/config/options.html#:~:text=--user-input-color%20VALUE%0ASet%20the%20color%20for%20user%20input",
+    "source_url": "https://aider.chat/docs/config/options.html#source:~:text=--user-input-color%20VALUE%0ASet%20the%20color%20for%20user%20input",
     "comment": "No configurable status line. Has extensive color customization but no status bar/line concept."
   },
   "telemetry": {
     "support": "full",
-    "source_url": "https://aider.chat/docs/more/analytics.html#:~:text=Analytics%20are%20only%20collected%20if%20you%20agree%20and%20opt-in",
+    "source_url": "https://aider.chat/docs/more/analytics.html#source:~:text=Analytics%20are%20only%20collected%20if%20you%20agree%20and%20opt-in",
     "comment": "Opt-in anonymous analytics via PostHog. Permanently disable with --analytics-disable. Never collects code/chat/keys."
   },
   "custom_model_provider": {
     "support": "full",
-    "source_url": "https://aider.chat/docs/llms.html#:~:text=Aider%20can%20connect%20to%20most%20LLMs",
+    "source_url": "https://aider.chat/docs/llms.html#source:~:text=Aider%20can%20connect%20to%20most%20LLMs",
     "comment": "Connects to any LLM via litellm. Supports OpenAI, Anthropic, Gemini, DeepSeek, Ollama, OpenRouter, any OpenAI-compatible endpoint, and more."
   },
   "notes": "Aider is a mature open-source CLI coding agent (45k+ stars) since June 2023. Deep git integration, repo mapping for codebase context, extensive LLM provider support through litellm. No published embed SDK (CLI/scripting only). Notable gaps vs newer agents: no MCP, no user-defined slash commands, no sandbox, no subagent delegation, no resume/continue flags, no structured output. Apache-2.0 licensed.",
   "pricing": {
     "value": "Free (Apache-2.0)",
-    "source_url": "https://github.com/Aider-AI/aider#:~:text=License-Apache-2.0",
+    "source_url": "https://github.com/Aider-AI/aider#source:~:text=License-Apache-2.0",
     "comment": "Free and open source under Apache 2.0. Users pay only for LLM API usage through their own API keys."
   },
   "hosted_agent": {
     "support": "none",
-    "source_url": "https://github.com/Aider-AI/aider#:~:text=aider%20is%20AI%20pair%20programming%20in%20your%20terminal",
+    "source_url": "https://github.com/Aider-AI/aider#source:~:text=aider%20is%20AI%20pair%20programming%20in%20your%20terminal",
     "comment": "Runs entirely locally via pip. No hosted agent platform."
   },
   "transcripts": {
     "support": "partial",
-    "source_url": "https://aider.chat/docs/config/aider_conf.html#:~:text=chat-history-file",
+    "source_url": "https://aider.chat/docs/config/aider_conf.html#source:~:text=chat-history-file",
     "comment": "Location: optional chat history/transcript files are configured with Aider history settings such as `.aider.chat.history.md`."
   }
 }

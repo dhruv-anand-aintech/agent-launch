@@ -10,7 +10,7 @@
     "values": [
       "Web"
     ],
-    "source_url": "https://jules.google/#:~:text=Web",
+    "source_url": "https://jules.google/#source:~:text=Web",
     "comment": "Hosted async coding agent connected to GitHub repositories. Per-form-factor links: Web: https://jules.google/.",
     "links": {
       "Web": "https://jules.google/"
@@ -18,108 +18,108 @@
   },
   "released_in": {
     "value": "Aug '25",
-    "source_url": "https://blog.google/technology/google-labs/jules-now-available/#:~:text=now%20available%20for%20everyone",
+    "source_url": "https://blog.google/technology/google-labs/jules-now-available/#source:~:text=now%20available%20for%20everyone",
     "comment": "General availability after public beta."
   },
   "latest_major_update": {
     "value": "May '26",
-    "source_url": "https://jules.google/#:~:text=Gemini%203%20Pro",
+    "source_url": "https://jules.google/#source:~:text=Gemini%203%20Pro",
     "comment": "Current site advertises Gemini 3 Pro access and tiered concurrent task limits."
   },
   "rules": {
     "support": "unknown",
-    "source_url": "https://jules.google/#:~:text=Write%20a%20detailed%20prompt%20for%20Jules",
+    "source_url": "https://jules.google/#source:~:text=Write%20a%20detailed%20prompt%20for%20Jules",
     "comment": "No public docs found for persistent repo instruction files. Location: hosted/web/API-managed; no local disk folder documented."
   },
   "skills": {
     "support": "none",
-    "source_url": "https://jules.google/#:~:text=Bug%20Fixing%20Version%20Bump%20Tests%20Fixing",
+    "source_url": "https://jules.google/#source:~:text=Bug%20Fixing%20Version%20Bump%20Tests%20Fixing",
     "comment": "No reusable skill/playbook system found. Location: hosted/web/API-managed; no local disk folder documented."
   },
   "hooks": {
     "support": "partial",
-    "source_url": "https://jules.google/#:~:text=Use%20the%20%22jules%22%20label%20in%20an%20issue%20to%20assign%20a%20task",
+    "source_url": "https://jules.google/#source:~:text=Use%20the%20%22jules%22%20label%20in%20an%20issue%20to%20assign%20a%20task",
     "comment": "GitHub issue label assignment acts as a lightweight trigger."
   },
   "mcp_servers": {
     "support": "unknown",
-    "source_url": "https://jules.google/#:~:text=Cloud%20VM",
+    "source_url": "https://jules.google/#source:~:text=Cloud%20VM",
     "comment": "No public MCP server configuration found. Location: hosted/web/API-managed; no local disk folder documented."
   },
   "custom_commands": {
     "support": "none",
-    "source_url": "https://jules.google/#:~:text=Write%20a%20detailed%20prompt%20for%20Jules",
+    "source_url": "https://jules.google/#source:~:text=Write%20a%20detailed%20prompt%20for%20Jules",
     "comment": "Prompt and issue assignment workflow, not user-defined slash commands. Location: hosted/web/API-managed; no local disk folder documented."
   },
   "subagents": {
     "support": "partial",
-    "source_url": "https://jules.google/#:~:text=fully%20async%2C%20multi-agent%20development",
+    "source_url": "https://jules.google/#source:~:text=fully%20async%2C%20multi-agent%20development",
     "comment": "Plan tiers advertise multi-agent development and high concurrent task counts."
   },
   "model_selection": {
     "support": "partial",
-    "source_url": "https://jules.google/#:~:text=Higher%20access%20to%20the%20latest%20models%2C%20starting%20with%20Gemini%203%20Pro",
+    "source_url": "https://jules.google/#source:~:text=Higher%20access%20to%20the%20latest%20models%2C%20starting%20with%20Gemini%203%20Pro",
     "comment": "Tier-dependent model access; not arbitrary model selection."
   },
   "approval_mode": {
     "support": "full",
-    "source_url": "https://jules.google/#:~:text=Quickly%20browse%20and%20approve%20code%20edits",
+    "source_url": "https://jules.google/#source:~:text=Quickly%20browse%20and%20approve%20code%20edits",
     "comment": "User reviews plan/diff and approves changes/PR."
   },
   "sandbox_mode": {
     "support": "full",
-    "source_url": "https://jules.google/#:~:text=clones%20it%20to%20a%20Cloud%20VM",
+    "source_url": "https://jules.google/#source:~:text=clones%20it%20to%20a%20Cloud%20VM",
     "comment": "Work happens in a Cloud VM clone."
   },
   "resume": {
     "support": "partial",
-    "source_url": "https://jules.google/#:~:text=Jules%20creates%20a%20PR%20of%20the%20changes",
+    "source_url": "https://jules.google/#source:~:text=Jules%20creates%20a%20PR%20of%20the%20changes",
     "comment": "Async task history exists in the hosted product, but no explicit session resume docs found."
   },
   "continue": {
     "support": "partial",
-    "source_url": "https://jules.google/#:~:text=fully%20async",
+    "source_url": "https://jules.google/#source:~:text=fully%20async",
     "comment": "Designed for async continuation in hosted tasks; no CLI continue command."
   },
   "non_interactive": {
     "support": "partial",
-    "source_url": "https://jules.google/#:~:text=Use%20the%20%22jules%22%20label%20in%20an%20issue%20to%20assign%20a%20task",
+    "source_url": "https://jules.google/#source:~:text=Use%20the%20%22jules%22%20label%20in%20an%20issue%20to%20assign%20a%20task",
     "comment": "Can be triggered from GitHub issues, but not a general local headless CLI."
   },
   "output_format": {
     "support": "partial",
-    "source_url": "https://jules.google/#:~:text=provides%20a%20diff%20of%20the%20changes",
+    "source_url": "https://jules.google/#source:~:text=provides%20a%20diff%20of%20the%20changes",
     "comment": "Outputs plans, diffs, and PRs; no general machine-readable format found."
   },
   "statusline": {
     "support": "none",
-    "source_url": "https://jules.google/#:~:text=fully%20async",
+    "source_url": "https://jules.google/#source:~:text=fully%20async",
     "comment": "Hosted UI, no CLI statusline."
   },
   "telemetry": {
     "support": "unknown",
-    "source_url": "https://jules.google/#:~:text=Privacy%20Policy",
+    "source_url": "https://jules.google/#source:~:text=Privacy%20Policy",
     "comment": "No product-specific telemetry toggle found."
   },
   "hosted_agent": {
     "support": "full",
-    "source_url": "https://jules.google/#:~:text=clones%20it%20to%20a%20Cloud%20VM",
+    "source_url": "https://jules.google/#source:~:text=clones%20it%20to%20a%20Cloud%20VM",
     "comment": "Hosted async agent running in Google-managed Cloud VMs."
   },
   "custom_model_provider": {
     "support": "none",
-    "source_url": "https://jules.google/#:~:text=Powered%20by%20Gemini%202.5%20Pro",
+    "source_url": "https://jules.google/#source:~:text=Powered%20by%20Gemini%202.5%20Pro",
     "comment": "Uses Gemini models; BYO provider not documented."
   },
   "pricing": {
     "value": "Free 15 tasks/day; Pro 100 tasks/day; Ultra 300 tasks/day",
-    "source_url": "https://jules.google/#:~:text=15%20tasks%20per%20day",
+    "source_url": "https://jules.google/#source:~:text=15%20tasks%20per%20day",
     "comment": "Site lists daily task and concurrency limits by tier."
   },
   "notes": "Best categorized as an async hosted coding worker rather than a terminal pair-programmer. Strong on GitHub PR flow, approvals, Cloud VM isolation, and concurrency.",
   "transcripts": {
     "support": "partial",
-    "source_url": "https://jules.google/#:~:text=agent",
+    "source_url": "https://jules.google/#source:~:text=agent",
     "comment": "Location: hosted/web/API-managed session history; no local transcript directory documented."
   }
 }

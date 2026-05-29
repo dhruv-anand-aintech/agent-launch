@@ -10,7 +10,7 @@
     "values": [
       "Web"
     ],
-    "source_url": "https://replit.com/ai#:~:text=Web",
+    "source_url": "https://replit.com/ai#source:~:text=Web",
     "comment": "Hosted Replit workspace agent focused on building, testing, and deploying apps. Per-form-factor links: Web: https://replit.com/ai.",
     "links": {
       "Web": "https://replit.com/ai"
@@ -18,108 +18,108 @@
   },
   "released_in": {
     "value": "Sep '24",
-    "source_url": "https://blog.replit.com/agent#:~:text=Replit%20Agent",
+    "source_url": "https://blog.replit.com/agent#source:~:text=Replit%20Agent",
     "comment": "Replit Agent launched publicly in 2024; Agent 3 followed in September 2025."
   },
   "latest_major_update": {
     "value": "Sep '25",
-    "source_url": "https://replit.com/blog/introducing-agent-3-our-most-autonomous-agent-yet#:~:text=Introducing%20Agent%203",
+    "source_url": "https://replit.com/blog/introducing-agent-3-our-most-autonomous-agent-yet#source:~:text=Introducing%20Agent%203",
     "comment": "Agent 3: more autonomous testing and fixing loop."
   },
   "rules": {
     "support": "partial",
-    "source_url": "https://docs.replit.com/replitai/agent#:~:text=Agent",
+    "source_url": "https://docs.replit.com/replitai/agent#source:~:text=Agent",
     "comment": "Project context exists inside Replit, but no AGENTS.md-style standard confirmed. Location: hosted/web/API-managed; no local disk folder documented."
   },
   "skills": {
     "support": "none",
-    "source_url": "https://replit.com/blog/introducing-agent-3-our-most-autonomous-agent-yet#:~:text=build%20other%20agents",
+    "source_url": "https://replit.com/blog/introducing-agent-3-our-most-autonomous-agent-yet#source:~:text=build%20other%20agents",
     "comment": "No reusable skill-folder system found. Location: hosted/web/API-managed; no local disk folder documented."
   },
   "hooks": {
     "support": "partial",
-    "source_url": "https://replit.com/blog/introducing-agent-3-our-most-autonomous-agent-yet#:~:text=constantly%20improving%20your%20app%20behind%20the%20scenes",
+    "source_url": "https://replit.com/blog/introducing-agent-3-our-most-autonomous-agent-yet#source:~:text=constantly%20improving%20your%20app%20behind%20the%20scenes",
     "comment": "Agent 3 can run autonomous test/fix loops, but not general user-defined lifecycle hooks."
   },
   "mcp_servers": {
     "support": "unknown",
-    "source_url": "https://docs.replit.com/replitai/agent#:~:text=Agent",
+    "source_url": "https://docs.replit.com/replitai/agent#source:~:text=Agent",
     "comment": "No MCP configuration found in public Agent docs. Location: hosted/web/API-managed; no local disk folder documented."
   },
   "custom_commands": {
     "support": "none",
-    "source_url": "https://docs.replit.com/replitai/agent#:~:text=Agent",
+    "source_url": "https://docs.replit.com/replitai/agent#source:~:text=Agent",
     "comment": "Prompt/chat workflow, not user-defined slash-command folders. Location: hosted/web/API-managed; no local disk folder documented."
   },
   "subagents": {
     "support": "partial",
-    "source_url": "https://replit.com/blog/introducing-agent-3-our-most-autonomous-agent-yet#:~:text=build%20other%20agents",
+    "source_url": "https://replit.com/blog/introducing-agent-3-our-most-autonomous-agent-yet#source:~:text=build%20other%20agents",
     "comment": "Agent 3 can build agents and run background tasks, but no first-class custom subagent framework found."
   },
   "model_selection": {
     "support": "none",
-    "source_url": "https://docs.replit.com/replitai/agent#:~:text=Agent",
+    "source_url": "https://docs.replit.com/replitai/agent#source:~:text=Agent",
     "comment": "No user model selection for Replit Agent found."
   },
   "approval_mode": {
     "support": "partial",
-    "source_url": "https://docs.replit.com/replitai/agent#:~:text=Agent",
+    "source_url": "https://docs.replit.com/replitai/agent#source:~:text=Agent",
     "comment": "User reviews generated work in Replit; granular command approval controls are not documented."
   },
   "sandbox_mode": {
     "support": "full",
-    "source_url": "https://docs.replit.com/replitai/agent#:~:text=workspace",
+    "source_url": "https://docs.replit.com/replitai/agent#source:~:text=workspace",
     "comment": "Runs inside Replit-hosted workspaces."
   },
   "resume": {
     "support": "partial",
-    "source_url": "https://docs.replit.com/replitai/agent#:~:text=Agent",
+    "source_url": "https://docs.replit.com/replitai/agent#source:~:text=Agent",
     "comment": "Agent work persists in Replit projects, but no explicit session resume command."
   },
   "continue": {
     "support": "partial",
-    "source_url": "https://docs.replit.com/replitai/agent#:~:text=Agent",
+    "source_url": "https://docs.replit.com/replitai/agent#source:~:text=Agent",
     "comment": "Can continue in the same hosted workspace/project."
   },
   "non_interactive": {
     "support": "none",
-    "source_url": "https://docs.replit.com/replitai/agent#:~:text=Agent",
+    "source_url": "https://docs.replit.com/replitai/agent#source:~:text=Agent",
     "comment": "No public headless/CLI automation mode found."
   },
   "output_format": {
     "support": "none",
-    "source_url": "https://docs.replit.com/replitai/agent#:~:text=Agent",
+    "source_url": "https://docs.replit.com/replitai/agent#source:~:text=Agent",
     "comment": "No machine-readable output mode found."
   },
   "statusline": {
     "support": "none",
-    "source_url": "https://docs.replit.com/replitai/agent#:~:text=Agent",
+    "source_url": "https://docs.replit.com/replitai/agent#source:~:text=Agent",
     "comment": "Hosted UI, no custom CLI statusline."
   },
   "telemetry": {
     "support": "unknown",
-    "source_url": "https://docs.replit.com/replitai/agent#:~:text=Agent",
+    "source_url": "https://docs.replit.com/replitai/agent#source:~:text=Agent",
     "comment": "No Agent-specific telemetry toggle found."
   },
   "hosted_agent": {
     "support": "full",
-    "source_url": "https://replit.com/blog/introducing-agent-3-our-most-autonomous-agent-yet#:~:text=automatically%20log%20into%20applications%20built%20with%20Replit%20Auth",
+    "source_url": "https://replit.com/blog/introducing-agent-3-our-most-autonomous-agent-yet#source:~:text=automatically%20log%20into%20applications%20built%20with%20Replit%20Auth",
     "comment": "Hosted app-building agent in Replit."
   },
   "custom_model_provider": {
     "support": "none",
-    "source_url": "https://docs.replit.com/replitai/agent#:~:text=Agent",
+    "source_url": "https://docs.replit.com/replitai/agent#source:~:text=Agent",
     "comment": "No BYO model/provider support found."
   },
   "pricing": {
     "value": "Included in Replit plan/usage model",
-    "source_url": "https://replit.com/pricing#:~:text=Agent",
+    "source_url": "https://replit.com/pricing#source:~:text=Agent",
     "comment": "Replit pricing and Agent limits vary by plan."
   },
   "notes": "Best for hosted app prototyping/build-deploy workflows, not for local repo terminal automation.",
   "transcripts": {
     "support": "partial",
-    "source_url": "https://replit.com/ai#:~:text=agent",
+    "source_url": "https://replit.com/ai#source:~:text=agent",
     "comment": "Location: hosted/web/API-managed session history; no local transcript directory documented."
   }
 }

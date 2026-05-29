@@ -158,7 +158,8 @@ td.cell-wrap .dot {
 .cell-tip {
   display: none; position: absolute; bottom: calc(100% + 4px); left: 50%; transform: translateX(-50%);
   background: #2a241b; color: #f6f4ee; font-size: 10px; line-height: 1.3; padding: 3px 6px;
-  border-radius: 3px; z-index: 50; pointer-events: none; max-width: 260px; white-space: normal;
+  border-radius: 3px; z-index: 50; pointer-events: none; max-width: 340px; white-space: pre-wrap;
+  overflow-wrap: anywhere;
   outline: 1px solid #555; text-align: left; font-weight: 400;
 }
 .cell-wrap:hover .cell-tip { display: block; }
@@ -319,6 +320,8 @@ function favimg(agent, idx) {
 function cell(agent, col) {
   var v = agent[col.key];
   if (!v) return '<td>&mdash;</td>';
+  var tipText = [v.comment, v.source_url ? 'Source: '+v.source_url : ''].filter(Boolean).join('\n');
+  var tip = tipText ? '<span class="cell-tip">'+esc(tipText)+'</span>' : '';
   if (col.key==='form_factor') {
     var tags = sortFormFactors((v.values||[v.value]).filter(Boolean));
     var links = v.links || {};
@@ -328,9 +331,8 @@ function cell(agent, col) {
       return '<span class="form-tag">'+esc(x)+'</span>';
     }).join('');
     if (agent.deprecated) tagHtml += '<span class="form-tag deprecated-tag">deprecated</span>';
-    return '<td class="cell-wrap"><div class="form-tags">'+tagHtml+'</div></td>';
+    return '<td class="cell-wrap"><div class="form-tags">'+tagHtml+'</div>'+tip+'</td>';
   }
-  var tip = v.comment ? '<span class="cell-tip">'+esc(v.comment)+'</span>' : '';
   var hasSrc = !!v.source_url;
   var link = hasSrc ? '<a class="cell-link" href="'+esc(v.source_url)+'" target="_blank" rel="noreferrer" title="Open source" aria-label="Open source"></a>' : '';
   var mark = hasSrc ? '<span class="source-mark" aria-hidden="true"></span>' : '';

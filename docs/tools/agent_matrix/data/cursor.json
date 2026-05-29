@@ -12,7 +12,7 @@
       "CLI",
       "SDK"
     ],
-    "source_url": "https://cursor.com/downloads#:~:text=IDE",
+    "source_url": "https://cursor.com/downloads#source:~:text=IDE",
     "comment": "VS Code-derived AI IDE with standalone CLI (cursor-agent) and @cursor/sdk (TypeScript/Python) for programmatic local or cloud agents. Per-form-factor links: IDE: https://cursor.com/downloads; CLI: https://docs.cursor.com/en/cli/installation; SDK: https://cursor.com/docs/sdk/typescript.",
     "links": {
       "IDE": "https://cursor.com/downloads",
@@ -22,108 +22,108 @@
   },
   "released_in": {
     "value": "2023",
-    "source_url": "https://cursor.com/#:~:text=Cursor",
+    "source_url": "https://cursor.com/#source:~:text=Cursor",
     "comment": "IDE launched ~2023; CLI surface added later (2025)."
   },
   "latest_major_update": {
     "value": "May '26",
-    "source_url": "https://docs.cursor.com/#:~:text=Cursor",
+    "source_url": "https://docs.cursor.com/#source:~:text=Cursor",
     "comment": "Current docs capture rules, skills, MCP, models, and agent workflows."
   },
   "rules": {
     "support": "full",
-    "source_url": "https://docs.cursor.com/en/context/rules#:~:text=rules",
+    "source_url": "https://docs.cursor.com/en/context/rules#source:~:text=rules",
     "comment": "Supports project and user rules. Location: `.cursor/rules/*.mdc` in a project; user/global rules are configured in Cursor settings."
   },
   "skills": {
     "support": "full",
-    "source_url": "https://docs.cursor.com/en/context/skills#:~:text=skills",
+    "source_url": "https://docs.cursor.com/en/context/skills#source:~:text=skills",
     "comment": "Supports skills. Location: Cursor rules/agents features, not a SKILL.md folder standard in this row."
   },
   "hooks": {
     "support": "unknown",
-    "source_url": "https://docs.cursor.com/#:~:text=hooks",
+    "source_url": "https://docs.cursor.com/#source:~:text=hooks",
     "comment": "No lifecycle hooks documented for IDE or CLI."
   },
   "mcp_servers": {
     "support": "full",
-    "source_url": "https://docs.cursor.com/en/context/mcp#:~:text=MCP",
+    "source_url": "https://docs.cursor.com/en/context/mcp#source:~:text=MCP",
     "comment": "Supports MCP servers in both IDE and CLI. Location: `.cursor/mcp.json` for project MCP servers or user-level Cursor MCP settings."
   },
   "custom_commands": {
     "support": "full",
-    "source_url": "https://docs.cursor.com/en/context/rules#:~:text=commands",
+    "source_url": "https://docs.cursor.com/en/context/rules#source:~:text=commands",
     "comment": "CLI exposes full command controls; IDE has reusable rule/workflow patterns. Location: custom command support is through Cursor features/SDK rather than a repo command folder."
   },
   "subagents": {
     "support": "partial",
-    "source_url": "https://docs.cursor.com/#:~:text=subagents",
+    "source_url": "https://docs.cursor.com/#source:~:text=subagents",
     "comment": "Agent tasks are supported; first-class named subagents not modeled like Claude Code."
   },
   "model_selection": {
     "support": "full",
-    "source_url": "https://docs.cursor.com/en/settings/models#:~:text=models",
+    "source_url": "https://docs.cursor.com/en/settings/models#source:~:text=models",
     "comment": "Supports model settings in IDE and CLI."
   },
   "approval_mode": {
     "support": "full",
-    "source_url": "https://docs.cursor.com/#:~:text=approval",
+    "source_url": "https://docs.cursor.com/#source:~:text=approval",
     "comment": "Agent modes and CLI yolo/force controls expose approval controls."
   },
   "sandbox_mode": {
     "support": "full",
-    "source_url": "https://docs.cursor.com/en/cli/reference#:~:text=sandbox",
+    "source_url": "https://docs.cursor.com/en/cli/reference#source:~:text=sandbox",
     "comment": "CLI exposes sandbox controls; IDE trust and agent controls provide partial sandboxing."
   },
   "resume": {
     "support": "full",
-    "source_url": "https://docs.cursor.com/#:~:text=resume",
+    "source_url": "https://docs.cursor.com/#source:~:text=resume",
     "comment": "Composer/chat history in IDE and CLI resume/continue workflows support session resumption."
   },
   "continue": {
     "support": "full",
-    "source_url": "https://docs.cursor.com/#:~:text=resume",
+    "source_url": "https://docs.cursor.com/#source:~:text=resume",
     "comment": "Supports --continue in CLI and conversation history in IDE."
   },
   "non_interactive": {
     "support": "full",
-    "source_url": "https://docs.cursor.com/en/cli/reference#:~:text=print",
+    "source_url": "https://docs.cursor.com/en/cli/reference#source:~:text=print",
     "comment": "CLI supports print/headless mode; IDE is interactive only."
   },
   "output_format": {
     "support": "partial",
-    "source_url": "https://docs.cursor.com/en/cli/reference#:~:text=output",
+    "source_url": "https://docs.cursor.com/en/cli/reference#source:~:text=output",
     "comment": "CLI has partial structured output support; IDE has none."
   },
   "statusline": {
     "support": "partial",
-    "source_url": "https://docs.cursor.com/#:~:text=status%20line",
+    "source_url": "https://docs.cursor.com/#source:~:text=status%20line",
     "comment": "Editor status bar customization inherited from VS Code, not an agent-specific statusline."
   },
   "telemetry": {
     "support": "full",
-    "source_url": "https://docs.cursor.com/en/account/privacy#:~:text=telemetry",
+    "source_url": "https://docs.cursor.com/en/account/privacy#source:~:text=telemetry",
     "comment": "Cursor documents privacy settings."
   },
   "hosted_agent": {
     "support": "full",
-    "source_url": "https://docs.cursor.com/en/cli/overview#:~:text=CLI",
+    "source_url": "https://docs.cursor.com/en/cli/overview#source:~:text=CLI",
     "comment": "CLI agent can execute in Cursor's cloud runtime."
   },
   "custom_model_provider": {
     "support": "full",
-    "source_url": "https://docs.cursor.com/en/settings/models#:~:text=models",
+    "source_url": "https://docs.cursor.com/en/settings/models#source:~:text=models",
     "comment": "Supports custom API keys/models in IDE and CLI."
   },
   "notes": "Cursor is a VS Code-derived AI IDE with a companion CLI (cursor-agent) for headless/CI use and @cursor/sdk for programmatic local/cloud agents.",
   "pricing": {
     "value": "Pro $20, Pro+ $60, Ultra $200/mo",
-    "source_url": "https://cursor.com/help/models-and-usage/usage-limits#:~:text=Pro%20Plus",
+    "source_url": "https://cursor.com/help/models-and-usage/usage-limits#source:~:text=Pro%20Plus",
     "comment": "Individual: Pro $20/mo ($20 API usage), Pro+ $60/mo ($70 API usage), Ultra $200/mo ($400 API usage). Teams $40/user/mo."
   },
   "transcripts": {
     "support": "full",
-    "source_url": "https://docs.cursor.com/en/cli/overview#:~:text=Resume%20previous%20conversations",
+    "source_url": "https://docs.cursor.com/en/cli/overview#source:~:text=Resume%20previous%20conversations",
     "comment": "Location: Cursor CLI transcripts live under `~/.cursor/projects/<slug>/agent-transcripts/<agentId>/<agentId>.jsonl`; Cursor IDE composer data is in SQLite `~/Library/Application Support/Cursor/User/globalStorage/state.vscdb`."
   }
 }

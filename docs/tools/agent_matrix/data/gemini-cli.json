@@ -11,7 +11,7 @@
     "values": [
       "CLI"
     ],
-    "source_url": "https://google-gemini.github.io/gemini-cli/docs/cli/#:~:text=CLI",
+    "source_url": "https://google-gemini.github.io/gemini-cli/docs/cli/#source:~:text=CLI",
     "comment": "CLI tool. Per-form-factor links: CLI: https://google-gemini.github.io/gemini-cli/docs/cli/.",
     "links": {
       "CLI": "https://google-gemini.github.io/gemini-cli/docs/cli/"
@@ -19,108 +19,108 @@
   },
   "released_in": {
     "value": "Jun '25",
-    "source_url": "https://blog.google/technology/developers/introducing-gemini-cli-open-source-ai-agent/#:~:text=Gemini%20CLI",
+    "source_url": "https://blog.google/technology/developers/introducing-gemini-cli-open-source-ai-agent/#source:~:text=Gemini%20CLI",
     "comment": "Public open-source Gemini CLI launch."
   },
   "latest_major_update": {
     "value": "May '26",
-    "source_url": "https://antigravity.google/docs/cli-getting-started#:~:text=Antigravity%20CLI",
+    "source_url": "https://antigravity.google/docs/cli-getting-started#source:~:text=Antigravity%20CLI",
     "comment": "Google points CLI users toward Antigravity (agy CLI) for the latest standalone CLI surface."
   },
   "rules": {
     "support": "full",
-    "source_url": "https://google-gemini.github.io/gemini-cli/docs/cli/configuration.html#:~:text=GEMINI.md",
+    "source_url": "https://google-gemini.github.io/gemini-cli/docs/cli/configuration.html#source:~:text=GEMINI.md",
     "comment": "Uses GEMINI.md context files. Location: no public disk folder/file location found in docs reviewed."
   },
   "skills": {
     "support": "partial",
-    "source_url": "https://google-gemini.github.io/gemini-cli/docs/tools/#:~:text=tools",
+    "source_url": "https://google-gemini.github.io/gemini-cli/docs/tools/#source:~:text=tools",
     "comment": "Extensible through tools/extensions rather than the same SKILL.md contract. Location: no public disk folder/file location found in docs reviewed."
   },
   "hooks": {
     "support": "full",
-    "source_url": "https://google-gemini.github.io/gemini-cli/docs/cli/configuration.html#:~:text=hooks",
+    "source_url": "https://google-gemini.github.io/gemini-cli/docs/cli/configuration.html#source:~:text=hooks",
     "comment": "Supports hooks in settings."
   },
   "mcp_servers": {
     "support": "full",
-    "source_url": "https://google-gemini.github.io/gemini-cli/docs/tools/mcp-server.html#:~:text=MCP",
+    "source_url": "https://google-gemini.github.io/gemini-cli/docs/tools/mcp-server.html#source:~:text=MCP",
     "comment": "Supports MCP servers. Location: no public disk folder/file location found in docs reviewed."
   },
   "custom_commands": {
     "support": "full",
-    "source_url": "https://google-gemini.github.io/gemini-cli/docs/cli/commands.html#:~:text=commands",
+    "source_url": "https://google-gemini.github.io/gemini-cli/docs/cli/commands.html#source:~:text=commands",
     "comment": "Supports commands. Location: no public disk folder/file location found in docs reviewed."
   },
   "subagents": {
     "support": "unknown",
-    "source_url": "https://google-gemini.github.io/gemini-cli/#:~:text=subagents",
+    "source_url": "https://google-gemini.github.io/gemini-cli/#source:~:text=subagents",
     "comment": ""
   },
   "model_selection": {
     "support": "full",
-    "source_url": "https://google-gemini.github.io/gemini-cli/docs/cli/configuration.html#:~:text=model",
+    "source_url": "https://google-gemini.github.io/gemini-cli/docs/cli/configuration.html#source:~:text=model",
     "comment": "Model can be configured."
   },
   "approval_mode": {
     "support": "full",
-    "source_url": "https://google-gemini.github.io/gemini-cli/docs/cli/configuration.html#:~:text=approval",
+    "source_url": "https://google-gemini.github.io/gemini-cli/docs/cli/configuration.html#source:~:text=approval",
     "comment": "Approval mode is configurable."
   },
   "sandbox_mode": {
     "support": "full",
-    "source_url": "https://google-gemini.github.io/gemini-cli/docs/cli/configuration.html#:~:text=sandbox",
+    "source_url": "https://google-gemini.github.io/gemini-cli/docs/cli/configuration.html#source:~:text=sandbox",
     "comment": "Sandbox settings are documented."
   },
   "resume": {
     "support": "full",
-    "source_url": "https://google-gemini.github.io/gemini-cli/docs/cli/commands.html#:~:text=resume",
+    "source_url": "https://google-gemini.github.io/gemini-cli/docs/cli/commands.html#source:~:text=resume",
     "comment": "Supports resume workflows."
   },
   "continue": {
     "support": "full",
-    "source_url": "https://google-gemini.github.io/gemini-cli/docs/cli/commands.html#:~:text=resume",
+    "source_url": "https://google-gemini.github.io/gemini-cli/docs/cli/commands.html#source:~:text=resume",
     "comment": "Supports continuing a previous session through resume/latest-session workflows."
   },
   "non_interactive": {
     "support": "full",
-    "source_url": "https://google-gemini.github.io/gemini-cli/docs/cli/commands.html#:~:text=prompt",
+    "source_url": "https://google-gemini.github.io/gemini-cli/docs/cli/commands.html#source:~:text=prompt",
     "comment": "Supports prompt/headless use."
   },
   "output_format": {
     "support": "partial",
-    "source_url": "https://google-gemini.github.io/gemini-cli/docs/cli/commands.html#:~:text=output",
+    "source_url": "https://google-gemini.github.io/gemini-cli/docs/cli/commands.html#source:~:text=output",
     "comment": ""
   },
   "statusline": {
     "support": "unknown",
-    "source_url": "https://google-gemini.github.io/gemini-cli/docs/cli/configuration.html#:~:text=status%20line",
+    "source_url": "https://google-gemini.github.io/gemini-cli/docs/cli/configuration.html#source:~:text=status%20line",
     "comment": ""
   },
   "telemetry": {
     "support": "full",
-    "source_url": "https://google-gemini.github.io/gemini-cli/docs/telemetry/#:~:text=telemetry",
+    "source_url": "https://google-gemini.github.io/gemini-cli/docs/telemetry/#source:~:text=telemetry",
     "comment": "Telemetry is documented."
   },
   "custom_model_provider": {
     "support": "partial",
-    "source_url": "https://google-gemini.github.io/gemini-cli/docs/cli/configuration.html#:~:text=providers",
+    "source_url": "https://google-gemini.github.io/gemini-cli/docs/cli/configuration.html#source:~:text=providers",
     "comment": "Primarily Gemini/Google-oriented provider configuration."
   },
   "notes": "Deprecated: Google points new CLI work to Antigravity. Kept as an explicit agent-launch option, but excluded from random selection in this repo. Headless/scripting mode only; no published agent embed SDK.",
   "pricing": {
     "value": "Free (Apache-2.0), Gemini API usage billed separately",
-    "source_url": "https://ai.google.dev/pricing#:~:text=Gemini%20API",
+    "source_url": "https://ai.google.dev/pricing#source:~:text=Gemini%20API",
     "comment": "Gemini CLI is open source (Apache-2.0). API usage billed through Google AI Studio or Vertex AI."
   },
   "hosted_agent": {
     "support": "none",
-    "source_url": "https://google-gemini.github.io/gemini-cli/#:~:text=Gemini%20CLI",
+    "source_url": "https://google-gemini.github.io/gemini-cli/#source:~:text=Gemini%20CLI",
     "comment": "Local CLI tool backed by Google Gemini API."
   },
   "transcripts": {
     "support": "unknown",
-    "source_url": "https://google-gemini.github.io/gemini-cli/#:~:text=session",
+    "source_url": "https://google-gemini.github.io/gemini-cli/#source:~:text=session",
     "comment": "Location: transcript/session disk storage was not found in public docs reviewed."
   }
 }

@@ -11,7 +11,7 @@
       "CLI",
       "IDE"
     ],
-    "source_url": "https://antigravity.google/docs/cli-getting-started#:~:text=CLI",
+    "source_url": "https://antigravity.google/docs/cli-getting-started#source:~:text=CLI",
     "comment": "Google Antigravity IDE plus standalone agy CLI (plugin layout, rules, skills, hooks, MCP). Per-form-factor links: CLI: https://antigravity.google/docs/cli-getting-started; IDE: https://antigravity.google/download.",
     "links": {
       "CLI": "https://antigravity.google/docs/cli-getting-started",
@@ -20,108 +20,108 @@
   },
   "released_in": {
     "value": "2025",
-    "source_url": "https://antigravity.google/#:~:text=released",
+    "source_url": "https://antigravity.google/#source:~:text=released",
     "comment": "IDE public release in 2025; standalone agy CLI documented May 2026."
   },
   "latest_major_update": {
     "value": "May '26",
-    "source_url": "https://antigravity.google/docs/cli-features#:~:text=plugins",
+    "source_url": "https://antigravity.google/docs/cli-features#source:~:text=plugins",
     "comment": "CLI plugin system and IDE agent surfaces updated together in current docs."
   },
   "rules": {
     "support": "full",
-    "source_url": "https://antigravity.google/docs/cli-features#:~:text=rules",
+    "source_url": "https://antigravity.google/docs/cli-features#source:~:text=rules",
     "comment": "Full plugin rules on CLI; IDE has persistent agent context with overlapping rules support. Location: Antigravity plugin rules live in plugin folders; workspace/global IDE rule storage is managed by Antigravity."
   },
   "skills": {
     "support": "full",
-    "source_url": "https://antigravity.google/docs/cli-features#:~:text=skills",
+    "source_url": "https://antigravity.google/docs/cli-features#source:~:text=skills",
     "comment": "Plugin skills on CLI; IDE local data includes skills with less public doc detail. Location: plugin skill folders containing `SKILL.md`."
   },
   "hooks": {
     "support": "full",
-    "source_url": "https://antigravity.google/docs/cli-features#:~:text=hooks",
+    "source_url": "https://antigravity.google/docs/cli-features#source:~:text=hooks",
     "comment": "Plugin hooks documented on CLI."
   },
   "mcp_servers": {
     "support": "full",
-    "source_url": "https://antigravity.google/docs/cli-features#:~:text=mcp_config.json",
+    "source_url": "https://antigravity.google/docs/cli-features#source:~:text=mcp_config.json",
     "comment": "CLI plugin mcp_config.json; IDE also ships MCP configuration. Location: plugin `mcp_config.json` files and IDE/CLI MCP configuration."
   },
   "custom_commands": {
     "support": "partial",
-    "source_url": "https://antigravity.google/docs/cli-features#:~:text=plugins",
+    "source_url": "https://antigravity.google/docs/cli-features#source:~:text=plugins",
     "comment": "CLI via plugin capabilities; IDE via global workflows rather than classic slash-command folders. Location: command-like behavior is via plugins/workflows rather than a documented standalone command folder."
   },
   "subagents": {
     "support": "unknown",
-    "source_url": "https://antigravity.google/docs/cli-features#:~:text=subagents",
+    "source_url": "https://antigravity.google/docs/cli-features#source:~:text=subagents",
     "comment": ""
   },
   "model_selection": {
     "support": "unknown",
-    "source_url": "https://antigravity.google/docs/#:~:text=model",
+    "source_url": "https://antigravity.google/docs/#source:~:text=model",
     "comment": "IDE model UI exists; agy --help does not expose a model flag as of this dataset."
   },
   "approval_mode": {
     "support": "partial",
-    "source_url": "https://antigravity.google/docs/cli-features#:~:text=dangerously-skip-permissions",
+    "source_url": "https://antigravity.google/docs/cli-features#source:~:text=dangerously-skip-permissions",
     "comment": "CLI supports --dangerously-skip-permissions; IDE approval behavior not fully documented."
   },
   "sandbox_mode": {
     "support": "partial",
-    "source_url": "https://antigravity.google/docs/cli-features#:~:text=--sandbox",
+    "source_url": "https://antigravity.google/docs/cli-features#source:~:text=--sandbox",
     "comment": "CLI supports --sandbox for terminal restrictions."
   },
   "resume": {
     "support": "full",
-    "source_url": "https://antigravity.google/docs/cli-features#:~:text=--continue",
+    "source_url": "https://antigravity.google/docs/cli-features#source:~:text=--continue",
     "comment": "CLI --continue/--conversation; IDE stores conversation/brain state."
   },
   "continue": {
     "support": "full",
-    "source_url": "https://antigravity.google/docs/cli-features#:~:text=--continue",
+    "source_url": "https://antigravity.google/docs/cli-features#source:~:text=--continue",
     "comment": "CLI --continue for latest conversation; IDE continues from existing history."
   },
   "non_interactive": {
     "support": "full",
-    "source_url": "https://antigravity.google/docs/cli-features#:~:text=--print",
+    "source_url": "https://antigravity.google/docs/cli-features#source:~:text=--print",
     "comment": "CLI supports --print / --prompt; IDE is interactive-first."
   },
   "output_format": {
     "support": "unknown",
-    "source_url": "https://antigravity.google/docs/cli-features#:~:text=output",
+    "source_url": "https://antigravity.google/docs/cli-features#source:~:text=output",
     "comment": ""
   },
   "statusline": {
     "support": "unknown",
-    "source_url": "https://antigravity.google/docs/cli-features#:~:text=status%20line",
+    "source_url": "https://antigravity.google/docs/cli-features#source:~:text=status%20line",
     "comment": ""
   },
   "telemetry": {
     "support": "unknown",
-    "source_url": "https://antigravity.google/docs/cli-features#:~:text=telemetry",
+    "source_url": "https://antigravity.google/docs/cli-features#source:~:text=telemetry",
     "comment": ""
   },
   "custom_model_provider": {
     "support": "unknown",
-    "source_url": "https://antigravity.google/docs/#:~:text=providers",
+    "source_url": "https://antigravity.google/docs/#source:~:text=providers",
     "comment": "No arbitrary provider configuration found in public CLI help/docs."
   },
   "notes": "Google Antigravity spans an agentic IDE and the agy CLI. Distinct from deprecated Gemini CLI. No published programmatic SDK.",
   "pricing": {
     "value": "Free (generous weekly rate limits), Google AI Pro/Ultra (undisclosed), Organization (consumption-based via Google Cloud)",
-    "source_url": "https://antigravity.google/pricing#:~:text=For%20Individuals",
+    "source_url": "https://antigravity.google/pricing#source:~:text=For%20Individuals",
     "comment": "Free tier includes Gemini 3.5 Flash, 3.1 Pro, 3 Flash, Claude Sonnet & Opus 4.6, gpt-oss-120b. Pro/Ultra tiers offer more generous rate limits."
   },
   "hosted_agent": {
     "support": "none",
-    "source_url": "https://antigravity.google/docs/cli-features#:~:text=plugins",
+    "source_url": "https://antigravity.google/docs/cli-features#source:~:text=plugins",
     "comment": "Local IDE and CLI surfaces."
   },
   "transcripts": {
     "support": "partial",
-    "source_url": "https://antigravity.google/docs/cli-features#:~:text=conversation",
+    "source_url": "https://antigravity.google/docs/cli-features#source:~:text=conversation",
     "comment": "Location: Antigravity brain/trajectory summaries are under `~/.gemini/antigravity/brain/<uuid>/*.md`; index data is in `~/Library/Application Support/Antigravity/User/globalStorage/state.vscdb`."
   }
 }
