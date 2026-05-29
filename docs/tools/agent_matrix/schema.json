@@ -26,6 +26,7 @@
     "mcp_servers": {"allOf": [{"$ref": "#/$defs/featureWithSource"}], "$comment": "Integration | MCP | Model Context Protocol server support."},
     "custom_commands": {"allOf": [{"$ref": "#/$defs/featureWithSource"}], "$comment": "Automation | Commands | User-defined slash/custom commands."},
     "subagents": {"allOf": [{"$ref": "#/$defs/featureWithSource"}], "$comment": "Automation | Subagents | First-class custom or delegated subagent support."},
+    "transcripts": {"allOf": [{"$ref": "#/$defs/featureWithSource"}], "$comment": "Context | Transcripts | Local or exported conversation/session transcript storage."},
     "model_selection": {"allOf": [{"$ref": "#/$defs/featureWithSource"}], "$comment": "Settings | Model | Explicit model selection in CLI/settings."},
     "approval_mode": {"allOf": [{"$ref": "#/$defs/featureWithSource"}], "$comment": "Settings | Approvals | Approval or permission-mode controls."},
     "sandbox_mode": {"allOf": [{"$ref": "#/$defs/featureWithSource"}], "$comment": "Settings | Sandbox | Filesystem/network/terminal sandbox controls."},
@@ -79,7 +80,12 @@
       "properties": {
         "values": {"type": "array", "items": {"type": "string"}},
         "source_url": {"type": "string"},
-        "comment": {"type": "string"}
+        "comment": {"type": "string"},
+        "links": {
+          "type": "object",
+          "additionalProperties": {"type": "string"},
+          "$comment": "Per-form-factor install/download links keyed by display value, e.g. CLI, IDE, Extension, SDK, Web, Mac App."
+        }
       }
     }
   }

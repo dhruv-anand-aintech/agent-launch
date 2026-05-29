@@ -11,8 +11,11 @@
       "values": [
         "CLI"
       ],
-      "source_url": "https://github.com/Aider-AI/aider#:~:text=aider%20is%20AI%20pair%20programming%20in%20your%20terminal",
-      "comment": "CLI terminal app."
+      "source_url": "https://aider.chat/docs/install.html#:~:text=CLI",
+      "comment": "CLI terminal app. Per-form-factor links: CLI: https://aider.chat/docs/install.html.",
+      "links": {
+        "CLI": "https://aider.chat/docs/install.html"
+      }
     },
     "released_in": {
       "value": "Jun '23",
@@ -29,12 +32,12 @@
     "rules": {
       "support": "partial",
       "source_url": "https://aider.chat/docs/usage/conventions.html#:~:text=The%20easiest%20way%20to%20do%20that%20with%20aider%20is%20to%20simply%20create%20a%20small%20markdown%20file",
-      "comment": "Supports CONVENTIONS.md loaded via --read or .aider.conf.yml. No equivalent of a persistent auto-loaded CLAUDE.md file."
+      "comment": "Supports CONVENTIONS.md loaded via --read or .aider.conf.yml. No equivalent of a persistent auto-loaded CLAUDE.md file. Location: `.aider.conf.yml`, `.aider.model.settings.yml`, `.aider.model.metadata.json`, and repo convention files; no AGENTS.md standard."
     },
     "skills": {
       "support": "partial",
       "source_url": "https://aider.chat/docs/usage/commands.html#:~:text=/save%20%3Cfname%3E%20command%20will%20make%20a%20file%20of%20/add%20and%20/read-only%20commands",
-      "comment": "Has /save and /load commands to persist/replay sequences of slash commands. Not a full reusable skill system like Cursor skills."
+      "comment": "Has /save and /load commands to persist/replay sequences of slash commands. Not a full reusable skill system like Cursor skills. Location: no first-class skill folder; use repo files/prompts/conventions."
     },
     "hooks": {
       "support": "partial",
@@ -44,12 +47,12 @@
     "mcp_servers": {
       "support": "none",
       "source_url": "https://github.com/Aider-AI/aider#:~:text=aider%20is%20AI%20pair%20programming%20in%20your%20terminal",
-      "comment": "No MCP (Model Context Protocol) support detected in documentation, codebase, or feature listings."
+      "comment": "No MCP (Model Context Protocol) support detected in documentation, codebase, or feature listings. Location: no MCP config for Aider."
     },
     "custom_commands": {
       "support": "none",
       "source_url": "https://aider.chat/docs/usage/commands.html#:~:text=Aider%20supports%20commands%20from%20within%20the%20chat%2C%20which%20all%20start%20with%20/",
-      "comment": "40+ built-in slash commands but no mechanism for users to define custom slash commands."
+      "comment": "40+ built-in slash commands but no mechanism for users to define custom slash commands. Location: no custom command folder; uses CLI flags/config."
     },
     "subagents": {
       "support": "partial",
@@ -116,6 +119,11 @@
       "support": "none",
       "source_url": "https://github.com/Aider-AI/aider#:~:text=aider%20is%20AI%20pair%20programming%20in%20your%20terminal",
       "comment": "Runs entirely locally via pip. No hosted agent platform."
+    },
+    "transcripts": {
+      "support": "partial",
+      "source_url": "https://aider.chat/docs/config/aider_conf.html#:~:text=chat-history-file",
+      "comment": "Location: optional chat history/transcript files are configured with Aider history settings such as `.aider.chat.history.md`."
     }
   },
   {
@@ -132,8 +140,13 @@
         "Extension",
         "SDK"
       ],
-      "source_url": "https://ampcode.com/manual/sdk#:~:text=SDK",
-      "comment": "CLI TUI + IDE extensions (VS Code, JetBrains, Neovim, Zed) + @ampcode/sdk (TypeScript) and amp-sdk (Python)."
+      "source_url": "https://ampcode.com/manual#getting-started#:~:text=CLI",
+      "comment": "CLI TUI + IDE extensions (VS Code, JetBrains, Neovim, Zed) + @ampcode/sdk (TypeScript) and amp-sdk (Python). Per-form-factor links: CLI: https://ampcode.com/manual#getting-started; Extension: https://ampcode.com/manual/vscode; SDK: https://ampcode.com/manual/sdk.",
+      "links": {
+        "CLI": "https://ampcode.com/manual#getting-started",
+        "Extension": "https://ampcode.com/manual/vscode",
+        "SDK": "https://ampcode.com/manual/sdk"
+      }
     },
     "released_in": {
       "value": "May '25",
@@ -150,12 +163,12 @@
     "rules": {
       "support": "full",
       "source_url": "https://ampcode.com/manual#AGENTS.md#:~:text=Amp%20looks%20in%20AGENTS.md%20files%20for%20guidance",
-      "comment": "Full support via AGENTS.md files (plural). Scanned from cwd, parent dirs, subtrees, $HOME/.config/amp/, /etc/ampcode/. Supports @-mentions, globs, YAML frontmatter."
+      "comment": "Full support via AGENTS.md files (plural). Scanned from cwd, parent dirs, subtrees, $HOME/.config/amp/, /etc/ampcode/. Supports @-mentions, globs, YAML frontmatter. Location: no public disk folder/file location found in docs reviewed."
     },
     "skills": {
       "support": "full",
       "source_url": "https://ampcode.com/manual#agent-skills#:~:text=Skills%20are%20packages%20of%20instructions%20and%20resources",
-      "comment": "Full support. Skills are directories with SKILL.md + YAML frontmatter. Locations: .agents/skills/ (project), ~/.config/agents/skills/ (user). Can bundle MCP servers via mcp.json."
+      "comment": "Full support. Skills are directories with SKILL.md + YAML frontmatter. Locations: .agents/skills/ (project), ~/.config/agents/skills/ (user). Can bundle MCP servers via mcp.json. Location: no public disk folder/file location found in docs reviewed."
     },
     "hooks": {
       "support": "full",
@@ -165,12 +178,12 @@
     "mcp_servers": {
       "support": "full",
       "source_url": "https://ampcode.com/manual#mcp#:~:text=You%20can%20add%20additional%20tools%20using%20MCP%20servers",
-      "comment": "Full support. Add via CLI (amp mcp add) or config. Local (command/args/env) and remote (url/headers) servers. OAuth auto-flow. Skill bundling for lazy loading."
+      "comment": "Full support. Add via CLI (amp mcp add) or config. Local (command/args/env) and remote (url/headers) servers. OAuth auto-flow. Skill bundling for lazy loading. Location: no public disk folder/file location found in docs reviewed."
     },
     "custom_commands": {
       "support": "none",
       "source_url": "https://ampcode.com/news/slashing-custom-commands#:~:text=We're%20removing%20custom%20commands%20in%20favor%20of%20skills",
-      "comment": "Removed January 29, 2026. Replaced by skills and command palette (Ctrl+O) instead of slash commands."
+      "comment": "Removed January 29, 2026. Replaced by skills and command palette (Ctrl+O) instead of slash commands. Location: not applicable; feature not supported."
     },
     "subagents": {
       "support": "full",
@@ -237,6 +250,11 @@
       "support": "none",
       "source_url": "https://ampcode.com/manual#:~:text=Amp%20is%20the%20frontier%20coding%20agent%20for%20your%20terminal%20and%20editor",
       "comment": "CLI runs locally. Threads shared via web but no managed agent platform."
+    },
+    "transcripts": {
+      "support": "unknown",
+      "source_url": "https://ampcode.com/manual#:~:text=session",
+      "comment": "Location: transcript/session disk storage was not found in public docs reviewed."
     }
   },
   {
@@ -252,8 +270,12 @@
         "CLI",
         "IDE"
       ],
-      "source_url": "https://antigravity.google/docs/cli-getting-started#:~:text=agy",
-      "comment": "Google Antigravity IDE plus standalone agy CLI (plugin layout, rules, skills, hooks, MCP)."
+      "source_url": "https://antigravity.google/docs/cli-getting-started#:~:text=CLI",
+      "comment": "Google Antigravity IDE plus standalone agy CLI (plugin layout, rules, skills, hooks, MCP). Per-form-factor links: CLI: https://antigravity.google/docs/cli-getting-started; IDE: https://antigravity.google/download.",
+      "links": {
+        "CLI": "https://antigravity.google/docs/cli-getting-started",
+        "IDE": "https://antigravity.google/download"
+      }
     },
     "released_in": {
       "value": "2025",
@@ -270,12 +292,12 @@
     "rules": {
       "support": "full",
       "source_url": "https://antigravity.google/docs/cli-features#:~:text=rules",
-      "comment": "Full plugin rules on CLI; IDE has persistent agent context with overlapping rules support."
+      "comment": "Full plugin rules on CLI; IDE has persistent agent context with overlapping rules support. Location: Antigravity plugin rules live in plugin folders; workspace/global IDE rule storage is managed by Antigravity."
     },
     "skills": {
       "support": "full",
       "source_url": "https://antigravity.google/docs/cli-features#:~:text=skills",
-      "comment": "Plugin skills on CLI; IDE local data includes skills with less public doc detail."
+      "comment": "Plugin skills on CLI; IDE local data includes skills with less public doc detail. Location: plugin skill folders containing `SKILL.md`."
     },
     "hooks": {
       "support": "full",
@@ -285,12 +307,12 @@
     "mcp_servers": {
       "support": "full",
       "source_url": "https://antigravity.google/docs/cli-features#:~:text=mcp_config.json",
-      "comment": "CLI plugin mcp_config.json; IDE also ships MCP configuration."
+      "comment": "CLI plugin mcp_config.json; IDE also ships MCP configuration. Location: plugin `mcp_config.json` files and IDE/CLI MCP configuration."
     },
     "custom_commands": {
       "support": "partial",
       "source_url": "https://antigravity.google/docs/cli-features#:~:text=plugins",
-      "comment": "CLI via plugin capabilities; IDE via global workflows rather than classic slash-command folders."
+      "comment": "CLI via plugin capabilities; IDE via global workflows rather than classic slash-command folders. Location: command-like behavior is via plugins/workflows rather than a documented standalone command folder."
     },
     "subagents": {
       "support": "unknown",
@@ -357,6 +379,11 @@
       "support": "none",
       "source_url": "https://antigravity.google/docs/cli-features#:~:text=plugins",
       "comment": "Local IDE and CLI surfaces."
+    },
+    "transcripts": {
+      "support": "partial",
+      "source_url": "https://antigravity.google/docs/cli-features#:~:text=conversation",
+      "comment": "Location: Antigravity brain/trajectory summaries are under `~/.gemini/antigravity/brain/<uuid>/*.md`; index data is in `~/Library/Application Support/Antigravity/User/globalStorage/state.vscdb`."
     }
   },
   {
@@ -370,34 +397,42 @@
     "form_factor": {
       "values": [
         "CLI",
-        "IDE",
         "Extension",
-        "SDK"
+        "SDK",
+        "Web",
+        "Mac App"
       ],
-      "source_url": "https://docs.anthropic.com/en/docs/claude-code/overview#:~:text=Claude%20Code",
-      "comment": "CLI, IDE integration, VS Code extension, SDK."
+      "source_url": "https://code.claude.com/docs/en/quickstart#:~:text=CLI",
+      "comment": "CLI, IDE integration, VS Code extension, SDK. Per-form-factor links: CLI: https://code.claude.com/docs/en/quickstart; Extension: https://code.claude.com/docs/en/ide-integrations; SDK: https://docs.anthropic.com/en/docs/claude-code/sdk; Web: https://claude.ai/code; Mac App: https://code.claude.com/docs/en/desktop-quickstart.",
+      "links": {
+        "CLI": "https://code.claude.com/docs/en/quickstart",
+        "Extension": "https://code.claude.com/docs/en/ide-integrations",
+        "SDK": "https://docs.anthropic.com/en/docs/claude-code/sdk",
+        "Web": "https://claude.ai/code",
+        "Mac App": "https://code.claude.com/docs/en/desktop-quickstart"
+      }
     },
     "released_in": {
       "value": "Feb '25",
       "source_url": "https://www.anthropic.com/news/claude-3-7-sonnet#:~:text=Claude%20Code",
       "comment": "Claude Code was introduced as a limited research preview.",
-      "sort_date": "2025-12-19"
+      "sort_date": "2025-02-01"
     },
     "latest_major_update": {
       "value": "May '26",
       "source_url": "https://docs.anthropic.com/en/docs/claude-code/overview#:~:text=Claude%20Code",
       "comment": "Current docs cover CLI, SDK, hooks, skills, and settings.",
-      "sort_date": "2026-05-23"
+      "sort_date": "2026-05-01"
     },
     "rules": {
       "support": "full",
       "source_url": "https://docs.anthropic.com/en/docs/claude-code/memory#:~:text=CLAUDE.md",
-      "comment": "Uses CLAUDE.md memory files."
+      "comment": "Uses CLAUDE.md memory files. Location: `CLAUDE.md` in repo tree, plus `~/.claude/CLAUDE.md` for user memory."
     },
     "skills": {
       "support": "full",
       "source_url": "https://docs.anthropic.com/en/docs/claude-code/skills#:~:text=skills",
-      "comment": "Supports skills."
+      "comment": "Supports skills. Location: `.claude/skills/<name>/SKILL.md` or user-level `~/.claude/skills/<name>/SKILL.md`."
     },
     "hooks": {
       "support": "full",
@@ -407,12 +442,12 @@
     "mcp_servers": {
       "support": "full",
       "source_url": "https://docs.anthropic.com/en/docs/claude-code/mcp#:~:text=MCP",
-      "comment": "Supports MCP servers."
+      "comment": "Supports MCP servers. Location: project `.mcp.json` or Claude Code MCP config via `claude mcp`."
     },
     "custom_commands": {
       "support": "full",
       "source_url": "https://docs.anthropic.com/en/docs/claude-code/slash-commands#:~:text=slash%20commands",
-      "comment": "Supports slash commands."
+      "comment": "Supports slash commands. Location: `.claude/commands/*.md` or `~/.claude/commands/*.md`."
     },
     "subagents": {
       "support": "full",
@@ -479,6 +514,11 @@
       "support": "partial",
       "source_url": "https://docs.anthropic.com/en/docs/claude-code/overview#:~:text=Claude%20Code",
       "comment": "CLI runs locally; managed/cloud-based session execution is not directly exposed as a distinct platform."
+    },
+    "transcripts": {
+      "support": "full",
+      "source_url": "https://code.claude.com/docs/en/settings#:~:text=transcript",
+      "comment": "Location: Claude Code CLI transcripts are JSONL under `~/.claude/projects/<proj-path-dashes>/<sessionId>.jsonl`."
     }
   },
   {
@@ -491,35 +531,39 @@
     },
     "form_factor": {
       "values": [
-        "IDE",
         "Extension",
         "CLI",
         "SDK"
       ],
-      "source_url": "https://docs.cline.bot/sdk/overview#:~:text=SDK",
-      "comment": "VS Code extension, JetBrains plugin, CLI, and @cline/sdk for embedding the agent runtime in apps and CI."
+      "source_url": "https://marketplace.visualstudio.com/items?itemName=saoudrizwan.claude-dev#:~:text=Extension",
+      "comment": "VS Code extension, JetBrains plugin, CLI, and @cline/sdk for embedding the agent runtime in apps and CI. Per-form-factor links: Extension: https://marketplace.visualstudio.com/items?itemName=saoudrizwan.claude-dev; CLI: https://docs.cline.bot/cli/overview; SDK: https://docs.cline.bot/sdk/overview.",
+      "links": {
+        "Extension": "https://marketplace.visualstudio.com/items?itemName=saoudrizwan.claude-dev",
+        "CLI": "https://docs.cline.bot/cli/overview",
+        "SDK": "https://docs.cline.bot/sdk/overview"
+      }
     },
     "released_in": {
       "value": "Jul '24",
       "source_url": "https://github.com/cline/cline/releases?page=27#:~:text=v1.0.4%2C%2028%20Jul%2001%3A14",
       "comment": "Initial release was v1.0.4 on July 28, 2024 (originally named 'Claude Dev' by Saoud Rizwan). 8M+ installs by May 2026.",
-      "sort_date": "2024-07-28"
+      "sort_date": "2024-07-01"
     },
     "latest_major_update": {
       "value": "May '26",
       "source_url": "https://github.com/cline/cline/releases#:~:text=CLI%20v3.0.10%20Latest%2C%20May%2022%2C%202026",
       "comment": "CLI at v3.0.10 (May 22, 2026), VS Code extension at v3.84.0 (May 19, 2026). Rapid release cadence.",
-      "sort_date": "2026-05-25"
+      "sort_date": "2026-05-01"
     },
     "rules": {
       "support": "full",
       "source_url": "https://docs.cline.bot/customization/cline-rules#:~:text=Primary%20rule%20format%3A%20.clinerules%2F",
-      "comment": "Rich rule system: .clinerules/ directory, global ~/Documents/Cline/Rules/, conditional rules with YAML frontmatter globs, auto-detection of .cursorrules, .windsurfrules, AGENTS.md."
+      "comment": "Rich rule system: .clinerules/ directory, global ~/Documents/Cline/Rules/, conditional rules with YAML frontmatter globs, auto-detection of .cursorrules, .windsurfrules, AGENTS.md. Location: no public disk folder/file location found in docs reviewed."
     },
     "skills": {
       "support": "full",
       "source_url": "https://docs.cline.bot/customization/skills#:~:text=Skills%20are%20modular%20instruction%20sets%20that%20extend%20Cline%E2%80%99s%20capabilities%20for%20specific%20tasks",
-      "comment": "Full skill system: SKILL.md files in .cline/skills/ or ~/.cline/skills/, YAML frontmatter, progressive loading, slash command triggering, skill toggles."
+      "comment": "Full skill system: SKILL.md files in .cline/skills/ or ~/.cline/skills/, YAML frontmatter, progressive loading, slash command triggering, skill toggles. Location: no public disk folder/file location found in docs reviewed."
     },
     "hooks": {
       "support": "full",
@@ -529,12 +573,12 @@
     "mcp_servers": {
       "support": "full",
       "source_url": "https://docs.cline.bot/mcp/mcp-overview#:~:text=MCP%20(Model%20Context%20Protocol)%20lets%20Cline%20use%20external%20tools%20and%20data%20sources%20through%20MCP%20servers",
-      "comment": "Full MCP support with STDIO and HTTP/SSE transports, MCP Marketplace for one-click install, cline mcp CLI wizard."
+      "comment": "Full MCP support with STDIO and HTTP/SSE transports, MCP Marketplace for one-click install, cline mcp CLI wizard. Location: no public disk folder/file location found in docs reviewed."
     },
     "custom_commands": {
       "support": "full",
       "source_url": "https://docs.cline.bot/core-workflows/using-commands#:~:text=Slash%20Commands",
-      "comment": "Built-in slash commands plus skills auto-register as slash commands. SDK plugins can also register custom commands."
+      "comment": "Built-in slash commands plus skills auto-register as slash commands. SDK plugins can also register custom commands. Location: no public disk folder/file location found in docs reviewed."
     },
     "subagents": {
       "support": "full",
@@ -601,6 +645,11 @@
       "support": "none",
       "source_url": "https://cline.bot/#:~:text=One%20open%20source%20agent%20runtime",
       "comment": "Runs locally as VS Code extension or CLI."
+    },
+    "transcripts": {
+      "support": "unknown",
+      "source_url": "https://docs.cline.bot/#:~:text=session",
+      "comment": "Location: transcript/session disk storage was not found in public docs reviewed."
     }
   },
   {
@@ -615,32 +664,41 @@
       "values": [
         "CLI",
         "Extension",
-        "SDK"
+        "SDK",
+        "Web",
+        "Mac App"
       ],
-      "source_url": "https://developers.openai.com/codex/sdk#:~:text=SDK",
-      "comment": "CLI + Open VSX extension + hosted on platform.openai.com. TypeScript (@openai/codex-sdk) and experimental Python SDKs for programmatic control."
+      "source_url": "https://developers.openai.com/codex/cli/#:~:text=CLI",
+      "comment": "CLI + Open VSX extension + hosted on platform.openai.com. TypeScript (@openai/codex-sdk) and experimental Python SDKs for programmatic control. Per-form-factor links: CLI: https://developers.openai.com/codex/cli/; Extension: https://developers.openai.com/codex/ide/; SDK: https://developers.openai.com/codex/sdk/; Web: https://chatgpt.com/codex; Mac App: https://developers.openai.com/codex/app/.",
+      "links": {
+        "CLI": "https://developers.openai.com/codex/cli/",
+        "Extension": "https://developers.openai.com/codex/ide/",
+        "SDK": "https://developers.openai.com/codex/sdk/",
+        "Web": "https://chatgpt.com/codex",
+        "Mac App": "https://developers.openai.com/codex/app/"
+      }
     },
     "released_in": {
       "value": "Apr '25",
       "source_url": "https://github.com/openai/codex#:~:text=Codex%20CLI",
       "comment": "Open-source CLI public release.",
-      "sort_date": "2025-04-30"
+      "sort_date": "2025-04-01"
     },
     "latest_major_update": {
       "value": "May '26",
       "source_url": "https://developers.openai.com/codex/changelog/#:~:text=changelog",
       "comment": "Captured from current Codex docs/changelog state.",
-      "sort_date": "2026-05-25"
+      "sort_date": "2026-05-01"
     },
     "rules": {
       "support": "full",
       "source_url": "https://developers.openai.com/codex/agents-md/#:~:text=AGENTS.md",
-      "comment": "Uses AGENTS.md instructions."
+      "comment": "Uses AGENTS.md instructions. Location: `AGENTS.md` in repo tree, plus user/project Codex config for defaults."
     },
     "skills": {
       "support": "full",
       "source_url": "https://developers.openai.com/codex/skills/#:~:text=Skills",
-      "comment": "Supports SKILL.md-based skills."
+      "comment": "Supports SKILL.md-based skills. Location: `.codex/skills/<name>/SKILL.md`, `~/.codex/skills/<name>/SKILL.md`, or installed plugin skill folders."
     },
     "hooks": {
       "support": "full",
@@ -650,12 +708,12 @@
     "mcp_servers": {
       "support": "full",
       "source_url": "https://developers.openai.com/codex/mcp/#:~:text=MCP",
-      "comment": "Supports MCP servers."
+      "comment": "Supports MCP servers. Location: `~/.codex/config.toml` under MCP/server configuration."
     },
     "custom_commands": {
       "support": "partial",
       "source_url": "https://developers.openai.com/codex/cli/#:~:text=CLI",
-      "comment": "CLI supports slash-like workflows through prompts and tooling, but not a first-class command folder in this matrix."
+      "comment": "CLI supports slash-like workflows through prompts and tooling, but not a first-class command folder in this matrix. Location: no separate command folder documented; command-like workflows are provided by prompts, skills, plugins, and CLI slash commands."
     },
     "subagents": {
       "support": "full",
@@ -722,6 +780,140 @@
       "support": "full",
       "source_url": "https://github.com/openai/codex#:~:text=Codex%20CLI",
       "comment": "Can run locally or on platform.openai.com managed infrastructure."
+    },
+    "transcripts": {
+      "support": "full",
+      "source_url": "https://github.com/openai/codex#:~:text=sessions",
+      "comment": "Location: Codex session event streams are JSONL under `~/.codex/sessions/YYYY/MM/DD/rollout-<iso>-<id>.jsonl`."
+    }
+  },
+  {
+    "name": "Cohere North",
+    "links": {
+      "docs": "https://cohere.com/north/agent-studio",
+      "github": "",
+      "website": "https://cohere.com/north",
+      "slug": "cohere-north"
+    },
+    "form_factor": {
+      "values": [
+        "Web",
+        "SDK"
+      ],
+      "source_url": "https://cohere.com/north#:~:text=Web",
+      "comment": "Enterprise AI agent studio/workspace with UI and API-based workflows. Not a repo-native coding agent. Per-form-factor links: Web: https://cohere.com/north; SDK: https://cohere.com/north/agent-studio.",
+      "links": {
+        "Web": "https://cohere.com/north",
+        "SDK": "https://cohere.com/north/agent-studio"
+      }
+    },
+    "released_in": {
+      "value": "Jan '25",
+      "source_url": "https://cohere.com/blog/north-eap#:~:text=Introducing%20North",
+      "comment": "North early access announcement.",
+      "sort_date": "2025-01-01"
+    },
+    "latest_major_update": {
+      "value": "May '26",
+      "source_url": "https://cohere.com/blog/command-a-plus#:~:text=command-a-plus-05-2026",
+      "comment": "Command A+ model update powers agentic workflows and coding benchmarks, while North remains the enterprise agent platform.",
+      "sort_date": "2026-05-01"
+    },
+    "rules": {
+      "support": "partial",
+      "source_url": "https://cohere.com/north/agent-studio#:~:text=organization%E2%80%99s%20guardrails",
+      "comment": "North supports enterprise guardrails, but not repo-local instruction files. Location: hosted/web/API-managed; no local disk folder documented."
+    },
+    "skills": {
+      "support": "partial",
+      "source_url": "https://cohere.com/north/agent-studio#:~:text=Build%20and%20deploy%20no-code%20agents",
+      "comment": "No-code custom agents and reusable workflows, not code-agent SKILL.md folders. Location: hosted/web/API-managed; no local disk folder documented."
+    },
+    "hooks": {
+      "support": "full",
+      "source_url": "https://cohere.com/north/agent-studio#:~:text=Create%20automations%20tailored%20to%20your%20goals",
+      "comment": "Multi-step workflow automations are a core Agent Studio feature."
+    },
+    "mcp_servers": {
+      "support": "full",
+      "source_url": "https://cohere.com/north/agent-studio#:~:text=MCP%20integration%20and%20agent-to-agent%20coordination",
+      "comment": "Agent Studio explicitly mentions MCP integration. Location: hosted/web/API-managed; no local disk folder documented."
+    },
+    "custom_commands": {
+      "support": "none",
+      "source_url": "https://cohere.com/north/agent-studio#:~:text=Create%20custom%20AI%20agents",
+      "comment": "No coding-agent slash-command surface found. Location: hosted/web/API-managed; no local disk folder documented."
+    },
+    "subagents": {
+      "support": "full",
+      "source_url": "https://cohere.com/north/agent-studio#:~:text=agent-to-agent%20coordination",
+      "comment": "Agent-to-agent coordination is listed as an extensibility feature."
+    },
+    "model_selection": {
+      "support": "partial",
+      "source_url": "https://cohere.com/blog/command-a-plus#:~:text=command-a-plus-05-2026",
+      "comment": "Cohere model stack is selected through North/Cohere platform, not arbitrary coding-agent CLI flags."
+    },
+    "approval_mode": {
+      "support": "partial",
+      "source_url": "https://cohere.com/north/agent-studio#:~:text=operate%20within%20your%20organization%E2%80%99s%20guardrails",
+      "comment": "Enterprise guardrails and human-agent collaboration; no per-shell-command approval model."
+    },
+    "sandbox_mode": {
+      "support": "full",
+      "source_url": "https://cohere.com/north#:~:text=Run%20North%20in%20your%20own%20VPC%2C%20on-prem%20environment",
+      "comment": "Private deployment options include VPC, on-prem, or Cohere Model Vault."
+    },
+    "resume": {
+      "support": "partial",
+      "source_url": "https://cohere.com/blog/command-a-plus#:~:text=Memory%20Usage%20Quality",
+      "comment": "North has memory-oriented agent workflows, but no coding-session resume command."
+    },
+    "continue": {
+      "support": "partial",
+      "source_url": "https://cohere.com/blog/command-a-plus#:~:text=Memory%20Usage%20Quality",
+      "comment": "Memory supports cross-session workflows in North; not a CLI continue feature."
+    },
+    "non_interactive": {
+      "support": "partial",
+      "source_url": "https://cohere.com/north/agent-studio#:~:text=API-based%20workflows",
+      "comment": "API-based workflows can automate tasks, but not local repo headless coding."
+    },
+    "output_format": {
+      "support": "partial",
+      "source_url": "https://docs.cohere.com/v2/reference/about#:~:text=API%20reference",
+      "comment": "Cohere APIs return structured responses; North UI outputs are workflow-specific."
+    },
+    "statusline": {
+      "support": "none",
+      "source_url": "https://cohere.com/north#:~:text=secure%20workspace",
+      "comment": "Enterprise web workspace, no CLI statusline."
+    },
+    "telemetry": {
+      "support": "partial",
+      "source_url": "https://cohere.com/north/agent-studio#:~:text=full%20data%20traceability%20and%20audit-ready%20logs",
+      "comment": "Audit-ready logs and traceability are documented; telemetry opt-out details are not."
+    },
+    "hosted_agent": {
+      "support": "full",
+      "source_url": "https://cohere.com/north#:~:text=Deploy%20AI%20agents%20across%20teams",
+      "comment": "North is an enterprise agent platform/workspace."
+    },
+    "custom_model_provider": {
+      "support": "none",
+      "source_url": "https://cohere.com/blog/command-a-plus#:~:text=Cohere%E2%80%99s%20mission",
+      "comment": "Built around Cohere models/platform deployment, not arbitrary model providers."
+    },
+    "pricing": {
+      "value": "Enterprise/demo-based",
+      "source_url": "https://cohere.com/north#:~:text=Request%20a%20demo",
+      "comment": "North is sold through demo/sales motion."
+    },
+    "notes": "Included because the request mentioned Cohere. This is an enterprise agent platform with coding-capable Command A+ underneath, not a direct Claude Code/Codex-style coding agent.",
+    "transcripts": {
+      "support": "partial",
+      "source_url": "https://cohere.com/north#:~:text=agent",
+      "comment": "Location: hosted/web/API-managed session history; no local transcript directory documented."
     }
   },
   {
@@ -736,11 +928,15 @@
       "values": [
         "IDE",
         "CLI",
-        "Extension",
         "SDK"
       ],
-      "source_url": "https://cursor.com/docs/sdk/typescript#:~:text=SDK",
-      "comment": "VS Code-derived AI IDE with standalone CLI (cursor-agent) and @cursor/sdk (TypeScript/Python) for programmatic local or cloud agents."
+      "source_url": "https://cursor.com/downloads#:~:text=IDE",
+      "comment": "VS Code-derived AI IDE with standalone CLI (cursor-agent) and @cursor/sdk (TypeScript/Python) for programmatic local or cloud agents. Per-form-factor links: IDE: https://cursor.com/downloads; CLI: https://docs.cursor.com/en/cli/installation; SDK: https://cursor.com/docs/sdk/typescript.",
+      "links": {
+        "IDE": "https://cursor.com/downloads",
+        "CLI": "https://docs.cursor.com/en/cli/installation",
+        "SDK": "https://cursor.com/docs/sdk/typescript"
+      }
     },
     "released_in": {
       "value": "2023",
@@ -757,12 +953,12 @@
     "rules": {
       "support": "full",
       "source_url": "https://docs.cursor.com/en/context/rules#:~:text=rules",
-      "comment": "Supports project and user rules."
+      "comment": "Supports project and user rules. Location: `.cursor/rules/*.mdc` in a project; user/global rules are configured in Cursor settings."
     },
     "skills": {
       "support": "full",
       "source_url": "https://docs.cursor.com/en/context/skills#:~:text=skills",
-      "comment": "Supports skills."
+      "comment": "Supports skills. Location: Cursor rules/agents features, not a SKILL.md folder standard in this row."
     },
     "hooks": {
       "support": "unknown",
@@ -772,12 +968,12 @@
     "mcp_servers": {
       "support": "full",
       "source_url": "https://docs.cursor.com/en/context/mcp#:~:text=MCP",
-      "comment": "Supports MCP servers in both IDE and CLI."
+      "comment": "Supports MCP servers in both IDE and CLI. Location: `.cursor/mcp.json` for project MCP servers or user-level Cursor MCP settings."
     },
     "custom_commands": {
       "support": "full",
       "source_url": "https://docs.cursor.com/en/context/rules#:~:text=commands",
-      "comment": "CLI exposes full command controls; IDE has reusable rule/workflow patterns."
+      "comment": "CLI exposes full command controls; IDE has reusable rule/workflow patterns. Location: custom command support is through Cursor features/SDK rather than a repo command folder."
     },
     "subagents": {
       "support": "partial",
@@ -844,6 +1040,11 @@
       "value": "Pro $20, Pro+ $60, Ultra $200/mo",
       "source_url": "https://cursor.com/help/models-and-usage/usage-limits#:~:text=Pro%20Plus",
       "comment": "Individual: Pro $20/mo ($20 API usage), Pro+ $60/mo ($70 API usage), Ultra $200/mo ($400 API usage). Teams $40/user/mo."
+    },
+    "transcripts": {
+      "support": "full",
+      "source_url": "https://docs.cursor.com/en/cli/overview#:~:text=Resume%20previous%20conversations",
+      "comment": "Location: Cursor CLI transcripts live under `~/.cursor/projects/<slug>/agent-transcripts/<agentId>/<agentId>.jsonl`; Cursor IDE composer data is in SQLite `~/Library/Application Support/Cursor/User/globalStorage/state.vscdb`."
     }
   },
   {
@@ -861,8 +1062,14 @@
         "Web",
         "SDK"
       ],
-      "source_url": "https://docs.devin.ai/api-reference/overview#:~:text=API",
-      "comment": "Web app + VS Code extension + CLI + Slack/Teams + REST API and official devin-sdk (Python)."
+      "source_url": "https://docs.devin.ai/work-with-devin/ide-extensions#:~:text=Extension",
+      "comment": "Web app + VS Code extension + CLI + Slack/Teams + REST API and official devin-sdk (Python). Per-form-factor links: Extension: https://docs.devin.ai/work-with-devin/ide-extensions; CLI: https://docs.devin.ai/work-with-devin/devin-cli; Web: https://app.devin.ai/; SDK: https://docs.devin.ai/api-reference/overview.",
+      "links": {
+        "Extension": "https://docs.devin.ai/work-with-devin/ide-extensions",
+        "CLI": "https://docs.devin.ai/work-with-devin/devin-cli",
+        "Web": "https://app.devin.ai/",
+        "SDK": "https://docs.devin.ai/api-reference/overview"
+      }
     },
     "released_in": {
       "value": "Dec '24",
@@ -879,12 +1086,12 @@
     "rules": {
       "support": "full",
       "source_url": "https://docs.devin.ai/onboard-devin/agents-md#:~:text=Devin%20supports%20AGENTS.md%20%2D%20a%20simple%2C%20open%20standard%20for%20providing%20context%20and%20instructions%20to%20AI%20agents",
-      "comment": "AGENTS.md files in repos, Knowledge (persistent org-level instructions with trigger descriptions), Skills & Rules settings."
+      "comment": "AGENTS.md files in repos, Knowledge (persistent org-level instructions with trigger descriptions), Skills & Rules settings. Location: hosted/web/API-managed; no local disk folder documented."
     },
     "skills": {
       "support": "full",
       "source_url": "https://docs.devin.ai/product-guides/skills#:~:text=Skills%20are%20SKILL.md%20files%20you%20commit%20to%20your%20repositories%20that%20teach%20Devin%20reusable%20procedures",
-      "comment": "Full Agent Skills standard support. SKILL.md files in .agents/skills/. Supports YAML frontmatter, dynamic $ARGUMENTS and !command blocks. Also Playbooks system."
+      "comment": "Full Agent Skills standard support. SKILL.md files in .agents/skills/. Supports YAML frontmatter, dynamic $ARGUMENTS and !command blocks. Also Playbooks system. Location: hosted/web/API-managed; no local disk folder documented."
     },
     "hooks": {
       "support": "full",
@@ -894,12 +1101,12 @@
     "mcp_servers": {
       "support": "full",
       "source_url": "https://docs.devin.ai/work-with-devin/mcp#:~:text=MCP%20is%20an%20open%20protocol%20that%20enables%20Devin%20to%20use%20hundreds%20of%20external%20tools%20and%20data%20sources",
-      "comment": "MCP Marketplace with 40+ pre-built integrations. Supports STDIO, SSE, and HTTP transports. Custom MCP server tools for session/playbook/knowledge management."
+      "comment": "MCP Marketplace with 40+ pre-built integrations. Supports STDIO, SSE, and HTTP transports. Custom MCP server tools for session/playbook/knowledge management. Location: hosted/web/API-managed; no local disk folder documented."
     },
     "custom_commands": {
       "support": "full",
       "source_url": "https://docs.devin.ai/work-with-devin/slash-commands#:~:text=Custom%20Slash%20Commands%3AOrganizations%20can%20create%20custom%20slash%20commands%20tailored%20to%20their%20team%27s%20unique%20workflows",
-      "comment": "Built-in slash commands (/plan, /review, /test, /think-hard, /implement) plus org-level custom slash commands. Also @skills:name syntax and macros."
+      "comment": "Built-in slash commands (/plan, /review, /test, /think-hard, /implement) plus org-level custom slash commands. Also @skills:name syntax and macros. Location: hosted/web/API-managed; no local disk folder documented."
     },
     "subagents": {
       "support": "full",
@@ -966,6 +1173,142 @@
       "support": "full",
       "source_url": "https://docs.devin.ai/get-started/devin-intro#:~:text=Devin%20is%20also%20available%20via%20the%20Devin%20API",
       "comment": "Primarily cloud-hosted at app.devin.ai; Devin CLI bridges to cloud agent."
+    },
+    "transcripts": {
+      "support": "partial",
+      "source_url": "https://devin.ai/#:~:text=agent",
+      "comment": "Location: hosted/web/API-managed session history; no local transcript directory documented."
+    }
+  },
+  {
+    "name": "Factory Droid",
+    "links": {
+      "docs": "https://docs.factory.ai/reference/cli-reference",
+      "github": "",
+      "website": "https://factory.ai/",
+      "slug": "factory-droid"
+    },
+    "form_factor": {
+      "values": [
+        "CLI",
+        "Extension",
+        "Web"
+      ],
+      "source_url": "https://docs.factory.ai/reference/cli-reference#:~:text=CLI",
+      "comment": "Droid CLI plus Factory App, IDE integrations, and Droid Computers. Per-form-factor links: CLI: https://docs.factory.ai/reference/cli-reference; Extension: https://docs.factory.ai/cli/integrations/ide-integrations; Web: https://app.factory.ai/.",
+      "links": {
+        "CLI": "https://docs.factory.ai/reference/cli-reference",
+        "Extension": "https://docs.factory.ai/cli/integrations/ide-integrations",
+        "Web": "https://app.factory.ai/"
+      }
+    },
+    "released_in": {
+      "value": "2025",
+      "source_url": "https://docs.factory.ai/reference/cli-reference#:~:text=Droid%20CLI%20Reference",
+      "comment": "Public docs cover current Droid CLI and Factory platform surfaces.",
+      "sort_date": "2025-01-01"
+    },
+    "latest_major_update": {
+      "value": "May '26",
+      "source_url": "https://docs.factory.ai/reference/cli-reference#:~:text=Complete%20reference%20for%20the%20Droid%20CLI",
+      "comment": "Current CLI reference includes plugins, MCP, skills, hooks, worktrees, Droid Exec, and custom droids.",
+      "sort_date": "2026-05-01"
+    },
+    "rules": {
+      "support": "full",
+      "source_url": "https://docs.factory.ai/reference/cli-reference#:~:text=AGENTS.md",
+      "comment": "AGENTS.md appears in Factory configuration docs. Location: `AGENTS.md` and `.factory/` project configuration."
+    },
+    "skills": {
+      "support": "full",
+      "source_url": "https://docs.factory.ai/reference/cli-reference#:~:text=%2Fskills%20%60Manage%20and%20invoke%20skills",
+      "comment": "Skills can be managed and invoked from the CLI. Location: Factory Skills configuration in project/user Factory config; exact folder varies by scope."
+    },
+    "hooks": {
+      "support": "full",
+      "source_url": "https://docs.factory.ai/reference/cli-reference#:~:text=%2Fhooks%20%60Manage%20lifecycle%20hooks",
+      "comment": "Lifecycle hooks are first-class slash-command managed features."
+    },
+    "mcp_servers": {
+      "support": "full",
+      "source_url": "https://docs.factory.ai/reference/cli-reference#:~:text=The%20%60%2Fmcp%60%20slash%20command%20opens%20an%20interactive%20manager",
+      "comment": "Supports stdio and HTTP MCP servers, registry browsing, env vars, and headers. Location: user `~/.factory/mcp.json` and project MCP configuration."
+    },
+    "custom_commands": {
+      "support": "full",
+      "source_url": "https://docs.factory.ai/reference/cli-reference#:~:text=%2Fcommands%20%60Manage%20custom%20slash%20commands",
+      "comment": "Custom slash commands are directly managed in the CLI. Location: Factory custom slash-command configuration in project/user Factory config."
+    },
+    "subagents": {
+      "support": "full",
+      "source_url": "https://docs.factory.ai/reference/cli-reference#:~:text=%2Fdroids%20%60Manage%20custom%20droids",
+      "comment": "Custom Droids are documented as subagents."
+    },
+    "model_selection": {
+      "support": "full",
+      "source_url": "https://docs.factory.ai/reference/cli-reference#:~:text=%60-m%2C%20--model%20%3Cid%3E%60Select%20a%20specific",
+      "comment": "Model IDs can be selected with -m/--model and /model."
+    },
+    "approval_mode": {
+      "support": "full",
+      "source_url": "https://docs.factory.ai/reference/cli-reference#:~:text=%60--auto%20%3Clevel%3E%60Set%20autonomy%20level",
+      "comment": "Tiered autonomy levels control action permissions."
+    },
+    "sandbox_mode": {
+      "support": "full",
+      "source_url": "https://docs.factory.ai/reference/cli-reference#:~:text=%60--skip-permissions-unsafe%60%20removes%20all%20safety%20checks.%20Use%20only%20in%20isolated%20environments",
+      "comment": "Docs include Sandbox Beta and unsafe mode guidance for disposable containers."
+    },
+    "resume": {
+      "support": "full",
+      "source_url": "https://docs.factory.ai/reference/cli-reference#:~:text=%60droid%20--resume%20%5BsessionId%5D%60Resume%20a%20session",
+      "comment": "Resume by session ID or last modified session."
+    },
+    "continue": {
+      "support": "full",
+      "source_url": "https://docs.factory.ai/reference/cli-reference#:~:text=%60droid%20exec%20-s%20%3Cid%3E%20%22query%22%60Resume%20existing%20session",
+      "comment": "Exec can continue an existing session; interactive defaults to the last modified session."
+    },
+    "non_interactive": {
+      "support": "full",
+      "source_url": "https://docs.factory.ai/reference/cli-reference#:~:text=Non-interactive%20(%60droid%20exec%60)%20-%20Single-shot%20execution",
+      "comment": "droid exec is the headless automation mode."
+    },
+    "output_format": {
+      "support": "full",
+      "source_url": "https://docs.factory.ai/reference/cli-reference#:~:text=%60--json%20%60Emit%20results%20as%20JSON",
+      "comment": "Search supports JSON output; API and readiness endpoints expose structured data."
+    },
+    "statusline": {
+      "support": "full",
+      "source_url": "https://docs.factory.ai/reference/cli-reference#:~:text=%2Fstatusline%20%60Configure%20custom%20status%20line",
+      "comment": "Custom status line is documented."
+    },
+    "telemetry": {
+      "support": "unknown",
+      "source_url": "https://docs.factory.ai/reference/cli-reference#:~:text=Analytics%20API",
+      "comment": "Analytics/compliance APIs exist, but no user telemetry opt-out setting found."
+    },
+    "hosted_agent": {
+      "support": "partial",
+      "source_url": "https://docs.factory.ai/reference/cli-reference#:~:text=Factory%20App",
+      "comment": "Factory App and Droid Computers exist; CLI can register machines and run daemon/server flows."
+    },
+    "custom_model_provider": {
+      "support": "full",
+      "source_url": "https://docs.factory.ai/reference/cli-reference#:~:text=For%20custom%20models%2C%20see",
+      "comment": "Bring Your Own Key/custom model path is documented."
+    },
+    "pricing": {
+      "value": "Factory plans; usage details in Factory pricing",
+      "source_url": "https://docs.factory.ai/reference/cli-reference#:~:text=Plans%20%26%20Pricing",
+      "comment": "CLI docs route to Factory plans and pricing."
+    },
+    "notes": "One of the most feature-dense CLI surfaces in this update: autonomy levels, worktrees, custom droids, plugins, MCP, statusline, skills, hooks, and headless exec.",
+    "transcripts": {
+      "support": "partial",
+      "source_url": "https://docs.factory.ai/reference/cli-reference#:~:text=droid%20search",
+      "comment": "Location: local searchable Droid session data is managed by Factory CLI; exact transcript database path is not documented in the CLI reference."
     }
   },
   {
@@ -981,8 +1324,11 @@
       "values": [
         "CLI"
       ],
-      "source_url": "https://google-gemini.github.io/gemini-cli/#:~:text=Gemini%20CLI",
-      "comment": "CLI tool."
+      "source_url": "https://google-gemini.github.io/gemini-cli/docs/cli/#:~:text=CLI",
+      "comment": "CLI tool. Per-form-factor links: CLI: https://google-gemini.github.io/gemini-cli/docs/cli/.",
+      "links": {
+        "CLI": "https://google-gemini.github.io/gemini-cli/docs/cli/"
+      }
     },
     "released_in": {
       "value": "Jun '25",
@@ -999,12 +1345,12 @@
     "rules": {
       "support": "full",
       "source_url": "https://google-gemini.github.io/gemini-cli/docs/cli/configuration.html#:~:text=GEMINI.md",
-      "comment": "Uses GEMINI.md context files."
+      "comment": "Uses GEMINI.md context files. Location: no public disk folder/file location found in docs reviewed."
     },
     "skills": {
       "support": "partial",
       "source_url": "https://google-gemini.github.io/gemini-cli/docs/tools/#:~:text=tools",
-      "comment": "Extensible through tools/extensions rather than the same SKILL.md contract."
+      "comment": "Extensible through tools/extensions rather than the same SKILL.md contract. Location: no public disk folder/file location found in docs reviewed."
     },
     "hooks": {
       "support": "full",
@@ -1014,12 +1360,12 @@
     "mcp_servers": {
       "support": "full",
       "source_url": "https://google-gemini.github.io/gemini-cli/docs/tools/mcp-server.html#:~:text=MCP",
-      "comment": "Supports MCP servers."
+      "comment": "Supports MCP servers. Location: no public disk folder/file location found in docs reviewed."
     },
     "custom_commands": {
       "support": "full",
       "source_url": "https://google-gemini.github.io/gemini-cli/docs/cli/commands.html#:~:text=commands",
-      "comment": "Supports commands."
+      "comment": "Supports commands. Location: no public disk folder/file location found in docs reviewed."
     },
     "subagents": {
       "support": "unknown",
@@ -1086,6 +1432,11 @@
       "support": "none",
       "source_url": "https://google-gemini.github.io/gemini-cli/#:~:text=Gemini%20CLI",
       "comment": "Local CLI tool backed by Google Gemini API."
+    },
+    "transcripts": {
+      "support": "unknown",
+      "source_url": "https://google-gemini.github.io/gemini-cli/#:~:text=session",
+      "comment": "Location: transcript/session disk storage was not found in public docs reviewed."
     }
   },
   {
@@ -1101,10 +1452,18 @@
         "IDE",
         "Extension",
         "CLI",
-        "SDK"
+        "SDK",
+        "Web"
       ],
-      "source_url": "https://docs.github.com/en/copilot/how-tos/copilot-sdk#:~:text=Copilot%20SDK",
-      "comment": "IDE agent mode (VS Code, JetBrains, Xcode, Neovim, Eclipse) + CLI + hosted cloud agent + @github/copilot-sdk (public preview)."
+      "source_url": "https://docs.github.com/en/copilot/using-github-copilot/getting-code-suggestions-in-your-ide#:~:text=IDE",
+      "comment": "IDE agent mode (VS Code, JetBrains, Xcode, Neovim, Eclipse) + CLI + hosted cloud agent + @github/copilot-sdk (public preview). Per-form-factor links: IDE: https://docs.github.com/en/copilot/using-github-copilot/getting-code-suggestions-in-your-ide; Extension: https://marketplace.visualstudio.com/items?itemName=GitHub.copilot; CLI: https://docs.github.com/en/copilot/using-github-copilot/using-github-copilot-in-the-command-line; SDK: https://docs.github.com/en/copilot/how-tos/copilot-sdk; Web: https://github.com/features/copilot.",
+      "links": {
+        "IDE": "https://docs.github.com/en/copilot/using-github-copilot/getting-code-suggestions-in-your-ide",
+        "Extension": "https://marketplace.visualstudio.com/items?itemName=GitHub.copilot",
+        "CLI": "https://docs.github.com/en/copilot/using-github-copilot/using-github-copilot-in-the-command-line",
+        "SDK": "https://docs.github.com/en/copilot/how-tos/copilot-sdk",
+        "Web": "https://github.com/features/copilot"
+      }
     },
     "released_in": {
       "value": "Jun '25",
@@ -1121,12 +1480,12 @@
     "rules": {
       "support": "full",
       "source_url": "https://docs.github.com/en/copilot/concepts/prompting/response-customization#:~:text=Repository-wide%20custom%20instructions%3A%20copilot-instructions.md%20in%20.github",
-      "comment": "Multiple layers: .github/copilot-instructions.md (repo-wide), path-specific .github/instructions/**, AGENTS.md, CLAUDE.md, GEMINI.md, personal instructions, org-level."
+      "comment": "Multiple layers: .github/copilot-instructions.md (repo-wide), path-specific .github/instructions/**, AGENTS.md, CLAUDE.md, GEMINI.md, personal instructions, org-level. Location: no public disk folder/file location found in docs reviewed."
     },
     "skills": {
       "support": "full",
       "source_url": "https://docs.github.com/en/copilot/concepts/agents/about-agent-skills#:~:text=Agent%20skills%20are%20folders%20of%20instructions%2C%20scripts%2C%20and%20resources",
-      "comment": "Open Agent Skills standard. .github/skills, .claude/skills, .agents/skills. Personal skills in ~/.copilot/skills. gh skill CLI for discovery/install."
+      "comment": "Open Agent Skills standard. .github/skills, .claude/skills, .agents/skills. Personal skills in ~/.copilot/skills. gh skill CLI for discovery/install. Location: no public disk folder/file location found in docs reviewed."
     },
     "hooks": {
       "support": "full",
@@ -1136,12 +1495,12 @@
     "mcp_servers": {
       "support": "full",
       "source_url": "https://docs.github.com/en/copilot/how-tos/use-copilot-agents/cloud-agent/extend-cloud-agent-with-mcp#:~:text=Connect%20Copilot%20cloud%20agent%20to%20external%20tools%20and%20data%20sources%20through%20the%20Model%20Context%20Protocol",
-      "comment": "Full MCP in cloud agent, CLI, and IDE. Supports local, stdio, http, sse transports. Built-in GitHub MCP server. Enterprise allowlist controls."
+      "comment": "Full MCP in cloud agent, CLI, and IDE. Supports local, stdio, http, sse transports. Built-in GitHub MCP server. Enterprise allowlist controls. Location: no public disk folder/file location found in docs reviewed."
     },
     "custom_commands": {
       "support": "partial",
       "source_url": "https://docs.github.com/en/copilot/using-github-copilot/copilot-chat/asking-github-copilot-questions-in-your-ide#:~:text=Use%20slash%20commands%20to%20avoid%20writing%20complex%20prompts%20for%20common%20scenarios",
-      "comment": "Built-in slash commands in IDE (/fix, /tests, /explain, /help) and CLI (/delegate, /pr, /resume). Prompt files (*.prompt.md) for reusable snippets. No user-defined custom slash commands."
+      "comment": "Built-in slash commands in IDE (/fix, /tests, /explain, /help) and CLI (/delegate, /pr, /resume). Prompt files (*.prompt.md) for reusable snippets. No user-defined custom slash commands. Location: no public disk folder/file location found in docs reviewed."
     },
     "subagents": {
       "support": "full",
@@ -1208,6 +1567,394 @@
       "support": "full",
       "source_url": "https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent#:~:text=Copilot%20cloud%20agent%20works%20autonomously%20in%20a%20GitHub%20Actions-powered%20environment",
       "comment": "Copilot Cloud Agent runs autonomously in GitHub Actions-powered ephemeral environment."
+    },
+    "transcripts": {
+      "support": "unknown",
+      "source_url": "https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent#:~:text=session",
+      "comment": "Location: transcript/session disk storage was not found in public docs reviewed."
+    }
+  },
+  {
+    "name": "Grok Build",
+    "links": {
+      "docs": "https://x.ai/news/grok-build-cli",
+      "github": "",
+      "website": "https://x.ai/news/grok-build-cli",
+      "slug": "grok-build"
+    },
+    "form_factor": {
+      "values": [
+        "CLI"
+      ],
+      "source_url": "https://x.ai/news/grok-build-cli#:~:text=CLI",
+      "comment": "Terminal-native coding agent and CLI in early beta. Per-form-factor links: CLI: https://x.ai/news/grok-build-cli.",
+      "links": {
+        "CLI": "https://x.ai/news/grok-build-cli"
+      }
+    },
+    "released_in": {
+      "value": "May '26",
+      "source_url": "https://x.ai/news/grok-build-cli#:~:text=May%2025%2C%202026",
+      "comment": "xAI launch announcement for the early beta.",
+      "sort_date": "2026-05-01"
+    },
+    "latest_major_update": {
+      "value": "May '26",
+      "source_url": "https://x.ai/news/grok-build-cli#:~:text=Today%20we%27re%20launching%20an%20early%20beta%20of%20Grok%20Build",
+      "comment": "Initial public beta launch.",
+      "sort_date": "2026-05-01"
+    },
+    "rules": {
+      "support": "full",
+      "source_url": "https://x.ai/news/grok-build-cli#:~:text=Your%20AGENTS.md%2C%20plugins%2C%20hooks%2C%20skills%2C%20and%20MCP%20servers",
+      "comment": "Official launch page says AGENTS.md works out of the box. Location: `AGENTS.md` in repo tree."
+    },
+    "skills": {
+      "support": "full",
+      "source_url": "https://x.ai/news/grok-build-cli#:~:text=Your%20AGENTS.md%2C%20plugins%2C%20hooks%2C%20skills%2C%20and%20MCP%20servers",
+      "comment": "Skills and plugin marketplace are called out in the launch page. Location: plugin/skill folders managed by Grok Build plugin marketplace; exact disk root not yet public."
+    },
+    "hooks": {
+      "support": "full",
+      "source_url": "https://x.ai/news/grok-build-cli#:~:text=Your%20AGENTS.md%2C%20plugins%2C%20hooks%2C%20skills%2C%20and%20MCP%20servers",
+      "comment": "Hooks are explicitly listed as supported."
+    },
+    "mcp_servers": {
+      "support": "full",
+      "source_url": "https://x.ai/news/grok-build-cli#:~:text=Your%20AGENTS.md%2C%20plugins%2C%20hooks%2C%20skills%2C%20and%20MCP%20servers",
+      "comment": "MCP servers work out of the box according to xAI. Location: MCP server configuration picked up from the repo/tooling; exact disk root not yet public."
+    },
+    "custom_commands": {
+      "support": "unknown",
+      "source_url": "https://x.ai/news/grok-build-cli#:~:text=Type%20%60%2Ffeedback%60%20in%20the%20CLI",
+      "comment": "Slash command UX exists, but public docs do not yet show user-defined commands. Location: custom command folder not documented; slash UX exists for built-ins like `/feedback`."
+    },
+    "subagents": {
+      "support": "full",
+      "source_url": "https://x.ai/news/grok-build-cli#:~:text=Subagents%20that%20work%20in%20parallel",
+      "comment": "Delegates larger tasks to specialized parallel subagents, with worktree integration."
+    },
+    "model_selection": {
+      "support": "partial",
+      "source_url": "https://x.ai/news/grok-build-cli#:~:text=Point%20users%20to%20%60config.toml%60%20for%20models%20and%20API%20keys",
+      "comment": "Launch screenshot references config.toml for models and API keys; model catalog details are not yet public."
+    },
+    "approval_mode": {
+      "support": "full",
+      "source_url": "https://x.ai/news/grok-build-cli#:~:text=Plan%2C%20review%2C%20approve",
+      "comment": "Plan mode lets users approve, comment on, or rewrite a plan before execution."
+    },
+    "sandbox_mode": {
+      "support": "partial",
+      "source_url": "https://x.ai/news/grok-build-cli#:~:text=launch%20subagents%20in%20their%20own%20worktrees",
+      "comment": "Worktree isolation is documented for subagents; broader filesystem/network sandbox controls are not yet documented."
+    },
+    "resume": {
+      "support": "unknown",
+      "source_url": "https://x.ai/news/grok-build-cli#:~:text=Start%20Grok%20Build%20in%20your%20repo",
+      "comment": "No public resume/session-id documentation found in the launch page."
+    },
+    "continue": {
+      "support": "unknown",
+      "source_url": "https://x.ai/news/grok-build-cli#:~:text=Start%20Grok%20Build%20in%20your%20repo",
+      "comment": "No public continue-latest command documentation found."
+    },
+    "non_interactive": {
+      "support": "full",
+      "source_url": "https://x.ai/news/grok-build-cli#:~:text=Headless%20mode%20(%60-p%60)%20allows%20easily%20running%20agents%20inside%20scripts%20and%20automations",
+      "comment": "Headless mode is documented as -p."
+    },
+    "output_format": {
+      "support": "unknown",
+      "source_url": "https://x.ai/news/grok-build-cli#:~:text=headless%20mode%20and%20ACP",
+      "comment": "ACP support implies structured protocol integration, but no JSON/stdout output format docs found."
+    },
+    "statusline": {
+      "support": "unknown",
+      "source_url": "https://x.ai/news/grok-build-cli#:~:text=grok-build",
+      "comment": "No user-configurable statusline documentation found."
+    },
+    "telemetry": {
+      "support": "unknown",
+      "source_url": "https://x.ai/news/grok-build-cli#:~:text=%2Ffeedback",
+      "comment": "No user-visible telemetry opt-out setting found in public launch docs."
+    },
+    "hosted_agent": {
+      "support": "none",
+      "source_url": "https://x.ai/news/grok-build-cli#:~:text=runs%20right%20from%20your%20terminal",
+      "comment": "Documented as a terminal CLI, not a managed hosted worker."
+    },
+    "custom_model_provider": {
+      "support": "partial",
+      "source_url": "https://x.ai/news/grok-build-cli#:~:text=config.toml%20for%20models%20and%20API%20keys",
+      "comment": "Config references models and API keys, but arbitrary OpenAI-compatible provider support is not documented."
+    },
+    "pricing": {
+      "value": "Included for SuperGrok and X Premium Plus subscribers during beta",
+      "source_url": "https://x.ai/news/grok-build-cli#:~:text=Available%20now%20to%20all%20SuperGrok%20and%20X%20Premium%20Plus%20subscribers",
+      "comment": "Early beta access is tied to paid xAI/X subscriptions."
+    },
+    "notes": "Early beta. Strong documented parity on AGENTS.md, skills, hooks, MCP, headless mode, ACP, and parallel subagents; lower confidence for session management and telemetry because public docs are still sparse.",
+    "transcripts": {
+      "support": "unknown",
+      "source_url": "https://x.ai/news/grok-build-cli#:~:text=grok-build",
+      "comment": "Location: transcript/session disk storage is not documented in the public beta launch page."
+    }
+  },
+  {
+    "name": "Google Jules",
+    "links": {
+      "docs": "https://jules.google/",
+      "github": "",
+      "website": "https://jules.google/",
+      "slug": "jules"
+    },
+    "form_factor": {
+      "values": [
+        "Web"
+      ],
+      "source_url": "https://jules.google/#:~:text=Web",
+      "comment": "Hosted async coding agent connected to GitHub repositories. Per-form-factor links: Web: https://jules.google/.",
+      "links": {
+        "Web": "https://jules.google/"
+      }
+    },
+    "released_in": {
+      "value": "Aug '25",
+      "source_url": "https://blog.google/technology/google-labs/jules-now-available/#:~:text=now%20available%20for%20everyone",
+      "comment": "General availability after public beta.",
+      "sort_date": "2025-08-01"
+    },
+    "latest_major_update": {
+      "value": "May '26",
+      "source_url": "https://jules.google/#:~:text=Gemini%203%20Pro",
+      "comment": "Current site advertises Gemini 3 Pro access and tiered concurrent task limits.",
+      "sort_date": "2026-05-01"
+    },
+    "rules": {
+      "support": "unknown",
+      "source_url": "https://jules.google/#:~:text=Write%20a%20detailed%20prompt%20for%20Jules",
+      "comment": "No public docs found for persistent repo instruction files. Location: hosted/web/API-managed; no local disk folder documented."
+    },
+    "skills": {
+      "support": "none",
+      "source_url": "https://jules.google/#:~:text=Bug%20Fixing%20Version%20Bump%20Tests%20Fixing",
+      "comment": "No reusable skill/playbook system found. Location: hosted/web/API-managed; no local disk folder documented."
+    },
+    "hooks": {
+      "support": "partial",
+      "source_url": "https://jules.google/#:~:text=Use%20the%20%22jules%22%20label%20in%20an%20issue%20to%20assign%20a%20task",
+      "comment": "GitHub issue label assignment acts as a lightweight trigger."
+    },
+    "mcp_servers": {
+      "support": "unknown",
+      "source_url": "https://jules.google/#:~:text=Cloud%20VM",
+      "comment": "No public MCP server configuration found. Location: hosted/web/API-managed; no local disk folder documented."
+    },
+    "custom_commands": {
+      "support": "none",
+      "source_url": "https://jules.google/#:~:text=Write%20a%20detailed%20prompt%20for%20Jules",
+      "comment": "Prompt and issue assignment workflow, not user-defined slash commands. Location: hosted/web/API-managed; no local disk folder documented."
+    },
+    "subagents": {
+      "support": "partial",
+      "source_url": "https://jules.google/#:~:text=fully%20async%2C%20multi-agent%20development",
+      "comment": "Plan tiers advertise multi-agent development and high concurrent task counts."
+    },
+    "model_selection": {
+      "support": "partial",
+      "source_url": "https://jules.google/#:~:text=Higher%20access%20to%20the%20latest%20models%2C%20starting%20with%20Gemini%203%20Pro",
+      "comment": "Tier-dependent model access; not arbitrary model selection."
+    },
+    "approval_mode": {
+      "support": "full",
+      "source_url": "https://jules.google/#:~:text=Quickly%20browse%20and%20approve%20code%20edits",
+      "comment": "User reviews plan/diff and approves changes/PR."
+    },
+    "sandbox_mode": {
+      "support": "full",
+      "source_url": "https://jules.google/#:~:text=clones%20it%20to%20a%20Cloud%20VM",
+      "comment": "Work happens in a Cloud VM clone."
+    },
+    "resume": {
+      "support": "partial",
+      "source_url": "https://jules.google/#:~:text=Jules%20creates%20a%20PR%20of%20the%20changes",
+      "comment": "Async task history exists in the hosted product, but no explicit session resume docs found."
+    },
+    "continue": {
+      "support": "partial",
+      "source_url": "https://jules.google/#:~:text=fully%20async",
+      "comment": "Designed for async continuation in hosted tasks; no CLI continue command."
+    },
+    "non_interactive": {
+      "support": "partial",
+      "source_url": "https://jules.google/#:~:text=Use%20the%20%22jules%22%20label%20in%20an%20issue%20to%20assign%20a%20task",
+      "comment": "Can be triggered from GitHub issues, but not a general local headless CLI."
+    },
+    "output_format": {
+      "support": "partial",
+      "source_url": "https://jules.google/#:~:text=provides%20a%20diff%20of%20the%20changes",
+      "comment": "Outputs plans, diffs, and PRs; no general machine-readable format found."
+    },
+    "statusline": {
+      "support": "none",
+      "source_url": "https://jules.google/#:~:text=fully%20async",
+      "comment": "Hosted UI, no CLI statusline."
+    },
+    "telemetry": {
+      "support": "unknown",
+      "source_url": "https://jules.google/#:~:text=Privacy%20Policy",
+      "comment": "No product-specific telemetry toggle found."
+    },
+    "hosted_agent": {
+      "support": "full",
+      "source_url": "https://jules.google/#:~:text=clones%20it%20to%20a%20Cloud%20VM",
+      "comment": "Hosted async agent running in Google-managed Cloud VMs."
+    },
+    "custom_model_provider": {
+      "support": "none",
+      "source_url": "https://jules.google/#:~:text=Powered%20by%20Gemini%202.5%20Pro",
+      "comment": "Uses Gemini models; BYO provider not documented."
+    },
+    "pricing": {
+      "value": "Free 15 tasks/day; Pro 100 tasks/day; Ultra 300 tasks/day",
+      "source_url": "https://jules.google/#:~:text=15%20tasks%20per%20day",
+      "comment": "Site lists daily task and concurrency limits by tier."
+    },
+    "notes": "Best categorized as an async hosted coding worker rather than a terminal pair-programmer. Strong on GitHub PR flow, approvals, Cloud VM isolation, and concurrency.",
+    "transcripts": {
+      "support": "partial",
+      "source_url": "https://jules.google/#:~:text=agent",
+      "comment": "Location: hosted/web/API-managed session history; no local transcript directory documented."
+    }
+  },
+  {
+    "name": "JetBrains Junie",
+    "links": {
+      "docs": "https://www.jetbrains.com/help/ai-assistant/junie-agent.html",
+      "github": "",
+      "website": "https://junie.jetbrains.com/",
+      "slug": "junie"
+    },
+    "form_factor": {
+      "values": [
+        "IDE",
+        "CLI"
+      ],
+      "source_url": "https://www.jetbrains.com/help/ai-assistant/junie-agent.html#:~:text=IDE",
+      "comment": "JetBrains IDE agent with Junie CLI documentation. Per-form-factor links: IDE: https://www.jetbrains.com/help/ai-assistant/junie-agent.html; CLI: https://www.jetbrains.com/help/ai-assistant/junie-cli.html.",
+      "links": {
+        "IDE": "https://www.jetbrains.com/help/ai-assistant/junie-agent.html",
+        "CLI": "https://www.jetbrains.com/help/ai-assistant/junie-cli.html"
+      }
+    },
+    "released_in": {
+      "value": "Jan '25",
+      "source_url": "https://blog.jetbrains.com/junie/2025/01/meet-junie-your-coding-agent-by-jetbrains/#:~:text=Meet%20Junie",
+      "comment": "Introduced by JetBrains as a coding agent in early 2025.",
+      "sort_date": "2025-01-01"
+    },
+    "latest_major_update": {
+      "value": "May '26",
+      "source_url": "https://junie.jetbrains.com/#:~:text=starts%20a%20real%20debugger",
+      "comment": "Current product page emphasizes debugger-backed agent behavior.",
+      "sort_date": "2026-05-01"
+    },
+    "rules": {
+      "support": "partial",
+      "source_url": "https://www.jetbrains.com/help/ai-assistant/junie-agent.html#:~:text=guidelines",
+      "comment": "JetBrains documents project guidance for Junie, but not AGENTS.md-compatible rules. Location: no public disk folder/file location found in docs reviewed."
+    },
+    "skills": {
+      "support": "unknown",
+      "source_url": "https://www.jetbrains.com/help/ai-assistant/junie-agent.html#:~:text=plan%20and%20execute",
+      "comment": "No reusable skill folder standard found. Location: no public disk folder/file location found in docs reviewed."
+    },
+    "hooks": {
+      "support": "none",
+      "source_url": "https://www.jetbrains.com/help/ai-assistant/junie-agent.html#:~:text=autonomously%20plan%20and%20execute",
+      "comment": "No lifecycle hook system found."
+    },
+    "mcp_servers": {
+      "support": "unknown",
+      "source_url": "https://www.jetbrains.com/help/ai-assistant/junie-agent.html#:~:text=Junie",
+      "comment": "No Junie-specific MCP configuration found in public docs reviewed. Location: no public disk folder/file location found in docs reviewed."
+    },
+    "custom_commands": {
+      "support": "unknown",
+      "source_url": "https://www.jetbrains.com/help/ai-assistant/junie-agent.html#:~:text=prompt",
+      "comment": "No custom slash-command system found. Location: no public disk folder/file location found in docs reviewed."
+    },
+    "subagents": {
+      "support": "unknown",
+      "source_url": "https://www.jetbrains.com/help/ai-assistant/junie-agent.html#:~:text=multi-step",
+      "comment": "No first-class subagent docs found."
+    },
+    "model_selection": {
+      "support": "partial",
+      "source_url": "https://www.jetbrains.com/help/ide-services-cloud/manage-aie.html#:~:text=OpenAI%20and%20Amazon%20Bedrock",
+      "comment": "Enterprise docs mention JetBrains AI service plus selected OpenAI/Bedrock models."
+    },
+    "approval_mode": {
+      "support": "full",
+      "source_url": "https://junie.jetbrains.com/#:~:text=Modes%3A%20autonomous%20%2F%20user-assisted%20%2F%20semi-auto",
+      "comment": "Product page lists autonomous, user-assisted, and semi-auto modes."
+    },
+    "sandbox_mode": {
+      "support": "partial",
+      "source_url": "https://www.jetbrains.com/help/ai-assistant/junie-agent.html#:~:text=supported%20JetBrains",
+      "comment": "Runs inside JetBrains IDE context; no explicit standalone sandbox controls found."
+    },
+    "resume": {
+      "support": "partial",
+      "source_url": "https://www.jetbrains.com/help/ai-assistant/junie-agent.html#:~:text=reports%20progress",
+      "comment": "IDE tasks have progress/history, but explicit session resume docs are limited."
+    },
+    "continue": {
+      "support": "partial",
+      "source_url": "https://www.jetbrains.com/help/ai-assistant/junie-agent.html#:~:text=reports%20progress",
+      "comment": "Interactive IDE task continuation is available; no CLI continue command confirmed."
+    },
+    "non_interactive": {
+      "support": "unknown",
+      "source_url": "https://www.jetbrains.com/help/ai-assistant/junie-agent.html#:~:text=Junie%20CLI",
+      "comment": "CLI exists, but no verified headless automation flag in docs reviewed."
+    },
+    "output_format": {
+      "support": "unknown",
+      "source_url": "https://www.jetbrains.com/help/ai-assistant/junie-agent.html#:~:text=Junie",
+      "comment": "No machine-readable output mode found."
+    },
+    "statusline": {
+      "support": "none",
+      "source_url": "https://www.jetbrains.com/help/ai-assistant/junie-agent.html#:~:text=JetBrains",
+      "comment": "IDE UI, no custom CLI statusline found."
+    },
+    "telemetry": {
+      "support": "unknown",
+      "source_url": "https://www.jetbrains.com/help/ai-assistant/junie-agent.html#:~:text=JetBrains",
+      "comment": "No Junie-specific telemetry toggle found in docs reviewed."
+    },
+    "hosted_agent": {
+      "support": "none",
+      "source_url": "https://www.jetbrains.com/help/ai-assistant/junie-agent.html#:~:text=supported%20JetBrains%20IntelliJ%20IDEA-based%20IDEs",
+      "comment": "Primarily an IDE agent rather than a managed cloud worker."
+    },
+    "custom_model_provider": {
+      "support": "partial",
+      "source_url": "https://www.jetbrains.com/help/ide-services-cloud/manage-aie.html#:~:text=OpenAI%20and%20Amazon%20Bedrock",
+      "comment": "Enterprise service supports selected provider/model options, not arbitrary endpoints."
+    },
+    "pricing": {
+      "value": "Bundled with JetBrains AI tiers/free credits",
+      "source_url": "https://blog.jetbrains.com/blog/2025/04/16/jetbrains-ides-go-ai/#:~:text=AI%20Free%20tier",
+      "comment": "Junie is included in JetBrains AI subscription/free-tier credit model."
+    },
+    "notes": "Strong fit for JetBrains users, especially debugger-aware workflows. Public docs expose less extensibility detail than CLI-first agents.",
+    "transcripts": {
+      "support": "unknown",
+      "source_url": "https://www.jetbrains.com/help/ai-assistant/junie-agent.html#:~:text=session",
+      "comment": "Location: transcript/session disk storage was not found in public docs reviewed."
     }
   },
   {
@@ -1221,34 +1968,36 @@
     "form_factor": {
       "values": [
         "CLI",
-        "IDE",
-        "Extension",
-        "SDK"
+        "Extension"
       ],
-      "source_url": "https://opencode.ai/docs/sdk/#:~:text=SDK",
-      "comment": "VS Code extension, JetBrains plugin, CLI, Cloud Agents. OpenCode fork; programmatic control via @opencode-ai/sdk against the Kilo/OpenCode server."
+      "source_url": "https://kilo.ai/docs/code-with-ai/platforms/cli#:~:text=CLI",
+      "comment": "VS Code extension, JetBrains plugin, CLI, Cloud Agents. OpenCode fork; programmatic control via @opencode-ai/sdk against the Kilo/OpenCode server. Per-form-factor links: CLI: https://kilo.ai/docs/code-with-ai/platforms/cli; Extension: https://kilo.ai/docs/code-with-ai/platforms/vscode.",
+      "links": {
+        "CLI": "https://kilo.ai/docs/code-with-ai/platforms/cli",
+        "Extension": "https://kilo.ai/docs/code-with-ai/platforms/vscode"
+      }
     },
     "released_in": {
       "value": "Feb '26",
       "source_url": "https://github.com/Kilo-Org/kilocode#:~:text=Created%3A%202025-03-10T15%3A34%3A26Z",
       "comment": "Repository created 2025-03-10. First stable public release effectively Feb 2026 (v1.0.25). v7 rewrite announced May 2026.",
-      "sort_date": "2026-02-23"
+      "sort_date": "2026-02-01"
     },
     "latest_major_update": {
       "value": "May '26",
       "source_url": "https://github.com/Kilo-Org/kilocode/releases#:~:text=v7.2.52",
       "comment": "Latest release: v7.2.52 (2026-05-11). v7.x series started with v7.0.26 (2026-02-23). 98+ releases total.",
-      "sort_date": "2026-05-25"
+      "sort_date": "2026-05-01"
     },
     "rules": {
       "support": "full",
       "source_url": "https://kilo.ai/docs/customize/custom-rules#:~:text=Custom%20rules%20allow%20you%20to%20create%20text-based%20instructions%20that%20all%20AI%20models%20will%20follow",
-      "comment": "Full support: Project Rules (via instructions key in kilo.jsonc), Global Rules (same in ~/.config/kilo/kilo.jsonc), AGENTS.md, CLAUDE.md, CONTEXT.md."
+      "comment": "Full support: Project Rules (via instructions key in kilo.jsonc), Global Rules (same in ~/.config/kilo/kilo.jsonc), AGENTS.md, CLAUDE.md, CONTEXT.md. Location: no public disk folder/file location found in docs reviewed."
     },
     "skills": {
       "support": "full",
       "source_url": "https://kilo.ai/docs/customize/skills#:~:text=Agent%20Skills%20package%20domain%20expertise%2C%20new%20capabilities%2C%20and%20repeatable%20workflows%20that%20agents%20can%20use",
-      "comment": "Full Agent Skills standard. SKILL.md files with YAML frontmatter. Global ~/.kilo/skills/, project .kilo/skills/. Compat with .claude/skills/, .agents/skills/."
+      "comment": "Full Agent Skills standard. SKILL.md files with YAML frontmatter. Global ~/.kilo/skills/, project .kilo/skills/. Compat with .claude/skills/, .agents/skills/. Location: no public disk folder/file location found in docs reviewed."
     },
     "hooks": {
       "support": "full",
@@ -1258,12 +2007,12 @@
     "mcp_servers": {
       "support": "full",
       "source_url": "https://kilo.ai/docs/automate/mcp/using-in-kilo-code#:~:text=Model%20Context%20Protocol%20(MCP)%20extends%20Kilo%20Code%27s%20capabilities%20by%20connecting%20to%20external%20tools%20and%20services",
-      "comment": "Full MCP support. Local (STDIO) and remote (HTTP Streamable) transports. OAuth 2.0. Tool permissions via allow/ask/deny. Built-in Playwright MCP."
+      "comment": "Full MCP support. Local (STDIO) and remote (HTTP Streamable) transports. OAuth 2.0. Tool permissions via allow/ask/deny. Built-in Playwright MCP. Location: no public disk folder/file location found in docs reviewed."
     },
     "custom_commands": {
       "support": "full",
       "source_url": "https://kilo.ai/docs/customize/workflows#:~:text=Workflows%20(also%20called%20slash%20commands%20in%20the%20new%20extension)%20automate%20repetitive%20tasks%20by%20defining%20step-by-step%20instructions",
-      "comment": "Full support via Workflows (slash commands). Markdown files in ~/.config/kilo/commands/ or .kilo/commands/. YAML frontmatter with description, agent, model."
+      "comment": "Full support via Workflows (slash commands). Markdown files in ~/.config/kilo/commands/ or .kilo/commands/. YAML frontmatter with description, agent, model. Location: no public disk folder/file location found in docs reviewed."
     },
     "subagents": {
       "support": "full",
@@ -1330,6 +2079,11 @@
       "support": "partial",
       "source_url": "https://kilo.ai/#:~:text=Kilo%3A%20The%20Open%20Source%20AI%20Coding%20Agent%20for%20VS%20Code%2C%20JetBrains%2C%20and%20your%20CLI",
       "comment": "Cloud Agents feature allows web-based sessions; primary use is local via extension/CLI."
+    },
+    "transcripts": {
+      "support": "unknown",
+      "source_url": "https://kilo.ai/docs/getting-started#:~:text=session",
+      "comment": "Location: transcript/session disk storage was not found in public docs reviewed."
     }
   },
   {
@@ -1346,30 +2100,35 @@
         "Extension",
         "SDK"
       ],
-      "source_url": "https://github.com/MoonshotAI/kimi-agent-sdk#:~:text=SDK",
-      "comment": "CLI + VS Code + Zed + JetBrains via ACP, plus @moonshot-ai/kimi-agent-sdk (Node/Go/Python)."
+      "source_url": "https://github.com/MoonshotAI/kimi-cli#:~:text=CLI",
+      "comment": "CLI + VS Code + Zed + JetBrains via ACP, plus @moonshot-ai/kimi-agent-sdk (Node/Go/Python). Per-form-factor links: CLI: https://github.com/MoonshotAI/kimi-cli; Extension: https://www.kimi.com/help/kimi-code/vscode-getting-started; SDK: https://github.com/MoonshotAI/kimi-agent-sdk.",
+      "links": {
+        "CLI": "https://github.com/MoonshotAI/kimi-cli",
+        "Extension": "https://www.kimi.com/help/kimi-code/vscode-getting-started",
+        "SDK": "https://github.com/MoonshotAI/kimi-agent-sdk"
+      }
     },
     "released_in": {
       "value": "Oct '25",
       "source_url": "https://github.com/MoonshotAI/kimi-cli/releases#:~:text=0.34",
       "comment": "First public release v0.34 on 2025-10-21. Reached v1.0 on 2026-01-27. Latest: v1.44.0 (2026-05-14).",
-      "sort_date": "2025-10-21"
+      "sort_date": "2025-10-01"
     },
     "latest_major_update": {
       "value": "May '26",
       "source_url": "https://github.com/MoonshotAI/kimi-cli/releases/tag/1.44.0#:~:text=1.44.0",
       "comment": "v1.44.0 (2026-05-14). Very active development: 97 releases in ~7 months. Rapid iteration pace.",
-      "sort_date": "2026-05-13"
+      "sort_date": "2026-05-01"
     },
     "rules": {
       "support": "full",
       "source_url": "https://www.kimi.com/code/docs/en/kimi-code-cli/core-operations.html#:~:text=AGENTS.md",
-      "comment": "Full AGENTS.md support. Hierarchical loading from git root to working dir, including .kimi/AGENTS.md at each level (32 KiB budget). /init command auto-generates AGENTS.md."
+      "comment": "Full AGENTS.md support. Hierarchical loading from git root to working dir, including .kimi/AGENTS.md at each level (32 KiB budget). /init command auto-generates AGENTS.md. Location: no public disk folder/file location found in docs reviewed."
     },
     "skills": {
       "support": "full",
       "source_url": "https://www.kimi.com/code/docs/en/kimi-code-cli/customization/skills.html#:~:text=Agent%20Skills",
-      "comment": "Full Agent Skills format (SKILL.md with YAML frontmatter). Four-tier auto-discovery. Cross-compatible with Claude/Codex skill dirs. Flow skills with Mermaid/D2 flowcharts."
+      "comment": "Full Agent Skills format (SKILL.md with YAML frontmatter). Four-tier auto-discovery. Cross-compatible with Claude/Codex skill dirs. Flow skills with Mermaid/D2 flowcharts. Location: no public disk folder/file location found in docs reviewed."
     },
     "hooks": {
       "support": "partial",
@@ -1379,12 +2138,12 @@
     "mcp_servers": {
       "support": "full",
       "source_url": "https://www.kimi.com/code/docs/en/kimi-code-cli/customization/mcp.html#:~:text=MCP",
-      "comment": "Full MCP support. Transport: streamable HTTP, stdio, OAuth. kimi mcp add/list/test/remove/auth commands. Config in ~/.kimi/mcp.json."
+      "comment": "Full MCP support. Transport: streamable HTTP, stdio, OAuth. kimi mcp add/list/test/remove/auth commands. Config in ~/.kimi/mcp.json. Location: no public disk folder/file location found in docs reviewed."
     },
     "custom_commands": {
       "support": "partial",
       "source_url": "https://www.kimi.com/code/docs/en/kimi-code-cli/customization/plugins.html#:~:text=Plugins",
-      "comment": "Custom plugins (Beta) via plugin.json with executable scripts. Slash commands (/skill:, /flow:) serve as custom invocation. No arbitrary custom aliases in config."
+      "comment": "Custom plugins (Beta) via plugin.json with executable scripts. Slash commands (/skill:, /flow:) serve as custom invocation. No arbitrary custom aliases in config. Location: no public disk folder/file location found in docs reviewed."
     },
     "subagents": {
       "support": "full",
@@ -1451,6 +2210,142 @@
       "support": "none",
       "source_url": "https://www.kimi.com/code/docs/en/kimi-code-cli/getting-started.html#:~:text=Kimi%20Code%20CLI%20is%20an%20AI%20agent%20that%20runs%20in%20the%20terminal",
       "comment": "Local CLI tool backed by Moonshot API."
+    },
+    "transcripts": {
+      "support": "unknown",
+      "source_url": "https://www.kimi.com/code/docs/en/kimi-code-cli/getting-started.html#:~:text=session",
+      "comment": "Location: transcript/session disk storage was not found in public docs reviewed."
+    }
+  },
+  {
+    "name": "Kiro",
+    "links": {
+      "docs": "https://kiro.dev/docs/",
+      "github": "",
+      "website": "https://kiro.dev/",
+      "slug": "kiro"
+    },
+    "form_factor": {
+      "values": [
+        "CLI",
+        "IDE",
+        "Web"
+      ],
+      "source_url": "https://kiro.dev/cli/#:~:text=CLI",
+      "comment": "Kiro spans IDE, CLI, Web, ACP-compatible IDE use, and automation. Per-form-factor links: CLI: https://kiro.dev/cli/; IDE: https://kiro.dev/downloads/; Web: https://app.kiro.dev/.",
+      "links": {
+        "CLI": "https://kiro.dev/cli/",
+        "IDE": "https://kiro.dev/downloads/",
+        "Web": "https://app.kiro.dev/"
+      }
+    },
+    "released_in": {
+      "value": "Jul '25",
+      "source_url": "https://kiro.dev/cli/#:~:text=Kiro%20IDE%20and%20Kiro%20CLI",
+      "comment": "Kiro entered public preview in 2025; CLI docs are now first-class.",
+      "sort_date": "2025-07-01"
+    },
+    "latest_major_update": {
+      "value": "May '26",
+      "source_url": "https://kiro.dev/docs/powers/create/#:~:text=POWER.md",
+      "comment": "Current docs include Powers, CLI hooks, custom agents, and ACP workflows.",
+      "sort_date": "2026-05-01"
+    },
+    "rules": {
+      "support": "full",
+      "source_url": "https://kiro.dev/cli/#:~:text=agent%20steering",
+      "comment": "Steering files provide project/team instructions. Location: `.kiro/steering/` project steering files and global steering settings."
+    },
+    "skills": {
+      "support": "full",
+      "source_url": "https://kiro.dev/cli/#:~:text=agent%20skills",
+      "comment": "Kiro CLI references agent skills and Powers. Location: Kiro Powers use `POWER.md`; agent skills/knowledge are managed in Kiro project configuration."
+    },
+    "hooks": {
+      "support": "full",
+      "source_url": "https://kiro.dev/cli/#:~:text=Smart%20Hooks",
+      "comment": "Smart hooks are documented as core CLI features."
+    },
+    "mcp_servers": {
+      "support": "full",
+      "source_url": "https://kiro.dev/cli/#:~:text=native%20MCP%20support",
+      "comment": "Native MCP support in IDE and CLI. Location: `.kiro/mcp.json` / Kiro MCP configuration."
+    },
+    "custom_commands": {
+      "support": "full",
+      "source_url": "https://kiro.dev/cli/#:~:text=commands%20start%20with%20a%20forward%20slash",
+      "comment": "CLI has slash commands and prompt/custom-agent workflows. Location: CLI slash commands are built in; custom agents/prompts are managed in Kiro custom-agent configuration."
+    },
+    "subagents": {
+      "support": "full",
+      "source_url": "https://kiro.dev/docs/chat/subagents/#:~:text=Kiro%20has%20two%20built-in%20subagents",
+      "comment": "Built-in subagents for context gathering and parallel general-purpose tasks."
+    },
+    "model_selection": {
+      "support": "full",
+      "source_url": "https://kiro.dev/cli/#:~:text=%2Fmodel%60%20%7CDisplays%20available%20models%20and%20allows%20you%20to%20select",
+      "comment": "CLI /model displays and selects available models."
+    },
+    "approval_mode": {
+      "support": "full",
+      "source_url": "https://kiro.dev/cli/#:~:text=pre-defined%20tool%20permissions",
+      "comment": "Custom agents can use predefined tool permissions and approved plans."
+    },
+    "sandbox_mode": {
+      "support": "partial",
+      "source_url": "https://kiro.dev/cli/#:~:text=tool%20permissions",
+      "comment": "Permissioning is documented; explicit local filesystem/network sandbox modes are not clear."
+    },
+    "resume": {
+      "support": "full",
+      "source_url": "https://kiro.dev/cli/#:~:text=conversation%20persistence",
+      "comment": "Directory-based conversation persistence and /save /load."
+    },
+    "continue": {
+      "support": "full",
+      "source_url": "https://kiro.dev/cli/#:~:text=automatically%20by%20preserving%20project-specific%20conversation%20history",
+      "comment": "kiro chat preserves project conversation history for continuing work."
+    },
+    "non_interactive": {
+      "support": "full",
+      "source_url": "https://kiro.dev/cli/#:~:text=kiro%20--print",
+      "comment": "Headless --print examples are documented for CI/CD automation."
+    },
+    "output_format": {
+      "support": "partial",
+      "source_url": "https://kiro.dev/cli/#:~:text=%2Fsave%60%20%7CExport%20conversation%20state%20to%20a%20JSON%20file",
+      "comment": "Can export conversation state to JSON; no broad JSON stream mode found."
+    },
+    "statusline": {
+      "support": "unknown",
+      "source_url": "https://kiro.dev/cli/#:~:text=command-line%20environment",
+      "comment": "No user-configurable statusline docs found."
+    },
+    "telemetry": {
+      "support": "unknown",
+      "source_url": "https://kiro.dev/cli/#:~:text=standard%20proprietary%20license",
+      "comment": "No telemetry control found in the docs reviewed."
+    },
+    "hosted_agent": {
+      "support": "partial",
+      "source_url": "https://kiro.dev/cli/#:~:text=Kiro%20IDE%2C%20Kiro%20CLI%2C%20Kiro%20Web",
+      "comment": "Kiro Web exists, but the public CLI docs emphasize local terminal operation."
+    },
+    "custom_model_provider": {
+      "support": "none",
+      "source_url": "https://kiro.dev/cli/#:~:text=Claude%20frontier%20models",
+      "comment": "Docs describe Kiro's model set/Auto agent, not arbitrary model providers."
+    },
+    "pricing": {
+      "value": "Included in Kiro pricing tiers",
+      "source_url": "https://kiro.dev/cli/#:~:text=No.%20Kiro%20CLI%20pricing%20is%20included%20in%20the%20standard%20Kiro%20pricing%20tiers",
+      "comment": "CLI and IDE share Kiro subscription pricing."
+    },
+    "notes": "Spec/steering-first agentic IDE plus CLI. Particularly strong on steering, hooks, custom agents, ACP-compatible IDEs, and CI automation.",
+    "transcripts": {
+      "support": "partial",
+      "source_url": "https://kiro.dev/cli/#:~:text=conversation%20persistence",
+      "comment": "Location: Kiro CLI uses directory-based conversation persistence; exact transcript directory is not specified in the public docs reviewed."
     }
   },
   {
@@ -1464,32 +2359,38 @@
     "form_factor": {
       "values": [
         "CLI",
+        "Extension",
         "SDK"
       ],
-      "source_url": "https://opencode.ai/docs/sdk/#:~:text=SDK",
-      "comment": "Terminal UI and CLI plus @opencode-ai/sdk for programmatic server/session control."
+      "source_url": "https://opencode.ai/docs/#:~:text=CLI",
+      "comment": "Terminal UI and CLI plus @opencode-ai/sdk for programmatic server/session control. Per-form-factor links: CLI: https://opencode.ai/docs/; Extension: https://opencode.ai/docs/ide/; SDK: https://opencode.ai/docs/sdk/.",
+      "links": {
+        "CLI": "https://opencode.ai/docs/",
+        "Extension": "https://opencode.ai/docs/ide/",
+        "SDK": "https://opencode.ai/docs/sdk/"
+      }
     },
     "released_in": {
       "value": "2025",
       "source_url": "https://github.com/sst/opencode#:~:text=opencode",
       "comment": "Exact public launch month not confirmed in public docs captured for this dataset.",
-      "sort_date": "2025-05-14"
+      "sort_date": "2025-01-01"
     },
     "latest_major_update": {
       "value": "May '26",
       "source_url": "https://opencode.ai/docs/#:~:text=opencode",
       "comment": "Current docs capture config, agents, MCP, and providers.",
-      "sort_date": "2026-05-25"
+      "sort_date": "2026-05-01"
     },
     "rules": {
       "support": "full",
       "source_url": "https://opencode.ai/docs/config/#:~:text=instructions",
-      "comment": "Supports instruction/config files."
+      "comment": "Supports instruction/config files. Location: `AGENTS.md` and opencode config files in the repo/user config scope."
     },
     "skills": {
       "support": "full",
       "source_url": "https://opencode.ai/docs/skills/#:~:text=skills",
-      "comment": "Supports skills."
+      "comment": "Supports skills. Location: opencode Agent Skills are stored as skill folders with `SKILL.md` according to the configured scope."
     },
     "hooks": {
       "support": "full",
@@ -1499,12 +2400,12 @@
     "mcp_servers": {
       "support": "full",
       "source_url": "https://opencode.ai/docs/mcp-servers/#:~:text=MCP",
-      "comment": "Supports MCP servers."
+      "comment": "Supports MCP servers. Location: `opencode.json` / opencode config MCP server entries."
     },
     "custom_commands": {
       "support": "full",
       "source_url": "https://opencode.ai/docs/commands/#:~:text=commands",
-      "comment": "Supports commands."
+      "comment": "Supports commands. Location: opencode custom commands are configured under opencode command/config files, not shell aliases."
     },
     "subagents": {
       "support": "full",
@@ -1571,6 +2472,11 @@
       "support": "none",
       "source_url": "https://opencode.ai/docs/#:~:text=terminal",
       "comment": "Runs entirely locally."
+    },
+    "transcripts": {
+      "support": "full",
+      "source_url": "https://opencode.ai/docs/share/#:~:text=session",
+      "comment": "Location: OpenCode stores sessions/messages in SQLite `~/.local/share/opencode/opencode.db`; legacy storage uses `~/.local/share/opencode/storage/session|message|part/`."
     }
   },
   {
@@ -1587,30 +2493,35 @@
         "Extension",
         "SDK"
       ],
-      "source_url": "https://qwenlm-qwen-code.mintlify.app/sdk/quick-start#:~:text=SDK",
-      "comment": "CLI + VS Code + Zed + JetBrains via ACP, plus @qwen-code/sdk (TypeScript) and Python SDK."
+      "source_url": "https://qwenlm.github.io/qwen-code-docs/getting-started/#:~:text=CLI",
+      "comment": "CLI + VS Code + Zed + JetBrains via ACP, plus @qwen-code/sdk (TypeScript) and Python SDK. Per-form-factor links: CLI: https://qwenlm.github.io/qwen-code-docs/getting-started/; Extension: https://qwenlm.github.io/qwen-code-docs/en/users/extension/introduction/; SDK: https://qwenlm-qwen-code.mintlify.app/sdk/quick-start.",
+      "links": {
+        "CLI": "https://qwenlm.github.io/qwen-code-docs/getting-started/",
+        "Extension": "https://qwenlm.github.io/qwen-code-docs/en/users/extension/introduction/",
+        "SDK": "https://qwenlm-qwen-code.mintlify.app/sdk/quick-start"
+      }
     },
     "released_in": {
       "value": "Jun '25",
       "source_url": "https://github.com/QwenLM/qwen-code#:~:text=Release%20v0.16.0%20Latest",
       "comment": "GitHub repo created 2025-06-26. Earliest releases (v0.0.5+) shortly after. Currently at v0.16.0 (2026-05-21).",
-      "sort_date": "2025-08-01"
+      "sort_date": "2025-06-01"
     },
     "latest_major_update": {
       "value": "May '26",
       "source_url": "https://github.com/QwenLM/qwen-code#:~:text=Release%20v0.16.0%20Latest",
       "comment": "Latest release v0.16.0 (May 21, 2026). 453 releases, 5,944 commits as of May 2026.",
-      "sort_date": "2026-05-25"
+      "sort_date": "2026-05-01"
     },
     "rules": {
       "support": "full",
       "source_url": "https://qwenlm.github.io/qwen-code-docs/en/users/configuration/settings/#:~:text=Context%20Files%20(Hierarchical%20Instructional%20Context)",
-      "comment": "Hierarchical context files (QWEN.md) at project/user levels. Custom system prompts via --system-prompt and --append-system-prompt. Layered config across system/user/project/env/cli."
+      "comment": "Hierarchical context files (QWEN.md) at project/user levels. Custom system prompts via --system-prompt and --append-system-prompt. Layered config across system/user/project/env/cli. Location: Qwen Code project/user instruction files and extension packages; commonly `AGENTS.md`-style repo context plus Qwen config."
     },
     "skills": {
       "support": "full",
       "source_url": "https://qwenlm.github.io/qwen-code-docs/en/users/features/skills/#:~:text=Agent%20Skills%20package%20expertise%20into%20discoverable%20capabilities",
-      "comment": "Full Agent Skills system: SKILL.md with YAML frontmatter, model-invoked, personal (~/.qwen/skills/) and project (.qwen/skills/), path gating, extension skills."
+      "comment": "Full Agent Skills system: SKILL.md with YAML frontmatter, model-invoked, personal (~/.qwen/skills/) and project (.qwen/skills/), path gating, extension skills. Location: Qwen Code extensions package skills via `qwen-extension.json`."
     },
     "hooks": {
       "support": "full",
@@ -1620,12 +2531,12 @@
     "mcp_servers": {
       "support": "full",
       "source_url": "https://qwenlm.github.io/qwen-code-docs/en/users/features/mcp/#:~:text=Qwen%20Code%20can%20connect%20to%20external%20tools%20and%20data%20sources%20through%20the%20Model%20Context%20Protocol%20(MCP)",
-      "comment": "Full MCP: stdio, SSE, HTTP transports. OAuth 2.0, tool filtering, server trust, global allow/deny lists. CLI management via qwen mcp commands."
+      "comment": "Full MCP: stdio, SSE, HTTP transports. OAuth 2.0, tool filtering, server trust, global allow/deny lists. CLI management via qwen mcp commands. Location: Qwen Code MCP settings in Qwen config/extension packages."
     },
     "custom_commands": {
       "support": "full",
       "source_url": "https://qwenlm.github.io/qwen-code-docs/en/users/features/commands/#:~:text=Save%20frequently%20used%20prompts%20as%20shortcut%20commands",
-      "comment": "Full custom commands: Markdown files in ~/.qwen/commands/ (global) and .qwen/commands/ (project). Support {{args}}, !{shell}, @{file} references. Namespace support."
+      "comment": "Full custom commands: Markdown files in ~/.qwen/commands/ (global) and .qwen/commands/ (project). Support {{args}}, !{shell}, @{file} references. Namespace support. Location: Qwen Code extensions can package custom commands via `qwen-extension.json`."
     },
     "subagents": {
       "support": "full",
@@ -1692,6 +2603,138 @@
       "support": "partial",
       "source_url": "https://github.com/QwenLM/qwen-code#:~:text=As%20an%20open-source%20terminal%20agent",
       "comment": "Can use Alibaba Cloud Coding Plan for hosted model access; agent runs locally."
+    },
+    "transcripts": {
+      "support": "unknown",
+      "source_url": "https://qwenlm.github.io/qwen-code-docs/en/users/overview#:~:text=Qwen%20Code",
+      "comment": "Location: transcript/session disk storage was not found in public docs reviewed."
+    }
+  },
+  {
+    "name": "Replit Agent",
+    "links": {
+      "docs": "https://docs.replit.com/replitai/agent",
+      "github": "",
+      "website": "https://replit.com/ai",
+      "slug": "replit-agent"
+    },
+    "form_factor": {
+      "values": [
+        "Web"
+      ],
+      "source_url": "https://replit.com/ai#:~:text=Web",
+      "comment": "Hosted Replit workspace agent focused on building, testing, and deploying apps. Per-form-factor links: Web: https://replit.com/ai.",
+      "links": {
+        "Web": "https://replit.com/ai"
+      }
+    },
+    "released_in": {
+      "value": "Sep '24",
+      "source_url": "https://blog.replit.com/agent#:~:text=Replit%20Agent",
+      "comment": "Replit Agent launched publicly in 2024; Agent 3 followed in September 2025.",
+      "sort_date": "2024-09-01"
+    },
+    "latest_major_update": {
+      "value": "Sep '25",
+      "source_url": "https://replit.com/blog/introducing-agent-3-our-most-autonomous-agent-yet#:~:text=Introducing%20Agent%203",
+      "comment": "Agent 3: more autonomous testing and fixing loop.",
+      "sort_date": "2025-09-01"
+    },
+    "rules": {
+      "support": "partial",
+      "source_url": "https://docs.replit.com/replitai/agent#:~:text=Agent",
+      "comment": "Project context exists inside Replit, but no AGENTS.md-style standard confirmed. Location: hosted/web/API-managed; no local disk folder documented."
+    },
+    "skills": {
+      "support": "none",
+      "source_url": "https://replit.com/blog/introducing-agent-3-our-most-autonomous-agent-yet#:~:text=build%20other%20agents",
+      "comment": "No reusable skill-folder system found. Location: hosted/web/API-managed; no local disk folder documented."
+    },
+    "hooks": {
+      "support": "partial",
+      "source_url": "https://replit.com/blog/introducing-agent-3-our-most-autonomous-agent-yet#:~:text=constantly%20improving%20your%20app%20behind%20the%20scenes",
+      "comment": "Agent 3 can run autonomous test/fix loops, but not general user-defined lifecycle hooks."
+    },
+    "mcp_servers": {
+      "support": "unknown",
+      "source_url": "https://docs.replit.com/replitai/agent#:~:text=Agent",
+      "comment": "No MCP configuration found in public Agent docs. Location: hosted/web/API-managed; no local disk folder documented."
+    },
+    "custom_commands": {
+      "support": "none",
+      "source_url": "https://docs.replit.com/replitai/agent#:~:text=Agent",
+      "comment": "Prompt/chat workflow, not user-defined slash-command folders. Location: hosted/web/API-managed; no local disk folder documented."
+    },
+    "subagents": {
+      "support": "partial",
+      "source_url": "https://replit.com/blog/introducing-agent-3-our-most-autonomous-agent-yet#:~:text=build%20other%20agents",
+      "comment": "Agent 3 can build agents and run background tasks, but no first-class custom subagent framework found."
+    },
+    "model_selection": {
+      "support": "none",
+      "source_url": "https://docs.replit.com/replitai/agent#:~:text=Agent",
+      "comment": "No user model selection for Replit Agent found."
+    },
+    "approval_mode": {
+      "support": "partial",
+      "source_url": "https://docs.replit.com/replitai/agent#:~:text=Agent",
+      "comment": "User reviews generated work in Replit; granular command approval controls are not documented."
+    },
+    "sandbox_mode": {
+      "support": "full",
+      "source_url": "https://docs.replit.com/replitai/agent#:~:text=workspace",
+      "comment": "Runs inside Replit-hosted workspaces."
+    },
+    "resume": {
+      "support": "partial",
+      "source_url": "https://docs.replit.com/replitai/agent#:~:text=Agent",
+      "comment": "Agent work persists in Replit projects, but no explicit session resume command."
+    },
+    "continue": {
+      "support": "partial",
+      "source_url": "https://docs.replit.com/replitai/agent#:~:text=Agent",
+      "comment": "Can continue in the same hosted workspace/project."
+    },
+    "non_interactive": {
+      "support": "none",
+      "source_url": "https://docs.replit.com/replitai/agent#:~:text=Agent",
+      "comment": "No public headless/CLI automation mode found."
+    },
+    "output_format": {
+      "support": "none",
+      "source_url": "https://docs.replit.com/replitai/agent#:~:text=Agent",
+      "comment": "No machine-readable output mode found."
+    },
+    "statusline": {
+      "support": "none",
+      "source_url": "https://docs.replit.com/replitai/agent#:~:text=Agent",
+      "comment": "Hosted UI, no custom CLI statusline."
+    },
+    "telemetry": {
+      "support": "unknown",
+      "source_url": "https://docs.replit.com/replitai/agent#:~:text=Agent",
+      "comment": "No Agent-specific telemetry toggle found."
+    },
+    "hosted_agent": {
+      "support": "full",
+      "source_url": "https://replit.com/blog/introducing-agent-3-our-most-autonomous-agent-yet#:~:text=automatically%20log%20into%20applications%20built%20with%20Replit%20Auth",
+      "comment": "Hosted app-building agent in Replit."
+    },
+    "custom_model_provider": {
+      "support": "none",
+      "source_url": "https://docs.replit.com/replitai/agent#:~:text=Agent",
+      "comment": "No BYO model/provider support found."
+    },
+    "pricing": {
+      "value": "Included in Replit plan/usage model",
+      "source_url": "https://replit.com/pricing#:~:text=Agent",
+      "comment": "Replit pricing and Agent limits vary by plan."
+    },
+    "notes": "Best for hosted app prototyping/build-deploy workflows, not for local repo terminal automation.",
+    "transcripts": {
+      "support": "partial",
+      "source_url": "https://replit.com/ai#:~:text=agent",
+      "comment": "Location: hosted/web/API-managed session history; no local transcript directory documented."
     }
   },
   {
@@ -1704,34 +2747,34 @@
     },
     "form_factor": {
       "values": [
-        "IDE",
-        "Extension",
-        "CLI"
+        "Extension"
       ],
-      "source_url": "https://docs.roocode.com/#:~:text=The%20Roo%20Code%20VS%20Code%20extension%20works%20locally%20in%20your%20IDE",
-      "comment": "VS Code extension + CLI."
+      "source_url": "https://docs.roocode.com/getting-started/installing#:~:text=Extension",
+      "comment": "VS Code extension + CLI. Per-form-factor links: Extension: https://docs.roocode.com/getting-started/installing.",
+      "links": {
+        "Extension": "https://docs.roocode.com/getting-started/installing"
+      }
     },
     "released_in": {
       "value": "Mid-2025",
       "source_url": "https://github.com/RooCodeInc/Roo-Code/releases/tag/v3.54.0#:~:text=Release%20v3.54.0",
-      "comment": "Forked from Cline. Earliest releases ~mid-2025. Reached v3.54.0 by shutdown on May 15, 2026.",
-      "sort_date": "2025-03-19"
+      "comment": "Forked from Cline. Earliest releases ~mid-2025. Reached v3.54.0 by shutdown on May 15, 2026."
     },
     "latest_major_update": {
       "value": "May '26",
       "source_url": "https://github.com/RooCodeInc/Roo-Code/releases/tag/v3.54.0#:~:text=Release%20v3.54.0",
       "comment": "Final release v3.54.0 on May 15, 2026 (shutdown/sunsetting release). Repository archived, read-only.",
-      "sort_date": "2026-05-15"
+      "sort_date": "2026-05-01"
     },
     "rules": {
       "support": "full",
       "source_url": "https://docs.roocode.com/features/custom-instructions#:~:text=Global%20Rules%20Directory%2CApply%20to%20all%20projects%20automatically",
-      "comment": "Comprehensive: .roorules, .roo/rules/, .clinerules fallback, ~/.roo/rules/ global dir, AGENTS.md/AGENT.md support, mode-specific rules via rules-{modeSlug}."
+      "comment": "Comprehensive: .roorules, .roo/rules/, .clinerules fallback, ~/.roo/rules/ global dir, AGENTS.md/AGENT.md support, mode-specific rules via rules-{modeSlug}. Location: no public disk folder/file location found in docs reviewed."
     },
     "skills": {
       "support": "full",
       "source_url": "https://docs.roocode.com/features/skills#:~:text=Skills%20package%20task%2Dspecific%20instructions%20that%20Roo%20loads%20on%2Ddemand",
-      "comment": "Full skills (added v3.38.0, Dec 2025). Follows agentskills.io spec: SKILL.md with frontmatter, progressive discovery, mode-specific targeting, bundled resources."
+      "comment": "Full skills (added v3.38.0, Dec 2025). Follows agentskills.io spec: SKILL.md with frontmatter, progressive discovery, mode-specific targeting, bundled resources. Location: no public disk folder/file location found in docs reviewed."
     },
     "hooks": {
       "support": "none",
@@ -1741,12 +2784,12 @@
     "mcp_servers": {
       "support": "full",
       "source_url": "https://docs.roocode.com/features/mcp/overview#:~:text=The%20Model%20Context%20Protocol%20(MCP)%20is%20a%20standard%20for%20extending%20Roo%20Code%27s%20capabilities",
-      "comment": "Full MCP since v2.2.0. STDIO, Streamable HTTP, SSE transports. Roo Code Marketplace for one-click MCP install. Per-tool alwaysAllow permissions."
+      "comment": "Full MCP since v2.2.0. STDIO, Streamable HTTP, SSE transports. Roo Code Marketplace for one-click MCP install. Per-tool alwaysAllow permissions. Location: no public disk folder/file location found in docs reviewed."
     },
     "custom_commands": {
       "support": "full",
       "source_url": "https://docs.roocode.com/features/slash-commands#:~:text=Custom%20commands%20extend%20Roo%20Code%27s%20functionality%20by%20adding%20markdown%20files%20to%20specific%20directories",
-      "comment": "Full slash commands: .roo/commands/ (project) and ~/.roo/commands/ (global). Frontmatter with description, argument-hint, mode targeting. Built-in /init command."
+      "comment": "Full slash commands: .roo/commands/ (project) and ~/.roo/commands/ (global). Frontmatter with description, argument-hint, mode targeting. Built-in /init command. Location: no public disk folder/file location found in docs reviewed."
     },
     "subagents": {
       "support": "full",
@@ -1813,6 +2856,11 @@
       "support": "none",
       "source_url": "https://docs.roocode.com/#:~:text=The%20Roo%20Code%20VS%20Code%20extension%20works%20locally%20in%20your%20IDE",
       "comment": "Runs locally as VS Code extension or CLI. Project is now archived."
+    },
+    "transcripts": {
+      "support": "unknown",
+      "source_url": "https://docs.roocode.com/#:~:text=session",
+      "comment": "Location: transcript/session disk storage was not found in public docs reviewed."
     }
   },
   {
@@ -1829,8 +2877,13 @@
         "Extension",
         "CLI"
       ],
-      "source_url": "https://docs.windsurf.com/#set-up#:~:text=Windsurf%20Editor",
-      "comment": "Standalone VS Code fork IDE + JetBrains plugin + CLI."
+      "source_url": "https://windsurf.com/download#:~:text=IDE",
+      "comment": "Standalone VS Code fork IDE + JetBrains plugin + CLI. Per-form-factor links: IDE: https://windsurf.com/download; Extension: https://docs.windsurf.com/windsurf/cascade/cascade-in-ides; CLI: https://docs.windsurf.com/windsurf/cascade/command-line.",
+      "links": {
+        "IDE": "https://windsurf.com/download",
+        "Extension": "https://docs.windsurf.com/windsurf/cascade/cascade-in-ides",
+        "CLI": "https://docs.windsurf.com/windsurf/cascade/command-line"
+      }
     },
     "released_in": {
       "value": "Nov '24",
@@ -1847,12 +2900,12 @@
     "rules": {
       "support": "full",
       "source_url": "https://docs.windsurf.com/windsurf/cascade/memories#rules#:~:text=Rules",
-      "comment": "Three scopes: Global (~/.codeium/windsurf/memories/global_rules.md, always-on), Workspace (.windsurf/rules/*.md with frontmatter modes), System (/etc/windsurf/rules/*.md). AGENTS.md support."
+      "comment": "Three scopes: Global (~/.codeium/windsurf/memories/global_rules.md, always-on), Workspace (.windsurf/rules/*.md with frontmatter modes), System (/etc/windsurf/rules/*.md). AGENTS.md support. Location: no public disk folder/file location found in docs reviewed."
     },
     "skills": {
       "support": "full",
       "source_url": "https://docs.windsurf.com/windsurf/cascade/skills#skill-md-file-format#:~:text=Skills",
-      "comment": "Full support. SKILL.md files with YAML frontmatter. Progressive disclosure. Scopes: Workspace .windsurf/skills/, Global ~/.codeium/windsurf/skills/. Discovers .agents/skills/ and .claude/skills/."
+      "comment": "Full support. SKILL.md files with YAML frontmatter. Progressive disclosure. Scopes: Workspace .windsurf/skills/, Global ~/.codeium/windsurf/skills/. Discovers .agents/skills/ and .claude/skills/. Location: no public disk folder/file location found in docs reviewed."
     },
     "hooks": {
       "support": "full",
@@ -1862,12 +2915,12 @@
     "mcp_servers": {
       "support": "full",
       "source_url": "https://docs.windsurf.com/windsurf/cascade/mcp#adding-a-new-mcp#:~:text=Adding%20a%20New%20MCP",
-      "comment": "Full native MCP. MCP Marketplace with one-click install. stdio, Streamable HTTP, SSE transports. OAuth support. Admin whitelists for teams."
+      "comment": "Full native MCP. MCP Marketplace with one-click install. stdio, Streamable HTTP, SSE transports. OAuth support. Admin whitelists for teams. Location: no public disk folder/file location found in docs reviewed."
     },
     "custom_commands": {
       "support": "full",
       "source_url": "https://docs.windsurf.com/windsurf/cascade/workflows#how-to-create-a-workflow#:~:text=How%20to%20Create%20a%20Workflow",
-      "comment": "Custom commands via Workflows (slash commands /[workflow-name]) and Command palette. Terminal has 4 auto-execution levels."
+      "comment": "Custom commands via Workflows (slash commands /[workflow-name]) and Command palette. Terminal has 4 auto-execution levels. Location: no public disk folder/file location found in docs reviewed."
     },
     "subagents": {
       "support": "full",
@@ -1934,6 +2987,11 @@
       "support": "full",
       "source_url": "https://docs.windsurf.com/windsurf/devin#delegating-work-to-devin#:~:text=Delegating%20Work%20to%20Devin",
       "comment": "Devin cloud agent integration provides managed agent platform."
+    },
+    "transcripts": {
+      "support": "unknown",
+      "source_url": "https://docs.windsurf.com/#:~:text=session",
+      "comment": "Location: transcript/session disk storage was not found in public docs reviewed."
     }
   }
 ]

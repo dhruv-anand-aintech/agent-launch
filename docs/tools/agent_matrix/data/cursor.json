@@ -10,11 +10,15 @@
     "values": [
       "IDE",
       "CLI",
-      "Extension",
       "SDK"
     ],
-    "source_url": "https://cursor.com/docs/sdk/typescript#:~:text=SDK",
-    "comment": "VS Code-derived AI IDE with standalone CLI (cursor-agent) and @cursor/sdk (TypeScript/Python) for programmatic local or cloud agents."
+    "source_url": "https://cursor.com/downloads#:~:text=IDE",
+    "comment": "VS Code-derived AI IDE with standalone CLI (cursor-agent) and @cursor/sdk (TypeScript/Python) for programmatic local or cloud agents. Per-form-factor links: IDE: https://cursor.com/downloads; CLI: https://docs.cursor.com/en/cli/installation; SDK: https://cursor.com/docs/sdk/typescript.",
+    "links": {
+      "IDE": "https://cursor.com/downloads",
+      "CLI": "https://docs.cursor.com/en/cli/installation",
+      "SDK": "https://cursor.com/docs/sdk/typescript"
+    }
   },
   "released_in": {
     "value": "2023",
@@ -29,12 +33,12 @@
   "rules": {
     "support": "full",
     "source_url": "https://docs.cursor.com/en/context/rules#:~:text=rules",
-    "comment": "Supports project and user rules."
+    "comment": "Supports project and user rules. Location: `.cursor/rules/*.mdc` in a project; user/global rules are configured in Cursor settings."
   },
   "skills": {
     "support": "full",
     "source_url": "https://docs.cursor.com/en/context/skills#:~:text=skills",
-    "comment": "Supports skills."
+    "comment": "Supports skills. Location: Cursor rules/agents features, not a SKILL.md folder standard in this row."
   },
   "hooks": {
     "support": "unknown",
@@ -44,12 +48,12 @@
   "mcp_servers": {
     "support": "full",
     "source_url": "https://docs.cursor.com/en/context/mcp#:~:text=MCP",
-    "comment": "Supports MCP servers in both IDE and CLI."
+    "comment": "Supports MCP servers in both IDE and CLI. Location: `.cursor/mcp.json` for project MCP servers or user-level Cursor MCP settings."
   },
   "custom_commands": {
     "support": "full",
     "source_url": "https://docs.cursor.com/en/context/rules#:~:text=commands",
-    "comment": "CLI exposes full command controls; IDE has reusable rule/workflow patterns."
+    "comment": "CLI exposes full command controls; IDE has reusable rule/workflow patterns. Location: custom command support is through Cursor features/SDK rather than a repo command folder."
   },
   "subagents": {
     "support": "partial",
@@ -116,5 +120,10 @@
     "value": "Pro $20, Pro+ $60, Ultra $200/mo",
     "source_url": "https://cursor.com/help/models-and-usage/usage-limits#:~:text=Pro%20Plus",
     "comment": "Individual: Pro $20/mo ($20 API usage), Pro+ $60/mo ($70 API usage), Ultra $200/mo ($400 API usage). Teams $40/user/mo."
+  },
+  "transcripts": {
+    "support": "full",
+    "source_url": "https://docs.cursor.com/en/cli/overview#:~:text=Resume%20previous%20conversations",
+    "comment": "Location: Cursor CLI transcripts live under `~/.cursor/projects/<slug>/agent-transcripts/<agentId>/<agentId>.jsonl`; Cursor IDE composer data is in SQLite `~/Library/Application Support/Cursor/User/globalStorage/state.vscdb`."
   }
 }

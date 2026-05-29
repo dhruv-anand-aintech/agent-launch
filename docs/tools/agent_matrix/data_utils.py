@@ -25,7 +25,7 @@ def _required_keys(schema: dict) -> list[str]:
     return list(schema.get("required", []))
 
 
-FORM_FACTOR_ORDER = ["CLI", "IDE", "Extension", "SDK", "Web"]
+FORM_FACTOR_ORDER = ["CLI", "IDE", "Extension", "SDK", "Web", "Mac App"]
 GITHUB_API = "https://api.github.com"
 MONTH_MAP = {
     "Jan": 1,
@@ -281,6 +281,7 @@ def generate_llms_txt(bundle_path: str, output_path: str) -> None:
     feature_short = {
         "rules": "Rul", "skills": "Skl", "hooks": "Hks",
         "mcp_servers": "MCP", "custom_commands": "Cmd", "subagents": "Sub",
+        "transcripts": "Trn",
         "model_selection": "Mod", "approval_mode": "App", "sandbox_mode": "San",
         "resume": "Res", "continue": "Con", "non_interactive": "Hdl",
         "output_format": "Fmt", "statusline": "Sta", "telemetry": "Tel",

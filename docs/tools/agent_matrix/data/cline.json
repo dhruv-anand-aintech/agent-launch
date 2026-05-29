@@ -8,13 +8,17 @@
   },
   "form_factor": {
     "values": [
-      "IDE",
       "Extension",
       "CLI",
       "SDK"
     ],
-    "source_url": "https://docs.cline.bot/sdk/overview#:~:text=SDK",
-    "comment": "VS Code extension, JetBrains plugin, CLI, and @cline/sdk for embedding the agent runtime in apps and CI."
+    "source_url": "https://marketplace.visualstudio.com/items?itemName=saoudrizwan.claude-dev#:~:text=Extension",
+    "comment": "VS Code extension, JetBrains plugin, CLI, and @cline/sdk for embedding the agent runtime in apps and CI. Per-form-factor links: Extension: https://marketplace.visualstudio.com/items?itemName=saoudrizwan.claude-dev; CLI: https://docs.cline.bot/cli/overview; SDK: https://docs.cline.bot/sdk/overview.",
+    "links": {
+      "Extension": "https://marketplace.visualstudio.com/items?itemName=saoudrizwan.claude-dev",
+      "CLI": "https://docs.cline.bot/cli/overview",
+      "SDK": "https://docs.cline.bot/sdk/overview"
+    }
   },
   "released_in": {
     "value": "Jul '24",
@@ -29,12 +33,12 @@
   "rules": {
     "support": "full",
     "source_url": "https://docs.cline.bot/customization/cline-rules#:~:text=Primary%20rule%20format%3A%20.clinerules%2F",
-    "comment": "Rich rule system: .clinerules/ directory, global ~/Documents/Cline/Rules/, conditional rules with YAML frontmatter globs, auto-detection of .cursorrules, .windsurfrules, AGENTS.md."
+    "comment": "Rich rule system: .clinerules/ directory, global ~/Documents/Cline/Rules/, conditional rules with YAML frontmatter globs, auto-detection of .cursorrules, .windsurfrules, AGENTS.md. Location: no public disk folder/file location found in docs reviewed."
   },
   "skills": {
     "support": "full",
     "source_url": "https://docs.cline.bot/customization/skills#:~:text=Skills%20are%20modular%20instruction%20sets%20that%20extend%20Cline%E2%80%99s%20capabilities%20for%20specific%20tasks",
-    "comment": "Full skill system: SKILL.md files in .cline/skills/ or ~/.cline/skills/, YAML frontmatter, progressive loading, slash command triggering, skill toggles."
+    "comment": "Full skill system: SKILL.md files in .cline/skills/ or ~/.cline/skills/, YAML frontmatter, progressive loading, slash command triggering, skill toggles. Location: no public disk folder/file location found in docs reviewed."
   },
   "hooks": {
     "support": "full",
@@ -44,12 +48,12 @@
   "mcp_servers": {
     "support": "full",
     "source_url": "https://docs.cline.bot/mcp/mcp-overview#:~:text=MCP%20(Model%20Context%20Protocol)%20lets%20Cline%20use%20external%20tools%20and%20data%20sources%20through%20MCP%20servers",
-    "comment": "Full MCP support with STDIO and HTTP/SSE transports, MCP Marketplace for one-click install, cline mcp CLI wizard."
+    "comment": "Full MCP support with STDIO and HTTP/SSE transports, MCP Marketplace for one-click install, cline mcp CLI wizard. Location: no public disk folder/file location found in docs reviewed."
   },
   "custom_commands": {
     "support": "full",
     "source_url": "https://docs.cline.bot/core-workflows/using-commands#:~:text=Slash%20Commands",
-    "comment": "Built-in slash commands plus skills auto-register as slash commands. SDK plugins can also register custom commands."
+    "comment": "Built-in slash commands plus skills auto-register as slash commands. SDK plugins can also register custom commands. Location: no public disk folder/file location found in docs reviewed."
   },
   "subagents": {
     "support": "full",
@@ -106,7 +110,7 @@
     "source_url": "https://github.com/cline/cline#:~:text=Any%20OpenAI-compatible%20API%20Self-hosted%20or%20third-party%20endpoints",
     "comment": "Any OpenAI-compatible API endpoint supported. 30+ documented providers. BYOK model."
   },
-  "notes": "Cline has the most comprehensive feature set of any coding agent in this matrix \u2014 17/20 fields at full support. Open source (Apache 2.0), originally 'Claude Dev'. Started as VS Code extension, expanded to CLI and SDK. 8M+ installs.",
+  "notes": "Cline has the most comprehensive feature set of any coding agent in this matrix — 17/20 fields at full support. Open source (Apache 2.0), originally 'Claude Dev'. Started as VS Code extension, expanded to CLI and SDK. 8M+ installs.",
   "pricing": {
     "value": "Free (Apache-2.0), Enterprise custom pricing",
     "source_url": "https://cline.bot/pricing#:~:text=Cline%20is%20free%20for%20individual%20developers.%20Pay%20only%20for%20AI%20inference%20on%20a%20usage%20basis",
@@ -116,5 +120,10 @@
     "support": "none",
     "source_url": "https://cline.bot/#:~:text=One%20open%20source%20agent%20runtime",
     "comment": "Runs locally as VS Code extension or CLI."
+  },
+  "transcripts": {
+    "support": "unknown",
+    "source_url": "https://docs.cline.bot/#:~:text=session",
+    "comment": "Location: transcript/session disk storage was not found in public docs reviewed."
   }
 }

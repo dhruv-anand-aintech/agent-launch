@@ -12,8 +12,13 @@
       "Extension",
       "SDK"
     ],
-    "source_url": "https://ampcode.com/manual/sdk#:~:text=SDK",
-    "comment": "CLI TUI + IDE extensions (VS Code, JetBrains, Neovim, Zed) + @ampcode/sdk (TypeScript) and amp-sdk (Python)."
+    "source_url": "https://ampcode.com/manual#getting-started#:~:text=CLI",
+    "comment": "CLI TUI + IDE extensions (VS Code, JetBrains, Neovim, Zed) + @ampcode/sdk (TypeScript) and amp-sdk (Python). Per-form-factor links: CLI: https://ampcode.com/manual#getting-started; Extension: https://ampcode.com/manual/vscode; SDK: https://ampcode.com/manual/sdk.",
+    "links": {
+      "CLI": "https://ampcode.com/manual#getting-started",
+      "Extension": "https://ampcode.com/manual/vscode",
+      "SDK": "https://ampcode.com/manual/sdk"
+    }
   },
   "released_in": {
     "value": "May '25",
@@ -23,17 +28,17 @@
   "latest_major_update": {
     "value": "May '26",
     "source_url": "https://ampcode.com/news/neo#:~:text=May%206%2C%202026%20Amp%2C%20Rebuilt",
-    "comment": "May 6, 2026 \u2014 'Amp, Rebuilt' (codename Neo). Complete CLI rewrite with new architecture: remote-controllable, plugin-powered, auto-compaction."
+    "comment": "May 6, 2026 — 'Amp, Rebuilt' (codename Neo). Complete CLI rewrite with new architecture: remote-controllable, plugin-powered, auto-compaction."
   },
   "rules": {
     "support": "full",
     "source_url": "https://ampcode.com/manual#AGENTS.md#:~:text=Amp%20looks%20in%20AGENTS.md%20files%20for%20guidance",
-    "comment": "Full support via AGENTS.md files (plural). Scanned from cwd, parent dirs, subtrees, $HOME/.config/amp/, /etc/ampcode/. Supports @-mentions, globs, YAML frontmatter."
+    "comment": "Full support via AGENTS.md files (plural). Scanned from cwd, parent dirs, subtrees, $HOME/.config/amp/, /etc/ampcode/. Supports @-mentions, globs, YAML frontmatter. Location: no public disk folder/file location found in docs reviewed."
   },
   "skills": {
     "support": "full",
     "source_url": "https://ampcode.com/manual#agent-skills#:~:text=Skills%20are%20packages%20of%20instructions%20and%20resources",
-    "comment": "Full support. Skills are directories with SKILL.md + YAML frontmatter. Locations: .agents/skills/ (project), ~/.config/agents/skills/ (user). Can bundle MCP servers via mcp.json."
+    "comment": "Full support. Skills are directories with SKILL.md + YAML frontmatter. Locations: .agents/skills/ (project), ~/.config/agents/skills/ (user). Can bundle MCP servers via mcp.json. Location: no public disk folder/file location found in docs reviewed."
   },
   "hooks": {
     "support": "full",
@@ -43,12 +48,12 @@
   "mcp_servers": {
     "support": "full",
     "source_url": "https://ampcode.com/manual#mcp#:~:text=You%20can%20add%20additional%20tools%20using%20MCP%20servers",
-    "comment": "Full support. Add via CLI (amp mcp add) or config. Local (command/args/env) and remote (url/headers) servers. OAuth auto-flow. Skill bundling for lazy loading."
+    "comment": "Full support. Add via CLI (amp mcp add) or config. Local (command/args/env) and remote (url/headers) servers. OAuth auto-flow. Skill bundling for lazy loading. Location: no public disk folder/file location found in docs reviewed."
   },
   "custom_commands": {
     "support": "none",
     "source_url": "https://ampcode.com/news/slashing-custom-commands#:~:text=We're%20removing%20custom%20commands%20in%20favor%20of%20skills",
-    "comment": "Removed January 29, 2026. Replaced by skills and command palette (Ctrl+O) instead of slash commands."
+    "comment": "Removed January 29, 2026. Replaced by skills and command palette (Ctrl+O) instead of slash commands. Location: not applicable; feature not supported."
   },
   "subagents": {
     "support": "full",
@@ -115,5 +120,10 @@
     "support": "none",
     "source_url": "https://ampcode.com/manual#:~:text=Amp%20is%20the%20frontier%20coding%20agent%20for%20your%20terminal%20and%20editor",
     "comment": "CLI runs locally. Threads shared via web but no managed agent platform."
+  },
+  "transcripts": {
+    "support": "unknown",
+    "source_url": "https://ampcode.com/manual#:~:text=session",
+    "comment": "Location: transcript/session disk storage was not found in public docs reviewed."
   }
 }

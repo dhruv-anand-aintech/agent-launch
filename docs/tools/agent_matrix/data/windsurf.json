@@ -12,8 +12,13 @@
       "Extension",
       "CLI"
     ],
-    "source_url": "https://docs.windsurf.com/#set-up#:~:text=Windsurf%20Editor",
-    "comment": "Standalone VS Code fork IDE + JetBrains plugin + CLI."
+    "source_url": "https://windsurf.com/download#:~:text=IDE",
+    "comment": "Standalone VS Code fork IDE + JetBrains plugin + CLI. Per-form-factor links: IDE: https://windsurf.com/download; Extension: https://docs.windsurf.com/windsurf/cascade/cascade-in-ides; CLI: https://docs.windsurf.com/windsurf/cascade/command-line.",
+    "links": {
+      "IDE": "https://windsurf.com/download",
+      "Extension": "https://docs.windsurf.com/windsurf/cascade/cascade-in-ides",
+      "CLI": "https://docs.windsurf.com/windsurf/cascade/command-line"
+    }
   },
   "released_in": {
     "value": "Nov '24",
@@ -28,12 +33,12 @@
   "rules": {
     "support": "full",
     "source_url": "https://docs.windsurf.com/windsurf/cascade/memories#rules#:~:text=Rules",
-    "comment": "Three scopes: Global (~/.codeium/windsurf/memories/global_rules.md, always-on), Workspace (.windsurf/rules/*.md with frontmatter modes), System (/etc/windsurf/rules/*.md). AGENTS.md support."
+    "comment": "Three scopes: Global (~/.codeium/windsurf/memories/global_rules.md, always-on), Workspace (.windsurf/rules/*.md with frontmatter modes), System (/etc/windsurf/rules/*.md). AGENTS.md support. Location: no public disk folder/file location found in docs reviewed."
   },
   "skills": {
     "support": "full",
     "source_url": "https://docs.windsurf.com/windsurf/cascade/skills#skill-md-file-format#:~:text=Skills",
-    "comment": "Full support. SKILL.md files with YAML frontmatter. Progressive disclosure. Scopes: Workspace .windsurf/skills/, Global ~/.codeium/windsurf/skills/. Discovers .agents/skills/ and .claude/skills/."
+    "comment": "Full support. SKILL.md files with YAML frontmatter. Progressive disclosure. Scopes: Workspace .windsurf/skills/, Global ~/.codeium/windsurf/skills/. Discovers .agents/skills/ and .claude/skills/. Location: no public disk folder/file location found in docs reviewed."
   },
   "hooks": {
     "support": "full",
@@ -43,12 +48,12 @@
   "mcp_servers": {
     "support": "full",
     "source_url": "https://docs.windsurf.com/windsurf/cascade/mcp#adding-a-new-mcp#:~:text=Adding%20a%20New%20MCP",
-    "comment": "Full native MCP. MCP Marketplace with one-click install. stdio, Streamable HTTP, SSE transports. OAuth support. Admin whitelists for teams."
+    "comment": "Full native MCP. MCP Marketplace with one-click install. stdio, Streamable HTTP, SSE transports. OAuth support. Admin whitelists for teams. Location: no public disk folder/file location found in docs reviewed."
   },
   "custom_commands": {
     "support": "full",
     "source_url": "https://docs.windsurf.com/windsurf/cascade/workflows#how-to-create-a-workflow#:~:text=How%20to%20Create%20a%20Workflow",
-    "comment": "Custom commands via Workflows (slash commands /[workflow-name]) and Command palette. Terminal has 4 auto-execution levels."
+    "comment": "Custom commands via Workflows (slash commands /[workflow-name]) and Command palette. Terminal has 4 auto-execution levels. Location: no public disk folder/file location found in docs reviewed."
   },
   "subagents": {
     "support": "full",
@@ -115,5 +120,10 @@
     "support": "full",
     "source_url": "https://docs.windsurf.com/windsurf/devin#delegating-work-to-devin#:~:text=Delegating%20Work%20to%20Devin",
     "comment": "Devin cloud agent integration provides managed agent platform."
+  },
+  "transcripts": {
+    "support": "unknown",
+    "source_url": "https://docs.windsurf.com/#:~:text=session",
+    "comment": "Location: transcript/session disk storage was not found in public docs reviewed."
   }
 }

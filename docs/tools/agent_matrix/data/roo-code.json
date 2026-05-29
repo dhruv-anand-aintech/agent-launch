@@ -8,12 +8,13 @@
   },
   "form_factor": {
     "values": [
-      "IDE",
-      "Extension",
-      "CLI"
+      "Extension"
     ],
-    "source_url": "https://docs.roocode.com/#:~:text=The%20Roo%20Code%20VS%20Code%20extension%20works%20locally%20in%20your%20IDE",
-    "comment": "VS Code extension + CLI."
+    "source_url": "https://docs.roocode.com/getting-started/installing#:~:text=Extension",
+    "comment": "VS Code extension + CLI. Per-form-factor links: Extension: https://docs.roocode.com/getting-started/installing.",
+    "links": {
+      "Extension": "https://docs.roocode.com/getting-started/installing"
+    }
   },
   "released_in": {
     "value": "Mid-2025",
@@ -28,12 +29,12 @@
   "rules": {
     "support": "full",
     "source_url": "https://docs.roocode.com/features/custom-instructions#:~:text=Global%20Rules%20Directory%2CApply%20to%20all%20projects%20automatically",
-    "comment": "Comprehensive: .roorules, .roo/rules/, .clinerules fallback, ~/.roo/rules/ global dir, AGENTS.md/AGENT.md support, mode-specific rules via rules-{modeSlug}."
+    "comment": "Comprehensive: .roorules, .roo/rules/, .clinerules fallback, ~/.roo/rules/ global dir, AGENTS.md/AGENT.md support, mode-specific rules via rules-{modeSlug}. Location: no public disk folder/file location found in docs reviewed."
   },
   "skills": {
     "support": "full",
     "source_url": "https://docs.roocode.com/features/skills#:~:text=Skills%20package%20task%2Dspecific%20instructions%20that%20Roo%20loads%20on%2Ddemand",
-    "comment": "Full skills (added v3.38.0, Dec 2025). Follows agentskills.io spec: SKILL.md with frontmatter, progressive discovery, mode-specific targeting, bundled resources."
+    "comment": "Full skills (added v3.38.0, Dec 2025). Follows agentskills.io spec: SKILL.md with frontmatter, progressive discovery, mode-specific targeting, bundled resources. Location: no public disk folder/file location found in docs reviewed."
   },
   "hooks": {
     "support": "none",
@@ -43,12 +44,12 @@
   "mcp_servers": {
     "support": "full",
     "source_url": "https://docs.roocode.com/features/mcp/overview#:~:text=The%20Model%20Context%20Protocol%20(MCP)%20is%20a%20standard%20for%20extending%20Roo%20Code%27s%20capabilities",
-    "comment": "Full MCP since v2.2.0. STDIO, Streamable HTTP, SSE transports. Roo Code Marketplace for one-click MCP install. Per-tool alwaysAllow permissions."
+    "comment": "Full MCP since v2.2.0. STDIO, Streamable HTTP, SSE transports. Roo Code Marketplace for one-click MCP install. Per-tool alwaysAllow permissions. Location: no public disk folder/file location found in docs reviewed."
   },
   "custom_commands": {
     "support": "full",
     "source_url": "https://docs.roocode.com/features/slash-commands#:~:text=Custom%20commands%20extend%20Roo%20Code%27s%20functionality%20by%20adding%20markdown%20files%20to%20specific%20directories",
-    "comment": "Full slash commands: .roo/commands/ (project) and ~/.roo/commands/ (global). Frontmatter with description, argument-hint, mode targeting. Built-in /init command."
+    "comment": "Full slash commands: .roo/commands/ (project) and ~/.roo/commands/ (global). Frontmatter with description, argument-hint, mode targeting. Built-in /init command. Location: no public disk folder/file location found in docs reviewed."
   },
   "subagents": {
     "support": "full",
@@ -115,5 +116,10 @@
     "support": "none",
     "source_url": "https://docs.roocode.com/#:~:text=The%20Roo%20Code%20VS%20Code%20extension%20works%20locally%20in%20your%20IDE",
     "comment": "Runs locally as VS Code extension or CLI. Project is now archived."
+  },
+  "transcripts": {
+    "support": "unknown",
+    "source_url": "https://docs.roocode.com/#:~:text=session",
+    "comment": "Location: transcript/session disk storage was not found in public docs reviewed."
   }
 }

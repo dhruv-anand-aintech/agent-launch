@@ -1,0 +1,125 @@
+{
+  "name": "Grok Build",
+  "links": {
+    "docs": "https://x.ai/news/grok-build-cli",
+    "github": "",
+    "website": "https://x.ai/news/grok-build-cli",
+    "slug": "grok-build"
+  },
+  "form_factor": {
+    "values": [
+      "CLI"
+    ],
+    "source_url": "https://x.ai/news/grok-build-cli#:~:text=CLI",
+    "comment": "Terminal-native coding agent and CLI in early beta. Per-form-factor links: CLI: https://x.ai/news/grok-build-cli.",
+    "links": {
+      "CLI": "https://x.ai/news/grok-build-cli"
+    }
+  },
+  "released_in": {
+    "value": "May '26",
+    "source_url": "https://x.ai/news/grok-build-cli#:~:text=May%2025%2C%202026",
+    "comment": "xAI launch announcement for the early beta."
+  },
+  "latest_major_update": {
+    "value": "May '26",
+    "source_url": "https://x.ai/news/grok-build-cli#:~:text=Today%20we%27re%20launching%20an%20early%20beta%20of%20Grok%20Build",
+    "comment": "Initial public beta launch."
+  },
+  "rules": {
+    "support": "full",
+    "source_url": "https://x.ai/news/grok-build-cli#:~:text=Your%20AGENTS.md%2C%20plugins%2C%20hooks%2C%20skills%2C%20and%20MCP%20servers",
+    "comment": "Official launch page says AGENTS.md works out of the box. Location: `AGENTS.md` in repo tree."
+  },
+  "skills": {
+    "support": "full",
+    "source_url": "https://x.ai/news/grok-build-cli#:~:text=Your%20AGENTS.md%2C%20plugins%2C%20hooks%2C%20skills%2C%20and%20MCP%20servers",
+    "comment": "Skills and plugin marketplace are called out in the launch page. Location: plugin/skill folders managed by Grok Build plugin marketplace; exact disk root not yet public."
+  },
+  "hooks": {
+    "support": "full",
+    "source_url": "https://x.ai/news/grok-build-cli#:~:text=Your%20AGENTS.md%2C%20plugins%2C%20hooks%2C%20skills%2C%20and%20MCP%20servers",
+    "comment": "Hooks are explicitly listed as supported."
+  },
+  "mcp_servers": {
+    "support": "full",
+    "source_url": "https://x.ai/news/grok-build-cli#:~:text=Your%20AGENTS.md%2C%20plugins%2C%20hooks%2C%20skills%2C%20and%20MCP%20servers",
+    "comment": "MCP servers work out of the box according to xAI. Location: MCP server configuration picked up from the repo/tooling; exact disk root not yet public."
+  },
+  "custom_commands": {
+    "support": "unknown",
+    "source_url": "https://x.ai/news/grok-build-cli#:~:text=Type%20%60%2Ffeedback%60%20in%20the%20CLI",
+    "comment": "Slash command UX exists, but public docs do not yet show user-defined commands. Location: custom command folder not documented; slash UX exists for built-ins like `/feedback`."
+  },
+  "subagents": {
+    "support": "full",
+    "source_url": "https://x.ai/news/grok-build-cli#:~:text=Subagents%20that%20work%20in%20parallel",
+    "comment": "Delegates larger tasks to specialized parallel subagents, with worktree integration."
+  },
+  "model_selection": {
+    "support": "partial",
+    "source_url": "https://x.ai/news/grok-build-cli#:~:text=Point%20users%20to%20%60config.toml%60%20for%20models%20and%20API%20keys",
+    "comment": "Launch screenshot references config.toml for models and API keys; model catalog details are not yet public."
+  },
+  "approval_mode": {
+    "support": "full",
+    "source_url": "https://x.ai/news/grok-build-cli#:~:text=Plan%2C%20review%2C%20approve",
+    "comment": "Plan mode lets users approve, comment on, or rewrite a plan before execution."
+  },
+  "sandbox_mode": {
+    "support": "partial",
+    "source_url": "https://x.ai/news/grok-build-cli#:~:text=launch%20subagents%20in%20their%20own%20worktrees",
+    "comment": "Worktree isolation is documented for subagents; broader filesystem/network sandbox controls are not yet documented."
+  },
+  "resume": {
+    "support": "unknown",
+    "source_url": "https://x.ai/news/grok-build-cli#:~:text=Start%20Grok%20Build%20in%20your%20repo",
+    "comment": "No public resume/session-id documentation found in the launch page."
+  },
+  "continue": {
+    "support": "unknown",
+    "source_url": "https://x.ai/news/grok-build-cli#:~:text=Start%20Grok%20Build%20in%20your%20repo",
+    "comment": "No public continue-latest command documentation found."
+  },
+  "non_interactive": {
+    "support": "full",
+    "source_url": "https://x.ai/news/grok-build-cli#:~:text=Headless%20mode%20(%60-p%60)%20allows%20easily%20running%20agents%20inside%20scripts%20and%20automations",
+    "comment": "Headless mode is documented as -p."
+  },
+  "output_format": {
+    "support": "unknown",
+    "source_url": "https://x.ai/news/grok-build-cli#:~:text=headless%20mode%20and%20ACP",
+    "comment": "ACP support implies structured protocol integration, but no JSON/stdout output format docs found."
+  },
+  "statusline": {
+    "support": "unknown",
+    "source_url": "https://x.ai/news/grok-build-cli#:~:text=grok-build",
+    "comment": "No user-configurable statusline documentation found."
+  },
+  "telemetry": {
+    "support": "unknown",
+    "source_url": "https://x.ai/news/grok-build-cli#:~:text=%2Ffeedback",
+    "comment": "No user-visible telemetry opt-out setting found in public launch docs."
+  },
+  "hosted_agent": {
+    "support": "none",
+    "source_url": "https://x.ai/news/grok-build-cli#:~:text=runs%20right%20from%20your%20terminal",
+    "comment": "Documented as a terminal CLI, not a managed hosted worker."
+  },
+  "custom_model_provider": {
+    "support": "partial",
+    "source_url": "https://x.ai/news/grok-build-cli#:~:text=config.toml%20for%20models%20and%20API%20keys",
+    "comment": "Config references models and API keys, but arbitrary OpenAI-compatible provider support is not documented."
+  },
+  "pricing": {
+    "value": "Included for SuperGrok and X Premium Plus subscribers during beta",
+    "source_url": "https://x.ai/news/grok-build-cli#:~:text=Available%20now%20to%20all%20SuperGrok%20and%20X%20Premium%20Plus%20subscribers",
+    "comment": "Early beta access is tied to paid xAI/X subscriptions."
+  },
+  "notes": "Early beta. Strong documented parity on AGENTS.md, skills, hooks, MCP, headless mode, ACP, and parallel subagents; lower confidence for session management and telemetry because public docs are still sparse.",
+  "transcripts": {
+    "support": "unknown",
+    "source_url": "https://x.ai/news/grok-build-cli#:~:text=grok-build",
+    "comment": "Location: transcript/session disk storage is not documented in the public beta launch page."
+  }
+}

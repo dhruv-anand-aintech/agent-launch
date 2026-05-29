@@ -9,10 +9,16 @@
   "form_factor": {
     "values": [
       "CLI",
+      "Extension",
       "SDK"
     ],
-    "source_url": "https://opencode.ai/docs/sdk/#:~:text=SDK",
-    "comment": "Terminal UI and CLI plus @opencode-ai/sdk for programmatic server/session control."
+    "source_url": "https://opencode.ai/docs/#:~:text=CLI",
+    "comment": "Terminal UI and CLI plus @opencode-ai/sdk for programmatic server/session control. Per-form-factor links: CLI: https://opencode.ai/docs/; Extension: https://opencode.ai/docs/ide/; SDK: https://opencode.ai/docs/sdk/.",
+    "links": {
+      "CLI": "https://opencode.ai/docs/",
+      "Extension": "https://opencode.ai/docs/ide/",
+      "SDK": "https://opencode.ai/docs/sdk/"
+    }
   },
   "released_in": {
     "value": "2025",
@@ -27,12 +33,12 @@
   "rules": {
     "support": "full",
     "source_url": "https://opencode.ai/docs/config/#:~:text=instructions",
-    "comment": "Supports instruction/config files."
+    "comment": "Supports instruction/config files. Location: `AGENTS.md` and opencode config files in the repo/user config scope."
   },
   "skills": {
     "support": "full",
     "source_url": "https://opencode.ai/docs/skills/#:~:text=skills",
-    "comment": "Supports skills."
+    "comment": "Supports skills. Location: opencode Agent Skills are stored as skill folders with `SKILL.md` according to the configured scope."
   },
   "hooks": {
     "support": "full",
@@ -42,12 +48,12 @@
   "mcp_servers": {
     "support": "full",
     "source_url": "https://opencode.ai/docs/mcp-servers/#:~:text=MCP",
-    "comment": "Supports MCP servers."
+    "comment": "Supports MCP servers. Location: `opencode.json` / opencode config MCP server entries."
   },
   "custom_commands": {
     "support": "full",
     "source_url": "https://opencode.ai/docs/commands/#:~:text=commands",
-    "comment": "Supports commands."
+    "comment": "Supports commands. Location: opencode custom commands are configured under opencode command/config files, not shell aliases."
   },
   "subagents": {
     "support": "full",
@@ -114,5 +120,10 @@
     "support": "none",
     "source_url": "https://opencode.ai/docs/#:~:text=terminal",
     "comment": "Runs entirely locally."
+  },
+  "transcripts": {
+    "support": "full",
+    "source_url": "https://opencode.ai/docs/share/#:~:text=session",
+    "comment": "Location: OpenCode stores sessions/messages in SQLite `~/.local/share/opencode/opencode.db`; legacy storage uses `~/.local/share/opencode/storage/session|message|part/`."
   }
 }

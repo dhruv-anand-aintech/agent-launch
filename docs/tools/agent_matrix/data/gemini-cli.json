@@ -11,8 +11,11 @@
     "values": [
       "CLI"
     ],
-    "source_url": "https://google-gemini.github.io/gemini-cli/#:~:text=Gemini%20CLI",
-    "comment": "CLI tool."
+    "source_url": "https://google-gemini.github.io/gemini-cli/docs/cli/#:~:text=CLI",
+    "comment": "CLI tool. Per-form-factor links: CLI: https://google-gemini.github.io/gemini-cli/docs/cli/.",
+    "links": {
+      "CLI": "https://google-gemini.github.io/gemini-cli/docs/cli/"
+    }
   },
   "released_in": {
     "value": "Jun '25",
@@ -27,12 +30,12 @@
   "rules": {
     "support": "full",
     "source_url": "https://google-gemini.github.io/gemini-cli/docs/cli/configuration.html#:~:text=GEMINI.md",
-    "comment": "Uses GEMINI.md context files."
+    "comment": "Uses GEMINI.md context files. Location: no public disk folder/file location found in docs reviewed."
   },
   "skills": {
     "support": "partial",
     "source_url": "https://google-gemini.github.io/gemini-cli/docs/tools/#:~:text=tools",
-    "comment": "Extensible through tools/extensions rather than the same SKILL.md contract."
+    "comment": "Extensible through tools/extensions rather than the same SKILL.md contract. Location: no public disk folder/file location found in docs reviewed."
   },
   "hooks": {
     "support": "full",
@@ -42,12 +45,12 @@
   "mcp_servers": {
     "support": "full",
     "source_url": "https://google-gemini.github.io/gemini-cli/docs/tools/mcp-server.html#:~:text=MCP",
-    "comment": "Supports MCP servers."
+    "comment": "Supports MCP servers. Location: no public disk folder/file location found in docs reviewed."
   },
   "custom_commands": {
     "support": "full",
     "source_url": "https://google-gemini.github.io/gemini-cli/docs/cli/commands.html#:~:text=commands",
-    "comment": "Supports commands."
+    "comment": "Supports commands. Location: no public disk folder/file location found in docs reviewed."
   },
   "subagents": {
     "support": "unknown",
@@ -114,5 +117,10 @@
     "support": "none",
     "source_url": "https://google-gemini.github.io/gemini-cli/#:~:text=Gemini%20CLI",
     "comment": "Local CLI tool backed by Google Gemini API."
+  },
+  "transcripts": {
+    "support": "unknown",
+    "source_url": "https://google-gemini.github.io/gemini-cli/#:~:text=session",
+    "comment": "Location: transcript/session disk storage was not found in public docs reviewed."
   }
 }

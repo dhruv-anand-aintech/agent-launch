@@ -11,10 +11,18 @@
       "IDE",
       "Extension",
       "CLI",
-      "SDK"
+      "SDK",
+      "Web"
     ],
-    "source_url": "https://docs.github.com/en/copilot/how-tos/copilot-sdk#:~:text=Copilot%20SDK",
-    "comment": "IDE agent mode (VS Code, JetBrains, Xcode, Neovim, Eclipse) + CLI + hosted cloud agent + @github/copilot-sdk (public preview)."
+    "source_url": "https://docs.github.com/en/copilot/using-github-copilot/getting-code-suggestions-in-your-ide#:~:text=IDE",
+    "comment": "IDE agent mode (VS Code, JetBrains, Xcode, Neovim, Eclipse) + CLI + hosted cloud agent + @github/copilot-sdk (public preview). Per-form-factor links: IDE: https://docs.github.com/en/copilot/using-github-copilot/getting-code-suggestions-in-your-ide; Extension: https://marketplace.visualstudio.com/items?itemName=GitHub.copilot; CLI: https://docs.github.com/en/copilot/using-github-copilot/using-github-copilot-in-the-command-line; SDK: https://docs.github.com/en/copilot/how-tos/copilot-sdk; Web: https://github.com/features/copilot.",
+    "links": {
+      "IDE": "https://docs.github.com/en/copilot/using-github-copilot/getting-code-suggestions-in-your-ide",
+      "Extension": "https://marketplace.visualstudio.com/items?itemName=GitHub.copilot",
+      "CLI": "https://docs.github.com/en/copilot/using-github-copilot/using-github-copilot-in-the-command-line",
+      "SDK": "https://docs.github.com/en/copilot/how-tos/copilot-sdk",
+      "Web": "https://github.com/features/copilot"
+    }
   },
   "released_in": {
     "value": "Jun '25",
@@ -29,12 +37,12 @@
   "rules": {
     "support": "full",
     "source_url": "https://docs.github.com/en/copilot/concepts/prompting/response-customization#:~:text=Repository-wide%20custom%20instructions%3A%20copilot-instructions.md%20in%20.github",
-    "comment": "Multiple layers: .github/copilot-instructions.md (repo-wide), path-specific .github/instructions/**, AGENTS.md, CLAUDE.md, GEMINI.md, personal instructions, org-level."
+    "comment": "Multiple layers: .github/copilot-instructions.md (repo-wide), path-specific .github/instructions/**, AGENTS.md, CLAUDE.md, GEMINI.md, personal instructions, org-level. Location: no public disk folder/file location found in docs reviewed."
   },
   "skills": {
     "support": "full",
     "source_url": "https://docs.github.com/en/copilot/concepts/agents/about-agent-skills#:~:text=Agent%20skills%20are%20folders%20of%20instructions%2C%20scripts%2C%20and%20resources",
-    "comment": "Open Agent Skills standard. .github/skills, .claude/skills, .agents/skills. Personal skills in ~/.copilot/skills. gh skill CLI for discovery/install."
+    "comment": "Open Agent Skills standard. .github/skills, .claude/skills, .agents/skills. Personal skills in ~/.copilot/skills. gh skill CLI for discovery/install. Location: no public disk folder/file location found in docs reviewed."
   },
   "hooks": {
     "support": "full",
@@ -44,12 +52,12 @@
   "mcp_servers": {
     "support": "full",
     "source_url": "https://docs.github.com/en/copilot/how-tos/use-copilot-agents/cloud-agent/extend-cloud-agent-with-mcp#:~:text=Connect%20Copilot%20cloud%20agent%20to%20external%20tools%20and%20data%20sources%20through%20the%20Model%20Context%20Protocol",
-    "comment": "Full MCP in cloud agent, CLI, and IDE. Supports local, stdio, http, sse transports. Built-in GitHub MCP server. Enterprise allowlist controls."
+    "comment": "Full MCP in cloud agent, CLI, and IDE. Supports local, stdio, http, sse transports. Built-in GitHub MCP server. Enterprise allowlist controls. Location: no public disk folder/file location found in docs reviewed."
   },
   "custom_commands": {
     "support": "partial",
     "source_url": "https://docs.github.com/en/copilot/using-github-copilot/copilot-chat/asking-github-copilot-questions-in-your-ide#:~:text=Use%20slash%20commands%20to%20avoid%20writing%20complex%20prompts%20for%20common%20scenarios",
-    "comment": "Built-in slash commands in IDE (/fix, /tests, /explain, /help) and CLI (/delegate, /pr, /resume). Prompt files (*.prompt.md) for reusable snippets. No user-defined custom slash commands."
+    "comment": "Built-in slash commands in IDE (/fix, /tests, /explain, /help) and CLI (/delegate, /pr, /resume). Prompt files (*.prompt.md) for reusable snippets. No user-defined custom slash commands. Location: no public disk folder/file location found in docs reviewed."
   },
   "subagents": {
     "support": "full",
@@ -116,5 +124,10 @@
     "support": "full",
     "source_url": "https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent#:~:text=Copilot%20cloud%20agent%20works%20autonomously%20in%20a%20GitHub%20Actions-powered%20environment",
     "comment": "Copilot Cloud Agent runs autonomously in GitHub Actions-powered ephemeral environment."
+  },
+  "transcripts": {
+    "support": "unknown",
+    "source_url": "https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent#:~:text=session",
+    "comment": "Location: transcript/session disk storage was not found in public docs reviewed."
   }
 }

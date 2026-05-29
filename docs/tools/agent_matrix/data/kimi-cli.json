@@ -12,8 +12,13 @@
       "Extension",
       "SDK"
     ],
-    "source_url": "https://github.com/MoonshotAI/kimi-agent-sdk#:~:text=SDK",
-    "comment": "CLI + VS Code + Zed + JetBrains via ACP, plus @moonshot-ai/kimi-agent-sdk (Node/Go/Python)."
+    "source_url": "https://github.com/MoonshotAI/kimi-cli#:~:text=CLI",
+    "comment": "CLI + VS Code + Zed + JetBrains via ACP, plus @moonshot-ai/kimi-agent-sdk (Node/Go/Python). Per-form-factor links: CLI: https://github.com/MoonshotAI/kimi-cli; Extension: https://www.kimi.com/help/kimi-code/vscode-getting-started; SDK: https://github.com/MoonshotAI/kimi-agent-sdk.",
+    "links": {
+      "CLI": "https://github.com/MoonshotAI/kimi-cli",
+      "Extension": "https://www.kimi.com/help/kimi-code/vscode-getting-started",
+      "SDK": "https://github.com/MoonshotAI/kimi-agent-sdk"
+    }
   },
   "released_in": {
     "value": "Oct '25",
@@ -28,12 +33,12 @@
   "rules": {
     "support": "full",
     "source_url": "https://www.kimi.com/code/docs/en/kimi-code-cli/core-operations.html#:~:text=AGENTS.md",
-    "comment": "Full AGENTS.md support. Hierarchical loading from git root to working dir, including .kimi/AGENTS.md at each level (32 KiB budget). /init command auto-generates AGENTS.md."
+    "comment": "Full AGENTS.md support. Hierarchical loading from git root to working dir, including .kimi/AGENTS.md at each level (32 KiB budget). /init command auto-generates AGENTS.md. Location: no public disk folder/file location found in docs reviewed."
   },
   "skills": {
     "support": "full",
     "source_url": "https://www.kimi.com/code/docs/en/kimi-code-cli/customization/skills.html#:~:text=Agent%20Skills",
-    "comment": "Full Agent Skills format (SKILL.md with YAML frontmatter). Four-tier auto-discovery. Cross-compatible with Claude/Codex skill dirs. Flow skills with Mermaid/D2 flowcharts."
+    "comment": "Full Agent Skills format (SKILL.md with YAML frontmatter). Four-tier auto-discovery. Cross-compatible with Claude/Codex skill dirs. Flow skills with Mermaid/D2 flowcharts. Location: no public disk folder/file location found in docs reviewed."
   },
   "hooks": {
     "support": "partial",
@@ -43,12 +48,12 @@
   "mcp_servers": {
     "support": "full",
     "source_url": "https://www.kimi.com/code/docs/en/kimi-code-cli/customization/mcp.html#:~:text=MCP",
-    "comment": "Full MCP support. Transport: streamable HTTP, stdio, OAuth. kimi mcp add/list/test/remove/auth commands. Config in ~/.kimi/mcp.json."
+    "comment": "Full MCP support. Transport: streamable HTTP, stdio, OAuth. kimi mcp add/list/test/remove/auth commands. Config in ~/.kimi/mcp.json. Location: no public disk folder/file location found in docs reviewed."
   },
   "custom_commands": {
     "support": "partial",
     "source_url": "https://www.kimi.com/code/docs/en/kimi-code-cli/customization/plugins.html#:~:text=Plugins",
-    "comment": "Custom plugins (Beta) via plugin.json with executable scripts. Slash commands (/skill:, /flow:) serve as custom invocation. No arbitrary custom aliases in config."
+    "comment": "Custom plugins (Beta) via plugin.json with executable scripts. Slash commands (/skill:, /flow:) serve as custom invocation. No arbitrary custom aliases in config. Location: no public disk folder/file location found in docs reviewed."
   },
   "subagents": {
     "support": "full",
@@ -115,5 +120,10 @@
     "support": "none",
     "source_url": "https://www.kimi.com/code/docs/en/kimi-code-cli/getting-started.html#:~:text=Kimi%20Code%20CLI%20is%20an%20AI%20agent%20that%20runs%20in%20the%20terminal",
     "comment": "Local CLI tool backed by Moonshot API."
+  },
+  "transcripts": {
+    "support": "unknown",
+    "source_url": "https://www.kimi.com/code/docs/en/kimi-code-cli/getting-started.html#:~:text=session",
+    "comment": "Location: transcript/session disk storage was not found in public docs reviewed."
   }
 }

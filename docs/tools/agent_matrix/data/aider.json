@@ -10,8 +10,11 @@
     "values": [
       "CLI"
     ],
-    "source_url": "https://github.com/Aider-AI/aider#:~:text=aider%20is%20AI%20pair%20programming%20in%20your%20terminal",
-    "comment": "CLI terminal app."
+    "source_url": "https://aider.chat/docs/install.html#:~:text=CLI",
+    "comment": "CLI terminal app. Per-form-factor links: CLI: https://aider.chat/docs/install.html.",
+    "links": {
+      "CLI": "https://aider.chat/docs/install.html"
+    }
   },
   "released_in": {
     "value": "Jun '23",
@@ -26,12 +29,12 @@
   "rules": {
     "support": "partial",
     "source_url": "https://aider.chat/docs/usage/conventions.html#:~:text=The%20easiest%20way%20to%20do%20that%20with%20aider%20is%20to%20simply%20create%20a%20small%20markdown%20file",
-    "comment": "Supports CONVENTIONS.md loaded via --read or .aider.conf.yml. No equivalent of a persistent auto-loaded CLAUDE.md file."
+    "comment": "Supports CONVENTIONS.md loaded via --read or .aider.conf.yml. No equivalent of a persistent auto-loaded CLAUDE.md file. Location: `.aider.conf.yml`, `.aider.model.settings.yml`, `.aider.model.metadata.json`, and repo convention files; no AGENTS.md standard."
   },
   "skills": {
     "support": "partial",
     "source_url": "https://aider.chat/docs/usage/commands.html#:~:text=/save%20%3Cfname%3E%20command%20will%20make%20a%20file%20of%20/add%20and%20/read-only%20commands",
-    "comment": "Has /save and /load commands to persist/replay sequences of slash commands. Not a full reusable skill system like Cursor skills."
+    "comment": "Has /save and /load commands to persist/replay sequences of slash commands. Not a full reusable skill system like Cursor skills. Location: no first-class skill folder; use repo files/prompts/conventions."
   },
   "hooks": {
     "support": "partial",
@@ -41,12 +44,12 @@
   "mcp_servers": {
     "support": "none",
     "source_url": "https://github.com/Aider-AI/aider#:~:text=aider%20is%20AI%20pair%20programming%20in%20your%20terminal",
-    "comment": "No MCP (Model Context Protocol) support detected in documentation, codebase, or feature listings."
+    "comment": "No MCP (Model Context Protocol) support detected in documentation, codebase, or feature listings. Location: no MCP config for Aider."
   },
   "custom_commands": {
     "support": "none",
     "source_url": "https://aider.chat/docs/usage/commands.html#:~:text=Aider%20supports%20commands%20from%20within%20the%20chat%2C%20which%20all%20start%20with%20/",
-    "comment": "40+ built-in slash commands but no mechanism for users to define custom slash commands."
+    "comment": "40+ built-in slash commands but no mechanism for users to define custom slash commands. Location: no custom command folder; uses CLI flags/config."
   },
   "subagents": {
     "support": "partial",
@@ -113,5 +116,10 @@
     "support": "none",
     "source_url": "https://github.com/Aider-AI/aider#:~:text=aider%20is%20AI%20pair%20programming%20in%20your%20terminal",
     "comment": "Runs entirely locally via pip. No hosted agent platform."
+  },
+  "transcripts": {
+    "support": "partial",
+    "source_url": "https://aider.chat/docs/config/aider_conf.html#:~:text=chat-history-file",
+    "comment": "Location: optional chat history/transcript files are configured with Aider history settings such as `.aider.chat.history.md`."
   }
 }

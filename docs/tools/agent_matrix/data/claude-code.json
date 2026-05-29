@@ -9,12 +9,20 @@
   "form_factor": {
     "values": [
       "CLI",
-      "IDE",
       "Extension",
-      "SDK"
+      "SDK",
+      "Web",
+      "Mac App"
     ],
-    "source_url": "https://docs.anthropic.com/en/docs/claude-code/overview#:~:text=Claude%20Code",
-    "comment": "CLI, IDE integration, VS Code extension, SDK."
+    "source_url": "https://code.claude.com/docs/en/quickstart#:~:text=CLI",
+    "comment": "CLI, IDE integration, VS Code extension, SDK. Per-form-factor links: CLI: https://code.claude.com/docs/en/quickstart; Extension: https://code.claude.com/docs/en/ide-integrations; SDK: https://docs.anthropic.com/en/docs/claude-code/sdk; Web: https://claude.ai/code; Mac App: https://code.claude.com/docs/en/desktop-quickstart.",
+    "links": {
+      "CLI": "https://code.claude.com/docs/en/quickstart",
+      "Extension": "https://code.claude.com/docs/en/ide-integrations",
+      "SDK": "https://docs.anthropic.com/en/docs/claude-code/sdk",
+      "Web": "https://claude.ai/code",
+      "Mac App": "https://code.claude.com/docs/en/desktop-quickstart"
+    }
   },
   "released_in": {
     "value": "Feb '25",
@@ -29,12 +37,12 @@
   "rules": {
     "support": "full",
     "source_url": "https://docs.anthropic.com/en/docs/claude-code/memory#:~:text=CLAUDE.md",
-    "comment": "Uses CLAUDE.md memory files."
+    "comment": "Uses CLAUDE.md memory files. Location: `CLAUDE.md` in repo tree, plus `~/.claude/CLAUDE.md` for user memory."
   },
   "skills": {
     "support": "full",
     "source_url": "https://docs.anthropic.com/en/docs/claude-code/skills#:~:text=skills",
-    "comment": "Supports skills."
+    "comment": "Supports skills. Location: `.claude/skills/<name>/SKILL.md` or user-level `~/.claude/skills/<name>/SKILL.md`."
   },
   "hooks": {
     "support": "full",
@@ -44,12 +52,12 @@
   "mcp_servers": {
     "support": "full",
     "source_url": "https://docs.anthropic.com/en/docs/claude-code/mcp#:~:text=MCP",
-    "comment": "Supports MCP servers."
+    "comment": "Supports MCP servers. Location: project `.mcp.json` or Claude Code MCP config via `claude mcp`."
   },
   "custom_commands": {
     "support": "full",
     "source_url": "https://docs.anthropic.com/en/docs/claude-code/slash-commands#:~:text=slash%20commands",
-    "comment": "Supports slash commands."
+    "comment": "Supports slash commands. Location: `.claude/commands/*.md` or `~/.claude/commands/*.md`."
   },
   "subagents": {
     "support": "full",
@@ -116,5 +124,10 @@
     "support": "partial",
     "source_url": "https://docs.anthropic.com/en/docs/claude-code/overview#:~:text=Claude%20Code",
     "comment": "CLI runs locally; managed/cloud-based session execution is not directly exposed as a distinct platform."
+  },
+  "transcripts": {
+    "support": "full",
+    "source_url": "https://code.claude.com/docs/en/settings#:~:text=transcript",
+    "comment": "Location: Claude Code CLI transcripts are JSONL under `~/.claude/projects/<proj-path-dashes>/<sessionId>.jsonl`."
   }
 }

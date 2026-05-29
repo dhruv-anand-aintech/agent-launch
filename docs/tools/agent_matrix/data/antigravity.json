@@ -11,8 +11,12 @@
       "CLI",
       "IDE"
     ],
-    "source_url": "https://antigravity.google/docs/cli-getting-started#:~:text=agy",
-    "comment": "Google Antigravity IDE plus standalone agy CLI (plugin layout, rules, skills, hooks, MCP)."
+    "source_url": "https://antigravity.google/docs/cli-getting-started#:~:text=CLI",
+    "comment": "Google Antigravity IDE plus standalone agy CLI (plugin layout, rules, skills, hooks, MCP). Per-form-factor links: CLI: https://antigravity.google/docs/cli-getting-started; IDE: https://antigravity.google/download.",
+    "links": {
+      "CLI": "https://antigravity.google/docs/cli-getting-started",
+      "IDE": "https://antigravity.google/download"
+    }
   },
   "released_in": {
     "value": "2025",
@@ -27,12 +31,12 @@
   "rules": {
     "support": "full",
     "source_url": "https://antigravity.google/docs/cli-features#:~:text=rules",
-    "comment": "Full plugin rules on CLI; IDE has persistent agent context with overlapping rules support."
+    "comment": "Full plugin rules on CLI; IDE has persistent agent context with overlapping rules support. Location: Antigravity plugin rules live in plugin folders; workspace/global IDE rule storage is managed by Antigravity."
   },
   "skills": {
     "support": "full",
     "source_url": "https://antigravity.google/docs/cli-features#:~:text=skills",
-    "comment": "Plugin skills on CLI; IDE local data includes skills with less public doc detail."
+    "comment": "Plugin skills on CLI; IDE local data includes skills with less public doc detail. Location: plugin skill folders containing `SKILL.md`."
   },
   "hooks": {
     "support": "full",
@@ -42,12 +46,12 @@
   "mcp_servers": {
     "support": "full",
     "source_url": "https://antigravity.google/docs/cli-features#:~:text=mcp_config.json",
-    "comment": "CLI plugin mcp_config.json; IDE also ships MCP configuration."
+    "comment": "CLI plugin mcp_config.json; IDE also ships MCP configuration. Location: plugin `mcp_config.json` files and IDE/CLI MCP configuration."
   },
   "custom_commands": {
     "support": "partial",
     "source_url": "https://antigravity.google/docs/cli-features#:~:text=plugins",
-    "comment": "CLI via plugin capabilities; IDE via global workflows rather than classic slash-command folders."
+    "comment": "CLI via plugin capabilities; IDE via global workflows rather than classic slash-command folders. Location: command-like behavior is via plugins/workflows rather than a documented standalone command folder."
   },
   "subagents": {
     "support": "unknown",
@@ -114,5 +118,10 @@
     "support": "none",
     "source_url": "https://antigravity.google/docs/cli-features#:~:text=plugins",
     "comment": "Local IDE and CLI surfaces."
+  },
+  "transcripts": {
+    "support": "partial",
+    "source_url": "https://antigravity.google/docs/cli-features#:~:text=conversation",
+    "comment": "Location: Antigravity brain/trajectory summaries are under `~/.gemini/antigravity/brain/<uuid>/*.md`; index data is in `~/Library/Application Support/Antigravity/User/globalStorage/state.vscdb`."
   }
 }

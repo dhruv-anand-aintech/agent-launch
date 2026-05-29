@@ -232,9 +232,9 @@ const COOKIE = 'agmat_state';
 let colOrder = [];
 let rowOrder = [];
 let hidden = new Set();
-let rowSort = null;
+let rowSort = [];
 const SORT_ORDER = { full:0, partial:1, none:2, unknown:3, "":4 };
-const FORM_FACTOR_ORDER = ['CLI','IDE','Extension','SDK','Web'];
+const FORM_FACTOR_ORDER = ['CLI','IDE','Extension','SDK','Web','Mac App'];
 function sortFormFactors(vals) {
   var rank = {};
   FORM_FACTOR_ORDER.forEach(function(v,i){rank[v]=i});
@@ -258,9 +258,10 @@ function dateSortKey(agent, key) {
   return parseDisplayDate(field.value);
 }
 function sortableLabelHtml(label, key) {
-  var isSort = rowSort && rowSort.key === key;
+  var sortEntry = rowSort.find(function(s){ return s.key === key; });
+  var isSort = !!sortEntry;
   var active = isSort ? ' filter-active' : '';
-  var arrow = isSort ? (rowSort.asc ? '&#9650;' : '&#9660;') : '&#9654;';
+  var arrow = isSort ? (rowSort.indexOf(sortEntry) + 1) : '&#9654;';
   return '<td class="row-label'+active+'" data-rowkey="'+key+'" onclick="cycleSort('+"'"+key+"'"+')" title="Sort columns by this date"><span class="row-label-tip">'+esc(label)+'</span><span class="arrow">'+arrow+'</span>'+esc(label)+'</td>';
 }
 
@@ -320,7 +321,12 @@ function cell(agent, col) {
   if (!v) return '<td>&mdash;</td>';
   if (col.key==='form_factor') {
     var tags = sortFormFactors((v.values||[v.value]).filter(Boolean));
-    var tagHtml = tags.map(function(x){return '<span class="form-tag">'+esc(x)+'</span>'}).join('');
+    var links = v.links || {};
+    var tagHtml = tags.map(function(x){
+      var href = links[x];
+      if (href) return '<a class="form-tag" href="'+esc(href)+'" target="_blank" rel="noreferrer">'+esc(x)+'</a>';
+      return '<span class="form-tag">'+esc(x)+'</span>';
+    }).join('');
     if (agent.deprecated) tagHtml += '<span class="form-tag deprecated-tag">deprecated</span>';
     return '<td class="cell-wrap"><div class="form-tags">'+tagHtml+'</div></td>';
   }
@@ -346,21 +352,26 @@ function renderHeader() {
 function visibleCols() { return colOrder.filter(function(i){return !hidden.has(i)}); }
 function renderBody() {
   var vc = visibleCols();
-  if (rowSort) {
-    var key = rowSort.key;
-    if (DATE_SORT_ROWS.has(key)) {
-      vc = vc.slice().sort(function(a,b){
-        var va = dateSortKey(matrix[a], key), vb = dateSortKey(matrix[b], key);
-        return rowSort.asc ? va - vb : vb - va;
-      });
-    } else {
-      vc = vc.slice().sort(function(a,b){var va=SORT_ORDER[(matrix[a][key]||{}).support||'']||4,vb=SORT_ORDER[(matrix[b][key]||{}).support||'']||4;return rowSort.asc?va-vb:vb-va});
-    }
+  if (rowSort.length) {
+    var originalRank = {};
+    vc.forEach(function(i, idx){ originalRank[i] = idx; });
+    var priority = rowSort.slice().reverse();
+    vc = vc.slice().sort(function(a,b){
+      for (var p=0; p<priority.length; p++) {
+        var key = priority[p].key;
+        var va = SORT_ORDER[(matrix[a][key]||{}).support||''];
+        var vb = SORT_ORDER[(matrix[b][key]||{}).support||''];
+        if (va === undefined) va = 4;
+        if (vb === undefined) vb = 4;
+        if (va !== vb) return va - vb;
+      }
+      return originalRank[a] - originalRank[b];
+    });
   }
   var rows = [];
   rows.push('<tr class="group-head">'+rowLabelCell('About',' group-row-label','')+vc.map(function(){return '<td class="group-spacer"></td>'}).join('')+'</tr>');
   aboutCols.forEach(function(col){
-    var label = DATE_SORT_ROWS.has(col.key) ? sortableLabelHtml(col.label, col.key) : rowLabelCell(col.label,'','');
+    var label = rowLabelCell(col.label,'','');
     rows.push('<tr>'+label+vc.map(function(i){return cell(matrix[i],col)}).join('')+'</tr>');
   });
   // Feature rows in saved order, grouped
@@ -368,9 +379,10 @@ function renderBody() {
   rowOrder.forEach(function(key){
     var col = featureCols.find(function(c){return c.key===key});
     if (!col||used[key]) return; used[key]=true;
-    var isSort = rowSort && rowSort.key===key;
+    var sortEntry = rowSort.find(function(s){ return s.key===key; });
+    var isSort = !!sortEntry;
     var active = isSort?' filter-active':'';
-    var arrow = isSort?(rowSort.asc?'&#9650;':'&#9660;'):'&#9654;';
+    var arrow = isSort?(rowSort.indexOf(sortEntry)+1):'&#9654;';
     var labelHtml = '<td class="row-label'+active+'" draggable="true" data-rowkey="'+key+'" onclick="cycleSort('+"'"+key+"'"+')" title="Sort columns by this feature"><span class="row-label-tip">'+esc(col.label)+'</span><span class="arrow">'+arrow+'</span>'+esc(col.label)+'</td>';
     var cells = vc.map(function(i){
       if (!isSort) return cell(matrix[i],col);
@@ -384,8 +396,10 @@ function renderBody() {
 }
 function toggleCol(i) { hidden.has(i)?hidden.delete(i):hidden.add(i); renderHeader(); renderBody(); }
 function cycleSort(key) {
-  if (rowSort && rowSort.key===key) { if (rowSort.asc) rowSort.asc=false; else rowSort=null; }
-  else rowSort = {key:key, asc:true};
+  if (DATE_SORT_ROWS.has(key)) return;
+  var idx = rowSort.findIndex(function(s){ return s.key === key; });
+  if (idx !== -1) rowSort.splice(idx, 1);
+  else rowSort.push({key:key});
   renderBody();
 }
 function setupColDrag() {

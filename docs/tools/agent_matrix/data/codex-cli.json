@@ -10,10 +10,19 @@
     "values": [
       "CLI",
       "Extension",
-      "SDK"
+      "SDK",
+      "Web",
+      "Mac App"
     ],
-    "source_url": "https://developers.openai.com/codex/sdk#:~:text=SDK",
-    "comment": "CLI + Open VSX extension + hosted on platform.openai.com. TypeScript (@openai/codex-sdk) and experimental Python SDKs for programmatic control."
+    "source_url": "https://developers.openai.com/codex/cli/#:~:text=CLI",
+    "comment": "CLI + Open VSX extension + hosted on platform.openai.com. TypeScript (@openai/codex-sdk) and experimental Python SDKs for programmatic control. Per-form-factor links: CLI: https://developers.openai.com/codex/cli/; Extension: https://developers.openai.com/codex/ide/; SDK: https://developers.openai.com/codex/sdk/; Web: https://chatgpt.com/codex; Mac App: https://developers.openai.com/codex/app/.",
+    "links": {
+      "CLI": "https://developers.openai.com/codex/cli/",
+      "Extension": "https://developers.openai.com/codex/ide/",
+      "SDK": "https://developers.openai.com/codex/sdk/",
+      "Web": "https://chatgpt.com/codex",
+      "Mac App": "https://developers.openai.com/codex/app/"
+    }
   },
   "released_in": {
     "value": "Apr '25",
@@ -28,12 +37,12 @@
   "rules": {
     "support": "full",
     "source_url": "https://developers.openai.com/codex/agents-md/#:~:text=AGENTS.md",
-    "comment": "Uses AGENTS.md instructions."
+    "comment": "Uses AGENTS.md instructions. Location: `AGENTS.md` in repo tree, plus user/project Codex config for defaults."
   },
   "skills": {
     "support": "full",
     "source_url": "https://developers.openai.com/codex/skills/#:~:text=Skills",
-    "comment": "Supports SKILL.md-based skills."
+    "comment": "Supports SKILL.md-based skills. Location: `.codex/skills/<name>/SKILL.md`, `~/.codex/skills/<name>/SKILL.md`, or installed plugin skill folders."
   },
   "hooks": {
     "support": "full",
@@ -43,12 +52,12 @@
   "mcp_servers": {
     "support": "full",
     "source_url": "https://developers.openai.com/codex/mcp/#:~:text=MCP",
-    "comment": "Supports MCP servers."
+    "comment": "Supports MCP servers. Location: `~/.codex/config.toml` under MCP/server configuration."
   },
   "custom_commands": {
     "support": "partial",
     "source_url": "https://developers.openai.com/codex/cli/#:~:text=CLI",
-    "comment": "CLI supports slash-like workflows through prompts and tooling, but not a first-class command folder in this matrix."
+    "comment": "CLI supports slash-like workflows through prompts and tooling, but not a first-class command folder in this matrix. Location: no separate command folder documented; command-like workflows are provided by prompts, skills, plugins, and CLI slash commands."
   },
   "subagents": {
     "support": "full",
@@ -115,5 +124,10 @@
     "support": "full",
     "source_url": "https://github.com/openai/codex#:~:text=Codex%20CLI",
     "comment": "Can run locally or on platform.openai.com managed infrastructure."
+  },
+  "transcripts": {
+    "support": "full",
+    "source_url": "https://github.com/openai/codex#:~:text=sessions",
+    "comment": "Location: Codex session event streams are JSONL under `~/.codex/sessions/YYYY/MM/DD/rollout-<iso>-<id>.jsonl`."
   }
 }

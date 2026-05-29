@@ -12,8 +12,13 @@
       "Extension",
       "SDK"
     ],
-    "source_url": "https://qwenlm-qwen-code.mintlify.app/sdk/quick-start#:~:text=SDK",
-    "comment": "CLI + VS Code + Zed + JetBrains via ACP, plus @qwen-code/sdk (TypeScript) and Python SDK."
+    "source_url": "https://qwenlm.github.io/qwen-code-docs/getting-started/#:~:text=CLI",
+    "comment": "CLI + VS Code + Zed + JetBrains via ACP, plus @qwen-code/sdk (TypeScript) and Python SDK. Per-form-factor links: CLI: https://qwenlm.github.io/qwen-code-docs/getting-started/; Extension: https://qwenlm.github.io/qwen-code-docs/en/users/extension/introduction/; SDK: https://qwenlm-qwen-code.mintlify.app/sdk/quick-start.",
+    "links": {
+      "CLI": "https://qwenlm.github.io/qwen-code-docs/getting-started/",
+      "Extension": "https://qwenlm.github.io/qwen-code-docs/en/users/extension/introduction/",
+      "SDK": "https://qwenlm-qwen-code.mintlify.app/sdk/quick-start"
+    }
   },
   "released_in": {
     "value": "Jun '25",
@@ -28,12 +33,12 @@
   "rules": {
     "support": "full",
     "source_url": "https://qwenlm.github.io/qwen-code-docs/en/users/configuration/settings/#:~:text=Context%20Files%20(Hierarchical%20Instructional%20Context)",
-    "comment": "Hierarchical context files (QWEN.md) at project/user levels. Custom system prompts via --system-prompt and --append-system-prompt. Layered config across system/user/project/env/cli."
+    "comment": "Hierarchical context files (QWEN.md) at project/user levels. Custom system prompts via --system-prompt and --append-system-prompt. Layered config across system/user/project/env/cli. Location: Qwen Code project/user instruction files and extension packages; commonly `AGENTS.md`-style repo context plus Qwen config."
   },
   "skills": {
     "support": "full",
     "source_url": "https://qwenlm.github.io/qwen-code-docs/en/users/features/skills/#:~:text=Agent%20Skills%20package%20expertise%20into%20discoverable%20capabilities",
-    "comment": "Full Agent Skills system: SKILL.md with YAML frontmatter, model-invoked, personal (~/.qwen/skills/) and project (.qwen/skills/), path gating, extension skills."
+    "comment": "Full Agent Skills system: SKILL.md with YAML frontmatter, model-invoked, personal (~/.qwen/skills/) and project (.qwen/skills/), path gating, extension skills. Location: Qwen Code extensions package skills via `qwen-extension.json`."
   },
   "hooks": {
     "support": "full",
@@ -43,12 +48,12 @@
   "mcp_servers": {
     "support": "full",
     "source_url": "https://qwenlm.github.io/qwen-code-docs/en/users/features/mcp/#:~:text=Qwen%20Code%20can%20connect%20to%20external%20tools%20and%20data%20sources%20through%20the%20Model%20Context%20Protocol%20(MCP)",
-    "comment": "Full MCP: stdio, SSE, HTTP transports. OAuth 2.0, tool filtering, server trust, global allow/deny lists. CLI management via qwen mcp commands."
+    "comment": "Full MCP: stdio, SSE, HTTP transports. OAuth 2.0, tool filtering, server trust, global allow/deny lists. CLI management via qwen mcp commands. Location: Qwen Code MCP settings in Qwen config/extension packages."
   },
   "custom_commands": {
     "support": "full",
     "source_url": "https://qwenlm.github.io/qwen-code-docs/en/users/features/commands/#:~:text=Save%20frequently%20used%20prompts%20as%20shortcut%20commands",
-    "comment": "Full custom commands: Markdown files in ~/.qwen/commands/ (global) and .qwen/commands/ (project). Support {{args}}, !{shell}, @{file} references. Namespace support."
+    "comment": "Full custom commands: Markdown files in ~/.qwen/commands/ (global) and .qwen/commands/ (project). Support {{args}}, !{shell}, @{file} references. Namespace support. Location: Qwen Code extensions can package custom commands via `qwen-extension.json`."
   },
   "subagents": {
     "support": "full",
@@ -105,7 +110,7 @@
     "source_url": "https://qwenlm.github.io/qwen-code-docs/en/users/configuration/model-providers/#:~:text=Use%20modelProviders%20to%20declare%20curated%20model%20lists%20per%20auth%20type",
     "comment": "modelProviders config with openai/anthropic/gemini auth types. Local models via any OpenAI-compatible endpoint (Ollama, vLLM, LM Studio). OpenRouter, Fireworks AI."
   },
-  "notes": "Qwen Code by Alibaba (QwenLM) is the most feature-complete open-source coding agent in this matrix \u2014 20/20 fields at full (tied with Cline). Standout features: macOS Seatbelt + Docker sandbox, OpenTelemetry telemetry, custom status line, three output formats. Apache-2.0, 24.6k stars.",
+  "notes": "Qwen Code by Alibaba (QwenLM) is the most feature-complete open-source coding agent in this matrix — 20/20 fields at full (tied with Cline). Standout features: macOS Seatbelt + Docker sandbox, OpenTelemetry telemetry, custom status line, three output formats. Apache-2.0, 24.6k stars.",
   "pricing": {
     "value": "Free (Apache-2.0)",
     "source_url": "https://github.com/QwenLM/qwen-code#:~:text=Apache-2.0%20license",
@@ -115,5 +120,10 @@
     "support": "partial",
     "source_url": "https://github.com/QwenLM/qwen-code#:~:text=As%20an%20open-source%20terminal%20agent",
     "comment": "Can use Alibaba Cloud Coding Plan for hosted model access; agent runs locally."
+  },
+  "transcripts": {
+    "support": "unknown",
+    "source_url": "https://qwenlm.github.io/qwen-code-docs/en/users/overview#:~:text=Qwen%20Code",
+    "comment": "Location: transcript/session disk storage was not found in public docs reviewed."
   }
 }
