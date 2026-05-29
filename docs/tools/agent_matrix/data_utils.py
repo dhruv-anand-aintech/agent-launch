@@ -260,6 +260,9 @@ def bundle(schema_path: str, data_glob: str, output_path: str) -> None:
     rows = [_load_json(name) for name in sorted(glob.glob(data_glob))]
     enrich_github_dates(rows)
     Path(output_path).write_text(json.dumps(rows, indent=2) + "\n", encoding="utf-8")
+    metadata_path = Path(output_path).with_name("updated.json")
+    metadata = {"updated_at": datetime.utcnow().replace(microsecond=0).isoformat() + "Z"}
+    metadata_path.write_text(json.dumps(metadata, indent=2) + "\n", encoding="utf-8")
 
     return rows, sorted(feature_keys), sorted(properties.keys())
 

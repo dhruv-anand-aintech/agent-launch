@@ -1,6 +1,7 @@
 import matrix from "../docs/tools/agent_matrix/bundle.json";
 import llmsTxt from "../docs/tools/agent_matrix/llms.txt";
 import schema from "../docs/tools/agent_matrix/schema.json";
+import updatedMeta from "../docs/tools/agent_matrix/updated.json";
 
 const columns = Object.entries(schema.properties)
   .filter(([key]) => !["links", "notes"].includes(key))
@@ -41,8 +42,33 @@ function metaTags() {
     <meta name="twitter:title" content="Coding Agent Feature Matrix">`;
 }
 
+function formatUpdatedLabel(iso) {
+  const then = Date.parse(iso);
+  if (!then) return "Updated recently";
+  const diff = Math.max(0, Date.now() - then);
+  const minute = 60 * 1000;
+  const hour = 60 * minute;
+  const day = 24 * hour;
+  if (diff < minute) return "Updated now";
+  if (diff < hour) return `Updated ${Math.floor(diff / minute)} min ago`;
+  if (diff < day) {
+    const hours = Math.floor(diff / hour);
+    return `Updated ${hours} ${hours === 1 ? "hour" : "hours"} ago`;
+  }
+  if (diff < 60 * day) {
+    const days = Math.floor(diff / day);
+    return `Updated ${days} ${days === 1 ? "day" : "days"} ago`;
+  }
+  if (diff < 183 * day) {
+    const months = Math.max(2, Math.floor(diff / (30 * day)));
+    return `Updated ${months} months ago`;
+  }
+  return `Updated ${new Intl.DateTimeFormat("en-US", { month: "long", day: "numeric", year: "numeric" }).format(new Date(then))}`;
+}
+
 function render() {
   const payload = JSON.stringify({ matrix, columns, groups, faviconOverrides: FAVICON_OVERRIDES }).replaceAll("</", "<\\/");
+  const updatedAt = updatedMeta.updated_at || new Date().toISOString();
   return `<!doctype html>
 <html lang="en">
 <head>
@@ -204,7 +230,7 @@ td.value { font-size: 9px; color: var(--muted); line-height: 1.25; white-space: 
   <p>Compare ${htmlEscape(matrix.length)} AI coding agents across 17 features. Hover a column for agent name, drag to reorder, click to toggle visibility.</p>
   <div class="meta-row">
     <span class="pill">${htmlEscape(matrix.length)} agents</span>
-    <span class="pill">Updated ${new Date().toISOString().slice(0, 10)}</span>
+    <span class="pill" id="updatedPill" data-updated-at="${htmlEscape(updatedAt)}">Updated ${htmlEscape(formatUpdatedLabel(updatedAt))}</span>
   </div>
 </section>
 <div class="table-wrap">
@@ -223,6 +249,36 @@ function agentDomain(agent) {
   try { return new URL(u).hostname.replace(/^www\\./, ""); } catch(e) { return ""; }
 }
 const { matrix, columns, groups, faviconOverrides } = JSON.parse(document.getElementById('payload').textContent);
+function formatUpdatedLabelClient(iso) {
+  var then = Date.parse(iso);
+  if (!then) return 'Updated recently';
+  var diff = Math.max(0, Date.now() - then);
+  var minute = 60 * 1000, hour = 60 * minute, day = 24 * hour;
+  if (diff < minute) return 'Updated now';
+  if (diff < hour) {
+    var mins = Math.floor(diff / minute);
+    return 'Updated ' + mins + ' min ago';
+  }
+  if (diff < day) {
+    var hours = Math.floor(diff / hour);
+    return 'Updated ' + hours + ' ' + (hours === 1 ? 'hour' : 'hours') + ' ago';
+  }
+  if (diff < 60 * day) {
+    var days = Math.floor(diff / day);
+    return 'Updated ' + days + ' ' + (days === 1 ? 'day' : 'days') + ' ago';
+  }
+  if (diff < 183 * day) {
+    var months = Math.max(2, Math.floor(diff / (30 * day)));
+    return 'Updated ' + months + ' months ago';
+  }
+  return 'Updated ' + new Intl.DateTimeFormat('en-US', {month:'long', day:'numeric', year:'numeric'}).format(new Date(then));
+}
+function refreshUpdatedPill() {
+  var pill = document.getElementById('updatedPill');
+  if (pill) pill.textContent = formatUpdatedLabelClient(pill.dataset.updatedAt);
+}
+refreshUpdatedPill();
+setInterval(refreshUpdatedPill, 60000);
 const metaCols = new Set(['name','form_factor','released_in','latest_major_update','pricing','notes']);
 const featureCols = columns.filter(c => !metaCols.has(c.key));
 const aboutCols = columns.filter(c => metaCols.has(c.key) && c.key !== 'name' && c.key !== 'notes');
