@@ -182,13 +182,17 @@ td.cell-wrap .dot {
   background: #e2d8c5; padding: 2px 4px !important; border-bottom: 1px solid var(--line);
 }
 .cell-tip {
-  display: none; position: absolute; bottom: calc(100% + 4px); left: 50%; transform: translateX(-50%);
-  background: #2a241b; color: #f6f4ee; font-size: 10px; line-height: 1.3; padding: 3px 6px;
-  border-radius: 3px; z-index: 50; pointer-events: none; max-width: 340px; white-space: pre-wrap;
+  display: none; position: fixed; left: 0; top: 0; transform: none;
+  background: #2a241b; color: #f6f4ee; font-size: 10px; line-height: 1.35; padding: 6px 8px;
+  border-radius: 3px; z-index: 60; pointer-events: none; width: max-content; max-width: min(680px, calc(100vw - 16px)); white-space: normal;
   overflow-wrap: anywhere;
   outline: 1px solid #555; text-align: left; font-weight: 400;
 }
-.cell-wrap:hover .cell-tip { display: block; }
+.cell-tip-note { display: block; }
+.cell-tip-url {
+  display: block; margin-top: 4px; padding-top: 4px; border-top: 1px solid rgba(246,244,238,.22);
+  color: #d8d1c4; font-size: 8px; line-height: 1.25;
+}
 td.value { font-size: 9px; color: var(--muted); line-height: 1.25; white-space: normal; max-width: 110px; }
 .form-tags { display: flex; flex-wrap: wrap; gap: 1px; justify-content: center; }
 .form-tag { border: 1px solid var(--line); background: #fff; padding: 1px 2px; font-size: 8px; }
@@ -353,6 +357,13 @@ function esc(v) { return String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'
 function rowLabelCell(label, extraClass, extraAttrs) {
   return '<td class="row-label'+extraClass+'"'+extraAttrs+'><span class="row-label-tip">'+esc(label)+'</span>'+esc(label)+'</td>';
 }
+function cellTipHtml(comment, sourceUrl) {
+  if (!comment && !sourceUrl) return '';
+  var html = '<span class="cell-tip">';
+  if (comment) html += '<span class="cell-tip-note">'+esc(comment)+'</span>';
+  if (sourceUrl) html += '<span class="cell-tip-url">'+esc(sourceUrl)+'</span>';
+  return html + '</span>';
+}
 var COLORS = ['#176b5b','#2d4f9e','#9a3c32','#a35f00','#4a6fa5','#7b4f9e','#27ae60','#8e44ad','#d35400','#16a085','#2c3e50','#f39c12','#1abc9c','#34495e','#e74c3c','#2980b9','#c0392b'];
 function agentInitials(name) {
   var p = name.split(/\s+/);
@@ -376,8 +387,7 @@ function favimg(agent, idx) {
 function cell(agent, col) {
   var v = agent[col.key];
   if (!v) return '<td>&mdash;</td>';
-  var tipText = [v.comment, v.source_url ? 'Source: '+v.source_url : ''].filter(Boolean).join('\n');
-  var tip = tipText ? '<span class="cell-tip">'+esc(tipText)+'</span>' : '';
+  var tip = cellTipHtml(v.comment, v.source_url);
   if (col.key==='form_factor') {
     var tags = sortFormFactors((v.values||[v.value]).filter(Boolean));
     var links = v.links || {};
@@ -451,6 +461,7 @@ function renderBody() {
   });
   document.getElementById('tbody').innerHTML = rows.join('');
   setupRowDrag();
+  setupCellTips();
 }
 function toggleCol(i) { hidden.has(i)?hidden.delete(i):hidden.add(i); renderHeader(); renderBody(); }
 function cycleSort(key) {
@@ -487,6 +498,33 @@ function setupRowDrag() {
       var fp=rowOrder.indexOf(from),tp=rowOrder.indexOf(to);
       if (fp===-1||tp===-1) return;
       rowOrder.splice(fp,1);rowOrder.splice(tp,0,from);saveState();renderBody();
+    });
+  });
+}
+function setupCellTips() {
+  document.querySelectorAll('.cell-wrap .cell-tip').forEach(function(tip){
+    var cell = tip.closest('.cell-wrap');
+    if (!cell) return;
+    cell.addEventListener('mouseenter', function(){
+      tip.style.display = 'block';
+      tip.style.visibility = 'hidden';
+      tip.style.left = '0px';
+      tip.style.top = '0px';
+      var cr = cell.getBoundingClientRect();
+      var tr = tip.getBoundingClientRect();
+      var margin = 8;
+      var left = cr.left + (cr.width / 2) - (tr.width / 2);
+      left = Math.max(margin, Math.min(left, window.innerWidth - tr.width - margin));
+      var top = cr.top - tr.height - 6;
+      if (top < margin) top = Math.min(window.innerHeight - tr.height - margin, cr.bottom + 6);
+      top = Math.max(margin, top);
+      tip.style.left = left + 'px';
+      tip.style.top = top + 'px';
+      tip.style.visibility = 'visible';
+    });
+    cell.addEventListener('mouseleave', function(){
+      tip.style.display = '';
+      tip.style.visibility = '';
     });
   });
 }
