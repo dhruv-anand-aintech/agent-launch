@@ -234,7 +234,7 @@ td.value { font-size: 9px; color: var(--muted); line-height: 1.25; white-space: 
   <p>Compare ${htmlEscape(matrix.length)} AI coding agents across 17 features. Hover a column for agent name, drag to reorder, click to toggle visibility.</p>
   <div class="meta-row">
     <span class="pill">${htmlEscape(matrix.length)} agents</span>
-    <span class="pill" id="updatedPill" data-updated-at="${htmlEscape(updatedAt)}">Updated ${htmlEscape(formatUpdatedLabel(updatedAt))}</span>
+    <span class="pill" id="updatedPill" data-updated-at="${htmlEscape(updatedAt)}">${htmlEscape(formatUpdatedLabel(updatedAt))}</span>
   </div>
 </section>
 <div class="table-wrap">
