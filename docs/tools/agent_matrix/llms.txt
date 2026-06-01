@@ -1,32 +1,33 @@
 # Coding Agent Feature Matrix
-> Compare 23 coding agents, CLIs, and IDEs across features.
-> https://compare.ainorthstar.tech | Updated 2026-05-29
+> Compare 24 coding agents, CLIs, and IDEs across features.
+> https://compare.ainorthstar.tech | Updated 2026-06-02
 
-Agent             Rel    FF     Rul   Skl   Hks   MCP   Cmd   Sub   Trn   Mod   App   San   Res   Con   Hdl   Fmt   Sta   Tel   Hst  BYOM
------------------------------------------------------------------------------------------------------------------------------------------
-Aider             Jun '2 CLI        ~     ~     ~     N     N     ~     ~     Y     ~     N     N     ~     Y     N     N     Y     N     Y
-Amp               May '2 CLI/Ext    Y     Y     Y     Y     N     Y     ?     ~     ~     N     Y     Y     Y     Y     N     ?     N     ~
-Antigravity       2025  CLI/IDE    Y     Y     Y     Y     ~     ?     ~     ?     ~     ~     Y     Y     Y     ?     ?     ?     N     ?
-Claude Code       Feb '2 CLI/Ext    Y     Y     Y     Y     Y     Y     Y     Y     Y     ~     Y     Y     Y     Y     Y     Y     ~     ~
-Cline             Jul '2 CLI/Ext    Y     Y     Y     Y     Y     Y     ?     Y     Y     ~     Y     ~     Y     Y     N     Y     N     Y
-OpenAI Codex CLI  Apr '2 CLI/Ext    Y     Y     Y     Y     ~     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y
-Cohere North      Jan '2 SDK/Web    ~     ~     Y     Y     N     Y     ~     ~     ~     Y     ~     ~     ~     ~     N     ~     Y     N
-Cursor            2023  CLI/IDE    Y     Y     ?     Y     Y     ~     Y     Y     Y     Y     Y     Y     Y     ~     ~     Y     Y     Y
-Devin             Dec '2 CLI/Ext    Y     Y     Y     Y     Y     Y     ~     ?     ~     Y     Y     Y     Y     ~     N     ?     Y     ?
-Factory Droid     2025  CLI/Ext    Y     Y     Y     Y     Y     Y     ~     Y     Y     Y     Y     Y     Y     Y     Y     ?     ~     Y
-Gemini CLI        Jun '2 CLI        Y     ~     Y     Y     Y     ?     ?     Y     Y     Y     Y     Y     Y     ~     ?     Y     N     ~
-GitHub Copilot    Jun '2 CLI/IDE    Y     Y     Y     Y     ~     Y     ?     Y     ~     ~     Y     Y     Y     ~     N     ~     Y     Y
-Grok Build        May '2 CLI        Y     Y     Y     Y     ?     Y     ?     ~     Y     ~     ?     ?     Y     ?     ?     ?     N     ~
-Google Jules      Aug '2 Web        ?     N     ~     ?     N     ~     ~     ~     Y     Y     ~     ~     ~     ~     N     ?     Y     N
-JetBrains Junie   Jan '2 CLI/IDE    ~     ?     N     ?     ?     ?     ?     ~     Y     ~     ~     ~     ?     ?     N     ?     N     ~
-Kilo Code         Feb '2 CLI/Ext    Y     Y     Y     Y     Y     Y     ?     Y     Y     ~     Y     Y     Y     Y     N     Y     ~     Y
-Kimi CLI          Oct '2 CLI/Ext    Y     Y     ~     Y     ~     Y     ?     Y     Y     N     Y     Y     Y     Y     Y     ?     N     Y
-Kiro              Jul '2 CLI/IDE    Y     Y     Y     Y     Y     Y     ~     Y     Y     ~     Y     Y     Y     ~     ?     ?     ~     N
-OpenCode          2025  CLI/Ext    Y     Y     Y     Y     Y     Y     Y     Y     Y     ~     Y     Y     Y     Y     ?     Y     N     Y
-Qwen Code         Jun '2 CLI/Ext    Y     Y     Y     Y     Y     Y     ?     Y     Y     Y     Y     Y     Y     Y     Y     Y     ~     Y
-Replit Agent      Sep '2 Web        ~     N     ~     ?     N     ~     ~     N     ~     Y     ~     ~     N     N     N     ?     Y     N
-Roo Code          Mid-20 Extensi    Y     Y     N     Y     Y     Y     ?     Y     Y     N     ~     Y     Y     ~     N     Y     N     Y
-Windsurf Cascade  Nov '2 CLI/IDE    Y     Y     Y     Y     Y     Y     ?     Y     Y     ~     Y     Y     ~     ~     ~     ~     Y     ~
+Agent             Rel    FF     Rul   Skl   Hks   MCP   Cmd   Gol   Sub   Trn   Mod   App   San   Res   Con   Hdl   Fmt   Sta   Tel   Hst  BYOM
+-----------------------------------------------------------------------------------------------------------------------------------------------
+Aider             Jun '2 CLI        ~     ~     ~     N     N     N     ~     ~     Y     ~     N     N     ~     Y     N     N     Y     N     Y
+Amp               May '2 CLI/Ext    Y     Y     Y     Y     N     N     Y     ?     ~     ~     N     Y     Y     Y     Y     N     ?     N     ~
+Antigravity       2025  CLI/IDE    Y     Y     Y     Y     ~     N     ?     ~     ?     ~     ~     Y     Y     Y     ?     ?     ?     N     ?
+Claude Code       Feb '2 CLI/Ext    Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     ~     Y     Y     Y     Y     Y     Y     ~     ~
+Cline             Jul '2 CLI/Ext    Y     Y     Y     Y     Y     N     Y     ?     Y     Y     ~     Y     ~     Y     Y     N     Y     N     Y
+OpenAI Codex CLI  Apr '2 CLI/Ext    Y     Y     Y     Y     ~     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y
+Cohere North      Jan '2 SDK/Web    ~     ~     Y     Y     N     N     Y     ~     ~     ~     Y     ~     ~     ~     ~     N     ~     Y     N
+Cursor            2023  CLI/IDE    Y     Y     ?     Y     Y     N     ~     Y     Y     Y     Y     Y     Y     Y     ~     ~     Y     Y     Y
+Devin             Dec '2 CLI/Ext    Y     Y     Y     Y     Y     N     Y     ~     ?     ~     Y     Y     Y     Y     ~     N     ?     Y     ?
+Factory Droid     2025  CLI/Ext    Y     Y     Y     Y     Y     N     Y     ~     Y     Y     Y     Y     Y     Y     Y     Y     ?     ~     Y
+Gemini CLI        Jun '2 CLI        Y     ~     Y     Y     Y     N     ?     ?     Y     Y     Y     Y     Y     Y     ~     ?     Y     N     ~
+GitHub Copilot    Jun '2 CLI/IDE    Y     Y     Y     Y     ~     N     Y     ?     Y     ~     ~     Y     Y     Y     ~     N     ~     Y     Y
+Grok Build        May '2 CLI        Y     Y     Y     Y     ?     N     Y     ?     ~     Y     ~     ?     ?     Y     ?     ?     ?     N     ~
+Google Jules      Aug '2 Web        ?     N     ~     ?     N     N     ~     ~     ~     Y     Y     ~     ~     ~     ~     N     ?     Y     N
+JetBrains Junie   Jan '2 CLI/IDE    ~     ?     N     ?     ?     N     ?     ?     ~     Y     ~     ~     ~     ?     ?     N     ?     N     ~
+Kilo Code         Feb '2 CLI/Ext    Y     Y     Y     Y     Y     N     Y     ?     Y     Y     ~     Y     Y     Y     Y     N     Y     ~     Y
+Kimi CLI          Oct '2 CLI/Ext    Y     Y     ~     Y     ~     N     Y     ?     Y     Y     N     Y     Y     Y     Y     Y     ?     N     Y
+Kiro              Jul '2 CLI/IDE    Y     Y     Y     Y     Y     N     Y     ~     Y     Y     ~     Y     Y     Y     ~     ?     ?     ~     N
+OpenCode          2025  CLI/Ext    Y     Y     Y     Y     Y     N     Y     Y     Y     Y     ~     Y     Y     Y     Y     ?     Y     N     Y
+Pi                May '2 CLI/SDK    Y     Y     Y     N     Y     N     N     Y     Y     N     N     Y     Y     Y     Y     N     ~     N     Y
+Qwen Code         Jun '2 CLI/Ext    Y     Y     Y     Y     Y     N     Y     ?     Y     Y     Y     Y     Y     Y     Y     Y     Y     ~     Y
+Replit Agent      Sep '2 Web        ~     N     ~     ?     N     N     ~     ~     N     ~     Y     ~     ~     N     N     N     ?     Y     N
+Roo Code          Mid-20 Extensi    Y     Y     N     Y     Y     N     Y     ?     Y     Y     N     ~     Y     Y     ~     N     Y     N     Y
+Windsurf Cascade  Nov '2 CLI/IDE    Y     Y     Y     Y     Y     N     Y     ?     Y     Y     ~     Y     Y     ~     ~     ~     ~     Y     ~
 
 ## Feature legend
 Code = Y: full | ~: partial | N: none | ?: unknown |  : 
@@ -40,12 +41,13 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Website: https://aider.chat/
 - Form factor: CLI
 - Released: Jun '23
-- Latest update: Aug '25
+- Latest update: May '26
 - Rules: partial — Supports CONVENTIONS.md loaded via --read or .aider.conf.yml. No equivalent of a persistent auto-loaded CLAUDE.md file. Location: `.aider.conf.yml`, `.aider.model.settings.yml`, `.aider.model.metadata.json`, and repo convention files; no AGENTS.md standard.
 - Skills: partial — Has /save and /load commands to persist/replay sequences of slash commands. Not a full reusable skill system like Cursor skills. Location: no first-class skill folder; use repo files/prompts/conventions.
 - Hooks: partial — Only git pre-commit hook bypass via --git-commit-verify. No lifecycle hooks (session-start, session-end, etc.).
 - Mcp Servers: none — No MCP (Model Context Protocol) support detected in documentation, codebase, or feature listings. Location: no MCP config for Aider.
 - Custom Commands: none — 40+ built-in slash commands but no mechanism for users to define custom slash commands. Location: no custom command folder; uses CLI flags/config.
+- Goal Command: none — In-chat `/` commands (e.g. `/add`, `/commit`) are built-in chat commands, not a persisted `/goal` loop with pause/resume until a completion condition.
 - Subagents: partial — Architect/Editor mode uses two models but no general subagent delegation system. No spawning of independent worker agents.
 - Transcripts: partial — Location: optional chat history/transcript files are configured with Aider history settings such as `.aider.chat.history.md`.
 - Model Selection: full — Full model selection via --model, --weak-model, --editor-model. In-chat /model command. Model aliases supported.
@@ -73,6 +75,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Hooks: full — Full support via Plugin API (TypeScript). Events: session.start, agent.start, tool.call, tool.result, agent.end. Plugins can respond with allow/reject/modify/synthesize actions.
 - Mcp Servers: full — Full support. Add via CLI (amp mcp add) or config. Local (command/args/env) and remote (url/headers) servers. OAuth auto-flow. Skill bundling for lazy loading. Location: no public disk folder/file location found in docs reviewed.
 - Custom Commands: none — Removed January 29, 2026. Replaced by skills and command palette (Ctrl+O) instead of slash commands. Location: not applicable; feature not supported.
+- Goal Command: none — Amp documents CLI and editor workflows but no built-in `/goal` slash command for persistent session objectives.
 - Subagents: full — Full support. Spawned via Task tool. Built-in specialized subagents: Oracle (GPT-5.4), Librarian (code search), Painter (image gen), Review, Search.
 - Transcripts: unknown — Location: transcript/session disk storage was not found in public docs reviewed.
 - Model Selection: partial — Pre-set modes (smart=Claude Opus 4.7, deep=GPT-5.5 reasoning, rush=GPT-5.5 no-reasoning, free=mixed). You choose the mode, not the exact model.
@@ -100,6 +103,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Hooks: full — Plugin hooks documented on CLI.
 - Mcp Servers: full — CLI plugin mcp_config.json; IDE also ships MCP configuration. Location: plugin `mcp_config.json` files and IDE/CLI MCP configuration.
 - Custom Commands: partial — CLI via plugin capabilities; IDE via global workflows rather than classic slash-command folders. Location: command-like behavior is via plugins/workflows rather than a documented standalone command folder.
+- Goal Command: none — Antigravity CLI docs cover plugins, sandbox, and slash commands but do not document a Codex-style `/goal` primitive.
 - Subagents: unknown
 - Transcripts: partial — Location: Antigravity brain/trajectory summaries are under `~/.gemini/antigravity/brain/<uuid>/*.md`; index data is in `~/Library/Application Support/Antigravity/User/globalStorage/state.vscdb`.
 - Model Selection: unknown — IDE model UI exists; agy --help does not expose a model flag as of this dataset.
@@ -128,6 +132,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Hooks: full — Supports lifecycle hooks.
 - Mcp Servers: full — Supports MCP servers. Location: project `.mcp.json` or Claude Code MCP config via `claude mcp`.
 - Custom Commands: full — Supports slash commands. Location: `.claude/commands/*.md` or `~/.claude/commands/*.md`.
+- Goal Command: full — Built-in `/goal` sets a completion condition; after each turn a fast evaluator decides whether Claude should continue until the condition holds (Claude Code v2.1.139+).
 - Subagents: full — Supports custom subagents.
 - Transcripts: full — Location: Claude Code CLI transcripts are JSONL under `~/.claude/projects/<proj-path-dashes>/<sessionId>.jsonl`.
 - Model Selection: full — Model can be configured.
@@ -149,12 +154,13 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Website: https://cline.bot/
 - Form factor: CLI, Extension, SDK
 - Released: Jul '24
-- Latest update: May '26
+- Latest update: Jun '26
 - Rules: full — Rich rule system: .clinerules/ directory, global ~/Documents/Cline/Rules/, conditional rules with YAML frontmatter globs, auto-detection of .cursorrules, .windsurfrules, AGENTS.md. Location: no public disk folder/file location found in docs reviewed.
 - Skills: full — Full skill system: SKILL.md files in .cline/skills/ or ~/.cline/skills/, YAML frontmatter, progressive loading, slash command triggering, skill toggles. Location: no public disk folder/file location found in docs reviewed.
 - Hooks: full — Lifecycle hooks via SDK plugin system: 18 hook stages (input, runtime_event, session_start, turn_start, tool_call_before/after, etc.). Also ~/.cline/hooks/ directory.
 - Mcp Servers: full — Full MCP support with STDIO and HTTP/SSE transports, MCP Marketplace for one-click install, cline mcp CLI wizard. Location: no public disk folder/file location found in docs reviewed.
 - Custom Commands: full — Built-in slash commands plus skills auto-register as slash commands. SDK plugins can also register custom commands. Location: no public disk folder/file location found in docs reviewed.
+- Goal Command: none — Cline supports custom slash commands via workflow files; no built-in `/goal` for auto-continuing until a completion condition.
 - Subagents: full — Full subagent system: use_subagents tool spawns parallel read-only research agents with separate context/token budgets.
 - Transcripts: unknown — Location: transcript/session disk storage was not found in public docs reviewed.
 - Model Selection: full — 30+ documented providers: Anthropic, OpenAI, Google, AWS Bedrock, Azure, GCP Vertex, OpenRouter (200+ models), Ollama, LM Studio, and any OpenAI-compatible endpoint.
@@ -177,12 +183,13 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Website: https://openai.com/codex/
 - Form factor: CLI, Extension, SDK, Web, Mac App
 - Released: Apr '25
-- Latest update: May '26
+- Latest update: Jun '26
 - Rules: full — Uses AGENTS.md instructions. Location: `AGENTS.md` in repo tree, plus user/project Codex config for defaults.
 - Skills: full — Supports SKILL.md-based skills. Location: `.codex/skills/<name>/SKILL.md`, `~/.codex/skills/<name>/SKILL.md`, or installed plugin skill folders.
 - Hooks: full — Supports Codex hooks.
 - Mcp Servers: full — Supports MCP servers. Location: `~/.codex/config.toml` under MCP/server configuration.
 - Custom Commands: partial — CLI supports slash-like workflows through prompts and tooling, but not a first-class command folder in this matrix. Location: no separate command folder documented; command-like workflows are provided by prompts, skills, plugins, and CLI slash commands.
+- Goal Command: full — Built-in `/goal` sets a persistent thread objective with pause, resume, view, and clear; Codex keeps working until the goal is met or you stop it. Enable with `features.goals` in config if missing from the slash menu.
 - Subagents: full — Codex supports sub-agent/delegation workflows in agent contexts.
 - Transcripts: full — Location: Codex session event streams are JSONL under `~/.codex/sessions/YYYY/MM/DD/rollout-<iso>-<id>.jsonl`.
 - Model Selection: full — CLI accepts model configuration/flags.
@@ -209,6 +216,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Hooks: full — Multi-step workflow automations are a core Agent Studio feature.
 - Mcp Servers: full — Agent Studio explicitly mentions MCP integration. Location: hosted/web/API-managed; no local disk folder documented.
 - Custom Commands: none — No coding-agent slash-command surface found. Location: hosted/web/API-managed; no local disk folder documented.
+- Goal Command: none — North is a hosted agent studio with automations/goals in the product sense, not a terminal `/goal` slash command.
 - Subagents: full — Agent-to-agent coordination is listed as an extensibility feature.
 - Transcripts: partial — Location: hosted/web/API-managed session history; no local transcript directory documented.
 - Model Selection: partial — Cohere model stack is selected through North/Cohere platform, not arbitrary coding-agent CLI flags.
@@ -236,6 +244,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Hooks: unknown — No lifecycle hooks documented for IDE or CLI.
 - Mcp Servers: full — Supports MCP servers in both IDE and CLI. Location: `.cursor/mcp.json` for project MCP servers or user-level Cursor MCP settings.
 - Custom Commands: full — CLI exposes full command controls; IDE has reusable rule/workflow patterns. Location: custom command support is through Cursor features/SDK rather than a repo command folder.
+- Goal Command: none — Cursor Agent CLI documents `/plan`, `/ask`, and `/resume` slash commands but no built-in `/goal` for persistent completion conditions.
 - Subagents: partial — Agent tasks are supported; first-class named subagents not modeled like Claude Code.
 - Transcripts: full — Location: Cursor CLI transcripts live under `~/.cursor/projects/<slug>/agent-transcripts/<agentId>/<agentId>.jsonl`; Cursor IDE composer data is in SQLite `~/Library/Application Support/Cursor/User/globalStorage/state.vscdb`.
 - Model Selection: full — Supports model settings in IDE and CLI.
@@ -263,6 +272,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Hooks: full — Automations engine: Slack/GitHub/Linear/schedule/cron/webhook triggers. Actions include start session, message session, triage. Payload filtering and secret auth.
 - Mcp Servers: full — MCP Marketplace with 40+ pre-built integrations. Supports STDIO, SSE, and HTTP transports. Custom MCP server tools for session/playbook/knowledge management. Location: hosted/web/API-managed; no local disk folder documented.
 - Custom Commands: full — Built-in slash commands (/plan, /review, /test, /think-hard, /implement) plus org-level custom slash commands. Also @skills:name syntax and macros. Location: hosted/web/API-managed; no local disk folder documented.
+- Goal Command: none — Devin supports team custom slash commands; no documented `/goal` for persistent thread-level objectives with auto-continuation.
 - Subagents: full — Yes, called 'Managed Devins'. Coordinator spawns child Devin sessions in isolated VMs for parallel work. Auto-triage also spawns sub-devins.
 - Transcripts: partial — Location: hosted/web/API-managed session history; no local transcript directory documented.
 - Model Selection: unknown — Not explicitly user-facing. Devin offers 'Fast Mode' (~2x faster at 4x ACU). No documentation about letting users choose the underlying LLM model.
@@ -290,6 +300,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Hooks: full — Lifecycle hooks are first-class slash-command managed features.
 - Mcp Servers: full — Supports stdio and HTTP MCP servers, registry browsing, env vars, and headers. Location: user `~/.factory/mcp.json` and project MCP configuration.
 - Custom Commands: full — Custom slash commands are directly managed in the CLI. Location: Factory custom slash-command configuration in project/user Factory config.
+- Goal Command: none — Factory documents custom slash commands via `/commands`; no built-in `/goal` for persistent objectives.
 - Subagents: full — Custom Droids are documented as subagents.
 - Transcripts: partial — Location: local searchable Droid session data is managed by Factory CLI; exact transcript database path is not documented in the CLI reference.
 - Model Selection: full — Model IDs can be selected with -m/--model and /model.
@@ -319,6 +330,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Hooks: full — Supports hooks in settings.
 - Mcp Servers: full — Supports MCP servers. Location: no public disk folder/file location found in docs reviewed.
 - Custom Commands: full — Supports commands. Location: no public disk folder/file location found in docs reviewed.
+- Goal Command: none — Deprecated Gemini CLI surface; no documented `/goal`. Google points CLI users to Antigravity, which also lacks a `/goal` command in public docs.
 - Subagents: unknown
 - Transcripts: unknown — Location: transcript/session disk storage was not found in public docs reviewed.
 - Model Selection: full — Model can be configured.
@@ -347,6 +359,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Hooks: full — Full lifecycle hook system: sessionStart, sessionEnd, userPromptSubmitted, preToolUse (approve/deny), postToolUse, agentStop, subagentStop, errorOccurred. .github/hooks/*.json.
 - Mcp Servers: full — Full MCP in cloud agent, CLI, and IDE. Supports local, stdio, http, sse transports. Built-in GitHub MCP server. Enterprise allowlist controls. Location: no public disk folder/file location found in docs reviewed.
 - Custom Commands: partial — Built-in slash commands in IDE (/fix, /tests, /explain, /help) and CLI (/delegate, /pr, /resume). Prompt files (*.prompt.md) for reusable snippets. No user-defined custom slash commands. Location: no public disk folder/file location found in docs reviewed.
+- Goal Command: none — GitHub Copilot CLI has slash commands and agent modes but no `/goal` for persistent completion conditions across turns.
 - Subagents: full — Subagents in VS Code and JetBrains IDE agent mode. Isolated context window. Invocation: automatic, direct, or via #runSubagent. Cannot create sub-subagents.
 - Transcripts: unknown — Location: transcript/session disk storage was not found in public docs reviewed.
 - Model Selection: full — Models from Anthropic, Google, OpenAI, xAI. Auto model selection available. Each model has a premium request multiplier.
@@ -374,6 +387,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Hooks: full — Hooks are explicitly listed as supported.
 - Mcp Servers: full — MCP servers work out of the box according to xAI. Location: MCP server configuration picked up from the repo/tooling; exact disk root not yet public.
 - Custom Commands: unknown — Slash command UX exists, but public docs do not yet show user-defined commands. Location: custom command folder not documented; slash UX exists for built-ins like `/feedback`.
+- Goal Command: none — Grok Build launch materials mention plugins, hooks, and skills but not a `/goal` slash command.
 - Subagents: full — Delegates larger tasks to specialized parallel subagents, with worktree integration.
 - Transcripts: unknown — Location: transcript/session disk storage is not documented in the public beta launch page.
 - Model Selection: partial — Launch screenshot references config.toml for models and API keys; model catalog details are not yet public.
@@ -401,6 +415,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Hooks: partial — GitHub issue label assignment acts as a lightweight trigger.
 - Mcp Servers: unknown — No public MCP server configuration found. Location: hosted/web/API-managed; no local disk folder documented.
 - Custom Commands: none — Prompt and issue assignment workflow, not user-defined slash commands. Location: hosted/web/API-managed; no local disk folder documented.
+- Goal Command: none — Jules is a hosted async agent for GitHub issues/PRs; no interactive `/goal` slash command in public docs.
 - Subagents: partial — Plan tiers advertise multi-agent development and high concurrent task counts.
 - Transcripts: partial — Location: hosted/web/API-managed session history; no local transcript directory documented.
 - Model Selection: partial — Tier-dependent model access; not arbitrary model selection.
@@ -428,6 +443,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Hooks: none — No lifecycle hook system found.
 - Mcp Servers: unknown — No Junie-specific MCP configuration found in public docs reviewed. Location: no public disk folder/file location found in docs reviewed.
 - Custom Commands: unknown — No custom slash-command system found. Location: no public disk folder/file location found in docs reviewed.
+- Goal Command: none — Junie runs as an IDE agent with tasks and modes; no built-in `/goal` slash command documented.
 - Subagents: unknown — No first-class subagent docs found.
 - Transcripts: unknown — Location: transcript/session disk storage was not found in public docs reviewed.
 - Model Selection: partial — Enterprise docs mention JetBrains AI service plus selected OpenAI/Bedrock models.
@@ -450,12 +466,13 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Website: https://kilo.ai/
 - Form factor: CLI, Extension
 - Released: Feb '26
-- Latest update: May '26
+- Latest update: Jun '26
 - Rules: full — Full support: Project Rules (via instructions key in kilo.jsonc), Global Rules (same in ~/.config/kilo/kilo.jsonc), AGENTS.md, CLAUDE.md, CONTEXT.md. Location: no public disk folder/file location found in docs reviewed.
 - Skills: full — Full Agent Skills standard. SKILL.md files with YAML frontmatter. Global ~/.kilo/skills/, project .kilo/skills/. Compat with .claude/skills/, .agents/skills/. Location: no public disk folder/file location found in docs reviewed.
 - Hooks: full — Full support via Plugin system. Lifecycle hooks: config, event (bus events), tool hooks (execute.before/after), chat hooks, permission hooks, provider hooks. 17+ hook types.
 - Mcp Servers: full — Full MCP support. Local (STDIO) and remote (HTTP Streamable) transports. OAuth 2.0. Tool permissions via allow/ask/deny. Built-in Playwright MCP. Location: no public disk folder/file location found in docs reviewed.
 - Custom Commands: full — Full support via Workflows (slash commands). Markdown files in ~/.config/kilo/commands/ or .kilo/commands/. YAML frontmatter with description, agent, model. Location: no public disk folder/file location found in docs reviewed.
+- Goal Command: none — Kilo Code uses custom workflows/slash commands; no first-party `/goal` for persistent session objectives.
 - Subagents: full — Full subagent support. Custom modes/agents with mode property: primary, subagent, or all. Per-agent prompts, models, permissions, temperature. task tool spawns sub-agents.
 - Transcripts: unknown — Location: transcript/session disk storage was not found in public docs reviewed.
 - Model Selection: full — 500+ models via 15+ providers. Switch mid-session with /models. Per-agent model pinning. CLI flags: -m, --model. Auto model routing.
@@ -478,12 +495,13 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Website: https://kimi.moonshot.cn/
 - Form factor: CLI, Extension, SDK
 - Released: Oct '25
-- Latest update: May '26
+- Latest update: Jun '26
 - Rules: full — Full AGENTS.md support. Hierarchical loading from git root to working dir, including .kimi/AGENTS.md at each level (32 KiB budget). /init command auto-generates AGENTS.md. Location: no public disk folder/file location found in docs reviewed.
 - Skills: full — Full Agent Skills format (SKILL.md with YAML frontmatter). Four-tier auto-discovery. Cross-compatible with Claude/Codex skill dirs. Flow skills with Mermaid/D2 flowcharts. Location: no public disk folder/file location found in docs reviewed.
 - Hooks: partial — Supported (Beta). 13 lifecycle events: PreToolUse, PostToolUse, SessionStart, SessionEnd, SubagentStart/Stop, PreCompact, PostCompact, Notification. Shell commands via stdin.
 - Mcp Servers: full — Full MCP support. Transport: streamable HTTP, stdio, OAuth. kimi mcp add/list/test/remove/auth commands. Config in ~/.kimi/mcp.json. Location: no public disk folder/file location found in docs reviewed.
 - Custom Commands: partial — Custom plugins (Beta) via plugin.json with executable scripts. Slash commands (/skill:, /flow:) serve as custom invocation. No arbitrary custom aliases in config. Location: no public disk folder/file location found in docs reviewed.
+- Goal Command: none — Kimi Code CLI docs cover core operations and plugins but not a `/goal` command.
 - Subagents: full — Full subagent support. Built-in types: coder, explore, plan. YAML agent files with inheritance. Agent tool with subagent_type, model, resume, run_in_background params.
 - Transcripts: unknown — Location: transcript/session disk storage was not found in public docs reviewed.
 - Model Selection: full — Full model selection. Provider types: kimi, openai_legacy, openai_responses, anthropic, gemini, vertexai. /model interactive picker. CLI flags: --model, --thinking.
@@ -511,6 +529,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Hooks: full — Smart hooks are documented as core CLI features.
 - Mcp Servers: full — Native MCP support in IDE and CLI. Location: `.kiro/mcp.json` / Kiro MCP configuration.
 - Custom Commands: full — CLI has slash commands and prompt/custom-agent workflows. Location: CLI slash commands are built in; custom agents/prompts are managed in Kiro custom-agent configuration.
+- Goal Command: none — Kiro CLI documents slash-style commands but no built-in `/goal` for persistent objectives.
 - Subagents: full — Built-in subagents for context gathering and parallel general-purpose tasks.
 - Transcripts: partial — Location: Kiro CLI uses directory-based conversation persistence; exact transcript directory is not specified in the public docs reviewed.
 - Model Selection: full — CLI /model displays and selects available models.
@@ -531,14 +550,15 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Docs: https://opencode.ai/docs/
 - GitHub: https://github.com/sst/opencode
 - Website: https://opencode.ai/
-- Form factor: CLI, Extension, SDK
+- Form factor: CLI, Extension, SDK, Mac App
 - Released: 2025
-- Latest update: May '26
+- Latest update: Jun '26
 - Rules: full — Supports instruction/config files. Location: `AGENTS.md` and opencode config files in the repo/user config scope.
 - Skills: full — Supports skills. Location: opencode Agent Skills are stored as skill folders with `SKILL.md` according to the configured scope.
 - Hooks: full — Config supports commands/hooks workflows.
 - Mcp Servers: full — Supports MCP servers. Location: `opencode.json` / opencode config MCP server entries.
 - Custom Commands: full — Supports commands. Location: opencode custom commands are configured under opencode command/config files, not shell aliases.
+- Goal Command: none — Built-in TUI commands are `/init`, `/undo`, `/redo`, `/share`, and `/help` only; no first-party `/goal` for persistent session objectives yet.
 - Subagents: full — Supports custom agents.
 - Transcripts: full — Location: OpenCode stores sessions/messages in SQLite `~/.local/share/opencode/opencode.db`; legacy storage uses `~/.local/share/opencode/storage/session|message|part/`.
 - Model Selection: full — Supports provider/model selection.
@@ -554,18 +574,48 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Custom Model Provider: full — Supports many providers and custom provider configuration.
 - Pricing: Free (MIT, BYOK), Go $10/mo (first month $5), Zen pay-per-token (min $20), Enterprise per-seat
 
+### Pi
+- Docs: https://pi.dev/docs/latest
+- GitHub: https://github.com/earendil-works/pi
+- Website: https://pi.dev
+- Form factor: CLI, SDK
+- Released: May '26
+- Latest update: Jun '26
+- Rules: full — Loads `AGENTS.md` and `CLAUDE.md` from `~/.pi/agent/`, ancestors, and cwd. Supports global and project context files with path-based precedence.
+- Skills: full — Discovers skills from `~/.pi/agent/skills/`, `~/.agents/skills/`, `.pi/skills/`, and `.agents/skills/`, including `SKILL.md` directories. Supports `/skill:name` command registration and cross-harness imports (e.g. Claude/ Codex).
+- Hooks: full — Extension API supports lifecycle/tool hooks via TypeScript extensions, including tool event hooks and custom event handlers. Full extension-based hook model from docs and examples.
+- Mcp Servers: none — README explicitly states no MCP. MCP-like capabilities can be built via extensions instead.
+- Custom Commands: full — Rich slash-command UI includes built-ins like `/model`, `/resume`, `/tree`, `/fork`, `/clone`, `/compact`, `/export`, `/share`, `/settings`, and `/login`.
+- Goal Command: none — No `/goal` concept is documented; README is explicit about what is *not* built in (including plan mode and no-permission prompts).
+- Subagents: none — README says "No sub-agents." suggests using spawned pi instances/context tools instead of native subagent orchestration.
+- Transcripts: full — Sessions are saved automatically to `~/.pi/agent/sessions/` with session IDs and `/session` command showing file and metadata.
+- Model Selection: full — Model/provider selection is fully exposed with `/model` in interactive mode and `--provider`, `--model`, `--models` CLI options.
+- Approval Mode: none — Philosophy page says there are no permission popups by default and no approval mode is documented as a first-class control.
+- Sandbox Mode: none — No sandbox mode setting is documented; README points users to tmux/container-like patterns instead of built-in sandbox controls.
+- Resume: full — Sessions can be resumed with `pi -r/--resume`, `--session`, and interactive `/resume` + `/fork`/`/clone` branch flow.
+- Continue: full — Continue latest session with `-c/--continue`; also supports session browsing and tree-based continuation commands in-session.
+- Non Interactive: full — Supports print mode (`-p/--print`) and machine-friendly transports (`--mode json`, `--mode rpc`) for scripted/CI usage.
+- Output Format: full — `--mode json` outputs JSON lines and JSON mode docs exist for event streaming consumers and integrations.
+- Statusline: none — Interactive UI includes a built-in footer/status area but no documented customization API for a user-defined status line.
+- Telemetry: partial — Telemetry is configurable via `enableInstallTelemetry` and can be disabled; `PI_SKIP_VERSION_CHECK` and offline modes control network checks.
+- Hosted Agent: none — CLI is local-first; no dedicated hosted runtime platform is documented.
+- Custom Model Provider: full — Supports custom provider/API integration through `~/.pi/agent/models.json` and custom provider registration hooks for OpenAI-compatible, Anthropic, Google, and custom flows.
+- Pricing: Free (MIT)
+- Notes: Pi is a minimal terminal coding harness with extensibility-first defaults (extensions, skills, prompt templates, themes, packages), plus SDK and RPC/event-stream integrations.
+
 ### Qwen Code
 - Docs: https://qwenlm.github.io/qwen-code-docs/en/users/overview
 - GitHub: https://github.com/QwenLM/qwen-code
 - Website: https://qwenlm.github.io/qwen-code-docs/
 - Form factor: CLI, Extension, SDK
 - Released: Jun '25
-- Latest update: May '26
+- Latest update: Jun '26
 - Rules: full — Hierarchical context files (QWEN.md) at project/user levels. Custom system prompts via --system-prompt and --append-system-prompt. Layered config across system/user/project/env/cli. Location: Qwen Code project/user instruction files and extension packages; commonly `AGENTS.md`-style repo context plus Qwen config.
 - Skills: full — Full Agent Skills system: SKILL.md with YAML frontmatter, model-invoked, personal (~/.qwen/skills/) and project (.qwen/skills/), path gating, extension skills. Location: Qwen Code extensions package skills via `qwen-extension.json`.
 - Hooks: full — 14 hook events: PreToolUse, PostToolUse, SessionStart, SessionEnd, SubagentStart/Stop, PreCompact, PostCompact, Notification, PermissionRequest. Three executors: command, http, function.
 - Mcp Servers: full — Full MCP: stdio, SSE, HTTP transports. OAuth 2.0, tool filtering, server trust, global allow/deny lists. CLI management via qwen mcp commands. Location: Qwen Code MCP settings in Qwen config/extension packages.
 - Custom Commands: full — Full custom commands: Markdown files in ~/.qwen/commands/ (global) and .qwen/commands/ (project). Support {{args}}, !{shell}, @{file} references. Namespace support. Location: Qwen Code extensions can package custom commands via `qwen-extension.json`.
+- Goal Command: none — Qwen Code supports custom shortcut commands; no built-in `/goal` for auto-continuing until a completion condition.
 - Subagents: full — Full subagent system: named subagents with YAML frontmatter, fork subagents (context-inheriting), per-agent model/permission/tool config, extension subagents.
 - Transcripts: unknown — Location: transcript/session disk storage was not found in public docs reviewed.
 - Model Selection: full — Full model switching via /model. Supports OpenAI-compatible, Anthropic, Gemini protocols. Local models via Ollama/vLLM. Per-model reasoning config.
@@ -593,6 +643,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Hooks: partial — Agent 3 can run autonomous test/fix loops, but not general user-defined lifecycle hooks.
 - Mcp Servers: unknown — No MCP configuration found in public Agent docs. Location: hosted/web/API-managed; no local disk folder documented.
 - Custom Commands: none — Prompt/chat workflow, not user-defined slash-command folders. Location: hosted/web/API-managed; no local disk folder documented.
+- Goal Command: none — Replit Agent is a hosted web agent; no terminal `/goal` slash command.
 - Subagents: partial — Agent 3 can build agents and run background tasks, but no first-class custom subagent framework found.
 - Transcripts: partial — Location: hosted/web/API-managed session history; no local transcript directory documented.
 - Model Selection: none — No user model selection for Replit Agent found.
@@ -621,6 +672,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Hooks: none — No lifecycle hooks system found in any documentation. Built-in slash commands exist but no user-defined lifecycle hooks.
 - Mcp Servers: full — Full MCP since v2.2.0. STDIO, Streamable HTTP, SSE transports. Roo Code Marketplace for one-click MCP install. Per-tool alwaysAllow permissions. Location: no public disk folder/file location found in docs reviewed.
 - Custom Commands: full — Full slash commands: .roo/commands/ (project) and ~/.roo/commands/ (global). Frontmatter with description, argument-hint, mode targeting. Built-in /init command. Location: no public disk folder/file location found in docs reviewed.
+- Goal Command: none — Roo Code supports custom slash commands; no built-in `/goal` for persistent session objectives.
 - Subagents: full — Full orchestration via Orchestrator Mode (Boomerang Mode). new_task tool delegates to specialized modes. Isolated context with explicit context transfer.
 - Transcripts: unknown — Location: transcript/session disk storage was not found in public docs reviewed.
 - Model Selection: full — 22+ documented providers: Anthropic, OpenAI, AWS Bedrock, DeepSeek, Google Gemini, LM Studio, Ollama, OpenRouter, and more. Sticky models per mode.
@@ -648,6 +700,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Hooks: full — 12 hook events: pre/post read/write code, pre/post run command, pre/post MCP tool use, pre/post user prompt, post cascade response. Pre-hooks can block with exit code 2.
 - Mcp Servers: full — Full native MCP. MCP Marketplace with one-click install. stdio, Streamable HTTP, SSE transports. OAuth support. Admin whitelists for teams. Location: no public disk folder/file location found in docs reviewed.
 - Custom Commands: full — Custom commands via Workflows (slash commands /[workflow-name]) and Command palette. Terminal has 4 auto-execution levels. Location: no public disk folder/file location found in docs reviewed.
+- Goal Command: none — Windsurf Cascade has workflows and hooks but no documented `/goal` slash command for persistent objectives.
 - Subagents: full — Devin Cloud (autonomous agent on own VM), Devin Local Agent, Fast Context (specialized 20x faster retrieval), Agent Command Center manages all agents in Kanban view.
 - Transcripts: unknown — Location: transcript/session disk storage was not found in public docs reviewed.
 - Model Selection: full — Full selection: SWE-1.6/1.5, Claude Opus/Sonnet, GPT-5.x series, Gemini, DeepSeek V4, Kimi, Grok, and more. Adaptive (intelligent router) and Arena Mode (side-by-side).

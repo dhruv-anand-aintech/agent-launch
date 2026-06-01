@@ -55,6 +55,11 @@
     "source_url": "https://docs.windsurf.com/windsurf/cascade/workflows#how-to-create-a-workflow:~:text=How%20to%20Create%20a%20Workflow",
     "comment": "Custom commands via Workflows (slash commands /[workflow-name]) and Command palette. Terminal has 4 auto-execution levels. Location: no public disk folder/file location found in docs reviewed."
   },
+  "goal_command": {
+    "support": "none",
+    "source_url": "https://docs.windsurf.com/windsurf/cascade/cascade#source:~:text=Cascade",
+    "comment": "Windsurf Cascade has workflows and hooks but no documented `/goal` slash command for persistent objectives."
+  },
   "subagents": {
     "support": "full",
     "source_url": "https://docs.windsurf.com/windsurf/devin#delegating-work-to-devin:~:text=Delegating%20Work%20to%20Devin",
@@ -62,7 +67,7 @@
   },
   "model_selection": {
     "support": "full",
-    "source_url": "https://docs.windsurf.com/windsurf/models#source:~:text=Models",
+    "source_url": "https://docs.windsurf.com/windsurf/models#page-title:~:text=Models",
     "comment": "Full selection: SWE-1.6/1.5, Claude Opus/Sonnet, GPT-5.x series, Gemini, DeepSeek V4, Kimi, Grok, and more. Adaptive (intelligent router) and Arena Mode (side-by-side)."
   },
   "approval_mode": {
@@ -87,7 +92,7 @@
   },
   "non_interactive": {
     "support": "partial",
-    "source_url": "https://docs.windsurf.com/#set-up:~:text=windsurf%20CLI",
+    "source_url": "https://docs.windsurf.com/#set-up:~:text=Windsurf",
     "comment": "windsurf CLI available in PATH. Devin CLI agent runs in terminal. No documented --non-interactive flag for the IDE."
   },
   "output_format": {
@@ -102,12 +107,12 @@
   },
   "telemetry": {
     "support": "partial",
-    "source_url": "https://docs.windsurf.com/troubleshooting/plugins-common-issues#source:~:text=telemetry",
+    "source_url": "https://docs.windsurf.com/troubleshooting/plugins-common-issues#how-do-i-disable-code-snippet-telemetry:~:text=telemetry",
     "comment": "Telemetry settings mentioned in troubleshooting docs. Enterprise analytics API. No documented granular telemetry opt-out beyond standard VS Code settings."
   },
   "custom_model_provider": {
     "support": "partial",
-    "source_url": "https://windsurf.com/changelog#source:~:text=BYOK%20(Anthropic%20Key)",
+    "source_url": "https://windsurf.com/changelog#byok-anthropic-key:~:text=BYOK%20(Anthropic%20Key)",
     "comment": "BYOK for Anthropic models (Claude Sonnet 4, Opus 4) for Free/Pro users. No generic custom OpenAI-compatible endpoint configuration documented."
   },
   "notes": "Windsurf by Codeium (acquired by Cognition AI in April 2026) is a standalone VS Code fork IDE with integrated coding agent (Cascade). Enterprise analytics API only; no agent embed SDK. Competes directly with Cursor IDE.",

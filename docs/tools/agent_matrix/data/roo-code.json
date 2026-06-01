@@ -10,7 +10,7 @@
     "values": [
       "Extension"
     ],
-    "source_url": "https://docs.roocode.com/getting-started/installing#source:~:text=Extension",
+    "source_url": "https://roocodeinc.github.io/Roo-Code/getting-started/installing/#getting-support:~:text=Extension",
     "comment": "VS Code extension + CLI. Per-form-factor links: Extension: https://docs.roocode.com/getting-started/installing.",
     "links": {
       "Extension": "https://docs.roocode.com/getting-started/installing"
@@ -18,17 +18,17 @@
   },
   "released_in": {
     "value": "Mid-2025",
-    "source_url": "https://github.com/RooCodeInc/Roo-Code/releases/tag/v3.54.0#source:~:text=Release%20v3.54.0",
+    "source_url": "https://github.com/RooCodeInc/Roo-Code/releases/tag/v3.54.0#release-v3540:~:text=Release%20v3.54.0",
     "comment": "Forked from Cline. Earliest releases ~mid-2025. Reached v3.54.0 by shutdown on May 15, 2026."
   },
   "latest_major_update": {
     "value": "May '26",
-    "source_url": "https://github.com/RooCodeInc/Roo-Code/releases/tag/v3.54.0#source:~:text=Release%20v3.54.0",
+    "source_url": "https://github.com/RooCodeInc/Roo-Code/releases/tag/v3.54.0#release-v3540:~:text=Release%20v3.54.0",
     "comment": "Final release v3.54.0 on May 15, 2026 (shutdown/sunsetting release). Repository archived, read-only."
   },
   "rules": {
     "support": "full",
-    "source_url": "https://docs.roocode.com/features/custom-instructions#source:~:text=Global%20Rules%20Directory%2CApply%20to%20all%20projects%20automatically",
+    "source_url": "https://docs.roocode.com/features/custom-instructions#global-rules-directory:~:text=Global%20Rules%20Directory%3A%20Apply%20to%20all%20projects%20automatically.",
     "comment": "Comprehensive: .roorules, .roo/rules/, .clinerules fallback, ~/.roo/rules/ global dir, AGENTS.md/AGENT.md support, mode-specific rules via rules-{modeSlug}. Location: no public disk folder/file location found in docs reviewed."
   },
   "skills": {
@@ -48,8 +48,13 @@
   },
   "custom_commands": {
     "support": "full",
-    "source_url": "https://docs.roocode.com/features/slash-commands#source:~:text=Custom%20commands%20extend%20Roo%20Code%27s%20functionality%20by%20adding%20markdown%20files%20to%20specific%20directories",
+    "source_url": "https://roocodeinc.github.io/Roo-Code/features/slash-commands/#creating-custom-commands:~:text=Custom%20commands%20extend%20Roo%20Code%27s%20functionality%20by%20adding%20markdown%20files%20to%20specific%20directories",
     "comment": "Full slash commands: .roo/commands/ (project) and ~/.roo/commands/ (global). Frontmatter with description, argument-hint, mode targeting. Built-in /init command. Location: no public disk folder/file location found in docs reviewed."
+  },
+  "goal_command": {
+    "support": "none",
+    "source_url": "https://docs.roocode.com/features/slash-commands#source:~:text=slash%20commands",
+    "comment": "Roo Code supports custom slash commands; no built-in `/goal` for persistent session objectives."
   },
   "subagents": {
     "support": "full",
@@ -73,7 +78,7 @@
   },
   "resume": {
     "support": "partial",
-    "source_url": "https://docs.roocode.com/features/checkpoints#source:~:text=Restore%20Files%20%26%20Task%20%2D%20Reverts%20both%20workspace%20files%20AND%20removes%20all%20subsequent%20conversation%20messages",
+    "source_url": "https://roocodeinc.github.io/Roo-Code/features/checkpoints/#restoring-checkpoints:~:text=Restore%20Files%20%26%20Task%20%2D%20Reverts%20both%20workspace%20files%20AND%20removes%20all%20subsequent%20conversation%20messages",
     "comment": "Checkpoints provide 'Restore Files & Task'. CLI has --create-with-session-id and session resume/history support (v3.51.0+)."
   },
   "continue": {
@@ -88,7 +93,7 @@
   },
   "output_format": {
     "support": "partial",
-    "source_url": "https://github.com/RooCodeInc/Roo-Code/releases/tag/cli-v0.1.17#source:~:text=%2D%2Dcreate%2Dwith%2Dsession%2Did",
+    "source_url": "https://github.com/RooCodeInc/Roo-Code/releases/tag/cli-v0.1.17#added:~:text=%2D%2Dcreate%2Dwith%2Dsession%2Did",
     "comment": "CLI supports NDJSON stdin stream protocol for structured I/O. exitCode in tool_result events. No formal --json or --print flag."
   },
   "statusline": {
@@ -103,13 +108,13 @@
   },
   "custom_model_provider": {
     "support": "full",
-    "source_url": "https://docs.roocode.com/providers/openai-compatible#source:~:text=OpenAI%20Compatible",
+    "source_url": "https://docs.roocode.com/providers/openai-compatible#using-openai-compatible-providers-with-roo-code:~:text=OpenAI%20Compatible",
     "comment": "OpenAI Compatible provider for arbitrary API endpoints. LiteLLM routing. 22+ built-in providers. Debug proxy support. Model-agnostic."
   },
   "notes": "Roo Code was a popular Cline fork (24k stars, 574k VS Code installs) that was shut down on May 15, 2026. The repository is now archived and read-only. VS Code extension-host API only; no standalone npm agent SDK. Community forks include ZooCode and Cline.",
   "pricing": {
     "value": "Free (Apache-2.0)",
-    "source_url": "https://docs.roocode.com/faq#source:~:text=The%20Roo%20Code%20extension%20is%20free%20and%20open%2Dsource",
+    "source_url": "https://roocodeinc.github.io/Roo-Code/faq/#is-roo-code-free-to-use:~:text=The%20Roo%20Code%20extension%20is%20free%20and%20open%2Dsource",
     "comment": "Free and open-source (Apache 2.0). Users paid their own LLM provider API costs. Roo Code Router was a paid routing service. Now discontinued."
   },
   "hosted_agent": {

@@ -32,7 +32,7 @@ function faviconSrc(agent) {
 }
 
 function metaTags() {
-  const desc = "Compare 16 coding agents, AI coding CLIs, and IDEs across 17 features. Each cell sourced from official docs.";
+  const desc = "Compare 16 coding agents, AI coding CLIs, and IDEs across 18 features. Each cell sourced from official docs.";
   return `
     <meta name="description" content="${htmlEscape(desc)}">
     <meta name="robots" content="index, follow">
@@ -40,6 +40,35 @@ function metaTags() {
     <meta property="og:title" content="Coding Agent Feature Matrix">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Coding Agent Feature Matrix">`;
+}
+
+function feedbackIssueUrl() {
+  const body = [
+    "## What should be fixed?",
+    "",
+    "<!-- Describe the wrong/missing matrix value, broken link, or UX issue. -->",
+    "",
+    "## Matrix location",
+    "",
+    "- Agent/tool:",
+    "- Attribute/row:",
+    "- Current value:",
+    "- Expected value:",
+    "",
+    "## Source or evidence",
+    "",
+    "<!-- Paste the official docs/source link that supports the correction. -->",
+    "",
+    "## Extra context",
+    "",
+    "<!-- Screenshots, notes, or reproduction steps. -->",
+  ].join("\n");
+  const params = new URLSearchParams({
+    title: "Matrix feedback: ",
+    body,
+    labels: "matrix,feedback",
+  });
+  return `https://github.com/dhruv-anand-aintech/agent-launch/issues/new?${params.toString()}`;
 }
 
 function formatUpdatedLabel(iso) {
@@ -103,6 +132,8 @@ a { color: inherit; text-decoration: none; }
   background: #fff; padding: 3px 8px; font-size: 12px; color: var(--ink); white-space: nowrap;
 }
 .gh-btn:hover { background: #f0eeeb; }
+.feedback-btn { border-color: var(--accent); color: var(--accent); font-weight: 650; }
+.feedback-btn:hover { background: #e8f1ee; }
 .hero { padding: 10px 14px 8px; border-bottom: 1px solid var(--line); background: var(--panel); }
 .hero p { margin: 0; color: var(--muted); font-size: 12px; }
 .meta-row { margin-top: 6px; display: flex; gap: 6px; flex-wrap: wrap; }
@@ -148,8 +179,9 @@ td.cell-wrap { position: relative; cursor: default; }
 td.cell-wrap.has-source { cursor: pointer; }
 td.cell-wrap:hover { outline: 1.5px solid var(--line-strong); outline-offset: -1px; }
 td.cell-wrap .cell-value,
-td.cell-wrap .support,
-td.cell-wrap .form-tags { position: relative; z-index: 1; pointer-events: none; }
+td.cell-wrap .support { position: relative; z-index: 1; pointer-events: none; }
+td.cell-wrap .cell-value,
+td.cell-wrap .form-tags { position: relative; z-index: 1; }
 td.cell-wrap .dot {
   display: inline-flex; align-items: center; justify-content: center;
   width: 16px; height: 16px; border-radius: 50%; color: #fff; font-size: 9px; line-height: 1;
@@ -184,15 +216,22 @@ td.cell-wrap .dot {
 .cell-tip {
   display: none; position: fixed; left: 0; top: 0; transform: none;
   background: #2a241b; color: #f6f4ee; font-size: 10px; line-height: 1.35; padding: 6px 8px;
-  border-radius: 3px; z-index: 60; pointer-events: none; width: max-content; max-width: min(680px, calc(100vw - 16px)); white-space: normal;
+  border-radius: 3px; z-index: 60; pointer-events: auto; width: max-content; max-width: min(520px, calc(100vw - 16px)); white-space: normal;
   overflow-wrap: anywhere;
   outline: 1px solid #555; text-align: left; font-weight: 400;
+  box-shadow: 0 8px 24px rgba(23, 19, 13, .22);
 }
 .cell-tip-note { display: block; }
 .cell-tip-url {
   display: block; margin-top: 4px; padding-top: 4px; border-top: 1px solid rgba(246,244,238,.22);
   color: #d8d1c4; font-size: 8px; line-height: 1.25;
 }
+.cell-tip a { color: #fff7d1; text-decoration: underline; text-underline-offset: 2px; }
+.cell-tip-links {
+  display: grid; grid-template-columns: repeat(2, minmax(0, max-content)); gap: 3px 8px;
+  margin-top: 5px; padding-top: 5px; border-top: 1px solid rgba(246,244,238,.22);
+}
+.cell-tip-link { white-space: nowrap; }
 td.value { font-size: 9px; color: var(--muted); line-height: 1.25; white-space: normal; max-width: 110px; }
 .form-tags { display: flex; flex-wrap: wrap; gap: 1px; justify-content: center; }
 .form-tag { border: 1px solid var(--line); background: #fff; padding: 1px 2px; font-size: 8px; }
@@ -224,6 +263,7 @@ td.value { font-size: 9px; color: var(--muted); line-height: 1.25; white-space: 
 <header class="topbar">
   <a class="brand" href="/"><span class="mark">AL</span><span>Coding Agent Feature Matrix</span></a>
   <nav class="topnav">
+    <a href="${htmlEscape(feedbackIssueUrl())}" class="gh-btn feedback-btn" target="_blank" rel="noreferrer">Report fix</a>
     <a href="https://github.com/dhruv-anand-aintech/agent-launch" class="gh-btn" target="_blank" rel="noreferrer">
       <svg width="13" height="13" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
       Star
@@ -231,7 +271,7 @@ td.value { font-size: 9px; color: var(--muted); line-height: 1.25; white-space: 
   </nav>
 </header>
 <section class="hero">
-  <p>Compare ${htmlEscape(matrix.length)} AI coding agents across 17 features. Hover a column for agent name, drag to reorder, click to toggle visibility.</p>
+  <p>Compare ${htmlEscape(matrix.length)} AI coding agents across 18 features. Hover a column for agent name, drag to reorder, click to toggle visibility.</p>
   <div class="meta-row">
     <span class="pill">${htmlEscape(matrix.length)} agents</span>
     <span class="pill" id="updatedPill" data-updated-at="${htmlEscape(updatedAt)}">${htmlEscape(formatUpdatedLabel(updatedAt))}</span>
@@ -357,12 +397,20 @@ function esc(v) { return String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'
 function rowLabelCell(label, extraClass, extraAttrs) {
   return '<td class="row-label'+extraClass+'"'+extraAttrs+'><span class="row-label-tip">'+esc(label)+'</span>'+esc(label)+'</td>';
 }
-function cellTipHtml(comment, sourceUrl) {
-  if (!comment && !sourceUrl) return '';
-  var html = '<span class="cell-tip">';
+function cellTipHtml(comment, sourceUrl, links) {
+  var linkEntries = links ? Object.entries(links).filter(function(entry){ return entry[1]; }) : [];
+  if (!comment && !sourceUrl && !linkEntries.length) return '';
+  var html = '<div class="cell-tip">';
   if (comment) html += '<span class="cell-tip-note">'+esc(comment)+'</span>';
-  if (sourceUrl) html += '<span class="cell-tip-url">'+esc(sourceUrl)+'</span>';
-  return html + '</span>';
+  if (linkEntries.length) {
+    html += '<span class="cell-tip-links">';
+    linkEntries.forEach(function(entry){
+      html += '<a class="cell-tip-link" href="'+esc(entry[1])+'" target="_blank" rel="noopener noreferrer">'+esc(entry[0])+'</a>';
+    });
+    html += '</span>';
+  }
+  if (sourceUrl) html += '<a class="cell-tip-url" href="'+esc(sourceUrl)+'" target="_blank" rel="noopener noreferrer">Source: '+esc(sourceUrl)+'</a>';
+  return html + '</div>';
 }
 var COLORS = ['#176b5b','#2d4f9e','#9a3c32','#a35f00','#4a6fa5','#7b4f9e','#27ae60','#8e44ad','#d35400','#16a085','#2c3e50','#f39c12','#1abc9c','#34495e','#e74c3c','#2980b9','#c0392b'];
 function agentInitials(name) {
@@ -387,10 +435,10 @@ function favimg(agent, idx) {
 function cell(agent, col) {
   var v = agent[col.key];
   if (!v) return '<td>&mdash;</td>';
-  var tip = cellTipHtml(v.comment, v.source_url);
   if (col.key==='form_factor') {
     var tags = sortFormFactors((v.values||[v.value]).filter(Boolean));
     var links = v.links || {};
+    var tip = cellTipHtml(v.comment, v.source_url, links);
     var tagHtml = tags.map(function(x){
       var href = links[x];
       if (href) return '<a class="form-tag" href="'+esc(href)+'" target="_blank" rel="noreferrer">'+esc(x)+'</a>';
@@ -399,6 +447,7 @@ function cell(agent, col) {
     if (agent.deprecated) tagHtml += '<span class="form-tag deprecated-tag">deprecated</span>';
     return '<td class="cell-wrap"><div class="form-tags">'+tagHtml+'</div>'+tip+'</td>';
   }
+  var tip = cellTipHtml(v.comment, v.source_url);
   var hasSrc = !!v.source_url;
   var link = hasSrc ? '<a class="cell-link" href="'+esc(v.source_url)+'" target="_blank" rel="noreferrer" title="Open source" aria-label="Open source"></a>' : '';
   var mark = hasSrc ? '<span class="source-mark" aria-hidden="true"></span>' : '';
@@ -505,7 +554,12 @@ function setupCellTips() {
   document.querySelectorAll('.cell-wrap .cell-tip').forEach(function(tip){
     var cell = tip.closest('.cell-wrap');
     if (!cell) return;
-    cell.addEventListener('mouseenter', function(){
+    var hideTimer = null;
+    function showTip(){
+      if (hideTimer) {
+        clearTimeout(hideTimer);
+        hideTimer = null;
+      }
       tip.style.display = 'block';
       tip.style.visibility = 'hidden';
       tip.style.left = '0px';
@@ -513,19 +567,32 @@ function setupCellTips() {
       var cr = cell.getBoundingClientRect();
       var tr = tip.getBoundingClientRect();
       var margin = 8;
-      var left = cr.left + (cr.width / 2) - (tr.width / 2);
+      var left = cr.right + 6;
+      if (left + tr.width > window.innerWidth - margin) left = cr.left - tr.width - 6;
       left = Math.max(margin, Math.min(left, window.innerWidth - tr.width - margin));
-      var top = cr.top - tr.height - 6;
-      if (top < margin) top = Math.min(window.innerHeight - tr.height - margin, cr.bottom + 6);
+      var top = cr.top;
+      if (top + tr.height > window.innerHeight - margin) top = Math.min(window.innerHeight - tr.height - margin, cr.bottom + 6);
       top = Math.max(margin, top);
       tip.style.left = left + 'px';
       tip.style.top = top + 'px';
       tip.style.visibility = 'visible';
-    });
-    cell.addEventListener('mouseleave', function(){
+    }
+    function scheduleHide(){
+      if (hideTimer) clearTimeout(hideTimer);
+      hideTimer = setTimeout(function(){
+        hideTimer = null;
+        if (!cell.matches(':hover') && !tip.matches(':hover')) hideTip();
+      }, 180);
+    }
+    function hideTip(){
       tip.style.display = '';
       tip.style.visibility = '';
-    });
+    }
+    cell.addEventListener('mouseenter', showTip);
+    cell.addEventListener('mouseleave', scheduleHide);
+    tip.addEventListener('mouseenter', showTip);
+    tip.addEventListener('mouseleave', scheduleHide);
+    tip.addEventListener('click', function(e){ e.stopPropagation(); });
   });
 }
 var state = loadState(); colOrder = state.cols; rowOrder = state.rows;

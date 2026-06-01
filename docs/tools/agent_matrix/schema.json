@@ -25,6 +25,7 @@
     "hooks": {"allOf": [{"$ref": "#/$defs/featureWithSource"}], "$comment": "Automation | Hooks | User-configurable lifecycle hooks or event hooks."},
     "mcp_servers": {"allOf": [{"$ref": "#/$defs/featureWithSource"}], "$comment": "Integration | MCP | Model Context Protocol server support."},
     "custom_commands": {"allOf": [{"$ref": "#/$defs/featureWithSource"}], "$comment": "Automation | Commands | User-defined slash/custom commands."},
+    "goal_command": {"allOf": [{"$ref": "#/$defs/featureWithSource"}], "$comment": "Automation | /goal | Built-in `/goal` slash command for a persistent session objective that auto-continues until a completion condition is met (or pause/clear)."},
     "subagents": {"allOf": [{"$ref": "#/$defs/featureWithSource"}], "$comment": "Automation | Subagents | First-class custom or delegated subagent support."},
     "transcripts": {"allOf": [{"$ref": "#/$defs/featureWithSource"}], "$comment": "Context | Transcripts | Local or exported conversation/session transcript storage."},
     "model_selection": {"allOf": [{"$ref": "#/$defs/featureWithSource"}], "$comment": "Settings | Model | Explicit model selection in CLI/settings."},

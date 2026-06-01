@@ -11,7 +11,7 @@
       "IDE",
       "CLI"
     ],
-    "source_url": "https://www.jetbrains.com/help/ai-assistant/junie-agent.html#source:~:text=IDE",
+    "source_url": "https://www.jetbrains.com/help/ai-assistant/junie-agent.html#junie-guidelines:~:text=IDE",
     "comment": "JetBrains IDE agent with Junie CLI documentation. Per-form-factor links: IDE: https://www.jetbrains.com/help/ai-assistant/junie-agent.html; CLI: https://www.jetbrains.com/help/ai-assistant/junie-cli.html.",
     "links": {
       "IDE": "https://www.jetbrains.com/help/ai-assistant/junie-agent.html",
@@ -20,52 +20,57 @@
   },
   "released_in": {
     "value": "Jan '25",
-    "source_url": "https://blog.jetbrains.com/junie/2025/01/meet-junie-your-coding-agent-by-jetbrains/#source:~:text=Meet%20Junie",
+    "source_url": "https://blog.jetbrains.com/junie/2025/01/meet-junie-your-coding-agent-by-jetbrains/#major-updates:~:text=Meet%20Junie",
     "comment": "Introduced by JetBrains as a coding agent in early 2025."
   },
   "latest_major_update": {
     "value": "May '26",
-    "source_url": "https://junie.jetbrains.com/#source:~:text=starts%20a%20real%20debugger",
+    "source_url": "https://junie.jetbrains.com/#agentic-debugging:~:text=starts%20a%20real%20debugger",
     "comment": "Current product page emphasizes debugger-backed agent behavior."
   },
   "rules": {
     "support": "partial",
-    "source_url": "https://www.jetbrains.com/help/ai-assistant/junie-agent.html#source:~:text=guidelines",
+    "source_url": "https://www.jetbrains.com/help/ai-assistant/junie-agent.html#junie-guidelines:~:text=guidelines",
     "comment": "JetBrains documents project guidance for Junie, but not AGENTS.md-compatible rules. Location: no public disk folder/file location found in docs reviewed."
   },
   "skills": {
     "support": "unknown",
-    "source_url": "https://www.jetbrains.com/help/ai-assistant/junie-agent.html#source:~:text=plan%20and%20execute",
+    "source_url": "https://www.jetbrains.com/help/ai-assistant/junie-agent.html#ai-assistant-20261-help:~:text=plan%20and%20execute",
     "comment": "No reusable skill folder standard found. Location: no public disk folder/file location found in docs reviewed."
   },
   "hooks": {
     "support": "none",
-    "source_url": "https://www.jetbrains.com/help/ai-assistant/junie-agent.html#source:~:text=autonomously%20plan%20and%20execute",
+    "source_url": "https://www.jetbrains.com/help/ai-assistant/junie-agent.html#ai-assistant-20261-help:~:text=autonomously%20plan%20and%20execute",
     "comment": "No lifecycle hook system found."
   },
   "mcp_servers": {
     "support": "unknown",
-    "source_url": "https://www.jetbrains.com/help/ai-assistant/junie-agent.html#source:~:text=Junie",
+    "source_url": "https://www.jetbrains.com/help/ai-assistant/junie-agent.html#Junie_agent.topic:~:text=Junie",
     "comment": "No Junie-specific MCP configuration found in public docs reviewed. Location: no public disk folder/file location found in docs reviewed."
   },
   "custom_commands": {
     "support": "unknown",
-    "source_url": "https://www.jetbrains.com/help/ai-assistant/junie-agent.html#source:~:text=prompt",
+    "source_url": "https://www.jetbrains.com/help/ai-assistant/junie-agent.html#Junie_agent.topic:~:text=prompt",
     "comment": "No custom slash-command system found. Location: no public disk folder/file location found in docs reviewed."
+  },
+  "goal_command": {
+    "support": "none",
+    "source_url": "https://www.jetbrains.com/help/ai-assistant/junie-agent.html#source:~:text=Junie",
+    "comment": "Junie runs as an IDE agent with tasks and modes; no built-in `/goal` slash command documented."
   },
   "subagents": {
     "support": "unknown",
-    "source_url": "https://www.jetbrains.com/help/ai-assistant/junie-agent.html#source:~:text=multi-step",
+    "source_url": "https://www.jetbrains.com/help/ai-assistant/junie-agent.html#ai-assistant-20261-help:~:text=multi-step",
     "comment": "No first-class subagent docs found."
   },
   "model_selection": {
     "support": "partial",
-    "source_url": "https://www.jetbrains.com/help/ide-services-cloud/manage-aie.html#source:~:text=OpenAI%20and%20Amazon%20Bedrock",
+    "source_url": "https://www.jetbrains.com/help/ide-services-cloud/manage-aie.html#junie:~:text=OpenAI%20and%20Amazon%20Bedrock",
     "comment": "Enterprise docs mention JetBrains AI service plus selected OpenAI/Bedrock models."
   },
   "approval_mode": {
     "support": "full",
-    "source_url": "https://junie.jetbrains.com/#source:~:text=Modes%3A%20autonomous%20%2F%20user-assisted%20%2F%20semi-auto",
+    "source_url": "https://junie.jetbrains.com/#agentic-debugging:~:text=Modes%3A%20autonomous%20%2F%20user-assisted%20%2F%20semi-auto",
     "comment": "Product page lists autonomous, user-assisted, and semi-auto modes."
   },
   "sandbox_mode": {
@@ -85,22 +90,22 @@
   },
   "non_interactive": {
     "support": "unknown",
-    "source_url": "https://www.jetbrains.com/help/ai-assistant/junie-agent.html#source:~:text=Junie%20CLI",
+    "source_url": "https://www.jetbrains.com/help/ai-assistant/junie-agent.html#ai-assistant-20261-help:~:text=Junie%20CLI",
     "comment": "CLI exists, but no verified headless automation flag in docs reviewed."
   },
   "output_format": {
     "support": "unknown",
-    "source_url": "https://www.jetbrains.com/help/ai-assistant/junie-agent.html#source:~:text=Junie",
+    "source_url": "https://www.jetbrains.com/help/ai-assistant/junie-agent.html#Junie_agent.topic:~:text=Junie",
     "comment": "No machine-readable output mode found."
   },
   "statusline": {
     "support": "none",
-    "source_url": "https://www.jetbrains.com/help/ai-assistant/junie-agent.html#source:~:text=JetBrains",
+    "source_url": "https://www.jetbrains.com/help/ai-assistant/junie-agent.html#Junie_agent.topic:~:text=JetBrains",
     "comment": "IDE UI, no custom CLI statusline found."
   },
   "telemetry": {
     "support": "unknown",
-    "source_url": "https://www.jetbrains.com/help/ai-assistant/junie-agent.html#source:~:text=JetBrains",
+    "source_url": "https://www.jetbrains.com/help/ai-assistant/junie-agent.html#Junie_agent.topic:~:text=JetBrains",
     "comment": "No Junie-specific telemetry toggle found in docs reviewed."
   },
   "hosted_agent": {
@@ -110,12 +115,12 @@
   },
   "custom_model_provider": {
     "support": "partial",
-    "source_url": "https://www.jetbrains.com/help/ide-services-cloud/manage-aie.html#source:~:text=OpenAI%20and%20Amazon%20Bedrock",
+    "source_url": "https://www.jetbrains.com/help/ide-services-cloud/manage-aie.html#junie:~:text=OpenAI%20and%20Amazon%20Bedrock",
     "comment": "Enterprise service supports selected provider/model options, not arbitrary endpoints."
   },
   "pricing": {
     "value": "Bundled with JetBrains AI tiers/free credits",
-    "source_url": "https://blog.jetbrains.com/blog/2025/04/16/jetbrains-ides-go-ai/#source:~:text=AI%20Free%20tier",
+    "source_url": "https://blog.jetbrains.com/blog/2025/04/16/jetbrains-ides-go-ai/#all-jetbrains-ai-tools-under-a-single-subscription-with-a-free-tier:~:text=AI%20Free%20tier",
     "comment": "Junie is included in JetBrains AI subscription/free-tier credit model."
   },
   "notes": "Strong fit for JetBrains users, especially debugger-aware workflows. Public docs expose less extensibility detail than CLI-first agents.",

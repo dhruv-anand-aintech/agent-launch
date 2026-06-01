@@ -11,7 +11,7 @@
       "CLI",
       "Extension"
     ],
-    "source_url": "https://kilo.ai/docs/code-with-ai/platforms/cli#source:~:text=CLI",
+    "source_url": "https://kilo.ai/docs/code-with-ai/platforms/cli#kilo-code-cli:~:text=CLI",
     "comment": "VS Code extension, JetBrains plugin, CLI, Cloud Agents. OpenCode fork; programmatic control via @opencode-ai/sdk against the Kilo/OpenCode server. Per-form-factor links: CLI: https://kilo.ai/docs/code-with-ai/platforms/cli; Extension: https://kilo.ai/docs/code-with-ai/platforms/vscode.",
     "links": {
       "CLI": "https://kilo.ai/docs/code-with-ai/platforms/cli",
@@ -30,98 +30,103 @@
   },
   "rules": {
     "support": "full",
-    "source_url": "https://kilo.ai/docs/customize/custom-rules#source:~:text=Custom%20rules%20allow%20you%20to%20create%20text-based%20instructions%20that%20all%20AI%20models%20will%20follow",
+    "source_url": "https://kilo.ai/docs/customize/custom-rules#custom-rules:~:text=Custom%20rules%20allow%20you%20to%20create%20text-based%20instructions%20that%20all%20AI%20models%20will%20follow",
     "comment": "Full support: Project Rules (via instructions key in kilo.jsonc), Global Rules (same in ~/.config/kilo/kilo.jsonc), AGENTS.md, CLAUDE.md, CONTEXT.md. Location: no public disk folder/file location found in docs reviewed."
   },
   "skills": {
     "support": "full",
-    "source_url": "https://kilo.ai/docs/customize/skills#source:~:text=Agent%20Skills%20package%20domain%20expertise%2C%20new%20capabilities%2C%20and%20repeatable%20workflows%20that%20agents%20can%20use",
+    "source_url": "https://kilo.ai/docs/customize/skills#what-are-agent-skills:~:text=Agent%20Skills%20package%20domain%20expertise%2C%20new%20capabilities%2C%20and%20repeatable%20workflows%20that%20agents%20can%20use",
     "comment": "Full Agent Skills standard. SKILL.md files with YAML frontmatter. Global ~/.kilo/skills/, project .kilo/skills/. Compat with .claude/skills/, .agents/skills/. Location: no public disk folder/file location found in docs reviewed."
   },
   "hooks": {
     "support": "full",
-    "source_url": "https://kilo.ai/docs/automate/extending/plugins#source:~:text=Lifecycle",
+    "source_url": "https://kilo.ai/docs/automate/extending/plugins#lifecycle:~:text=Lifecycle",
     "comment": "Full support via Plugin system. Lifecycle hooks: config, event (bus events), tool hooks (execute.before/after), chat hooks, permission hooks, provider hooks. 17+ hook types."
   },
   "mcp_servers": {
     "support": "full",
-    "source_url": "https://kilo.ai/docs/automate/mcp/using-in-kilo-code#source:~:text=Model%20Context%20Protocol%20(MCP)%20extends%20Kilo%20Code%27s%20capabilities%20by%20connecting%20to%20external%20tools%20and%20services",
+    "source_url": "https://kilo.ai/docs/automate/mcp/using-in-kilo-code#using-mcp-in-kilo-code:~:text=Model%20Context%20Protocol%20(MCP)%20extends%20Kilo%20Code%27s%20capabilities%20by%20connecting%20to%20external%20tools%20and%20services",
     "comment": "Full MCP support. Local (STDIO) and remote (HTTP Streamable) transports. OAuth 2.0. Tool permissions via allow/ask/deny. Built-in Playwright MCP. Location: no public disk folder/file location found in docs reviewed."
   },
   "custom_commands": {
     "support": "full",
-    "source_url": "https://kilo.ai/docs/customize/workflows#source:~:text=Workflows%20(also%20called%20slash%20commands%20in%20the%20new%20extension)%20automate%20repetitive%20tasks%20by%20defining%20step-by-step%20instructions",
+    "source_url": "https://kilo.ai/docs/customize/workflows#workflows:~:text=Workflows%20(also%20called%20slash%20commands%20in%20the%20new%20extension)%20automate%20repetitive%20tasks%20by%20defining%20step-by-step%20instructions",
     "comment": "Full support via Workflows (slash commands). Markdown files in ~/.config/kilo/commands/ or .kilo/commands/. YAML frontmatter with description, agent, model. Location: no public disk folder/file location found in docs reviewed."
+  },
+  "goal_command": {
+    "support": "none",
+    "source_url": "https://kilo.ai/docs/customize/workflows#source:~:text=slash%20commands",
+    "comment": "Kilo Code uses custom workflows/slash commands; no first-party `/goal` for persistent session objectives."
   },
   "subagents": {
     "support": "full",
-    "source_url": "https://kilo.ai/docs/customize/custom-modes#source:~:text=mode",
+    "source_url": "https://kilo.ai/docs/customize/custom-modes#custom-modes:~:text=mode",
     "comment": "Full subagent support. Custom modes/agents with mode property: primary, subagent, or all. Per-agent prompts, models, permissions, temperature. task tool spawns sub-agents."
   },
   "model_selection": {
     "support": "full",
-    "source_url": "https://kilo.ai/docs/code-with-ai/platforms/cli#source:~:text=%2Fmodels",
+    "source_url": "https://kilo.ai/docs/code-with-ai/platforms/cli#agent-model-commands:~:text=%2Fmodels",
     "comment": "500+ models via 15+ providers. Switch mid-session with /models. Per-agent model pinning. CLI flags: -m, --model. Auto model routing."
   },
   "approval_mode": {
     "support": "full",
-    "source_url": "https://kilo.ai/docs/code-with-ai/platforms/cli#source:~:text=Kilo%20Code%20uses%20the%20permission%20config%20to%20decide%20whether%20a%20given%20action%20should%20run%20automatically%2C%20prompt%20you%2C%20or%20be%20blocked",
+    "source_url": "https://kilo.ai/docs/code-with-ai/platforms/cli#permissions:~:text=Kilo%20Code%20uses%20the%20permission%20config%20to%20decide%20whether%20a%20given%20action%20should%20run%20automatically%2C%20prompt%20you%2C%20or%20be%20blocked",
     "comment": "Three-tier: allow (auto-approve), ask (prompt), deny (block). Glob patterns. --auto flag for autonomous mode. Per-agent permission overrides."
   },
   "sandbox_mode": {
     "support": "partial",
-    "source_url": "https://kilo.ai/docs/code-with-ai/platforms/cli#source:~:text=External%20Directories",
+    "source_url": "https://kilo.ai/docs/code-with-ai/platforms/cli#external-directories:~:text=External%20Directories",
     "comment": "No dedicated Docker/sandbox isolation. External_directory permissions control reads/writes outside workspace. Permission system with allow/deny/ask."
   },
   "resume": {
     "support": "full",
-    "source_url": "https://kilo.ai/docs/code-with-ai/platforms/cli-reference#source:~:text=-c%2C%20--continue%20%20%20%20continue%20the%20last%20session",
+    "source_url": "https://kilo.ai/docs/code-with-ai/platforms/cli-reference#cli-command-reference:~:text=-c%2C%20--continue%20%20%20%20continue%20the%20last%20session",
     "comment": "Session continuation via --continue/-c flag. -s, --session <id> for specific sessions. --fork to fork existing sessions. /sessions slash command."
   },
   "continue": {
     "support": "full",
-    "source_url": "https://kilo.ai/docs/code-with-ai/platforms/cli-reference#source:~:text=-c%2C%20--continue%20%20%20%20continue%20the%20last%20session",
+    "source_url": "https://kilo.ai/docs/code-with-ai/platforms/cli-reference#cli-command-reference:~:text=-c%2C%20--continue%20%20%20%20continue%20the%20last%20session",
     "comment": "--continue/-c flag on kilo, kilo run, and kilo attach commands. /sessions slash command also accepts /continue alias."
   },
   "non_interactive": {
     "support": "full",
-    "source_url": "https://kilo.ai/docs/code-with-ai/platforms/cli#source:~:text=%23%20Run%20in%20autonomous%20mode%20with%20a%20message%0Akilo%20run%20--auto%20%22Implement%20feature%20X%22",
+    "source_url": "https://kilo.ai/docs/code-with-ai/platforms/cli#autonomous-mode-(non-interactive):~:text=%23%20Run%20in%20autonomous%20mode%20with%20a%20message%0Akilo%20run%20--auto%20%22Implement%20feature%20X%22",
     "comment": "Multiple non-interactive modes: kilo run <message> (one-shot), --auto flag (fully autonomous), --json (JSON output), --json-io (bidirectional JSON). kilo serve for headless server."
   },
   "output_format": {
     "support": "full",
-    "source_url": "https://kilo.ai/docs/code-with-ai/platforms/cli-reference#source:~:text=--format",
+    "source_url": "https://kilo.ai/docs/code-with-ai/platforms/cli-reference#kilo-db-migrate:~:text=--format",
     "comment": "--format flag with choices default (TUI) and json (raw JSON events). --json flag implies auto mode. --json-io for bidirectional JSON. Session export/import."
   },
   "statusline": {
     "support": "none",
-    "source_url": "https://kilo.ai/docs/code-with-ai/platforms/cli#source:~:text=%2Fstatus",
+    "source_url": "https://kilo.ai/docs/code-with-ai/platforms/cli#system-commands:~:text=%2Fstatus",
     "comment": "No customizable statusline feature found. Has /status slash command and /themes for theming, but no persistent status line customization."
   },
   "telemetry": {
     "support": "full",
-    "source_url": "https://kilo.ai/docs/code-with-ai/platforms/cli#source:~:text=Kilo%20telemetry%20is%20enabled%20by%20default%20and%20can%20be%20disabled%20with%20experimental.openTelemetry%20%3D%20false",
+    "source_url": "https://kilo.ai/docs/code-with-ai/platforms/cli#opentelemetry-export:~:text=Kilo%20telemetry%20is%20enabled%20by%20default%20and%20can%20be%20disabled%20with%20experimental.openTelemetry%20%3D%20false",
     "comment": "Enabled by default. Disable via experimental.openTelemetry: false. OpenTelemetry export when OTEL_EXPORTER_OTLP_ENDPOINT is set."
   },
   "custom_model_provider": {
     "support": "full",
-    "source_url": "https://kilo.ai/docs/getting-started/byok#source:~:text=Bring%20Your%20Own%20Key%20(BYOK)%20lets%20you%20use%20your%20own%20API%20keys%20when%20using%20the%20Kilo%20Gateway",
+    "source_url": "https://kilo.ai/docs/getting-started/byok#bring-your-own-key-(byok):~:text=Bring%20Your%20Own%20Key%20(BYOK)%20lets%20you%20use%20your%20own%20API%20keys%20when%20using%20the%20Kilo%20Gateway",
     "comment": "BYOK for 15+ providers. Plugin system for entirely custom providers. Local models supported. 500+ models via Kilo Gateway at zero markup."
   },
   "notes": "Kilo Code is a rapidly evolving open-source coding agent (MIT, 19k+ stars). Originally forked from Continue, now independent. Notable for extensive plugin system, 500+ model support through Kilo Gateway, and cross-surface session sync.",
   "pricing": {
     "value": "Free (MIT), Kilo Pass $19-199/mo, Teams $15/user/mo",
-    "source_url": "https://kilo.ai/pricing#source:~:text=Simple%2C%20transparent%20pricing",
+    "source_url": "https://kilo.ai/pricing#simple-transparent-pricing:~:text=Simple%2C%20transparent%20pricing",
     "comment": "App is free & MIT. Kilo Pass (Starter $19/mo, Pro $49/mo, Expert $199/mo). BYOK (no markup). Free models. Teams: $15/user/mo."
   },
   "hosted_agent": {
     "support": "partial",
-    "source_url": "https://kilo.ai/#source:~:text=Kilo%3A%20The%20Open%20Source%20AI%20Coding%20Agent%20for%20VS%20Code%2C%20JetBrains%2C%20and%20your%20CLI",
+    "source_url": "https://kilo.ai/#clip0_jetbrains:~:text=Kilo%3A%20The%20Open%20Source%20AI%20Coding%20Agent%20for%20VS%20Code%2C%20JetBrains%2C%20and%20your%20CLI",
     "comment": "Cloud Agents feature allows web-based sessions; primary use is local via extension/CLI."
   },
   "transcripts": {
     "support": "unknown",
-    "source_url": "https://kilo.ai/docs/getting-started#source:~:text=session",
+    "source_url": "https://kilo.ai/docs/getting-started#what-kilo-can-do:~:text=session",
     "comment": "Location: transcript/session disk storage was not found in public docs reviewed."
   }
 }

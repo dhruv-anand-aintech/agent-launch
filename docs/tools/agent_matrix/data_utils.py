@@ -44,11 +44,65 @@ MONTH_MAP = {
 GITHUB_PATH_BLOCKLIST = frozenset(
     {"features", "organizations", "apps", "marketplace", "login", "settings", "topics", "collections"}
 )
+README_PATH = "docs/tools/agent_matrix/README.md"
 
 
 def _sort_form_factors(values: list[str]) -> list[str]:
     rank = {v: i for i, v in enumerate(FORM_FACTOR_ORDER)}
     return sorted(values, key=lambda v: (rank.get(v, 99), v))
+
+
+def _readme_value(row: dict, key: str) -> str:
+    val = row.get(key, {})
+    return val.get("value", "") if isinstance(val, dict) else ""
+
+
+def _readme_support(row: dict, key: str) -> str:
+    val = row.get(key, {})
+    return val.get("support", "") if isinstance(val, dict) else ""
+
+
+def _build_rows_markdown(rows: list[dict]) -> str:
+    header = "| Name | Form factor | Released | Latest major update | Rules | Skills | Transcripts | Hooks | MCP | Hosted agent | Arbitrary models |"
+    divider = "| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |"
+    lines = [header, divider]
+
+    for row in sorted(rows, key=lambda r: r.get("name", "")):
+        values = row.get("form_factor", {})
+        ff = _sort_form_factors(values.get("values", [])) if isinstance(values, dict) else []
+        lines.append(
+            "| "
+            + " | ".join(
+                [
+                    row.get("name", ""),
+                    ", ".join(ff),
+                    _readme_value(row, "released_in"),
+                    _readme_value(row, "latest_major_update"),
+                    _readme_support(row, "rules"),
+                    _readme_support(row, "skills"),
+                    _readme_support(row, "transcripts"),
+                    _readme_support(row, "hooks"),
+                    _readme_support(row, "mcp_servers"),
+                    _readme_support(row, "hosted_agent"),
+                    _readme_support(row, "custom_model_provider"),
+                ]
+            )
+            + " |"
+        )
+
+    return "\n".join(lines) + "\n"
+
+
+def _update_readme(rows: list[dict], path: str = README_PATH) -> None:
+    readme = Path(path)
+    content = readme.read_text(encoding="utf-8")
+    start = content.find("## Rows")
+    next_section = content.find("## Suggested Next Columns")
+    if start == -1 or next_section == -1 or next_section < start:
+        raise ValueError(f"{path} missing required README table markers")
+
+    replacement = "## Rows\n\n" + _build_rows_markdown(rows) + "\n"
+    readme.write_text(content[:start] + replacement + content[next_section:], encoding="utf-8")
 
 
 def _validate_feature(name: str, key: str, value: object) -> None:
@@ -263,6 +317,7 @@ def bundle(schema_path: str, data_glob: str, output_path: str) -> None:
     metadata_path = Path(output_path).with_name("updated.json")
     metadata = {"updated_at": datetime.utcnow().replace(microsecond=0).isoformat() + "Z"}
     metadata_path.write_text(json.dumps(metadata, indent=2) + "\n", encoding="utf-8")
+    _update_readme(rows)
 
     return rows, sorted(feature_keys), sorted(properties.keys())
 
@@ -290,7 +345,7 @@ def generate_llms_txt(bundle_path: str, output_path: str) -> None:
     col_width = max(len(r["name"]) for r in rows)
     feature_short = {
         "rules": "Rul", "skills": "Skl", "hooks": "Hks",
-        "mcp_servers": "MCP", "custom_commands": "Cmd", "subagents": "Sub",
+        "mcp_servers": "MCP", "custom_commands": "Cmd", "goal_command": "Gol", "subagents": "Sub",
         "transcripts": "Trn",
         "model_selection": "Mod", "approval_mode": "App", "sandbox_mode": "San",
         "resume": "Res", "continue": "Con", "non_interactive": "Hdl",
@@ -378,6 +433,10 @@ def main() -> int:
     llms_cmd.add_argument("--bundle", default="docs/tools/agent_matrix/bundle.json")
     llms_cmd.add_argument("--output", default="docs/tools/agent_matrix/llms.txt")
 
+    readme_cmd = sub.add_parser("readme")
+    readme_cmd.add_argument("--data-glob", default="docs/tools/agent_matrix/data/*.json")
+    readme_cmd.add_argument("--readme", default=README_PATH)
+
     args = parser.parse_args()
     if args.command == "validate":
         validate(args.schema, args.data_glob)
@@ -385,6 +444,9 @@ def main() -> int:
         bundle(args.schema, args.data_glob, args.output)
     elif args.command == "llms-txt":
         generate_llms_txt(args.bundle, args.output)
+    elif args.command == "readme":
+        rows = [_load_json(name) for name in sorted(glob.glob(args.data_glob))]
+        _update_readme(rows, args.readme)
     return 0
 
 

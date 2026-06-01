@@ -22,12 +22,12 @@
   },
   "released_in": {
     "value": "2023",
-    "source_url": "https://cursor.com/#source:~:text=Cursor",
+    "source_url": "https://cursor.com/#built-to-make-you-extraordinarily-productive-cursor-is-the-best-coding-agent:~:text=Cursor",
     "comment": "IDE launched ~2023; CLI surface added later (2025)."
   },
   "latest_major_update": {
     "value": "May '26",
-    "source_url": "https://docs.cursor.com/#source:~:text=Cursor",
+    "source_url": "https://cursor.com/docs#cursor-documentation:~:text=Cursor",
     "comment": "Current docs capture rules, skills, MCP, models, and agent workflows."
   },
   "rules": {
@@ -37,7 +37,7 @@
   },
   "skills": {
     "support": "full",
-    "source_url": "https://docs.cursor.com/en/context/skills#source:~:text=skills",
+    "source_url": "https://cursor.com/docs#customizing:~:text=skills",
     "comment": "Supports skills. Location: Cursor rules/agents features, not a SKILL.md folder standard in this row."
   },
   "hooks": {
@@ -55,14 +55,19 @@
     "source_url": "https://docs.cursor.com/en/context/rules#source:~:text=commands",
     "comment": "CLI exposes full command controls; IDE has reusable rule/workflow patterns. Location: custom command support is through Cursor features/SDK rather than a repo command folder."
   },
+  "goal_command": {
+    "support": "none",
+    "source_url": "https://cursor.com/docs/cli/using#use-plan:~:text=%2Fplan",
+    "comment": "Cursor Agent CLI documents `/plan`, `/ask`, and `/resume` slash commands but no built-in `/goal` for persistent completion conditions."
+  },
   "subagents": {
     "support": "partial",
-    "source_url": "https://docs.cursor.com/#source:~:text=subagents",
+    "source_url": "https://cursor.com/docs#customizing:~:text=subagents",
     "comment": "Agent tasks are supported; first-class named subagents not modeled like Claude Code."
   },
   "model_selection": {
     "support": "full",
-    "source_url": "https://docs.cursor.com/en/settings/models#source:~:text=models",
+    "source_url": "https://cursor.com/docs#models:~:text=models",
     "comment": "Supports model settings in IDE and CLI."
   },
   "approval_mode": {
@@ -107,18 +112,18 @@
   },
   "hosted_agent": {
     "support": "full",
-    "source_url": "https://docs.cursor.com/en/cli/overview#source:~:text=CLI",
+    "source_url": "https://cursor.com/docs#CLI:~:text=CLI",
     "comment": "CLI agent can execute in Cursor's cloud runtime."
   },
   "custom_model_provider": {
     "support": "full",
-    "source_url": "https://docs.cursor.com/en/settings/models#source:~:text=models",
+    "source_url": "https://cursor.com/docs#models:~:text=models",
     "comment": "Supports custom API keys/models in IDE and CLI."
   },
   "notes": "Cursor is a VS Code-derived AI IDE with a companion CLI (cursor-agent) for headless/CI use and @cursor/sdk for programmatic local/cloud agents.",
   "pricing": {
     "value": "Pro $20, Pro+ $60, Ultra $200/mo",
-    "source_url": "https://cursor.com/help/models-and-usage/usage-limits#source:~:text=Pro%20Plus",
+    "source_url": "https://cursor.com/help/models-and-usage/usage-limits#how-much-usage-does-each-plan-include:~:text=Pro%20Plus",
     "comment": "Individual: Pro $20/mo ($20 API usage), Pro+ $60/mo ($70 API usage), Ultra $200/mo ($400 API usage). Teams $40/user/mo."
   },
   "transcripts": {

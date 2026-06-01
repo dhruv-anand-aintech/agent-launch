@@ -18,17 +18,17 @@
   },
   "released_in": {
     "value": "Sep '24",
-    "source_url": "https://blog.replit.com/agent#source:~:text=Replit%20Agent",
+    "source_url": "https://blog.replit.com/agent#source:~:text=All%20rights%20reserved.%20Copyright%20%C2%A9%202026%20Replit%2C%20Inc.",
     "comment": "Replit Agent launched publicly in 2024; Agent 3 followed in September 2025."
   },
   "latest_major_update": {
     "value": "Sep '25",
-    "source_url": "https://replit.com/blog/introducing-agent-3-our-most-autonomous-agent-yet#source:~:text=Introducing%20Agent%203",
+    "source_url": "https://replit.com/blog/introducing-agent-3-our-most-autonomous-agent-yet#introducing-agent-3-our-most-autonomous-agent-yet:~:text=Introducing%20Agent%203",
     "comment": "Agent 3: more autonomous testing and fixing loop."
   },
   "rules": {
     "support": "partial",
-    "source_url": "https://docs.replit.com/replitai/agent#source:~:text=Agent",
+    "source_url": "https://docs.replit.com/replitai/agent#agent:~:text=Agent",
     "comment": "Project context exists inside Replit, but no AGENTS.md-style standard confirmed. Location: hosted/web/API-managed; no local disk folder documented."
   },
   "skills": {
@@ -43,13 +43,18 @@
   },
   "mcp_servers": {
     "support": "unknown",
-    "source_url": "https://docs.replit.com/replitai/agent#source:~:text=Agent",
+    "source_url": "https://docs.replit.com/replitai/agent#agent:~:text=Agent",
     "comment": "No MCP configuration found in public Agent docs. Location: hosted/web/API-managed; no local disk folder documented."
   },
   "custom_commands": {
     "support": "none",
-    "source_url": "https://docs.replit.com/replitai/agent#source:~:text=Agent",
+    "source_url": "https://docs.replit.com/replitai/agent#agent:~:text=Agent",
     "comment": "Prompt/chat workflow, not user-defined slash-command folders. Location: hosted/web/API-managed; no local disk folder documented."
+  },
+  "goal_command": {
+    "support": "none",
+    "source_url": "https://docs.replit.com/replitai/agent#source:~:text=Agent",
+    "comment": "Replit Agent is a hosted web agent; no terminal `/goal` slash command."
   },
   "subagents": {
     "support": "partial",
@@ -58,47 +63,47 @@
   },
   "model_selection": {
     "support": "none",
-    "source_url": "https://docs.replit.com/replitai/agent#source:~:text=Agent",
+    "source_url": "https://docs.replit.com/replitai/agent#agent:~:text=Agent",
     "comment": "No user model selection for Replit Agent found."
   },
   "approval_mode": {
     "support": "partial",
-    "source_url": "https://docs.replit.com/replitai/agent#source:~:text=Agent",
+    "source_url": "https://docs.replit.com/replitai/agent#agent:~:text=Agent",
     "comment": "User reviews generated work in Replit; granular command approval controls are not documented."
   },
   "sandbox_mode": {
     "support": "full",
-    "source_url": "https://docs.replit.com/replitai/agent#source:~:text=workspace",
+    "source_url": "https://docs.replit.com/replitai/agent#workspace-tools:~:text=workspace",
     "comment": "Runs inside Replit-hosted workspaces."
   },
   "resume": {
     "support": "partial",
-    "source_url": "https://docs.replit.com/replitai/agent#source:~:text=Agent",
+    "source_url": "https://docs.replit.com/replitai/agent#agent:~:text=Agent",
     "comment": "Agent work persists in Replit projects, but no explicit session resume command."
   },
   "continue": {
     "support": "partial",
-    "source_url": "https://docs.replit.com/replitai/agent#source:~:text=Agent",
+    "source_url": "https://docs.replit.com/replitai/agent#agent:~:text=Agent",
     "comment": "Can continue in the same hosted workspace/project."
   },
   "non_interactive": {
     "support": "none",
-    "source_url": "https://docs.replit.com/replitai/agent#source:~:text=Agent",
+    "source_url": "https://docs.replit.com/replitai/agent#agent:~:text=Agent",
     "comment": "No public headless/CLI automation mode found."
   },
   "output_format": {
     "support": "none",
-    "source_url": "https://docs.replit.com/replitai/agent#source:~:text=Agent",
+    "source_url": "https://docs.replit.com/replitai/agent#agent:~:text=Agent",
     "comment": "No machine-readable output mode found."
   },
   "statusline": {
     "support": "none",
-    "source_url": "https://docs.replit.com/replitai/agent#source:~:text=Agent",
+    "source_url": "https://docs.replit.com/replitai/agent#agent:~:text=Agent",
     "comment": "Hosted UI, no custom CLI statusline."
   },
   "telemetry": {
     "support": "unknown",
-    "source_url": "https://docs.replit.com/replitai/agent#source:~:text=Agent",
+    "source_url": "https://docs.replit.com/replitai/agent#agent:~:text=Agent",
     "comment": "No Agent-specific telemetry toggle found."
   },
   "hosted_agent": {
@@ -108,7 +113,7 @@
   },
   "custom_model_provider": {
     "support": "none",
-    "source_url": "https://docs.replit.com/replitai/agent#source:~:text=Agent",
+    "source_url": "https://docs.replit.com/replitai/agent#agent:~:text=Agent",
     "comment": "No BYO model/provider support found."
   },
   "pricing": {
@@ -119,7 +124,7 @@
   "notes": "Best for hosted app prototyping/build-deploy workflows, not for local repo terminal automation.",
   "transcripts": {
     "support": "partial",
-    "source_url": "https://replit.com/ai#source:~:text=agent",
+    "source_url": "https://replit.com/ai#introducing-replit-agent:~:text=agent",
     "comment": "Location: hosted/web/API-managed session history; no local transcript directory documented."
   }
 }
