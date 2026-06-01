@@ -51,6 +51,11 @@
     "source_url": "https://jules.google/#source:~:text=Write%20a%20detailed%20prompt%20for%20Jules",
     "comment": "Prompt and issue assignment workflow, not user-defined slash commands. Location: hosted/web/API-managed; no local disk folder documented."
   },
+  "goal_command": {
+    "support": "none",
+    "source_url": "https://jules.google/docs/#source:~:text=Jules",
+    "comment": "Jules is a hosted async agent for GitHub issues/PRs; no interactive `/goal` slash command in public docs."
+  },
   "subagents": {
     "support": "partial",
     "source_url": "https://jules.google/#source:~:text=fully%20async%2C%20multi-agent%20development",
@@ -119,7 +124,7 @@
   "notes": "Best categorized as an async hosted coding worker rather than a terminal pair-programmer. Strong on GitHub PR flow, approvals, Cloud VM isolation, and concurrency.",
   "transcripts": {
     "support": "partial",
-    "source_url": "https://jules.google/#source:~:text=agent",
+    "source_url": "https://jules.google/#an-autonomous-coding-agent:~:text=agent",
     "comment": "Location: hosted/web/API-managed session history; no local transcript directory documented."
   }
 }

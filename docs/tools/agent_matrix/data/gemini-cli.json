@@ -11,7 +11,7 @@
     "values": [
       "CLI"
     ],
-    "source_url": "https://google-gemini.github.io/gemini-cli/docs/cli/#source:~:text=CLI",
+    "source_url": "https://antigravity.google/docs/cli-getting-started#clip0_6001_463:~:text=CLI",
     "comment": "CLI tool. Per-form-factor links: CLI: https://google-gemini.github.io/gemini-cli/docs/cli/.",
     "links": {
       "CLI": "https://google-gemini.github.io/gemini-cli/docs/cli/"
@@ -19,12 +19,12 @@
   },
   "released_in": {
     "value": "Jun '25",
-    "source_url": "https://blog.google/technology/developers/introducing-gemini-cli-open-source-ai-agent/#source:~:text=Gemini%20CLI",
+    "source_url": "https://blog.google/technology/developers/introducing-gemini-cli-open-source-ai-agent/#gemini-cli-your-open-source-ai-agent:~:text=Gemini%20CLI",
     "comment": "Public open-source Gemini CLI launch."
   },
   "latest_major_update": {
     "value": "May '26",
-    "source_url": "https://antigravity.google/docs/cli-getting-started#source:~:text=Antigravity%20CLI",
+    "source_url": "https://antigravity.google/docs/getting-started#download:~:text=Antigravity%20CLI",
     "comment": "Google points CLI users toward Antigravity (agy CLI) for the latest standalone CLI surface."
   },
   "rules": {
@@ -49,8 +49,13 @@
   },
   "custom_commands": {
     "support": "full",
-    "source_url": "https://google-gemini.github.io/gemini-cli/docs/cli/commands.html#source:~:text=commands",
+    "source_url": "https://antigravity.google/docs/getting-started#slash-commands:~:text=commands",
     "comment": "Supports commands. Location: no public disk folder/file location found in docs reviewed."
+  },
+  "goal_command": {
+    "support": "none",
+    "source_url": "https://antigravity.google/docs/cli-getting-started#source:~:text=CLI",
+    "comment": "Deprecated Gemini CLI surface; no documented `/goal`. Google points CLI users to Antigravity, which also lacks a `/goal` command in public docs."
   },
   "subagents": {
     "support": "unknown",
@@ -84,7 +89,7 @@
   },
   "non_interactive": {
     "support": "full",
-    "source_url": "https://google-gemini.github.io/gemini-cli/docs/cli/commands.html#source:~:text=prompt",
+    "source_url": "https://antigravity.google/docs/getting-started#installation:~:text=prompt",
     "comment": "Supports prompt/headless use."
   },
   "output_format": {
@@ -110,7 +115,7 @@
   "notes": "Deprecated: Google points new CLI work to Antigravity. Kept as an explicit agent-launch option, but excluded from random selection in this repo. Headless/scripting mode only; no published agent embed SDK.",
   "pricing": {
     "value": "Free (Apache-2.0), Gemini API usage billed separately",
-    "source_url": "https://ai.google.dev/pricing#source:~:text=Gemini%20API",
+    "source_url": "https://ai.google.dev/gemini-api/docs/pricing#enterprise:~:text=Gemini%20API",
     "comment": "Gemini CLI is open source (Apache-2.0). API usage billed through Google AI Studio or Vertex AI."
   },
   "hosted_agent": {
@@ -120,7 +125,7 @@
   },
   "transcripts": {
     "support": "unknown",
-    "source_url": "https://google-gemini.github.io/gemini-cli/#source:~:text=session",
+    "source_url": "https://antigravity.google/docs/getting-started#slash-commands:~:text=session",
     "comment": "Location: transcript/session disk storage was not found in public docs reviewed."
   }
 }

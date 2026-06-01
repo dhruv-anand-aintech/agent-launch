@@ -12,7 +12,7 @@
       "Extension",
       "SDK"
     ],
-    "source_url": "https://ampcode.com/manual#getting-started:~:text=CLI",
+    "source_url": "https://ampcode.com/manual#cli:~:text=CLI",
     "comment": "CLI TUI + IDE extensions (VS Code, JetBrains, Neovim, Zed) + @ampcode/sdk (TypeScript) and amp-sdk (Python). Per-form-factor links: CLI: https://ampcode.com/manual#getting-started; Extension: https://ampcode.com/manual/vscode; SDK: https://ampcode.com/manual/sdk.",
     "links": {
       "CLI": "https://ampcode.com/manual#getting-started",
@@ -22,13 +22,13 @@
   },
   "released_in": {
     "value": "May '25",
-    "source_url": "https://ampcode.com/chronicle#source:~:text=May%2015%2C%202025%20Amp%20Is%20Now%20Available%20To%20Everyone",
+    "source_url": "https://ampcode.com/chronicle#episode-2-mckay-wrigley:~:text=May%2015%2C%202025%20Amp%20Is%20Now%20Available%20To%20Everyone",
     "comment": "Publicly launched May 15, 2025 (no waitlist). Originally built inside Sourcegraph, spun off as Amp Frontier Corporation."
   },
   "latest_major_update": {
     "value": "May '26",
-    "source_url": "https://ampcode.com/news/neo#source:~:text=May%206%2C%202026%20Amp%2C%20Rebuilt",
-    "comment": "May 6, 2026 — 'Amp, Rebuilt' (codename Neo). Complete CLI rewrite with new architecture: remote-controllable, plugin-powered, auto-compaction."
+    "source_url": "https://ampcode.com/news/neo#amp-rebuilt:~:text=May%206%2C%202026%20Amp%2C%20Rebuilt",
+    "comment": "May 6, 2026 \u2014 'Amp, Rebuilt' (codename Neo). Complete CLI rewrite with new architecture: remote-controllable, plugin-powered, auto-compaction."
   },
   "rules": {
     "support": "full",
@@ -47,13 +47,18 @@
   },
   "mcp_servers": {
     "support": "full",
-    "source_url": "https://ampcode.com/manual#mcp:~:text=You%20can%20add%20additional%20tools%20using%20MCP%20servers",
+    "source_url": "https://ampcode.com/manual#mcp:~:text=You%20can%20add%20additional%20tools%20using%20MCP%20(Model%20Context%20Protocol)%20servers%2C%20which%20can%20be%20either%20local%20or%20remote.",
     "comment": "Full support. Add via CLI (amp mcp add) or config. Local (command/args/env) and remote (url/headers) servers. OAuth auto-flow. Skill bundling for lazy loading. Location: no public disk folder/file location found in docs reviewed."
   },
   "custom_commands": {
     "support": "none",
-    "source_url": "https://ampcode.com/news/slashing-custom-commands#source:~:text=We're%20removing%20custom%20commands%20in%20favor%20of%20skills",
+    "source_url": "https://ampcode.com/news/slashing-custom-commands#slashing-custom-commands:~:text=We're%20removing%20custom%20commands%20in%20favor%20of%20skills",
     "comment": "Removed January 29, 2026. Replaced by skills and command palette (Ctrl+O) instead of slash commands. Location: not applicable; feature not supported."
+  },
+  "goal_command": {
+    "support": "none",
+    "source_url": "https://ampcode.com/manual#cli:~:text=CLI",
+    "comment": "Amp documents CLI and editor workflows but no built-in `/goal` slash command for persistent session objectives."
   },
   "subagents": {
     "support": "full",
@@ -62,27 +67,27 @@
   },
   "model_selection": {
     "support": "partial",
-    "source_url": "https://ampcode.com/models#source:~:text=Agent%20Modes",
+    "source_url": "https://ampcode.com/models#agent-modes:~:text=Agent%20Modes",
     "comment": "Pre-set modes (smart=Claude Opus 4.7, deep=GPT-5.5 reasoning, rush=GPT-5.5 no-reasoning, free=mixed). You choose the mode, not the exact model."
   },
   "approval_mode": {
     "support": "partial",
-    "source_url": "https://ampcode.com/news/neo#source:~:text=Amp%20will%20no%20longer%20ask%20for%20permission%20before%20running%20tools",
+    "source_url": "https://ampcode.com/news/neo#queuing-steering:~:text=Amp%20will%20no%20longer%20ask%20for%20permission%20before%20running%20tools",
     "comment": "Default: no approval (dangerously-allow-all is now default). Custom approval policies possible via Plugin API (tool.call event)."
   },
   "sandbox_mode": {
     "support": "none",
-    "source_url": "https://ampcode.com/manual#source:~:text=If%20you%20regularly%20work%20with%20untrusted%20sources%2C%20consider%20creating%20a%20custom%20policy%20plugin%2C%20or%20using%20an%20isolated%20development%20environment",
+    "source_url": "https://ampcode.com/manual#queueing-messages:~:text=If%20you%20regularly%20work%20with%20untrusted%20sources%2C%20consider%20creating%20a%20custom%20policy%20plugin%2C%20or%20using%20an%20isolated%20development%20environment",
     "comment": "No built-in sandbox. Documentation suggests external isolated dev environments for untrusted code."
   },
   "resume": {
     "support": "full",
-    "source_url": "https://ampcode.com/news/new-threads-without-leaving-the-cli#source:~:text=You%20can%20now%20start%20new%20threads%20and%20continue%20old%20threads%20without%20leaving%20your%20CLI%20session",
+    "source_url": "https://ampcode.com/news/new-threads-without-leaving-the-cli#new-threads-without-leaving-the-cli:~:text=You%20can%20now%20start%20new%20threads%20and%20continue%20old%20threads%20without%20leaving%20your%20CLI%20session",
     "comment": "Full support. 'amp threads continue [thread id]' documented. Thread referencing (@T-xxx or URL) across sessions."
   },
   "continue": {
     "support": "full",
-    "source_url": "https://ampcode.com/news/new-threads-without-leaving-the-cli#source:~:text=%2Fcontinue",
+    "source_url": "https://ampcode.com/news/new-threads-without-leaving-the-cli#new-threads-without-leaving-the-cli:~:text=%2Fcontinue",
     "comment": "Full support. /continue command in CLI to pick old threads. Threads persist at ampcode.com/threads."
   },
   "non_interactive": {
@@ -92,7 +97,7 @@
   },
   "output_format": {
     "support": "full",
-    "source_url": "https://ampcode.com/manual#cli-streaming-json:~:text=Stream%20JSON%20Output",
+    "source_url": "https://ampcode.com/manual#cli-streaming-json:~:text=Use%20the%20--stream-json%20flag%20with%20--execute%20mode%20to%20output%20in%20stream%20JSON%20format%20instead%20of%20plain%20text.",
     "comment": "Full support. --stream-json flag with --execute for Claude Code-compatible NDJSON streaming output. Multiple schema types."
   },
   "statusline": {
@@ -107,7 +112,7 @@
   },
   "custom_model_provider": {
     "support": "partial",
-    "source_url": "https://ampcode.com/manual#mcp:~:text=You%20can%20add%20additional%20tools%20using%20MCP%20servers",
+    "source_url": "https://ampcode.com/manual#mcp:~:text=You%20can%20add%20additional%20tools%20using%20MCP%20(Model%20Context%20Protocol)%20servers%2C%20which%20can%20be%20either%20local%20or%20remote.",
     "comment": "No BYOM for the main agent (picks models per mode from providers). MCP servers can connect to external tools, and Plugin API allows custom tool registration."
   },
   "notes": "Amp is opinionated and aggressively removes features it considers obsolete (custom commands, slash commands, themes). Focuses on frontier models. Plugin API provides extensive extensibility for those who need it. Closed-source product; some auxiliary tools open source on GitHub.",
@@ -123,7 +128,7 @@
   },
   "transcripts": {
     "support": "unknown",
-    "source_url": "https://ampcode.com/manual#source:~:text=session",
+    "source_url": "https://ampcode.com/manual#sessionstart-run-setup-when-a-thread-starts:~:text=session",
     "comment": "Location: transcript/session disk storage was not found in public docs reviewed."
   }
 }

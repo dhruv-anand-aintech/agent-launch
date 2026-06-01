@@ -18,7 +18,7 @@
   },
   "released_in": {
     "value": "Jun '23",
-    "source_url": "https://github.com/Aider-AI/aider/releases/tag/v0.5.0#source:~:text=v0.5.0",
+    "source_url": "https://github.com/Aider-AI/aider/releases/tag/v0.5.0#v050:~:text=v0.5.0",
     "comment": "First public release v0.5.0 on June 7, 2023."
   },
   "latest_major_update": {
@@ -48,17 +48,22 @@
   },
   "custom_commands": {
     "support": "none",
-    "source_url": "https://aider.chat/docs/usage/commands.html#source:~:text=Aider%20supports%20commands%20from%20within%20the%20chat%2C%20which%20all%20start%20with%20/",
+    "source_url": "https://aider.chat/docs/usage/commands.html#emacs:~:text=Aider%20supports%20commands%20from%20within%20the%20chat%2C%20which%20all%20start%20with%20/",
     "comment": "40+ built-in slash commands but no mechanism for users to define custom slash commands. Location: no custom command folder; uses CLI flags/config."
+  },
+  "goal_command": {
+    "support": "none",
+    "source_url": "https://aider.chat/docs/usage/commands.html#emacs:~:text=%2F",
+    "comment": "In-chat `/` commands (e.g. `/add`, `/commit`) are built-in chat commands, not a persisted `/goal` loop with pause/resume until a completion condition."
   },
   "subagents": {
     "support": "partial",
-    "source_url": "https://aider.chat/docs/usage/modes.html#source:~:text=Architect%20mode%20and%20the%20editor%20model",
+    "source_url": "https://aider.chat/docs/usage/modes.html#architect-mode-and-the-editor-model:~:text=Architect%20mode%20and%20the%20editor%20model",
     "comment": "Architect/Editor mode uses two models but no general subagent delegation system. No spawning of independent worker agents."
   },
   "model_selection": {
     "support": "full",
-    "source_url": "https://aider.chat/docs/config/options.html#source:~:text=--model%20MODEL%0ASpecify%20the%20model%20to%20use%20for%20the%20main%20chat",
+    "source_url": "https://aider.chat/docs/config/options.html#--model-model:~:text=--model%20MODEL%0ASpecify%20the%20model%20to%20use%20for%20the%20main%20chat",
     "comment": "Full model selection via --model, --weak-model, --editor-model. In-chat /model command. Model aliases supported."
   },
   "approval_mode": {
@@ -83,7 +88,7 @@
   },
   "non_interactive": {
     "support": "full",
-    "source_url": "https://aider.chat/docs/config/options.html#source:~:text=--message%20COMMAND%0ASpecify%20a%20single%20message%20to%20send%20the%20LLM%2C%20process%20reply%20then%20exit",
+    "source_url": "https://aider.chat/docs/config/options.html#--message-command:~:text=--message%20COMMAND%0ASpecify%20a%20single%20message%20to%20send%20the%20LLM%2C%20process%20reply%20then%20exit",
     "comment": "Full non-interactive mode via --message/-m (send instruction, edit files, exit). Also --apply, --commit, --lint, --test."
   },
   "output_format": {
@@ -93,17 +98,17 @@
   },
   "statusline": {
     "support": "none",
-    "source_url": "https://aider.chat/docs/config/options.html#source:~:text=--user-input-color%20VALUE%0ASet%20the%20color%20for%20user%20input",
+    "source_url": "https://aider.chat/docs/config/options.html#--user-input-color-value:~:text=--user-input-color%20VALUE%0ASet%20the%20color%20for%20user%20input",
     "comment": "No configurable status line. Has extensive color customization but no status bar/line concept."
   },
   "telemetry": {
     "support": "full",
-    "source_url": "https://aider.chat/docs/more/analytics.html#source:~:text=Analytics%20are%20only%20collected%20if%20you%20agree%20and%20opt-in",
+    "source_url": "https://aider.chat/docs/more/analytics.html#privacy-policy:~:text=Analytics%20are%20only%20collected%20if%20you%20agree%20and%20opt-in",
     "comment": "Opt-in anonymous analytics via PostHog. Permanently disable with --analytics-disable. Never collects code/chat/keys."
   },
   "custom_model_provider": {
     "support": "full",
-    "source_url": "https://aider.chat/docs/llms.html#source:~:text=Aider%20can%20connect%20to%20most%20LLMs",
+    "source_url": "https://aider.chat/docs/llms.html#aider-can-connect-to-most-llms:~:text=Aider%20can%20connect%20to%20most%20LLMs",
     "comment": "Connects to any LLM via litellm. Supports OpenAI, Anthropic, Gemini, DeepSeek, Ollama, OpenRouter, any OpenAI-compatible endpoint, and more."
   },
   "notes": "Aider is a mature open-source CLI coding agent (45k+ stars) since June 2023. Deep git integration, repo mapping for codebase context, extensive LLM provider support through litellm. No published embed SDK (CLI/scripting only). Notable gaps vs newer agents: no MCP, no user-defined slash commands, no sandbox, no subagent delegation, no resume/continue flags, no structured output. Apache-2.0 licensed.",

@@ -11,7 +11,7 @@
       "CLI",
       "IDE"
     ],
-    "source_url": "https://antigravity.google/docs/cli-getting-started#source:~:text=CLI",
+    "source_url": "https://antigravity.google/docs/getting-started#clip0_6001_463:~:text=CLI",
     "comment": "Google Antigravity IDE plus standalone agy CLI (plugin layout, rules, skills, hooks, MCP). Per-form-factor links: CLI: https://antigravity.google/docs/cli-getting-started; IDE: https://antigravity.google/download.",
     "links": {
       "CLI": "https://antigravity.google/docs/cli-getting-started",
@@ -52,6 +52,11 @@
     "support": "partial",
     "source_url": "https://antigravity.google/docs/cli-features#source:~:text=plugins",
     "comment": "CLI via plugin capabilities; IDE via global workflows rather than classic slash-command folders. Location: command-like behavior is via plugins/workflows rather than a documented standalone command folder."
+  },
+  "goal_command": {
+    "support": "none",
+    "source_url": "https://antigravity.google/docs/cli-features#antigravity-cli-features:~:text=CLI",
+    "comment": "Antigravity CLI docs cover plugins, sandbox, and slash commands but do not document a Codex-style `/goal` primitive."
   },
   "subagents": {
     "support": "unknown",
@@ -111,7 +116,7 @@
   "notes": "Google Antigravity spans an agentic IDE and the agy CLI. Distinct from deprecated Gemini CLI. No published programmatic SDK.",
   "pricing": {
     "value": "Free (generous weekly rate limits), Google AI Pro/Ultra (undisclosed), Organization (consumption-based via Google Cloud)",
-    "source_url": "https://antigravity.google/pricing#source:~:text=For%20Individuals",
+    "source_url": "https://antigravity.google/pricing#for-individuals-0month:~:text=For%20Individuals",
     "comment": "Free tier includes Gemini 3.5 Flash, 3.1 Pro, 3 Flash, Claude Sonnet & Opus 4.6, gpt-oss-120b. Pro/Ultra tiers offer more generous rate limits."
   },
   "hosted_agent": {
@@ -121,7 +126,7 @@
   },
   "transcripts": {
     "support": "partial",
-    "source_url": "https://antigravity.google/docs/cli-features#source:~:text=conversation",
+    "source_url": "https://antigravity.google/docs/getting-started#basic-navigation:~:text=conversation",
     "comment": "Location: Antigravity brain/trajectory summaries are under `~/.gemini/antigravity/brain/<uuid>/*.md`; index data is in `~/Library/Application Support/Antigravity/User/globalStorage/state.vscdb`."
   }
 }

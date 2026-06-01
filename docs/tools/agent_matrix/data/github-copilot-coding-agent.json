@@ -31,7 +31,7 @@
   },
   "latest_major_update": {
     "value": "May '26",
-    "source_url": "https://docs.github.com/en/copilot/how-tos/github-copilot-app#source:~:text=GitHub%20Copilot%20app%20%3A%20A%20desktop%20application%20for%20agent-driven%20development",
+    "source_url": "https://docs.github.com/en/copilot/how-tos/github-copilot-app#source:~:text=A%20desktop%20application%20for%20agent-driven%20development%20that%20brings%20parallel%20workstreams%2C%20GitHub%20integration%2C%20and%20PR%20lifecycle%20management%20into%20one%20place.",
     "comment": "Copilot desktop app (technical preview): parallel agent sessions, PR lifecycle, scheduled workflows. Third-party agent support added. Usage-based billing announced."
   },
   "rules": {
@@ -41,12 +41,12 @@
   },
   "skills": {
     "support": "full",
-    "source_url": "https://docs.github.com/en/copilot/concepts/agents/about-agent-skills#source:~:text=Agent%20skills%20are%20folders%20of%20instructions%2C%20scripts%2C%20and%20resources",
+    "source_url": "https://docs.github.com/en/copilot/concepts/agents/about-agent-skills#next-steps:~:text=Agent%20skills%20are%20folders%20of%20instructions%2C%20scripts%2C%20and%20resources",
     "comment": "Open Agent Skills standard. .github/skills, .claude/skills, .agents/skills. Personal skills in ~/.copilot/skills. gh skill CLI for discovery/install. Location: no public disk folder/file location found in docs reviewed."
   },
   "hooks": {
     "support": "full",
-    "source_url": "https://docs.github.com/en/copilot/concepts/agents/hooks#source:~:text=Hooks%20are%20a%20way%20of%20executing%20custom%20shell%20commands%20at%20strategic%20points%20in%20an%20agent%27s%20workflow",
+    "source_url": "https://docs.github.com/en/copilot/concepts/agents/hooks#next-steps:~:text=Hooks%20are%20a%20way%20of%20executing%20custom%20shell%20commands%20at%20strategic%20points%20in%20an%20agent%27s%20workflow",
     "comment": "Full lifecycle hook system: sessionStart, sessionEnd, userPromptSubmitted, preToolUse (approve/deny), postToolUse, agentStop, subagentStop, errorOccurred. .github/hooks/*.json."
   },
   "mcp_servers": {
@@ -56,17 +56,22 @@
   },
   "custom_commands": {
     "support": "partial",
-    "source_url": "https://docs.github.com/en/copilot/using-github-copilot/copilot-chat/asking-github-copilot-questions-in-your-ide#source:~:text=Use%20slash%20commands%20to%20avoid%20writing%20complex%20prompts%20for%20common%20scenarios",
+    "source_url": "https://docs.github.com/en/copilot/how-tos/chat-with-copilot/chat-in-ide#slash-commands-4:~:text=Use%20slash%20commands%20to%20avoid%20writing%20complex%20prompts%20for%20common%20scenarios",
     "comment": "Built-in slash commands in IDE (/fix, /tests, /explain, /help) and CLI (/delegate, /pr, /resume). Prompt files (*.prompt.md) for reusable snippets. No user-defined custom slash commands. Location: no public disk folder/file location found in docs reviewed."
+  },
+  "goal_command": {
+    "support": "none",
+    "source_url": "https://docs.github.com/en/copilot/reference/copilot-cli-command-reference#source:~:text=slash",
+    "comment": "GitHub Copilot CLI has slash commands and agent modes but no `/goal` for persistent completion conditions across turns."
   },
   "subagents": {
     "support": "full",
-    "source_url": "https://docs.github.com/en/copilot/using-github-copilot/copilot-chat/asking-github-copilot-questions-in-your-ide#source:~:text=You%20can%20use%20subagents%20to%20delegate%20tasks%20to%20an%20isolated%20agent%20with%20its%20own%20context%20window",
+    "source_url": "https://docs.github.com/en/copilot/how-tos/chat-with-copilot/chat-in-ide#using-subagents-3:~:text=You%20can%20use%20subagents%20to%20delegate%20tasks%20to%20an%20isolated%20agent%20with%20its%20own%20context%20window",
     "comment": "Subagents in VS Code and JetBrains IDE agent mode. Isolated context window. Invocation: automatic, direct, or via #runSubagent. Cannot create sub-subagents."
   },
   "model_selection": {
     "support": "full",
-    "source_url": "https://docs.github.com/en/copilot/how-tos/use-ai-models/change-the-chat-model#source:~:text=Choose%20from%20a%20selection%20of%20models%2C%20each%20with%20its%20own%20particular%20strengths",
+    "source_url": "https://docs.github.com/en/copilot/how-tos/use-ai-models/change-the-chat-model#further-reading:~:text=Choose%20from%20a%20selection%20of%20models%2C%20each%20with%20its%20own%20particular%20strengths",
     "comment": "Models from Anthropic, Google, OpenAI, xAI. Auto model selection available. Each model has a premium request multiplier."
   },
   "approval_mode": {
@@ -91,7 +96,7 @@
   },
   "non_interactive": {
     "support": "full",
-    "source_url": "https://docs.github.com/en/copilot/how-tos/copilot-cli/automate-copilot-cli/run-cli-programmatically#source:~:text=Use%20Copilot%20CLI%20in%20the%20terminal%2C%20in%20scripts%2C%20or%20in%20Actions%20workflows",
+    "source_url": "https://docs.github.com/en/copilot/how-tos/copilot-cli/automate-copilot-cli/run-cli-programmatically#further-reading:~:text=Use%20Copilot%20CLI%20in%20the%20terminal%2C%20in%20scripts%2C%20or%20in%20Actions%20workflows",
     "comment": "CLI programmatic/scripted usage in GitHub Actions. --non-interactive mode. Copilot SDK for API-based integration."
   },
   "output_format": {
@@ -117,7 +122,7 @@
   "notes": "GitHub Copilot's agent capabilities span IDE, cloud, and CLI. The cloud agent is unique: runs in ephemeral GitHub Actions environment. Desktop app (preview) adds parallel agent sessions. Ecosystem is rapidly evolving with weekly feature drops.",
   "pricing": {
     "value": "Free $0, Pro $10/mo, Pro+ $39/mo, Business $19/user/mo, Enterprise $39/user/mo",
-    "source_url": "https://github.com/features/copilot/plans#source:~:text=Free%20%240%2C%20Pro%20%2410%2Fmonth%2C%20Pro%2B%20%2439%2Fmonth",
+    "source_url": "https://github.com/features/copilot/plans#everything-in-pro-and:~:text=Free%20%240%2C%20Pro%20%2410%2Fmonth%2C%20Pro%2B%20%2439%2Fmonth",
     "comment": "Free: $0/mo (50 premium requests). Pro: $10/mo (300 premium requests). Pro+: $39/mo (1500 premium requests). Usage-based billing starting June 2026."
   },
   "hosted_agent": {
@@ -127,7 +132,7 @@
   },
   "transcripts": {
     "support": "unknown",
-    "source_url": "https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent#source:~:text=session",
+    "source_url": "https://docs.github.com/en/copilot/concepts/agents/cloud-agent/about-cloud-agent#benefits-over-traditional-ai-workflows:~:text=session",
     "comment": "Location: transcript/session disk storage was not found in public docs reviewed."
   }
 }

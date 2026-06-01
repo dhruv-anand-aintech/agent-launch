@@ -29,37 +29,42 @@
   },
   "latest_major_update": {
     "value": "Feb '26",
-    "source_url": "https://cognition.ai/blog/introducing-devin-2-2#source:~:text=Today%20we%27re%20releasing%20Devin%202.2%2C%20one%20of%20our%20biggest%20updates",
+    "source_url": "https://cognition.ai/blog/introducing-devin-2-2#introducing-devin-22:~:text=Today%20we%27re%20releasing%20Devin%202.2%2C%20one%20of%20our%20biggest%20updates",
     "comment": "Devin 2.2 (Feb 24, 2026): 3x faster startup, end-to-end desktop testing, Devin Review Autofix, redesigned UI. Continuous weekly releases since."
   },
   "rules": {
     "support": "full",
-    "source_url": "https://docs.devin.ai/onboard-devin/agents-md#source:~:text=Devin%20supports%20AGENTS.md%20%2D%20a%20simple%2C%20open%20standard%20for%20providing%20context%20and%20instructions%20to%20AI%20agents",
+    "source_url": "https://docs.devin.ai/onboard-devin/agents-md#documentation-index:~:text=Devin%20supports%20AGENTS.md%20%2D%20a%20simple%2C%20open%20standard%20for%20providing%20context%20and%20instructions%20to%20AI%20agents",
     "comment": "AGENTS.md files in repos, Knowledge (persistent org-level instructions with trigger descriptions), Skills & Rules settings. Location: hosted/web/API-managed; no local disk folder documented."
   },
   "skills": {
     "support": "full",
-    "source_url": "https://docs.devin.ai/product-guides/skills#source:~:text=Skills%20are%20SKILL.md%20files%20you%20commit%20to%20your%20repositories%20that%20teach%20Devin%20reusable%20procedures",
+    "source_url": "https://docs.devin.ai/product-guides/skills#what-are-skills:~:text=Skills%20are%20SKILL.md%20files%20you%20commit%20to%20your%20repositories%20that%20teach%20Devin%20reusable%20procedures",
     "comment": "Full Agent Skills standard support. SKILL.md files in .agents/skills/. Supports YAML frontmatter, dynamic $ARGUMENTS and !command blocks. Also Playbooks system. Location: hosted/web/API-managed; no local disk folder documented."
   },
   "hooks": {
     "support": "full",
-    "source_url": "https://docs.devin.ai/product-guides/automations#source:~:text=Webhook%20triggers%20let%20you%20connect%20any%20external%20system%20to%20Devin%20via%20a%20unique%20HTTPS%20endpoint",
+    "source_url": "https://docs.devin.ai/product-guides/automations#webhook-triggers:~:text=Webhook%20triggers%20let%20you%20connect%20any%20external%20system%20to%20Devin%20via%20a%20unique%20HTTPS%20endpoint",
     "comment": "Automations engine: Slack/GitHub/Linear/schedule/cron/webhook triggers. Actions include start session, message session, triage. Payload filtering and secret auth."
   },
   "mcp_servers": {
     "support": "full",
-    "source_url": "https://docs.devin.ai/work-with-devin/mcp#source:~:text=MCP%20is%20an%20open%20protocol%20that%20enables%20Devin%20to%20use%20hundreds%20of%20external%20tools%20and%20data%20sources",
+    "source_url": "https://docs.devin.ai/work-with-devin/mcp#documentation-index:~:text=MCP%20is%20an%20open%20protocol%20that%20enables%20Devin%20to%20use%20hundreds%20of%20external%20tools%20and%20data%20sources",
     "comment": "MCP Marketplace with 40+ pre-built integrations. Supports STDIO, SSE, and HTTP transports. Custom MCP server tools for session/playbook/knowledge management. Location: hosted/web/API-managed; no local disk folder documented."
   },
   "custom_commands": {
     "support": "full",
-    "source_url": "https://docs.devin.ai/work-with-devin/slash-commands#source:~:text=Custom%20Slash%20Commands%3AOrganizations%20can%20create%20custom%20slash%20commands%20tailored%20to%20their%20team%27s%20unique%20workflows",
+    "source_url": "https://docs.devin.ai/work-with-devin/slash-commands#source:~:text=Organizations%20can%20create%20custom%20slash%20commands%20tailored%20to%20their%20team%E2%80%99s%20unique%20workflows.%20For%20example%2C%20you%20might%20create%3A",
     "comment": "Built-in slash commands (/plan, /review, /test, /think-hard, /implement) plus org-level custom slash commands. Also @skills:name syntax and macros. Location: hosted/web/API-managed; no local disk folder documented."
+  },
+  "goal_command": {
+    "support": "none",
+    "source_url": "https://docs.devin.ai/work-with-devin/slash-commands#source:~:text=slash%20commands",
+    "comment": "Devin supports team custom slash commands; no documented `/goal` for persistent thread-level objectives with auto-continuation."
   },
   "subagents": {
     "support": "full",
-    "source_url": "https://docs.devin.ai/work-with-devin/advanced-capabilities#source:~:text=Devin%20can%20break%20down%20large%20tasks%20and%20delegate%20them%20to%20a%20team%20of%20managed%20Devins%20working%20in%20parallel",
+    "source_url": "https://docs.devin.ai/work-with-devin/advanced-capabilities#managed-devins:~:text=Devin%20can%20break%20down%20large%20tasks%20and%20delegate%20them%20to%20a%20team%20of%20managed%20Devins%20working%20in%20parallel",
     "comment": "Yes, called 'Managed Devins'. Coordinator spawns child Devin sessions in isolated VMs for parallel work. Auto-triage also spawns sub-devins."
   },
   "model_selection": {
@@ -69,12 +74,12 @@
   },
   "approval_mode": {
     "support": "partial",
-    "source_url": "https://docs.devin.ai/product-guides/automations#source:~:text=ACU%20limit%3ASet%20a%20maximum%20ACU%20budget%20per%20session",
+    "source_url": "https://docs.devin.ai/product-guides/automations#source:~:text=Set%20a%20maximum%20ACU%20(Agent%20Compute%20Unit)%20budget%20per%20session%20started%20by%20this%20automation.",
     "comment": "'Secure Mode' (disables native deployment, restricts outbound access). ACU caps, RBAC, PR review approval. No granular approval per action."
   },
   "sandbox_mode": {
     "support": "full",
-    "source_url": "https://docs.devin.ai/onboard-devin/environment#source:~:text=Every%20session%20boots%20from%20a%20snapshot%2C%20a%20frozen%2C%20bootable%20image%20of%20the%20environment",
+    "source_url": "https://docs.devin.ai/onboard-devin/environment#how-sessions-work:~:text=Every%20session%20boots%20from%20a%20snapshot%2C%20a%20frozen%2C%20bootable%20image%20of%20the%20environment",
     "comment": "Full isolation. Every session gets a fresh ephemeral snapshot. Enterprise VPC deployment option. VPN configuration supported."
   },
   "resume": {
@@ -84,12 +89,12 @@
   },
   "continue": {
     "support": "full",
-    "source_url": "https://docs.devin.ai/work-with-devin/devin-cli#source:~:text=When%20a%20task%20outgrows%20your%20local%20machine%20...%20use%20the%20/handoff%20command",
+    "source_url": "https://docs.devin.ai/work-with-devin/devin-cli#source:~:text=When%20a%20task%20outgrows%20your%20local%20machine%20%E2%80%94%20or%20you%20want%20Devin%20to%20keep%20working%20while%20you%20step%20away%20%E2%80%94%20use%20the%20%2Fhandoff%20command%20to%20seamlessly%20transfer",
     "comment": "CLI /handoff transfers to cloud Devin with full context (git branch + conversation history). API session messaging for continuation."
   },
   "non_interactive": {
     "support": "full",
-    "source_url": "https://docs.devin.ai/api-reference/overview#source:~:text=The%20Devin%20API%20enables%20you%20to%20integrate%20Devin%20into%20your%20applications%2C%20automate%20workflows",
+    "source_url": "https://docs.devin.ai/api-reference/overview#documentation-index:~:text=The%20Devin%20API%20enables%20you%20to%20integrate%20Devin%20into%20your%20applications%2C%20automate%20workflows",
     "comment": "Full headless/API mode. REST API with service user auth. Automations run fully autonomously (CI fixers, scheduled sessions, auto-triage)."
   },
   "output_format": {
@@ -99,7 +104,7 @@
   },
   "statusline": {
     "support": "none",
-    "source_url": "https://docs.devin.ai/work-with-devin/devin-cli#commands:~:text=Commands",
+    "source_url": "https://docs.devin.ai/work-with-devin/devin-cli#essential-commands:~:text=Commands",
     "comment": "No statusline feature found in any documentation. Web app shows session status indicators but no CLI statusline."
   },
   "telemetry": {
@@ -120,7 +125,7 @@
   },
   "hosted_agent": {
     "support": "full",
-    "source_url": "https://docs.devin.ai/get-started/devin-intro#source:~:text=Devin%20is%20also%20available%20via%20the%20Devin%20API",
+    "source_url": "https://docs.devin.ai/get-started/devin-intro#the-devin-interface:~:text=Devin%20is%20also%20available%20via%20the%20Devin%20API",
     "comment": "Primarily cloud-hosted at app.devin.ai; Devin CLI bridges to cloud agent."
   },
   "transcripts": {

@@ -20,57 +20,62 @@
   },
   "released_in": {
     "value": "Jan '25",
-    "source_url": "https://cohere.com/blog/north-eap#source:~:text=Introducing%20North",
+    "source_url": "https://cohere.com/blog/north-eap#introducing-north-a-secure-ai-workspace-to-get-more-done:~:text=Introducing%20North",
     "comment": "North early access announcement."
   },
   "latest_major_update": {
     "value": "May '26",
-    "source_url": "https://cohere.com/blog/command-a-plus#source:~:text=command-a-plus-05-2026",
+    "source_url": "https://cohere.com/blog/command-a-plus#snapshot:~:text=command-a-plus-05-2026",
     "comment": "Command A+ model update powers agentic workflows and coding benchmarks, while North remains the enterprise agent platform."
   },
   "rules": {
     "support": "partial",
-    "source_url": "https://cohere.com/north/agent-studio#source:~:text=organization%E2%80%99s%20guardrails",
+    "source_url": "https://cohere.com/north/agent-studio#your-ai-agent-command-center:~:text=organization%E2%80%99s%20guardrails",
     "comment": "North supports enterprise guardrails, but not repo-local instruction files. Location: hosted/web/API-managed; no local disk folder documented."
   },
   "skills": {
     "support": "partial",
-    "source_url": "https://cohere.com/north/agent-studio#source:~:text=Build%20and%20deploy%20no-code%20agents",
+    "source_url": "https://cohere.com/north/agent-studio#build-and-deploy-no-code-agents:~:text=Build%20and%20deploy%20no-code%20agents",
     "comment": "No-code custom agents and reusable workflows, not code-agent SKILL.md folders. Location: hosted/web/API-managed; no local disk folder documented."
   },
   "hooks": {
     "support": "full",
-    "source_url": "https://cohere.com/north/agent-studio#source:~:text=Create%20automations%20tailored%20to%20your%20goals",
+    "source_url": "https://cohere.com/north/agent-studio#create-automations-tailored-to-your-goals:~:text=Create%20automations%20tailored%20to%20your%20goals",
     "comment": "Multi-step workflow automations are a core Agent Studio feature."
   },
   "mcp_servers": {
     "support": "full",
-    "source_url": "https://cohere.com/north/agent-studio#source:~:text=MCP%20integration%20and%20agent-to-agent%20coordination",
+    "source_url": "https://cohere.com/north/agent-studio#built-for-scale-designed-for-control:~:text=MCP%20integration%20and%20agent-to-agent%20coordination",
     "comment": "Agent Studio explicitly mentions MCP integration. Location: hosted/web/API-managed; no local disk folder documented."
   },
   "custom_commands": {
     "support": "none",
-    "source_url": "https://cohere.com/north/agent-studio#source:~:text=Create%20custom%20AI%20agents",
+    "source_url": "https://cohere.com/north/agent-studio#automate-the-busywork-amplify-the-best-work:~:text=Create%20custom%20AI%20agents",
     "comment": "No coding-agent slash-command surface found. Location: hosted/web/API-managed; no local disk folder documented."
+  },
+  "goal_command": {
+    "support": "none",
+    "source_url": "https://cohere.com/north/agent-studio#create-automations-tailored-to-your-goals:~:text=goals",
+    "comment": "North is a hosted agent studio with automations/goals in the product sense, not a terminal `/goal` slash command."
   },
   "subagents": {
     "support": "full",
-    "source_url": "https://cohere.com/north/agent-studio#source:~:text=agent-to-agent%20coordination",
+    "source_url": "https://cohere.com/north/agent-studio#built-for-scale-designed-for-control:~:text=agent-to-agent%20coordination",
     "comment": "Agent-to-agent coordination is listed as an extensibility feature."
   },
   "model_selection": {
     "support": "partial",
-    "source_url": "https://cohere.com/blog/command-a-plus#source:~:text=command-a-plus-05-2026",
+    "source_url": "https://cohere.com/blog/command-a-plus#snapshot:~:text=command-a-plus-05-2026",
     "comment": "Cohere model stack is selected through North/Cohere platform, not arbitrary coding-agent CLI flags."
   },
   "approval_mode": {
     "support": "partial",
-    "source_url": "https://cohere.com/north/agent-studio#source:~:text=operate%20within%20your%20organization%E2%80%99s%20guardrails",
+    "source_url": "https://cohere.com/north/agent-studio#your-ai-agent-command-center:~:text=operate%20within%20your%20organization%E2%80%99s%20guardrails",
     "comment": "Enterprise guardrails and human-agent collaboration; no per-shell-command approval model."
   },
   "sandbox_mode": {
     "support": "full",
-    "source_url": "https://cohere.com/north#source:~:text=Run%20North%20in%20your%20own%20VPC%2C%20on-prem%20environment",
+    "source_url": "https://cohere.com/north#privately-deployable:~:text=Run%20North%20in%20your%20own%20VPC%2C%20on-prem%20environment",
     "comment": "Private deployment options include VPC, on-prem, or Cohere Model Vault."
   },
   "resume": {
@@ -85,7 +90,7 @@
   },
   "non_interactive": {
     "support": "partial",
-    "source_url": "https://cohere.com/north/agent-studio#source:~:text=API-based%20workflows",
+    "source_url": "https://cohere.com/north/agent-studio#built-for-scale-designed-for-control:~:text=API-based%20workflows",
     "comment": "API-based workflows can automate tasks, but not local repo headless coding."
   },
   "output_format": {
@@ -95,33 +100,33 @@
   },
   "statusline": {
     "support": "none",
-    "source_url": "https://cohere.com/north#source:~:text=secure%20workspace",
+    "source_url": "https://cohere.com/north#automate:~:text=secure%20workspace",
     "comment": "Enterprise web workspace, no CLI statusline."
   },
   "telemetry": {
     "support": "partial",
-    "source_url": "https://cohere.com/north/agent-studio#source:~:text=full%20data%20traceability%20and%20audit-ready%20logs",
+    "source_url": "https://cohere.com/north/agent-studio#built-for-scale-designed-for-control:~:text=full%20data%20traceability%20and%20audit-ready%20logs",
     "comment": "Audit-ready logs and traceability are documented; telemetry opt-out details are not."
   },
   "hosted_agent": {
     "support": "full",
-    "source_url": "https://cohere.com/north#source:~:text=Deploy%20AI%20agents%20across%20teams",
+    "source_url": "https://cohere.com/north#create:~:text=Deploy%20AI%20agents%20across%20teams",
     "comment": "North is an enterprise agent platform/workspace."
   },
   "custom_model_provider": {
     "support": "none",
-    "source_url": "https://cohere.com/blog/command-a-plus#source:~:text=Cohere%E2%80%99s%20mission",
+    "source_url": "https://cohere.com/blog/command-a-plus#introducing-command-a-making-sovereign-agentic-capabilities-available-to-all:~:text=Cohere%E2%80%99s%20mission",
     "comment": "Built around Cohere models/platform deployment, not arbitrary model providers."
   },
   "pricing": {
     "value": "Enterprise/demo-based",
-    "source_url": "https://cohere.com/north#source:~:text=Request%20a%20demo",
+    "source_url": "https://cohere.com/north#empower-your-workforce-with-ai-agents-that-operate-in-lockstep-with-your-people-data-and-tools:~:text=Request%20a%20demo",
     "comment": "North is sold through demo/sales motion."
   },
   "notes": "Included because the request mentioned Cohere. This is an enterprise agent platform with coding-capable Command A+ underneath, not a direct Claude Code/Codex-style coding agent.",
   "transcripts": {
     "support": "partial",
-    "source_url": "https://cohere.com/north#source:~:text=agent",
+    "source_url": "https://cohere.com/north#empower-your-workforce-with-ai-agents-that-operate-in-lockstep-with-your-people-data-and-tools:~:text=agent",
     "comment": "Location: hosted/web/API-managed session history; no local transcript directory documented."
   }
 }

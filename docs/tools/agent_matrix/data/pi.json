@@ -1,0 +1,132 @@
+{
+  "name": "Pi",
+  "links": {
+    "docs": "https://pi.dev/docs/latest",
+    "github": "https://github.com/earendil-works/pi",
+    "website": "https://pi.dev",
+    "slug": "pi"
+  },
+  "form_factor": {
+    "values": [
+      "CLI",
+      "SDK"
+    ],
+    "source_url": "https://pi.dev/docs/latest/quickstart#install:~:text=Pi%20is%20distributed%20as%20an%20npm%20package",
+    "comment": "Terminal CLI via npm or curl installer and SDK docs for embedding. Per-form-factor links: CLI: https://pi.dev/docs/latest/quickstart and README install section; SDK: https://pi.dev/docs/latest/sdk.",
+    "links": {
+      "CLI": "https://pi.dev/docs/latest/quickstart",
+      "SDK": "https://pi.dev/docs/latest/sdk"
+    }
+  },
+  "released_in": {
+    "value": "May '26",
+    "source_url": "https://github.com/earendil-works/pi/blob/main/packages/coding-agent/CHANGELOG.md#changelog:~:text=0.74.0",
+    "comment": "Pi changelog shows first listed public release as 0.74.0 dated 2026-05-07."
+  },
+  "latest_major_update": {
+    "value": "May '26",
+    "source_url": "https://github.com/earendil-works/pi/blob/main/packages/coding-agent/CHANGELOG.md#changelog:~:text=0.74.0",
+    "comment": "Recent changelog entries are 0.77.0 on 2026-05-28 and 0.78.0 on 2026-05-29."
+  },
+  "rules": {
+    "support": "full",
+    "source_url": "https://pi.dev/docs/latest/usage#context-files:~:text=Pi%20loads%20AGENTS.md%20or%20CLAUDE.md%20at%20startup%20from%3A",
+    "comment": "Loads `AGENTS.md` and `CLAUDE.md` from `~/.pi/agent/`, ancestors, and cwd. Supports global and project context files with path-based precedence."
+  },
+  "skills": {
+    "support": "full",
+    "source_url": "https://pi.dev/docs/latest#skills:~:text=Skills",
+    "comment": "Discovers skills from `~/.pi/agent/skills/`, `~/.agents/skills/`, `.pi/skills/`, and `.agents/skills/`, including `SKILL.md` directories. Supports `/skill:name` command registration and cross-harness imports (e.g. Claude/ Codex)."
+  },
+  "hooks": {
+    "support": "full",
+    "source_url": "https://pi.dev/docs/latest/extensions#source:~:text=hooks",
+    "comment": "Extension API supports lifecycle/tool hooks via TypeScript extensions, including tool event hooks and custom event handlers. Full extension-based hook model from docs and examples."
+  },
+  "mcp_servers": {
+    "support": "none",
+    "source_url": "https://github.com/earendil-works/pi/blob/main/packages/coding-agent/README.md#source:~:text=MCP",
+    "comment": "README explicitly states no MCP. MCP-like capabilities can be built via extensions instead."
+  },
+  "custom_commands": {
+    "support": "full",
+    "source_url": "https://pi.dev/docs/latest/usage#source:~:text=slash%20commands",
+    "comment": "Rich slash-command UI includes built-ins like `/model`, `/resume`, `/tree`, `/fork`, `/clone`, `/compact`, `/export`, `/share`, `/settings`, and `/login`."
+  },
+  "goal_command": {
+    "support": "none",
+    "source_url": "https://github.com/earendil-works/pi/blob/main/packages/coding-agent/README.md#source:~:text=MCP",
+    "comment": "No `/goal` concept is documented; README is explicit about what is *not* built in (including plan mode and no-permission prompts)."
+  },
+  "subagents": {
+    "support": "none",
+    "source_url": "https://github.com/earendil-works/pi/blob/main/packages/coding-agent/README.md#source:~:text=MCP",
+    "comment": "README says \"No sub-agents.\" suggests using spawned pi instances/context tools instead of native subagent orchestration."
+  },
+  "model_selection": {
+    "support": "full",
+    "source_url": "https://pi.dev/docs/latest/usage#source:~:text=model",
+    "comment": "Model/provider selection is fully exposed with `/model` in interactive mode and `--provider`, `--model`, `--models` CLI options."
+  },
+  "approval_mode": {
+    "support": "none",
+    "source_url": "https://github.com/earendil-works/pi/blob/main/packages/coding-agent/README.md#source:~:text=MCP",
+    "comment": "Philosophy page says there are no permission popups by default and no approval mode is documented as a first-class control."
+  },
+  "sandbox_mode": {
+    "support": "none",
+    "source_url": "https://github.com/earendil-works/pi/blob/main/packages/coding-agent/README.md#source:~:text=MCP",
+    "comment": "No sandbox mode setting is documented; README points users to tmux/container-like patterns instead of built-in sandbox controls."
+  },
+  "resume": {
+    "support": "full",
+    "source_url": "https://pi.dev/docs/latest/usage#source:~:text=session",
+    "comment": "Sessions can be resumed with `pi -r/--resume`, `--session`, and interactive `/resume` + `/fork`/`/clone` branch flow."
+  },
+  "continue": {
+    "support": "full",
+    "source_url": "https://pi.dev/docs/latest/usage#source:~:text=session",
+    "comment": "Continue latest session with `-c/--continue`; also supports session browsing and tree-based continuation commands in-session."
+  },
+  "non_interactive": {
+    "support": "full",
+    "source_url": "https://pi.dev/docs/latest/usage#source:~:text=print%20mode",
+    "comment": "Supports print mode (`-p/--print`) and machine-friendly transports (`--mode json`, `--mode rpc`) for scripted/CI usage."
+  },
+  "output_format": {
+    "support": "full",
+    "source_url": "https://pi.dev/docs/latest/json#source:~:text=JSON",
+    "comment": "`--mode json` outputs JSON lines and JSON mode docs exist for event streaming consumers and integrations."
+  },
+  "statusline": {
+    "support": "none",
+    "source_url": "https://pi.dev/docs/latest/usage#source:~:text=status%20line",
+    "comment": "Interactive UI includes a built-in footer/status area but no documented customization API for a user-defined status line." 
+  },
+  "telemetry": {
+    "support": "partial",
+    "source_url": "https://pi.dev/docs/latest/settings#source:~:text=telemetry",
+    "comment": "Telemetry is configurable via `enableInstallTelemetry` and can be disabled; `PI_SKIP_VERSION_CHECK` and offline modes control network checks." 
+  },
+  "custom_model_provider": {
+    "support": "full",
+    "source_url": "https://pi.dev/docs/latest/models#source:~:text=custom%20providers",
+    "comment": "Supports custom provider/API integration through `~/.pi/agent/models.json` and custom provider registration hooks for OpenAI-compatible, Anthropic, Google, and custom flows."
+  },
+  "notes": "Pi is a minimal terminal coding harness with extensibility-first defaults (extensions, skills, prompt templates, themes, packages), plus SDK and RPC/event-stream integrations.",
+  "pricing": {
+    "value": "Free (MIT)",
+    "source_url": "https://github.com/earendil-works/pi/blob/main/packages/coding-agent/package.json#license:~:text=license",
+    "comment": "Repository is MIT-licensed and distributed as npm package `@earendil-works/pi-coding-agent`; there is no separate paid subscription model documented in public docs."
+  },
+  "hosted_agent": {
+    "support": "none",
+    "source_url": "https://pi.dev/docs/latest#source:~:text=documentation",
+    "comment": "CLI is local-first; no dedicated hosted runtime platform is documented."
+  },
+  "transcripts": {
+    "support": "full",
+    "source_url": "https://pi.dev/docs/latest/usage#source:~:text=session",
+    "comment": "Sessions are saved automatically to `~/.pi/agent/sessions/` with session IDs and `/session` command showing file and metadata."
+  }
+}

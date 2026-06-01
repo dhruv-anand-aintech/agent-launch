@@ -12,7 +12,7 @@
       "CLI",
       "SDK"
     ],
-    "source_url": "https://marketplace.visualstudio.com/items?itemName=saoudrizwan.claude-dev#source:~:text=Extension",
+    "source_url": "https://marketplace.visualstudio.com/items?itemName=saoudrizwan.claude-dev#add-a-tool-that:~:text=Extension",
     "comment": "VS Code extension, JetBrains plugin, CLI, and @cline/sdk for embedding the agent runtime in apps and CI. Per-form-factor links: Extension: https://marketplace.visualstudio.com/items?itemName=saoudrizwan.claude-dev; CLI: https://docs.cline.bot/cli/overview; SDK: https://docs.cline.bot/sdk/overview.",
     "links": {
       "Extension": "https://marketplace.visualstudio.com/items?itemName=saoudrizwan.claude-dev",
@@ -32,47 +32,52 @@
   },
   "rules": {
     "support": "full",
-    "source_url": "https://docs.cline.bot/customization/cline-rules#source:~:text=Primary%20rule%20format%3A%20.clinerules%2F",
+    "source_url": "https://docs.cline.bot/customization/cline-rules#source:~:text=Cline%20Rules%20.clinerules%2F%20Primary%20rule%20format",
     "comment": "Rich rule system: .clinerules/ directory, global ~/Documents/Cline/Rules/, conditional rules with YAML frontmatter globs, auto-detection of .cursorrules, .windsurfrules, AGENTS.md. Location: no public disk folder/file location found in docs reviewed."
   },
   "skills": {
     "support": "full",
-    "source_url": "https://docs.cline.bot/customization/skills#source:~:text=Skills%20are%20modular%20instruction%20sets%20that%20extend%20Cline%E2%80%99s%20capabilities%20for%20specific%20tasks",
+    "source_url": "https://docs.cline.bot/customization/skills#documentation-index:~:text=Skills%20are%20modular%20instruction%20sets%20that%20extend%20Cline%E2%80%99s%20capabilities%20for%20specific%20tasks",
     "comment": "Full skill system: SKILL.md files in .cline/skills/ or ~/.cline/skills/, YAML frontmatter, progressive loading, slash command triggering, skill toggles. Location: no public disk folder/file location found in docs reviewed."
   },
   "hooks": {
     "support": "full",
-    "source_url": "https://docs.cline.bot/sdk/plugins#source:~:text=Hook%20stages%20include",
+    "source_url": "https://docs.cline.bot/sdk/plugins#hook-stages:~:text=Hook%20stages%20include",
     "comment": "Lifecycle hooks via SDK plugin system: 18 hook stages (input, runtime_event, session_start, turn_start, tool_call_before/after, etc.). Also ~/.cline/hooks/ directory."
   },
   "mcp_servers": {
     "support": "full",
-    "source_url": "https://docs.cline.bot/mcp/mcp-overview#source:~:text=MCP%20(Model%20Context%20Protocol)%20lets%20Cline%20use%20external%20tools%20and%20data%20sources%20through%20MCP%20servers",
+    "source_url": "https://docs.cline.bot/mcp/mcp-overview#documentation-index:~:text=MCP%20(Model%20Context%20Protocol)%20lets%20Cline%20use%20external%20tools%20and%20data%20sources%20through%20MCP%20servers",
     "comment": "Full MCP support with STDIO and HTTP/SSE transports, MCP Marketplace for one-click install, cline mcp CLI wizard. Location: no public disk folder/file location found in docs reviewed."
   },
   "custom_commands": {
     "support": "full",
-    "source_url": "https://docs.cline.bot/core-workflows/using-commands#source:~:text=Slash%20Commands",
+    "source_url": "https://docs.cline.bot/core-workflows/using-commands#slash-commands:~:text=Slash%20Commands",
     "comment": "Built-in slash commands plus skills auto-register as slash commands. SDK plugins can also register custom commands. Location: no public disk folder/file location found in docs reviewed."
+  },
+  "goal_command": {
+    "support": "none",
+    "source_url": "https://docs.cline.bot/core-workflows/using-commands#slash-commands:~:text=Slash%20Commands",
+    "comment": "Cline supports custom slash commands via workflow files; no built-in `/goal` for auto-continuing until a completion condition."
   },
   "subagents": {
     "support": "full",
-    "source_url": "https://docs.cline.bot/features/subagents#source:~:text=Subagents%20let%20Cline%20spawn%20focused%20research%20agents%20that%20run%20in%20parallel",
+    "source_url": "https://docs.cline.bot/features/subagents#documentation-index:~:text=Subagents%20let%20Cline%20spawn%20focused%20research%20agents%20that%20run%20in%20parallel",
     "comment": "Full subagent system: use_subagents tool spawns parallel read-only research agents with separate context/token budgets."
   },
   "model_selection": {
     "support": "full",
-    "source_url": "https://github.com/cline/cline#source:~:text=Cline%20is%20not%20locked%20to%20a%20single%20AI%20provider",
+    "source_url": "https://github.com/cline/cline#works-with-every-model:~:text=Cline%20is%20not%20locked%20to%20a%20single%20AI%20provider",
     "comment": "30+ documented providers: Anthropic, OpenAI, Google, AWS Bedrock, Azure, GCP Vertex, OpenRouter (200+ models), Ollama, LM Studio, and any OpenAI-compatible endpoint."
   },
   "approval_mode": {
     "support": "full",
-    "source_url": "https://docs.cline.bot/features/auto-approve#source:~:text=Auto%20Approve%20lets%20you%20decide%20which%20actions%20Cline%20can%20take%20without%20asking%20for%20approval",
+    "source_url": "https://docs.cline.bot/features/auto-approve#source:~:text=Auto%20Approve%20lets%20you%20decide%20which%20actions%20Cline%20can%20take%20without%20prompting%20you%20each%20time.",
     "comment": "Granular auto-approve per category: Read, Edit, Execute, Browser, MCP. YOLO mode for everything. --auto-approve flag."
   },
   "sandbox_mode": {
     "support": "partial",
-    "source_url": "https://docs.cline.bot/cli/cli-reference#source:~:text=CLINE_SANDBOX%20Enable%20sandbox%20mode",
+    "source_url": "https://docs.cline.bot/cli/cli-reference#environment-variables:~:text=CLINE_SANDBOX%20Enable%20sandbox%20mode",
     "comment": "Sandbox mode via CLINE_SANDBOX env var and CLINE_SANDBOX_DATA_DIR for isolated session storage. No containerization."
   },
   "resume": {
@@ -82,43 +87,43 @@
   },
   "continue": {
     "support": "partial",
-    "source_url": "https://github.com/cline/cline/releases/tag/cli-v3.0.3#source:~:text=--continue%20so%20you%20can%20resume%20a%20task%20in%20an%20isolated%20worktree",
+    "source_url": "https://github.com/cline/cline/releases/tag/cli-v3.0.3#cli-v303:~:text=--continue%20so%20you%20can%20resume%20a%20task%20in%20an%20isolated%20worktree",
     "comment": "--continue flag exists but is tied to --worktree. No standalone 'continue latest' flag. Pipe-chaining supported."
   },
   "non_interactive": {
     "support": "full",
-    "source_url": "https://docs.cline.bot/usage/cli-overview#source:~:text=Headless%20mode%20is%20triggered%20when%20using%20flags%20like%20--json%2C%20when%20stdin%20is%20piped%2C%20or%20when%20output%20is%20redirected",
+    "source_url": "https://docs.cline.bot/usage/cli-overview#headless-mode:~:text=Headless%20is%20triggered%20when%20using%20flags%20like%20--json%2C%20when%20stdin%20is%20piped%2C%20or%20when%20output%20is%20redirected.",
     "comment": "Full headless mode. Auto-triggered with --json flag, piped stdin, or redirected stdout. Works in CI/CD."
   },
   "output_format": {
     "support": "full",
-    "source_url": "https://docs.cline.bot/cli/cli-reference#source:~:text=JSON%20Output%20Format",
+    "source_url": "https://docs.cline.bot/cli/cli-reference#json-output-format:~:text=JSON%20Output%20Format",
     "comment": "Full JSON output via --json flag. Newline-delimited JSON objects with type, text, ts, say/ask subtype, reasoning, partial."
   },
   "statusline": {
     "support": "none",
-    "source_url": "https://docs.cline.bot/cli/cli-reference#source:~:text=Global%20Options",
+    "source_url": "https://docs.cline.bot/cli/cli-reference#global-options:~:text=Global%20Options",
     "comment": "No customizable status line found in documentation or CLI reference."
   },
   "telemetry": {
     "support": "full",
-    "source_url": "https://docs.cline.bot/enterprise-solutions/monitoring/telemetry#source:~:text=Cline%20includes%20telemetry%20to%20help%20understand%20usage%20patterns%20and%20improve%20the%20product",
+    "source_url": "https://docs.cline.bot/enterprise-solutions/monitoring/telemetry#documentation-index:~:text=Cline%20includes%20telemetry%20to%20help%20understand%20usage%20patterns%20and%20improve%20the%20product",
     "comment": "Anonymous telemetry with user toggle. Never captures code/file contents. Enterprise: OpenTelemetry integration (OTLP export to Datadog/Grafana/Splunk)."
   },
   "custom_model_provider": {
     "support": "full",
-    "source_url": "https://github.com/cline/cline#source:~:text=Any%20OpenAI-compatible%20API%20Self-hosted%20or%20third-party%20endpoints",
+    "source_url": "https://github.com/cline/cline#works-with-every-model:~:text=Any%20OpenAI-compatible%20API%20Self-hosted%20or%20third-party%20endpoints",
     "comment": "Any OpenAI-compatible API endpoint supported. 30+ documented providers. BYOK model."
   },
-  "notes": "Cline has the most comprehensive feature set of any coding agent in this matrix — 17/20 fields at full support. Open source (Apache 2.0), originally 'Claude Dev'. Started as VS Code extension, expanded to CLI and SDK. 8M+ installs.",
+  "notes": "Cline has the most comprehensive feature set of any coding agent in this matrix \u2014 17/20 fields at full support. Open source (Apache 2.0), originally 'Claude Dev'. Started as VS Code extension, expanded to CLI and SDK. 8M+ installs.",
   "pricing": {
     "value": "Free (Apache-2.0), Enterprise custom pricing",
-    "source_url": "https://cline.bot/pricing#source:~:text=Cline%20is%20free%20for%20individual%20developers.%20Pay%20only%20for%20AI%20inference%20on%20a%20usage%20basis",
+    "source_url": "https://cline.bot/pricing#simple-transparent-pricing:~:text=Cline%20is%20free%20for%20individual%20developers.%20Pay%20only%20for%20AI%20inference%20on%20a%20usage%20basis",
     "comment": "Open source: free for individual developers. Pay only for AI inference. Enterprise: custom pricing with SSO/OIDC/SCIM, RBAC."
   },
   "hosted_agent": {
     "support": "none",
-    "source_url": "https://cline.bot/#source:~:text=One%20open%20source%20agent%20runtime",
+    "source_url": "https://cline.bot/#the-open-coding-agent:~:text=One%20open%20source%20agent%20runtime",
     "comment": "Runs locally as VS Code extension or CLI."
   },
   "transcripts": {
