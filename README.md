@@ -1,5 +1,7 @@
 # agent-launch
 
+![agent-launch — unified CLI for coding agents](docs/assets/agent-launch-hero.webp)
+
 One command for launching the local coding-agent CLIs installed on this machine:
 
 - Antigravity CLI (`agy`)
