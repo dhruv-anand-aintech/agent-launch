@@ -143,7 +143,10 @@ a { color: inherit; text-decoration: none; }
   padding-bottom: var(--footer-h);
   scroll-padding-bottom: var(--footer-h);
 }
-table { border-collapse: separate; border-spacing: 0; background: var(--panel); }
+table {
+  border-collapse: separate; border-spacing: 0; background: var(--panel); table-layout: fixed;
+  width: 100%; min-width: 100%;
+}
 thead { position: sticky; top: 0; z-index: 20; }
 th {
   background: #eee7d8; color: #2a241b; font-weight: 700; font-size: 10px;
@@ -153,25 +156,47 @@ th {
 }
 th.corner { position: sticky; left: 0; z-index: 25; background: #e8decc; min-width: 156px; width: 156px; }
 th.agent-col {
-  min-width: 44px; max-width: 44px; height: 44px; cursor: pointer;
-  transition: opacity .15s;
+  width: var(--agent-col-w, 88px); min-width: var(--agent-col-w, 88px); max-width: var(--agent-col-w, 88px);
+  min-height: 64px; height: auto; cursor: grab; transition: opacity .15s;
+  padding: 5px 6px 7px; vertical-align: bottom;
 }
+th.agent-col.hidden-col { cursor: default; }
 th.agent-col.dragging { opacity: .4; }
 th.agent-col.drag-over { background: #d5cdbb; }
-th.agent-col.hidden-col { opacity: .25; }
+th.agent-col.hidden-col {
+  width: var(--agent-col-hidden-w, 36px); min-width: var(--agent-col-hidden-w, 36px);
+  max-width: var(--agent-col-hidden-w, 36px); opacity: .35;
+}
+th.agent-col.hidden-col .agent-name { display: none; }
+.agent-head {
+  display: flex; flex-direction: column; align-items: center; justify-content: flex-end;
+  gap: 4px; min-height: 48px; width: 100%;
+}
+.agent-brand-link {
+  display: flex; flex-direction: column; align-items: center; justify-content: flex-end;
+  gap: 4px; width: 100%; text-decoration: none; color: inherit; border-radius: 4px;
+}
+.agent-brand-link:hover { background: rgba(42, 36, 27, 0.06); }
+.agent-brand-link:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+a.docs-link { font-weight: 600; color: var(--accent); text-decoration: underline; font-size: 10px; }
+a.docs-link:hover { text-decoration: none; }
+.agent-name {
+  width: 100%; box-sizing: border-box; font-weight: 700; line-height: 1.15; color: var(--ink);
+  text-align: center; overflow-wrap: anywhere; word-break: break-word; hyphens: auto;
+  overflow: hidden; max-height: 2.6em;
+}
 .row-label.dragging { opacity: .4; }
 .row-label.drag-over { outline: 2px dashed var(--accent); outline-offset: -2px; }
 .fav-box { display: inline-block; background: #fff; border-radius: 6px; line-height: 0; box-shadow: inset 0 0 0 1px var(--line); }
 th.agent-col .fav { width: 32px; height: 32px; vertical-align: middle; border-radius: 6px; }
 th.agent-col.deprecated-col { opacity: .42; }
-th.agent-col.deprecated-col .agent-full::after { content: " (deprecated)"; font-weight: 400; }
-th.agent-col .agent-full { display: none; position: absolute; left: 50%; transform: translateX(-50%);
-  top: calc(100% + 2px); background: #2a241b; color: #f6f4ee; font-size: 10px; padding: 2px 6px;
-  border-radius: 3px; white-space: nowrap; z-index: 30; pointer-events: none; }
-th.agent-col:hover .agent-full { display: block; }
+th.agent-col.deprecated-col .agent-name::after { content: " (deprecated)"; font-weight: 400; font-size: 8px; }
 th.agent-col .eye {
-  position: absolute; top: 1px; right: 2px; font-size: 9px; color: var(--muted); opacity: .5; pointer-events: none;
+  position: absolute; top: 1px; right: 2px; font-size: 9px; color: var(--muted); opacity: .5;
+  pointer-events: auto; cursor: pointer; background: none; border: none; padding: 2px 3px; line-height: 1;
+  font: inherit; border-radius: 3px; z-index: 2;
 }
+th.agent-col .eye:hover { opacity: 1; background: rgba(42, 36, 27, 0.08); }
 th.agent-col.hidden-col .eye { opacity: 1; color: var(--none); }
 tbody td { padding: 3px 4px; font-size: 11px; text-align: center; vertical-align: middle;
   border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
@@ -232,7 +257,14 @@ td.cell-wrap .dot {
   margin-top: 5px; padding-top: 5px; border-top: 1px solid rgba(246,244,238,.22);
 }
 .cell-tip-link { white-space: nowrap; }
-td.value { font-size: 9px; color: var(--muted); line-height: 1.25; white-space: normal; max-width: 110px; }
+td.value {
+  font-size: 9px; color: var(--muted); line-height: 1.35; text-align: left; vertical-align: top;
+  width: var(--agent-col-w, 88px); max-width: var(--agent-col-w, 88px); min-width: var(--agent-col-w, 88px);
+  white-space: normal; overflow-wrap: anywhere; word-break: break-word; hyphens: auto;
+}
+td.value .cell-value {
+  display: block; max-width: 100%; overflow-wrap: anywhere; word-break: break-word;
+}
 .form-tags { display: flex; flex-wrap: wrap; gap: 1px; justify-content: center; }
 .form-tag { border: 1px solid var(--line); background: #fff; padding: 1px 2px; font-size: 8px; }
 .form-tag.deprecated-tag { color: var(--warn); border-color: #d4a574; }
@@ -271,7 +303,7 @@ td.value { font-size: 9px; color: var(--muted); line-height: 1.25; white-space: 
   </nav>
 </header>
 <section class="hero">
-  <p>Compare ${htmlEscape(matrix.length)} AI coding agents across 18 features. Hover a column for agent name, drag to reorder, click to toggle visibility.</p>
+  <p>Compare ${htmlEscape(matrix.length)} AI coding agents across 18 features. <strong>Name or icon</strong> opens the product site; <strong>⊙</strong> hides or shows a column; drag headers to reorder; use the <strong>API docs</strong> row for official references.</p>
   <div class="meta-row">
     <span class="pill">${htmlEscape(matrix.length)} agents</span>
     <span class="pill" id="updatedPill" data-updated-at="${htmlEscape(updatedAt)}">${htmlEscape(formatUpdatedLabel(updatedAt))}</span>
@@ -291,6 +323,23 @@ td.value { font-size: 9px; color: var(--muted); line-height: 1.25; white-space: 
 function agentDomain(agent) {
   var u = agent.links.website || agent.links.docs || "";
   try { return new URL(u).hostname.replace(/^www\\./, ""); } catch(e) { return ""; }
+}
+function agentBrandUrl(agent) {
+  var links = agent.links || {};
+  return links.website || links.docs || "";
+}
+function agentBrandHeadHtml(agent, idx) {
+  var url = agentBrandUrl(agent);
+  var inner = favimg(agent, idx) + '<span class="agent-name">'+esc(agent.name)+'</span>';
+  if (!url) return '<div class="agent-head">'+inner+'</div>';
+  var host = agentDomain(agent);
+  var title = host ? ('Open ' + host) : 'Open product site';
+  return '<div class="agent-head"><a class="agent-brand-link" href="'+esc(url)+'" target="_blank" rel="noopener noreferrer" draggable="false" title="'+esc(title)+'">'+inner+'</a></div>';
+}
+function providerDocsCell(agent) {
+  var url = agent.links && agent.links.docs;
+  if (!url) return '<td class="cell-wrap value"><span class="cell-value">&mdash;</span></td>';
+  return '<td class="cell-wrap value"><a class="docs-link" href="'+esc(url)+'" target="_blank" rel="noopener noreferrer">Docs</a></td>';
 }
 const { matrix, columns, groups, faviconOverrides } = JSON.parse(document.getElementById('payload').textContent);
 function formatUpdatedLabelClient(iso) {
@@ -358,11 +407,14 @@ function dateSortKey(agent, key) {
   if (field.sort_date) return Date.parse(field.sort_date + 'T12:00:00Z') || 0;
   return parseDisplayDate(field.value);
 }
+function sortPriorityNumber(sortEntry) {
+  return rowSort.length - rowSort.indexOf(sortEntry);
+}
 function sortableLabelHtml(label, key) {
   var sortEntry = rowSort.find(function(s){ return s.key === key; });
   var isSort = !!sortEntry;
   var active = isSort ? ' filter-active' : '';
-  var arrow = isSort ? (rowSort.indexOf(sortEntry) + 1) : '&#9654;';
+  var arrow = isSort ? sortPriorityNumber(sortEntry) : '&#9654;';
   return '<td class="row-label'+active+'" data-rowkey="'+key+'" onclick="cycleSort('+"'"+key+"'"+')" title="Sort columns by this date"><span class="row-label-tip">'+esc(label)+'</span><span class="arrow">'+arrow+'</span>'+esc(label)+'</td>';
 }
 
@@ -459,37 +511,90 @@ function cell(agent, col) {
   if (v.value!==undefined) return '<td class="'+wrapCls+' value"><span class="cell-value">'+esc(v.value)+'</span>'+link+mark+tip+'</td>';
   return '<td>'+esc(v)+'</td>';
 }
+function updateColWidths() {
+  var wrap = document.querySelector('.table-wrap');
+  var corner = 156;
+  var minVisible = 80;
+  var minHidden = 36;
+  var hiddenCount = 0;
+  colOrder.forEach(function(i){ if (hidden.has(i)) hiddenCount++; });
+  var visibleCount = visibleCols().length || 1;
+  var avail = Math.max(0, (wrap ? wrap.clientWidth : window.innerWidth) - corner);
+  var hiddenW = hiddenCount * minHidden;
+  var w = Math.max(minVisible, Math.floor((avail - hiddenW) / visibleCount));
+  document.documentElement.style.setProperty('--agent-col-w', w + 'px');
+  document.documentElement.style.setProperty('--agent-col-hidden-w', minHidden + 'px');
+}
+function fitAgentHeaderNames() {
+  document.querySelectorAll('th.agent-col:not(.hidden-col) .agent-name').forEach(function(el) {
+    el.style.fontSize = '';
+    var box = el.closest('.agent-head');
+    if (!box) return;
+    var maxW = Math.max(0, box.clientWidth - 2);
+    var maxH = 34;
+    var fs = 10;
+    el.style.fontSize = fs + 'px';
+    while (fs > 5.5 && (el.scrollWidth > maxW + 1 || el.scrollHeight > maxH)) {
+      fs -= 0.5;
+      el.style.fontSize = fs + 'px';
+    }
+  });
+}
+function scheduleFitAgentHeaderNames() {
+  requestAnimationFrame(function() {
+    requestAnimationFrame(fitAgentHeaderNames);
+  });
+}
 function renderHeader() {
-  document.getElementById('headerRow').innerHTML = '<th class="corner"></th>'+colOrder.map(function(i){
+  document.getElementById('headerRow').innerHTML = '<th class="corner"></th>'+displayColOrder().map(function(i){
     var agent = matrix[i], hc = hidden.has(i)?' hidden-col':'', dep = agent.deprecated?' deprecated-col':'';
-    return '<th class="agent-col'+hc+dep+'" data-idx="'+i+'" draggable="true" onclick="toggleCol('+i+')" title="Click to toggle visibility">'+
-      favimg(agent, i)+'<span class="eye">'+(hidden.has(i)?'&#8855;':'&#9679;')+'</span><div class="agent-full">'+esc(agent.name)+'</div></th>';
-  }).join(''); setupColDrag();
+    var eyeTitle = hidden.has(i) ? 'Show this agent' : 'Hide this agent';
+    return '<th class="agent-col'+hc+dep+'" data-idx="'+i+'" draggable="true">'+
+      agentBrandHeadHtml(agent, i)+
+      '<button type="button" class="eye" onclick="toggleCol('+i+'); event.stopPropagation();" title="'+esc(eyeTitle)+'" aria-label="'+esc(eyeTitle)+'">'+
+      (hidden.has(i)?'&#8855;':'&#9679;')+'</button></th>';
+  }).join(''); setupColDrag(); updateColWidths(); scheduleFitAgentHeaderNames();
 }
 function visibleCols() { return colOrder.filter(function(i){return !hidden.has(i)}); }
+function sortVisibleColumnIndices(indices) {
+  if (!rowSort.length) return indices.slice();
+  var originalRank = {};
+  indices.forEach(function(i, idx){ originalRank[i] = idx; });
+  var priority = rowSort.slice().reverse();
+  return indices.slice().sort(function(a,b){
+    for (var p=0; p<priority.length; p++) {
+      var key = priority[p].key;
+      var va = SORT_ORDER[(matrix[a][key]||{}).support||''];
+      var vb = SORT_ORDER[(matrix[b][key]||{}).support||''];
+      if (va === undefined) va = 4;
+      if (vb === undefined) vb = 4;
+      if (va !== vb) return va - vb;
+    }
+    return originalRank[a] - originalRank[b];
+  });
+}
+function displayColOrder() {
+  if (!rowSort.length) return colOrder.slice();
+  var sortedVisible = sortVisibleColumnIndices(visibleCols());
+  var qi = 0;
+  return colOrder.map(function(i) {
+    if (hidden.has(i)) return i;
+    return sortedVisible[qi++];
+  });
+}
+function bodyColOrder() {
+  return sortVisibleColumnIndices(visibleCols());
+}
 function renderBody() {
-  var vc = visibleCols();
-  if (rowSort.length) {
-    var originalRank = {};
-    vc.forEach(function(i, idx){ originalRank[i] = idx; });
-    var priority = rowSort.slice().reverse();
-    vc = vc.slice().sort(function(a,b){
-      for (var p=0; p<priority.length; p++) {
-        var key = priority[p].key;
-        var va = SORT_ORDER[(matrix[a][key]||{}).support||''];
-        var vb = SORT_ORDER[(matrix[b][key]||{}).support||''];
-        if (va === undefined) va = 4;
-        if (vb === undefined) vb = 4;
-        if (va !== vb) return va - vb;
-      }
-      return originalRank[a] - originalRank[b];
-    });
-  }
+  var cols = bodyColOrder();
   var rows = [];
-  rows.push('<tr class="group-head">'+rowLabelCell('About',' group-row-label','')+vc.map(function(){return '<td class="group-spacer"></td>'}).join('')+'</tr>');
+  rows.push('<tr class="group-head">'+rowLabelCell('About',' group-row-label','')+cols.map(function(){return '<td class="group-spacer"></td>'}).join('')+'</tr>');
+  rows.push('<tr>'+rowLabelCell('API docs','',' title="Official documentation for this product"')+cols.map(function(i){
+    return providerDocsCell(matrix[i]);
+  }).join('')+'</tr>');
   aboutCols.forEach(function(col){
     var label = rowLabelCell(col.label,'','');
-    rows.push('<tr>'+label+vc.map(function(i){return cell(matrix[i],col)}).join('')+'</tr>');
+    rows.push('<tr>'+label+cols.map(function(i){return cell(matrix[i],col)}).join('')+'</tr>');
   });
   // Feature rows in saved order, grouped
   var used = {};
@@ -499,30 +604,32 @@ function renderBody() {
     var sortEntry = rowSort.find(function(s){ return s.key===key; });
     var isSort = !!sortEntry;
     var active = isSort?' filter-active':'';
-    var arrow = isSort?(rowSort.indexOf(sortEntry)+1):'&#9654;';
+    var arrow = isSort ? sortPriorityNumber(sortEntry) : '&#9654;';
     var labelHtml = '<td class="row-label'+active+'" draggable="true" data-rowkey="'+key+'" onclick="cycleSort('+"'"+key+"'"+')" title="Sort columns by this feature"><span class="row-label-tip">'+esc(col.label)+'</span><span class="arrow">'+arrow+'</span>'+esc(col.label)+'</td>';
-    var cells = vc.map(function(i){
-      if (!isSort) return cell(matrix[i],col);
-      var s = (matrix[i][col.key]||{}).support||'';
-      return cell(matrix[i],col);
-    }).join('');
+    var cells = cols.map(function(i){ return cell(matrix[i], col); }).join('');
     rows.push('<tr>'+labelHtml+cells+'</tr>');
   });
   document.getElementById('tbody').innerHTML = rows.join('');
   setupRowDrag();
   setupCellTips();
 }
-function toggleCol(i) { hidden.has(i)?hidden.delete(i):hidden.add(i); renderHeader(); renderBody(); }
+function toggleCol(i) { hidden.has(i)?hidden.delete(i):hidden.add(i); renderHeader(); renderBody(); updateColWidths(); scheduleFitAgentHeaderNames(); }
 function cycleSort(key) {
   if (DATE_SORT_ROWS.has(key)) return;
   var idx = rowSort.findIndex(function(s){ return s.key === key; });
   if (idx !== -1) rowSort.splice(idx, 1);
   else rowSort.push({key:key});
+  renderHeader();
   renderBody();
+  updateColWidths();
+  scheduleFitAgentHeaderNames();
 }
 function setupColDrag() {
   document.querySelectorAll('th.agent-col').forEach(function(th){
-    th.addEventListener('dragstart',function(e){this.classList.add('dragging');e.dataTransfer.setData('text/col',this.dataset.idx)});
+    th.addEventListener('dragstart',function(e){
+      if (e.target.closest('.agent-brand-link')) { e.preventDefault(); return; }
+      this.classList.add('dragging');e.dataTransfer.setData('text/col',this.dataset.idx);
+    });
     th.addEventListener('dragend',function(){this.classList.remove('dragging')});
     th.addEventListener('dragover',function(e){e.preventDefault();this.classList.add('drag-over')});
     th.addEventListener('dragleave',function(){this.classList.remove('drag-over')});
@@ -531,7 +638,7 @@ function setupColDrag() {
       if (isNaN(from)||isNaN(to)||from===to) return;
       var fp=colOrder.indexOf(from),tp=colOrder.indexOf(to);
       if (fp===-1||tp===-1) return;
-      colOrder.splice(fp,1);colOrder.splice(tp,0,from);saveState();renderHeader();renderBody();
+      colOrder.splice(fp,1);colOrder.splice(tp,0,from);saveState();renderHeader();renderBody();updateColWidths();scheduleFitAgentHeaderNames();
     });
   });
 }
@@ -597,6 +704,7 @@ function setupCellTips() {
 }
 var state = loadState(); colOrder = state.cols; rowOrder = state.rows;
 renderHeader(); renderBody();
+window.addEventListener('resize', function(){ updateColWidths(); scheduleFitAgentHeaderNames(); });
 </script>
 </body>
 </html>`;
