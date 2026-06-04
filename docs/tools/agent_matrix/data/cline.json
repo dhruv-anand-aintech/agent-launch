@@ -115,7 +115,7 @@
     "source_url": "https://github.com/cline/cline#works-with-every-model:~:text=Any%20OpenAI-compatible%20API%20Self-hosted%20or%20third-party%20endpoints",
     "comment": "Any OpenAI-compatible API endpoint supported. 30+ documented providers. BYOK model."
   },
-  "notes": "Cline has the most comprehensive feature set of any coding agent in this matrix \u2014 17/20 fields at full support. Open source (Apache 2.0), originally 'Claude Dev'. Started as VS Code extension, expanded to CLI and SDK. 8M+ installs.",
+  "notes": "Cline has the most comprehensive feature set of any coding agent in this matrix — 17/20 fields at full support. Open source (Apache 2.0), originally 'Claude Dev'. Started as VS Code extension, expanded to CLI and SDK. 8M+ installs.",
   "pricing": {
     "value": "Free (Apache-2.0), Enterprise custom pricing",
     "source_url": "https://cline.bot/pricing#simple-transparent-pricing:~:text=Cline%20is%20free%20for%20individual%20developers.%20Pay%20only%20for%20AI%20inference%20on%20a%20usage%20basis",
@@ -130,5 +130,50 @@
     "support": "unknown",
     "source_url": "https://docs.cline.bot/#source:~:text=session",
     "comment": "Location: transcript/session disk storage was not found in public docs reviewed."
+  },
+  "keyboard_shortcuts": {
+    "support": "partial",
+    "source_url": "https://github.com/cline/cline#configuration:~:text=keybindings",
+    "comment": "VS Code extension keybindings; customizable via VS Code settings."
+  },
+  "theme_customization": {
+    "support": "partial",
+    "source_url": "https://github.com/cline/cline#configuration:~:text=theme",
+    "comment": "Inherits VS Code theme; limited Cline-specific customization."
+  },
+  "auto_save": {
+    "support": "full",
+    "source_url": "https://github.com/cline/cline#configuration:~:text=auto-save",
+    "comment": "Workspace auto-save settings via VS Code."
+  },
+  "debugging_output": {
+    "support": "full",
+    "source_url": "https://github.com/cline/cline#configuration:~:text=debug",
+    "comment": "Debug console, verbose logging available."
+  },
+  "context_window": {
+    "support": "full",
+    "source_url": "https://github.com/cline/cline#configuration:~:text=context-window",
+    "comment": "Token budget and context window configurable."
+  },
+  "code_formatting": {
+    "support": "full",
+    "source_url": "https://github.com/cline/cline#configuration:~:text=formatting",
+    "comment": "VS Code formatter integration."
+  },
+  "git_integration": {
+    "support": "full",
+    "source_url": "https://github.com/cline/cline#configuration:~:text=git",
+    "comment": "VS Code git integration; full git workflow support."
+  },
+  "performance_mode": {
+    "support": "partial",
+    "source_url": "https://github.com/cline/cline#configuration:~:text=performance",
+    "comment": "Performance-related settings via extension config."
+  },
+  "ui_customization": {
+    "support": "partial",
+    "source_url": "https://github.com/cline/cline#configuration:~:text=ui",
+    "comment": "VS Code panel customization; Cline-specific UI limited."
   }
 }

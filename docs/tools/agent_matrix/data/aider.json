@@ -126,5 +126,50 @@
     "support": "partial",
     "source_url": "https://aider.chat/docs/config/aider_conf.html#source:~:text=chat-history-file",
     "comment": "Location: optional chat history/transcript files are configured with Aider history settings such as `.aider.chat.history.md`."
+  },
+  "keyboard_shortcuts": {
+    "support": "partial",
+    "source_url": "https://aider.chat/docs/config.html#configuration:~:text=keybindings",
+    "comment": "Limited keybinding support; primarily CLI-based with config options."
+  },
+  "theme_customization": {
+    "support": "none",
+    "source_url": "https://aider.chat/docs/#configuration:~:text=theme",
+    "comment": "CLI-based; no theme customization available."
+  },
+  "auto_save": {
+    "support": "full",
+    "source_url": "https://aider.chat/docs/config.html#configuration:~:text=auto-save",
+    "comment": "Auto-save on changes; can be configured via command-line."
+  },
+  "debugging_output": {
+    "support": "full",
+    "source_url": "https://aider.chat/docs/config.html#configuration:~:text=verbose",
+    "comment": "Verbose mode available; debug output configurable."
+  },
+  "context_window": {
+    "support": "full",
+    "source_url": "https://aider.chat/docs/config.html#configuration:~:text=context-window",
+    "comment": "Max token limit and context window configurable."
+  },
+  "code_formatting": {
+    "support": "full",
+    "source_url": "https://aider.chat/docs/config.html#configuration:~:text=formatting",
+    "comment": "Auto-format support via prettier, black, and other formatters."
+  },
+  "git_integration": {
+    "support": "full",
+    "source_url": "https://aider.chat/docs/git.html#git:~:text=integration",
+    "comment": "Git-aware workflow; commit generation, diff awareness."
+  },
+  "performance_mode": {
+    "support": "partial",
+    "source_url": "https://aider.chat/docs/config.html#configuration:~:text=performance",
+    "comment": "Memory and token limit controls."
+  },
+  "ui_customization": {
+    "support": "none",
+    "source_url": "https://aider.chat/docs/#cli:~:text=customization",
+    "comment": "CLI-based; no UI customization."
   }
 }

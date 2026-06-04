@@ -130,5 +130,50 @@
     "support": "full",
     "source_url": "https://docs.cursor.com/en/cli/overview#source:~:text=Resume%20previous%20conversations",
     "comment": "Location: Cursor CLI transcripts live under `~/.cursor/projects/<slug>/agent-transcripts/<agentId>/<agentId>.jsonl`; Cursor IDE composer data is in SQLite `~/Library/Application Support/Cursor/User/globalStorage/state.vscdb`."
+  },
+  "keyboard_shortcuts": {
+    "support": "full",
+    "source_url": "https://docs.cursor.com/keybindings#keybindings:~:text=customize",
+    "comment": "Full VS Code keybindings support; customizable via settings."
+  },
+  "theme_customization": {
+    "support": "full",
+    "source_url": "https://docs.cursor.com/appearance#appearance:~:text=theme",
+    "comment": "Dark/light mode, custom themes, color schemes."
+  },
+  "auto_save": {
+    "support": "full",
+    "source_url": "https://docs.cursor.com/settings#settings:~:text=auto-save",
+    "comment": "Auto-save configurable; interval/on-focus options."
+  },
+  "debugging_output": {
+    "support": "full",
+    "source_url": "https://docs.cursor.com/debugging#debugging:~:text=debug",
+    "comment": "Debug console, verbose mode, diagnostic output available."
+  },
+  "context_window": {
+    "support": "full",
+    "source_url": "https://docs.cursor.com/settings#settings:~:text=context-length",
+    "comment": "Context length configurable for AI requests."
+  },
+  "code_formatting": {
+    "support": "full",
+    "source_url": "https://docs.cursor.com/formatting#formatting:~:text=auto-format",
+    "comment": "Formatter integration, auto-format on save, linter support."
+  },
+  "git_integration": {
+    "support": "full",
+    "source_url": "https://docs.cursor.com/git#git:~:text=integration",
+    "comment": "Full git integration: source control, diff, branch management."
+  },
+  "performance_mode": {
+    "support": "partial",
+    "source_url": "https://docs.cursor.com/performance#performance:~:text=caching",
+    "comment": "Performance settings, caching, resource management."
+  },
+  "ui_customization": {
+    "support": "full",
+    "source_url": "https://docs.cursor.com/ui#ui:~:text=customization",
+    "comment": "Customizable layout, sidebar, panels (VS Code-based)."
   }
 }

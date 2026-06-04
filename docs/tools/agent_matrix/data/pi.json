@@ -101,12 +101,12 @@
   "statusline": {
     "support": "none",
     "source_url": "https://pi.dev/docs/latest/usage#source:~:text=status%20line",
-    "comment": "Interactive UI includes a built-in footer/status area but no documented customization API for a user-defined status line." 
+    "comment": "Interactive UI includes a built-in footer/status area but no documented customization API for a user-defined status line."
   },
   "telemetry": {
     "support": "partial",
     "source_url": "https://pi.dev/docs/latest/settings#source:~:text=telemetry",
-    "comment": "Telemetry is configurable via `enableInstallTelemetry` and can be disabled; `PI_SKIP_VERSION_CHECK` and offline modes control network checks." 
+    "comment": "Telemetry is configurable via `enableInstallTelemetry` and can be disabled; `PI_SKIP_VERSION_CHECK` and offline modes control network checks."
   },
   "custom_model_provider": {
     "support": "full",
@@ -128,5 +128,50 @@
     "support": "full",
     "source_url": "https://pi.dev/docs/latest/usage#source:~:text=session",
     "comment": "Sessions are saved automatically to `~/.pi/agent/sessions/` with session IDs and `/session` command showing file and metadata."
+  },
+  "keyboard_shortcuts": {
+    "support": "unknown",
+    "source_url": "https://docs.example.com/#documentation:~:text=keybindings",
+    "comment": "Research needed. Check official documentation for keybinding customization options."
+  },
+  "theme_customization": {
+    "support": "unknown",
+    "source_url": "https://docs.example.com/#documentation:~:text=theme",
+    "comment": "Research needed. Check for theme/appearance customization options."
+  },
+  "auto_save": {
+    "support": "unknown",
+    "source_url": "https://docs.example.com/#documentation:~:text=auto-save",
+    "comment": "Research needed. Check for auto-save or session persistence features."
+  },
+  "debugging_output": {
+    "support": "unknown",
+    "source_url": "https://docs.example.com/#documentation:~:text=debugging",
+    "comment": "Research needed. Check for debug mode or verbose logging options."
+  },
+  "context_window": {
+    "support": "unknown",
+    "source_url": "https://docs.example.com/#documentation:~:text=context-window",
+    "comment": "Research needed. Check for configurable context length or token limits."
+  },
+  "code_formatting": {
+    "support": "unknown",
+    "source_url": "https://docs.example.com/#documentation:~:text=formatting",
+    "comment": "Research needed. Check for formatter/linter integration or auto-format options."
+  },
+  "git_integration": {
+    "support": "unknown",
+    "source_url": "https://docs.example.com/#documentation:~:text=git",
+    "comment": "Research needed. Check for git command support or version control integration."
+  },
+  "performance_mode": {
+    "support": "unknown",
+    "source_url": "https://docs.example.com/#documentation:~:text=performance",
+    "comment": "Research needed. Check for caching, optimization, or resource management settings."
+  },
+  "ui_customization": {
+    "support": "unknown",
+    "source_url": "https://docs.example.com/#documentation:~:text=ui-customization",
+    "comment": "Research needed. Check for UI layout, sidebar, or panel customization."
   }
 }

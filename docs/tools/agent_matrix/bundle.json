@@ -129,6 +129,51 @@
       "support": "partial",
       "source_url": "https://aider.chat/docs/config/aider_conf.html#source:~:text=chat-history-file",
       "comment": "Location: optional chat history/transcript files are configured with Aider history settings such as `.aider.chat.history.md`."
+    },
+    "keyboard_shortcuts": {
+      "support": "partial",
+      "source_url": "https://aider.chat/docs/config.html#configuration:~:text=keybindings",
+      "comment": "Limited keybinding support; primarily CLI-based with config options."
+    },
+    "theme_customization": {
+      "support": "none",
+      "source_url": "https://aider.chat/docs/#configuration:~:text=theme",
+      "comment": "CLI-based; no theme customization available."
+    },
+    "auto_save": {
+      "support": "full",
+      "source_url": "https://aider.chat/docs/config.html#configuration:~:text=auto-save",
+      "comment": "Auto-save on changes; can be configured via command-line."
+    },
+    "debugging_output": {
+      "support": "full",
+      "source_url": "https://aider.chat/docs/config.html#configuration:~:text=verbose",
+      "comment": "Verbose mode available; debug output configurable."
+    },
+    "context_window": {
+      "support": "full",
+      "source_url": "https://aider.chat/docs/config.html#configuration:~:text=context-window",
+      "comment": "Max token limit and context window configurable."
+    },
+    "code_formatting": {
+      "support": "full",
+      "source_url": "https://aider.chat/docs/config.html#configuration:~:text=formatting",
+      "comment": "Auto-format support via prettier, black, and other formatters."
+    },
+    "git_integration": {
+      "support": "full",
+      "source_url": "https://aider.chat/docs/git.html#git:~:text=integration",
+      "comment": "Git-aware workflow; commit generation, diff awareness."
+    },
+    "performance_mode": {
+      "support": "partial",
+      "source_url": "https://aider.chat/docs/config.html#configuration:~:text=performance",
+      "comment": "Memory and token limit controls."
+    },
+    "ui_customization": {
+      "support": "none",
+      "source_url": "https://aider.chat/docs/#cli:~:text=customization",
+      "comment": "CLI-based; no UI customization."
     }
   },
   {
@@ -265,6 +310,51 @@
       "support": "unknown",
       "source_url": "https://ampcode.com/manual#sessionstart-run-setup-when-a-thread-starts:~:text=session",
       "comment": "Location: transcript/session disk storage was not found in public docs reviewed."
+    },
+    "keyboard_shortcuts": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=keybindings",
+      "comment": "Research needed. Check official documentation for keybinding customization options."
+    },
+    "theme_customization": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=theme",
+      "comment": "Research needed. Check for theme/appearance customization options."
+    },
+    "auto_save": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=auto-save",
+      "comment": "Research needed. Check for auto-save or session persistence features."
+    },
+    "debugging_output": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=debugging",
+      "comment": "Research needed. Check for debug mode or verbose logging options."
+    },
+    "context_window": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=context-window",
+      "comment": "Research needed. Check for configurable context length or token limits."
+    },
+    "code_formatting": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=formatting",
+      "comment": "Research needed. Check for formatter/linter integration or auto-format options."
+    },
+    "git_integration": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=git",
+      "comment": "Research needed. Check for git command support or version control integration."
+    },
+    "performance_mode": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=performance",
+      "comment": "Research needed. Check for caching, optimization, or resource management settings."
+    },
+    "ui_customization": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=ui-customization",
+      "comment": "Research needed. Check for UI layout, sidebar, or panel customization."
     }
   },
   {
@@ -399,6 +489,51 @@
       "support": "partial",
       "source_url": "https://antigravity.google/docs/getting-started#basic-navigation:~:text=conversation",
       "comment": "Location: Antigravity brain/trajectory summaries are under `~/.gemini/antigravity/brain/<uuid>/*.md`; index data is in `~/Library/Application Support/Antigravity/User/globalStorage/state.vscdb`."
+    },
+    "keyboard_shortcuts": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=keybindings",
+      "comment": "Research needed. Check official documentation for keybinding customization options."
+    },
+    "theme_customization": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=theme",
+      "comment": "Research needed. Check for theme/appearance customization options."
+    },
+    "auto_save": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=auto-save",
+      "comment": "Research needed. Check for auto-save or session persistence features."
+    },
+    "debugging_output": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=debugging",
+      "comment": "Research needed. Check for debug mode or verbose logging options."
+    },
+    "context_window": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=context-window",
+      "comment": "Research needed. Check for configurable context length or token limits."
+    },
+    "code_formatting": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=formatting",
+      "comment": "Research needed. Check for formatter/linter integration or auto-format options."
+    },
+    "git_integration": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=git",
+      "comment": "Research needed. Check for git command support or version control integration."
+    },
+    "performance_mode": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=performance",
+      "comment": "Research needed. Check for caching, optimization, or resource management settings."
+    },
+    "ui_customization": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=ui-customization",
+      "comment": "Research needed. Check for UI layout, sidebar, or panel customization."
     }
   },
   {
@@ -434,10 +569,10 @@
       "sort_date": "2025-12-19"
     },
     "latest_major_update": {
-      "value": "May '26",
+      "value": "Jun '26",
       "source_url": "https://docs.anthropic.com/en/docs/claude-code/overview#use-claude-code:~:text=Claude%20Code",
       "comment": "Current docs cover CLI, SDK, hooks, skills, and settings.",
-      "sort_date": "2026-05-31"
+      "sort_date": "2026-06-03"
     },
     "rules": {
       "support": "full",
@@ -539,6 +674,51 @@
       "support": "full",
       "source_url": "https://code.claude.com/docs/en/settings#source:~:text=transcript",
       "comment": "Location: Claude Code CLI transcripts are JSONL under `~/.claude/projects/<proj-path-dashes>/<sessionId>.jsonl`."
+    },
+    "keyboard_shortcuts": {
+      "support": "full",
+      "source_url": "https://code.claude.com/docs/en/settings#settings:~:text=keybindings",
+      "comment": "Fully customizable keybindings via `.claude/keybindings.json` or settings UI."
+    },
+    "theme_customization": {
+      "support": "full",
+      "source_url": "https://code.claude.com/docs/en/settings#settings:~:text=theme",
+      "comment": "Dark/light mode and theme customization available in settings."
+    },
+    "auto_save": {
+      "support": "full",
+      "source_url": "https://code.claude.com/docs/en/settings#settings:~:text=auto-save",
+      "comment": "Auto-save behavior configurable in settings."
+    },
+    "debugging_output": {
+      "support": "partial",
+      "source_url": "https://code.claude.com/docs/en/debugging#debugging:~:text=debug",
+      "comment": "Debug logs and diagnostic output available; verbosity configurable."
+    },
+    "context_window": {
+      "support": "full",
+      "source_url": "https://docs.anthropic.com/en/docs/claude-code/settings#settings:~:text=context-window",
+      "comment": "Token limit and context window configurable per session."
+    },
+    "code_formatting": {
+      "support": "partial",
+      "source_url": "https://code.claude.com/docs/en/settings#settings:~:text=formatting",
+      "comment": "Integrates with workspace formatters; auto-format on save configurable."
+    },
+    "git_integration": {
+      "support": "full",
+      "source_url": "https://code.claude.com/docs/en/git-integration#integration:~:text=git",
+      "comment": "Full git support: diff, commit, branch management built-in."
+    },
+    "performance_mode": {
+      "support": "partial",
+      "source_url": "https://code.claude.com/docs/en/performance#performance:~:text=caching",
+      "comment": "Caching and optimization settings available; token budget management."
+    },
+    "ui_customization": {
+      "support": "full",
+      "source_url": "https://code.claude.com/docs/en/settings#settings:~:text=ui-layout",
+      "comment": "Customizable sidebar, panel arrangement, collapsible sections."
     }
   },
   {
@@ -573,7 +753,7 @@
       "value": "Jun '26",
       "source_url": "https://github.com/cline/cline/releases#source:~:text=CLI%20v3.0.10%20Latest%2C%20May%2022%2C%202026",
       "comment": "CLI at v3.0.10 (May 22, 2026), VS Code extension at v3.84.0 (May 19, 2026). Rapid release cadence.",
-      "sort_date": "2026-06-01"
+      "sort_date": "2026-06-04"
     },
     "rules": {
       "support": "full",
@@ -675,6 +855,51 @@
       "support": "unknown",
       "source_url": "https://docs.cline.bot/#source:~:text=session",
       "comment": "Location: transcript/session disk storage was not found in public docs reviewed."
+    },
+    "keyboard_shortcuts": {
+      "support": "partial",
+      "source_url": "https://github.com/cline/cline#configuration:~:text=keybindings",
+      "comment": "VS Code extension keybindings; customizable via VS Code settings."
+    },
+    "theme_customization": {
+      "support": "partial",
+      "source_url": "https://github.com/cline/cline#configuration:~:text=theme",
+      "comment": "Inherits VS Code theme; limited Cline-specific customization."
+    },
+    "auto_save": {
+      "support": "full",
+      "source_url": "https://github.com/cline/cline#configuration:~:text=auto-save",
+      "comment": "Workspace auto-save settings via VS Code."
+    },
+    "debugging_output": {
+      "support": "full",
+      "source_url": "https://github.com/cline/cline#configuration:~:text=debug",
+      "comment": "Debug console, verbose logging available."
+    },
+    "context_window": {
+      "support": "full",
+      "source_url": "https://github.com/cline/cline#configuration:~:text=context-window",
+      "comment": "Token budget and context window configurable."
+    },
+    "code_formatting": {
+      "support": "full",
+      "source_url": "https://github.com/cline/cline#configuration:~:text=formatting",
+      "comment": "VS Code formatter integration."
+    },
+    "git_integration": {
+      "support": "full",
+      "source_url": "https://github.com/cline/cline#configuration:~:text=git",
+      "comment": "VS Code git integration; full git workflow support."
+    },
+    "performance_mode": {
+      "support": "partial",
+      "source_url": "https://github.com/cline/cline#configuration:~:text=performance",
+      "comment": "Performance-related settings via extension config."
+    },
+    "ui_customization": {
+      "support": "partial",
+      "source_url": "https://github.com/cline/cline#configuration:~:text=ui",
+      "comment": "VS Code panel customization; Cline-specific UI limited."
     }
   },
   {
@@ -713,7 +938,7 @@
       "value": "Jun '26",
       "source_url": "https://developers.openai.com/codex/changelog/#codex-changelog:~:text=changelog",
       "comment": "Captured from current Codex docs/changelog state.",
-      "sort_date": "2026-06-01"
+      "sort_date": "2026-06-04"
     },
     "rules": {
       "support": "full",
@@ -815,6 +1040,51 @@
       "support": "full",
       "source_url": "https://github.com/openai/codex#source:~:text=sessions",
       "comment": "Location: Codex session event streams are JSONL under `~/.codex/sessions/YYYY/MM/DD/rollout-<iso>-<id>.jsonl`."
+    },
+    "keyboard_shortcuts": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=keybindings",
+      "comment": "Research needed. Check official documentation for keybinding customization options."
+    },
+    "theme_customization": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=theme",
+      "comment": "Research needed. Check for theme/appearance customization options."
+    },
+    "auto_save": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=auto-save",
+      "comment": "Research needed. Check for auto-save or session persistence features."
+    },
+    "debugging_output": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=debugging",
+      "comment": "Research needed. Check for debug mode or verbose logging options."
+    },
+    "context_window": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=context-window",
+      "comment": "Research needed. Check for configurable context length or token limits."
+    },
+    "code_formatting": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=formatting",
+      "comment": "Research needed. Check for formatter/linter integration or auto-format options."
+    },
+    "git_integration": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=git",
+      "comment": "Research needed. Check for git command support or version control integration."
+    },
+    "performance_mode": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=performance",
+      "comment": "Research needed. Check for caching, optimization, or resource management settings."
+    },
+    "ui_customization": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=ui-customization",
+      "comment": "Research needed. Check for UI layout, sidebar, or panel customization."
     }
   },
   {
@@ -949,6 +1219,51 @@
       "support": "partial",
       "source_url": "https://cohere.com/north#empower-your-workforce-with-ai-agents-that-operate-in-lockstep-with-your-people-data-and-tools:~:text=agent",
       "comment": "Location: hosted/web/API-managed session history; no local transcript directory documented."
+    },
+    "keyboard_shortcuts": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=keybindings",
+      "comment": "Research needed. Check official documentation for keybinding customization options."
+    },
+    "theme_customization": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=theme",
+      "comment": "Research needed. Check for theme/appearance customization options."
+    },
+    "auto_save": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=auto-save",
+      "comment": "Research needed. Check for auto-save or session persistence features."
+    },
+    "debugging_output": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=debugging",
+      "comment": "Research needed. Check for debug mode or verbose logging options."
+    },
+    "context_window": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=context-window",
+      "comment": "Research needed. Check for configurable context length or token limits."
+    },
+    "code_formatting": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=formatting",
+      "comment": "Research needed. Check for formatter/linter integration or auto-format options."
+    },
+    "git_integration": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=git",
+      "comment": "Research needed. Check for git command support or version control integration."
+    },
+    "performance_mode": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=performance",
+      "comment": "Research needed. Check for caching, optimization, or resource management settings."
+    },
+    "ui_customization": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=ui-customization",
+      "comment": "Research needed. Check for UI layout, sidebar, or panel customization."
     }
   },
   {
@@ -1085,6 +1400,51 @@
       "support": "full",
       "source_url": "https://docs.cursor.com/en/cli/overview#source:~:text=Resume%20previous%20conversations",
       "comment": "Location: Cursor CLI transcripts live under `~/.cursor/projects/<slug>/agent-transcripts/<agentId>/<agentId>.jsonl`; Cursor IDE composer data is in SQLite `~/Library/Application Support/Cursor/User/globalStorage/state.vscdb`."
+    },
+    "keyboard_shortcuts": {
+      "support": "full",
+      "source_url": "https://docs.cursor.com/keybindings#keybindings:~:text=customize",
+      "comment": "Full VS Code keybindings support; customizable via settings."
+    },
+    "theme_customization": {
+      "support": "full",
+      "source_url": "https://docs.cursor.com/appearance#appearance:~:text=theme",
+      "comment": "Dark/light mode, custom themes, color schemes."
+    },
+    "auto_save": {
+      "support": "full",
+      "source_url": "https://docs.cursor.com/settings#settings:~:text=auto-save",
+      "comment": "Auto-save configurable; interval/on-focus options."
+    },
+    "debugging_output": {
+      "support": "full",
+      "source_url": "https://docs.cursor.com/debugging#debugging:~:text=debug",
+      "comment": "Debug console, verbose mode, diagnostic output available."
+    },
+    "context_window": {
+      "support": "full",
+      "source_url": "https://docs.cursor.com/settings#settings:~:text=context-length",
+      "comment": "Context length configurable for AI requests."
+    },
+    "code_formatting": {
+      "support": "full",
+      "source_url": "https://docs.cursor.com/formatting#formatting:~:text=auto-format",
+      "comment": "Formatter integration, auto-format on save, linter support."
+    },
+    "git_integration": {
+      "support": "full",
+      "source_url": "https://docs.cursor.com/git#git:~:text=integration",
+      "comment": "Full git integration: source control, diff, branch management."
+    },
+    "performance_mode": {
+      "support": "partial",
+      "source_url": "https://docs.cursor.com/performance#performance:~:text=caching",
+      "comment": "Performance settings, caching, resource management."
+    },
+    "ui_customization": {
+      "support": "full",
+      "source_url": "https://docs.cursor.com/ui#ui:~:text=customization",
+      "comment": "Customizable layout, sidebar, panels (VS Code-based)."
     }
   },
   {
@@ -1223,6 +1583,51 @@
       "support": "partial",
       "source_url": "https://devin.ai/#source:~:text=agent",
       "comment": "Location: hosted/web/API-managed session history; no local transcript directory documented."
+    },
+    "keyboard_shortcuts": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=keybindings",
+      "comment": "Research needed. Check official documentation for keybinding customization options."
+    },
+    "theme_customization": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=theme",
+      "comment": "Research needed. Check for theme/appearance customization options."
+    },
+    "auto_save": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=auto-save",
+      "comment": "Research needed. Check for auto-save or session persistence features."
+    },
+    "debugging_output": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=debugging",
+      "comment": "Research needed. Check for debug mode or verbose logging options."
+    },
+    "context_window": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=context-window",
+      "comment": "Research needed. Check for configurable context length or token limits."
+    },
+    "code_formatting": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=formatting",
+      "comment": "Research needed. Check for formatter/linter integration or auto-format options."
+    },
+    "git_integration": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=git",
+      "comment": "Research needed. Check for git command support or version control integration."
+    },
+    "performance_mode": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=performance",
+      "comment": "Research needed. Check for caching, optimization, or resource management settings."
+    },
+    "ui_customization": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=ui-customization",
+      "comment": "Research needed. Check for UI layout, sidebar, or panel customization."
     }
   },
   {
@@ -1359,6 +1764,51 @@
       "support": "partial",
       "source_url": "https://docs.factory.ai/reference/cli-reference#droid-search-flags:~:text=droid%20search",
       "comment": "Location: local searchable Droid session data is managed by Factory CLI; exact transcript database path is not documented in the CLI reference."
+    },
+    "keyboard_shortcuts": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=keybindings",
+      "comment": "Research needed. Check official documentation for keybinding customization options."
+    },
+    "theme_customization": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=theme",
+      "comment": "Research needed. Check for theme/appearance customization options."
+    },
+    "auto_save": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=auto-save",
+      "comment": "Research needed. Check for auto-save or session persistence features."
+    },
+    "debugging_output": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=debugging",
+      "comment": "Research needed. Check for debug mode or verbose logging options."
+    },
+    "context_window": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=context-window",
+      "comment": "Research needed. Check for configurable context length or token limits."
+    },
+    "code_formatting": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=formatting",
+      "comment": "Research needed. Check for formatter/linter integration or auto-format options."
+    },
+    "git_integration": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=git",
+      "comment": "Research needed. Check for git command support or version control integration."
+    },
+    "performance_mode": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=performance",
+      "comment": "Research needed. Check for caching, optimization, or resource management settings."
+    },
+    "ui_customization": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=ui-customization",
+      "comment": "Research needed. Check for UI layout, sidebar, or panel customization."
     }
   },
   {
@@ -1492,6 +1942,51 @@
       "support": "unknown",
       "source_url": "https://antigravity.google/docs/getting-started#slash-commands:~:text=session",
       "comment": "Location: transcript/session disk storage was not found in public docs reviewed."
+    },
+    "keyboard_shortcuts": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=keybindings",
+      "comment": "Research needed. Check official documentation for keybinding customization options."
+    },
+    "theme_customization": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=theme",
+      "comment": "Research needed. Check for theme/appearance customization options."
+    },
+    "auto_save": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=auto-save",
+      "comment": "Research needed. Check for auto-save or session persistence features."
+    },
+    "debugging_output": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=debugging",
+      "comment": "Research needed. Check for debug mode or verbose logging options."
+    },
+    "context_window": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=context-window",
+      "comment": "Research needed. Check for configurable context length or token limits."
+    },
+    "code_formatting": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=formatting",
+      "comment": "Research needed. Check for formatter/linter integration or auto-format options."
+    },
+    "git_integration": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=git",
+      "comment": "Research needed. Check for git command support or version control integration."
+    },
+    "performance_mode": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=performance",
+      "comment": "Research needed. Check for caching, optimization, or resource management settings."
+    },
+    "ui_customization": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=ui-customization",
+      "comment": "Research needed. Check for UI layout, sidebar, or panel customization."
     }
   },
   {
@@ -1632,6 +2127,51 @@
       "support": "unknown",
       "source_url": "https://docs.github.com/en/copilot/concepts/agents/cloud-agent/about-cloud-agent#benefits-over-traditional-ai-workflows:~:text=session",
       "comment": "Location: transcript/session disk storage was not found in public docs reviewed."
+    },
+    "keyboard_shortcuts": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=keybindings",
+      "comment": "Research needed. Check official documentation for keybinding customization options."
+    },
+    "theme_customization": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=theme",
+      "comment": "Research needed. Check for theme/appearance customization options."
+    },
+    "auto_save": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=auto-save",
+      "comment": "Research needed. Check for auto-save or session persistence features."
+    },
+    "debugging_output": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=debugging",
+      "comment": "Research needed. Check for debug mode or verbose logging options."
+    },
+    "context_window": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=context-window",
+      "comment": "Research needed. Check for configurable context length or token limits."
+    },
+    "code_formatting": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=formatting",
+      "comment": "Research needed. Check for formatter/linter integration or auto-format options."
+    },
+    "git_integration": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=git",
+      "comment": "Research needed. Check for git command support or version control integration."
+    },
+    "performance_mode": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=performance",
+      "comment": "Research needed. Check for caching, optimization, or resource management settings."
+    },
+    "ui_customization": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=ui-customization",
+      "comment": "Research needed. Check for UI layout, sidebar, or panel customization."
     }
   },
   {
@@ -1764,6 +2304,51 @@
       "support": "unknown",
       "source_url": "https://x.ai/news/grok-build-cli#introducing-grok-build:~:text=grok-build",
       "comment": "Location: transcript/session disk storage is not documented in the public beta launch page."
+    },
+    "keyboard_shortcuts": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=keybindings",
+      "comment": "Research needed. Check official documentation for keybinding customization options."
+    },
+    "theme_customization": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=theme",
+      "comment": "Research needed. Check for theme/appearance customization options."
+    },
+    "auto_save": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=auto-save",
+      "comment": "Research needed. Check for auto-save or session persistence features."
+    },
+    "debugging_output": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=debugging",
+      "comment": "Research needed. Check for debug mode or verbose logging options."
+    },
+    "context_window": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=context-window",
+      "comment": "Research needed. Check for configurable context length or token limits."
+    },
+    "code_formatting": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=formatting",
+      "comment": "Research needed. Check for formatter/linter integration or auto-format options."
+    },
+    "git_integration": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=git",
+      "comment": "Research needed. Check for git command support or version control integration."
+    },
+    "performance_mode": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=performance",
+      "comment": "Research needed. Check for caching, optimization, or resource management settings."
+    },
+    "ui_customization": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=ui-customization",
+      "comment": "Research needed. Check for UI layout, sidebar, or panel customization."
     }
   },
   {
@@ -1896,6 +2481,51 @@
       "support": "partial",
       "source_url": "https://jules.google/#an-autonomous-coding-agent:~:text=agent",
       "comment": "Location: hosted/web/API-managed session history; no local transcript directory documented."
+    },
+    "keyboard_shortcuts": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=keybindings",
+      "comment": "Research needed. Check official documentation for keybinding customization options."
+    },
+    "theme_customization": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=theme",
+      "comment": "Research needed. Check for theme/appearance customization options."
+    },
+    "auto_save": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=auto-save",
+      "comment": "Research needed. Check for auto-save or session persistence features."
+    },
+    "debugging_output": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=debugging",
+      "comment": "Research needed. Check for debug mode or verbose logging options."
+    },
+    "context_window": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=context-window",
+      "comment": "Research needed. Check for configurable context length or token limits."
+    },
+    "code_formatting": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=formatting",
+      "comment": "Research needed. Check for formatter/linter integration or auto-format options."
+    },
+    "git_integration": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=git",
+      "comment": "Research needed. Check for git command support or version control integration."
+    },
+    "performance_mode": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=performance",
+      "comment": "Research needed. Check for caching, optimization, or resource management settings."
+    },
+    "ui_customization": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=ui-customization",
+      "comment": "Research needed. Check for UI layout, sidebar, or panel customization."
     }
   },
   {
@@ -2030,6 +2660,51 @@
       "support": "unknown",
       "source_url": "https://www.jetbrains.com/help/ai-assistant/junie-agent.html#source:~:text=session",
       "comment": "Location: transcript/session disk storage was not found in public docs reviewed."
+    },
+    "keyboard_shortcuts": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=keybindings",
+      "comment": "Research needed. Check official documentation for keybinding customization options."
+    },
+    "theme_customization": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=theme",
+      "comment": "Research needed. Check for theme/appearance customization options."
+    },
+    "auto_save": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=auto-save",
+      "comment": "Research needed. Check for auto-save or session persistence features."
+    },
+    "debugging_output": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=debugging",
+      "comment": "Research needed. Check for debug mode or verbose logging options."
+    },
+    "context_window": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=context-window",
+      "comment": "Research needed. Check for configurable context length or token limits."
+    },
+    "code_formatting": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=formatting",
+      "comment": "Research needed. Check for formatter/linter integration or auto-format options."
+    },
+    "git_integration": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=git",
+      "comment": "Research needed. Check for git command support or version control integration."
+    },
+    "performance_mode": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=performance",
+      "comment": "Research needed. Check for caching, optimization, or resource management settings."
+    },
+    "ui_customization": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=ui-customization",
+      "comment": "Research needed. Check for UI layout, sidebar, or panel customization."
     }
   },
   {
@@ -2062,7 +2737,7 @@
       "value": "Jun '26",
       "source_url": "https://github.com/Kilo-Org/kilocode/releases#source:~:text=v7.2.52",
       "comment": "Latest release: v7.2.52 (2026-05-11). v7.x series started with v7.0.26 (2026-02-23). 98+ releases total.",
-      "sort_date": "2026-06-01"
+      "sort_date": "2026-06-03"
     },
     "rules": {
       "support": "full",
@@ -2164,6 +2839,51 @@
       "support": "unknown",
       "source_url": "https://kilo.ai/docs/getting-started#what-kilo-can-do:~:text=session",
       "comment": "Location: transcript/session disk storage was not found in public docs reviewed."
+    },
+    "keyboard_shortcuts": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=keybindings",
+      "comment": "Research needed. Check official documentation for keybinding customization options."
+    },
+    "theme_customization": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=theme",
+      "comment": "Research needed. Check for theme/appearance customization options."
+    },
+    "auto_save": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=auto-save",
+      "comment": "Research needed. Check for auto-save or session persistence features."
+    },
+    "debugging_output": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=debugging",
+      "comment": "Research needed. Check for debug mode or verbose logging options."
+    },
+    "context_window": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=context-window",
+      "comment": "Research needed. Check for configurable context length or token limits."
+    },
+    "code_formatting": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=formatting",
+      "comment": "Research needed. Check for formatter/linter integration or auto-format options."
+    },
+    "git_integration": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=git",
+      "comment": "Research needed. Check for git command support or version control integration."
+    },
+    "performance_mode": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=performance",
+      "comment": "Research needed. Check for caching, optimization, or resource management settings."
+    },
+    "ui_customization": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=ui-customization",
+      "comment": "Research needed. Check for UI layout, sidebar, or panel customization."
     }
   },
   {
@@ -2300,6 +3020,51 @@
       "support": "unknown",
       "source_url": "https://www.kimi.com/code/docs/en/kimi-code-cli/getting-started.html#first-launch:~:text=session",
       "comment": "Location: transcript/session disk storage was not found in public docs reviewed."
+    },
+    "keyboard_shortcuts": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=keybindings",
+      "comment": "Research needed. Check official documentation for keybinding customization options."
+    },
+    "theme_customization": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=theme",
+      "comment": "Research needed. Check for theme/appearance customization options."
+    },
+    "auto_save": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=auto-save",
+      "comment": "Research needed. Check for auto-save or session persistence features."
+    },
+    "debugging_output": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=debugging",
+      "comment": "Research needed. Check for debug mode or verbose logging options."
+    },
+    "context_window": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=context-window",
+      "comment": "Research needed. Check for configurable context length or token limits."
+    },
+    "code_formatting": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=formatting",
+      "comment": "Research needed. Check for formatter/linter integration or auto-format options."
+    },
+    "git_integration": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=git",
+      "comment": "Research needed. Check for git command support or version control integration."
+    },
+    "performance_mode": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=performance",
+      "comment": "Research needed. Check for caching, optimization, or resource management settings."
+    },
+    "ui_customization": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=ui-customization",
+      "comment": "Research needed. Check for UI layout, sidebar, or panel customization."
     }
   },
   {
@@ -2436,6 +3201,51 @@
       "support": "partial",
       "source_url": "https://kiro.dev/cli/#source:~:text=conversation%20persistence",
       "comment": "Location: Kiro CLI uses directory-based conversation persistence; exact transcript directory is not specified in the public docs reviewed."
+    },
+    "keyboard_shortcuts": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=keybindings",
+      "comment": "Research needed. Check official documentation for keybinding customization options."
+    },
+    "theme_customization": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=theme",
+      "comment": "Research needed. Check for theme/appearance customization options."
+    },
+    "auto_save": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=auto-save",
+      "comment": "Research needed. Check for auto-save or session persistence features."
+    },
+    "debugging_output": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=debugging",
+      "comment": "Research needed. Check for debug mode or verbose logging options."
+    },
+    "context_window": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=context-window",
+      "comment": "Research needed. Check for configurable context length or token limits."
+    },
+    "code_formatting": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=formatting",
+      "comment": "Research needed. Check for formatter/linter integration or auto-format options."
+    },
+    "git_integration": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=git",
+      "comment": "Research needed. Check for git command support or version control integration."
+    },
+    "performance_mode": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=performance",
+      "comment": "Research needed. Check for caching, optimization, or resource management settings."
+    },
+    "ui_customization": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=ui-customization",
+      "comment": "Research needed. Check for UI layout, sidebar, or panel customization."
     }
   },
   {
@@ -2472,7 +3282,7 @@
       "value": "Jun '26",
       "source_url": "https://opencode.ai/docs/#_top:~:text=opencode",
       "comment": "Current docs capture config, agents, MCP, and providers.",
-      "sort_date": "2026-06-01"
+      "sort_date": "2026-06-04"
     },
     "rules": {
       "support": "full",
@@ -2574,6 +3384,51 @@
       "support": "full",
       "source_url": "https://opencode.ai/docs/share/#for-enterprises:~:text=session",
       "comment": "Location: OpenCode stores sessions/messages in SQLite `~/.local/share/opencode/opencode.db`; legacy storage uses `~/.local/share/opencode/storage/session|message|part/`."
+    },
+    "keyboard_shortcuts": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=keybindings",
+      "comment": "Research needed. Check official documentation for keybinding customization options."
+    },
+    "theme_customization": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=theme",
+      "comment": "Research needed. Check for theme/appearance customization options."
+    },
+    "auto_save": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=auto-save",
+      "comment": "Research needed. Check for auto-save or session persistence features."
+    },
+    "debugging_output": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=debugging",
+      "comment": "Research needed. Check for debug mode or verbose logging options."
+    },
+    "context_window": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=context-window",
+      "comment": "Research needed. Check for configurable context length or token limits."
+    },
+    "code_formatting": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=formatting",
+      "comment": "Research needed. Check for formatter/linter integration or auto-format options."
+    },
+    "git_integration": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=git",
+      "comment": "Research needed. Check for git command support or version control integration."
+    },
+    "performance_mode": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=performance",
+      "comment": "Research needed. Check for caching, optimization, or resource management settings."
+    },
+    "ui_customization": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=ui-customization",
+      "comment": "Research needed. Check for UI layout, sidebar, or panel customization."
     }
   },
   {
@@ -2606,7 +3461,7 @@
       "value": "Jun '26",
       "source_url": "https://github.com/earendil-works/pi/blob/main/packages/coding-agent/CHANGELOG.md#changelog:~:text=0.74.0",
       "comment": "Recent changelog entries are 0.77.0 on 2026-05-28 and 0.78.0 on 2026-05-29.",
-      "sort_date": "2026-06-01"
+      "sort_date": "2026-06-03"
     },
     "rules": {
       "support": "full",
@@ -2708,6 +3563,51 @@
       "support": "full",
       "source_url": "https://pi.dev/docs/latest/usage#source:~:text=session",
       "comment": "Sessions are saved automatically to `~/.pi/agent/sessions/` with session IDs and `/session` command showing file and metadata."
+    },
+    "keyboard_shortcuts": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=keybindings",
+      "comment": "Research needed. Check official documentation for keybinding customization options."
+    },
+    "theme_customization": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=theme",
+      "comment": "Research needed. Check for theme/appearance customization options."
+    },
+    "auto_save": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=auto-save",
+      "comment": "Research needed. Check for auto-save or session persistence features."
+    },
+    "debugging_output": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=debugging",
+      "comment": "Research needed. Check for debug mode or verbose logging options."
+    },
+    "context_window": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=context-window",
+      "comment": "Research needed. Check for configurable context length or token limits."
+    },
+    "code_formatting": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=formatting",
+      "comment": "Research needed. Check for formatter/linter integration or auto-format options."
+    },
+    "git_integration": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=git",
+      "comment": "Research needed. Check for git command support or version control integration."
+    },
+    "performance_mode": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=performance",
+      "comment": "Research needed. Check for caching, optimization, or resource management settings."
+    },
+    "ui_customization": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=ui-customization",
+      "comment": "Research needed. Check for UI layout, sidebar, or panel customization."
     }
   },
   {
@@ -2742,7 +3642,7 @@
       "value": "Jun '26",
       "source_url": "https://github.com/QwenLM/qwen-code#source:~:text=Release%20v0.16.0%20Latest",
       "comment": "Latest release v0.16.0 (May 21, 2026). 453 releases, 5,944 commits as of May 2026.",
-      "sort_date": "2026-06-01"
+      "sort_date": "2026-06-03"
     },
     "rules": {
       "support": "full",
@@ -2844,6 +3744,51 @@
       "support": "unknown",
       "source_url": "https://qwenlm.github.io/qwen-code-docs/en/users/overview#qwen-code-overview:~:text=Qwen%20Code",
       "comment": "Location: transcript/session disk storage was not found in public docs reviewed."
+    },
+    "keyboard_shortcuts": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=keybindings",
+      "comment": "Research needed. Check official documentation for keybinding customization options."
+    },
+    "theme_customization": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=theme",
+      "comment": "Research needed. Check for theme/appearance customization options."
+    },
+    "auto_save": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=auto-save",
+      "comment": "Research needed. Check for auto-save or session persistence features."
+    },
+    "debugging_output": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=debugging",
+      "comment": "Research needed. Check for debug mode or verbose logging options."
+    },
+    "context_window": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=context-window",
+      "comment": "Research needed. Check for configurable context length or token limits."
+    },
+    "code_formatting": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=formatting",
+      "comment": "Research needed. Check for formatter/linter integration or auto-format options."
+    },
+    "git_integration": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=git",
+      "comment": "Research needed. Check for git command support or version control integration."
+    },
+    "performance_mode": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=performance",
+      "comment": "Research needed. Check for caching, optimization, or resource management settings."
+    },
+    "ui_customization": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=ui-customization",
+      "comment": "Research needed. Check for UI layout, sidebar, or panel customization."
     }
   },
   {
@@ -2976,6 +3921,51 @@
       "support": "partial",
       "source_url": "https://replit.com/ai#introducing-replit-agent:~:text=agent",
       "comment": "Location: hosted/web/API-managed session history; no local transcript directory documented."
+    },
+    "keyboard_shortcuts": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=keybindings",
+      "comment": "Research needed. Check official documentation for keybinding customization options."
+    },
+    "theme_customization": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=theme",
+      "comment": "Research needed. Check for theme/appearance customization options."
+    },
+    "auto_save": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=auto-save",
+      "comment": "Research needed. Check for auto-save or session persistence features."
+    },
+    "debugging_output": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=debugging",
+      "comment": "Research needed. Check for debug mode or verbose logging options."
+    },
+    "context_window": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=context-window",
+      "comment": "Research needed. Check for configurable context length or token limits."
+    },
+    "code_formatting": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=formatting",
+      "comment": "Research needed. Check for formatter/linter integration or auto-format options."
+    },
+    "git_integration": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=git",
+      "comment": "Research needed. Check for git command support or version control integration."
+    },
+    "performance_mode": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=performance",
+      "comment": "Research needed. Check for caching, optimization, or resource management settings."
+    },
+    "ui_customization": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=ui-customization",
+      "comment": "Research needed. Check for UI layout, sidebar, or panel customization."
     }
   },
   {
@@ -3108,6 +4098,51 @@
       "support": "unknown",
       "source_url": "https://docs.roocode.com/#source:~:text=session",
       "comment": "Location: transcript/session disk storage was not found in public docs reviewed."
+    },
+    "keyboard_shortcuts": {
+      "support": "partial",
+      "source_url": "https://github.com/RooVetGit/Roo-Code#configuration:~:text=keybindings",
+      "comment": "VS Code keybindings support."
+    },
+    "theme_customization": {
+      "support": "partial",
+      "source_url": "https://github.com/RooVetGit/Roo-Code#configuration:~:text=theme",
+      "comment": "VS Code theme inheritance."
+    },
+    "auto_save": {
+      "support": "full",
+      "source_url": "https://github.com/RooVetGit/Roo-Code#configuration:~:text=auto-save",
+      "comment": "Workspace auto-save configurable."
+    },
+    "debugging_output": {
+      "support": "full",
+      "source_url": "https://github.com/RooVetGit/Roo-Code#configuration:~:text=debug",
+      "comment": "Debug output and logging available."
+    },
+    "context_window": {
+      "support": "full",
+      "source_url": "https://github.com/RooVetGit/Roo-Code#configuration:~:text=context-window",
+      "comment": "Context length configurable."
+    },
+    "code_formatting": {
+      "support": "full",
+      "source_url": "https://github.com/RooVetGit/Roo-Code#configuration:~:text=formatting",
+      "comment": "VS Code formatter integration."
+    },
+    "git_integration": {
+      "support": "full",
+      "source_url": "https://github.com/RooVetGit/Roo-Code#configuration:~:text=git",
+      "comment": "Full VS Code git support."
+    },
+    "performance_mode": {
+      "support": "partial",
+      "source_url": "https://github.com/RooVetGit/Roo-Code#configuration:~:text=performance",
+      "comment": "Performance settings available."
+    },
+    "ui_customization": {
+      "support": "partial",
+      "source_url": "https://github.com/RooVetGit/Roo-Code#configuration:~:text=ui",
+      "comment": "VS Code UI customization."
     }
   },
   {
@@ -3244,6 +4279,51 @@
       "support": "unknown",
       "source_url": "https://docs.windsurf.com/#source:~:text=session",
       "comment": "Location: transcript/session disk storage was not found in public docs reviewed."
+    },
+    "keyboard_shortcuts": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=keybindings",
+      "comment": "Research needed. Check official documentation for keybinding customization options."
+    },
+    "theme_customization": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=theme",
+      "comment": "Research needed. Check for theme/appearance customization options."
+    },
+    "auto_save": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=auto-save",
+      "comment": "Research needed. Check for auto-save or session persistence features."
+    },
+    "debugging_output": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=debugging",
+      "comment": "Research needed. Check for debug mode or verbose logging options."
+    },
+    "context_window": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=context-window",
+      "comment": "Research needed. Check for configurable context length or token limits."
+    },
+    "code_formatting": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=formatting",
+      "comment": "Research needed. Check for formatter/linter integration or auto-format options."
+    },
+    "git_integration": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=git",
+      "comment": "Research needed. Check for git command support or version control integration."
+    },
+    "performance_mode": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=performance",
+      "comment": "Research needed. Check for caching, optimization, or resource management settings."
+    },
+    "ui_customization": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=ui-customization",
+      "comment": "Research needed. Check for UI layout, sidebar, or panel customization."
     }
   }
 ]

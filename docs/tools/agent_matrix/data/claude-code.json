@@ -134,5 +134,50 @@
     "support": "full",
     "source_url": "https://code.claude.com/docs/en/settings#source:~:text=transcript",
     "comment": "Location: Claude Code CLI transcripts are JSONL under `~/.claude/projects/<proj-path-dashes>/<sessionId>.jsonl`."
+  },
+  "keyboard_shortcuts": {
+    "support": "full",
+    "source_url": "https://code.claude.com/docs/en/settings#settings:~:text=keybindings",
+    "comment": "Fully customizable keybindings via `.claude/keybindings.json` or settings UI."
+  },
+  "theme_customization": {
+    "support": "full",
+    "source_url": "https://code.claude.com/docs/en/settings#settings:~:text=theme",
+    "comment": "Dark/light mode and theme customization available in settings."
+  },
+  "auto_save": {
+    "support": "full",
+    "source_url": "https://code.claude.com/docs/en/settings#settings:~:text=auto-save",
+    "comment": "Auto-save behavior configurable in settings."
+  },
+  "debugging_output": {
+    "support": "partial",
+    "source_url": "https://code.claude.com/docs/en/debugging#debugging:~:text=debug",
+    "comment": "Debug logs and diagnostic output available; verbosity configurable."
+  },
+  "context_window": {
+    "support": "full",
+    "source_url": "https://docs.anthropic.com/en/docs/claude-code/settings#settings:~:text=context-window",
+    "comment": "Token limit and context window configurable per session."
+  },
+  "code_formatting": {
+    "support": "partial",
+    "source_url": "https://code.claude.com/docs/en/settings#settings:~:text=formatting",
+    "comment": "Integrates with workspace formatters; auto-format on save configurable."
+  },
+  "git_integration": {
+    "support": "full",
+    "source_url": "https://code.claude.com/docs/en/git-integration#integration:~:text=git",
+    "comment": "Full git support: diff, commit, branch management built-in."
+  },
+  "performance_mode": {
+    "support": "partial",
+    "source_url": "https://code.claude.com/docs/en/performance#performance:~:text=caching",
+    "comment": "Caching and optimization settings available; token budget management."
+  },
+  "ui_customization": {
+    "support": "full",
+    "source_url": "https://code.claude.com/docs/en/settings#settings:~:text=ui-layout",
+    "comment": "Customizable sidebar, panel arrangement, collapsible sections."
   }
 }

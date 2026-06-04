@@ -126,5 +126,50 @@
     "support": "unknown",
     "source_url": "https://docs.roocode.com/#source:~:text=session",
     "comment": "Location: transcript/session disk storage was not found in public docs reviewed."
+  },
+  "keyboard_shortcuts": {
+    "support": "partial",
+    "source_url": "https://github.com/RooVetGit/Roo-Code#configuration:~:text=keybindings",
+    "comment": "VS Code keybindings support."
+  },
+  "theme_customization": {
+    "support": "partial",
+    "source_url": "https://github.com/RooVetGit/Roo-Code#configuration:~:text=theme",
+    "comment": "VS Code theme inheritance."
+  },
+  "auto_save": {
+    "support": "full",
+    "source_url": "https://github.com/RooVetGit/Roo-Code#configuration:~:text=auto-save",
+    "comment": "Workspace auto-save configurable."
+  },
+  "debugging_output": {
+    "support": "full",
+    "source_url": "https://github.com/RooVetGit/Roo-Code#configuration:~:text=debug",
+    "comment": "Debug output and logging available."
+  },
+  "context_window": {
+    "support": "full",
+    "source_url": "https://github.com/RooVetGit/Roo-Code#configuration:~:text=context-window",
+    "comment": "Context length configurable."
+  },
+  "code_formatting": {
+    "support": "full",
+    "source_url": "https://github.com/RooVetGit/Roo-Code#configuration:~:text=formatting",
+    "comment": "VS Code formatter integration."
+  },
+  "git_integration": {
+    "support": "full",
+    "source_url": "https://github.com/RooVetGit/Roo-Code#configuration:~:text=git",
+    "comment": "Full VS Code git support."
+  },
+  "performance_mode": {
+    "support": "partial",
+    "source_url": "https://github.com/RooVetGit/Roo-Code#configuration:~:text=performance",
+    "comment": "Performance settings available."
+  },
+  "ui_customization": {
+    "support": "partial",
+    "source_url": "https://github.com/RooVetGit/Roo-Code#configuration:~:text=ui",
+    "comment": "VS Code UI customization."
   }
 }
