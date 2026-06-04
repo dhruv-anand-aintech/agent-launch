@@ -29,7 +29,7 @@ Form factor values are deliberately strict: each value should have a concrete pe
 | Aider | CLI | Jun '23 | May '26 | partial | partial | partial | partial | none | none | full |
 | Amp | CLI, Extension, SDK | May '25 | May '26 | full | full | unknown | full | full | none | partial |
 | Antigravity | CLI, IDE | 2025 | May '26 | full | full | partial | full | full | none | unknown |
-| Claude Code | CLI, Extension, SDK, Web, Mac App | Feb '25 | May '26 | full | full | full | full | full | partial | partial |
+| Claude Code | CLI, Extension, SDK, Web, Mac App | Feb '25 | Jun '26 | full | full | full | full | full | partial | partial |
 | Cline | CLI, Extension, SDK | Jul '24 | Jun '26 | full | full | unknown | full | full | none | full |
 | Cohere North | SDK, Web | Jan '25 | May '26 | partial | partial | partial | full | full | full | none |
 | Cursor | CLI, IDE, SDK | 2023 | May '26 | full | full | full | unknown | full | full | full |
