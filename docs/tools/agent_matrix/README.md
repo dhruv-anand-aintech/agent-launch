@@ -46,7 +46,7 @@ Form factor values are deliberately strict: each value should have a concrete pe
 | OpenAI Codex CLI | CLI, Extension, SDK, Web, Mac App | Apr '25 | Jun '26 | full | full | full | full | full | full | full |
 | OpenCode | CLI, Extension, SDK, Mac App | 2025 | Jun '26 | full | full | full | full | full | none | full |
 | Pi | CLI, SDK | May '26 | Jun '26 | full | full | full | full | none | none | full |
-| Qwen Code | CLI, Extension, SDK | Jun '25 | Jun '26 | full | full | unknown | full | full | partial | full |
+| Qwen Code | CLI, Extension, SDK | Jun '25 | May '26 | full | full | unknown | full | full | partial | full |
 | Replit Agent | Web | Sep '24 | Sep '25 | partial | none | partial | partial | unknown | full | none |
 | Roo Code | Extension | Mid-2025 | May '26 | full | full | unknown | none | full | none | full |
 | Windsurf Cascade | CLI, IDE, Extension | Nov '24 | Apr '26 | full | full | unknown | full | full | full | partial |

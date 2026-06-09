@@ -109,7 +109,6 @@ ${metaTags()}
 :root {
   color-scheme: light; --bg: #f6f4ee; --panel: #fffdf8; --ink: #17130d; --muted: #766f63;
   --line: #ded7c9; --line-strong: #bdb3a2; --accent: #176b5b; --warn: #a35f00; --none: #9a3c32; --unknown: #8a8173;
-  --footer-h: 26px;
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 * { box-sizing: border-box; }
@@ -140,8 +139,6 @@ a { color: inherit; text-decoration: none; }
 .pill { border: 1px solid var(--line); padding: 3px 7px; background: #fff; font-size: 11px; color: var(--muted); }
 .table-wrap {
   flex: 1 1 auto; overflow: auto; min-height: 0; position: relative;
-  padding-bottom: var(--footer-h);
-  scroll-padding-bottom: var(--footer-h);
 }
 table {
   border-collapse: separate; border-spacing: 0; background: var(--panel); table-layout: fixed;
@@ -268,15 +265,6 @@ td.value .cell-value {
 .form-tags { display: flex; flex-wrap: wrap; gap: 1px; justify-content: center; }
 .form-tag { border: 1px solid var(--line); background: #fff; padding: 1px 2px; font-size: 8px; }
 .form-tag.deprecated-tag { color: var(--warn); border-color: #d4a574; }
-.site-footer {
-  position: fixed; left: 0; right: 0; bottom: 0; z-index: 40;
-  height: var(--footer-h); display: flex; align-items: center; justify-content: center; gap: 6px;
-  padding: 0 14px; background: var(--panel); border-top: 1px solid var(--line);
-  box-shadow: 0 -4px 12px rgba(23, 19, 13, .06);
-}
-.site-footer-copy { font-size: 8px; line-height: 1.2; color: var(--muted); white-space: nowrap; }
-.site-footer-copy a { color: var(--ink); text-decoration: none; }
-.site-footer-copy a:hover { text-decoration: underline; }
 .cell-link {
   position: absolute; inset: 0; z-index: 2;
 }
@@ -315,9 +303,6 @@ td.value .cell-value {
 <tbody id="tbody"></tbody>
 </table>
 </div>
-<footer class="site-footer">
-  <span class="site-footer-copy">© 2026 <a href="https://ainorthstartech.com" target="_blank" rel="noopener noreferrer">AI Northstar Tech</a> Private Limited, All Rights Reserved.</span>
-</footer>
 <script type="application/json" id="payload">${payload}</script>
 <script>
 function agentDomain(agent) {
