@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.dhruvanand.agent-launch-matrix-updater</string>
+
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/zsh</string>
+    <string>/Users/dhruvanand/Code/agent-launch-cli/scripts/scheduled-agent-matrix-update.sh</string>
+  </array>
+
+  <key>WorkingDirectory</key>
+  <string>/Users/dhruvanand/Code/agent-launch-cli</string>
+
+  <key>StartInterval</key>
+  <integer>172800</integer>
+
+  <key>RunAtLoad</key>
+  <false/>
+
+  <key>StandardOutPath</key>
+  <string>/Users/dhruvanand/Library/Logs/agent-launch-matrix-updater/launchd.out.log</string>
+
+  <key>StandardErrorPath</key>
+  <string>/Users/dhruvanand/Library/Logs/agent-launch-matrix-updater/launchd.err.log</string>
+</dict>
+</plist>
