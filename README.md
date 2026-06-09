@@ -100,7 +100,7 @@ agent-launch -a claude -i -m plan -C ~/Code/my-repo 'review this change'
 | `--prompt` / `-p` | Initial prompt |
 | positional text | Prompt text when `--prompt` is omitted |
 | `--cwd` / `-C` | Workspace/working directory |
-| `--mode` / `-m` | `default`, `ask`, `plan`, `auto`, or `danger`; defaults to `AGENT_LAUNCH_MODE` or `auto` |
+| `--mode` / `-m` | `default`, `ask`, `plan`, `auto`, or `danger`; defaults to `AGENT_LAUNCH_MODE` or `danger` |
 | `--model-class` | `fast` or `pro` |
 | `--model` | Explicit backend model string; overrides `--model-class` |
 | `--no-model` | Do not pass a model flag |
@@ -194,7 +194,7 @@ Backend flag mapping:
 | Agent | `ask` | `plan` | `auto` | `danger` |
 | --- | --- | --- | --- | --- |
 | Antigravity CLI | backend default | `--sandbox` | backend default | `--dangerously-skip-permissions` |
-| Codex | `-s read-only` | `-s read-only` plus `-a never` in non-interactive mode | `-a never` | `-a never -s danger-full-access` in non-interactive mode, `--dangerously-bypass-approvals-and-sandbox` interactively |
+| Codex | `-s read-only` | `-s read-only` plus `-a never` in non-interactive mode | `-a never` | `-a never -s danger-full-access` |
 | Claude Code | `--permission-mode default` | `--permission-mode plan` | `--permission-mode auto` | `--dangerously-skip-permissions` |
 | Gemini CLI | `--approval-mode default` | `--approval-mode plan` | `--approval-mode auto_edit` | `--yolo` |
 | OpenCode | `--agent ask` | `--agent plan` | backend default | `--dangerously-skip-permissions` in non-interactive mode |

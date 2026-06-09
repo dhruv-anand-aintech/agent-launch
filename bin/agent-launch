@@ -137,7 +137,7 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
         "-m",
         "--mode",
         choices=MODES,
-        default=os.environ.get("AGENT_LAUNCH_MODE", "auto"),
+        default=os.environ.get("AGENT_LAUNCH_MODE", "danger"),
         help="Normalized permission/interaction mode.",
     )
     parser.add_argument(
@@ -191,6 +191,8 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     if args.resume is not None and args.continue_session:
         parser.error("--resume and --continue cannot be used together")
     args.passthrough_args = unknown_args + passthrough_args
+    if args.print_mappings:
+        return args
     if args.agent == "random":
         args.agent = choose_random_agent()
     return args
@@ -236,9 +238,7 @@ def mode_flags(agent: str, mode: str, non_interactive: bool) -> list[str]:
             "ask": ["-s", "read-only"],
             "plan": ["-a", "never", "-s", "read-only"] if non_interactive else ["-s", "read-only"],
             "auto": ["-a", "never"],
-            "danger": ["-a", "never", "-s", "danger-full-access"]
-            if non_interactive
-            else ["--dangerously-bypass-approvals-and-sandbox"],
+            "danger": ["-a", "never", "-s", "danger-full-access"],
         },
         "claude": {
             "ask": ["--permission-mode", "default"],
