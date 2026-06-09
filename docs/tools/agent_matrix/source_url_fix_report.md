@@ -1,0 +1,830 @@
+# Source URL Fix Report
+
+- Applied fixes: 105
+- Already OK: 181
+- Unresolved: 220
+- Dry run: False
+
+## Applied
+- `aider.json` `released_in.source_url` (Aider)
+  - heading_failed -> verified ok
+  - Old: https://github.com/Aider-AI/aider/releases/tag/v0.5.0#source:~:text=v0.5.0
+  - New: https://github.com/Aider-AI/aider/releases/tag/v0.5.0#v050:~:text=v0.5.0
+- `antigravity.json` `form_factor.source_url` (Antigravity)
+  - heading_failed -> verified ok
+  - Old: https://antigravity.google/docs/cli-getting-started#source:~:text=CLI
+  - New: https://antigravity.google/docs/getting-started#clip0_6001_463:~:text=CLI
+- `antigravity.json` `pricing.source_url` (Antigravity)
+  - heading_failed -> verified ok
+  - Old: https://antigravity.google/pricing#source:~:text=For%20Individuals
+  - New: https://antigravity.google/pricing#for-individuals-0month:~:text=For%20Individuals
+- `antigravity.json` `transcripts.source_url` (Antigravity)
+  - heading_failed -> verified ok
+  - Old: https://antigravity.google/docs/cli-features#source:~:text=conversation
+  - New: https://antigravity.google/docs/getting-started#basic-navigation:~:text=conversation
+- `claude-code.json` `form_factor.source_url` (Claude Code)
+  - manual_followup -> verified ok
+  - Old: https://code.claude.com/docs/en/quickstart#source:~:text=CLI
+  - New: https://code.claude.com/docs/en/quickstart#clip0_2880_7340:~:text=CLI
+- `claude-code.json` `latest_major_update.source_url` (Claude Code)
+  - manual_followup -> verified ok
+  - Old: https://docs.anthropic.com/en/docs/claude-code/overview#source:~:text=Claude%20Code
+  - New: https://docs.anthropic.com/en/docs/claude-code/overview#use-claude-code:~:text=Claude%20Code
+- `claude-code.json` `rules.source_url` (Claude Code)
+  - manual_followup -> verified ok
+  - Old: https://docs.anthropic.com/en/docs/claude-code/memory#source:~:text=CLAUDE.md
+  - New: https://docs.anthropic.com/en/docs/claude-code/memory#claude-md-vs-auto-memory:~:text=CLAUDE.md
+- `claude-code.json` `skills.source_url` (Claude Code)
+  - manual_followup -> verified ok
+  - Old: https://docs.anthropic.com/en/docs/claude-code/skills#source:~:text=skills
+  - New: https://docs.anthropic.com/en/docs/claude-code/skills#page-title:~:text=skills
+- `claude-code.json` `hooks.source_url` (Claude Code)
+  - manual_followup -> verified ok
+  - Old: https://docs.anthropic.com/en/docs/claude-code/hooks#source:~:text=hooks
+  - New: https://docs.anthropic.com/en/docs/claude-code/hooks#page-title:~:text=hooks
+- `claude-code.json` `mcp_servers.source_url` (Claude Code)
+  - manual_followup -> verified ok
+  - Old: https://docs.anthropic.com/en/docs/claude-code/mcp#source:~:text=MCP
+  - New: https://docs.anthropic.com/en/docs/claude-code/mcp#page-title:~:text=MCP
+- `claude-code.json` `subagents.source_url` (Claude Code)
+  - manual_followup -> verified ok
+  - Old: https://docs.anthropic.com/en/docs/claude-code/sub-agents#source:~:text=subagents
+  - New: https://docs.anthropic.com/en/docs/claude-code/sub-agents#page-title:~:text=subagents
+- `claude-code.json` `model_selection.source_url` (Claude Code)
+  - manual_followup -> verified ok
+  - Old: https://docs.anthropic.com/en/docs/claude-code/settings#source:~:text=model
+  - New: https://docs.anthropic.com/en/docs/claude-code/settings#model-and-responses:~:text=model
+- `claude-code.json` `approval_mode.source_url` (Claude Code)
+  - manual_followup -> verified ok
+  - Old: https://docs.anthropic.com/en/docs/claude-code/settings#source:~:text=permission
+  - New: https://docs.anthropic.com/en/docs/claude-code/settings#settings-and-permissions:~:text=permission
+- `claude-code.json` `sandbox_mode.source_url` (Claude Code)
+  - manual_followup -> verified ok
+  - Old: https://docs.anthropic.com/en/docs/claude-code/settings#source:~:text=permissions
+  - New: https://docs.anthropic.com/en/docs/claude-code/settings#settings-and-permissions:~:text=permissions
+- `claude-code.json` `resume.source_url` (Claude Code)
+  - manual_followup -> verified ok
+  - Old: https://docs.anthropic.com/en/docs/claude-code/cli-reference#source:~:text=--resume
+  - New: https://code.claude.com/docs/en/cli-reference#cli-commands:~:text=--resume
+- `claude-code.json` `continue.source_url` (Claude Code)
+  - manual_followup -> verified ok
+  - Old: https://docs.anthropic.com/en/docs/claude-code/cli-reference#source:~:text=--resume
+  - New: https://code.claude.com/docs/en/cli-reference#cli-commands:~:text=--resume
+- `claude-code.json` `custom_model_provider.source_url` (Claude Code)
+  - manual_followup -> verified ok
+  - Old: https://docs.anthropic.com/en/docs/claude-code/third-party-integrations#source:~:text=third-party
+  - New: https://code.claude.com/docs/en/third-party-integrations#/en/third-party-integrations:~:text=third-party
+- `claude-code.json` `hosted_agent.source_url` (Claude Code)
+  - manual_followup -> verified ok
+  - Old: https://docs.anthropic.com/en/docs/claude-code/overview#source:~:text=Claude%20Code
+  - New: https://docs.anthropic.com/en/docs/claude-code/overview#use-claude-code:~:text=Claude%20Code
+- `cline.json` `skills.source_url` (Cline)
+  - manual_followup -> verified ok
+  - Old: https://docs.cline.bot/customization/skills#source:~:text=Skills%20are%20modular%20instruction%20sets%20that%20extend%20Cline%E2%80%99s%20capabilities%20for%20specific%20tasks
+  - New: https://docs.cline.bot/customization/skills#documentation-index:~:text=Skills%20are%20modular%20instruction%20sets%20that%20extend%20Cline%E2%80%99s%20capabilities%20for%20specific%20tasks
+- `cline.json` `hooks.source_url` (Cline)
+  - manual_followup -> verified ok
+  - Old: https://docs.cline.bot/sdk/plugins#source:~:text=Hook%20stages%20include
+  - New: https://docs.cline.bot/sdk/plugins#hook-stages:~:text=Hook%20stages%20include
+- `cline.json` `mcp_servers.source_url` (Cline)
+  - manual_followup -> verified ok
+  - Old: https://docs.cline.bot/mcp/mcp-overview#source:~:text=MCP%20(Model%20Context%20Protocol)%20lets%20Cline%20use%20external%20tools%20and%20data%20sources%20through%20MCP%20servers
+  - New: https://docs.cline.bot/mcp/mcp-overview#documentation-index:~:text=MCP%20(Model%20Context%20Protocol)%20lets%20Cline%20use%20external%20tools%20and%20data%20sources%20through%20MCP%20servers
+- `cline.json` `custom_commands.source_url` (Cline)
+  - manual_followup -> verified ok
+  - Old: https://docs.cline.bot/core-workflows/using-commands#source:~:text=Slash%20Commands
+  - New: https://docs.cline.bot/core-workflows/using-commands#slash-commands:~:text=Slash%20Commands
+- `cline.json` `subagents.source_url` (Cline)
+  - manual_followup -> verified ok
+  - Old: https://docs.cline.bot/features/subagents#source:~:text=Subagents%20let%20Cline%20spawn%20focused%20research%20agents%20that%20run%20in%20parallel
+  - New: https://docs.cline.bot/features/subagents#documentation-index:~:text=Subagents%20let%20Cline%20spawn%20focused%20research%20agents%20that%20run%20in%20parallel
+- `cline.json` `model_selection.source_url` (Cline)
+  - heading_failed -> verified ok
+  - Old: https://github.com/cline/cline#source:~:text=Cline%20is%20not%20locked%20to%20a%20single%20AI%20provider
+  - New: https://github.com/cline/cline#works-with-every-model:~:text=Cline%20is%20not%20locked%20to%20a%20single%20AI%20provider
+- `cline.json` `sandbox_mode.source_url` (Cline)
+  - manual_followup -> verified ok
+  - Old: https://docs.cline.bot/cli/cli-reference#source:~:text=CLINE_SANDBOX%20Enable%20sandbox%20mode
+  - New: https://docs.cline.bot/cli/cli-reference#environment-variables:~:text=CLINE_SANDBOX%20Enable%20sandbox%20mode
+- `cline.json` `continue.source_url` (Cline)
+  - heading_failed -> verified ok
+  - Old: https://github.com/cline/cline/releases/tag/cli-v3.0.3#source:~:text=--continue%20so%20you%20can%20resume%20a%20task%20in%20an%20isolated%20worktree
+  - New: https://github.com/cline/cline/releases/tag/cli-v3.0.3#cli-v303:~:text=--continue%20so%20you%20can%20resume%20a%20task%20in%20an%20isolated%20worktree
+- `cline.json` `non_interactive.source_url` (Cline)
+  - manual_followup -> verified ok
+  - Old: https://docs.cline.bot/usage/cli-overview#source:~:text=Headless%20mode%20is%20triggered%20when%20using%20flags%20like%20--json%2C%20when%20stdin%20is%20piped%2C%20or%20when%20output%20is%20redirected
+  - New: https://docs.cline.bot/usage/cli-overview#headless-mode:~:text=Headless%20mode%20is%20triggered%20when%20using%20flags%20like%20--json%2C%20when%20stdin%20is%20piped%2C%20or%20when%20output%20is%20redirected
+- `cline.json` `output_format.source_url` (Cline)
+  - manual_followup -> verified ok
+  - Old: https://docs.cline.bot/cli/cli-reference#source:~:text=JSON%20Output%20Format
+  - New: https://docs.cline.bot/cli/cli-reference#json-output-format:~:text=JSON%20Output%20Format
+- `cline.json` `statusline.source_url` (Cline)
+  - manual_followup -> verified ok
+  - Old: https://docs.cline.bot/cli/cli-reference#source:~:text=Global%20Options
+  - New: https://docs.cline.bot/cli/cli-reference#global-options:~:text=Global%20Options
+- `cline.json` `telemetry.source_url` (Cline)
+  - manual_followup -> verified ok
+  - Old: https://docs.cline.bot/enterprise-solutions/monitoring/telemetry#source:~:text=Cline%20includes%20telemetry%20to%20help%20understand%20usage%20patterns%20and%20improve%20the%20product
+  - New: https://docs.cline.bot/enterprise-solutions/monitoring/telemetry#documentation-index:~:text=Cline%20includes%20telemetry%20to%20help%20understand%20usage%20patterns%20and%20improve%20the%20product
+- `cline.json` `custom_model_provider.source_url` (Cline)
+  - heading_failed -> verified ok
+  - Old: https://github.com/cline/cline#source:~:text=Any%20OpenAI-compatible%20API%20Self-hosted%20or%20third-party%20endpoints
+  - New: https://github.com/cline/cline#works-with-every-model:~:text=Any%20OpenAI-compatible%20API%20Self-hosted%20or%20third-party%20endpoints
+- `codex-cli.json` `released_in.source_url` (OpenAI Codex CLI)
+  - heading_failed -> verified ok
+  - Old: https://github.com/openai/codex#source:~:text=Codex%20CLI
+  - New: https://github.com/openai/codex#installing-and-running-codex-cli:~:text=Codex%20CLI
+- `codex-cli.json` `sandbox_mode.source_url` (OpenAI Codex CLI)
+  - heading_failed -> verified ok
+  - Old: https://github.com/openai/codex#source:~:text=sandbox
+  - New: https://github.com/openai/codex#license:~:text=sandbox
+- `codex-cli.json` `hosted_agent.source_url` (OpenAI Codex CLI)
+  - heading_failed -> verified ok
+  - Old: https://github.com/openai/codex#source:~:text=Codex%20CLI
+  - New: https://github.com/openai/codex#installing-and-running-codex-cli:~:text=Codex%20CLI
+- `cohere-north.json` `custom_model_provider.source_url` (Cohere North)
+  - heading_failed -> verified ok
+  - Old: https://cohere.com/blog/command-a-plus#source:~:text=Cohere%E2%80%99s%20mission
+  - New: https://cohere.com/blog/command-a-plus#introducing-command-a-making-sovereign-agentic-capabilities-available-to-all:~:text=Cohere%E2%80%99s%20mission
+- `cursor.json` `latest_major_update.source_url` (Cursor)
+  - heading_failed -> verified ok
+  - Old: https://docs.cursor.com/#source:~:text=Cursor
+  - New: https://cursor.com/docs#cursor-documentation:~:text=Cursor
+- `cursor.json` `skills.source_url` (Cursor)
+  - heading_failed -> verified ok
+  - Old: https://docs.cursor.com/en/context/skills#source:~:text=skills
+  - New: https://cursor.com/docs#customizing:~:text=skills
+- `cursor.json` `subagents.source_url` (Cursor)
+  - heading_failed -> verified ok
+  - Old: https://docs.cursor.com/#source:~:text=subagents
+  - New: https://cursor.com/docs#customizing:~:text=subagents
+- `cursor.json` `model_selection.source_url` (Cursor)
+  - heading_failed -> verified ok
+  - Old: https://docs.cursor.com/en/settings/models#source:~:text=models
+  - New: https://cursor.com/docs#models:~:text=models
+- `cursor.json` `hosted_agent.source_url` (Cursor)
+  - heading_failed -> verified ok
+  - Old: https://docs.cursor.com/en/cli/overview#source:~:text=CLI
+  - New: https://cursor.com/docs#CLI:~:text=CLI
+- `cursor.json` `custom_model_provider.source_url` (Cursor)
+  - heading_failed -> verified ok
+  - Old: https://docs.cursor.com/en/settings/models#source:~:text=models
+  - New: https://cursor.com/docs#models:~:text=models
+- `cursor.json` `pricing.source_url` (Cursor)
+  - heading_failed -> verified ok
+  - Old: https://cursor.com/help/models-and-usage/usage-limits#source:~:text=Pro%20Plus
+  - New: https://cursor.com/help/models-and-usage/usage-limits#how-much-usage-does-each-plan-include:~:text=Pro%20Plus
+- `devin.json` `rules.source_url` (Devin)
+  - heading_failed -> verified ok
+  - Old: https://docs.devin.ai/onboard-devin/agents-md#source:~:text=Devin%20supports%20AGENTS.md%20%2D%20a%20simple%2C%20open%20standard%20for%20providing%20context%20and%20instructions%20to%20AI%20agents
+  - New: https://docs.devin.ai/onboard-devin/agents-md#documentation-index:~:text=Devin%20supports%20AGENTS.md%20%2D%20a%20simple%2C%20open%20standard%20for%20providing%20context%20and%20instructions%20to%20AI%20agents
+- `devin.json` `skills.source_url` (Devin)
+  - heading_failed -> verified ok
+  - Old: https://docs.devin.ai/product-guides/skills#source:~:text=Skills%20are%20SKILL.md%20files%20you%20commit%20to%20your%20repositories%20that%20teach%20Devin%20reusable%20procedures
+  - New: https://docs.devin.ai/product-guides/skills#what-are-skills:~:text=Skills%20are%20SKILL.md%20files%20you%20commit%20to%20your%20repositories%20that%20teach%20Devin%20reusable%20procedures
+- `devin.json` `hooks.source_url` (Devin)
+  - heading_failed -> verified ok
+  - Old: https://docs.devin.ai/product-guides/automations#source:~:text=Webhook%20triggers%20let%20you%20connect%20any%20external%20system%20to%20Devin%20via%20a%20unique%20HTTPS%20endpoint
+  - New: https://docs.devin.ai/product-guides/automations#webhook-triggers:~:text=Webhook%20triggers%20let%20you%20connect%20any%20external%20system%20to%20Devin%20via%20a%20unique%20HTTPS%20endpoint
+- `devin.json` `mcp_servers.source_url` (Devin)
+  - heading_failed -> verified ok
+  - Old: https://docs.devin.ai/work-with-devin/mcp#source:~:text=MCP%20is%20an%20open%20protocol%20that%20enables%20Devin%20to%20use%20hundreds%20of%20external%20tools%20and%20data%20sources
+  - New: https://docs.devin.ai/work-with-devin/mcp#documentation-index:~:text=MCP%20is%20an%20open%20protocol%20that%20enables%20Devin%20to%20use%20hundreds%20of%20external%20tools%20and%20data%20sources
+- `devin.json` `subagents.source_url` (Devin)
+  - heading_failed -> verified ok
+  - Old: https://docs.devin.ai/work-with-devin/advanced-capabilities#source:~:text=Devin%20can%20break%20down%20large%20tasks%20and%20delegate%20them%20to%20a%20team%20of%20managed%20Devins%20working%20in%20parallel
+  - New: https://docs.devin.ai/work-with-devin/advanced-capabilities#managed-devins:~:text=Devin%20can%20break%20down%20large%20tasks%20and%20delegate%20them%20to%20a%20team%20of%20managed%20Devins%20working%20in%20parallel
+- `devin.json` `sandbox_mode.source_url` (Devin)
+  - heading_failed -> verified ok
+  - Old: https://docs.devin.ai/onboard-devin/environment#source:~:text=Every%20session%20boots%20from%20a%20snapshot%2C%20a%20frozen%2C%20bootable%20image%20of%20the%20environment
+  - New: https://docs.devin.ai/onboard-devin/environment#how-sessions-work:~:text=Every%20session%20boots%20from%20a%20snapshot%2C%20a%20frozen%2C%20bootable%20image%20of%20the%20environment
+- `devin.json` `non_interactive.source_url` (Devin)
+  - heading_failed -> verified ok
+  - Old: https://docs.devin.ai/api-reference/overview#source:~:text=The%20Devin%20API%20enables%20you%20to%20integrate%20Devin%20into%20your%20applications%2C%20automate%20workflows
+  - New: https://docs.devin.ai/api-reference/overview#documentation-index:~:text=The%20Devin%20API%20enables%20you%20to%20integrate%20Devin%20into%20your%20applications%2C%20automate%20workflows
+- `devin.json` `statusline.source_url` (Devin)
+  - heading_failed -> verified ok
+  - Old: https://docs.devin.ai/work-with-devin/devin-cli#commands:~:text=Commands
+  - New: https://docs.devin.ai/work-with-devin/devin-cli#essential-commands:~:text=Commands
+- `devin.json` `hosted_agent.source_url` (Devin)
+  - heading_failed -> verified ok
+  - Old: https://docs.devin.ai/get-started/devin-intro#source:~:text=Devin%20is%20also%20available%20via%20the%20Devin%20API
+  - New: https://docs.devin.ai/get-started/devin-intro#the-devin-interface:~:text=Devin%20is%20also%20available%20via%20the%20Devin%20API
+- `factory-droid.json` `form_factor.source_url` (Factory Droid)
+  - heading_failed -> verified ok
+  - Old: https://docs.factory.ai/reference/cli-reference#source:~:text=CLI
+  - New: https://docs.factory.ai/reference/cli-reference#page-title:~:text=CLI
+- `factory-droid.json` `released_in.source_url` (Factory Droid)
+  - heading_failed -> verified ok
+  - Old: https://docs.factory.ai/reference/cli-reference#source:~:text=Droid%20CLI%20Reference
+  - New: https://docs.factory.ai/reference/cli-reference#page-title:~:text=Droid%20CLI%20Reference
+- `factory-droid.json` `latest_major_update.source_url` (Factory Droid)
+  - heading_failed -> verified ok
+  - Old: https://docs.factory.ai/reference/cli-reference#source:~:text=Complete%20reference%20for%20the%20Droid%20CLI
+  - New: https://docs.factory.ai/reference/cli-reference#_R_2tdbsnlht5debsnpfdb_:~:text=Complete%20reference%20for%20the%20Droid%20CLI
+- `factory-droid.json` `rules.source_url` (Factory Droid)
+  - heading_failed -> verified ok
+  - Old: https://docs.factory.ai/reference/cli-reference#source:~:text=AGENTS.md
+  - New: https://docs.factory.ai/reference/cli-reference#configure-extend:~:text=AGENTS.md
+- `factory-droid.json` `telemetry.source_url` (Factory Droid)
+  - heading_failed -> verified ok
+  - Old: https://docs.factory.ai/reference/cli-reference#source:~:text=Analytics%20API
+  - New: https://docs.factory.ai/reference/cli-reference#page-title:~:text=Analytics%20API
+- `factory-droid.json` `hosted_agent.source_url` (Factory Droid)
+  - heading_failed -> verified ok
+  - Old: https://docs.factory.ai/reference/cli-reference#source:~:text=Factory%20App
+  - New: https://docs.factory.ai/reference/cli-reference#platform:~:text=Factory%20App
+- `factory-droid.json` `custom_model_provider.source_url` (Factory Droid)
+  - heading_failed -> verified ok
+  - Old: https://docs.factory.ai/reference/cli-reference#source:~:text=For%20custom%20models%2C%20see
+  - New: https://docs.factory.ai/reference/cli-reference#see-also:~:text=For%20custom%20models%2C%20see
+- `factory-droid.json` `transcripts.source_url` (Factory Droid)
+  - heading_failed -> verified ok
+  - Old: https://docs.factory.ai/reference/cli-reference#source:~:text=droid%20search
+  - New: https://docs.factory.ai/reference/cli-reference#droid-search-flags:~:text=droid%20search
+- `gemini-cli.json` `form_factor.source_url` (Gemini CLI)
+  - heading_failed -> verified ok
+  - Old: https://google-gemini.github.io/gemini-cli/docs/cli/#source:~:text=CLI
+  - New: https://antigravity.google/docs/cli-getting-started#clip0_6001_463:~:text=CLI
+- `gemini-cli.json` `released_in.source_url` (Gemini CLI)
+  - manual_followup -> verified ok
+  - Old: https://blog.google/technology/developers/introducing-gemini-cli-open-source-ai-agent/#source:~:text=Gemini%20CLI
+  - New: https://blog.google/technology/developers/introducing-gemini-cli-open-source-ai-agent/#gemini-cli-your-open-source-ai-agent:~:text=Gemini%20CLI
+- `gemini-cli.json` `latest_major_update.source_url` (Gemini CLI)
+  - heading_failed -> verified ok
+  - Old: https://antigravity.google/docs/cli-getting-started#source:~:text=Antigravity%20CLI
+  - New: https://antigravity.google/docs/getting-started#download:~:text=Antigravity%20CLI
+- `gemini-cli.json` `custom_commands.source_url` (Gemini CLI)
+  - heading_failed -> verified ok
+  - Old: https://google-gemini.github.io/gemini-cli/docs/cli/commands.html#source:~:text=commands
+  - New: https://antigravity.google/docs/getting-started#slash-commands:~:text=commands
+- `gemini-cli.json` `non_interactive.source_url` (Gemini CLI)
+  - heading_failed -> verified ok
+  - Old: https://google-gemini.github.io/gemini-cli/docs/cli/commands.html#source:~:text=prompt
+  - New: https://antigravity.google/docs/getting-started#installation:~:text=prompt
+- `gemini-cli.json` `pricing.source_url` (Gemini CLI)
+  - manual_followup -> verified ok
+  - Old: https://ai.google.dev/pricing#source:~:text=Gemini%20API
+  - New: https://ai.google.dev/gemini-api/docs/pricing#enterprise:~:text=Gemini%20API
+- `gemini-cli.json` `transcripts.source_url` (Gemini CLI)
+  - heading_failed -> verified ok
+  - Old: https://google-gemini.github.io/gemini-cli/#source:~:text=session
+  - New: https://antigravity.google/docs/getting-started#slash-commands:~:text=session
+- `github-copilot-coding-agent.json` `pricing.source_url` (GitHub Copilot)
+  - heading_failed -> verified ok
+  - Old: https://github.com/features/copilot/plans#source:~:text=Free%20%240%2C%20Pro%20%2410%2Fmonth%2C%20Pro%2B%20%2439%2Fmonth
+  - New: https://github.com/features/copilot/plans#everything-in-pro-and:~:text=Free%20%240%2C%20Pro%20%2410%2Fmonth%2C%20Pro%2B%20%2439%2Fmonth
+- `jules.json` `transcripts.source_url` (Google Jules)
+  - heading_failed -> verified ok
+  - Old: https://jules.google/#source:~:text=agent
+  - New: https://jules.google/#an-autonomous-coding-agent:~:text=agent
+- `junie.json` `released_in.source_url` (JetBrains Junie)
+  - manual_followup -> verified ok
+  - Old: https://blog.jetbrains.com/junie/2025/01/meet-junie-your-coding-agent-by-jetbrains/#source:~:text=Meet%20Junie
+  - New: https://blog.jetbrains.com/junie/2025/01/meet-junie-your-coding-agent-by-jetbrains/#major-updates:~:text=Meet%20Junie
+- `junie.json` `latest_major_update.source_url` (JetBrains Junie)
+  - heading_failed -> verified ok
+  - Old: https://junie.jetbrains.com/#source:~:text=starts%20a%20real%20debugger
+  - New: https://junie.jetbrains.com/#agentic-debugging:~:text=starts%20a%20real%20debugger
+- `junie.json` `custom_commands.source_url` (JetBrains Junie)
+  - heading_failed -> verified ok
+  - Old: https://www.jetbrains.com/help/ai-assistant/junie-agent.html#ai-assistant-20261-help:~:text=prompt
+  - New: https://www.jetbrains.com/help/ai-assistant/junie-agent.html#Junie_agent.topic:~:text=prompt
+- `junie.json` `model_selection.source_url` (JetBrains Junie)
+  - heading_failed -> verified ok
+  - Old: https://www.jetbrains.com/help/ide-services-cloud/manage-aie.html#source:~:text=OpenAI%20and%20Amazon%20Bedrock
+  - New: https://www.jetbrains.com/help/ide-services-cloud/manage-aie.html#junie:~:text=OpenAI%20and%20Amazon%20Bedrock
+- `junie.json` `approval_mode.source_url` (JetBrains Junie)
+  - heading_failed -> verified ok
+  - Old: https://junie.jetbrains.com/#source:~:text=Modes%3A%20autonomous%20%2F%20user-assisted%20%2F%20semi-auto
+  - New: https://junie.jetbrains.com/#agentic-debugging:~:text=Modes%3A%20autonomous%20%2F%20user-assisted%20%2F%20semi-auto
+- `junie.json` `custom_model_provider.source_url` (JetBrains Junie)
+  - heading_failed -> verified ok
+  - Old: https://www.jetbrains.com/help/ide-services-cloud/manage-aie.html#source:~:text=OpenAI%20and%20Amazon%20Bedrock
+  - New: https://www.jetbrains.com/help/ide-services-cloud/manage-aie.html#junie:~:text=OpenAI%20and%20Amazon%20Bedrock
+- `junie.json` `pricing.source_url` (JetBrains Junie)
+  - manual_followup -> verified ok
+  - Old: https://blog.jetbrains.com/blog/2025/04/16/jetbrains-ides-go-ai/#source:~:text=AI%20Free%20tier
+  - New: https://blog.jetbrains.com/blog/2025/04/16/jetbrains-ides-go-ai/#all-jetbrains-ai-tools-under-a-single-subscription-with-a-free-tier:~:text=AI%20Free%20tier
+- `kilo-code.json` `rules.source_url` (Kilo Code)
+  - heading_failed -> verified ok
+  - Old: https://kilo.ai/docs/customize/custom-rules#source:~:text=Custom%20rules%20allow%20you%20to%20create%20text-based%20instructions%20that%20all%20AI%20models%20will%20follow
+  - New: https://kilo.ai/docs/customize/custom-rules#custom-rules:~:text=Custom%20rules%20allow%20you%20to%20create%20text-based%20instructions%20that%20all%20AI%20models%20will%20follow
+- `kilo-code.json` `mcp_servers.source_url` (Kilo Code)
+  - heading_failed -> verified ok
+  - Old: https://kilo.ai/docs/automate/mcp/using-in-kilo-code#source:~:text=Model%20Context%20Protocol%20(MCP)%20extends%20Kilo%20Code%27s%20capabilities%20by%20connecting%20to%20external%20tools%20and%20services
+  - New: https://kilo.ai/docs/automate/mcp/using-in-kilo-code#using-mcp-in-kilo-code:~:text=Model%20Context%20Protocol%20(MCP)%20extends%20Kilo%20Code%27s%20capabilities%20by%20connecting%20to%20external%20tools%20and%20services
+- `kilo-code.json` `custom_commands.source_url` (Kilo Code)
+  - heading_failed -> verified ok
+  - Old: https://kilo.ai/docs/customize/workflows#source:~:text=Workflows%20(also%20called%20slash%20commands%20in%20the%20new%20extension)%20automate%20repetitive%20tasks%20by%20defining%20step-by-step%20instructions
+  - New: https://kilo.ai/docs/customize/workflows#workflows:~:text=Workflows%20(also%20called%20slash%20commands%20in%20the%20new%20extension)%20automate%20repetitive%20tasks%20by%20defining%20step-by-step%20instructions
+- `kilo-code.json` `custom_model_provider.source_url` (Kilo Code)
+  - heading_failed -> verified ok
+  - Old: https://kilo.ai/docs/getting-started/byok#source:~:text=Bring%20Your%20Own%20Key%20(BYOK)%20lets%20you%20use%20your%20own%20API%20keys%20when%20using%20the%20Kilo%20Gateway
+  - New: https://kilo.ai/docs/getting-started/byok#bring-your-own-key-(byok):~:text=Bring%20Your%20Own%20Key%20(BYOK)%20lets%20you%20use%20your%20own%20API%20keys%20when%20using%20the%20Kilo%20Gateway
+- `kimi-cli.json` `form_factor.source_url` (Kimi CLI)
+  - heading_failed -> verified ok
+  - Old: https://github.com/MoonshotAI/kimi-cli#source:~:text=CLI
+  - New: https://github.com/MoonshotAI/kimi-cli#moonshotaikimi-cli:~:text=CLI
+- `kimi-cli.json` `latest_major_update.source_url` (Kimi CLI)
+  - heading_failed -> verified ok
+  - Old: https://github.com/MoonshotAI/kimi-cli/releases/tag/1.44.0#source:~:text=1.44.0
+  - New: https://github.com/MoonshotAI/kimi-cli/releases/tag/1.44.0#1440:~:text=1.44.0
+- `kiro.json` `custom_commands.source_url` (Kiro)
+  - heading_failed -> verified ok
+  - Old: https://kiro.dev/cli/#source:~:text=commands%20start%20with%20a%20forward%20slash
+  - New: https://kiro.dev/cli/#essential:~:text=commands%20start%20with%20a%20forward%20slash
+- `kiro.json` `subagents.source_url` (Kiro)
+  - heading_failed -> verified ok
+  - Old: https://kiro.dev/docs/chat/subagents/#source:~:text=Kiro%20has%20two%20built-in%20subagents
+  - New: https://kiro.dev/docs/chat/subagents/#subagents:~:text=Kiro%20has%20two%20built-in%20subagents
+- `kiro.json` `output_format.source_url` (Kiro)
+  - heading_failed -> verified ok
+  - Old: https://kiro.dev/cli/#source:~:text=%2Fsave%60%20%7CExport%20conversation%20state%20to%20a%20JSON%20file
+  - New: https://kiro.dev/cli/#essential:~:text=%2Fsave%60%20%7CExport%20conversation%20state%20to%20a%20JSON%20file
+- `opencode.json` `released_in.source_url` (OpenCode)
+  - heading_failed -> verified ok
+  - Old: https://github.com/sst/opencode#source:~:text=opencode
+  - New: https://github.com/sst/opencode#anomalycoopencode:~:text=opencode
+- `qwen-code.json` `pricing.source_url` (Qwen Code)
+  - heading_failed -> verified ok
+  - Old: https://github.com/QwenLM/qwen-code#source:~:text=Apache-2.0%20license
+  - New: https://github.com/QwenLM/qwen-code#acknowledgments:~:text=Apache-2.0%20license
+- `qwen-code.json` `hosted_agent.source_url` (Qwen Code)
+  - heading_failed -> verified ok
+  - Old: https://github.com/QwenLM/qwen-code#source:~:text=As%20an%20open-source%20terminal%20agent
+  - New: https://github.com/QwenLM/qwen-code#usage:~:text=As%20an%20open-source%20terminal%20agent
+- `replit-agent.json` `rules.source_url` (Replit Agent)
+  - manual_followup -> verified ok
+  - Old: https://docs.replit.com/replitai/agent#source:~:text=Agent
+  - New: https://docs.replit.com/replitai/agent#agent:~:text=Agent
+- `replit-agent.json` `mcp_servers.source_url` (Replit Agent)
+  - manual_followup -> verified ok
+  - Old: https://docs.replit.com/replitai/agent#source:~:text=Agent
+  - New: https://docs.replit.com/replitai/agent#agent:~:text=Agent
+- `replit-agent.json` `custom_commands.source_url` (Replit Agent)
+  - manual_followup -> verified ok
+  - Old: https://docs.replit.com/replitai/agent#source:~:text=Agent
+  - New: https://docs.replit.com/replitai/agent#agent:~:text=Agent
+- `replit-agent.json` `model_selection.source_url` (Replit Agent)
+  - manual_followup -> verified ok
+  - Old: https://docs.replit.com/replitai/agent#source:~:text=Agent
+  - New: https://docs.replit.com/replitai/agent#agent:~:text=Agent
+- `replit-agent.json` `approval_mode.source_url` (Replit Agent)
+  - manual_followup -> verified ok
+  - Old: https://docs.replit.com/replitai/agent#source:~:text=Agent
+  - New: https://docs.replit.com/replitai/agent#agent:~:text=Agent
+- `replit-agent.json` `sandbox_mode.source_url` (Replit Agent)
+  - manual_followup -> verified ok
+  - Old: https://docs.replit.com/replitai/agent#source:~:text=workspace
+  - New: https://docs.replit.com/replitai/agent#workspace-tools:~:text=workspace
+- `replit-agent.json` `resume.source_url` (Replit Agent)
+  - manual_followup -> verified ok
+  - Old: https://docs.replit.com/replitai/agent#source:~:text=Agent
+  - New: https://docs.replit.com/replitai/agent#agent:~:text=Agent
+- `replit-agent.json` `continue.source_url` (Replit Agent)
+  - manual_followup -> verified ok
+  - Old: https://docs.replit.com/replitai/agent#source:~:text=Agent
+  - New: https://docs.replit.com/replitai/agent#agent:~:text=Agent
+- `replit-agent.json` `non_interactive.source_url` (Replit Agent)
+  - manual_followup -> verified ok
+  - Old: https://docs.replit.com/replitai/agent#source:~:text=Agent
+  - New: https://docs.replit.com/replitai/agent#agent:~:text=Agent
+- `replit-agent.json` `output_format.source_url` (Replit Agent)
+  - manual_followup -> verified ok
+  - Old: https://docs.replit.com/replitai/agent#source:~:text=Agent
+  - New: https://docs.replit.com/replitai/agent#agent:~:text=Agent
+- `replit-agent.json` `statusline.source_url` (Replit Agent)
+  - manual_followup -> verified ok
+  - Old: https://docs.replit.com/replitai/agent#source:~:text=Agent
+  - New: https://docs.replit.com/replitai/agent#agent:~:text=Agent
+- `replit-agent.json` `telemetry.source_url` (Replit Agent)
+  - manual_followup -> verified ok
+  - Old: https://docs.replit.com/replitai/agent#source:~:text=Agent
+  - New: https://docs.replit.com/replitai/agent#agent:~:text=Agent
+- `replit-agent.json` `custom_model_provider.source_url` (Replit Agent)
+  - manual_followup -> verified ok
+  - Old: https://docs.replit.com/replitai/agent#source:~:text=Agent
+  - New: https://docs.replit.com/replitai/agent#agent:~:text=Agent
+- `roo-code.json` `released_in.source_url` (Roo Code)
+  - heading_failed -> verified ok
+  - Old: https://github.com/RooCodeInc/Roo-Code/releases/tag/v3.54.0#source:~:text=Release%20v3.54.0
+  - New: https://github.com/RooCodeInc/Roo-Code/releases/tag/v3.54.0#release-v3540:~:text=Release%20v3.54.0
+- `roo-code.json` `latest_major_update.source_url` (Roo Code)
+  - heading_failed -> verified ok
+  - Old: https://github.com/RooCodeInc/Roo-Code/releases/tag/v3.54.0#source:~:text=Release%20v3.54.0
+  - New: https://github.com/RooCodeInc/Roo-Code/releases/tag/v3.54.0#release-v3540:~:text=Release%20v3.54.0
+- `roo-code.json` `output_format.source_url` (Roo Code)
+  - heading_failed -> verified ok
+  - Old: https://github.com/RooCodeInc/Roo-Code/releases/tag/cli-v0.1.17#source:~:text=%2D%2Dcreate%2Dwith%2Dsession%2Did
+  - New: https://github.com/RooCodeInc/Roo-Code/releases/tag/cli-v0.1.17#added:~:text=%2D%2Dcreate%2Dwith%2Dsession%2Did
+- `windsurf.json` `model_selection.source_url` (Windsurf Cascade)
+  - heading_failed -> verified ok
+  - Old: https://docs.windsurf.com/windsurf/models#source:~:text=Models
+  - New: https://docs.windsurf.com/windsurf/models#page-title:~:text=Models
+- `windsurf.json` `telemetry.source_url` (Windsurf Cascade)
+  - heading_failed -> verified ok
+  - Old: https://docs.windsurf.com/troubleshooting/plugins-common-issues#source:~:text=telemetry
+  - New: https://docs.windsurf.com/troubleshooting/plugins-common-issues#how-do-i-disable-code-snippet-telemetry:~:text=telemetry
+
+## Unresolved
+- `aider.json` `form_factor.source_url` (Aider): heading_and_text_failed
+  - https://aider.chat/docs/install.html#source:~:text=CLI
+- `aider.json` `latest_major_update.source_url` (Aider): heading_and_text_failed
+  - https://github.com/Aider-AI/aider/releases/tag/v0.86.0#source:~:text=Expanded%20GPT-5%20model%20support%20across%20family%20variants
+- `aider.json` `rules.source_url` (Aider): heading_failed
+  - https://aider.chat/docs/usage/conventions.html#source:~:text=The%20easiest%20way%20to%20do%20that%20with%20aider%20is%20to%20simply%20create%20a%20small%20markdown%20file
+- `aider.json` `skills.source_url` (Aider): heading_and_text_failed
+  - https://aider.chat/docs/usage/commands.html#source:~:text=/save%20%3Cfname%3E%20command%20will%20make%20a%20file%20of%20/add%20and%20/read-only%20commands
+- `aider.json` `hooks.source_url` (Aider): heading_and_text_failed
+  - https://aider.chat/docs/config/options.html#source:~:text=--git-commit-verify%0AEnable/disable%20git%20pre-commit%20hooks%20with%20--no-verify
+- `aider.json` `mcp_servers.source_url` (Aider): heading_failed
+  - https://github.com/Aider-AI/aider#source:~:text=aider%20is%20AI%20pair%20programming%20in%20your%20terminal
+- `aider.json` `approval_mode.source_url` (Aider): heading_failed
+  - https://aider.chat/docs/config/options.html#source:~:text=--yes-always%0AAlways%20say%20yes%20to%20every%20confirmation
+- `aider.json` `sandbox_mode.source_url` (Aider): heading_failed
+  - https://aider.chat/docs/config/options.html#source:~:text=--dry-run%0APerform%20a%20dry%20run%20without%20modifying%20files
+- `aider.json` `resume.source_url` (Aider): heading_failed
+  - https://aider.chat/docs/config/options.html#source:~:text=--restore-chat-history%0ARestore%20the%20previous%20chat%20history%20messages
+- `aider.json` `continue.source_url` (Aider): heading_failed
+  - https://aider.chat/docs/config/options.html#source:~:text=--restore-chat-history%0ARestore%20the%20previous%20chat%20history%20messages
+- `aider.json` `output_format.source_url` (Aider): heading_failed
+  - https://aider.chat/docs/config/options.html#source:~:text=--no-pretty%0ADisable%20pretty%2C%20colorized%20output
+- `aider.json` `pricing.source_url` (Aider): heading_and_text_failed
+  - https://github.com/Aider-AI/aider#source:~:text=License-Apache-2.0
+- `aider.json` `hosted_agent.source_url` (Aider): heading_failed
+  - https://github.com/Aider-AI/aider#source:~:text=aider%20is%20AI%20pair%20programming%20in%20your%20terminal
+- `aider.json` `transcripts.source_url` (Aider): heading_failed
+  - https://aider.chat/docs/config/aider_conf.html#source:~:text=chat-history-file
+- `amp.json` `mcp_servers.source_url` (Amp): text_failed
+  - https://ampcode.com/manual#mcp:~:text=You%20can%20add%20additional%20tools%20using%20MCP%20servers
+- `amp.json` `subagents.source_url` (Amp): text_failed
+  - https://ampcode.com/manual#subagents:~:text=Amp%20can%20spawn%20subagents%20(via%20the%20Task%20tool)
+- `amp.json` `output_format.source_url` (Amp): text_failed
+  - https://ampcode.com/manual#cli-streaming-json:~:text=Stream%20JSON%20Output
+- `amp.json` `statusline.source_url` (Amp): heading_and_text_failed
+  - https://ampcode.com/news/neo#source:~:text=Themes%3A%20Custom%20themes%20made%20it%20harder%20to%20keep%20the%20CLI%20legible
+- `amp.json` `custom_model_provider.source_url` (Amp): text_failed
+  - https://ampcode.com/manual#mcp:~:text=You%20can%20add%20additional%20tools%20using%20MCP%20servers
+- `amp.json` `hosted_agent.source_url` (Amp): heading_failed
+  - https://ampcode.com/manual#source:~:text=Amp%20is%20the%20frontier%20coding%20agent%20for%20your%20terminal%20and%20editor
+- `antigravity.json` `released_in.source_url` (Antigravity): heading_and_text_failed
+  - https://antigravity.google/#source:~:text=released
+- `antigravity.json` `latest_major_update.source_url` (Antigravity): heading_and_text_failed
+  - https://antigravity.google/docs/cli-features#source:~:text=plugins
+- `antigravity.json` `rules.source_url` (Antigravity): heading_and_text_failed
+  - https://antigravity.google/docs/cli-features#source:~:text=rules
+- `antigravity.json` `skills.source_url` (Antigravity): heading_and_text_failed
+  - https://antigravity.google/docs/cli-features#source:~:text=skills
+- `antigravity.json` `hooks.source_url` (Antigravity): heading_and_text_failed
+  - https://antigravity.google/docs/cli-features#source:~:text=hooks
+- `antigravity.json` `mcp_servers.source_url` (Antigravity): heading_and_text_failed
+  - https://antigravity.google/docs/cli-features#source:~:text=mcp_config.json
+- `antigravity.json` `custom_commands.source_url` (Antigravity): heading_and_text_failed
+  - https://antigravity.google/docs/cli-features#source:~:text=plugins
+- `antigravity.json` `subagents.source_url` (Antigravity): heading_and_text_failed
+  - https://antigravity.google/docs/cli-features#source:~:text=subagents
+- `antigravity.json` `model_selection.source_url` (Antigravity): heading_failed
+  - https://antigravity.google/docs/#source:~:text=model
+- `antigravity.json` `approval_mode.source_url` (Antigravity): heading_and_text_failed
+  - https://antigravity.google/docs/cli-features#source:~:text=dangerously-skip-permissions
+- `antigravity.json` `sandbox_mode.source_url` (Antigravity): heading_and_text_failed
+  - https://antigravity.google/docs/cli-features#source:~:text=--sandbox
+- `antigravity.json` `resume.source_url` (Antigravity): heading_and_text_failed
+  - https://antigravity.google/docs/cli-features#source:~:text=--continue
+- `antigravity.json` `continue.source_url` (Antigravity): heading_and_text_failed
+  - https://antigravity.google/docs/cli-features#source:~:text=--continue
+- `antigravity.json` `non_interactive.source_url` (Antigravity): heading_and_text_failed
+  - https://antigravity.google/docs/cli-features#source:~:text=--print
+- `antigravity.json` `output_format.source_url` (Antigravity): heading_and_text_failed
+  - https://antigravity.google/docs/cli-features#source:~:text=output
+- `antigravity.json` `statusline.source_url` (Antigravity): heading_and_text_failed
+  - https://antigravity.google/docs/cli-features#source:~:text=status%20line
+- `antigravity.json` `telemetry.source_url` (Antigravity): heading_and_text_failed
+  - https://antigravity.google/docs/cli-features#source:~:text=telemetry
+- `antigravity.json` `custom_model_provider.source_url` (Antigravity): heading_and_text_failed
+  - https://antigravity.google/docs/#source:~:text=providers
+- `antigravity.json` `hosted_agent.source_url` (Antigravity): heading_and_text_failed
+  - https://antigravity.google/docs/cli-features#source:~:text=plugins
+- `claude-code.json` `custom_commands.source_url` (Claude Code): manual_followup
+  - https://docs.anthropic.com/en/docs/claude-code/slash-commands#source:~:text=slash%20commands
+- `claude-code.json` `non_interactive.source_url` (Claude Code): manual_followup
+  - https://docs.anthropic.com/en/docs/claude-code/cli-reference#source:~:text=--print
+- `claude-code.json` `output_format.source_url` (Claude Code): manual_followup
+  - https://docs.anthropic.com/en/docs/claude-code/cli-reference#source:~:text=output-format
+- `claude-code.json` `telemetry.source_url` (Claude Code): manual_followup
+  - https://docs.anthropic.com/en/docs/claude-code/settings#source:~:text=telemetry
+- `claude-code.json` `transcripts.source_url` (Claude Code): manual_followup
+  - https://code.claude.com/docs/en/settings#source:~:text=transcript
+- `cline.json` `released_in.source_url` (Cline): heading_failed
+  - https://github.com/cline/cline/releases?page=27#source:~:text=v1.0.4%2C%2028%20Jul%2001%3A14
+- `cline.json` `latest_major_update.source_url` (Cline): heading_failed
+  - https://github.com/cline/cline/releases#source:~:text=CLI%20v3.0.10%20Latest%2C%20May%2022%2C%202026
+- `cline.json` `rules.source_url` (Cline): manual_followup
+  - https://docs.cline.bot/customization/cline-rules#source:~:text=Primary%20rule%20format%3A%20.clinerules%2F
+- `cline.json` `approval_mode.source_url` (Cline): manual_followup
+  - https://docs.cline.bot/features/auto-approve#source:~:text=Auto%20Approve%20lets%20you%20decide%20which%20actions%20Cline%20can%20take%20without%20asking%20for%20approval
+- `cline.json` `resume.source_url` (Cline): manual_followup
+  - https://docs.cline.bot/cli/cli-reference#source:~:text=--id%20%3Csession-id%3E%20Resume%20an%20existing%20session%20by%20ID
+- `cline.json` `transcripts.source_url` (Cline): manual_followup
+  - https://docs.cline.bot/#source:~:text=session
+- `codex-cli.json` `model_selection.source_url` (OpenAI Codex CLI): heading_and_text_failed
+  - https://github.com/openai/codex#source:~:text=model
+- `codex-cli.json` `approval_mode.source_url` (OpenAI Codex CLI): heading_and_text_failed
+  - https://github.com/openai/codex#source:~:text=approval
+- `codex-cli.json` `resume.source_url` (OpenAI Codex CLI): heading_and_text_failed
+  - https://github.com/openai/codex#source:~:text=resume
+- `codex-cli.json` `continue.source_url` (OpenAI Codex CLI): heading_and_text_failed
+  - https://github.com/openai/codex#source:~:text=resume
+- `codex-cli.json` `non_interactive.source_url` (OpenAI Codex CLI): heading_failed
+  - https://github.com/openai/codex#source:~:text=exec
+- `codex-cli.json` `output_format.source_url` (OpenAI Codex CLI): heading_failed
+  - https://github.com/openai/codex#source:~:text=json
+- `codex-cli.json` `statusline.source_url` (OpenAI Codex CLI): heading_and_text_failed
+  - https://developers.openai.com/codex/#source:~:text=statusline
+- `codex-cli.json` `telemetry.source_url` (OpenAI Codex CLI): heading_and_text_failed
+  - https://github.com/openai/codex#source:~:text=telemetry
+- `codex-cli.json` `custom_model_provider.source_url` (OpenAI Codex CLI): heading_and_text_failed
+  - https://github.com/openai/codex#source:~:text=model_provider
+- `codex-cli.json` `pricing.source_url` (OpenAI Codex CLI): heading_and_text_failed
+  - https://developers.openai.com/codex/pricing#source:~:text=Codex%20is%20included%20in%20ChatGPT%20Free
+- `codex-cli.json` `transcripts.source_url` (OpenAI Codex CLI): heading_and_text_failed
+  - https://github.com/openai/codex#source:~:text=sessions
+- `cohere-north.json` `form_factor.source_url` (Cohere North): heading_and_text_failed
+  - https://cohere.com/north#source:~:text=Web
+- `cohere-north.json` `resume.source_url` (Cohere North): heading_failed
+  - https://cohere.com/blog/command-a-plus#source:~:text=Memory%20Usage%20Quality
+- `cohere-north.json` `continue.source_url` (Cohere North): heading_failed
+  - https://cohere.com/blog/command-a-plus#source:~:text=Memory%20Usage%20Quality
+- `cohere-north.json` `output_format.source_url` (Cohere North): heading_and_text_failed
+  - https://docs.cohere.com/v2/reference/about#source:~:text=API%20reference
+- `cursor.json` `form_factor.source_url` (Cursor): heading_and_text_failed
+  - https://cursor.com/downloads#source:~:text=IDE
+- `cursor.json` `rules.source_url` (Cursor): heading_failed
+  - https://docs.cursor.com/en/context/rules#source:~:text=rules
+- `cursor.json` `hooks.source_url` (Cursor): heading_failed
+  - https://docs.cursor.com/#source:~:text=hooks
+- `cursor.json` `mcp_servers.source_url` (Cursor): heading_failed
+  - https://docs.cursor.com/en/context/mcp#source:~:text=MCP
+- `cursor.json` `custom_commands.source_url` (Cursor): heading_and_text_failed
+  - https://docs.cursor.com/en/context/rules#source:~:text=commands
+- `cursor.json` `approval_mode.source_url` (Cursor): heading_and_text_failed
+  - https://docs.cursor.com/#source:~:text=approval
+- `cursor.json` `sandbox_mode.source_url` (Cursor): heading_and_text_failed
+  - https://docs.cursor.com/en/cli/reference#source:~:text=sandbox
+- `cursor.json` `resume.source_url` (Cursor): heading_and_text_failed
+  - https://docs.cursor.com/#source:~:text=resume
+- `cursor.json` `continue.source_url` (Cursor): heading_and_text_failed
+  - https://docs.cursor.com/#source:~:text=resume
+- `cursor.json` `non_interactive.source_url` (Cursor): heading_and_text_failed
+  - https://docs.cursor.com/en/cli/reference#source:~:text=print
+- `cursor.json` `output_format.source_url` (Cursor): heading_and_text_failed
+  - https://docs.cursor.com/en/cli/reference#source:~:text=output
+- `cursor.json` `statusline.source_url` (Cursor): heading_and_text_failed
+  - https://docs.cursor.com/#source:~:text=status%20line
+- `cursor.json` `telemetry.source_url` (Cursor): heading_and_text_failed
+  - https://docs.cursor.com/en/account/privacy#source:~:text=telemetry
+- `cursor.json` `transcripts.source_url` (Cursor): heading_and_text_failed
+  - https://docs.cursor.com/en/cli/overview#source:~:text=Resume%20previous%20conversations
+- `devin.json` `form_factor.source_url` (Devin): heading_and_text_failed
+  - https://docs.devin.ai/work-with-devin/ide-extensions#source:~:text=Extension
+- `devin.json` `released_in.source_url` (Devin): heading_and_text_failed
+  - https://cognition.ai/blog/devin-generally-available#source:~:text=Today%20we%27re%20making%20Devin%20generally%20available%20starting%20at%20%24500%20a%20month
+- `devin.json` `custom_commands.source_url` (Devin): heading_and_text_failed
+  - https://docs.devin.ai/work-with-devin/slash-commands#source:~:text=Custom%20Slash%20Commands%3AOrganizations%20can%20create%20custom%20slash%20commands%20tailored%20to%20their%20team%27s%20unique%20workflows
+- `devin.json` `model_selection.source_url` (Devin): heading_and_text_failed
+  - https://docs.devin.ai/admin/billing/self-serve#source:~:text=Fast%20Mode
+- `devin.json` `approval_mode.source_url` (Devin): heading_and_text_failed
+  - https://docs.devin.ai/product-guides/automations#source:~:text=ACU%20limit%3ASet%20a%20maximum%20ACU%20budget%20per%20session
+- `devin.json` `resume.source_url` (Devin): heading_failed
+  - https://docs.devin.ai/api-reference/v3/sessions/post-organizations-sessions-messages#source:~:text=Send%20a%20message%20to%20an%20active%20session.%20The%20session%20will%20be%20automatically%20resumed%20if%20suspended
+- `devin.json` `continue.source_url` (Devin): heading_and_text_failed
+  - https://docs.devin.ai/work-with-devin/devin-cli#source:~:text=When%20a%20task%20outgrows%20your%20local%20machine%20...%20use%20the%20/handoff%20command
+- `devin.json` `output_format.source_url` (Devin): heading_failed
+  - https://docs.devin.ai/api-reference/v3/sessions/post-organizations-sessions#source:~:text=Create%20a%20new%20session
+- `devin.json` `telemetry.source_url` (Devin): heading_and_text_failed
+  - https://docs.devin.ai/admin/billing/self-serve#audit-logs:~:text=audit
+- `devin.json` `custom_model_provider.source_url` (Devin): heading_failed
+  - https://docs.devin.ai/release-notes/overview#source:~:text=Cerebras%20Now%20Enterprise%2DReady
+- `devin.json` `pricing.source_url` (Devin): heading_and_text_failed
+  - https://devin.ai/pricing#source:~:text=Free%3AFree%2CPro%3A%2420%2Fmonth%2CMax%3A%24200%2Fmonth%2CTeams%3A%2480%2Fmonth
+- `devin.json` `transcripts.source_url` (Devin): heading_failed
+  - https://devin.ai/#source:~:text=agent
+- `factory-droid.json` `skills.source_url` (Factory Droid): heading_and_text_failed
+  - https://docs.factory.ai/reference/cli-reference#source:~:text=%2Fskills%20%60Manage%20and%20invoke%20skills
+- `factory-droid.json` `hooks.source_url` (Factory Droid): heading_and_text_failed
+  - https://docs.factory.ai/reference/cli-reference#source:~:text=%2Fhooks%20%60Manage%20lifecycle%20hooks
+- `factory-droid.json` `mcp_servers.source_url` (Factory Droid): heading_and_text_failed
+  - https://docs.factory.ai/reference/cli-reference#source:~:text=The%20%60%2Fmcp%60%20slash%20command%20opens%20an%20interactive%20manager
+- `factory-droid.json` `custom_commands.source_url` (Factory Droid): heading_and_text_failed
+  - https://docs.factory.ai/reference/cli-reference#source:~:text=%2Fcommands%20%60Manage%20custom%20slash%20commands
+- `factory-droid.json` `subagents.source_url` (Factory Droid): heading_and_text_failed
+  - https://docs.factory.ai/reference/cli-reference#source:~:text=%2Fdroids%20%60Manage%20custom%20droids
+- `factory-droid.json` `model_selection.source_url` (Factory Droid): heading_and_text_failed
+  - https://docs.factory.ai/reference/cli-reference#source:~:text=%60-m%2C%20--model%20%3Cid%3E%60Select%20a%20specific
+- `factory-droid.json` `approval_mode.source_url` (Factory Droid): heading_and_text_failed
+  - https://docs.factory.ai/reference/cli-reference#source:~:text=%60--auto%20%3Clevel%3E%60Set%20autonomy%20level
+- `factory-droid.json` `sandbox_mode.source_url` (Factory Droid): heading_and_text_failed
+  - https://docs.factory.ai/reference/cli-reference#source:~:text=%60--skip-permissions-unsafe%60%20removes%20all%20safety%20checks.%20Use%20only%20in%20isolated%20environments
+- `factory-droid.json` `resume.source_url` (Factory Droid): heading_and_text_failed
+  - https://docs.factory.ai/reference/cli-reference#source:~:text=%60droid%20--resume%20%5BsessionId%5D%60Resume%20a%20session
+- `factory-droid.json` `continue.source_url` (Factory Droid): heading_and_text_failed
+  - https://docs.factory.ai/reference/cli-reference#source:~:text=%60droid%20exec%20-s%20%3Cid%3E%20%22query%22%60Resume%20existing%20session
+- `factory-droid.json` `non_interactive.source_url` (Factory Droid): heading_and_text_failed
+  - https://docs.factory.ai/reference/cli-reference#source:~:text=Non-interactive%20(%60droid%20exec%60)%20-%20Single-shot%20execution
+- `factory-droid.json` `output_format.source_url` (Factory Droid): heading_and_text_failed
+  - https://docs.factory.ai/reference/cli-reference#source:~:text=%60--json%20%60Emit%20results%20as%20JSON
+- `factory-droid.json` `statusline.source_url` (Factory Droid): heading_and_text_failed
+  - https://docs.factory.ai/reference/cli-reference#source:~:text=%2Fstatusline%20%60Configure%20custom%20status%20line
+- `factory-droid.json` `pricing.source_url` (Factory Droid): heading_failed
+  - https://docs.factory.ai/reference/cli-reference#source:~:text=Plans%20%26%20Pricing
+- `gemini-cli.json` `rules.source_url` (Gemini CLI): heading_and_text_failed
+  - https://google-gemini.github.io/gemini-cli/docs/cli/configuration.html#source:~:text=GEMINI.md
+- `gemini-cli.json` `skills.source_url` (Gemini CLI): heading_failed
+  - https://google-gemini.github.io/gemini-cli/docs/tools/#source:~:text=tools
+- `gemini-cli.json` `hooks.source_url` (Gemini CLI): heading_failed
+  - https://google-gemini.github.io/gemini-cli/docs/cli/configuration.html#source:~:text=hooks
+- `gemini-cli.json` `mcp_servers.source_url` (Gemini CLI): heading_failed
+  - https://google-gemini.github.io/gemini-cli/docs/tools/mcp-server.html#source:~:text=MCP
+- `gemini-cli.json` `subagents.source_url` (Gemini CLI): heading_and_text_failed
+  - https://google-gemini.github.io/gemini-cli/#source:~:text=subagents
+- `gemini-cli.json` `model_selection.source_url` (Gemini CLI): heading_failed
+  - https://google-gemini.github.io/gemini-cli/docs/cli/configuration.html#source:~:text=model
+- `gemini-cli.json` `approval_mode.source_url` (Gemini CLI): heading_failed
+  - https://google-gemini.github.io/gemini-cli/docs/cli/configuration.html#source:~:text=approval
+- `gemini-cli.json` `sandbox_mode.source_url` (Gemini CLI): heading_failed
+  - https://google-gemini.github.io/gemini-cli/docs/cli/configuration.html#source:~:text=sandbox
+- `gemini-cli.json` `resume.source_url` (Gemini CLI): heading_failed
+  - https://google-gemini.github.io/gemini-cli/docs/cli/commands.html#source:~:text=resume
+- `gemini-cli.json` `continue.source_url` (Gemini CLI): heading_failed
+  - https://google-gemini.github.io/gemini-cli/docs/cli/commands.html#source:~:text=resume
+- `gemini-cli.json` `output_format.source_url` (Gemini CLI): heading_and_text_failed
+  - https://google-gemini.github.io/gemini-cli/docs/cli/commands.html#source:~:text=output
+- `gemini-cli.json` `statusline.source_url` (Gemini CLI): heading_failed
+  - https://google-gemini.github.io/gemini-cli/docs/cli/configuration.html#source:~:text=status%20line
+- `gemini-cli.json` `telemetry.source_url` (Gemini CLI): heading_and_text_failed
+  - https://google-gemini.github.io/gemini-cli/docs/telemetry/#source:~:text=telemetry
+- `gemini-cli.json` `custom_model_provider.source_url` (Gemini CLI): heading_and_text_failed
+  - https://google-gemini.github.io/gemini-cli/docs/cli/configuration.html#source:~:text=providers
+- `gemini-cli.json` `hosted_agent.source_url` (Gemini CLI): heading_and_text_failed
+  - https://google-gemini.github.io/gemini-cli/#source:~:text=Gemini%20CLI
+- `github-copilot-coding-agent.json` `form_factor.source_url` (GitHub Copilot): heading_and_text_failed
+  - https://docs.github.com/en/copilot/using-github-copilot/getting-code-suggestions-in-your-ide#source:~:text=IDE
+- `github-copilot-coding-agent.json` `released_in.source_url` (GitHub Copilot): heading_failed
+  - https://docs.github.com/en/copilot/concepts/billing/copilot-requests#source:~:text=Billing%20for%20premium%20requests%20began%20on%20June%2018%2C%202025
+- `github-copilot-coding-agent.json` `latest_major_update.source_url` (GitHub Copilot): heading_and_text_failed
+  - https://docs.github.com/en/copilot/how-tos/github-copilot-app#source:~:text=GitHub%20Copilot%20app%20%3A%20A%20desktop%20application%20for%20agent-driven%20development
+- `github-copilot-coding-agent.json` `rules.source_url` (GitHub Copilot): heading_and_text_failed
+  - https://docs.github.com/en/copilot/concepts/prompting/response-customization#source:~:text=Repository-wide%20custom%20instructions%3A%20copilot-instructions.md%20in%20.github
+- `github-copilot-coding-agent.json` `mcp_servers.source_url` (GitHub Copilot): heading_failed
+  - https://docs.github.com/en/copilot/how-tos/use-copilot-agents/cloud-agent/extend-cloud-agent-with-mcp#source:~:text=Connect%20Copilot%20cloud%20agent%20to%20external%20tools%20and%20data%20sources%20through%20the%20Model%20Context%20Protocol
+- `github-copilot-coding-agent.json` `approval_mode.source_url` (GitHub Copilot): heading_and_text_failed
+  - https://docs.github.com/en/copilot/how-tos/github-copilot-app/agent-sessions#source:~:text=Interactive%3A%20You%20and%20the%20agent%20work%20together.%20The%20agent%20suggests%20changes%20and%20waits%20for%20your%20input%20before%20proceeding
+- `github-copilot-coding-agent.json` `sandbox_mode.source_url` (GitHub Copilot): heading_failed
+  - https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent#source:~:text=Copilot%20cloud%20agent%20has%20access%20to%20its%20own%20ephemeral%20development%20environment%2C%20powered%20by%20GitHub%20Actions
+- `github-copilot-coding-agent.json` `resume.source_url` (GitHub Copilot): heading_failed
+  - https://docs.github.com/en/copilot/how-tos/copilot-cli/use-copilot-cli/chronicle#source:~:text=copilot%20--resume%20to%20open%20a%20session%20picker
+- `github-copilot-coding-agent.json` `continue.source_url` (GitHub Copilot): heading_failed
+  - https://docs.github.com/en/copilot/how-tos/copilot-cli/use-copilot-cli/chronicle#source:~:text=copilot%20--continue%20to%20resume%20your%20most%20recent%20session
+- `github-copilot-coding-agent.json` `output_format.source_url` (GitHub Copilot): heading_and_text_failed
+  - https://docs.github.com/en/copilot/how-tos/copilot-sdk#source:~:text=Learn%20how%20to%20customize%20your%20Copilot%20experience%20using%20Copilot%20SDK
+- `github-copilot-coding-agent.json` `statusline.source_url` (GitHub Copilot): heading_and_text_failed
+  - https://docs.github.com/en/copilot/using-github-copilot/using-github-copilot-in-the-command-line#using-github-copilot-in-the-command-line:~:text=command%20line
+- `github-copilot-coding-agent.json` `telemetry.source_url` (GitHub Copilot): heading_and_text_failed
+  - https://docs.github.com/en/copilot/concepts/agents/enterprise-management#source:~:text=Track%20activity%20with%20detailed%20audit%20logs%20and%20enforce%20governance%20by%20managing%20agents%20from%20a%20single%20control%20plane
+- `github-copilot-coding-agent.json` `custom_model_provider.source_url` (GitHub Copilot): heading_failed
+  - https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models#source:~:text=Use%20a%20model%20from%20an%20external%20provider%20of%20your%20choice%20in%20Copilot%20by%20supplying%20your%20own%20API%20key
+- `github-copilot-coding-agent.json` `hosted_agent.source_url` (GitHub Copilot): heading_failed
+  - https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent#source:~:text=Copilot%20cloud%20agent%20works%20autonomously%20in%20a%20GitHub%20Actions-powered%20environment
+- `grok-build.json` `form_factor.source_url` (Grok Build): heading_failed
+  - https://x.ai/news/grok-build-cli#source:~:text=CLI
+- `grok-build.json` `released_in.source_url` (Grok Build): heading_failed
+  - https://x.ai/news/grok-build-cli#source:~:text=May%2025%2C%202026
+- `grok-build.json` `custom_commands.source_url` (Grok Build): heading_and_text_failed
+  - https://x.ai/news/grok-build-cli#source:~:text=Type%20%60%2Ffeedback%60%20in%20the%20CLI
+- `grok-build.json` `non_interactive.source_url` (Grok Build): heading_and_text_failed
+  - https://x.ai/news/grok-build-cli#source:~:text=Headless%20mode%20(%60-p%60)%20allows%20easily%20running%20agents%20inside%20scripts%20and%20automations
+- `grok-build.json` `custom_model_provider.source_url` (Grok Build): heading_and_text_failed
+  - https://x.ai/news/grok-build-cli#source:~:text=config.toml%20for%20models%20and%20API%20keys
+- `jules.json` `form_factor.source_url` (Google Jules): heading_and_text_failed
+  - https://jules.google/#source:~:text=Web
+- `jules.json` `released_in.source_url` (Google Jules): manual_followup
+  - https://blog.google/technology/google-labs/jules-now-available/#source:~:text=now%20available%20for%20everyone
+- `jules.json` `latest_major_update.source_url` (Google Jules): heading_failed
+  - https://jules.google/#source:~:text=Gemini%203%20Pro
+- `jules.json` `rules.source_url` (Google Jules): heading_failed
+  - https://jules.google/#source:~:text=Write%20a%20detailed%20prompt%20for%20Jules
+- `jules.json` `skills.source_url` (Google Jules): heading_and_text_failed
+  - https://jules.google/#source:~:text=Bug%20Fixing%20Version%20Bump%20Tests%20Fixing
+- `jules.json` `hooks.source_url` (Google Jules): heading_failed
+  - https://jules.google/#source:~:text=Use%20the%20%22jules%22%20label%20in%20an%20issue%20to%20assign%20a%20task
+- `jules.json` `mcp_servers.source_url` (Google Jules): heading_failed
+  - https://jules.google/#source:~:text=Cloud%20VM
+- `jules.json` `custom_commands.source_url` (Google Jules): heading_failed
+  - https://jules.google/#source:~:text=Write%20a%20detailed%20prompt%20for%20Jules
+- `jules.json` `subagents.source_url` (Google Jules): heading_failed
+  - https://jules.google/#source:~:text=fully%20async%2C%20multi-agent%20development
+- `jules.json` `model_selection.source_url` (Google Jules): heading_failed
+  - https://jules.google/#source:~:text=Higher%20access%20to%20the%20latest%20models%2C%20starting%20with%20Gemini%203%20Pro
+- `jules.json` `approval_mode.source_url` (Google Jules): heading_failed
+  - https://jules.google/#source:~:text=Quickly%20browse%20and%20approve%20code%20edits
+- `jules.json` `sandbox_mode.source_url` (Google Jules): heading_failed
+  - https://jules.google/#source:~:text=clones%20it%20to%20a%20Cloud%20VM
+- `jules.json` `resume.source_url` (Google Jules): heading_failed
+  - https://jules.google/#source:~:text=Jules%20creates%20a%20PR%20of%20the%20changes
+- `jules.json` `continue.source_url` (Google Jules): heading_failed
+  - https://jules.google/#source:~:text=fully%20async
+- `jules.json` `non_interactive.source_url` (Google Jules): heading_failed
+  - https://jules.google/#source:~:text=Use%20the%20%22jules%22%20label%20in%20an%20issue%20to%20assign%20a%20task
+- `jules.json` `output_format.source_url` (Google Jules): heading_failed
+  - https://jules.google/#source:~:text=provides%20a%20diff%20of%20the%20changes
+- `jules.json` `statusline.source_url` (Google Jules): heading_failed
+  - https://jules.google/#source:~:text=fully%20async
+- `jules.json` `telemetry.source_url` (Google Jules): heading_failed
+  - https://jules.google/#source:~:text=Privacy%20Policy
+- `jules.json` `hosted_agent.source_url` (Google Jules): heading_failed
+  - https://jules.google/#source:~:text=clones%20it%20to%20a%20Cloud%20VM
+- `jules.json` `custom_model_provider.source_url` (Google Jules): heading_failed
+  - https://jules.google/#source:~:text=Powered%20by%20Gemini%202.5%20Pro
+- `jules.json` `pricing.source_url` (Google Jules): heading_failed
+  - https://jules.google/#source:~:text=15%20tasks%20per%20day
+- `junie.json` `skills.source_url` (JetBrains Junie): heading_failed
+  - https://www.jetbrains.com/help/ai-assistant/junie-agent.html#ai-assistant-20261-help:~:text=plan%20and%20execute
+- `junie.json` `hooks.source_url` (JetBrains Junie): heading_failed
+  - https://www.jetbrains.com/help/ai-assistant/junie-agent.html#ai-assistant-20261-help:~:text=autonomously%20plan%20and%20execute
+- `junie.json` `subagents.source_url` (JetBrains Junie): heading_failed
+  - https://www.jetbrains.com/help/ai-assistant/junie-agent.html#ai-assistant-20261-help:~:text=multi-step
+- `junie.json` `sandbox_mode.source_url` (JetBrains Junie): heading_and_text_failed
+  - https://www.jetbrains.com/help/ai-assistant/junie-agent.html#source:~:text=supported%20JetBrains
+- `junie.json` `resume.source_url` (JetBrains Junie): heading_and_text_failed
+  - https://www.jetbrains.com/help/ai-assistant/junie-agent.html#source:~:text=reports%20progress
+- `junie.json` `continue.source_url` (JetBrains Junie): heading_and_text_failed
+  - https://www.jetbrains.com/help/ai-assistant/junie-agent.html#source:~:text=reports%20progress
+- `junie.json` `non_interactive.source_url` (JetBrains Junie): heading_failed
+  - https://www.jetbrains.com/help/ai-assistant/junie-agent.html#ai-assistant-20261-help:~:text=Junie%20CLI
+- `junie.json` `hosted_agent.source_url` (JetBrains Junie): heading_and_text_failed
+  - https://www.jetbrains.com/help/ai-assistant/junie-agent.html#source:~:text=supported%20JetBrains%20IntelliJ%20IDEA-based%20IDEs
+- `junie.json` `transcripts.source_url` (JetBrains Junie): heading_and_text_failed
+  - https://www.jetbrains.com/help/ai-assistant/junie-agent.html#source:~:text=session
+- `kilo-code.json` `released_in.source_url` (Kilo Code): heading_and_text_failed
+  - https://github.com/Kilo-Org/kilocode#source:~:text=Created%3A%202025-03-10T15%3A34%3A26Z
+- `kilo-code.json` `latest_major_update.source_url` (Kilo Code): heading_and_text_failed
+  - https://github.com/Kilo-Org/kilocode/releases#source:~:text=v7.2.52
+- `kimi-cli.json` `released_in.source_url` (Kimi CLI): heading_and_text_failed
+  - https://github.com/MoonshotAI/kimi-cli/releases#source:~:text=0.34
+- `kimi-cli.json` `rules.source_url` (Kimi CLI): heading_failed
+  - https://www.kimi.com/code/docs/en/kimi-code-cli/core-operations.html#source:~:text=AGENTS.md
+- `kimi-cli.json` `sandbox_mode.source_url` (Kimi CLI): heading_and_text_failed
+  - https://www.kimi.com/code/docs/en/kimi-code-cli/core-operations.html#source:~:text=sandbox
+- `kiro.json` `released_in.source_url` (Kiro): heading_failed
+  - https://kiro.dev/cli/#source:~:text=Kiro%20IDE%20and%20Kiro%20CLI
+- `kiro.json` `hooks.source_url` (Kiro): heading_failed
+  - https://kiro.dev/cli/#source:~:text=Smart%20Hooks
+- `kiro.json` `model_selection.source_url` (Kiro): heading_failed
+  - https://kiro.dev/cli/#source:~:text=%2Fmodel%60%20%7CDisplays%20available%20models%20and%20allows%20you%20to%20select
+- `kiro.json` `resume.source_url` (Kiro): heading_failed
+  - https://kiro.dev/cli/#source:~:text=conversation%20persistence
+- `kiro.json` `continue.source_url` (Kiro): heading_failed
+  - https://kiro.dev/cli/#source:~:text=automatically%20by%20preserving%20project-specific%20conversation%20history
+- `kiro.json` `telemetry.source_url` (Kiro): heading_failed
+  - https://kiro.dev/cli/#source:~:text=standard%20proprietary%20license
+- `kiro.json` `pricing.source_url` (Kiro): heading_and_text_failed
+  - https://kiro.dev/cli/#source:~:text=No.%20Kiro%20CLI%20pricing%20is%20included%20in%20the%20standard%20Kiro%20pricing%20tiers
+- `kiro.json` `transcripts.source_url` (Kiro): heading_failed
+  - https://kiro.dev/cli/#source:~:text=conversation%20persistence
+- `opencode.json` `form_factor.source_url` (OpenCode): heading_failed
+  - https://opencode.ai/docs/#source:~:text=CLI
+- `opencode.json` `hooks.source_url` (OpenCode): heading_failed
+  - https://opencode.ai/docs/config/#source:~:text=hooks
+- `opencode.json` `statusline.source_url` (OpenCode): heading_and_text_failed
+  - https://opencode.ai/docs/config/#source:~:text=status%20line
+- `opencode.json` `telemetry.source_url` (OpenCode): heading_and_text_failed
+  - https://opencode.ai/docs/config/#source:~:text=telemetry
+- `qwen-code.json` `form_factor.source_url` (Qwen Code): heading_failed
+  - https://qwenlm.github.io/qwen-code-docs/getting-started/#source:~:text=CLI
+- `qwen-code.json` `released_in.source_url` (Qwen Code): heading_and_text_failed
+  - https://github.com/QwenLM/qwen-code#source:~:text=Release%20v0.16.0%20Latest
+- `qwen-code.json` `latest_major_update.source_url` (Qwen Code): heading_and_text_failed
+  - https://github.com/QwenLM/qwen-code#source:~:text=Release%20v0.16.0%20Latest
+- `qwen-code.json` `hooks.source_url` (Qwen Code): heading_failed
+  - https://qwenlm.github.io/qwen-code-docs/en/users/features/hooks/#source:~:text=Hooks%20are%20user-defined%20scripts%20or%20programs%20that%20are%20automatically%20executed%20by%20Qwen%20Code%20at%20predefined%20points
+- `qwen-code.json` `custom_commands.source_url` (Qwen Code): heading_failed
+  - https://qwenlm.github.io/qwen-code-docs/en/users/features/commands/#source:~:text=Save%20frequently%20used%20prompts%20as%20shortcut%20commands
+- `qwen-code.json` `resume.source_url` (Qwen Code): heading_failed
+  - https://qwenlm.github.io/qwen-code-docs/en/users/features/headless/#source:~:text=Resume%20a%20specific%20session%20ID%20directly
+- `qwen-code.json` `continue.source_url` (Qwen Code): heading_failed
+  - https://qwenlm.github.io/qwen-code-docs/en/users/features/headless/#source:~:text=Continue%20the%20most%20recent%20session%20for%20this%20project%20and%20run%20a%20new%20prompt
+- `qwen-code.json` `telemetry.source_url` (Qwen Code): heading_failed
+  - https://qwenlm.github.io/qwen-code-docs/en/developers/development/telemetry/#source:~:text=Built%20on%20OpenTelemetry
+- `replit-agent.json` `form_factor.source_url` (Replit Agent): heading_failed
+  - https://replit.com/ai#source:~:text=Web
+- `replit-agent.json` `released_in.source_url` (Replit Agent): heading_and_text_failed
+  - https://blog.replit.com/agent#source:~:text=Replit%20Agent
+- `replit-agent.json` `hosted_agent.source_url` (Replit Agent): heading_failed
+  - https://replit.com/blog/introducing-agent-3-our-most-autonomous-agent-yet#source:~:text=automatically%20log%20into%20applications%20built%20with%20Replit%20Auth
+- `replit-agent.json` `pricing.source_url` (Replit Agent): manual_followup
+  - https://replit.com/pricing#source:~:text=Agent
+- `roo-code.json` `skills.source_url` (Roo Code): heading_failed
+  - https://docs.roocode.com/features/skills#source:~:text=Skills%20package%20task%2Dspecific%20instructions%20that%20Roo%20loads%20on%2Ddemand
+- `roo-code.json` `hooks.source_url` (Roo Code): heading_failed
+  - https://docs.roocode.com/#source:~:text=Roo%20Code%20is%20an%20open%2Dsource%20AI%20coding%20agent%20for%20VS%20Code
