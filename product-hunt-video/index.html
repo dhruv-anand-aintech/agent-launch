@@ -1,0 +1,480 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1080" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html,
+      body {
+        width: 1080px;
+        height: 1080px;
+        overflow: hidden;
+        background: #10100e;
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      #root {
+        position: relative;
+        width: 1080px;
+        height: 1080px;
+        overflow: hidden;
+        color: #fff8eb;
+        background:
+          radial-gradient(circle at 18% 15%, rgba(255, 102, 0, 0.26), transparent 34%),
+          radial-gradient(circle at 82% 82%, rgba(72, 158, 116, 0.22), transparent 28%),
+          linear-gradient(135deg, #17140f 0%, #0d1111 58%, #120f0b 100%);
+      }
+
+      .clip {
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+      }
+
+      .grid {
+        position: absolute;
+        inset: -2px;
+        background-image:
+          linear-gradient(rgba(255, 248, 235, 0.055) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 248, 235, 0.055) 1px, transparent 1px);
+        background-size: 54px 54px;
+        opacity: 0.55;
+      }
+
+      .grain {
+        position: absolute;
+        inset: 0;
+        background-image:
+          radial-gradient(circle at 18% 20%, rgba(255, 255, 255, 0.06) 0 1px, transparent 1px),
+          radial-gradient(circle at 75% 55%, rgba(255, 255, 255, 0.045) 0 1px, transparent 1px);
+        background-size: 34px 34px, 47px 47px;
+        mix-blend-mode: screen;
+        opacity: 0.28;
+      }
+
+      .orb {
+        position: absolute;
+        border-radius: 999px;
+        filter: blur(18px);
+        opacity: 0.44;
+      }
+
+      .orb-a {
+        width: 300px;
+        height: 300px;
+        left: -80px;
+        top: 50px;
+        background: rgba(255, 102, 0, 0.32);
+      }
+
+      .orb-b {
+        width: 240px;
+        height: 240px;
+        right: 48px;
+        bottom: 88px;
+        background: rgba(72, 158, 116, 0.28);
+      }
+
+      .scene {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        padding: 84px;
+        gap: 28px;
+      }
+
+      .scene-hero {
+        justify-content: center;
+      }
+
+      .eyebrow {
+        width: fit-content;
+        border: 1px solid rgba(255, 180, 124, 0.42);
+        border-radius: 999px;
+        padding: 10px 16px;
+        color: #ffb47c;
+        font-size: 25px;
+        font-weight: 800;
+        letter-spacing: 0;
+        background: rgba(255, 102, 0, 0.1);
+      }
+
+      h1 {
+        max-width: 850px;
+        color: #fff8eb;
+        font-size: 86px;
+        line-height: 0.98;
+        font-weight: 900;
+        letter-spacing: 0;
+      }
+
+      .subhead {
+        max-width: 810px;
+        color: rgba(255, 248, 235, 0.78);
+        font-size: 32px;
+        line-height: 1.26;
+        font-weight: 500;
+      }
+
+      .terminal {
+        width: 912px;
+        border: 1px solid rgba(255, 248, 235, 0.18);
+        border-radius: 8px;
+        overflow: hidden;
+        background: rgba(15, 17, 17, 0.86);
+        box-shadow: 0 42px 110px rgba(0, 0, 0, 0.42);
+      }
+
+      .terminal-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 46px;
+        padding: 0 18px;
+        border-bottom: 1px solid rgba(255, 248, 235, 0.12);
+        color: rgba(255, 248, 235, 0.54);
+        font-size: 18px;
+        font-weight: 700;
+      }
+
+      .dots {
+        display: flex;
+        gap: 8px;
+      }
+
+      .dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 999px;
+        background: #ff6600;
+      }
+
+      .dot:nth-child(2) {
+        background: #ffb84a;
+      }
+
+      .dot:nth-child(3) {
+        background: #489e74;
+      }
+
+      .terminal-body {
+        padding: 34px 38px 40px;
+        font-family: "SFMono-Regular", "SF Mono", Menlo, Consolas, monospace;
+        font-size: 31px;
+        line-height: 1.45;
+        color: #fff8eb;
+      }
+
+      .prompt {
+        color: #ffb47c;
+      }
+
+      .cursor {
+        display: inline-block;
+        width: 18px;
+        height: 34px;
+        margin-left: 3px;
+        transform: translateY(6px);
+        background: #ff6600;
+      }
+
+      .agent-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        margin-top: 24px;
+      }
+
+      .agent-chip {
+        border: 1px solid rgba(255, 248, 235, 0.16);
+        border-radius: 8px;
+        padding: 14px 18px;
+        color: #fff8eb;
+        background: rgba(255, 248, 235, 0.06);
+        font-size: 23px;
+        font-weight: 800;
+      }
+
+      .scene-flow {
+        justify-content: center;
+        align-items: center;
+      }
+
+      .flow-wrap {
+        position: relative;
+        width: 900px;
+        height: 670px;
+      }
+
+      .center-node {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 250px;
+        height: 250px;
+        display: grid;
+        place-items: center;
+        transform: translate(-50%, -50%);
+        border-radius: 8px;
+        border: 1px solid rgba(255, 180, 124, 0.52);
+        background: rgba(255, 102, 0, 0.18);
+        box-shadow: 0 0 80px rgba(255, 102, 0, 0.28);
+        color: #fff8eb;
+        font-size: 82px;
+        font-weight: 900;
+      }
+
+      .agent-node {
+        position: absolute;
+        width: 210px;
+        min-height: 74px;
+        display: grid;
+        place-items: center;
+        border: 1px solid rgba(255, 248, 235, 0.18);
+        border-radius: 8px;
+        padding: 16px;
+        color: #fff8eb;
+        background: rgba(18, 22, 22, 0.9);
+        font-size: 25px;
+        font-weight: 850;
+        text-align: center;
+      }
+
+      .n-codex { left: 46px; top: 62px; }
+      .n-claude { right: 46px; top: 62px; }
+      .n-cursor { left: 0; bottom: 155px; }
+      .n-gemini { right: 0; bottom: 155px; }
+      .n-opencode { left: 178px; bottom: 8px; }
+      .n-antigravity { right: 178px; bottom: 8px; }
+
+      .line {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 320px;
+        height: 2px;
+        transform-origin: left center;
+        background: linear-gradient(90deg, rgba(255, 102, 0, 0.9), rgba(255, 248, 235, 0.08));
+      }
+
+      .l1 { transform: rotate(224deg); }
+      .l2 { transform: rotate(316deg); }
+      .l3 { transform: rotate(173deg); width: 300px; }
+      .l4 { transform: rotate(7deg); width: 300px; }
+      .l5 { transform: rotate(132deg); width: 300px; }
+      .l6 { transform: rotate(48deg); width: 300px; }
+
+      .caption {
+        max-width: 850px;
+        text-align: center;
+        color: rgba(255, 248, 235, 0.82);
+        font-size: 34px;
+        line-height: 1.22;
+        font-weight: 700;
+      }
+
+      .scene-options {
+        justify-content: center;
+      }
+
+      .option-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+        width: 900px;
+      }
+
+      .option {
+        min-height: 132px;
+        border: 1px solid rgba(255, 248, 235, 0.16);
+        border-radius: 8px;
+        padding: 22px;
+        background: rgba(255, 248, 235, 0.055);
+      }
+
+      .option code {
+        color: #ffb47c;
+        font-family: "SFMono-Regular", "SF Mono", Menlo, Consolas, monospace;
+        font-size: 28px;
+        font-weight: 800;
+      }
+
+      .option span {
+        display: block;
+        margin-top: 12px;
+        color: rgba(255, 248, 235, 0.72);
+        font-size: 22px;
+        line-height: 1.28;
+      }
+
+      .scene-close {
+        justify-content: center;
+      }
+
+      .close-panel {
+        width: 900px;
+        border: 1px solid rgba(255, 180, 124, 0.36);
+        border-radius: 8px;
+        padding: 44px;
+        background: rgba(15, 17, 17, 0.78);
+      }
+
+      .close-title {
+        color: #fff8eb;
+        font-size: 72px;
+        line-height: 1.02;
+        font-weight: 900;
+      }
+
+      .close-copy {
+        margin-top: 22px;
+        color: rgba(255, 248, 235, 0.76);
+        font-size: 31px;
+        line-height: 1.28;
+      }
+
+      .cta-row {
+        display: flex;
+        gap: 14px;
+        margin-top: 34px;
+      }
+
+      .cta {
+        border-radius: 8px;
+        padding: 16px 20px;
+        background: #ff6600;
+        color: #fff8eb;
+        font-size: 24px;
+        font-weight: 900;
+      }
+
+      .repo {
+        border: 1px solid rgba(255, 248, 235, 0.18);
+        background: rgba(255, 248, 235, 0.06);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="20" data-width="1080" data-height="1080">
+      <div class="grid"></div>
+      <div class="grain"></div>
+      <div class="orb orb-a"></div>
+      <div class="orb orb-b"></div>
+
+      <section id="scene-hero" class="scene scene-hero clip" data-start="0" data-duration="5.1" data-track-index="1">
+        <div class="eyebrow">Agent Launch</div>
+        <h1>One command for every local coding agent.</h1>
+        <p class="subhead">Use `agl` instead of remembering six different CLIs.</p>
+        <div class="terminal">
+          <div class="terminal-bar">
+            <div class="dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+            <span>~/Code/agent-launch</span>
+          </div>
+          <div class="terminal-body">
+            <span class="prompt">$</span> <span id="typed-command"></span><span class="cursor"></span>
+          </div>
+        </div>
+      </section>
+
+      <section id="scene-flow" class="scene scene-flow clip" data-start="4.7" data-duration="5.5" data-track-index="2">
+        <div class="flow-wrap">
+          <div class="line l1"></div>
+          <div class="line l2"></div>
+          <div class="line l3"></div>
+          <div class="line l4"></div>
+          <div class="line l5"></div>
+          <div class="line l6"></div>
+          <div class="center-node">agl</div>
+          <div class="agent-node n-codex">Codex</div>
+          <div class="agent-node n-claude">Claude Code</div>
+          <div class="agent-node n-cursor">Cursor Agent</div>
+          <div class="agent-node n-gemini">Gemini CLI</div>
+          <div class="agent-node n-opencode">OpenCode</div>
+          <div class="agent-node n-antigravity">Antigravity</div>
+        </div>
+        <div class="caption">One interface fans out to the agent you actually want to run.</div>
+      </section>
+
+      <section id="scene-options" class="scene scene-options clip" data-start="9.7" data-duration="5.4" data-track-index="3">
+        <div class="eyebrow">Normalized flags</div>
+        <h1>Same controls, whichever backend you pick.</h1>
+        <div class="option-grid">
+          <div class="option"><code>--agent</code><span>codex, claude, cursor, gemini, opencode, antigravity, random</span></div>
+          <div class="option"><code>--cwd</code><span>run from the repo or directory you choose</span></div>
+          <div class="option"><code>--mode</code><span>default, ask, plan, auto, or danger</span></div>
+          <div class="option"><code>--resume</code><span>jump back into prior sessions when the backend supports it</span></div>
+        </div>
+      </section>
+
+      <section id="scene-close" class="scene scene-close clip" data-start="14.6" data-duration="5.4" data-track-index="4">
+        <div class="close-panel">
+          <div class="eyebrow">For agent-heavy dev workflows</div>
+          <div class="close-title">Stop translating flags in your head.</div>
+          <div class="close-copy">Agent Launch is a tiny CLI wrapper for switching between coding agents without switching mental models.</div>
+          <div class="cta-row">
+            <div class="cta">npm install -g github:dhruv-anand-aintech/agent-launch</div>
+            <div class="cta repo">github.com/dhruv-anand-aintech/agent-launch</div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      const command = "agl -a codex -C ~/Code/app --mode auto 'fix the failing tests'";
+      document.querySelector("#typed-command").textContent = command;
+
+      gsap.set(["#scene-flow", "#scene-options", "#scene-close"], { opacity: 0 });
+      gsap.set(".line", { scaleX: 0, opacity: 0 });
+      gsap.set(".agent-node", { opacity: 0, y: 18, scale: 0.94 });
+
+      tl.to(".orb-a", { x: 32, y: 24, scale: 1.1, duration: 20, ease: "sine.inOut" }, 0);
+      tl.to(".orb-b", { x: -28, y: -18, scale: 0.92, duration: 20, ease: "sine.inOut" }, 0);
+      tl.to(".grid", { x: -54, y: -54, duration: 20, ease: "none" }, 0);
+
+      tl.from("#scene-hero .eyebrow", { y: 24, opacity: 0, duration: 0.45, ease: "power3.out" }, 0.25);
+      tl.from("#scene-hero h1", { y: 48, opacity: 0, duration: 0.72, ease: "power3.out" }, 0.45);
+      tl.from("#scene-hero .subhead", { y: 32, opacity: 0, duration: 0.52, ease: "power3.out" }, 0.82);
+      tl.from("#scene-hero .terminal", { y: 48, opacity: 0, scale: 0.96, duration: 0.62, ease: "power3.out" }, 1.15);
+      tl.from("#typed-command", { opacity: 0, duration: 0.1 }, 1.75);
+      tl.to("#scene-hero .cursor", { opacity: 0, repeat: 7, yoyo: true, duration: 0.22, ease: "steps(1)" }, 1.8);
+      tl.to("#scene-hero", { opacity: 0, y: -44, duration: 0.5, ease: "power2.inOut" }, 4.55);
+
+      tl.to("#scene-flow", { opacity: 1, duration: 0.3, ease: "power2.out" }, 4.85);
+      tl.from("#scene-flow .center-node", { scale: 0.72, opacity: 0, duration: 0.52, ease: "back.out(1.6)" }, 5.05);
+      tl.to(".line", { scaleX: 1, opacity: 1, duration: 0.52, stagger: 0.06, ease: "power3.out" }, 5.48);
+      tl.to(".agent-node", { opacity: 1, y: 0, scale: 1, duration: 0.45, stagger: 0.08, ease: "power3.out" }, 5.78);
+      tl.from("#scene-flow .caption", { y: 30, opacity: 0, duration: 0.5, ease: "power3.out" }, 6.55);
+      tl.to("#scene-flow .center-node", { boxShadow: "0 0 130px rgba(255, 102, 0, 0.45)", duration: 1.1, repeat: 2, yoyo: true, ease: "sine.inOut" }, 6.9);
+      tl.to("#scene-flow", { opacity: 0, y: -34, duration: 0.5, ease: "power2.inOut" }, 9.65);
+
+      tl.to("#scene-options", { opacity: 1, duration: 0.3, ease: "power2.out" }, 9.95);
+      tl.from("#scene-options .eyebrow", { y: 24, opacity: 0, duration: 0.4, ease: "power3.out" }, 10.1);
+      tl.from("#scene-options h1", { y: 44, opacity: 0, duration: 0.62, ease: "power3.out" }, 10.28);
+      tl.from("#scene-options .option", { y: 30, opacity: 0, duration: 0.45, stagger: 0.09, ease: "power3.out" }, 10.85);
+      tl.to("#scene-options .option", { borderColor: "rgba(255, 180, 124, 0.42)", duration: 0.35, stagger: 0.12, yoyo: true, repeat: 1, ease: "power2.inOut" }, 12.3);
+      tl.to("#scene-options", { opacity: 0, y: -34, duration: 0.5, ease: "power2.inOut" }, 14.62);
+
+      tl.to("#scene-close", { opacity: 1, duration: 0.32, ease: "power2.out" }, 14.92);
+      tl.from("#scene-close .close-panel", { y: 48, opacity: 0, scale: 0.97, duration: 0.62, ease: "power3.out" }, 15.05);
+      tl.from("#scene-close .eyebrow", { y: 20, opacity: 0, duration: 0.36, ease: "power3.out" }, 15.28);
+      tl.from("#scene-close .close-title", { y: 38, opacity: 0, duration: 0.58, ease: "power3.out" }, 15.48);
+      tl.from("#scene-close .close-copy", { y: 28, opacity: 0, duration: 0.48, ease: "power3.out" }, 15.84);
+      tl.from("#scene-close .cta", { y: 24, opacity: 0, duration: 0.42, stagger: 0.12, ease: "power3.out" }, 16.18);
+      tl.to("#scene-close .cta:first-child", { scale: 1.025, duration: 0.55, repeat: 2, yoyo: true, ease: "sine.inOut" }, 17.25);
+
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

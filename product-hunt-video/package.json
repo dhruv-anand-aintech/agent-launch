@@ -1,0 +1,10 @@
+{
+  "name": "agent-launch-product-hunt-video",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "npx --yes hyperframes@0.6.29 preview",
+    "check": "npx --yes hyperframes@0.6.29 lint && npx --yes hyperframes@0.6.29 inspect --samples 12",
+    "render": "npx --yes hyperframes@0.6.29 render --output renders/agent-launch-product-hunt.mp4 --quality standard"
+  }
+}
