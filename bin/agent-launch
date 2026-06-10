@@ -44,22 +44,10 @@ AGENTS: dict[str, AgentSpec] = {
 
 AGENT_CHOICES = tuple(sorted((*AGENTS.keys(), "random")))
 RANDOM_AGENTS = (
-    "antigravity",
     "claude",
     "codex",
     "cursor",
     "opencode",
-    "aider",
-    "amp",
-    "cline",
-    "droid",
-    "gemini",
-    "grok",
-    "kilo",
-    "kimi",
-    "kiro",
-    "pi",
-    "qwen",
 )
 DEFAULT_AGENT_ORDER = (
     "codex",
