@@ -21,6 +21,7 @@ It normalizes the common controls that usually differ across these tools:
 - model class (`fast` or `pro`)
 - session resume
 - latest-session continue
+- non-interactive agent failover order
 
 By default, `agent-launch` starts agents in `auto` mode unless `AGENT_LAUNCH_MODE` or `--mode` overrides it.
 
@@ -81,6 +82,7 @@ agent-launch --agent cursor --non-interactive --model-class fast -C ~/Code/my-re
 agent-launch --agent antigravity --dry-run --mode danger -C ~/Code/my-repo --prompt 'implement the task'
 agent-launch --agent gemini --dry-run --mode auto --model-class pro -C ~/Code/my-repo --prompt 'implement the task'
 agent-launch --agent random --interactive -C ~/Code/my-repo --prompt 'inspect this repo'
+agent-launch --non-interactive --agent-order codex,claude,cursor -C ~/Code/my-repo --prompt 'implement the task'
 ```
 
 Short flags:
@@ -95,6 +97,7 @@ agent-launch -a claude -i -m plan -C ~/Code/my-repo 'review this change'
 | Option | Meaning |
 | --- | --- |
 | `--agent` / `-a` | `antigravity`, `codex`, `claude`, `gemini`, `opencode`, `cursor`, or `random`; defaults to `random` |
+| `--agent-order` | Non-interactive failover order. Pass comma-separated agents, use without a value for the built-in default, or set `AGENT_LAUNCH_AGENT_ORDER` |
 | `--interactive` / `-i` | Start an interactive TUI/session |
 | `--non-interactive` / `-n` | Run headlessly and print the result |
 | `--prompt` / `-p` | Initial prompt |
@@ -122,6 +125,18 @@ agent-launch -a opencode -n -p 'work' -- --format json --title scratch
 ```
 
 Unknown wrapper arguments before `--` are also forwarded when they can be parsed safely, but `--` is the reliable form for flags with values.
+
+## Non-Interactive Failover
+
+For unattended runs, `--agent-order` retries the same prompt with each backend until one exits with status `0`. Any non-zero exit code moves to the next agent in the order, which is useful when an account is temporarily out of usage.
+
+```sh
+agent-launch -n --agent-order codex,claude,cursor -C ~/Code/my-repo -p 'run tests and fix failures'
+agent-launch -n --agent-order -C ~/Code/my-repo -p 'summarize this repo'
+AGENT_LAUNCH_AGENT_ORDER=claude,codex,cursor agent-launch -n -C ~/Code/my-repo -p 'implement the task'
+```
+
+`--agent-order` is intentionally non-interactive only. The built-in default order is `codex, claude, cursor, opencode, antigravity, gemini`.
 
 ## Feature Matrix
 

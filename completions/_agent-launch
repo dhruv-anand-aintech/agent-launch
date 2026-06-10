@@ -40,6 +40,7 @@ common_models=(
 _arguments -s -S \
   '(-h --help)'{-h,--help}'[show help]' \
   '(-a --agent)'{-a,--agent}'[agent CLI to launch]:agent:->agents' \
+  '--agent-order[non-interactive failover order]:agent order:' \
   '(-C --cwd)'{-C,--cwd}'[working directory/workspace]:directory:_files -/' \
   '(-p --prompt)'{-p,--prompt}'[initial prompt]:prompt:' \
   '(-i --interactive -n --non-interactive)'{-i,--interactive}'[start interactive mode]' \

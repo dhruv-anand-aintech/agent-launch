@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import copy
 import os
 import random
 import shlex
@@ -33,6 +34,7 @@ AGENTS: dict[str, AgentSpec] = {
 
 AGENT_CHOICES = tuple(sorted((*AGENTS.keys(), "random")))
 RANDOM_AGENTS = ("antigravity", "claude", "codex", "cursor", "opencode")
+DEFAULT_AGENT_ORDER = ("codex", "claude", "cursor", "opencode", "antigravity", "gemini")
 MODES = ("default", "ask", "plan", "auto", "danger")
 
 
@@ -103,6 +105,16 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
         choices=AGENT_CHOICES,
         default=os.environ.get("AGENT_LAUNCH_AGENT") or "random",
         help="Agent CLI to launch. Use random to select a concrete backend uniformly. Defaults to AGENT_LAUNCH_AGENT or random.",
+    )
+    parser.add_argument(
+        "--agent-order",
+        nargs="?",
+        const="default",
+        default=None,
+        help=(
+            "Non-interactive failover order as comma-separated agents. "
+            "Use without a value for the built-in default, or set AGENT_LAUNCH_AGENT_ORDER."
+        ),
     )
     parser.add_argument(
         "-C",
@@ -193,10 +205,30 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
         parser.error("--resume and --continue cannot be used together")
     args.passthrough_args = unknown_args + passthrough_args
     if args.print_mappings:
+        args.agent_order = None
         return args
-    if args.agent == "random":
+    agent_order = parse_agent_order(args.agent_order or os.environ.get("AGENT_LAUNCH_AGENT_ORDER"))
+    if agent_order and not args.non_interactive:
+        parser.error("--agent-order is only supported with --non-interactive")
+    args.agent_order = agent_order
+    if args.agent == "random" and not args.agent_order:
         args.agent = choose_random_agent(persist=not args.dry_run)
     return args
+
+
+def parse_agent_order(raw: str | None) -> tuple[str, ...] | None:
+    if raw is None:
+        return None
+    if raw == "" or raw == "default":
+        return DEFAULT_AGENT_ORDER
+    agents = tuple(part.strip() for part in raw.split(",") if part.strip())
+    if not agents:
+        return DEFAULT_AGENT_ORDER
+    unknown = [agent for agent in agents if agent not in AGENTS]
+    if unknown:
+        expected = ", ".join(AGENTS)
+        raise SystemExit(f"Unknown --agent-order agent(s): {', '.join(unknown)}; expected agents from: {expected}")
+    return agents
 
 
 def env_key(agent: str, model_class: str) -> str:
@@ -291,6 +323,12 @@ def append_passthrough(cmd: list[str], args: argparse.Namespace) -> None:
     for raw in args.extra:
         cmd.extend(shlex.split(raw))
     cmd.extend(args.passthrough_args)
+
+
+def args_for_agent(args: argparse.Namespace, agent: str) -> argparse.Namespace:
+    agent_args = copy.copy(args)
+    agent_args.agent = agent
+    return agent_args
 
 
 def build_command(args: argparse.Namespace) -> list[str]:
@@ -433,6 +471,7 @@ def print_mappings() -> None:
         "  random: uniformly selects one installed backend from antigravity, claude, codex, cursor, opencode "
         "(never the same as the previous random pick when another installed option exists)"
     )
+    print(f"  default order: {', '.join(DEFAULT_AGENT_ORDER)}")
     print("  codex pro: adds -c model_reasoning_effort=low when using gpt-5.5")
     print("\nModes:")
     for mode in MODES:
@@ -440,14 +479,45 @@ def print_mappings() -> None:
     print("\nUse --dry-run to inspect exact backend flags for a specific agent/mode.")
 
 
+def call_command(cmd: list[str]) -> int:
+    try:
+        return subprocess.call(cmd)
+    except FileNotFoundError:
+        print(f"agent-launch failed: executable not found: {cmd[0]}", file=sys.stderr, flush=True)
+        return 127
+
+
 def run_command(args: argparse.Namespace, cmd: list[str]) -> int:
     print(f"agent-launch executing: {shlex.join(cmd)}", file=sys.stderr, flush=True)
     os.chdir(args.cwd)
     if args.non_interactive:
-        return subprocess.call(cmd)
+        return call_command(cmd)
     # Replace this wrapper so Codex/Claude/Cursor inherit a real controlling TTY.
     os.execvp(cmd[0], cmd)
     return 127
+
+
+def run_agent_order(args: argparse.Namespace) -> int:
+    os.chdir(args.cwd)
+    assert args.agent_order is not None
+    last_code = 1
+    for index, agent in enumerate(args.agent_order, start=1):
+        agent_args = args_for_agent(args, agent)
+        cmd = build_command(agent_args)
+        print(
+            f"agent-launch attempt {index}/{len(args.agent_order)} [{agent}]: {shlex.join(cmd)}",
+            file=sys.stderr,
+            flush=True,
+        )
+        last_code = call_command(cmd)
+        if last_code == 0:
+            return 0
+        print(
+            f"agent-launch attempt failed [{agent}] exit={last_code}; trying next agent",
+            file=sys.stderr,
+            flush=True,
+        )
+    return last_code
 
 
 def main() -> int:
@@ -455,6 +525,12 @@ def main() -> int:
     if args.print_mappings:
         print_mappings()
         return 0
+    if args.agent_order:
+        if args.dry_run:
+            for agent in args.agent_order:
+                print(shlex.join(build_command(args_for_agent(args, agent))))
+            return 0
+        return run_agent_order(args)
     cmd = build_command(args)
     if args.dry_run:
         print(shlex.join(cmd))
