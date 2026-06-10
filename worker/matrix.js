@@ -195,6 +195,10 @@ th.agent-col .eye {
 }
 th.agent-col .eye:hover { opacity: 1; background: rgba(42, 36, 27, 0.08); }
 th.agent-col.hidden-col .eye { opacity: 1; color: var(--none); }
+td.hidden-col-cell {
+  width: var(--agent-col-hidden-w, 36px); min-width: var(--agent-col-hidden-w, 36px);
+  max-width: var(--agent-col-hidden-w, 36px); padding: 0 !important; background: #f5f0e7;
+}
 tbody td { padding: 3px 4px; font-size: 11px; text-align: center; vertical-align: middle;
   border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 td.cell-wrap { position: relative; cursor: default; }
@@ -325,6 +329,9 @@ function providerDocsCell(agent) {
   var url = agent.links && agent.links.docs;
   if (!url) return '<td class="cell-wrap value"><span class="cell-value">&mdash;</span></td>';
   return '<td class="cell-wrap value"><a class="docs-link" href="'+esc(url)+'" target="_blank" rel="noopener noreferrer">Docs</a></td>';
+}
+function hiddenBodyCell() {
+  return '<td class="hidden-col-cell" aria-hidden="true"></td>';
 }
 const { matrix, columns, groups, faviconOverrides } = JSON.parse(document.getElementById('payload').textContent);
 function formatUpdatedLabelClient(iso) {
@@ -568,18 +575,19 @@ function displayColOrder() {
   });
 }
 function bodyColOrder() {
-  return sortVisibleColumnIndices(visibleCols());
+  return displayColOrder();
 }
 function renderBody() {
   var cols = bodyColOrder();
   var rows = [];
-  rows.push('<tr class="group-head">'+rowLabelCell('About',' group-row-label','')+cols.map(function(){return '<td class="group-spacer"></td>'}).join('')+'</tr>');
+  rows.push('<tr class="group-head">'+rowLabelCell('About',' group-row-label','')+cols.map(function(i){return hidden.has(i) ? hiddenBodyCell() : '<td class="group-spacer"></td>';}).join('')+'</tr>');
   rows.push('<tr>'+rowLabelCell('API docs','',' title="Official documentation for this product"')+cols.map(function(i){
+    if (hidden.has(i)) return hiddenBodyCell();
     return providerDocsCell(matrix[i]);
   }).join('')+'</tr>');
   aboutCols.forEach(function(col){
     var label = rowLabelCell(col.label,'','');
-    rows.push('<tr>'+label+cols.map(function(i){return cell(matrix[i],col)}).join('')+'</tr>');
+    rows.push('<tr>'+label+cols.map(function(i){return hidden.has(i) ? hiddenBodyCell() : cell(matrix[i],col)}).join('')+'</tr>');
   });
   // Feature rows in saved order, grouped
   var used = {};
@@ -591,7 +599,7 @@ function renderBody() {
     var active = isSort?' filter-active':'';
     var arrow = isSort ? sortPriorityNumber(sortEntry) : '&#9654;';
     var labelHtml = '<td class="row-label'+active+'" draggable="true" data-rowkey="'+key+'" onclick="cycleSort('+"'"+key+"'"+')" title="Sort columns by this feature"><span class="row-label-tip">'+esc(col.label)+'</span><span class="arrow">'+arrow+'</span>'+esc(col.label)+'</td>';
-    var cells = cols.map(function(i){ return cell(matrix[i], col); }).join('');
+    var cells = cols.map(function(i){ return hidden.has(i) ? hiddenBodyCell() : cell(matrix[i], col); }).join('');
     rows.push('<tr>'+labelHtml+cells+'</tr>');
   });
   document.getElementById('tbody').innerHTML = rows.join('');
