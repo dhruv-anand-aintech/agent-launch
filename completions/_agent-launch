@@ -41,8 +41,10 @@ _arguments -s -S \
   '(-h --help)'{-h,--help}'[show help]' \
   '(-a --agent)'{-a,--agent}'[agent CLI to launch]:agent:->agents' \
   '--agent-order[non-interactive failover order]:agent order:' \
+  '--prefer[move preferred agents to the front of the default failover order]:preferred agents:' \
   '(-C --cwd)'{-C,--cwd}'[working directory/workspace]:directory:_files -/' \
   '(-p --prompt)'{-p,--prompt}'[initial prompt]:prompt:' \
+  '--prompt-file[read initial prompt from file]:prompt file:_files' \
   '(-i --interactive -n --non-interactive)'{-i,--interactive}'[start interactive mode]' \
   '(-n --non-interactive -i --interactive)'{-n,--non-interactive}'[run headlessly and print output]' \
   '(-m --mode)'{-m,--mode}'[normalized permission/interaction mode]:mode:->modes' \

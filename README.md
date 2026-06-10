@@ -83,6 +83,7 @@ agent-launch --agent antigravity --dry-run --mode danger -C ~/Code/my-repo --pro
 agent-launch --agent gemini --dry-run --mode auto --model-class pro -C ~/Code/my-repo --prompt 'implement the task'
 agent-launch --agent random --interactive -C ~/Code/my-repo --prompt 'inspect this repo'
 agent-launch --non-interactive --agent-order codex,claude,cursor -C ~/Code/my-repo --prompt 'implement the task'
+agent-launch --non-interactive --prefer claude,codex -C ~/Code/my-repo --prompt 'implement the task'
 ```
 
 Short flags:
@@ -98,9 +99,11 @@ agent-launch -a claude -i -m plan -C ~/Code/my-repo 'review this change'
 | --- | --- |
 | `--agent` / `-a` | `antigravity`, `codex`, `claude`, `gemini`, `opencode`, `cursor`, or `random`; defaults to `random` |
 | `--agent-order` | Non-interactive failover order. Pass comma-separated agents, use without a value for the built-in default, or set `AGENT_LAUNCH_AGENT_ORDER` |
+| `--prefer` | Non-interactive preferred agents. Moves the comma-separated agents to the front of the default failover order, or set `AGENT_LAUNCH_PREFER` |
 | `--interactive` / `-i` | Start an interactive TUI/session |
 | `--non-interactive` / `-n` | Run headlessly and print the result |
 | `--prompt` / `-p` | Initial prompt |
+| `--prompt-file` | Read the initial prompt from a UTF-8 text file |
 | positional text | Prompt text when `--prompt` is omitted |
 | `--cwd` / `-C` | Workspace/working directory |
 | `--mode` / `-m` | `default`, `ask`, `plan`, `auto`, or `danger`; defaults to `AGENT_LAUNCH_MODE` or `danger` |
@@ -133,10 +136,13 @@ For unattended runs, `--agent-order` retries the same prompt with each backend u
 ```sh
 agent-launch -n --agent-order codex,claude,cursor -C ~/Code/my-repo -p 'run tests and fix failures'
 agent-launch -n --agent-order -C ~/Code/my-repo -p 'summarize this repo'
+agent-launch -n --prefer codex --prompt-file /tmp/prompt.txt -C ~/Code/my-repo
+agent-launch -n --prefer cursor,claude -C ~/Code/my-repo -p 'run with cursor,claude before the default remainder'
 AGENT_LAUNCH_AGENT_ORDER=claude,codex,cursor agent-launch -n -C ~/Code/my-repo -p 'implement the task'
+AGENT_LAUNCH_PREFER=claude,codex agent-launch -n -C ~/Code/my-repo -p 'implement the task'
 ```
 
-`--agent-order` is intentionally non-interactive only. The built-in default order is `codex, claude, cursor, opencode, antigravity, gemini`.
+`--agent-order` and `--prefer` are intentionally non-interactive only. The built-in default order is `codex, claude, cursor, opencode, antigravity, gemini`. With that default, `--prefer cursor,claude` runs `cursor, claude, codex, opencode, antigravity, gemini`.
 
 ## Feature Matrix
 

@@ -117,6 +117,14 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
         ),
     )
     parser.add_argument(
+        "--prefer",
+        default=None,
+        help=(
+            "Non-interactive preferred agents as a comma-separated list. "
+            "Moves those agents to the front of the default failover order."
+        ),
+    )
+    parser.add_argument(
         "-C",
         "--cwd",
         default=os.getcwd(),
@@ -127,6 +135,11 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
         "--prompt",
         default=None,
         help="Initial prompt. If omitted, remaining positional text is used.",
+    )
+    parser.add_argument(
+        "--prompt-file",
+        default=None,
+        help="Read the initial prompt from a UTF-8 text file.",
     )
     parser.add_argument(
         "prompt_parts",
@@ -203,13 +216,19 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
         parser.error(f"unknown agent {args.agent!r}; expected one of: {', '.join(AGENT_CHOICES)}")
     if args.resume is not None and args.continue_session:
         parser.error("--resume and --continue cannot be used together")
+    if args.prompt_file and (args.prompt is not None or args.prompt_parts):
+        parser.error("--prompt-file cannot be combined with --prompt or positional prompt text")
     args.passthrough_args = unknown_args + passthrough_args
     if args.print_mappings:
         args.agent_order = None
         return args
-    agent_order = parse_agent_order(args.agent_order or os.environ.get("AGENT_LAUNCH_AGENT_ORDER"))
+    prefer = parse_agent_list(args.prefer or os.environ.get("AGENT_LAUNCH_PREFER"), "--prefer")
+    explicit_order = parse_agent_order(args.agent_order or os.environ.get("AGENT_LAUNCH_AGENT_ORDER"))
+    if prefer and explicit_order:
+        parser.error("--prefer cannot be combined with --agent-order")
+    agent_order = preferred_agent_order(prefer) if prefer else explicit_order
     if agent_order and not args.non_interactive:
-        parser.error("--agent-order is only supported with --non-interactive")
+        parser.error("--agent-order/--prefer are only supported with --non-interactive")
     args.agent_order = agent_order
     if args.agent == "random" and not args.agent_order:
         args.agent = choose_random_agent(persist=not args.dry_run)
@@ -221,14 +240,27 @@ def parse_agent_order(raw: str | None) -> tuple[str, ...] | None:
         return None
     if raw == "" or raw == "default":
         return DEFAULT_AGENT_ORDER
-    agents = tuple(part.strip() for part in raw.split(",") if part.strip())
+    agents = parse_agent_list(raw, "--agent-order")
     if not agents:
         return DEFAULT_AGENT_ORDER
+    return agents
+
+
+def parse_agent_list(raw: str | None, option_name: str) -> tuple[str, ...] | None:
+    if raw is None:
+        return None
+    agents = tuple(dict.fromkeys(part.strip() for part in raw.split(",") if part.strip()))
     unknown = [agent for agent in agents if agent not in AGENTS]
     if unknown:
         expected = ", ".join(AGENTS)
-        raise SystemExit(f"Unknown --agent-order agent(s): {', '.join(unknown)}; expected agents from: {expected}")
+        raise SystemExit(f"Unknown {option_name} agent(s): {', '.join(unknown)}; expected agents from: {expected}")
     return agents
+
+
+def preferred_agent_order(preferred: tuple[str, ...] | None) -> tuple[str, ...] | None:
+    if not preferred:
+        return None
+    return preferred + tuple(agent for agent in DEFAULT_AGENT_ORDER if agent not in preferred)
 
 
 def env_key(agent: str, model_class: str) -> str:
@@ -255,6 +287,9 @@ def resolve_model(agent: str, args: argparse.Namespace) -> str | None:
 
 
 def prompt_from(args: argparse.Namespace) -> str | None:
+    if args.prompt_file is not None:
+        with open(args.prompt_file, encoding="utf-8") as handle:
+            return handle.read()
     if args.prompt is not None:
         return args.prompt
     if args.prompt_parts:

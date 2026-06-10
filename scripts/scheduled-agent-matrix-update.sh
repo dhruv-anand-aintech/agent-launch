@@ -2,7 +2,7 @@
 set -euo pipefail
 
 REPO_DIR="/Users/dhruvanand/Code/agent-launch-cli"
-CODEX_BIN="/opt/homebrew/bin/codex"
+AGL_BIN="/Users/dhruvanand/.local/bin/agl"
 GH_BIN="/opt/homebrew/bin/gh"
 WORK_ROOT="$HOME/.cache/agent-launch-matrix-updater"
 WORKTREE_DIR="$WORK_ROOT/worktree"
@@ -13,6 +13,7 @@ STAMP="$(date -u +%Y%m%dT%H%M%SZ)"
 BRANCH="matrix-auto-update-$STAMP"
 LOG_FILE="$LOG_DIR/run-$STAMP.log"
 LAST_MESSAGE="$LOG_DIR/last-message-$STAMP.md"
+PROMPT_FILE="$LOG_DIR/prompt-$STAMP.txt"
 LOCK_DIR="/tmp/agent-launch-matrix-updater.lock"
 
 mkdir -p "$WORK_ROOT" "$PATH_SHIM_DIR" "$ARTIFACT_DIR" "$LOG_DIR"
@@ -29,8 +30,8 @@ exec > >(tee -a "$LOG_FILE") 2>&1
 
 echo "$(date -u +%FT%TZ) starting scheduled agent matrix update"
 
-if [[ ! -x "$CODEX_BIN" ]]; then
-  echo "codex binary missing at $CODEX_BIN"
+if [[ ! -x "$AGL_BIN" ]]; then
+  echo "agl binary missing at $AGL_BIN"
   exit 1
 fi
 
@@ -56,11 +57,7 @@ rm -rf "$WORKTREE_DIR"
 
 git -C "$REPO_DIR" worktree add -B "$BRANCH" "$WORKTREE_DIR" origin/main
 
-"$CODEX_BIN" exec \
-  --cd "$WORKTREE_DIR" \
-  --sandbox danger-full-access \
-  --output-last-message "$LAST_MESSAGE" \
-  - <<'PROMPT'
+cat > "$PROMPT_FILE" <<'PROMPT'
 You are running as an unattended scheduled maintenance job for the coding agent feature matrix.
 
 Persistent artifact directory:
@@ -103,6 +100,13 @@ Required final steps:
 - Do not deploy.
 - In your final response, include changed agents/attributes, blocked sources, validation commands, PR URL, and merge result.
 PROMPT
+
+"$AGL_BIN" \
+  --non-interactive \
+  --prefer codex \
+  --cwd "$WORKTREE_DIR" \
+  --mode danger \
+  --prompt-file "$PROMPT_FILE" | tee "$LAST_MESSAGE"
 
 echo "$(date -u +%FT%TZ) scheduled matrix update completed"
 
