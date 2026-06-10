@@ -65,7 +65,7 @@ def installed_random_agents() -> tuple[str, ...]:
     return tuple(agent for agent in RANDOM_AGENTS if is_agent_installed(agent))
 
 
-def choose_random_agent() -> str:
+def choose_random_agent(persist: bool = True) -> str:
     installed = installed_random_agents()
     if not installed:
         executables = ", ".join(f"{agent} ({AGENTS[agent].executable})" for agent in RANDOM_AGENTS)
@@ -77,7 +77,8 @@ def choose_random_agent() -> str:
     if not pool:
         pool = list(installed)
     choice = random.choice(pool)
-    write_last_random_agent(choice)
+    if persist:
+        write_last_random_agent(choice)
     return choice
 
 
@@ -194,7 +195,7 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     if args.print_mappings:
         return args
     if args.agent == "random":
-        args.agent = choose_random_agent()
+        args.agent = choose_random_agent(persist=not args.dry_run)
     return args
 
 

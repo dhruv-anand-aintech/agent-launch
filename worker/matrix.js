@@ -32,7 +32,7 @@ function faviconSrc(agent) {
 }
 
 function metaTags() {
-  const desc = "Compare 16 coding agents, AI coding CLIs, and IDEs across 18 features. Each cell sourced from official docs.";
+  const desc = `Compare ${matrix.length} coding agents, AI coding CLIs, and IDEs across 18 features. Each cell sourced from official docs.`;
   return `
     <meta name="description" content="${htmlEscape(desc)}">
     <meta name="robots" content="index, follow">
