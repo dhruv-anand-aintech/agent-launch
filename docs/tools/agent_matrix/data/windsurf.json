@@ -13,7 +13,7 @@
       "CLI"
     ],
     "source_url": "https://windsurf.com/download#source:~:text=IDE",
-    "comment": "Standalone VS Code fork IDE + JetBrains plugin + CLI. Per-form-factor links: IDE: https://windsurf.com/download; Extension: https://docs.windsurf.com/windsurf/cascade/cascade-in-ides; CLI: https://docs.windsurf.com/windsurf/cascade/command-line.",
+    "comment": "Standalone VS Code fork IDE + JetBrains plugin + CLI launcher. The `windsurf` command is installed from the IDE/desktop command palette rather than a separate standalone agent package. Per-form-factor links: IDE: https://windsurf.com/download; Extension: https://docs.windsurf.com/windsurf/cascade/cascade-in-ides; CLI: https://docs.windsurf.com/windsurf/cascade/command-line.",
     "links": {
       "IDE": "https://windsurf.com/download",
       "Extension": "https://docs.windsurf.com/windsurf/cascade/cascade-in-ides",
@@ -93,7 +93,7 @@
   "non_interactive": {
     "support": "partial",
     "source_url": "https://docs.windsurf.com/#set-up:~:text=Windsurf",
-    "comment": "windsurf CLI available in PATH. Devin CLI agent runs in terminal. No documented --non-interactive flag for the IDE."
+    "comment": "`windsurf` command-line launcher can be installed into PATH from the IDE/desktop app. Devin CLI agent runs in terminal. No documented --non-interactive flag for the Windsurf IDE launcher."
   },
   "output_format": {
     "support": "partial",

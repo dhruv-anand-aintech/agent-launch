@@ -13,11 +13,11 @@
       "Web",
       "SDK"
     ],
-    "source_url": "https://docs.devin.ai/work-with-devin/ide-extensions#source:~:text=Extension",
-    "comment": "Web app + VS Code extension + CLI + Slack/Teams + REST API and official devin-sdk (Python). Per-form-factor links: Extension: https://docs.devin.ai/work-with-devin/ide-extensions; CLI: https://docs.devin.ai/work-with-devin/devin-cli; Web: https://app.devin.ai/; SDK: https://docs.devin.ai/api-reference/overview.",
+    "source_url": "https://docs.devin.ai/cli#quickstart:~:text=Install%20Devin%20CLI",
+    "comment": "Web app + VS Code extension + CLI + Slack/Teams + REST API and official devin-sdk (Python). CLI installs the `devin` binary via Devin Desktop or the standalone CLI installer/Homebrew cask. Per-form-factor links: Extension: https://docs.devin.ai/work-with-devin/ide-extensions; CLI: https://docs.devin.ai/cli; Web: https://app.devin.ai/; SDK: https://docs.devin.ai/api-reference/overview.",
     "links": {
       "Extension": "https://docs.devin.ai/work-with-devin/ide-extensions",
-      "CLI": "https://docs.devin.ai/work-with-devin/devin-cli",
+      "CLI": "https://docs.devin.ai/cli",
       "Web": "https://app.devin.ai/",
       "SDK": "https://docs.devin.ai/api-reference/overview"
     }

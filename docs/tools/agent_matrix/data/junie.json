@@ -1,7 +1,7 @@
 {
   "name": "JetBrains Junie",
   "links": {
-    "docs": "https://www.jetbrains.com/help/ai-assistant/junie-agent.html",
+    "docs": "https://junie.jetbrains.com/docs/junie-cli.html",
     "github": "",
     "website": "https://junie.jetbrains.com/",
     "slug": "junie"
@@ -11,11 +11,11 @@
       "IDE",
       "CLI"
     ],
-    "source_url": "https://www.jetbrains.com/help/ai-assistant/junie-agent.html#junie-guidelines:~:text=IDE",
-    "comment": "JetBrains IDE agent with Junie CLI documentation. Per-form-factor links: IDE: https://www.jetbrains.com/help/ai-assistant/junie-agent.html; CLI: https://www.jetbrains.com/help/ai-assistant/junie-cli.html.",
+    "source_url": "https://junie.jetbrains.com/docs/junie-cli.html#step-1-install-junie-cli:~:text=Install%20Junie%20CLI",
+    "comment": "JetBrains IDE agent with Junie CLI documentation. CLI install paths include JetBrains' install script, Homebrew tap/formula, and npm package @jetbrains/junie-cli. Per-form-factor links: IDE: https://www.jetbrains.com/help/ai-assistant/junie-agent.html; CLI: https://junie.jetbrains.com/docs/junie-cli.html.",
     "links": {
       "IDE": "https://www.jetbrains.com/help/ai-assistant/junie-agent.html",
-      "CLI": "https://www.jetbrains.com/help/ai-assistant/junie-cli.html"
+      "CLI": "https://junie.jetbrains.com/docs/junie-cli.html"
     }
   },
   "released_in": {
@@ -90,8 +90,8 @@
   },
   "non_interactive": {
     "support": "unknown",
-    "source_url": "https://www.jetbrains.com/help/ai-assistant/junie-agent.html#ai-assistant-20261-help:~:text=Junie%20CLI",
-    "comment": "CLI exists, but no verified headless automation flag in docs reviewed."
+    "source_url": "https://junie.jetbrains.com/docs/junie-cli.html#step-1-install-junie-cli:~:text=Install%20Junie%20CLI",
+    "comment": "CLI exists and is documented for terminal use, but no verified headless automation flag was found in docs reviewed."
   },
   "output_format": {
     "support": "unknown",
@@ -123,7 +123,7 @@
     "source_url": "https://blog.jetbrains.com/blog/2025/04/16/jetbrains-ides-go-ai/#all-jetbrains-ai-tools-under-a-single-subscription-with-a-free-tier:~:text=AI%20Free%20tier",
     "comment": "Junie is included in JetBrains AI subscription/free-tier credit model."
   },
-  "notes": "Strong fit for JetBrains users, especially debugger-aware workflows. Public docs expose less extensibility detail than CLI-first agents.",
+  "notes": "Strong fit for JetBrains users, especially debugger-aware workflows. Public docs expose less extensibility detail than CLI-first agents. macOS installs may involve app-bundle/shim setup rather than a simple standalone binary.",
   "transcripts": {
     "support": "unknown",
     "source_url": "https://www.jetbrains.com/help/ai-assistant/junie-agent.html#source:~:text=session",

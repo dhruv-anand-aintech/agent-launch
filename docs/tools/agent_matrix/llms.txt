@@ -1,6 +1,6 @@
 # Coding Agent Feature Matrix
 > Compare 24 coding agents, CLIs, and IDEs across features.
-> https://compare.ainorthstar.tech | Updated 2026-06-09
+> https://compare.ainorthstar.tech | Updated 2026-06-11
 
 Agent             Rel    FF     Rul   Skl   Hks   MCP   Cmd   Gol   Sub   Trn   Mod   App   San   Res   Con   Hdl   Fmt   Sta   Tel   Hst  BYOM
 -----------------------------------------------------------------------------------------------------------------------------------------------
@@ -367,7 +367,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Sandbox Mode: partial — Cloud agent runs in ephemeral GitHub Actions environment (natural sandbox). CLI has tool permission controls. No explicit sandbox toggle.
 - Resume: full — CLI: copilot --resume opens session picker, copilot --resume SESSION-ID jumps to specific session. /resume during interactive session.
 - Continue: full — CLI: copilot --continue resumes most recent session directly. IDE agent sessions persistent. Desktop app sessions in sidebar.
-- Non Interactive: full — CLI programmatic/scripted usage in GitHub Actions. --non-interactive mode. Copilot SDK for API-based integration.
+- Non Interactive: full — CLI programmatic/scripted usage in GitHub Actions. --non-interactive mode. The GitHub CLI extension entrypoint is `gh copilot -- ...`; standalone payload availability can depend on the extension downloader/auth state. Copilot SDK for API-based integration.
 - Output Format: partial — Copilot SDK provides programmatic access with structured responses. No documented --json flag for general CLI output.
 - Statusline: none — No statusline feature documented anywhere in GitHub Copilot's documentation.
 - Telemetry: partial — Enterprise audit logging, agent session monitoring. Data retention: prompts retained 28 days. Users can opt out of training data. No granular telemetry UI.
@@ -433,7 +433,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Notes: Best categorized as an async hosted coding worker rather than a terminal pair-programmer. Strong on GitHub PR flow, approvals, Cloud VM isolation, and concurrency.
 
 ### JetBrains Junie
-- Docs: https://www.jetbrains.com/help/ai-assistant/junie-agent.html
+- Docs: https://junie.jetbrains.com/docs/junie-cli.html
 - Website: https://junie.jetbrains.com/
 - Form factor: CLI, IDE
 - Released: Jan '25
@@ -451,14 +451,14 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Sandbox Mode: partial — Runs inside JetBrains IDE context; no explicit standalone sandbox controls found.
 - Resume: partial — IDE tasks have progress/history, but explicit session resume docs are limited.
 - Continue: partial — Interactive IDE task continuation is available; no CLI continue command confirmed.
-- Non Interactive: unknown — CLI exists, but no verified headless automation flag in docs reviewed.
+- Non Interactive: unknown — CLI exists and is documented for terminal use, but no verified headless automation flag was found in docs reviewed.
 - Output Format: unknown — No machine-readable output mode found.
 - Statusline: none — IDE UI, no custom CLI statusline found.
 - Telemetry: unknown — No Junie-specific telemetry toggle found in docs reviewed.
 - Hosted Agent: none — Primarily an IDE agent rather than a managed cloud worker.
 - Custom Model Provider: partial — Enterprise service supports selected provider/model options, not arbitrary endpoints.
 - Pricing: Bundled with JetBrains AI tiers/free credits
-- Notes: Strong fit for JetBrains users, especially debugger-aware workflows. Public docs expose less extensibility detail than CLI-first agents.
+- Notes: Strong fit for JetBrains users, especially debugger-aware workflows. Public docs expose less extensibility detail than CLI-first agents. macOS installs may involve app-bundle/shim setup rather than a simple standalone binary.
 
 ### Kilo Code
 - Docs: https://kilo.ai/docs/getting-started
@@ -708,7 +708,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Sandbox Mode: partial — Devin cloud agent runs on isolated VM. Git worktrees isolate parallel sessions. Dev Containers support. No standalone sandbox toggle for the IDE.
 - Resume: full — Cascade has 'continue' button. Auto-Continue setting. Named checkpoints/snapshots for reversion. Sessions persist and switch via dropdown.
 - Continue: full — Auto-Continue setting automatically continues when hitting tool-call limits. Queued messages for follow-ups while Cascade is working. Real-time editor awareness.
-- Non Interactive: partial — windsurf CLI available in PATH. Devin CLI agent runs in terminal. No documented --non-interactive flag for the IDE.
+- Non Interactive: partial — `windsurf` command-line launcher can be installed into PATH from the IDE/desktop app. Devin CLI agent runs in terminal. No documented --non-interactive flag for the Windsurf IDE launcher.
 - Output Format: partial — Enterprise analytics API available. post_cascade_response_with_transcript hook writes full conversation to JSONL files at ~/.windsurf/transcripts/{trajectory_id}.jsonl.
 - Statusline: partial — No customizable status line like Cursor. Status bar has model indicator and plan/usage info. Agent Command Center is a Kanban dashboard of all agents.
 - Telemetry: partial — Telemetry settings mentioned in troubleshooting docs. Enterprise analytics API. No documented granular telemetry opt-out beyond standard VS Code settings.

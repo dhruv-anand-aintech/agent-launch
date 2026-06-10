@@ -1462,11 +1462,11 @@
         "Web",
         "SDK"
       ],
-      "source_url": "https://docs.devin.ai/work-with-devin/ide-extensions#source:~:text=Extension",
-      "comment": "Web app + VS Code extension + CLI + Slack/Teams + REST API and official devin-sdk (Python). Per-form-factor links: Extension: https://docs.devin.ai/work-with-devin/ide-extensions; CLI: https://docs.devin.ai/work-with-devin/devin-cli; Web: https://app.devin.ai/; SDK: https://docs.devin.ai/api-reference/overview.",
+      "source_url": "https://docs.devin.ai/cli#quickstart:~:text=Install%20Devin%20CLI",
+      "comment": "Web app + VS Code extension + CLI + Slack/Teams + REST API and official devin-sdk (Python). CLI installs the `devin` binary via Devin Desktop or the standalone CLI installer/Homebrew cask. Per-form-factor links: Extension: https://docs.devin.ai/work-with-devin/ide-extensions; CLI: https://docs.devin.ai/cli; Web: https://app.devin.ai/; SDK: https://docs.devin.ai/api-reference/overview.",
       "links": {
         "Extension": "https://docs.devin.ai/work-with-devin/ide-extensions",
-        "CLI": "https://docs.devin.ai/work-with-devin/devin-cli",
+        "CLI": "https://docs.devin.ai/cli",
         "Web": "https://app.devin.ai/",
         "SDK": "https://docs.devin.ai/api-reference/overview"
       }
@@ -2006,7 +2006,7 @@
         "Web"
       ],
       "source_url": "https://docs.github.com/en/copilot/using-github-copilot/getting-code-suggestions-in-your-ide#source:~:text=IDE",
-      "comment": "IDE agent mode (VS Code, JetBrains, Xcode, Neovim, Eclipse) + CLI + hosted cloud agent + @github/copilot-sdk (public preview). Per-form-factor links: IDE: https://docs.github.com/en/copilot/using-github-copilot/getting-code-suggestions-in-your-ide; Extension: https://marketplace.visualstudio.com/items?itemName=GitHub.copilot; CLI: https://docs.github.com/en/copilot/using-github-copilot/using-github-copilot-in-the-command-line; SDK: https://docs.github.com/en/copilot/how-tos/copilot-sdk; Web: https://github.com/features/copilot.",
+      "comment": "IDE agent mode (VS Code, JetBrains, Xcode, Neovim, Eclipse) + CLI + hosted cloud agent + @github/copilot-sdk (public preview). On GitHub CLI installs, Copilot is launched as `gh copilot`, which downloads/runs the Copilot CLI payload. Per-form-factor links: IDE: https://docs.github.com/en/copilot/using-github-copilot/getting-code-suggestions-in-your-ide; Extension: https://marketplace.visualstudio.com/items?itemName=GitHub.copilot; CLI: https://docs.github.com/en/copilot/using-github-copilot/using-github-copilot-in-the-command-line; SDK: https://docs.github.com/en/copilot/how-tos/copilot-sdk; Web: https://github.com/features/copilot.",
       "links": {
         "IDE": "https://docs.github.com/en/copilot/using-github-copilot/getting-code-suggestions-in-your-ide",
         "Extension": "https://marketplace.visualstudio.com/items?itemName=GitHub.copilot",
@@ -2090,7 +2090,7 @@
     "non_interactive": {
       "support": "full",
       "source_url": "https://docs.github.com/en/copilot/how-tos/copilot-cli/automate-copilot-cli/run-cli-programmatically#further-reading:~:text=Use%20Copilot%20CLI%20in%20the%20terminal%2C%20in%20scripts%2C%20or%20in%20Actions%20workflows",
-      "comment": "CLI programmatic/scripted usage in GitHub Actions. --non-interactive mode. Copilot SDK for API-based integration."
+      "comment": "CLI programmatic/scripted usage in GitHub Actions. --non-interactive mode. The GitHub CLI extension entrypoint is `gh copilot -- ...`; standalone payload availability can depend on the extension downloader/auth state. Copilot SDK for API-based integration."
     },
     "output_format": {
       "support": "partial",
@@ -2531,7 +2531,7 @@
   {
     "name": "JetBrains Junie",
     "links": {
-      "docs": "https://www.jetbrains.com/help/ai-assistant/junie-agent.html",
+      "docs": "https://junie.jetbrains.com/docs/junie-cli.html",
       "github": "",
       "website": "https://junie.jetbrains.com/",
       "slug": "junie"
@@ -2541,11 +2541,11 @@
         "IDE",
         "CLI"
       ],
-      "source_url": "https://www.jetbrains.com/help/ai-assistant/junie-agent.html#junie-guidelines:~:text=IDE",
-      "comment": "JetBrains IDE agent with Junie CLI documentation. Per-form-factor links: IDE: https://www.jetbrains.com/help/ai-assistant/junie-agent.html; CLI: https://www.jetbrains.com/help/ai-assistant/junie-cli.html.",
+      "source_url": "https://junie.jetbrains.com/docs/junie-cli.html#step-1-install-junie-cli:~:text=Install%20Junie%20CLI",
+      "comment": "JetBrains IDE agent with Junie CLI documentation. CLI install paths include JetBrains' install script, Homebrew tap/formula, and npm package @jetbrains/junie-cli. Per-form-factor links: IDE: https://www.jetbrains.com/help/ai-assistant/junie-agent.html; CLI: https://junie.jetbrains.com/docs/junie-cli.html.",
       "links": {
         "IDE": "https://www.jetbrains.com/help/ai-assistant/junie-agent.html",
-        "CLI": "https://www.jetbrains.com/help/ai-assistant/junie-cli.html"
+        "CLI": "https://junie.jetbrains.com/docs/junie-cli.html"
       }
     },
     "released_in": {
@@ -2622,8 +2622,8 @@
     },
     "non_interactive": {
       "support": "unknown",
-      "source_url": "https://www.jetbrains.com/help/ai-assistant/junie-agent.html#ai-assistant-20261-help:~:text=Junie%20CLI",
-      "comment": "CLI exists, but no verified headless automation flag in docs reviewed."
+      "source_url": "https://junie.jetbrains.com/docs/junie-cli.html#step-1-install-junie-cli:~:text=Install%20Junie%20CLI",
+      "comment": "CLI exists and is documented for terminal use, but no verified headless automation flag was found in docs reviewed."
     },
     "output_format": {
       "support": "unknown",
@@ -2655,7 +2655,7 @@
       "source_url": "https://blog.jetbrains.com/blog/2025/04/16/jetbrains-ides-go-ai/#all-jetbrains-ai-tools-under-a-single-subscription-with-a-free-tier:~:text=AI%20Free%20tier",
       "comment": "Junie is included in JetBrains AI subscription/free-tier credit model."
     },
-    "notes": "Strong fit for JetBrains users, especially debugger-aware workflows. Public docs expose less extensibility detail than CLI-first agents.",
+    "notes": "Strong fit for JetBrains users, especially debugger-aware workflows. Public docs expose less extensibility detail than CLI-first agents. macOS installs may involve app-bundle/shim setup rather than a simple standalone binary.",
     "transcripts": {
       "support": "unknown",
       "source_url": "https://www.jetbrains.com/help/ai-assistant/junie-agent.html#source:~:text=session",
@@ -4160,7 +4160,7 @@
         "CLI"
       ],
       "source_url": "https://windsurf.com/download#source:~:text=IDE",
-      "comment": "Standalone VS Code fork IDE + JetBrains plugin + CLI. Per-form-factor links: IDE: https://windsurf.com/download; Extension: https://docs.windsurf.com/windsurf/cascade/cascade-in-ides; CLI: https://docs.windsurf.com/windsurf/cascade/command-line.",
+      "comment": "Standalone VS Code fork IDE + JetBrains plugin + CLI launcher. The `windsurf` command is installed from the IDE/desktop command palette rather than a separate standalone agent package. Per-form-factor links: IDE: https://windsurf.com/download; Extension: https://docs.windsurf.com/windsurf/cascade/cascade-in-ides; CLI: https://docs.windsurf.com/windsurf/cascade/command-line.",
       "links": {
         "IDE": "https://windsurf.com/download",
         "Extension": "https://docs.windsurf.com/windsurf/cascade/cascade-in-ides",
@@ -4242,7 +4242,7 @@
     "non_interactive": {
       "support": "partial",
       "source_url": "https://docs.windsurf.com/#set-up:~:text=Windsurf",
-      "comment": "windsurf CLI available in PATH. Devin CLI agent runs in terminal. No documented --non-interactive flag for the IDE."
+      "comment": "`windsurf` command-line launcher can be installed into PATH from the IDE/desktop app. Devin CLI agent runs in terminal. No documented --non-interactive flag for the Windsurf IDE launcher."
     },
     "output_format": {
       "support": "partial",

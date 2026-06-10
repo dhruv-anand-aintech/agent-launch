@@ -15,7 +15,7 @@
       "Web"
     ],
     "source_url": "https://docs.github.com/en/copilot/using-github-copilot/getting-code-suggestions-in-your-ide#source:~:text=IDE",
-    "comment": "IDE agent mode (VS Code, JetBrains, Xcode, Neovim, Eclipse) + CLI + hosted cloud agent + @github/copilot-sdk (public preview). Per-form-factor links: IDE: https://docs.github.com/en/copilot/using-github-copilot/getting-code-suggestions-in-your-ide; Extension: https://marketplace.visualstudio.com/items?itemName=GitHub.copilot; CLI: https://docs.github.com/en/copilot/using-github-copilot/using-github-copilot-in-the-command-line; SDK: https://docs.github.com/en/copilot/how-tos/copilot-sdk; Web: https://github.com/features/copilot.",
+    "comment": "IDE agent mode (VS Code, JetBrains, Xcode, Neovim, Eclipse) + CLI + hosted cloud agent + @github/copilot-sdk (public preview). On GitHub CLI installs, Copilot is launched as `gh copilot`, which downloads/runs the Copilot CLI payload. Per-form-factor links: IDE: https://docs.github.com/en/copilot/using-github-copilot/getting-code-suggestions-in-your-ide; Extension: https://marketplace.visualstudio.com/items?itemName=GitHub.copilot; CLI: https://docs.github.com/en/copilot/using-github-copilot/using-github-copilot-in-the-command-line; SDK: https://docs.github.com/en/copilot/how-tos/copilot-sdk; Web: https://github.com/features/copilot.",
     "links": {
       "IDE": "https://docs.github.com/en/copilot/using-github-copilot/getting-code-suggestions-in-your-ide",
       "Extension": "https://marketplace.visualstudio.com/items?itemName=GitHub.copilot",
@@ -97,7 +97,7 @@
   "non_interactive": {
     "support": "full",
     "source_url": "https://docs.github.com/en/copilot/how-tos/copilot-cli/automate-copilot-cli/run-cli-programmatically#further-reading:~:text=Use%20Copilot%20CLI%20in%20the%20terminal%2C%20in%20scripts%2C%20or%20in%20Actions%20workflows",
-    "comment": "CLI programmatic/scripted usage in GitHub Actions. --non-interactive mode. Copilot SDK for API-based integration."
+    "comment": "CLI programmatic/scripted usage in GitHub Actions. --non-interactive mode. The GitHub CLI extension entrypoint is `gh copilot -- ...`; standalone payload availability can depend on the extension downloader/auth state. Copilot SDK for API-based integration."
   },
   "output_format": {
     "support": "partial",
