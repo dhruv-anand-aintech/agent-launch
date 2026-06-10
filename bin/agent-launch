@@ -23,18 +23,62 @@ class AgentSpec:
 
 
 AGENTS: dict[str, AgentSpec] = {
+    "aider": AgentSpec("aider", "", "", "pro"),
+    "amp": AgentSpec("amp", "", "", "pro"),
     "antigravity": AgentSpec("agy", "", "", "pro"),
     "codex": AgentSpec("codex", "gpt-5.4-mini", "gpt-5.5", "pro"),
     "claude": AgentSpec("claude", "sonnet", "sonnet", "pro"),
+    "cline": AgentSpec("cline", "", "", "pro"),
+    "droid": AgentSpec("droid", "claude-opus-4-8-fast", "claude-opus-4-8", "pro"),
     "gemini": AgentSpec("gemini", "gemini-2.5-flash", "gemini-2.5-pro", "pro"),
+    "grok": AgentSpec("grok", "", "", "pro"),
+    "kilo": AgentSpec("kilo", "", "", "pro"),
+    "kimi": AgentSpec("kimi", "", "", "pro"),
+    "kiro": AgentSpec("kiro-cli", "", "", "pro"),
     "opencode": AgentSpec("opencode", "opencode-go/deepseek-v4-flash", "opencode-go/kimi-k2.6", "pro"),
+    "pi": AgentSpec("pi", "", "", "pro"),
+    "qwen": AgentSpec("qwen", "", "", "pro"),
     "cursor": AgentSpec("agent", "composer-2.5-fast", "composer-2.5-fast", "fast"),
 }
 
 
 AGENT_CHOICES = tuple(sorted((*AGENTS.keys(), "random")))
-RANDOM_AGENTS = ("antigravity", "claude", "codex", "cursor", "opencode")
-DEFAULT_AGENT_ORDER = ("codex", "claude", "cursor", "opencode", "antigravity", "gemini")
+RANDOM_AGENTS = (
+    "antigravity",
+    "claude",
+    "codex",
+    "cursor",
+    "opencode",
+    "aider",
+    "amp",
+    "cline",
+    "droid",
+    "gemini",
+    "grok",
+    "kilo",
+    "kimi",
+    "kiro",
+    "pi",
+    "qwen",
+)
+DEFAULT_AGENT_ORDER = (
+    "codex",
+    "claude",
+    "cursor",
+    "opencode",
+    "antigravity",
+    "gemini",
+    "aider",
+    "amp",
+    "cline",
+    "droid",
+    "grok",
+    "kilo",
+    "kimi",
+    "kiro",
+    "pi",
+    "qwen",
+)
 MODES = ("default", "ask", "plan", "auto", "danger")
 
 
@@ -85,6 +129,22 @@ def choose_random_agent(persist: bool = True) -> str:
 
 
 MODEL_CLASSES = ("fast", "pro")
+MODEL_FLAG_AGENTS = {
+    "aider",
+    "cline",
+    "codex",
+    "claude",
+    "droid",
+    "gemini",
+    "grok",
+    "kilo",
+    "kimi",
+    "kiro",
+    "opencode",
+    "pi",
+    "qwen",
+    "cursor",
+}
 
 
 def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
@@ -97,7 +157,7 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
 
     parser = argparse.ArgumentParser(
         prog="agent-launch",
-        description="Launch Antigravity CLI, Codex, Claude Code, Gemini CLI, OpenCode, or Cursor Agent with a shared interface.",
+        description="Launch local coding-agent CLIs with a shared interface.",
     )
     parser.add_argument(
         "-a",
@@ -199,6 +259,12 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
         "--dry-run",
         action="store_true",
         help="Print the translated command without executing it.",
+    )
+    parser.add_argument(
+        "--attempt-timeout",
+        type=float,
+        default=float(os.environ.get("AGENT_LAUNCH_ATTEMPT_TIMEOUT", "0") or "0"),
+        help="Timeout in seconds for each non-interactive backend attempt. Exit code 124 on timeout.",
     )
     parser.add_argument(
         "--extra",
@@ -314,11 +380,35 @@ def mode_flags(agent: str, mode: str, non_interactive: bool) -> list[str]:
             "auto": ["--permission-mode", "auto"],
             "danger": ["--dangerously-skip-permissions"],
         },
+        "aider": {
+            "ask": ["--no-auto-commits"],
+            "plan": ["--architect"],
+            "auto": ["--yes-always"],
+            "danger": ["--yes-always"],
+        },
+        "amp": {
+            "ask": [],
+            "plan": [],
+            "auto": [],
+            "danger": [],
+        },
         "antigravity": {
             "ask": [],
             "plan": ["--sandbox"],
             "auto": [],
             "danger": ["--dangerously-skip-permissions"],
+        },
+        "cline": {
+            "ask": ["--auto-approve", "false"],
+            "plan": ["--plan"],
+            "auto": ["--auto-approve", "true"],
+            "danger": ["--auto-approve", "true"],
+        },
+        "droid": {
+            "ask": [],
+            "plan": [],
+            "auto": ["--auto", "medium"],
+            "danger": ["--skip-permissions-unsafe"],
         },
         "gemini": {
             "ask": ["--approval-mode", "default"],
@@ -326,11 +416,47 @@ def mode_flags(agent: str, mode: str, non_interactive: bool) -> list[str]:
             "auto": ["--approval-mode", "auto_edit"],
             "danger": ["--yolo"],
         },
+        "grok": {
+            "ask": ["--permission-mode", "default"],
+            "plan": ["--permission-mode", "plan"],
+            "auto": ["--permission-mode", "auto"],
+            "danger": ["--permission-mode", "bypassPermissions"],
+        },
+        "kilo": {
+            "ask": ["--agent", "ask"],
+            "plan": ["--agent", "plan"],
+            "auto": ["--auto"],
+            "danger": ["--dangerously-skip-permissions"],
+        },
+        "kimi": {
+            "ask": [],
+            "plan": ["--plan"],
+            "auto": ["--auto"],
+            "danger": ["--yolo"],
+        },
+        "kiro": {
+            "ask": [],
+            "plan": [],
+            "auto": [],
+            "danger": ["--trust-all-tools"],
+        },
         "opencode": {
             "ask": ["--agent", "ask"],
             "plan": ["--agent", "plan"],
             "auto": [],
             "danger": ["--dangerously-skip-permissions"] if non_interactive else [],
+        },
+        "pi": {
+            "ask": [],
+            "plan": [],
+            "auto": [],
+            "danger": [],
+        },
+        "qwen": {
+            "ask": ["--approval-mode", "default"],
+            "plan": ["--approval-mode", "plan"],
+            "auto": ["--approval-mode", "auto_edit"],
+            "danger": ["--yolo"],
         },
         "cursor": {
             "ask": ["--mode", "ask"],
@@ -345,7 +471,7 @@ def mode_flags(agent: str, mode: str, non_interactive: bool) -> list[str]:
 def append_model(cmd: list[str], agent: str, model: str | None) -> None:
     if not model:
         return
-    if agent in {"codex", "claude", "gemini", "opencode", "cursor"}:
+    if agent in MODEL_FLAG_AGENTS:
         cmd += ["--model", model]
 
 
@@ -378,7 +504,25 @@ def build_command(args: argparse.Namespace) -> list[str]:
     resume_id = args.resume if args.resume else None
     cmd = [spec.executable]
 
-    if agent == "codex":
+    if agent == "aider":
+        cmd += mode_flags(agent, args.mode, non_interactive)
+        append_model(cmd, agent, model)
+        append_passthrough(cmd, args)
+        if prompt:
+            if non_interactive:
+                cmd += ["--message", prompt]
+            else:
+                cmd.append(prompt)
+
+    elif agent == "amp":
+        append_passthrough(cmd, args)
+        if prompt:
+            if non_interactive:
+                cmd += ["--execute", prompt]
+            else:
+                cmd.append(prompt)
+
+    elif agent == "codex":
         if resume_requested or continue_session:
             cmd += ["exec" if non_interactive else "resume"]
             if non_interactive:
@@ -424,6 +568,42 @@ def build_command(args: argparse.Namespace) -> list[str]:
         if prompt:
             cmd.append(prompt)
 
+    elif agent == "cline":
+        cmd += ["--cwd", args.cwd]
+        cmd += mode_flags(agent, args.mode, non_interactive)
+        append_model(cmd, agent, model)
+        append_passthrough(cmd, args)
+        if resume_id:
+            cmd += ["--id", resume_id]
+        elif resume_requested or continue_session:
+            # Cline requires an explicit session id to resume from the CLI.
+            pass
+        if non_interactive:
+            cmd += ["--json"]
+        if prompt:
+            cmd.append(prompt)
+
+    elif agent == "droid":
+        if non_interactive:
+            cmd += ["exec", "--cwd", args.cwd]
+            cmd += mode_flags(agent, args.mode, non_interactive)
+            append_model(cmd, agent, model)
+            append_passthrough(cmd, args)
+            if resume_id:
+                cmd += ["--session-id", resume_id]
+            if prompt:
+                cmd.append(prompt)
+        else:
+            cmd += ["--cwd", args.cwd]
+            append_model(cmd, agent, model)
+            append_passthrough(cmd, args)
+            if resume_id:
+                cmd += ["--resume", resume_id]
+            elif resume_requested or continue_session:
+                cmd += ["--resume"]
+            if prompt:
+                cmd.append(prompt)
+
     elif agent == "antigravity":
         cmd += ["--add-dir", args.cwd]
         cmd += mode_flags(agent, args.mode, non_interactive)
@@ -454,6 +634,68 @@ def build_command(args: argparse.Namespace) -> list[str]:
             else:
                 cmd += ["--prompt-interactive", prompt]
 
+    elif agent == "grok":
+        cmd += ["--cwd", args.cwd]
+        cmd += mode_flags(agent, args.mode, non_interactive)
+        append_model(cmd, agent, model)
+        append_passthrough(cmd, args)
+        if resume_id:
+            cmd += ["--resume", resume_id]
+        elif resume_requested or continue_session:
+            cmd += ["--resume"]
+        if prompt:
+            if non_interactive:
+                cmd += ["--single", prompt]
+            else:
+                cmd.append(prompt)
+
+    elif agent == "kilo":
+        if non_interactive:
+            cmd += ["run", "--dir", args.cwd]
+        else:
+            cmd += [args.cwd]
+        cmd += mode_flags(agent, args.mode, non_interactive)
+        append_model(cmd, agent, model)
+        append_passthrough(cmd, args)
+        if resume_id:
+            cmd += ["--session", resume_id]
+        elif resume_requested or continue_session:
+            cmd += ["--continue"]
+        if prompt:
+            cmd.append(prompt)
+
+    elif agent == "kimi":
+        cmd += mode_flags(agent, args.mode, non_interactive)
+        append_model(cmd, agent, model)
+        append_passthrough(cmd, args)
+        if resume_id:
+            cmd += ["--session", resume_id]
+        elif continue_session:
+            cmd += ["--continue"]
+        elif resume_requested:
+            cmd += ["--session"]
+        if prompt:
+            if non_interactive:
+                cmd += ["--prompt", prompt]
+            else:
+                cmd.append(prompt)
+
+    elif agent == "kiro":
+        cmd += ["chat"]
+        cmd += mode_flags(agent, args.mode, non_interactive)
+        append_model(cmd, agent, model)
+        append_passthrough(cmd, args)
+        if resume_id:
+            cmd += ["--resume-id", resume_id]
+        elif continue_session:
+            cmd += ["--resume"]
+        elif resume_requested:
+            cmd += ["--resume-picker"]
+        if non_interactive:
+            cmd += ["--no-interactive"]
+        if prompt:
+            cmd.append(prompt)
+
     elif agent == "opencode":
         if non_interactive:
             cmd += ["run", "--dir", args.cwd]
@@ -472,6 +714,31 @@ def build_command(args: argparse.Namespace) -> list[str]:
                 cmd.append(prompt)
             else:
                 cmd += ["--prompt", prompt]
+
+    elif agent == "pi":
+        cmd += mode_flags(agent, args.mode, non_interactive)
+        append_model(cmd, agent, model)
+        append_passthrough(cmd, args)
+        if resume_id:
+            cmd += ["--session", resume_id]
+        elif resume_requested or continue_session:
+            cmd += ["--continue"]
+        if non_interactive:
+            cmd += ["--print"]
+        if prompt:
+            cmd.append(prompt)
+
+    elif agent == "qwen":
+        cmd += mode_flags(agent, args.mode, non_interactive)
+        append_model(cmd, agent, model)
+        append_passthrough(cmd, args)
+        if resume_requested or continue_session:
+            cmd += ["--resume", resume_id or "latest"]
+        if prompt:
+            if non_interactive:
+                cmd += ["--prompt", prompt]
+            else:
+                cmd.append(prompt)
 
     elif agent == "cursor":
         cmd += ["--workspace", args.cwd]
@@ -500,10 +767,12 @@ def print_mappings() -> None:
                 f"  {name}: executable={spec.executable}, fast={spec.fast_model}, "
                 f"pro={spec.pro_model}, default={spec.default_model_class} ({default_model})"
             )
+        elif name in MODEL_FLAG_AGENTS:
+            print(f"  {name}: executable={spec.executable}, no built-in model default; supports explicit --model")
         else:
             print(f"  {name}: executable={spec.executable}, model flag unsupported")
     print(
-        "  random: uniformly selects one installed backend from antigravity, claude, codex, cursor, opencode "
+        f"  random: uniformly selects one installed backend from {', '.join(RANDOM_AGENTS)} "
         "(never the same as the previous random pick when another installed option exists)"
     )
     print(f"  default order: {', '.join(DEFAULT_AGENT_ORDER)}")
@@ -514,19 +783,22 @@ def print_mappings() -> None:
     print("\nUse --dry-run to inspect exact backend flags for a specific agent/mode.")
 
 
-def call_command(cmd: list[str]) -> int:
+def call_command(cmd: list[str], timeout: float = 0) -> int:
     try:
-        return subprocess.call(cmd)
+        return subprocess.call(cmd, timeout=timeout if timeout > 0 else None)
     except FileNotFoundError:
         print(f"agent-launch failed: executable not found: {cmd[0]}", file=sys.stderr, flush=True)
         return 127
+    except subprocess.TimeoutExpired:
+        print(f"agent-launch failed: timed out after {timeout:g}s: {shlex.join(cmd)}", file=sys.stderr, flush=True)
+        return 124
 
 
 def run_command(args: argparse.Namespace, cmd: list[str]) -> int:
     print(f"agent-launch executing: {shlex.join(cmd)}", file=sys.stderr, flush=True)
     os.chdir(args.cwd)
     if args.non_interactive:
-        return call_command(cmd)
+        return call_command(cmd, args.attempt_timeout)
     # Replace this wrapper so Codex/Claude/Cursor inherit a real controlling TTY.
     os.execvp(cmd[0], cmd)
     return 127
@@ -544,7 +816,7 @@ def run_agent_order(args: argparse.Namespace) -> int:
             file=sys.stderr,
             flush=True,
         )
-        last_code = call_command(cmd)
+        last_code = call_command(cmd, args.attempt_timeout)
         if last_code == 0:
             return 0
         print(

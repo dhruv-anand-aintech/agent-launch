@@ -5,12 +5,22 @@
 One command for launching the local coding-agent CLIs installed on this machine:
 
 - Antigravity CLI (`agy`)
+- Aider (`aider`)
+- Amp (`amp`)
 - Codex CLI (`codex`)
 - Claude Code (`claude`)
+- Cline (`cline`)
+- Factory Droid (`droid`)
 - Gemini CLI (`gemini`)
+- Grok Build (`grok`)
+- Kilo Code (`kilo`)
+- Kimi Code (`kimi`)
+- Kiro CLI (`kiro-cli`, exposed as `--agent kiro`)
 - OpenCode (`opencode`)
+- Pi Coding Agent (`pi`)
+- Qwen Code (`qwen`)
 - Cursor Agent (`agent`, exposed as `--agent cursor`)
-- Random selection across installed Antigravity CLI, Codex, Claude Code, OpenCode, and Cursor Agent CLIs (`--agent random`), avoiding the same backend on consecutive runs when another installed option exists
+- Random selection across installed agent CLIs (`--agent random`), avoiding the same backend on consecutive runs when another installed option exists
 
 It normalizes the common controls that usually differ across these tools:
 
@@ -97,7 +107,7 @@ agent-launch -a claude -i -m plan -C ~/Code/my-repo 'review this change'
 
 | Option | Meaning |
 | --- | --- |
-| `--agent` / `-a` | `antigravity`, `codex`, `claude`, `gemini`, `opencode`, `cursor`, or `random`; defaults to `random` |
+| `--agent` / `-a` | Any built-in agent key, including `aider`, `amp`, `antigravity`, `claude`, `cline`, `codex`, `cursor`, `droid`, `gemini`, `grok`, `kilo`, `kimi`, `kiro`, `opencode`, `pi`, `qwen`, or `random`; defaults to `random` |
 | `--agent-order` | Non-interactive failover order. Pass comma-separated agents, use without a value for the built-in default, or set `AGENT_LAUNCH_AGENT_ORDER` |
 | `--prefer` | Non-interactive preferred agents. Moves the comma-separated agents to the front of the default failover order, or set `AGENT_LAUNCH_PREFER` |
 | `--interactive` / `-i` | Start an interactive TUI/session |
@@ -113,6 +123,7 @@ agent-launch -a claude -i -m plan -C ~/Code/my-repo 'review this change'
 | `--resume [id]` | Resume a previous session |
 | `--continue` | Continue the latest/current session |
 | `--dry-run` | Print translated backend command without running it |
+| `--attempt-timeout` | Timeout in seconds for each non-interactive backend attempt; returns exit code `124` on timeout |
 | `--extra` | Append raw backend arguments; repeat as needed |
 | `--` | Pass all following arguments through to the selected backend CLI |
 | `--print-mappings` | Show built-in agent/model mappings |
@@ -142,7 +153,7 @@ AGENT_LAUNCH_AGENT_ORDER=claude,codex,cursor agent-launch -n -C ~/Code/my-repo -
 AGENT_LAUNCH_PREFER=claude,codex agent-launch -n -C ~/Code/my-repo -p 'implement the task'
 ```
 
-`--agent-order` and `--prefer` are intentionally non-interactive only. The built-in default order is `codex, claude, cursor, opencode, antigravity, gemini`. With that default, `--prefer cursor,claude` runs `cursor, claude, codex, opencode, antigravity, gemini`.
+`--agent-order` and `--prefer` are intentionally non-interactive only. The built-in default order is `codex, claude, cursor, opencode, antigravity, gemini, aider, amp, cline, droid, grok, kilo, kimi, kiro, pi, qwen`. With that default, `--prefer cursor,claude` runs `cursor, claude, codex, opencode, antigravity, gemini, aider, amp, cline, droid, grok, kilo, kimi, kiro, pi, qwen`.
 
 ## Feature Matrix
 

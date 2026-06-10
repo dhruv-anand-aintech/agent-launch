@@ -3,12 +3,22 @@
 local -a agents modes model_classes common_models
 
 agents=(
+  'aider:Aider'
+  'amp:Amp'
   'antigravity:Antigravity CLI'
   'claude:Claude Code'
+  'cline:Cline'
   'codex:Codex CLI'
   'cursor:Cursor Agent'
+  'droid:Factory Droid'
   'gemini:Gemini CLI'
+  'grok:Grok Build'
+  'kilo:Kilo Code'
+  'kimi:Kimi Code'
+  'kiro:Kiro CLI'
   'opencode:OpenCode'
+  'pi:Pi Coding Agent'
+  'qwen:Qwen Code'
   'random:Uniform random installed agent'
 )
 
@@ -54,6 +64,7 @@ _arguments -s -S \
   '--resume[resume a prior session]:session id:' \
   '--continue[continue the latest/current session]' \
   '--dry-run[print translated backend command without running it]' \
+  '--attempt-timeout[timeout seconds for each non-interactive backend attempt]:seconds:' \
   '--extra[append raw backend arguments]:backend args:' \
   '--print-mappings[show built-in agent/model mappings]' \
   '*:prompt text:'
