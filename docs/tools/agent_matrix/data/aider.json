@@ -117,6 +117,21 @@
     "source_url": "https://github.com/Aider-AI/aider#source:~:text=License-Apache-2.0",
     "comment": "Free and open source under Apache 2.0. Users pay only for LLM API usage through their own API keys."
   },
+  "some_free_usage": {
+    "support": "full",
+    "source_url": "https://aider.chat/docs/llms.html#free-models:~:text=Aider%20works%20with%20a%20number%20of%20free%20API%20providers",
+    "comment": "Aider documents free API providers and local-model options, so some agent usage can be free depending on provider/model choice."
+  },
+  "no_account_required": {
+    "support": "full",
+    "source_url": "https://aider.chat/docs/llms/ollama.html#ollama:~:text=Aider%20can%20connect%20to%20local%20Ollama%20models",
+    "comment": "Can run against local Ollama models without signing into an Aider-hosted account."
+  },
+  "can_use_other_subscriptions": {
+    "support": "full",
+    "source_url": "https://aider.chat/docs/llms.html#connecting-to-llms:~:text=Aider%20can%20work%20with%20many%20LLMs",
+    "comment": "Can use external provider accounts/API keys and local OpenAI-compatible endpoints instead of an Aider-owned subscription."
+  },
   "hosted_agent": {
     "support": "none",
     "source_url": "https://github.com/Aider-AI/aider#source:~:text=aider%20is%20AI%20pair%20programming%20in%20your%20terminal",

@@ -120,6 +120,21 @@
       "source_url": "https://github.com/Aider-AI/aider#source:~:text=License-Apache-2.0",
       "comment": "Free and open source under Apache 2.0. Users pay only for LLM API usage through their own API keys."
     },
+    "some_free_usage": {
+      "support": "full",
+      "source_url": "https://aider.chat/docs/llms.html#free-models:~:text=Aider%20works%20with%20a%20number%20of%20free%20API%20providers",
+      "comment": "Aider documents free API providers and local-model options, so some agent usage can be free depending on provider/model choice."
+    },
+    "no_account_required": {
+      "support": "full",
+      "source_url": "https://aider.chat/docs/llms/ollama.html#ollama:~:text=Aider%20can%20connect%20to%20local%20Ollama%20models",
+      "comment": "Can run against local Ollama models without signing into an Aider-hosted account."
+    },
+    "can_use_other_subscriptions": {
+      "support": "full",
+      "source_url": "https://aider.chat/docs/llms.html#connecting-to-llms:~:text=Aider%20can%20work%20with%20many%20LLMs",
+      "comment": "Can use external provider accounts/API keys and local OpenAI-compatible endpoints instead of an Aider-owned subscription."
+    },
     "hosted_agent": {
       "support": "none",
       "source_url": "https://github.com/Aider-AI/aider#source:~:text=aider%20is%20AI%20pair%20programming%20in%20your%20terminal",
@@ -301,6 +316,11 @@
       "source_url": "https://ampcode.com/manual#pricing:~:text=Amp%20charges%20you%20based%20on%20your%20actual%20usage%20of%20LLMs",
       "comment": "Usage-based: pay-as-you-go with zero markup on API costs for individuals. Minimum $5 credit purchase. Free mode (ad-supported, no longer shows ads). Enterprise: 50% markup + $1,000 one-time fee."
     },
+    "some_free_usage": {
+      "support": "full",
+      "source_url": "https://ampcode.com/news/amp-free#amp-free:~:text=Amp%20has%20a%20new%20mode%3A%20%60free%60",
+      "comment": "Amp documents a free mode for interactive editor/CLI use, with limits and availability caveats."
+    },
     "hosted_agent": {
       "support": "none",
       "source_url": "https://ampcode.com/manual#source:~:text=Amp%20is%20the%20frontier%20coding%20agent%20for%20your%20terminal%20and%20editor",
@@ -479,6 +499,11 @@
       "value": "Free (generous weekly rate limits), Google AI Pro/Ultra (undisclosed), Organization (consumption-based via Google Cloud)",
       "source_url": "https://antigravity.google/pricing#for-individuals-0month:~:text=For%20Individuals",
       "comment": "Free tier includes Gemini 3.5 Flash, 3.1 Pro, 3 Flash, Claude Sonnet & Opus 4.6, gpt-oss-120b. Pro/Ultra tiers offer more generous rate limits."
+    },
+    "some_free_usage": {
+      "support": "full",
+      "source_url": "https://antigravity.google/blog/introducing-google-antigravity#introducing-google-antigravity:~:text=available%20in%20public%20preview%20at%20no%20charge",
+      "comment": "Google announced Antigravity public preview availability at no charge with rate limits."
     },
     "hosted_agent": {
       "support": "none",
@@ -846,6 +871,21 @@
       "source_url": "https://cline.bot/pricing#simple-transparent-pricing:~:text=Cline%20is%20free%20for%20individual%20developers.%20Pay%20only%20for%20AI%20inference%20on%20a%20usage%20basis",
       "comment": "Open source: free for individual developers. Pay only for AI inference. Enterprise: custom pricing with SSO/OIDC/SCIM, RBAC."
     },
+    "some_free_usage": {
+      "support": "full",
+      "source_url": "https://cline.bot/pricing#simple-transparent-pricing:~:text=Cline%20is%20free%20for%20individual%20developers",
+      "comment": "Cline is free for individual developers; AI inference is paid separately or BYOK/local."
+    },
+    "no_account_required": {
+      "support": "full",
+      "source_url": "https://docs.cline.bot/running-models-locally/overview#local-models:~:text=Run%20Cline%20with%20local%20models",
+      "comment": "Can run with local models via Ollama or LM Studio without a Cline-hosted account."
+    },
+    "can_use_other_subscriptions": {
+      "support": "full",
+      "source_url": "https://cline.bot/blog/introducing-openai-codex-oauth#how-to-connect:~:text=Bring%20your%20ChatGPT%20subscription%20to%20Cline",
+      "comment": "Cline documents OpenAI Codex OAuth so users can bring a ChatGPT subscription, and also supports BYOK providers."
+    },
     "hosted_agent": {
       "support": "none",
       "source_url": "https://cline.bot/#the-open-coding-agent:~:text=One%20open%20source%20agent%20runtime",
@@ -1030,6 +1070,16 @@
       "value": "Free (limited), Plus $20/mo, Pro $100-200/mo, Business pay-as-you-go, API usage-based",
       "source_url": "https://developers.openai.com/codex/pricing#source:~:text=Codex%20is%20included%20in%20your%20ChatGPT%20Free%2C%20Go%2C%20Plus%2C%20Pro%2C%20Business%2C%20Edu%2C%20or%20Enterprise%20plan",
       "comment": "Free tier has limited Codex access. Plus ($20/mo) includes 15-350 local messages/5h. Pro $100/mo at 5x limits ($200/mo at 20x). Business at pay-as-you-go token credits. API key at per-token pricing."
+    },
+    "some_free_usage": {
+      "support": "full",
+      "source_url": "https://chatgpt.com/codex/pricing/#pricing:~:text=Codex%20is%20included%20in%20your%20ChatGPT%20Free",
+      "comment": "Codex pricing documents limited access included on the ChatGPT Free plan."
+    },
+    "can_use_other_subscriptions": {
+      "support": "full",
+      "source_url": "https://developers.openai.com/codex/auth#sign-in-with-chatgpt:~:text=Sign%20in%20with%20ChatGPT",
+      "comment": "Codex CLI can authenticate with a ChatGPT plan instead of only an API key flow."
     },
     "hosted_agent": {
       "support": "full",
@@ -1396,6 +1446,11 @@
       "source_url": "https://cursor.com/help/models-and-usage/usage-limits#how-much-usage-does-each-plan-include:~:text=Pro%20Plus",
       "comment": "Individual: Pro $20/mo ($20 API usage), Pro+ $60/mo ($70 API usage), Ultra $200/mo ($400 API usage). Teams $40/user/mo."
     },
+    "some_free_usage": {
+      "support": "full",
+      "source_url": "https://cursor.com/pricing#pricing:~:text=Hobby%20Free%20Includes",
+      "comment": "Cursor pricing documents a Hobby Free plan with limited Agent requests and Tab completions."
+    },
     "transcripts": {
       "support": "full",
       "source_url": "https://docs.cursor.com/en/cli/overview#source:~:text=Resume%20previous%20conversations",
@@ -1573,6 +1628,11 @@
       "value": "Free, Pro $20/mo, Max $200/mo, Teams $80+/mo",
       "source_url": "https://devin.ai/pricing#source:~:text=Free%3AFree%2CPro%3A%2420%2Fmonth%2CMax%3A%24200%2Fmonth%2CTeams%3A%2480%2Fmonth",
       "comment": "Free (limited), Pro ($20/mo), Max ($200/mo), Teams ($80/mo minimum). Enterprise: custom pricing with VPC, SAML/OIDC. ACU-based consumption model."
+    },
+    "some_free_usage": {
+      "support": "full",
+      "source_url": "https://cognition.ai/blog/new-self-serve-plans-for-devin#what-s-changing:~:text=Free%20%E2%80%94%20Free",
+      "comment": "Cognition announced a Free self-serve Devin plan with limited access."
     },
     "hosted_agent": {
       "support": "full",
@@ -1759,6 +1819,16 @@
       "source_url": "https://docs.factory.ai/reference/cli-reference#source:~:text=Plans%20%26%20Pricing",
       "comment": "CLI docs route to Factory plans and pricing."
     },
+    "no_account_required": {
+      "support": "partial",
+      "source_url": "https://docs.factory.ai/cli/byok/overview#bring-your-own-key-byok:~:text=run%20models%20locally%20on%20your%20hardware",
+      "comment": "Droid BYOK supports local models, but normal Droid CLI setup still documents Factory authentication, so account-free use is not confirmed end-to-end."
+    },
+    "can_use_other_subscriptions": {
+      "support": "full",
+      "source_url": "https://docs.factory.ai/cli/byok/overview#bring-your-own-key-byok:~:text=Use%20your%20own%20OpenAI%20or%20Anthropic%20keys",
+      "comment": "Droid BYOK supports external provider keys, open-source providers, and local models."
+    },
     "notes": "One of the most feature-dense CLI surfaces in this update: autonomy levels, worktrees, custom droids, plugins, MCP, statusline, skills, hooks, and headless exec.",
     "transcripts": {
       "support": "partial",
@@ -1932,6 +2002,16 @@
       "value": "Free (Apache-2.0), Gemini API usage billed separately",
       "source_url": "https://ai.google.dev/gemini-api/docs/pricing#enterprise:~:text=Gemini%20API",
       "comment": "Gemini CLI is open source (Apache-2.0). API usage billed through Google AI Studio or Vertex AI."
+    },
+    "some_free_usage": {
+      "support": "full",
+      "source_url": "https://github.com/google-gemini/gemini-cli#option-1-sign-in-with-google-oauth-login-using-your-google-account:~:text=Free%20tier%3A%2060%20requests%2Fmin",
+      "comment": "Gemini CLI documents a free tier when signing in with a Google account."
+    },
+    "can_use_other_subscriptions": {
+      "support": "full",
+      "source_url": "https://docs.cloud.google.com/gemini/docs/codeassist/gemini-cli#gemini-cli:~:text=Each%20Gemini%20Code%20Assist%20edition%20provides%20quotas",
+      "comment": "Gemini CLI can use quotas from Gemini Code Assist editions, and also supports API-key pay-as-you-go."
     },
     "hosted_agent": {
       "support": "none",
@@ -2830,6 +2910,21 @@
       "source_url": "https://kilo.ai/pricing#simple-transparent-pricing:~:text=Simple%2C%20transparent%20pricing",
       "comment": "App is free & MIT. Kilo Pass (Starter $19/mo, Pro $49/mo, Expert $199/mo). BYOK (no markup). Free models. Teams: $15/user/mo."
     },
+    "some_free_usage": {
+      "support": "full",
+      "source_url": "https://kilo.ai/pricing#kilo-code:~:text=Free%20and%20open%20source",
+      "comment": "Kilo Code documents free/open-source access plus Auto Free/BYOK/local inference options."
+    },
+    "no_account_required": {
+      "support": "full",
+      "source_url": "https://kilo.ai/docs/automate/extending/local-models#using-local-models:~:text=supports%20running%20language%20models%20locally",
+      "comment": "Can run local models via Ollama, LM Studio, or Atomic Chat without a Kilo-hosted account."
+    },
+    "can_use_other_subscriptions": {
+      "support": "full",
+      "source_url": "https://kilo.ai/docs/ai-providers/openai-chatgpt-plus-pro#why-use-your-chatgpt-subscription:~:text=Use%20your%20ChatGPT%20Plus%20or%20Pro%20subscription",
+      "comment": "Kilo documents use of an existing ChatGPT Plus/Pro subscription and BYOK/local provider options."
+    },
     "hosted_agent": {
       "support": "partial",
       "source_url": "https://kilo.ai/#clip0_jetbrains:~:text=Kilo%3A%20The%20Open%20Source%20AI%20Coding%20Agent%20for%20VS%20Code%2C%20JetBrains%2C%20and%20your%20CLI",
@@ -3196,6 +3291,11 @@
       "source_url": "https://kiro.dev/cli/#source:~:text=No.%20Kiro%20CLI%20pricing%20is%20included%20in%20the%20standard%20Kiro%20%5Bpricing%20tiers%5D(%2Fpricing%2F).",
       "comment": "CLI and IDE share Kiro subscription pricing."
     },
+    "some_free_usage": {
+      "support": "full",
+      "source_url": "https://kiro.dev/docs/billing/#billing-for-individuals:~:text=perpetual%20Kiro%20Free%20tier",
+      "comment": "Kiro billing docs say new users start on the perpetual Kiro Free tier."
+    },
     "notes": "Spec/steering-first agentic IDE plus CLI. Particularly strong on steering, hooks, custom agents, ACP-compatible IDEs, and CI automation.",
     "transcripts": {
       "support": "partial",
@@ -3375,6 +3475,21 @@
       "source_url": "https://opencode.ai/docs/zen/#pricing:~:text=Pricing",
       "comment": "Free tier: bring your own API key + limited free models. Go ($10/mo): curated open-source models with usage caps. Zen: pay-per-token access to all models (min $20 top-up). Enterprise: per-seat custom pricing."
     },
+    "some_free_usage": {
+      "support": "full",
+      "source_url": "https://opencode.ai/#the-open-source-ai-coding-agent:~:text=Free%20models%20included",
+      "comment": "OpenCode homepage documents free models included."
+    },
+    "no_account_required": {
+      "support": "full",
+      "source_url": "https://opencode.ai/docs/providers/#providers:~:text=supports%20running%20local%20models",
+      "comment": "OpenCode supports running local models, so it can be used without an OpenCode-hosted account when configured locally."
+    },
+    "can_use_other_subscriptions": {
+      "support": "full",
+      "source_url": "https://opencode.ai/docs/providers/#providers:~:text=support%2075%2B%20LLM%20providers",
+      "comment": "OpenCode supports 75+ LLM providers and local models via provider configuration/API keys."
+    },
     "hosted_agent": {
       "support": "none",
       "source_url": "https://opencode.ai/docs/#_top:~:text=terminal",
@@ -3553,6 +3668,16 @@
       "value": "Free (MIT)",
       "source_url": "https://github.com/earendil-works/pi/blob/main/packages/coding-agent/package.json#license:~:text=license",
       "comment": "Repository is MIT-licensed and distributed as npm package `@earendil-works/pi-coding-agent`; there is no separate paid subscription model documented in public docs."
+    },
+    "no_account_required": {
+      "support": "full",
+      "source_url": "https://github.com/earendil-works/pi/blob/main/packages/coding-agent/docs/models.md#custom-models:~:text=Add%20custom%20providers%20and%20models%20%28Ollama",
+      "comment": "Pi supports custom providers/models including Ollama, vLLM, LM Studio, and proxies, so local usage need not require a Pi-hosted account."
+    },
+    "can_use_other_subscriptions": {
+      "support": "full",
+      "source_url": "https://github.com/earendil-works/pi/blob/main/packages/coding-agent/docs/providers.md#providers:~:text=supports%20subscription-based%20providers",
+      "comment": "Pi documents subscription-based providers via OAuth plus API-key providers and auth-file/env configuration."
     },
     "hosted_agent": {
       "support": "none",

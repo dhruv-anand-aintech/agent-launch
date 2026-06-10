@@ -123,6 +123,21 @@
     "source_url": "https://opencode.ai/docs/zen/#pricing:~:text=Pricing",
     "comment": "Free tier: bring your own API key + limited free models. Go ($10/mo): curated open-source models with usage caps. Zen: pay-per-token access to all models (min $20 top-up). Enterprise: per-seat custom pricing."
   },
+  "some_free_usage": {
+    "support": "full",
+    "source_url": "https://opencode.ai/#the-open-source-ai-coding-agent:~:text=Free%20models%20included",
+    "comment": "OpenCode homepage documents free models included."
+  },
+  "no_account_required": {
+    "support": "full",
+    "source_url": "https://opencode.ai/docs/providers/#providers:~:text=supports%20running%20local%20models",
+    "comment": "OpenCode supports running local models, so it can be used without an OpenCode-hosted account when configured locally."
+  },
+  "can_use_other_subscriptions": {
+    "support": "full",
+    "source_url": "https://opencode.ai/docs/providers/#providers:~:text=support%2075%2B%20LLM%20providers",
+    "comment": "OpenCode supports 75+ LLM providers and local models via provider configuration/API keys."
+  },
   "hosted_agent": {
     "support": "none",
     "source_url": "https://opencode.ai/docs/#_top:~:text=terminal",

@@ -119,6 +119,16 @@
     "source_url": "https://github.com/earendil-works/pi/blob/main/packages/coding-agent/package.json#license:~:text=license",
     "comment": "Repository is MIT-licensed and distributed as npm package `@earendil-works/pi-coding-agent`; there is no separate paid subscription model documented in public docs."
   },
+  "no_account_required": {
+    "support": "full",
+    "source_url": "https://github.com/earendil-works/pi/blob/main/packages/coding-agent/docs/models.md#custom-models:~:text=Add%20custom%20providers%20and%20models%20%28Ollama",
+    "comment": "Pi supports custom providers/models including Ollama, vLLM, LM Studio, and proxies, so local usage need not require a Pi-hosted account."
+  },
+  "can_use_other_subscriptions": {
+    "support": "full",
+    "source_url": "https://github.com/earendil-works/pi/blob/main/packages/coding-agent/docs/providers.md#providers:~:text=supports%20subscription-based%20providers",
+    "comment": "Pi documents subscription-based providers via OAuth plus API-key providers and auth-file/env configuration."
+  },
   "hosted_agent": {
     "support": "none",
     "source_url": "https://pi.dev/docs/latest#source:~:text=documentation",

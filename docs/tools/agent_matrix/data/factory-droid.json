@@ -125,6 +125,16 @@
     "source_url": "https://docs.factory.ai/reference/cli-reference#source:~:text=Plans%20%26%20Pricing",
     "comment": "CLI docs route to Factory plans and pricing."
   },
+  "no_account_required": {
+    "support": "partial",
+    "source_url": "https://docs.factory.ai/cli/byok/overview#bring-your-own-key-byok:~:text=run%20models%20locally%20on%20your%20hardware",
+    "comment": "Droid BYOK supports local models, but normal Droid CLI setup still documents Factory authentication, so account-free use is not confirmed end-to-end."
+  },
+  "can_use_other_subscriptions": {
+    "support": "full",
+    "source_url": "https://docs.factory.ai/cli/byok/overview#bring-your-own-key-byok:~:text=Use%20your%20own%20OpenAI%20or%20Anthropic%20keys",
+    "comment": "Droid BYOK supports external provider keys, open-source providers, and local models."
+  },
   "notes": "One of the most feature-dense CLI surfaces in this update: autonomy levels, worktrees, custom droids, plugins, MCP, statusline, skills, hooks, and headless exec.",
   "transcripts": {
     "support": "partial",

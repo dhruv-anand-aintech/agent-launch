@@ -119,6 +119,11 @@
     "source_url": "https://antigravity.google/pricing#for-individuals-0month:~:text=For%20Individuals",
     "comment": "Free tier includes Gemini 3.5 Flash, 3.1 Pro, 3 Flash, Claude Sonnet & Opus 4.6, gpt-oss-120b. Pro/Ultra tiers offer more generous rate limits."
   },
+  "some_free_usage": {
+    "support": "full",
+    "source_url": "https://antigravity.google/blog/introducing-google-antigravity#introducing-google-antigravity:~:text=available%20in%20public%20preview%20at%20no%20charge",
+    "comment": "Google announced Antigravity public preview availability at no charge with rate limits."
+  },
   "hosted_agent": {
     "support": "none",
     "source_url": "https://antigravity.google/docs/cli-features#source:~:text=plugins",

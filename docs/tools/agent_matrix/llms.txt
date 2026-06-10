@@ -2,32 +2,32 @@
 > Compare 24 coding agents, CLIs, and IDEs across features.
 > https://compare.ainorthstar.tech | Updated 2026-06-11
 
-Agent             Rel    FF     Rul   Skl   Hks   MCP   Cmd   Gol   Sub   Trn   Mod   App   San   Res   Con   Hdl   Fmt   Sta   Tel   Hst  BYOM
------------------------------------------------------------------------------------------------------------------------------------------------
-Aider             Jun '2 CLI        ~     ~     ~     N     N     N     ~     ~     Y     ~     N     N     ~     Y     N     N     Y     N     Y
-Amp               May '2 CLI/Ext    Y     Y     Y     Y     N     N     Y     ?     ~     ~     N     Y     Y     Y     Y     N     ?     N     ~
-Antigravity       2025  CLI/IDE    Y     Y     Y     Y     ~     N     ?     ~     ?     ~     ~     Y     Y     Y     ?     ?     ?     N     ?
-Claude Code       Feb '2 CLI/Ext    Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     ~     Y     Y     Y     Y     Y     Y     ~     ~
-Cline             Jul '2 CLI/Ext    Y     Y     Y     Y     Y     N     Y     ?     Y     Y     ~     Y     ~     Y     Y     N     Y     N     Y
-OpenAI Codex CLI  Apr '2 CLI/Ext    Y     Y     Y     Y     ~     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y
-Cohere North      Jan '2 SDK/Web    ~     ~     Y     Y     N     N     Y     ~     ~     ~     Y     ~     ~     ~     ~     N     ~     Y     N
-Cursor            2023  CLI/IDE    Y     Y     ?     Y     Y     N     ~     Y     Y     Y     Y     Y     Y     Y     ~     ~     Y     Y     Y
-Devin             Dec '2 CLI/Ext    Y     Y     Y     Y     Y     N     Y     ~     ?     ~     Y     Y     Y     Y     ~     N     ?     Y     ?
-Factory Droid     2025  CLI/Ext    Y     Y     Y     Y     Y     N     Y     ~     Y     Y     Y     Y     Y     Y     Y     Y     ?     ~     Y
-Gemini CLI        Jun '2 CLI        Y     ~     Y     Y     Y     N     ?     ?     Y     Y     Y     Y     Y     Y     ~     ?     Y     N     ~
-GitHub Copilot    Jun '2 CLI/IDE    Y     Y     Y     Y     ~     N     Y     ?     Y     ~     ~     Y     Y     Y     ~     N     ~     Y     Y
-Grok Build        May '2 CLI        Y     Y     Y     Y     ?     N     Y     ?     ~     Y     ~     ?     ?     Y     ?     ?     ?     N     ~
-Google Jules      Aug '2 Web        ?     N     ~     ?     N     N     ~     ~     ~     Y     Y     ~     ~     ~     ~     N     ?     Y     N
-JetBrains Junie   Jan '2 CLI/IDE    ~     ?     N     ?     ?     N     ?     ?     ~     Y     ~     ~     ~     ?     ?     N     ?     N     ~
-Kilo Code         Feb '2 CLI/Ext    Y     Y     Y     Y     Y     N     Y     ?     Y     Y     ~     Y     Y     Y     Y     N     Y     ~     Y
-Kimi CLI          Oct '2 CLI/Ext    Y     Y     ~     Y     ~     N     Y     ?     Y     Y     N     Y     Y     Y     Y     Y     ?     N     Y
-Kiro              Jul '2 CLI/IDE    Y     Y     Y     Y     Y     N     Y     ~     Y     Y     ~     Y     Y     Y     ~     ?     ?     ~     N
-OpenCode          2025  CLI/Ext    Y     Y     Y     Y     Y     N     Y     Y     Y     Y     ~     Y     Y     Y     Y     ?     Y     N     Y
-Pi                May '2 CLI/SDK    Y     Y     Y     N     Y     N     N     Y     Y     N     N     Y     Y     Y     Y     N     ~     N     Y
-Qwen Code         Jun '2 CLI/Ext    Y     Y     Y     Y     Y     N     Y     ?     Y     Y     Y     Y     Y     Y     Y     Y     Y     ~     Y
-Replit Agent      Sep '2 Web        ~     N     ~     ?     N     N     ~     ~     N     ~     Y     ~     ~     N     N     N     ?     Y     N
-Roo Code          Mid-20 Extensi    Y     Y     N     Y     Y     N     Y     ?     Y     Y     N     ~     Y     Y     ~     N     Y     N     Y
-Windsurf Cascade  Nov '2 CLI/IDE    Y     Y     Y     Y     Y     N     Y     ?     Y     Y     ~     Y     Y     ~     ~     ~     ~     Y     ~
+Agent             Rel    FF     Fre   NoA   Oth   Rul   Skl   Hks   MCP   Cmd   Gol   Sub   Trn   Mod   App   San   Res   Con   Hdl   Fmt   Sta   Tel   Hst  BYOM
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+Aider             Jun '2 CLI        Y     Y     Y     ~     ~     ~     N     N     N     ~     ~     Y     ~     N     N     ~     Y     N     N     Y     N     Y
+Amp               May '2 CLI/Ext    Y                 Y     Y     Y     Y     N     N     Y     ?     ~     ~     N     Y     Y     Y     Y     N     ?     N     ~
+Antigravity       2025  CLI/IDE    Y                 Y     Y     Y     Y     ~     N     ?     ~     ?     ~     ~     Y     Y     Y     ?     ?     ?     N     ?
+Claude Code       Feb '2 CLI/Ext                      Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     ~     Y     Y     Y     Y     Y     Y     ~     ~
+Cline             Jul '2 CLI/Ext    Y     Y     Y     Y     Y     Y     Y     Y     N     Y     ?     Y     Y     ~     Y     ~     Y     Y     N     Y     N     Y
+OpenAI Codex CLI  Apr '2 CLI/Ext    Y           Y     Y     Y     Y     Y     ~     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y
+Cohere North      Jan '2 SDK/Web                      ~     ~     Y     Y     N     N     Y     ~     ~     ~     Y     ~     ~     ~     ~     N     ~     Y     N
+Cursor            2023  CLI/IDE    Y                 Y     Y     ?     Y     Y     N     ~     Y     Y     Y     Y     Y     Y     Y     ~     ~     Y     Y     Y
+Devin             Dec '2 CLI/Ext    Y                 Y     Y     Y     Y     Y     N     Y     ~     ?     ~     Y     Y     Y     Y     ~     N     ?     Y     ?
+Factory Droid     2025  CLI/Ext          ~     Y     Y     Y     Y     Y     Y     N     Y     ~     Y     Y     Y     Y     Y     Y     Y     Y     ?     ~     Y
+Gemini CLI        Jun '2 CLI        Y           Y     Y     ~     Y     Y     Y     N     ?     ?     Y     Y     Y     Y     Y     Y     ~     ?     Y     N     ~
+GitHub Copilot    Jun '2 CLI/IDE                      Y     Y     Y     Y     ~     N     Y     ?     Y     ~     ~     Y     Y     Y     ~     N     ~     Y     Y
+Grok Build        May '2 CLI                          Y     Y     Y     Y     ?     N     Y     ?     ~     Y     ~     ?     ?     Y     ?     ?     ?     N     ~
+Google Jules      Aug '2 Web                          ?     N     ~     ?     N     N     ~     ~     ~     Y     Y     ~     ~     ~     ~     N     ?     Y     N
+JetBrains Junie   Jan '2 CLI/IDE                      ~     ?     N     ?     ?     N     ?     ?     ~     Y     ~     ~     ~     ?     ?     N     ?     N     ~
+Kilo Code         Feb '2 CLI/Ext    Y     Y     Y     Y     Y     Y     Y     Y     N     Y     ?     Y     Y     ~     Y     Y     Y     Y     N     Y     ~     Y
+Kimi CLI          Oct '2 CLI/Ext                      Y     Y     ~     Y     ~     N     Y     ?     Y     Y     N     Y     Y     Y     Y     Y     ?     N     Y
+Kiro              Jul '2 CLI/IDE    Y                 Y     Y     Y     Y     Y     N     Y     ~     Y     Y     ~     Y     Y     Y     ~     ?     ?     ~     N
+OpenCode          2025  CLI/Ext    Y     Y     Y     Y     Y     Y     Y     Y     N     Y     Y     Y     Y     ~     Y     Y     Y     Y     ?     Y     N     Y
+Pi                May '2 CLI/SDK          Y     Y     Y     Y     Y     N     Y     N     N     Y     Y     N     N     Y     Y     Y     Y     N     ~     N     Y
+Qwen Code         Jun '2 CLI/Ext                      Y     Y     Y     Y     Y     N     Y     ?     Y     Y     Y     Y     Y     Y     Y     Y     Y     ~     Y
+Replit Agent      Sep '2 Web                          ~     N     ~     ?     N     N     ~     ~     N     ~     Y     ~     ~     N     N     N     ?     Y     N
+Roo Code          Mid-20 Extensi                      Y     Y     N     Y     Y     N     Y     ?     Y     Y     N     ~     Y     Y     ~     N     Y     N     Y
+Windsurf Cascade  Nov '2 CLI/IDE                      Y     Y     Y     Y     Y     N     Y     ?     Y     Y     ~     Y     Y     ~     ~     ~     ~     Y     ~
 
 ## Feature legend
 Code = Y: full | ~: partial | N: none | ?: unknown |  : 
@@ -42,6 +42,9 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Form factor: CLI
 - Released: Jun '23
 - Latest update: May '26
+- Some Free Usage: full — Aider documents free API providers and local-model options, so some agent usage can be free depending on provider/model choice.
+- No Account Required: full — Can run against local Ollama models without signing into an Aider-hosted account.
+- Can Use Other Subscriptions: full — Can use external provider accounts/API keys and local OpenAI-compatible endpoints instead of an Aider-owned subscription.
 - Rules: partial — Supports CONVENTIONS.md loaded via --read or .aider.conf.yml. No equivalent of a persistent auto-loaded CLAUDE.md file. Location: `.aider.conf.yml`, `.aider.model.settings.yml`, `.aider.model.metadata.json`, and repo convention files; no AGENTS.md standard.
 - Skills: partial — Has /save and /load commands to persist/replay sequences of slash commands. Not a full reusable skill system like Cursor skills. Location: no first-class skill folder; use repo files/prompts/conventions.
 - Hooks: partial — Only git pre-commit hook bypass via --git-commit-verify. No lifecycle hooks (session-start, session-end, etc.).
@@ -70,6 +73,9 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Form factor: CLI, Extension, SDK
 - Released: May '25
 - Latest update: May '26
+- Some Free Usage: full — Amp documents a free mode for interactive editor/CLI use, with limits and availability caveats.
+- No Account Required: blank
+- Can Use Other Subscriptions: blank
 - Rules: full — Full support via AGENTS.md files (plural). Scanned from cwd, parent dirs, subtrees, $HOME/.config/amp/, /etc/ampcode/. Supports @-mentions, globs, YAML frontmatter. Location: no public disk folder/file location found in docs reviewed.
 - Skills: full — Full support. Skills are directories with SKILL.md + YAML frontmatter. Locations: .agents/skills/ (project), ~/.config/agents/skills/ (user). Can bundle MCP servers via mcp.json. Location: no public disk folder/file location found in docs reviewed.
 - Hooks: full — Full support via Plugin API (TypeScript). Events: session.start, agent.start, tool.call, tool.result, agent.end. Plugins can respond with allow/reject/modify/synthesize actions.
@@ -98,6 +104,9 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Form factor: CLI, IDE
 - Released: 2025
 - Latest update: May '26
+- Some Free Usage: full — Google announced Antigravity public preview availability at no charge with rate limits.
+- No Account Required: blank
+- Can Use Other Subscriptions: blank
 - Rules: full — Full plugin rules on CLI; IDE has persistent agent context with overlapping rules support. Location: Antigravity plugin rules live in plugin folders; workspace/global IDE rule storage is managed by Antigravity.
 - Skills: full — Plugin skills on CLI; IDE local data includes skills with less public doc detail. Location: plugin skill folders containing `SKILL.md`.
 - Hooks: full — Plugin hooks documented on CLI.
@@ -127,6 +136,9 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Form factor: CLI, Extension, SDK, Web, Mac App
 - Released: Feb '25
 - Latest update: Jun '26
+- Some Free Usage: blank
+- No Account Required: blank
+- Can Use Other Subscriptions: blank
 - Rules: full — Uses CLAUDE.md memory files. Location: `CLAUDE.md` in repo tree, plus `~/.claude/CLAUDE.md` for user memory.
 - Skills: full — Supports skills. Location: `.claude/skills/<name>/SKILL.md` or user-level `~/.claude/skills/<name>/SKILL.md`.
 - Hooks: full — Supports lifecycle hooks.
@@ -155,6 +167,9 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Form factor: CLI, Extension, SDK
 - Released: Jul '24
 - Latest update: Jun '26
+- Some Free Usage: full — Cline is free for individual developers; AI inference is paid separately or BYOK/local.
+- No Account Required: full — Can run with local models via Ollama or LM Studio without a Cline-hosted account.
+- Can Use Other Subscriptions: full — Cline documents OpenAI Codex OAuth so users can bring a ChatGPT subscription, and also supports BYOK providers.
 - Rules: full — Rich rule system: .clinerules/ directory, global ~/Documents/Cline/Rules/, conditional rules with YAML frontmatter globs, auto-detection of .cursorrules, .windsurfrules, AGENTS.md. Location: no public disk folder/file location found in docs reviewed.
 - Skills: full — Full skill system: SKILL.md files in .cline/skills/ or ~/.cline/skills/, YAML frontmatter, progressive loading, slash command triggering, skill toggles. Location: no public disk folder/file location found in docs reviewed.
 - Hooks: full — Lifecycle hooks via SDK plugin system: 18 hook stages (input, runtime_event, session_start, turn_start, tool_call_before/after, etc.). Also ~/.cline/hooks/ directory.
@@ -184,6 +199,9 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Form factor: CLI, Extension, SDK, Web, Mac App
 - Released: Apr '25
 - Latest update: Jun '26
+- Some Free Usage: full — Codex pricing documents limited access included on the ChatGPT Free plan.
+- No Account Required: blank
+- Can Use Other Subscriptions: full — Codex CLI can authenticate with a ChatGPT plan instead of only an API key flow.
 - Rules: full — Uses AGENTS.md instructions. Location: `AGENTS.md` in repo tree, plus user/project Codex config for defaults.
 - Skills: full — Supports SKILL.md-based skills. Location: `.codex/skills/<name>/SKILL.md`, `~/.codex/skills/<name>/SKILL.md`, or installed plugin skill folders.
 - Hooks: full — Supports Codex hooks.
@@ -211,6 +229,9 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Form factor: SDK, Web
 - Released: Jan '25
 - Latest update: May '26
+- Some Free Usage: blank
+- No Account Required: blank
+- Can Use Other Subscriptions: blank
 - Rules: partial — North supports enterprise guardrails, but not repo-local instruction files. Location: hosted/web/API-managed; no local disk folder documented.
 - Skills: partial — No-code custom agents and reusable workflows, not code-agent SKILL.md folders. Location: hosted/web/API-managed; no local disk folder documented.
 - Hooks: full — Multi-step workflow automations are a core Agent Studio feature.
@@ -239,6 +260,9 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Form factor: CLI, IDE, SDK
 - Released: 2023
 - Latest update: May '26
+- Some Free Usage: full — Cursor pricing documents a Hobby Free plan with limited Agent requests and Tab completions.
+- No Account Required: blank
+- Can Use Other Subscriptions: blank
 - Rules: full — Supports project and user rules. Location: `.cursor/rules/*.mdc` in a project; user/global rules are configured in Cursor settings.
 - Skills: full — Supports skills. Location: Cursor rules/agents features, not a SKILL.md folder standard in this row.
 - Hooks: unknown — No lifecycle hooks documented for IDE or CLI.
@@ -267,6 +291,9 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Form factor: CLI, Extension, SDK, Web
 - Released: Dec '24
 - Latest update: Feb '26
+- Some Free Usage: full — Cognition announced a Free self-serve Devin plan with limited access.
+- No Account Required: blank
+- Can Use Other Subscriptions: blank
 - Rules: full — AGENTS.md files in repos, Knowledge (persistent org-level instructions with trigger descriptions), Skills & Rules settings. Location: hosted/web/API-managed; no local disk folder documented.
 - Skills: full — Full Agent Skills standard support. SKILL.md files in .agents/skills/. Supports YAML frontmatter, dynamic $ARGUMENTS and !command blocks. Also Playbooks system. Location: hosted/web/API-managed; no local disk folder documented.
 - Hooks: full — Automations engine: Slack/GitHub/Linear/schedule/cron/webhook triggers. Actions include start session, message session, triage. Payload filtering and secret auth.
@@ -295,6 +322,9 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Form factor: CLI, Extension, Web
 - Released: 2025
 - Latest update: May '26
+- Some Free Usage: blank
+- No Account Required: partial — Droid BYOK supports local models, but normal Droid CLI setup still documents Factory authentication, so account-free use is not confirmed end-to-end.
+- Can Use Other Subscriptions: full — Droid BYOK supports external provider keys, open-source providers, and local models.
 - Rules: full — AGENTS.md appears in Factory configuration docs. Location: `AGENTS.md` and `.factory/` project configuration.
 - Skills: full — Skills can be managed and invoked from the CLI. Location: Factory Skills configuration in project/user Factory config; exact folder varies by scope.
 - Hooks: full — Lifecycle hooks are first-class slash-command managed features.
@@ -325,6 +355,9 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Status: Deprecated
 - Released: Jun '25
 - Latest update: May '26
+- Some Free Usage: full — Gemini CLI documents a free tier when signing in with a Google account.
+- No Account Required: blank
+- Can Use Other Subscriptions: full — Gemini CLI can use quotas from Gemini Code Assist editions, and also supports API-key pay-as-you-go.
 - Rules: full — Uses GEMINI.md context files. Location: no public disk folder/file location found in docs reviewed.
 - Skills: partial — Extensible through tools/extensions rather than the same SKILL.md contract. Location: no public disk folder/file location found in docs reviewed.
 - Hooks: full — Supports hooks in settings.
@@ -354,6 +387,9 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Form factor: CLI, IDE, Extension, SDK, Web
 - Released: Jun '25
 - Latest update: May '26
+- Some Free Usage: blank
+- No Account Required: blank
+- Can Use Other Subscriptions: blank
 - Rules: full — Multiple layers: .github/copilot-instructions.md (repo-wide), path-specific .github/instructions/**, AGENTS.md, CLAUDE.md, GEMINI.md, personal instructions, org-level. Location: no public disk folder/file location found in docs reviewed.
 - Skills: full — Open Agent Skills standard. .github/skills, .claude/skills, .agents/skills. Personal skills in ~/.copilot/skills. gh skill CLI for discovery/install. Location: no public disk folder/file location found in docs reviewed.
 - Hooks: full — Full lifecycle hook system: sessionStart, sessionEnd, userPromptSubmitted, preToolUse (approve/deny), postToolUse, agentStop, subagentStop, errorOccurred. .github/hooks/*.json.
@@ -382,6 +418,9 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Form factor: CLI
 - Released: May '26
 - Latest update: May '26
+- Some Free Usage: blank
+- No Account Required: blank
+- Can Use Other Subscriptions: blank
 - Rules: full — Official launch page says AGENTS.md works out of the box. Location: `AGENTS.md` in repo tree.
 - Skills: full — Skills and plugin marketplace are called out in the launch page. Location: plugin/skill folders managed by Grok Build plugin marketplace; exact disk root not yet public.
 - Hooks: full — Hooks are explicitly listed as supported.
@@ -410,6 +449,9 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Form factor: Web
 - Released: Aug '25
 - Latest update: May '26
+- Some Free Usage: blank
+- No Account Required: blank
+- Can Use Other Subscriptions: blank
 - Rules: unknown — No public docs found for persistent repo instruction files. Location: hosted/web/API-managed; no local disk folder documented.
 - Skills: none — No reusable skill/playbook system found. Location: hosted/web/API-managed; no local disk folder documented.
 - Hooks: partial — GitHub issue label assignment acts as a lightweight trigger.
@@ -438,6 +480,9 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Form factor: CLI, IDE
 - Released: Jan '25
 - Latest update: May '26
+- Some Free Usage: blank
+- No Account Required: blank
+- Can Use Other Subscriptions: blank
 - Rules: partial — JetBrains documents project guidance for Junie, but not AGENTS.md-compatible rules. Location: no public disk folder/file location found in docs reviewed.
 - Skills: unknown — No reusable skill folder standard found. Location: no public disk folder/file location found in docs reviewed.
 - Hooks: none — No lifecycle hook system found.
@@ -467,6 +512,9 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Form factor: CLI, Extension
 - Released: Feb '26
 - Latest update: Jun '26
+- Some Free Usage: full — Kilo Code documents free/open-source access plus Auto Free/BYOK/local inference options.
+- No Account Required: full — Can run local models via Ollama, LM Studio, or Atomic Chat without a Kilo-hosted account.
+- Can Use Other Subscriptions: full — Kilo documents use of an existing ChatGPT Plus/Pro subscription and BYOK/local provider options.
 - Rules: full — Full support: Project Rules (via instructions key in kilo.jsonc), Global Rules (same in ~/.config/kilo/kilo.jsonc), AGENTS.md, CLAUDE.md, CONTEXT.md. Location: no public disk folder/file location found in docs reviewed.
 - Skills: full — Full Agent Skills standard. SKILL.md files with YAML frontmatter. Global ~/.kilo/skills/, project .kilo/skills/. Compat with .claude/skills/, .agents/skills/. Location: no public disk folder/file location found in docs reviewed.
 - Hooks: full — Full support via Plugin system. Lifecycle hooks: config, event (bus events), tool hooks (execute.before/after), chat hooks, permission hooks, provider hooks. 17+ hook types.
@@ -496,6 +544,9 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Form factor: CLI, Extension, SDK
 - Released: Oct '25
 - Latest update: Jun '26
+- Some Free Usage: blank
+- No Account Required: blank
+- Can Use Other Subscriptions: blank
 - Rules: full — Full AGENTS.md support. Hierarchical loading from git root to working dir, including .kimi/AGENTS.md at each level (32 KiB budget). /init command auto-generates AGENTS.md. Location: no public disk folder/file location found in docs reviewed.
 - Skills: full — Full Agent Skills format (SKILL.md with YAML frontmatter). Four-tier auto-discovery. Cross-compatible with Claude/Codex skill dirs. Flow skills with Mermaid/D2 flowcharts. Location: no public disk folder/file location found in docs reviewed.
 - Hooks: partial — Supported (Beta). 13 lifecycle events: PreToolUse, PostToolUse, SessionStart, SessionEnd, SubagentStart/Stop, PreCompact, PostCompact, Notification. Shell commands via stdin.
@@ -524,6 +575,9 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Form factor: CLI, IDE, Web
 - Released: Jul '25
 - Latest update: May '26
+- Some Free Usage: full — Kiro billing docs say new users start on the perpetual Kiro Free tier.
+- No Account Required: blank
+- Can Use Other Subscriptions: blank
 - Rules: full — Steering files provide project/team instructions. Location: `.kiro/steering/` project steering files and global steering settings.
 - Skills: full — Kiro CLI references agent skills and Powers. Location: Kiro Powers use `POWER.md`; agent skills/knowledge are managed in Kiro project configuration.
 - Hooks: full — Smart hooks are documented as core CLI features.
@@ -553,6 +607,9 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Form factor: CLI, Extension, SDK, Mac App
 - Released: 2025
 - Latest update: Jun '26
+- Some Free Usage: full — OpenCode homepage documents free models included.
+- No Account Required: full — OpenCode supports running local models, so it can be used without an OpenCode-hosted account when configured locally.
+- Can Use Other Subscriptions: full — OpenCode supports 75+ LLM providers and local models via provider configuration/API keys.
 - Rules: full — Supports instruction/config files. Location: `AGENTS.md` and opencode config files in the repo/user config scope.
 - Skills: full — Supports skills. Location: opencode Agent Skills are stored as skill folders with `SKILL.md` according to the configured scope.
 - Hooks: full — Config supports commands/hooks workflows.
@@ -581,6 +638,9 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Form factor: CLI, SDK
 - Released: May '26
 - Latest update: Jun '26
+- Some Free Usage: blank
+- No Account Required: full — Pi supports custom providers/models including Ollama, vLLM, LM Studio, and proxies, so local usage need not require a Pi-hosted account.
+- Can Use Other Subscriptions: full — Pi documents subscription-based providers via OAuth plus API-key providers and auth-file/env configuration.
 - Rules: full — Loads `AGENTS.md` and `CLAUDE.md` from `~/.pi/agent/`, ancestors, and cwd. Supports global and project context files with path-based precedence.
 - Skills: full — Discovers skills from `~/.pi/agent/skills/`, `~/.agents/skills/`, `.pi/skills/`, and `.agents/skills/`, including `SKILL.md` directories. Supports `/skill:name` command registration and cross-harness imports (e.g. Claude/ Codex).
 - Hooks: full — Extension API supports lifecycle/tool hooks via TypeScript extensions, including tool event hooks and custom event handlers. Full extension-based hook model from docs and examples.
@@ -610,6 +670,9 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Form factor: CLI, Extension, SDK
 - Released: Jun '25
 - Latest update: Jun '26
+- Some Free Usage: blank
+- No Account Required: blank
+- Can Use Other Subscriptions: blank
 - Rules: full — Hierarchical context files (QWEN.md) at project/user levels. Custom system prompts via --system-prompt and --append-system-prompt. Layered config across system/user/project/env/cli. Location: Qwen Code project/user instruction files and extension packages; commonly `AGENTS.md`-style repo context plus Qwen config.
 - Skills: full — Full Agent Skills system: SKILL.md with YAML frontmatter, model-invoked, personal (~/.qwen/skills/) and project (.qwen/skills/), path gating, extension skills. Location: Qwen Code extensions package skills via `qwen-extension.json`.
 - Hooks: full — 14 hook events: PreToolUse, PostToolUse, SessionStart, SessionEnd, SubagentStart/Stop, PreCompact, PostCompact, Notification, PermissionRequest. Three executors: command, http, function.
@@ -638,6 +701,9 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Form factor: Web
 - Released: Sep '24
 - Latest update: Sep '25
+- Some Free Usage: blank
+- No Account Required: blank
+- Can Use Other Subscriptions: blank
 - Rules: partial — Project context exists inside Replit, but no AGENTS.md-style standard confirmed. Location: hosted/web/API-managed; no local disk folder documented.
 - Skills: none — No reusable skill-folder system found. Location: hosted/web/API-managed; no local disk folder documented.
 - Hooks: partial — Agent 3 can run autonomous test/fix loops, but not general user-defined lifecycle hooks.
@@ -667,6 +733,9 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Form factor: Extension
 - Released: Mid-2025
 - Latest update: May '26
+- Some Free Usage: blank
+- No Account Required: blank
+- Can Use Other Subscriptions: blank
 - Rules: full — Comprehensive: .roorules, .roo/rules/, .clinerules fallback, ~/.roo/rules/ global dir, AGENTS.md/AGENT.md support, mode-specific rules via rules-{modeSlug}. Location: no public disk folder/file location found in docs reviewed.
 - Skills: full — Full skills (added v3.38.0, Dec 2025). Follows agentskills.io spec: SKILL.md with frontmatter, progressive discovery, mode-specific targeting, bundled resources. Location: no public disk folder/file location found in docs reviewed.
 - Hooks: none — No lifecycle hooks system found in any documentation. Built-in slash commands exist but no user-defined lifecycle hooks.
@@ -695,6 +764,9 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Form factor: CLI, IDE, Extension
 - Released: Nov '24
 - Latest update: Apr '26
+- Some Free Usage: blank
+- No Account Required: blank
+- Can Use Other Subscriptions: blank
 - Rules: full — Three scopes: Global (~/.codeium/windsurf/memories/global_rules.md, always-on), Workspace (.windsurf/rules/*.md with frontmatter modes), System (/etc/windsurf/rules/*.md). AGENTS.md support. Location: no public disk folder/file location found in docs reviewed.
 - Skills: full — Full support. SKILL.md files with YAML frontmatter. Progressive disclosure. Scopes: Workspace .windsurf/skills/, Global ~/.codeium/windsurf/skills/. Discovers .agents/skills/ and .claude/skills/. Location: no public disk folder/file location found in docs reviewed.
 - Hooks: full — 12 hook events: pre/post read/write code, pre/post run command, pre/post MCP tool use, pre/post user prompt, post cascade response. Pre-hooks can block with exit code 2.

@@ -119,6 +119,21 @@
     "source_url": "https://kilo.ai/pricing#simple-transparent-pricing:~:text=Simple%2C%20transparent%20pricing",
     "comment": "App is free & MIT. Kilo Pass (Starter $19/mo, Pro $49/mo, Expert $199/mo). BYOK (no markup). Free models. Teams: $15/user/mo."
   },
+  "some_free_usage": {
+    "support": "full",
+    "source_url": "https://kilo.ai/pricing#kilo-code:~:text=Free%20and%20open%20source",
+    "comment": "Kilo Code documents free/open-source access plus Auto Free/BYOK/local inference options."
+  },
+  "no_account_required": {
+    "support": "full",
+    "source_url": "https://kilo.ai/docs/automate/extending/local-models#using-local-models:~:text=supports%20running%20language%20models%20locally",
+    "comment": "Can run local models via Ollama, LM Studio, or Atomic Chat without a Kilo-hosted account."
+  },
+  "can_use_other_subscriptions": {
+    "support": "full",
+    "source_url": "https://kilo.ai/docs/ai-providers/openai-chatgpt-plus-pro#why-use-your-chatgpt-subscription:~:text=Use%20your%20ChatGPT%20Plus%20or%20Pro%20subscription",
+    "comment": "Kilo documents use of an existing ChatGPT Plus/Pro subscription and BYOK/local provider options."
+  },
   "hosted_agent": {
     "support": "partial",
     "source_url": "https://kilo.ai/#clip0_jetbrains:~:text=Kilo%3A%20The%20Open%20Source%20AI%20Coding%20Agent%20for%20VS%20Code%2C%20JetBrains%2C%20and%20your%20CLI",

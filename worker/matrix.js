@@ -11,6 +11,8 @@ const columns = Object.entries(schema.properties)
   });
 
 const groups = [...new Set(columns.map(c => c.group))];
+const META_COLUMN_KEYS = ["name", "form_factor", "released_in", "latest_major_update", "pricing", "notes"];
+const featureCount = columns.filter(c => !META_COLUMN_KEYS.includes(c.key)).length;
 
 function htmlEscape(v) { return String(v ?? "").replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;").replaceAll('"',"&quot;"); }
 
@@ -32,7 +34,7 @@ function faviconSrc(agent) {
 }
 
 function metaTags() {
-  const desc = `Compare ${matrix.length} coding agents, AI coding CLIs, and IDEs across 18 features. Each cell sourced from official docs.`;
+  const desc = `Compare ${matrix.length} coding agents, AI coding CLIs, and IDEs across ${featureCount} features. Each cell sourced from official docs.`;
   return `
     <meta name="description" content="${htmlEscape(desc)}">
     <meta name="robots" content="index, follow">
@@ -319,7 +321,7 @@ td.value .cell-value {
   </nav>
 </header>
 <section class="hero">
-  <p>Compare ${htmlEscape(matrix.length)} AI coding agents across 18 features. <strong>Name or icon</strong> opens the product site; <strong>⊙</strong> hides or shows a column; drag headers to reorder; use the <strong>API docs</strong> row for official references.</p>
+  <p>Compare ${htmlEscape(matrix.length)} AI coding agents across ${htmlEscape(featureCount)} features. <strong>Name or icon</strong> opens the product site; <strong>⊙</strong> hides or shows a column; drag headers to reorder; use the <strong>API docs</strong> row for official references.</p>
   <div class="meta-row">
     <span class="pill">${htmlEscape(matrix.length)} agents</span>
     <span class="pill" id="updatedPill" data-updated-at="${htmlEscape(updatedAt)}">${htmlEscape(formatUpdatedLabel(updatedAt))}</span>
@@ -388,7 +390,7 @@ function refreshUpdatedPill() {
 }
 refreshUpdatedPill();
 setInterval(refreshUpdatedPill, 60000);
-const metaCols = new Set(['name','form_factor','released_in','latest_major_update','pricing','notes']);
+const metaCols = new Set(${JSON.stringify(META_COLUMN_KEYS)});
 const featureCols = columns.filter(c => !metaCols.has(c.key));
 const aboutCols = columns.filter(c => metaCols.has(c.key) && c.key !== 'name' && c.key !== 'notes');
 const DATE_SORT_ROWS = new Set(['released_in','latest_major_update']);

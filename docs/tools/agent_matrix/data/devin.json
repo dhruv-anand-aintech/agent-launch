@@ -123,6 +123,11 @@
     "source_url": "https://devin.ai/pricing#source:~:text=Free%3AFree%2CPro%3A%2420%2Fmonth%2CMax%3A%24200%2Fmonth%2CTeams%3A%2480%2Fmonth",
     "comment": "Free (limited), Pro ($20/mo), Max ($200/mo), Teams ($80/mo minimum). Enterprise: custom pricing with VPC, SAML/OIDC. ACU-based consumption model."
   },
+  "some_free_usage": {
+    "support": "full",
+    "source_url": "https://cognition.ai/blog/new-self-serve-plans-for-devin#what-s-changing:~:text=Free%20%E2%80%94%20Free",
+    "comment": "Cognition announced a Free self-serve Devin plan with limited access."
+  },
   "hosted_agent": {
     "support": "full",
     "source_url": "https://docs.devin.ai/get-started/devin-intro#the-devin-interface:~:text=Devin%20is%20also%20available%20via%20the%20Devin%20API",

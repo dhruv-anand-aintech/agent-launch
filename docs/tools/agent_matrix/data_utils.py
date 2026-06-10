@@ -63,8 +63,8 @@ def _readme_support(row: dict, key: str) -> str:
 
 
 def _build_rows_markdown(rows: list[dict]) -> str:
-    header = "| Name | Form factor | Released | Latest major update | Rules | Skills | Transcripts | Hooks | MCP | Hosted agent | Arbitrary models |"
-    divider = "| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |"
+    header = "| Name | Form factor | Released | Latest major update | Some free | No account | Other subs | Rules | Skills | Transcripts | Hooks | MCP | Hosted agent | Arbitrary models |"
+    divider = "| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |"
     lines = [header, divider]
 
     for row in sorted(rows, key=lambda r: r.get("name", "")):
@@ -78,6 +78,9 @@ def _build_rows_markdown(rows: list[dict]) -> str:
                     ", ".join(ff),
                     _readme_value(row, "released_in"),
                     _readme_value(row, "latest_major_update"),
+                    _readme_support(row, "some_free_usage"),
+                    _readme_support(row, "no_account_required"),
+                    _readme_support(row, "can_use_other_subscriptions"),
                     _readme_support(row, "rules"),
                     _readme_support(row, "skills"),
                     _readme_support(row, "transcripts"),
@@ -350,6 +353,7 @@ def generate_llms_txt(bundle_path: str, output_path: str) -> None:
         "model_selection": "Mod", "approval_mode": "App", "sandbox_mode": "San",
         "resume": "Res", "continue": "Con", "non_interactive": "Hdl",
         "output_format": "Fmt", "statusline": "Sta", "telemetry": "Tel",
+        "some_free_usage": "Fre", "no_account_required": "NoA", "can_use_other_subscriptions": "Oth",
         "hosted_agent": "Hst", "custom_model_provider": "BYOM",
     }
     fkeys = [k for k in feature_keys if k in feature_short]
@@ -435,6 +439,7 @@ def main() -> int:
 
     readme_cmd = sub.add_parser("readme")
     readme_cmd.add_argument("--data-glob", default="docs/tools/agent_matrix/data/*.json")
+    readme_cmd.add_argument("--bundle", default="docs/tools/agent_matrix/bundle.json")
     readme_cmd.add_argument("--readme", default=README_PATH)
 
     args = parser.parse_args()
@@ -445,7 +450,7 @@ def main() -> int:
     elif args.command == "llms-txt":
         generate_llms_txt(args.bundle, args.output)
     elif args.command == "readme":
-        rows = [_load_json(name) for name in sorted(glob.glob(args.data_glob))]
+        rows = _load_json(args.bundle) if Path(args.bundle).exists() else [_load_json(name) for name in sorted(glob.glob(args.data_glob))]
         _update_readme(rows, args.readme)
     return 0
 

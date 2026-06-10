@@ -126,6 +126,11 @@
     "source_url": "https://cursor.com/help/models-and-usage/usage-limits#how-much-usage-does-each-plan-include:~:text=Pro%20Plus",
     "comment": "Individual: Pro $20/mo ($20 API usage), Pro+ $60/mo ($70 API usage), Ultra $200/mo ($400 API usage). Teams $40/user/mo."
   },
+  "some_free_usage": {
+    "support": "full",
+    "source_url": "https://cursor.com/pricing#pricing:~:text=Hobby%20Free%20Includes",
+    "comment": "Cursor pricing documents a Hobby Free plan with limited Agent requests and Tab completions."
+  },
   "transcripts": {
     "support": "full",
     "source_url": "https://docs.cursor.com/en/cli/overview#source:~:text=Resume%20previous%20conversations",
