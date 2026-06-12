@@ -226,7 +226,7 @@ Backend flag mapping:
 | Agent | `ask` | `plan` | `auto` | `danger` |
 | --- | --- | --- | --- | --- |
 | Antigravity CLI | backend default | `--sandbox` | backend default | `--dangerously-skip-permissions` |
-| Codex | `-s read-only` | `-s read-only` plus `-a never` in non-interactive mode | `-a never` | `-a never -s danger-full-access` |
+| Codex | `-s read-only` | `-s read-only` | backend default | `--dangerously-bypass-approvals-and-sandbox` |
 | Claude Code | `--permission-mode default` | `--permission-mode plan` | `--permission-mode auto` | `--dangerously-skip-permissions` |
 | Gemini CLI | `--approval-mode default` | `--approval-mode plan` | `--approval-mode auto_edit` | `--yolo` |
 | OpenCode | `--agent ask` | `--agent plan` | backend default | `--dangerously-skip-permissions` in non-interactive mode |

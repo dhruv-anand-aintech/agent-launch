@@ -43,6 +43,7 @@ Form factor values are deliberately strict: each value should have a concrete pe
 | Kilo Code | CLI, Extension | Feb '26 | Jun '26 | full | full | full | full | full | unknown | full | full | partial | full |
 | Kimi CLI | CLI, Extension, SDK | Oct '25 | Jun '26 |  |  |  | full | full | unknown | partial | full | none | full |
 | Kiro | CLI, IDE, Web | Jul '25 | May '26 | full |  |  | full | full | partial | full | full | partial | none |
+| MiMo Code | CLI, IDE, Extension | Jun '26 | Jun '26 | full | full | full | full | full | full | partial | full | none | full |
 | OpenAI Codex CLI | CLI, Extension, SDK, Web, Mac App | Apr '25 | Jun '26 | full |  | full | full | full | full | full | full | full | full |
 | OpenCode | CLI, Extension, SDK, Mac App | 2025 | Jun '26 | full | full | full | full | full | full | full | full | none | full |
 | Pi | CLI, SDK | May '26 | Jun '26 |  | full | full | full | full | full | full | none | none | full |

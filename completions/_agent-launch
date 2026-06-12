@@ -16,6 +16,7 @@ agents=(
   'kilo:Kilo Code'
   'kimi:Kimi Code'
   'kiro:Kiro CLI'
+  'mimo:MiMo Code'
   'opencode:OpenCode'
   'pi:Pi Coding Agent'
   'qwen:Qwen Code'

@@ -27,7 +27,7 @@ AGENTS: dict[str, AgentSpec] = {
     "amp": AgentSpec("amp", "", "", "pro"),
     "antigravity": AgentSpec("agy", "", "", "pro"),
     "codex": AgentSpec("codex", "gpt-5.4-mini", "gpt-5.5", "pro"),
-    "claude": AgentSpec("claude", "sonnet", "sonnet", "pro"),
+    "claude": AgentSpec("claude", "haiku", "sonnet", "pro"),
     "cline": AgentSpec("cline", "", "", "pro"),
     "droid": AgentSpec("droid", "claude-opus-4-8-fast", "claude-opus-4-8", "pro"),
     "gemini": AgentSpec("gemini", "gemini-2.5-flash", "gemini-2.5-pro", "pro"),
@@ -35,6 +35,7 @@ AGENTS: dict[str, AgentSpec] = {
     "kilo": AgentSpec("kilo", "", "", "pro"),
     "kimi": AgentSpec("kimi", "", "", "pro"),
     "kiro": AgentSpec("kiro-cli", "", "", "pro"),
+    "mimo": AgentSpec("mimo", "", "", "pro"),
     "opencode": AgentSpec("opencode", "opencode-go/deepseek-v4-flash", "opencode-go/kimi-k2.6", "pro"),
     "pi": AgentSpec("pi", "", "", "pro"),
     "qwen": AgentSpec("qwen", "", "", "pro"),
@@ -64,6 +65,7 @@ DEFAULT_AGENT_ORDER = (
     "kilo",
     "kimi",
     "kiro",
+    "mimo",
     "pi",
     "qwen",
 )
@@ -128,6 +130,7 @@ MODEL_FLAG_AGENTS = {
     "kilo",
     "kimi",
     "kiro",
+    "mimo",
     "opencode",
     "pi",
     "qwen",
@@ -358,9 +361,9 @@ def mode_flags(agent: str, mode: str, non_interactive: bool) -> list[str]:
     mappings: dict[str, dict[str, list[str]]] = {
         "codex": {
             "ask": ["-s", "read-only"],
-            "plan": ["-a", "never", "-s", "read-only"] if non_interactive else ["-s", "read-only"],
-            "auto": ["-a", "never"],
-            "danger": ["-a", "never", "-s", "danger-full-access"],
+            "plan": ["-s", "read-only"],
+            "auto": [],
+            "danger": ["--dangerously-bypass-approvals-and-sandbox"],
         },
         "claude": {
             "ask": ["--permission-mode", "default"],
@@ -427,6 +430,12 @@ def mode_flags(agent: str, mode: str, non_interactive: bool) -> list[str]:
             "plan": [],
             "auto": [],
             "danger": ["--trust-all-tools"],
+        },
+        "mimo": {
+            "ask": ["--agent", "plan"],
+            "plan": ["--agent", "plan"],
+            "auto": ["--agent", "build"],
+            "danger": ["--dangerously-skip-permissions"] if non_interactive else [],
         },
         "opencode": {
             "ask": ["--agent", "ask"],
@@ -683,6 +692,24 @@ def build_command(args: argparse.Namespace) -> list[str]:
             cmd += ["--no-interactive"]
         if prompt:
             cmd.append(prompt)
+
+    elif agent == "mimo":
+        if non_interactive:
+            cmd += ["run"]
+        else:
+            cmd += [args.cwd]
+        cmd += mode_flags(agent, args.mode, non_interactive)
+        append_model(cmd, agent, model)
+        append_passthrough(cmd, args)
+        if resume_id:
+            cmd += ["--session", resume_id]
+        elif resume_requested or continue_session:
+            cmd += ["--continue"]
+        if prompt:
+            if non_interactive:
+                cmd.append(prompt)
+            else:
+                cmd += ["--prompt", prompt]
 
     elif agent == "opencode":
         if non_interactive:

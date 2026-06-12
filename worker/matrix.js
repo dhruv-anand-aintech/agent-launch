@@ -3,6 +3,14 @@ import llmsTxt from "../docs/tools/agent_matrix/llms.txt";
 import schema from "../docs/tools/agent_matrix/schema.json";
 import updatedMeta from "../docs/tools/agent_matrix/updated.json";
 
+const PWA = {
+  name: "Agent Launch Compare",
+  shortName: "Compare",
+  themeColor: "#176b5b",
+  backgroundColor: "#f6f4ee",
+  label: "AL",
+};
+
 const columns = Object.entries(schema.properties)
   .filter(([key]) => !["links", "notes"].includes(key))
   .map(([key, value]) => {
@@ -107,6 +115,7 @@ function render() {
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Coding Agent Feature Matrix</title>
 ${metaTags()}
+${pwaHead()}
 <style>
 :root {
   color-scheme: light; --bg: #f6f4ee; --panel: #fffdf8; --ink: #17130d; --muted: #766f63;
@@ -725,8 +734,45 @@ var state = loadState(); colOrder = state.cols; rowOrder = state.rows;
 renderHeader(); renderBody();
 window.addEventListener('resize', function(){ updateColWidths(); scheduleFitAgentHeaderNames(); });
 </script>
+${pwaScript()}
 </body>
 </html>`;
+}
+
+function pwaHead() {
+  return `<meta name="theme-color" content="${PWA.themeColor}">
+<link rel="manifest" href="/manifest.json">
+<link rel="apple-touch-icon" href="/pwa-icon.svg">`;
+}
+
+function pwaScript() {
+  return `<script>
+if ('serviceWorker' in navigator) window.addEventListener('load', function(){ navigator.serviceWorker.register('/sw.js').catch(function(){}); });
+</script>`;
+}
+
+function pwaManifest() {
+  return JSON.stringify({
+    name: PWA.name,
+    short_name: PWA.shortName,
+    start_url: "/",
+    scope: "/",
+    display: "standalone",
+    background_color: PWA.backgroundColor,
+    theme_color: PWA.themeColor,
+    icons: [{ src: "/pwa-icon.svg", sizes: "any", type: "image/svg+xml", purpose: "any maskable" }],
+  });
+}
+
+function pwaIcon() {
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><rect width="512" height="512" rx="96" fill="${PWA.themeColor}"/><text x="256" y="286" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="150" font-weight="800" fill="#fffdf8">${PWA.label}</text></svg>`;
+}
+
+function pwaAsset(url) {
+  if (url.pathname === "/manifest.json") return new Response(pwaManifest(), {headers: {"content-type":"application/manifest+json; charset=utf-8","cache-control":"public, max-age=300"}});
+  if (url.pathname === "/pwa-icon.svg") return new Response(pwaIcon(), {headers: {"content-type":"image/svg+xml; charset=utf-8","cache-control":"public, max-age=86400"}});
+  if (url.pathname === "/sw.js") return new Response("self.addEventListener('install',()=>self.skipWaiting());self.addEventListener('activate',e=>e.waitUntil(self.clients.claim()));", {headers: {"content-type":"text/javascript; charset=utf-8","cache-control":"no-cache"}});
+  return null;
 }
 
 function renderRobots() {
@@ -744,6 +790,8 @@ const bundleJson = JSON.stringify(matrix, null, 2);
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
+    const pwa = pwaAsset(url);
+    if (pwa) return pwa;
     const iconPath = url.pathname;
     if (iconPath === "/aider.png" || iconPath === "/amp.svg") {
       if (env.ASSETS) return env.ASSETS.fetch(request);

@@ -597,7 +597,7 @@
       "value": "Jun '26",
       "source_url": "https://docs.anthropic.com/en/docs/claude-code/overview#use-claude-code:~:text=Claude%20Code",
       "comment": "Current docs cover CLI, SDK, hooks, skills, and settings.",
-      "sort_date": "2026-06-08"
+      "sort_date": "2026-06-11"
     },
     "rules": {
       "support": "full",
@@ -778,7 +778,7 @@
       "value": "Jun '26",
       "source_url": "https://github.com/cline/cline/releases#source:~:text=CLI%20v3.0.10%20Latest%2C%20May%2022%2C%202026",
       "comment": "CLI at v3.0.10 (May 22, 2026), VS Code extension at v3.84.0 (May 19, 2026). Rapid release cadence.",
-      "sort_date": "2026-06-09"
+      "sort_date": "2026-06-11"
     },
     "rules": {
       "support": "full",
@@ -978,7 +978,7 @@
       "value": "Jun '26",
       "source_url": "https://developers.openai.com/codex/changelog/#codex-changelog:~:text=changelog",
       "comment": "Captured from current Codex docs/changelog state.",
-      "sort_date": "2026-06-09"
+      "sort_date": "2026-06-11"
     },
     "rules": {
       "support": "full",
@@ -2817,7 +2817,7 @@
       "value": "Jun '26",
       "source_url": "https://github.com/Kilo-Org/kilocode/releases#source:~:text=v7.2.52",
       "comment": "Latest release: v7.2.52 (2026-05-11). v7.x series started with v7.0.26 (2026-02-23). 98+ releases total.",
-      "sort_date": "2026-06-09"
+      "sort_date": "2026-06-11"
     },
     "rules": {
       "support": "full",
@@ -3013,7 +3013,7 @@
       "value": "Jun '26",
       "source_url": "https://github.com/MoonshotAI/kimi-cli/releases/tag/1.44.0#1440:~:text=1.44.0",
       "comment": "v1.44.0 (2026-05-14). Very active development: 97 releases in ~7 months. Rapid iteration pace.",
-      "sort_date": "2026-06-05"
+      "sort_date": "2026-06-10"
     },
     "rules": {
       "support": "full",
@@ -3349,6 +3349,202 @@
     }
   },
   {
+    "name": "MiMo Code",
+    "links": {
+      "docs": "https://mimo.xiaomi.com/mimocode/start",
+      "github": "https://github.com/XiaomiMiMo/MiMo-Code",
+      "website": "https://mimo.xiaomi.com/mimocode/start",
+      "slug": "mimo-code"
+    },
+    "form_factor": {
+      "values": [
+        "CLI",
+        "IDE",
+        "Extension"
+      ],
+      "source_url": "https://mimo.xiaomi.com/mimocode/start#get-started:~:text=terminal%2C%20the%20desktop%20app%2C%20and%20IDE%20extensions",
+      "comment": "Docs describe the same experience in terminal, desktop app, and IDE extensions; CLI install is via curl or npm. Per-form-factor links: CLI: https://mimo.xiaomi.com/mimocode/install; IDE: https://mimo.xiaomi.com/mimocode/start; Extension: https://mimo.xiaomi.com/mimocode/start.",
+      "links": {
+        "CLI": "https://mimo.xiaomi.com/mimocode/install",
+        "IDE": "https://mimo.xiaomi.com/mimocode/start",
+        "Extension": "https://mimo.xiaomi.com/mimocode/start"
+      }
+    },
+    "released_in": {
+      "value": "Jun '26",
+      "source_url": "https://github.com/XiaomiMiMo/MiMo-Code/releases/tag/v0.1.0#v010:~:text=v0.1.0",
+      "comment": "GitHub shows v0.1.0 as the first public release on 2026-06-10.",
+      "sort_date": "2026-06-10"
+    },
+    "latest_major_update": {
+      "value": "Jun '26",
+      "source_url": "https://github.com/XiaomiMiMo/MiMo-Code/releases/tag/v0.1.0#v010:~:text=v0.1.0",
+      "comment": "Latest public release captured for this row is v0.1.0 on 2026-06-10.",
+      "sort_date": "2026-06-11"
+    },
+    "rules": {
+      "support": "full",
+      "source_url": "https://mimo.xiaomi.com/mimocode/rules#claude-code-compatibility:~:text=AGENTS.md",
+      "comment": "Rules support includes AGENTS.md plus Claude Code fallback conventions such as project CLAUDE.md and global ~/.claude/CLAUDE.md."
+    },
+    "skills": {
+      "support": "full",
+      "source_url": "https://mimo.xiaomi.com/mimocode/start#what-you-can-do-with-mimo-code:~:text=Use%20rules%2C%20skills%2C%20and%20commands",
+      "comment": "Official docs list skills in customization and describe reusable skills for team workflows."
+    },
+    "hooks": {
+      "support": "partial",
+      "source_url": "https://github.com/XiaomiMiMo/MiMo-Code#relationship-to-opencode:~:text=plugins",
+      "comment": "Docs highlight plugins and inherited OpenCode capabilities, but a first-class lifecycle hook page was not found in public MiMo docs reviewed."
+    },
+    "mcp_servers": {
+      "support": "full",
+      "source_url": "https://mimo.xiaomi.com/mimocode/cli-subcommands#mcp:~:text=Manage%20Model%20Context%20Protocol%20servers",
+      "comment": "CLI has `mimo mcp add/list/auth/logout/debug` commands for local and remote MCP servers."
+    },
+    "custom_commands": {
+      "support": "full",
+      "source_url": "https://mimo.xiaomi.com/mimocode/config-files#config-files:~:text=command%20%60object%60%20Custom%20command%20templates",
+      "comment": "Config files include a `command` object for custom command templates; built-in slash commands are documented separately."
+    },
+    "goal_command": {
+      "support": "full",
+      "source_url": "https://github.com/XiaomiMiMo/MiMo-Code#goal--stop-condition:~:text=The%20%2Fgoal%20command%20sets%20a%20stopping%20condition",
+      "comment": "README documents `/goal` with an independent judge model evaluating whether the stop condition is satisfied."
+    },
+    "subagents": {
+      "support": "full",
+      "source_url": "https://github.com/XiaomiMiMo/MiMo-Code#subagent-system:~:text=The%20primary%20agent%20can%20create%20subagents%20on%20demand",
+      "comment": "README documents on-demand subagents with shared context, parallel work, lifecycle tracking, cancellation, and background execution."
+    },
+    "model_selection": {
+      "support": "full",
+      "source_url": "https://mimo.xiaomi.com/mimocode/cli-options#run:~:text=%60--model%60%60-m%20%60Model%20to%20use%20in%20the%20form%20of%20provider%2Fmodel",
+      "comment": "CLI supports `--model/-m`; config and auth docs also route through Models.dev/provider configuration."
+    },
+    "approval_mode": {
+      "support": "full",
+      "source_url": "https://mimo.xiaomi.com/mimocode/permissions#actions:~:text=%22allow%22%20%E2%80%94%20run%20without%20approval",
+      "comment": "Permission rules resolve to allow, ask, or deny; run mode also exposes `--dangerously-skip-permissions`."
+    },
+    "sandbox_mode": {
+      "support": "partial",
+      "source_url": "https://mimo.xiaomi.com/mimocode/permissions#external-directories:~:text=external_directory%20to%20allow%20tool%20calls%20that%20touch%20paths%20outside%20the%20working%20directory",
+      "comment": "Permission config can constrain external directories and tools, but no separate container/filesystem sandbox mode was found."
+    },
+    "resume": {
+      "support": "full",
+      "source_url": "https://mimo.xiaomi.com/mimocode/sessions#starting-and-resuming-sessions:~:text=mimo%20--session%20%3Cid%3E",
+      "comment": "Sessions can resume by explicit ID with `mimo --session <id>`."
+    },
+    "continue": {
+      "support": "full",
+      "source_url": "https://mimo.xiaomi.com/mimocode/sessions#starting-and-resuming-sessions:~:text=mimo%20--continue",
+      "comment": "Most recent session can be continued with `mimo --continue`."
+    },
+    "non_interactive": {
+      "support": "full",
+      "source_url": "https://mimo.xiaomi.com/mimocode/cli-options#run:~:text=mimo%20run%20%5Bmessage..%5D",
+      "comment": "`mimo run [message..]` provides command-line execution outside the TUI."
+    },
+    "output_format": {
+      "support": "full",
+      "source_url": "https://mimo.xiaomi.com/mimocode/cli-options#run:~:text=%60--format%20%60Format%3A%20default%20%28formatted%29%20or%20json%20%28raw%20JSON%20events%29",
+      "comment": "`mimo run` supports formatted output or raw JSON events via `--format`."
+    },
+    "statusline": {
+      "support": "unknown",
+      "source_url": "https://mimo.xiaomi.com/mimocode/interaction#interaction--input:~:text=interactive%20terminal%20interface%20or%20TUI",
+      "comment": "TUI is documented, but no user-configurable status line support was found in docs reviewed."
+    },
+    "telemetry": {
+      "support": "unknown",
+      "source_url": "https://mimo.xiaomi.com/mimocode/env-vars#environment-variables:~:text=Diagnostics%20and%20internal",
+      "comment": "Environment variable docs include diagnostics/internal categories, but no explicit telemetry opt-in/out policy was found in docs reviewed."
+    },
+    "custom_model_provider": {
+      "support": "full",
+      "source_url": "https://github.com/XiaomiMiMo/MiMo-Code#quick-start:~:text=Custom%20Provider%20%E2%80%94%20add%20any%20OpenAI-compatible%20API",
+      "comment": "README documents custom OpenAI-compatible providers in the TUI; auth docs support configuring API keys for providers from Models.dev."
+    },
+    "notes": "MiMo Code is a Xiaomi MiMo open-source terminal coding agent forked from OpenCode, adding cross-session memory, checkpoints, subagent orchestration, goal-driven loops, compose workflows, and dream/distill self-improvement.",
+    "pricing": {
+      "value": "Free open source; hosted MiMo services optional",
+      "source_url": "https://github.com/XiaomiMiMo/MiMo-Code#license:~:text=Source%20code%20is%20licensed%20under%20the%20MIT%20License",
+      "comment": "Source code is MIT-licensed. README says MiMo Auto is free for a limited time and hosted services are subject to Xiaomi MiMo terms."
+    },
+    "some_free_usage": {
+      "support": "full",
+      "source_url": "https://github.com/XiaomiMiMo/MiMo-Code#quick-start:~:text=MiMo%20Auto%20%28free%20for%20a%20limited%20time%29",
+      "comment": "README documents MiMo Auto as a free-for-limited-time anonymous channel."
+    },
+    "no_account_required": {
+      "support": "full",
+      "source_url": "https://github.com/XiaomiMiMo/MiMo-Code#quick-start:~:text=anonymous%20channel%2C%20zero%20configuration",
+      "comment": "README lists MiMo Auto as anonymous and zero configuration."
+    },
+    "can_use_other_subscriptions": {
+      "support": "full",
+      "source_url": "https://github.com/XiaomiMiMo/MiMo-Code#quick-start:~:text=Import%20from%20Claude%20Code",
+      "comment": "First-launch options include importing Claude Code authentication and custom OpenAI-compatible provider setup."
+    },
+    "hosted_agent": {
+      "support": "none",
+      "source_url": "https://github.com/XiaomiMiMo/MiMo-Code#quick-start:~:text=terminal-native%20AI%20coding%20assistant",
+      "comment": "Public README describes a terminal-native assistant; no managed cloud-hosted agent workspace was found."
+    },
+    "transcripts": {
+      "support": "full",
+      "source_url": "https://mimo.xiaomi.com/mimocode/sessions#session-storage:~:text=Session%20data%20is%20saved%20in%20MiMo%20Code%27s%20data%20directory",
+      "comment": "MiMo persists every conversation as a session, with session data saved under MIMOCODE_HOME/data."
+    },
+    "keyboard_shortcuts": {
+      "support": "full",
+      "source_url": "https://mimo.xiaomi.com/mimocode/keybinds#keybinds:~:text=keybindings",
+      "comment": "Keybinds page documents configurable keybindings, disabling keybinds, leader key behavior, and prompt shortcuts."
+    },
+    "theme_customization": {
+      "support": "full",
+      "source_url": "https://mimo.xiaomi.com/mimocode/slash-commands#slash-commands:~:text=themes",
+      "comment": "Slash commands include `/themes`; docs also list Themes under Customize."
+    },
+    "auto_save": {
+      "support": "partial",
+      "source_url": "https://mimo.xiaomi.com/mimocode/sessions#session-storage:~:text=MiMo%20Code%20persists%20every%20conversation%20as%20a%20session",
+      "comment": "Conversation/session persistence is automatic; no separate general file auto-save setting was found."
+    },
+    "debugging_output": {
+      "support": "full",
+      "source_url": "https://mimo.xiaomi.com/mimocode/cli-options#global-flags:~:text=%60--print-logs%20%60Print%20logs%20to%20stderr",
+      "comment": "Global flags include `--print-logs` and `--log-level` with DEBUG/INFO/WARN/ERROR."
+    },
+    "context_window": {
+      "support": "partial",
+      "source_url": "https://mimo.xiaomi.com/mimocode/sessions#configuration:~:text=%60reserved%60%20-%20Token%20buffer%20for%20compaction",
+      "comment": "Context compaction can be configured with auto/prune/reserved token buffer, but docs do not expose arbitrary model context-window sizing."
+    },
+    "code_formatting": {
+      "support": "full",
+      "source_url": "https://mimo.xiaomi.com/mimocode/config-files#config-files:~:text=formatter%20%60object%60%20Code%20formatters",
+      "comment": "Config files include a formatter object for code formatters."
+    },
+    "git_integration": {
+      "support": "full",
+      "source_url": "https://github.com/XiaomiMiMo/MiMo-Code#mimocode:~:text=manage%20Git",
+      "comment": "README says MiMoCode can manage Git."
+    },
+    "performance_mode": {
+      "support": "partial",
+      "source_url": "https://mimo.xiaomi.com/mimocode/sessions#configuration:~:text=%60prune%60%20-%20Remove%20old%20tool%20outputs%20to%20save%20tokens",
+      "comment": "Compaction/pruning settings optimize context usage; no broader named performance mode was found."
+    },
+    "ui_customization": {
+      "support": "partial",
+      "source_url": "https://mimo.xiaomi.com/mimocode/config-files#config-files:~:text=share%20%60string%60%60%22manual%22%60%20%2F%20%60%22auto%22%60%20%2F%20%60%22disabled%22%60",
+      "comment": "Themes and keybindings are customizable, but no documented layout/sidebar/panel customization was found."
+    }
+  },
+  {
     "name": "OpenCode",
     "links": {
       "docs": "https://opencode.ai/docs/",
@@ -3382,7 +3578,7 @@
       "value": "Jun '26",
       "source_url": "https://opencode.ai/docs/#_top:~:text=opencode",
       "comment": "Current docs capture config, agents, MCP, and providers.",
-      "sort_date": "2026-06-09"
+      "sort_date": "2026-06-11"
     },
     "rules": {
       "support": "full",
@@ -3576,7 +3772,7 @@
       "value": "Jun '26",
       "source_url": "https://github.com/earendil-works/pi/blob/main/packages/coding-agent/CHANGELOG.md#changelog:~:text=0.74.0",
       "comment": "Recent changelog entries are 0.77.0 on 2026-05-28 and 0.78.0 on 2026-05-29.",
-      "sort_date": "2026-06-09"
+      "sort_date": "2026-06-10"
     },
     "rules": {
       "support": "full",
@@ -3767,7 +3963,7 @@
       "value": "Jun '26",
       "source_url": "https://github.com/QwenLM/qwen-code#source:~:text=Release%20v0.16.0%20Latest",
       "comment": "Latest release v0.16.0 (May 21, 2026). 453 releases, 5,944 commits as of May 2026.",
-      "sort_date": "2026-06-09"
+      "sort_date": "2026-06-11"
     },
     "rules": {
       "support": "full",
