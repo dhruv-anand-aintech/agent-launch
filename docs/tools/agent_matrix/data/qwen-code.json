@@ -22,13 +22,13 @@
   },
   "released_in": {
     "value": "Jun '25",
-    "source_url": "https://github.com/QwenLM/qwen-code#source:~:text=Release%20v0.16.0%20Latest",
-    "comment": "GitHub repo created 2025-06-26. Earliest releases (v0.0.5+) shortly after. Currently at v0.16.0 (2026-05-21)."
+    "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.18.0#source:~:text=Release%20v0.18.0",
+    "comment": "GitHub repo created 2025-06-26. Earliest releases (v0.0.5+) shortly after. Current latest release: v0.18.0 (2026-06-12)."
   },
   "latest_major_update": {
-    "value": "May '26",
-    "source_url": "https://github.com/QwenLM/qwen-code#source:~:text=Release%20v0.16.0%20Latest",
-    "comment": "Latest release v0.16.0 (May 21, 2026). 453 releases, 5,944 commits as of May 2026."
+    "value": "Jun '26",
+    "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.18.0#source:~:text=Release%20v0.18.0",
+    "comment": "Latest release v0.18.0 (June 12, 2026). Release notes include standalone auto-update support, public docs entrypoint changes, statusline/model display fixes, and telemetry retry visibility."
   },
   "rules": {
     "support": "full",

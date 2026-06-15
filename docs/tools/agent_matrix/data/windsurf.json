@@ -26,9 +26,9 @@
     "comment": "Originally launched as 'Codeium' IDE, rebranded to 'Windsurf' ~November 2024. Windsurf 2.0 shipped April 15, 2026."
   },
   "latest_major_update": {
-    "value": "Apr '26",
-    "source_url": "https://windsurf.com/blog/windsurf-2-0#source:~:text=Windsurf%202.0%3A%20Introducing%20the%20Agent%20Command%20Center%20and%20Devin%20in%20Windsurf",
-    "comment": "Windsurf 2.0 (April 15, 2026): Agent Command Center (Kanban board), Devin cloud agent integration, Spaces. Latest patch: v2.3.9 (May 17, 2026)."
+    "value": "Jun '26",
+    "source_url": "https://windsurf.com/changelog/windsurf-next#source:~:text=v3.0.1028",
+    "comment": "Windsurf 2.0 (April 15, 2026): Agent Command Center, Devin cloud integration, Spaces. Latest Windsurf Next update captured: v3.0.1028 (June 2026), with enterprise model-picker pricing simplification; v2.0.1067 fixed OAuth for some MCP servers."
   },
   "rules": {
     "support": "full",
