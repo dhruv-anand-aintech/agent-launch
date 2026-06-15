@@ -24,9 +24,9 @@
     "comment": "Repository created 2025-03-10. First stable public release effectively Feb 2026 (v1.0.25). v7 rewrite announced May 2026."
   },
   "latest_major_update": {
-    "value": "May '26",
-    "source_url": "https://github.com/Kilo-Org/kilocode/releases#source:~:text=v7.2.52",
-    "comment": "Latest release: v7.2.52 (2026-05-11). v7.x series started with v7.0.26 (2026-02-23). 98+ releases total."
+    "value": "Jun '26",
+    "source_url": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.3.46#source:~:text=Support%20model-specific%20reasoning%20overrides%20for%20task%20subagents",
+    "comment": "Latest release checked: v7.3.46 (June 15, 2026). Release notes include model-specific reasoning overrides for task/custom subagents, custom provider reasoning cleanup, permission prompt clarifications, session redo fixes, and worktree question routing."
   },
   "rules": {
     "support": "full",

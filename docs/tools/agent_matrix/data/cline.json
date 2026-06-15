@@ -26,9 +26,9 @@
     "comment": "Initial release was v1.0.4 on July 28, 2024 (originally named 'Claude Dev' by Saoud Rizwan). 8M+ installs by May 2026."
   },
   "latest_major_update": {
-    "value": "May '26",
-    "source_url": "https://github.com/cline/cline/releases#source:~:text=CLI%20v3.0.10%20Latest%2C%20May%2022%2C%202026",
-    "comment": "CLI at v3.0.10 (May 22, 2026), VS Code extension at v3.84.0 (May 19, 2026). Rapid release cadence."
+    "value": "Jun '26",
+    "source_url": "https://github.com/cline/cline/releases/tag/cli-v3.0.24#source:~:text=Plugin%20commands%20can%20now%20submit%20prompts%20to%20the%20agent",
+    "comment": "CLI latest checked: v3.0.24 (June 11, 2026), adding plugin commands that submit prompts to the agent, API base URL override support, device-auth URL opening, and upgrade/runtime fixes."
   },
   "rules": {
     "support": "full",

@@ -10,14 +10,18 @@
     "values": [
       "CLI",
       "Extension",
-      "SDK"
+      "SDK",
+      "Web",
+      "Mobile"
     ],
-    "source_url": "https://ampcode.com/manual#cli:~:text=CLI",
-    "comment": "CLI TUI + IDE extensions (VS Code, JetBrains, Neovim, Zed) + @ampcode/sdk (TypeScript) and amp-sdk (Python). Per-form-factor links: CLI: https://ampcode.com/manual#getting-started; Extension: https://ampcode.com/manual/vscode; SDK: https://ampcode.com/manual/sdk.",
+    "source_url": "https://ampcode.com/news/agents-everywhere#agents-everywhere:~:text=watching%20and%20driving%20all%20of%20your%20Amp%20agents%2C%20on%20web%2C%20mobile%2C%20and%20CLI",
+    "comment": "CLI TUI + IDE extensions (VS Code, JetBrains, Neovim, Zed) + @ampcode/sdk (TypeScript) and amp-sdk (Python). June 2026 UI adds web and mobile surfaces for watching/driving agents. Per-form-factor links: CLI: https://ampcode.com/manual#getting-started; Extension: https://ampcode.com/manual/vscode; SDK: https://ampcode.com/manual/sdk; Web: https://ampcode.com/news/agents-everywhere; Mobile: https://ampcode.com/news/agents-everywhere.",
     "links": {
       "CLI": "https://ampcode.com/manual#getting-started",
       "Extension": "https://ampcode.com/manual/vscode",
-      "SDK": "https://ampcode.com/manual/sdk"
+      "SDK": "https://ampcode.com/manual/sdk",
+      "Web": "https://ampcode.com/news/agents-everywhere",
+      "Mobile": "https://ampcode.com/news/agents-everywhere"
     }
   },
   "released_in": {
@@ -26,9 +30,9 @@
     "comment": "Publicly launched May 15, 2025 (no waitlist). Originally built inside Sourcegraph, spun off as Amp Frontier Corporation."
   },
   "latest_major_update": {
-    "value": "May '26",
-    "source_url": "https://ampcode.com/news/neo#amp-rebuilt:~:text=May%206%2C%202026%20Amp%2C%20Rebuilt",
-    "comment": "May 6, 2026 \u2014 'Amp, Rebuilt' (codename Neo). Complete CLI rewrite with new architecture: remote-controllable, plugin-powered, auto-compaction."
+    "value": "Jun '26",
+    "source_url": "https://ampcode.com/news/agents-everywhere#agents-everywhere:~:text=June%204%2C%202026",
+    "comment": "June 4, 2026 — 'Agents, Everywhere' added the new UI/sidebar for web, mobile, and CLI on top of May's durable, plugin-powered Neo rewrite."
   },
   "rules": {
     "support": "full",

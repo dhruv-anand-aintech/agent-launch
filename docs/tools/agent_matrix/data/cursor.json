@@ -26,9 +26,9 @@
     "comment": "IDE launched ~2023; CLI surface added later (2025)."
   },
   "latest_major_update": {
-    "value": "May '26",
-    "source_url": "https://cursor.com/docs#cursor-documentation:~:text=Cursor",
-    "comment": "Current docs capture rules, skills, MCP, models, and agent workflows."
+    "value": "Jun '26",
+    "source_url": "https://cursor.com/changelog/sdk-updates-jun-2026#custom-stores-custom-tools-and-auto-review-for-the-cursor-sdk:~:text=Custom%20stores%2C%20custom%20tools%2C%20and%20auto-review%20for%20the%20Cursor%20SDK",
+    "comment": "June 4, 2026 SDK update: custom metadata stores, custom tools, local auto-review, and nested subagents, plus production reliability/performance fixes."
   },
   "rules": {
     "support": "full",
@@ -61,9 +61,9 @@
     "comment": "Cursor Agent CLI documents `/plan`, `/ask`, and `/resume` slash commands but no built-in `/goal` for persistent completion conditions."
   },
   "subagents": {
-    "support": "partial",
-    "source_url": "https://cursor.com/docs#customizing:~:text=subagents",
-    "comment": "Agent tasks are supported; first-class named subagents not modeled like Claude Code."
+    "support": "full",
+    "source_url": "https://cursor.com/changelog/sdk-updates-jun-2026#custom-stores-custom-tools-and-auto-review-for-the-cursor-sdk:~:text=nest%20subagents%20to%20any%20depth",
+    "comment": "Full support in Cursor SDK as of June 2026: agents can nest subagents to any depth. IDE agent tasks remain available."
   },
   "model_selection": {
     "support": "full",

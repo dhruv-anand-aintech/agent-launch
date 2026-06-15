@@ -203,14 +203,18 @@
       "values": [
         "CLI",
         "Extension",
-        "SDK"
+        "SDK",
+        "Web",
+        "Mobile"
       ],
-      "source_url": "https://ampcode.com/manual#cli:~:text=CLI",
-      "comment": "CLI TUI + IDE extensions (VS Code, JetBrains, Neovim, Zed) + @ampcode/sdk (TypeScript) and amp-sdk (Python). Per-form-factor links: CLI: https://ampcode.com/manual#getting-started; Extension: https://ampcode.com/manual/vscode; SDK: https://ampcode.com/manual/sdk.",
+      "source_url": "https://ampcode.com/news/agents-everywhere#agents-everywhere:~:text=watching%20and%20driving%20all%20of%20your%20Amp%20agents%2C%20on%20web%2C%20mobile%2C%20and%20CLI",
+      "comment": "CLI TUI + IDE extensions (VS Code, JetBrains, Neovim, Zed) + @ampcode/sdk (TypeScript) and amp-sdk (Python). June 2026 UI adds web and mobile surfaces for watching/driving agents. Per-form-factor links: CLI: https://ampcode.com/manual#getting-started; Extension: https://ampcode.com/manual/vscode; SDK: https://ampcode.com/manual/sdk; Web: https://ampcode.com/news/agents-everywhere; Mobile: https://ampcode.com/news/agents-everywhere.",
       "links": {
         "CLI": "https://ampcode.com/manual#getting-started",
         "Extension": "https://ampcode.com/manual/vscode",
-        "SDK": "https://ampcode.com/manual/sdk"
+        "SDK": "https://ampcode.com/manual/sdk",
+        "Web": "https://ampcode.com/news/agents-everywhere",
+        "Mobile": "https://ampcode.com/news/agents-everywhere"
       }
     },
     "released_in": {
@@ -220,10 +224,10 @@
       "sort_date": "2025-05-01"
     },
     "latest_major_update": {
-      "value": "May '26",
-      "source_url": "https://ampcode.com/news/neo#amp-rebuilt:~:text=May%206%2C%202026%20Amp%2C%20Rebuilt",
-      "comment": "May 6, 2026 \u2014 'Amp, Rebuilt' (codename Neo). Complete CLI rewrite with new architecture: remote-controllable, plugin-powered, auto-compaction.",
-      "sort_date": "2026-05-01"
+      "value": "Jun '26",
+      "source_url": "https://ampcode.com/news/agents-everywhere#agents-everywhere:~:text=June%204%2C%202026",
+      "comment": "June 4, 2026 \u2014 'Agents, Everywhere' added the new UI/sidebar for web, mobile, and CLI on top of May's durable, plugin-powered Neo rewrite.",
+      "sort_date": "2026-06-01"
     },
     "rules": {
       "support": "full",
@@ -597,7 +601,7 @@
       "value": "Jun '26",
       "source_url": "https://docs.anthropic.com/en/docs/claude-code/overview#use-claude-code:~:text=Claude%20Code",
       "comment": "Current docs cover CLI, SDK, hooks, skills, and settings.",
-      "sort_date": "2026-06-11"
+      "sort_date": "2026-06-12"
     },
     "rules": {
       "support": "full",
@@ -776,9 +780,9 @@
     },
     "latest_major_update": {
       "value": "Jun '26",
-      "source_url": "https://github.com/cline/cline/releases#source:~:text=CLI%20v3.0.10%20Latest%2C%20May%2022%2C%202026",
-      "comment": "CLI at v3.0.10 (May 22, 2026), VS Code extension at v3.84.0 (May 19, 2026). Rapid release cadence.",
-      "sort_date": "2026-06-11"
+      "source_url": "https://github.com/cline/cline/releases/tag/cli-v3.0.24#source:~:text=Plugin%20commands%20can%20now%20submit%20prompts%20to%20the%20agent",
+      "comment": "CLI latest checked: v3.0.24 (June 11, 2026), adding plugin commands that submit prompts to the agent, API base URL override support, device-auth URL opening, and upgrade/runtime fixes.",
+      "sort_date": "2026-06-15"
     },
     "rules": {
       "support": "full",
@@ -978,7 +982,7 @@
       "value": "Jun '26",
       "source_url": "https://developers.openai.com/codex/changelog/#codex-changelog:~:text=changelog",
       "comment": "Captured from current Codex docs/changelog state.",
-      "sort_date": "2026-06-11"
+      "sort_date": "2026-06-15"
     },
     "rules": {
       "support": "full",
@@ -1345,10 +1349,10 @@
       "sort_date": "2023-01-01"
     },
     "latest_major_update": {
-      "value": "May '26",
-      "source_url": "https://cursor.com/docs#cursor-documentation:~:text=Cursor",
-      "comment": "Current docs capture rules, skills, MCP, models, and agent workflows.",
-      "sort_date": "2026-05-01"
+      "value": "Jun '26",
+      "source_url": "https://cursor.com/changelog/sdk-updates-jun-2026#custom-stores-custom-tools-and-auto-review-for-the-cursor-sdk:~:text=Custom%20stores%2C%20custom%20tools%2C%20and%20auto-review%20for%20the%20Cursor%20SDK",
+      "comment": "June 4, 2026 SDK update: custom metadata stores, custom tools, local auto-review, and nested subagents, plus production reliability/performance fixes.",
+      "sort_date": "2026-06-01"
     },
     "rules": {
       "support": "full",
@@ -1381,9 +1385,9 @@
       "comment": "Cursor Agent CLI documents `/plan`, `/ask`, and `/resume` slash commands but no built-in `/goal` for persistent completion conditions."
     },
     "subagents": {
-      "support": "partial",
-      "source_url": "https://cursor.com/docs#customizing:~:text=subagents",
-      "comment": "Agent tasks are supported; first-class named subagents not modeled like Claude Code."
+      "support": "full",
+      "source_url": "https://cursor.com/changelog/sdk-updates-jun-2026#custom-stores-custom-tools-and-auto-review-for-the-cursor-sdk:~:text=nest%20subagents%20to%20any%20depth",
+      "comment": "Full support in Cursor SDK as of June 2026: agents can nest subagents to any depth. IDE agent tasks remain available."
     },
     "model_selection": {
       "support": "full",
@@ -1907,10 +1911,10 @@
       "sort_date": "2025-06-01"
     },
     "latest_major_update": {
-      "value": "May '26",
-      "source_url": "https://antigravity.google/docs/getting-started#download:~:text=Antigravity%20CLI",
-      "comment": "Google points CLI users toward Antigravity (agy CLI) for the latest standalone CLI surface.",
-      "sort_date": "2026-05-01"
+      "value": "Jun '26",
+      "source_url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.46.0#source:~:text=Release%20v0.46.0",
+      "comment": "Latest Gemini CLI release v0.46.0 (June 10, 2026), with PTY resize hardening, editor preference loop prevention, and Flash GA model transition work. Google also points users toward Antigravity CLI for the newer standalone CLI surface.",
+      "sort_date": "2026-06-01"
     },
     "rules": {
       "support": "full",
@@ -2815,9 +2819,9 @@
     },
     "latest_major_update": {
       "value": "Jun '26",
-      "source_url": "https://github.com/Kilo-Org/kilocode/releases#source:~:text=v7.2.52",
-      "comment": "Latest release: v7.2.52 (2026-05-11). v7.x series started with v7.0.26 (2026-02-23). 98+ releases total.",
-      "sort_date": "2026-06-11"
+      "source_url": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.3.46#source:~:text=Support%20model-specific%20reasoning%20overrides%20for%20task%20subagents",
+      "comment": "Latest release checked: v7.3.46 (June 15, 2026). Release notes include model-specific reasoning overrides for task/custom subagents, custom provider reasoning cleanup, permission prompt clarifications, session redo fixes, and worktree question routing.",
+      "sort_date": "2026-06-15"
     },
     "rules": {
       "support": "full",
@@ -3378,8 +3382,8 @@
     },
     "latest_major_update": {
       "value": "Jun '26",
-      "source_url": "https://github.com/XiaomiMiMo/MiMo-Code/releases/tag/v0.1.0#v010:~:text=v0.1.0",
-      "comment": "Latest public release captured for this row is v0.1.0 on 2026-06-10.",
+      "source_url": "https://github.com/XiaomiMiMo/MiMo-Code/releases/tag/v0.1.1#v011:~:text=MiMoCode%20v0.1.1",
+      "comment": "Latest public release captured for this row is v0.1.1 on 2026-06-15.",
       "sort_date": "2026-06-11"
     },
     "rules": {
@@ -3578,7 +3582,7 @@
       "value": "Jun '26",
       "source_url": "https://opencode.ai/docs/#_top:~:text=opencode",
       "comment": "Current docs capture config, agents, MCP, and providers.",
-      "sort_date": "2026-06-11"
+      "sort_date": "2026-06-15"
     },
     "rules": {
       "support": "full",
@@ -3772,7 +3776,7 @@
       "value": "Jun '26",
       "source_url": "https://github.com/earendil-works/pi/blob/main/packages/coding-agent/CHANGELOG.md#changelog:~:text=0.74.0",
       "comment": "Recent changelog entries are 0.77.0 on 2026-05-28 and 0.78.0 on 2026-05-29.",
-      "sort_date": "2026-06-10"
+      "sort_date": "2026-06-15"
     },
     "rules": {
       "support": "full",
@@ -3955,15 +3959,15 @@
     },
     "released_in": {
       "value": "Jun '25",
-      "source_url": "https://github.com/QwenLM/qwen-code#source:~:text=Release%20v0.16.0%20Latest",
-      "comment": "GitHub repo created 2025-06-26. Earliest releases (v0.0.5+) shortly after. Currently at v0.16.0 (2026-05-21).",
+      "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.18.0#source:~:text=Release%20v0.18.0",
+      "comment": "GitHub repo created 2025-06-26. Earliest releases (v0.0.5+) shortly after. Current latest release: v0.18.0 (2026-06-12).",
       "sort_date": "2025-08-01"
     },
     "latest_major_update": {
       "value": "Jun '26",
-      "source_url": "https://github.com/QwenLM/qwen-code#source:~:text=Release%20v0.16.0%20Latest",
-      "comment": "Latest release v0.16.0 (May 21, 2026). 453 releases, 5,944 commits as of May 2026.",
-      "sort_date": "2026-06-11"
+      "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.18.0#source:~:text=Release%20v0.18.0",
+      "comment": "Latest release v0.18.0 (June 12, 2026). Release notes include standalone auto-update support, public docs entrypoint changes, statusline/model display fixes, and telemetry retry visibility.",
+      "sort_date": "2026-06-15"
     },
     "rules": {
       "support": "full",
@@ -4495,10 +4499,10 @@
       "sort_date": "2024-11-01"
     },
     "latest_major_update": {
-      "value": "Apr '26",
-      "source_url": "https://windsurf.com/blog/windsurf-2-0#source:~:text=Windsurf%202.0%3A%20Introducing%20the%20Agent%20Command%20Center%20and%20Devin%20in%20Windsurf",
-      "comment": "Windsurf 2.0 (April 15, 2026): Agent Command Center (Kanban board), Devin cloud agent integration, Spaces. Latest patch: v2.3.9 (May 17, 2026).",
-      "sort_date": "2026-04-01"
+      "value": "Jun '26",
+      "source_url": "https://windsurf.com/changelog/windsurf-next#source:~:text=v3.0.1028",
+      "comment": "Windsurf 2.0 (April 15, 2026): Agent Command Center, Devin cloud integration, Spaces. Latest Windsurf Next update captured: v3.0.1028 (June 2026), with enterprise model-picker pricing simplification; v2.0.1067 fixed OAuth for some MCP servers.",
+      "sort_date": "2026-06-01"
     },
     "rules": {
       "support": "full",

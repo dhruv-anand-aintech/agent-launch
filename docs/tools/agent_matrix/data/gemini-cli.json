@@ -23,9 +23,9 @@
     "comment": "Public open-source Gemini CLI launch."
   },
   "latest_major_update": {
-    "value": "May '26",
-    "source_url": "https://antigravity.google/docs/getting-started#download:~:text=Antigravity%20CLI",
-    "comment": "Google points CLI users toward Antigravity (agy CLI) for the latest standalone CLI surface."
+    "value": "Jun '26",
+    "source_url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.46.0#source:~:text=Release%20v0.46.0",
+    "comment": "Latest Gemini CLI release v0.46.0 (June 10, 2026), with PTY resize hardening, editor preference loop prevention, and Flash GA model transition work. Google also points users toward Antigravity CLI for the newer standalone CLI surface."
   },
   "rules": {
     "support": "full",
