@@ -22,13 +22,13 @@
   },
   "released_in": {
     "value": "Oct '25",
-    "source_url": "https://github.com/MoonshotAI/kimi-cli/releases#source:~:text=0.34",
-    "comment": "First public release v0.34 on 2025-10-21. Reached v1.0 on 2026-01-27. Latest: v1.44.0 (2026-05-14)."
+    "source_url": "https://github.com/MoonshotAI/kimi-cli/releases/tag/1.47.0#source:~:text=1.47.0",
+    "comment": "First public release v0.34 on 2025-10-21. Reached v1.0 on 2026-01-27. Current latest release: v1.47.0 (2026-06-05)."
   },
   "latest_major_update": {
-    "value": "May '26",
-    "source_url": "https://github.com/MoonshotAI/kimi-cli/releases/tag/1.44.0#1440:~:text=1.44.0",
-    "comment": "v1.44.0 (2026-05-14). Very active development: 97 releases in ~7 months. Rapid iteration pace."
+    "value": "Jun '26",
+    "source_url": "https://github.com/MoonshotAI/kimi-cli/releases/tag/1.47.0#source:~:text=rename%20project%20to%20Kimi%20CLI%20and%20link%20to%20Kimi%20Code%20CLI%20successor",
+    "comment": "Latest release v1.47.0 (June 5, 2026), renaming the project to Kimi CLI, linking users to the Kimi Code CLI successor, and adding upgrade guidance."
   },
   "rules": {
     "support": "full",

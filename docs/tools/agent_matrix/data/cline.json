@@ -27,8 +27,8 @@
   },
   "latest_major_update": {
     "value": "Jun '26",
-    "source_url": "https://github.com/cline/cline/releases/tag/cli-v3.0.24#source:~:text=Plugin%20commands%20can%20now%20submit%20prompts%20to%20the%20agent",
-    "comment": "CLI latest checked: v3.0.24 (June 11, 2026), adding plugin commands that submit prompts to the agent, API base URL override support, device-auth URL opening, and upgrade/runtime fixes."
+    "source_url": "https://github.com/cline/cline/releases/tag/cli-v3.0.27#source:~:text=Added%20a%20%60cline%20skill%60%20command",
+    "comment": "CLI latest checked: v3.0.27 (June 17, 2026), adding `cline skill` management, a prefilled MCP install wizard, OAuth error handling improvements, and clearer rejection of unknown commands/unquoted multi-word input."
   },
   "rules": {
     "support": "full",
