@@ -601,7 +601,7 @@
       "value": "Jun '26",
       "source_url": "https://docs.anthropic.com/en/docs/claude-code/overview#use-claude-code:~:text=Claude%20Code",
       "comment": "Current docs cover CLI, SDK, hooks, skills, and settings.",
-      "sort_date": "2026-06-12"
+      "sort_date": "2026-06-18"
     },
     "rules": {
       "support": "full",
@@ -780,9 +780,9 @@
     },
     "latest_major_update": {
       "value": "Jun '26",
-      "source_url": "https://github.com/cline/cline/releases/tag/cli-v3.0.24#source:~:text=Plugin%20commands%20can%20now%20submit%20prompts%20to%20the%20agent",
-      "comment": "CLI latest checked: v3.0.24 (June 11, 2026), adding plugin commands that submit prompts to the agent, API base URL override support, device-auth URL opening, and upgrade/runtime fixes.",
-      "sort_date": "2026-06-15"
+      "source_url": "https://github.com/cline/cline/releases/tag/cli-v3.0.27#source:~:text=Added%20a%20%60cline%20skill%60%20command",
+      "comment": "CLI latest checked: v3.0.27 (June 17, 2026), adding `cline skill` management, a prefilled MCP install wizard, OAuth error handling improvements, and clearer rejection of unknown commands/unquoted multi-word input.",
+      "sort_date": "2026-06-18"
     },
     "rules": {
       "support": "full",
@@ -982,7 +982,7 @@
       "value": "Jun '26",
       "source_url": "https://developers.openai.com/codex/changelog/#codex-changelog:~:text=changelog",
       "comment": "Captured from current Codex docs/changelog state.",
-      "sort_date": "2026-06-15"
+      "sort_date": "2026-06-18"
     },
     "rules": {
       "support": "full",
@@ -1912,8 +1912,8 @@
     },
     "latest_major_update": {
       "value": "Jun '26",
-      "source_url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.46.0#source:~:text=Release%20v0.46.0",
-      "comment": "Latest Gemini CLI release v0.46.0 (June 10, 2026), with PTY resize hardening, editor preference loop prevention, and Flash GA model transition work. Google also points users toward Antigravity CLI for the newer standalone CLI surface.",
+      "source_url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.47.0#source:~:text=Add%20documentation%20and%20migration%20commands%20for%20Antigravity%20CLI",
+      "comment": "Latest Gemini CLI release v0.47.0 (June 18, 2026), with Antigravity CLI migration docs/commands, MCP tool-discovery atomic update fixes, Vertex AI model mapping fixes, TOML parse recovery, and resume-session cleanup.",
       "sort_date": "2026-06-01"
     },
     "rules": {
@@ -2821,7 +2821,7 @@
       "value": "Jun '26",
       "source_url": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.3.46#source:~:text=Support%20model-specific%20reasoning%20overrides%20for%20task%20subagents",
       "comment": "Latest release checked: v7.3.46 (June 15, 2026). Release notes include model-specific reasoning overrides for task/custom subagents, custom provider reasoning cleanup, permission prompt clarifications, session redo fixes, and worktree question routing.",
-      "sort_date": "2026-06-15"
+      "sort_date": "2026-06-18"
     },
     "rules": {
       "support": "full",
@@ -3009,14 +3009,14 @@
     },
     "released_in": {
       "value": "Oct '25",
-      "source_url": "https://github.com/MoonshotAI/kimi-cli/releases#source:~:text=0.34",
-      "comment": "First public release v0.34 on 2025-10-21. Reached v1.0 on 2026-01-27. Latest: v1.44.0 (2026-05-14).",
+      "source_url": "https://github.com/MoonshotAI/kimi-cli/releases/tag/1.47.0#source:~:text=1.47.0",
+      "comment": "First public release v0.34 on 2025-10-21. Reached v1.0 on 2026-01-27. Current latest release: v1.47.0 (2026-06-05).",
       "sort_date": "2025-10-21"
     },
     "latest_major_update": {
       "value": "Jun '26",
-      "source_url": "https://github.com/MoonshotAI/kimi-cli/releases/tag/1.44.0#1440:~:text=1.44.0",
-      "comment": "v1.44.0 (2026-05-14). Very active development: 97 releases in ~7 months. Rapid iteration pace.",
+      "source_url": "https://github.com/MoonshotAI/kimi-cli/releases/tag/1.47.0#source:~:text=rename%20project%20to%20Kimi%20CLI%20and%20link%20to%20Kimi%20Code%20CLI%20successor",
+      "comment": "Latest release v1.47.0 (June 5, 2026), renaming the project to Kimi CLI, linking users to the Kimi Code CLI successor, and adding upgrade guidance.",
       "sort_date": "2026-06-10"
     },
     "rules": {
@@ -3384,7 +3384,7 @@
       "value": "Jun '26",
       "source_url": "https://github.com/XiaomiMiMo/MiMo-Code/releases/tag/v0.1.1#v011:~:text=MiMoCode%20v0.1.1",
       "comment": "Latest public release captured for this row is v0.1.1 on 2026-06-15.",
-      "sort_date": "2026-06-11"
+      "sort_date": "2026-06-18"
     },
     "rules": {
       "support": "full",
@@ -3582,7 +3582,7 @@
       "value": "Jun '26",
       "source_url": "https://opencode.ai/docs/#_top:~:text=opencode",
       "comment": "Current docs capture config, agents, MCP, and providers.",
-      "sort_date": "2026-06-15"
+      "sort_date": "2026-06-17"
     },
     "rules": {
       "support": "full",
@@ -3776,7 +3776,7 @@
       "value": "Jun '26",
       "source_url": "https://github.com/earendil-works/pi/blob/main/packages/coding-agent/CHANGELOG.md#changelog:~:text=0.74.0",
       "comment": "Recent changelog entries are 0.77.0 on 2026-05-28 and 0.78.0 on 2026-05-29.",
-      "sort_date": "2026-06-15"
+      "sort_date": "2026-06-18"
     },
     "rules": {
       "support": "full",
@@ -3959,15 +3959,15 @@
     },
     "released_in": {
       "value": "Jun '25",
-      "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.18.0#source:~:text=Release%20v0.18.0",
-      "comment": "GitHub repo created 2025-06-26. Earliest releases (v0.0.5+) shortly after. Current latest release: v0.18.0 (2026-06-12).",
+      "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.18.3#source:~:text=Release%20v0.18.3",
+      "comment": "GitHub repo created 2025-06-26. Earliest releases (v0.0.5+) shortly after. Current latest release: v0.18.3 (2026-06-17).",
       "sort_date": "2025-08-01"
     },
     "latest_major_update": {
       "value": "Jun '26",
-      "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.18.0#source:~:text=Release%20v0.18.0",
-      "comment": "Latest release v0.18.0 (June 12, 2026). Release notes include standalone auto-update support, public docs entrypoint changes, statusline/model display fixes, and telemetry retry visibility.",
-      "sort_date": "2026-06-15"
+      "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.18.3#source:~:text=always%20declare%20exit_plan_mode%20so%20plan%20mode%20can%20call%20it",
+      "comment": "Latest release v0.18.3 (June 17, 2026), with plan-mode `exit_plan_mode` declaration fixes, cancelled-question handling, slash-suggestion rendering fixes, and release CI checks.",
+      "sort_date": "2026-06-18"
     },
     "rules": {
       "support": "full",

@@ -22,13 +22,13 @@
   },
   "released_in": {
     "value": "Jun '25",
-    "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.18.0#source:~:text=Release%20v0.18.0",
-    "comment": "GitHub repo created 2025-06-26. Earliest releases (v0.0.5+) shortly after. Current latest release: v0.18.0 (2026-06-12)."
+    "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.18.3#source:~:text=Release%20v0.18.3",
+    "comment": "GitHub repo created 2025-06-26. Earliest releases (v0.0.5+) shortly after. Current latest release: v0.18.3 (2026-06-17)."
   },
   "latest_major_update": {
     "value": "Jun '26",
-    "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.18.0#source:~:text=Release%20v0.18.0",
-    "comment": "Latest release v0.18.0 (June 12, 2026). Release notes include standalone auto-update support, public docs entrypoint changes, statusline/model display fixes, and telemetry retry visibility."
+    "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.18.3#source:~:text=always%20declare%20exit_plan_mode%20so%20plan%20mode%20can%20call%20it",
+    "comment": "Latest release v0.18.3 (June 17, 2026), with plan-mode `exit_plan_mode` declaration fixes, cancelled-question handling, slash-suggestion rendering fixes, and release CI checks."
   },
   "rules": {
     "support": "full",

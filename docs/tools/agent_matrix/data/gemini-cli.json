@@ -24,8 +24,8 @@
   },
   "latest_major_update": {
     "value": "Jun '26",
-    "source_url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.46.0#source:~:text=Release%20v0.46.0",
-    "comment": "Latest Gemini CLI release v0.46.0 (June 10, 2026), with PTY resize hardening, editor preference loop prevention, and Flash GA model transition work. Google also points users toward Antigravity CLI for the newer standalone CLI surface."
+    "source_url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.47.0#source:~:text=Add%20documentation%20and%20migration%20commands%20for%20Antigravity%20CLI",
+    "comment": "Latest Gemini CLI release v0.47.0 (June 18, 2026), with Antigravity CLI migration docs/commands, MCP tool-discovery atomic update fixes, Vertex AI model mapping fixes, TOML parse recovery, and resume-session cleanup."
   },
   "rules": {
     "support": "full",
