@@ -24,9 +24,9 @@
     "comment": "Pi changelog shows first listed public release as 0.74.0 dated 2026-05-07."
   },
   "latest_major_update": {
-    "value": "May '26",
-    "source_url": "https://github.com/earendil-works/pi/blob/main/packages/coding-agent/CHANGELOG.md#changelog:~:text=0.74.0",
-    "comment": "Recent changelog entries are 0.77.0 on 2026-05-28 and 0.78.0 on 2026-05-29."
+    "value": "Jun '26",
+    "source_url": "https://github.com/earendil-works/pi/releases/tag/v0.79.8#source:~:text=Selective%20provider%20base%20entry%20points",
+    "comment": "Latest release v0.79.8 (June 19, 2026) adds selective provider base entry points for SDK bundling, Mistral prompt caching with cost accounting, post-compaction token estimates, an OpenRouter Fusion alias, runtime dependency security updates, and compaction retry/empty-summary fixes."
   },
   "rules": {
     "support": "full",

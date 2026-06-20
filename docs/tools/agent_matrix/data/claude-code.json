@@ -30,9 +30,9 @@
     "comment": "Claude Code was introduced as a limited research preview."
   },
   "latest_major_update": {
-    "value": "May '26",
-    "source_url": "https://docs.anthropic.com/en/docs/claude-code/overview#use-claude-code:~:text=Claude%20Code",
-    "comment": "Current docs cover CLI, SDK, hooks, skills, and settings."
+    "value": "Jun '26",
+    "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.183#source:~:text=Improved%20auto%20mode%20safety",
+    "comment": "Latest release v2.1.183 (June 19, 2026) improves auto-mode safety for destructive commands, deprecated-model warnings, config help/toggles, subagent WebSearch and thinking fixes, MCP auth handling, tmux teammate launch behavior, and Windows Terminal nested-subagent rendering."
   },
   "rules": {
     "support": "full",

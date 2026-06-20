@@ -22,13 +22,13 @@
   },
   "released_in": {
     "value": "Jun '25",
-    "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.18.3#source:~:text=Release%20v0.18.3",
-    "comment": "GitHub repo created 2025-06-26. Earliest releases (v0.0.5+) shortly after. Current latest release: v0.18.3 (2026-06-17)."
+    "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.18.4#source:~:text=Release%20v0.18.4",
+    "comment": "GitHub repo created 2025-06-26. Earliest releases (v0.0.5+) shortly after. Current latest release: v0.18.4 (2026-06-20)."
   },
   "latest_major_update": {
     "value": "Jun '26",
-    "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.18.3#source:~:text=always%20declare%20exit_plan_mode%20so%20plan%20mode%20can%20call%20it",
-    "comment": "Latest release v0.18.3 (June 17, 2026), with plan-mode `exit_plan_mode` declaration fixes, cancelled-question handling, slash-suggestion rendering fixes, and release CI checks."
+    "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.18.4#source:~:text=docs%3A%20add%20CLI%20subcommands%20section%20with%20qwen%20sessions%20list",
+    "comment": "Latest release v0.18.4 (June 20, 2026), adding CLI subcommands documentation for `qwen sessions list`, configurable ACP permission timeout, daemon deep-health idle detection, hook original API call IDs, workflow token budget UI, TUI localization, plus fixes for mid-turn images/events, provider selection persistence, Ctrl+P/N completions, telemetry exporters, and desktop git branch badges."
   },
   "rules": {
     "support": "full",

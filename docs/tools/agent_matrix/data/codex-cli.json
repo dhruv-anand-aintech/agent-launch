@@ -30,9 +30,9 @@
     "comment": "Open-source CLI public release."
   },
   "latest_major_update": {
-    "value": "May '26",
-    "source_url": "https://developers.openai.com/codex/changelog/#codex-changelog:~:text=changelog",
-    "comment": "Captured from current Codex docs/changelog state."
+    "value": "Jun '26",
+    "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.141.0#source:~:text=Remote%20executors%20now%20use%20authenticated%2C%20end-to-end%20encrypted%20Noise%20relay%20channels",
+    "comment": "Latest Codex CLI release rust-v0.141.0 (June 18, 2026) adds authenticated encrypted remote-executor relay channels, cross-platform remote execution path/shell preservation, per-thread plugin MCP activation, app-server child-thread/rate-limit-credit APIs, realtime speech controls, and TUI auto-resolving input prompts."
   },
   "rules": {
     "support": "full",

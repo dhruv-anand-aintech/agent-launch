@@ -27,8 +27,8 @@
   },
   "latest_major_update": {
     "value": "Jun '26",
-    "source_url": "https://github.com/cline/cline/releases/tag/cli-v3.0.27#source:~:text=Added%20a%20%60cline%20skill%60%20command",
-    "comment": "CLI latest checked: v3.0.27 (June 17, 2026), adding `cline skill` management, a prefilled MCP install wizard, OAuth error handling improvements, and clearer rejection of unknown commands/unquoted multi-word input."
+    "source_url": "https://github.com/cline/cline/releases/tag/cli-v3.0.29#source:~:text=Costs%20are%20now%20hidden%20for%20Cline%20free%20models",
+    "comment": "CLI latest checked: v3.0.29 (June 20, 2026), hiding costs for Cline free models, fixing Z.ai model metadata resolution through the Cline provider, and reverting model-picker/status-bar display behavior from v3.0.28."
   },
   "rules": {
     "support": "full",
