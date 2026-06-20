@@ -25,8 +25,8 @@
   },
   "latest_major_update": {
     "value": "Jun '26",
-    "source_url": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.3.46#source:~:text=Support%20model-specific%20reasoning%20overrides%20for%20task%20subagents",
-    "comment": "Latest release checked: v7.3.46 (June 15, 2026). Release notes include model-specific reasoning overrides for task/custom subagents, custom provider reasoning cleanup, permission prompt clarifications, session redo fixes, and worktree question routing."
+    "source_url": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.3.50#source:~:text=Show%20a%20BYOK%20badge%20for%20Kilo%20Gateway%20models",
+    "comment": "Latest release checked: v7.3.50 (June 19, 2026). Release notes add BYOK badges for Kilo Gateway models, custom-provider wording cleanup, redo/revert fixes, parent-session-only completion sounds, Agent Manager startup and concurrent-subagent webview fixes, faster worktree hover cards, and a wider chat readable lane."
   },
   "rules": {
     "support": "full",

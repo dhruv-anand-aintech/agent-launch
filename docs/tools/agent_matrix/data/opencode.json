@@ -28,9 +28,9 @@
     "comment": "Exact public launch month not confirmed in public docs captured for this dataset."
   },
   "latest_major_update": {
-    "value": "May '26",
-    "source_url": "https://opencode.ai/docs/#_top:~:text=opencode",
-    "comment": "Current docs capture config, agents, MCP, and providers."
+    "value": "Jun '26",
+    "source_url": "https://github.com/anomalyco/opencode/releases/tag/v1.17.8#source:~:text=Session%20timelines%20load%20much%20faster",
+    "comment": "Latest release v1.17.8 (June 17, 2026) improves session timeline loading, fixes OpenAI-compatible MCP tool schema handling, Cloudflare AI Gateway API-key passing, MCP progress timeouts, OAuth callback shutdown/error escaping, MCP error reporting, and adds desktop Home-tab and file/folder picker improvements."
   },
   "rules": {
     "support": "full",
