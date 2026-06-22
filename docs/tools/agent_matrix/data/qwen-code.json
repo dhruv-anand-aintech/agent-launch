@@ -22,13 +22,13 @@
   },
   "released_in": {
     "value": "Jun '25",
-    "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.18.4#source:~:text=Release%20v0.18.4",
-    "comment": "GitHub repo created 2025-06-26. Earliest releases (v0.0.5+) shortly after. Current latest release: v0.18.4 (2026-06-20)."
+    "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.18.5#source:~:text=Release%20v0.18.5",
+    "comment": "GitHub repo created 2025-06-26. Earliest releases (v0.0.5+) shortly after. Current latest release: v0.18.5 (2026-06-21)."
   },
   "latest_major_update": {
     "value": "Jun '26",
-    "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.18.4#source:~:text=docs%3A%20add%20CLI%20subcommands%20section%20with%20qwen%20sessions%20list",
-    "comment": "Latest release v0.18.4 (June 20, 2026), adding CLI subcommands documentation for `qwen sessions list`, configurable ACP permission timeout, daemon deep-health idle detection, hook original API call IDs, workflow token budget UI, TUI localization, plus fixes for mid-turn images/events, provider selection persistence, Ctrl+P/N completions, telemetry exporters, and desktop git branch badges."
+    "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.18.5#source:~:text=support%20MCP%20resources%20and%20reliably%20surface%20prompts",
+    "comment": "Latest release v0.18.5 (June 21, 2026) adds MCP resources and reliable prompt surfacing, Requesty provider support, Token Plan model updates, ACP model-invocable commands, stricter boundary/env validation, and multiple CLI/desktop/extension path and URL-scheme fixes."
   },
   "rules": {
     "support": "full",
