@@ -29,8 +29,8 @@
   },
   "latest_major_update": {
     "value": "Jun '26",
-    "source_url": "https://github.com/anomalyco/opencode/releases/tag/v1.17.8#source:~:text=Session%20timelines%20load%20much%20faster",
-    "comment": "Latest release v1.17.8 (June 17, 2026) improves session timeline loading, fixes OpenAI-compatible MCP tool schema handling, Cloudflare AI Gateway API-key passing, MCP progress timeouts, OAuth callback shutdown/error escaping, MCP error reporting, and adds desktop Home-tab and file/folder picker improvements."
+    "source_url": "https://github.com/anomalyco/opencode/releases/tag/v1.17.9#source:~:text=Honor%20configured%20agent%20step%20limits",
+    "comment": "Latest release v1.17.9 (June 21, 2026) honors configured agent step limits with a final text response, fixes Devstral model detection casing and Copilot custom headers, adds GLM-5.2 high/max thinking variants, improves prompt caching for follow-ups, and hides the background subagent shortcut when unsupported."
   },
   "rules": {
     "support": "full",

@@ -22,13 +22,13 @@
   },
   "released_in": {
     "value": "Oct '25",
-    "source_url": "https://github.com/MoonshotAI/kimi-cli/releases/tag/1.47.0#source:~:text=1.47.0",
-    "comment": "First public release v0.34 on 2025-10-21. Reached v1.0 on 2026-01-27. Current latest release: v1.47.0 (2026-06-05)."
+    "source_url": "https://github.com/MoonshotAI/kimi-cli/releases/tag/1.48.0#source:~:text=1.48.0",
+    "comment": "First public release v0.34 on 2025-10-21. Reached v1.0 on 2026-01-27. Current latest release: v1.48.0 (2026-06-22)."
   },
   "latest_major_update": {
     "value": "Jun '26",
-    "source_url": "https://github.com/MoonshotAI/kimi-cli/releases/tag/1.47.0#source:~:text=rename%20project%20to%20Kimi%20CLI%20and%20link%20to%20Kimi%20Code%20CLI%20successor",
-    "comment": "Latest release v1.47.0 (June 5, 2026), renaming the project to Kimi CLI, linking users to the Kimi Code CLI successor, and adding upgrade guidance."
+    "source_url": "https://github.com/MoonshotAI/kimi-cli/releases/tag/1.48.0#source:~:text=round-trip%20empty%20reasoning%20content",
+    "comment": "Latest release v1.48.0 (June 22, 2026) fixes empty reasoning-content round trips, escalates repeated-tool-call reminders, force-stops dead-end streaks, and bumps kosong to 0.54.0."
   },
   "rules": {
     "support": "full",

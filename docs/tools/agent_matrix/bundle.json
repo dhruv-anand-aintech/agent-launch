@@ -599,9 +599,9 @@
     },
     "latest_major_update": {
       "value": "Jun '26",
-      "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.183#source:~:text=Improved%20auto%20mode%20safety",
-      "comment": "Latest release v2.1.183 (June 19, 2026) improves auto-mode safety for destructive commands, deprecated-model warnings, config help/toggles, subagent WebSearch and thinking fixes, MCP auth handling, tmux teammate launch behavior, and Windows Terminal nested-subagent rendering.",
-      "sort_date": "2026-06-19"
+      "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.185#source:~:text=Waiting%20for%20API%20response",
+      "comment": "Latest release v2.1.185 (June 20, 2026) updates the stream-stall hint wording to `Waiting for API response - will retry in ...` and changes the silence threshold from 10s to 20s.",
+      "sort_date": "2026-06-20"
     },
     "rules": {
       "support": "full",
@@ -982,7 +982,7 @@
       "value": "Jun '26",
       "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.141.0#source:~:text=Remote%20executors%20now%20use%20authenticated%2C%20end-to-end%20encrypted%20Noise%20relay%20channels",
       "comment": "Latest Codex CLI release rust-v0.141.0 (June 18, 2026) adds authenticated encrypted remote-executor relay channels, cross-platform remote execution path/shell preservation, per-thread plugin MCP activation, app-server child-thread/rate-limit-credit APIs, realtime speech controls, and TUI auto-resolving input prompts.",
-      "sort_date": "2026-06-20"
+      "sort_date": "2026-06-22"
     },
     "rules": {
       "support": "full",
@@ -2821,7 +2821,7 @@
       "value": "Jun '26",
       "source_url": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.3.50#source:~:text=Show%20a%20BYOK%20badge%20for%20Kilo%20Gateway%20models",
       "comment": "Latest release checked: v7.3.50 (June 19, 2026). Release notes add BYOK badges for Kilo Gateway models, custom-provider wording cleanup, redo/revert fixes, parent-session-only completion sounds, Agent Manager startup and concurrent-subagent webview fixes, faster worktree hover cards, and a wider chat readable lane.",
-      "sort_date": "2026-06-20"
+      "sort_date": "2026-06-22"
     },
     "rules": {
       "support": "full",
@@ -3009,15 +3009,15 @@
     },
     "released_in": {
       "value": "Oct '25",
-      "source_url": "https://github.com/MoonshotAI/kimi-cli/releases/tag/1.47.0#source:~:text=1.47.0",
-      "comment": "First public release v0.34 on 2025-10-21. Reached v1.0 on 2026-01-27. Current latest release: v1.47.0 (2026-06-05).",
+      "source_url": "https://github.com/MoonshotAI/kimi-cli/releases/tag/1.48.0#source:~:text=1.48.0",
+      "comment": "First public release v0.34 on 2025-10-21. Reached v1.0 on 2026-01-27. Current latest release: v1.48.0 (2026-06-22).",
       "sort_date": "2025-10-21"
     },
     "latest_major_update": {
       "value": "Jun '26",
-      "source_url": "https://github.com/MoonshotAI/kimi-cli/releases/tag/1.47.0#source:~:text=rename%20project%20to%20Kimi%20CLI%20and%20link%20to%20Kimi%20Code%20CLI%20successor",
-      "comment": "Latest release v1.47.0 (June 5, 2026), renaming the project to Kimi CLI, linking users to the Kimi Code CLI successor, and adding upgrade guidance.",
-      "sort_date": "2026-06-10"
+      "source_url": "https://github.com/MoonshotAI/kimi-cli/releases/tag/1.48.0#source:~:text=round-trip%20empty%20reasoning%20content",
+      "comment": "Latest release v1.48.0 (June 22, 2026) fixes empty reasoning-content round trips, escalates repeated-tool-call reminders, force-stops dead-end streaks, and bumps kosong to 0.54.0.",
+      "sort_date": "2026-06-22"
     },
     "rules": {
       "support": "full",
@@ -3384,7 +3384,7 @@
       "value": "Jun '26",
       "source_url": "https://github.com/XiaomiMiMo/MiMo-Code/releases/tag/v0.1.1#v011:~:text=MiMoCode%20v0.1.1",
       "comment": "Latest public release captured for this row is v0.1.1 on 2026-06-15.",
-      "sort_date": "2026-06-19"
+      "sort_date": "2026-06-22"
     },
     "rules": {
       "support": "full",
@@ -3580,9 +3580,9 @@
     },
     "latest_major_update": {
       "value": "Jun '26",
-      "source_url": "https://github.com/anomalyco/opencode/releases/tag/v1.17.8#source:~:text=Session%20timelines%20load%20much%20faster",
-      "comment": "Latest release v1.17.8 (June 17, 2026) improves session timeline loading, fixes OpenAI-compatible MCP tool schema handling, Cloudflare AI Gateway API-key passing, MCP progress timeouts, OAuth callback shutdown/error escaping, MCP error reporting, and adds desktop Home-tab and file/folder picker improvements.",
-      "sort_date": "2026-06-20"
+      "source_url": "https://github.com/anomalyco/opencode/releases/tag/v1.17.9#source:~:text=Honor%20configured%20agent%20step%20limits",
+      "comment": "Latest release v1.17.9 (June 21, 2026) honors configured agent step limits with a final text response, fixes Devstral model detection casing and Copilot custom headers, adds GLM-5.2 high/max thinking variants, improves prompt caching for follow-ups, and hides the background subagent shortcut when unsupported.",
+      "sort_date": "2026-06-22"
     },
     "rules": {
       "support": "full",
@@ -3776,7 +3776,7 @@
       "value": "Jun '26",
       "source_url": "https://github.com/earendil-works/pi/releases/tag/v0.79.8#source:~:text=Selective%20provider%20base%20entry%20points",
       "comment": "Latest release v0.79.8 (June 19, 2026) adds selective provider base entry points for SDK bundling, Mistral prompt caching with cost accounting, post-compaction token estimates, an OpenRouter Fusion alias, runtime dependency security updates, and compaction retry/empty-summary fixes.",
-      "sort_date": "2026-06-20"
+      "sort_date": "2026-06-22"
     },
     "rules": {
       "support": "full",
@@ -3959,15 +3959,15 @@
     },
     "released_in": {
       "value": "Jun '25",
-      "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.18.4#source:~:text=Release%20v0.18.4",
-      "comment": "GitHub repo created 2025-06-26. Earliest releases (v0.0.5+) shortly after. Current latest release: v0.18.4 (2026-06-20).",
+      "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.18.5#source:~:text=Release%20v0.18.5",
+      "comment": "GitHub repo created 2025-06-26. Earliest releases (v0.0.5+) shortly after. Current latest release: v0.18.5 (2026-06-21).",
       "sort_date": "2025-08-01"
     },
     "latest_major_update": {
       "value": "Jun '26",
-      "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.18.4#source:~:text=docs%3A%20add%20CLI%20subcommands%20section%20with%20qwen%20sessions%20list",
-      "comment": "Latest release v0.18.4 (June 20, 2026), adding CLI subcommands documentation for `qwen sessions list`, configurable ACP permission timeout, daemon deep-health idle detection, hook original API call IDs, workflow token budget UI, TUI localization, plus fixes for mid-turn images/events, provider selection persistence, Ctrl+P/N completions, telemetry exporters, and desktop git branch badges.",
-      "sort_date": "2026-06-20"
+      "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.18.5#source:~:text=support%20MCP%20resources%20and%20reliably%20surface%20prompts",
+      "comment": "Latest release v0.18.5 (June 21, 2026) adds MCP resources and reliable prompt surfacing, Requesty provider support, Token Plan model updates, ACP model-invocable commands, stricter boundary/env validation, and multiple CLI/desktop/extension path and URL-scheme fixes.",
+      "sort_date": "2026-06-22"
     },
     "rules": {
       "support": "full",
