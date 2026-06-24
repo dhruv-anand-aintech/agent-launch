@@ -26,9 +26,9 @@
     "comment": "Kiro entered public preview in 2025; CLI docs are now first-class."
   },
   "latest_major_update": {
-    "value": "May '26",
-    "source_url": "https://kiro.dev/docs/powers/create/#creating-powermd:~:text=POWER.md",
-    "comment": "Current docs include Powers, CLI hooks, custom agents, and ACP workflows."
+    "value": "Jun '26",
+    "source_url": "https://kiro.dev/docs/cli/reference/cli-commands/#source:~:text=Agent%20name%20is%20now%20a%20positional%20argument",
+    "comment": "June 2026 Kiro CLI docs refresh adds v1.26.0 custom-agent command changes, expanded model guidance, updated built-in tools, Kiro/Q Developer migration details, and refreshed powers/knowledge-management pages."
   },
   "rules": {
     "support": "full",

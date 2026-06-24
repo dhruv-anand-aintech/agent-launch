@@ -25,8 +25,8 @@
   },
   "latest_major_update": {
     "value": "Jun '26",
-    "source_url": "https://github.com/earendil-works/pi/releases/tag/v0.79.8#source:~:text=Selective%20provider%20base%20entry%20points",
-    "comment": "Latest release v0.79.8 (June 19, 2026) adds selective provider base entry points for SDK bundling, Mistral prompt caching with cost accounting, post-compaction token estimates, an OpenRouter Fusion alias, runtime dependency security updates, and compaction retry/empty-summary fixes."
+    "source_url": "https://github.com/earendil-works/pi/releases/tag/v0.80.2#source:~:text=ApiKeyCredential%20to%20use%20the%20auth.json-compatible%20discriminator",
+    "comment": "Latest release v0.80.2 (June 23, 2026) aligns API-key credential discriminators with `auth.json`, renames inherited shell execution option types, fixes Anthropic-compatible custom-model metadata, restores request-scoped auth/base-URL resolution, and restores legacy stream aliases and runtime compatibility fallback paths."
   },
   "rules": {
     "support": "full",

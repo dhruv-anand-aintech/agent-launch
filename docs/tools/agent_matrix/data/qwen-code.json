@@ -12,23 +12,23 @@
       "Extension",
       "SDK"
     ],
-    "source_url": "https://qwenlm.github.io/qwen-code-docs/getting-started/#source:~:text=CLI",
-    "comment": "CLI + VS Code + Zed + JetBrains via ACP, plus @qwen-code/sdk (TypeScript) and Python SDK. Per-form-factor links: CLI: https://qwenlm.github.io/qwen-code-docs/getting-started/; Extension: https://qwenlm.github.io/qwen-code-docs/en/users/extension/introduction/; SDK: https://qwenlm-qwen-code.mintlify.app/sdk/quick-start.",
+    "source_url": "https://qwenlm.github.io/qwen-code-docs/en/users/quickstart/#source:~:text=This%20quickstart%20guide%20will%20have%20you%20using%20AI-powered%20coding%20assistance",
+    "comment": "CLI + VS Code + Zed + JetBrains via ACP, plus @qwen-code/sdk (TypeScript) and Python SDK. Per-form-factor links: CLI: https://qwenlm.github.io/qwen-code-docs/en/users/quickstart/; Extension: https://qwenlm.github.io/qwen-code-docs/en/users/extension/introduction/; SDK: https://qwenlm-qwen-code.mintlify.app/sdk/quick-start.",
     "links": {
-      "CLI": "https://qwenlm.github.io/qwen-code-docs/getting-started/",
+      "CLI": "https://qwenlm.github.io/qwen-code-docs/en/users/quickstart/",
       "Extension": "https://qwenlm.github.io/qwen-code-docs/en/users/extension/introduction/",
       "SDK": "https://qwenlm-qwen-code.mintlify.app/sdk/quick-start"
     }
   },
   "released_in": {
     "value": "Jun '25",
-    "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.18.5#source:~:text=Release%20v0.18.5",
-    "comment": "GitHub repo created 2025-06-26. Earliest releases (v0.0.5+) shortly after. Current latest release: v0.18.5 (2026-06-21)."
+    "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.19.2#source:~:text=Release%20v0.19.2",
+    "comment": "GitHub repo created 2025-06-26. Earliest releases (v0.0.5+) shortly after. Current latest release: v0.19.2 (2026-06-24)."
   },
   "latest_major_update": {
     "value": "Jun '26",
-    "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.18.5#source:~:text=support%20MCP%20resources%20and%20reliably%20surface%20prompts",
-    "comment": "Latest release v0.18.5 (June 21, 2026) adds MCP resources and reliable prompt surfacing, Requesty provider support, Token Plan model updates, ACP model-invocable commands, stricter boundary/env validation, and multiple CLI/desktop/extension path and URL-scheme fixes."
+    "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.19.2#source:~:text=Add%20remote%20LSP%20status%20route",
+    "comment": "Latest release v0.19.2 (June 24, 2026) adds a remote LSP status route, fork-turn caps and fork permission bubbling, image-to-text vision bridge support for text-only models, deterministic destructive-command guards in auto mode, extension operation polling, global bare-@ MCP resource matching, workspace permissions rules APIs, and multiple CLI/SDK/daemon fixes."
   },
   "rules": {
     "support": "full",

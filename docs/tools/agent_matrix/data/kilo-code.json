@@ -25,8 +25,8 @@
   },
   "latest_major_update": {
     "value": "Jun '26",
-    "source_url": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.3.50#source:~:text=Show%20a%20BYOK%20badge%20for%20Kilo%20Gateway%20models",
-    "comment": "Latest release checked: v7.3.50 (June 19, 2026). Release notes add BYOK badges for Kilo Gateway models, custom-provider wording cleanup, redo/revert fixes, parent-session-only completion sounds, Agent Manager startup and concurrent-subagent webview fixes, faster worktree hover cards, and a wider chat readable lane."
+    "source_url": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.3.54#source:~:text=No%20notable%20changes",
+    "comment": "Latest release checked: v7.3.54 (June 23, 2026). Release notes say no notable changes."
   },
   "rules": {
     "support": "full",

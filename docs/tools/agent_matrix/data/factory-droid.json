@@ -13,10 +13,10 @@
       "Web"
     ],
     "source_url": "https://docs.factory.ai/reference/cli-reference#page-title:~:text=CLI",
-    "comment": "Droid CLI plus Factory App, IDE integrations, and Droid Computers. Per-form-factor links: CLI: https://docs.factory.ai/reference/cli-reference; Extension: https://docs.factory.ai/cli/integrations/ide-integrations; Web: https://app.factory.ai/.",
+    "comment": "Droid CLI plus Factory App, IDE integrations, and Droid Computers. Per-form-factor links: CLI: https://docs.factory.ai/reference/cli-reference; Extension: https://docs.factory.ai/integrations/ide-integrations; Web: https://app.factory.ai/.",
     "links": {
       "CLI": "https://docs.factory.ai/reference/cli-reference",
-      "Extension": "https://docs.factory.ai/cli/integrations/ide-integrations",
+      "Extension": "https://docs.factory.ai/integrations/ide-integrations",
       "Web": "https://app.factory.ai/"
     }
   },
@@ -26,9 +26,9 @@
     "comment": "Public docs cover current Droid CLI and Factory platform surfaces."
   },
   "latest_major_update": {
-    "value": "May '26",
-    "source_url": "https://docs.factory.ai/reference/cli-reference#_R_2tdbsnlht5debsnpfdb_:~:text=Complete%20reference%20for%20the%20Droid%20CLI",
-    "comment": "Current CLI reference includes plugins, MCP, skills, hooks, worktrees, Droid Exec, and custom droids."
+    "value": "Jun '26",
+    "source_url": "https://docs.factory.ai/models#source:~:text=As%20of%20June%2012%2C%202026",
+    "comment": "June 2026 Factory model/docs refresh: available-models guidance updated with new managed and Droid Core coding models, reasoning effort options, multipliers, and current CLI defaults."
   },
   "rules": {
     "support": "full",

@@ -599,9 +599,9 @@
     },
     "latest_major_update": {
       "value": "Jun '26",
-      "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.185#source:~:text=Waiting%20for%20API%20response",
-      "comment": "Latest release v2.1.185 (June 20, 2026) updates the stream-stall hint wording to `Waiting for API response - will retry in ...` and changes the silence threshold from 10s to 20s.",
-      "sort_date": "2026-06-20"
+      "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.190#source:~:text=Bug%20fixes%20and%20reliability%20improvements",
+      "comment": "Latest release v2.1.190 (June 24, 2026) includes bug fixes and reliability improvements.",
+      "sort_date": "2026-06-24"
     },
     "rules": {
       "support": "full",
@@ -782,7 +782,7 @@
       "value": "Jun '26",
       "source_url": "https://github.com/cline/cline/releases/tag/cli-v3.0.29#source:~:text=Costs%20are%20now%20hidden%20for%20Cline%20free%20models",
       "comment": "CLI latest checked: v3.0.29 (June 20, 2026), hiding costs for Cline free models, fixing Z.ai model metadata resolution through the Cline provider, and reverting model-picker/status-bar display behavior from v3.0.28.",
-      "sort_date": "2026-06-20"
+      "sort_date": "2026-06-24"
     },
     "rules": {
       "support": "full",
@@ -980,9 +980,9 @@
     },
     "latest_major_update": {
       "value": "Jun '26",
-      "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.141.0#source:~:text=Remote%20executors%20now%20use%20authenticated%2C%20end-to-end%20encrypted%20Noise%20relay%20channels",
-      "comment": "Latest Codex CLI release rust-v0.141.0 (June 18, 2026) adds authenticated encrypted remote-executor relay channels, cross-platform remote execution path/shell preservation, per-thread plugin MCP activation, app-server child-thread/rate-limit-credit APIs, realtime speech controls, and TUI auto-resolving input prompts.",
-      "sort_date": "2026-06-22"
+      "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.142.0#source:~:text=%2Fusage%20can%20now%20show%20and%20redeem%20earned%20usage-limit%20reset%20credits",
+      "comment": "Latest stable Codex CLI release rust-v0.142.0 (June 22, 2026) adds `/usage` reset-credit redemption, organized remote plugin catalogs with recommendations, rollout token budgets, configurable multi-agent delegation, indexed web-search mode, scheduled/current-time reminders, and remote/session reliability fixes.",
+      "sort_date": "2026-06-24"
     },
     "rules": {
       "support": "full",
@@ -1168,10 +1168,10 @@
       "sort_date": "2025-01-01"
     },
     "latest_major_update": {
-      "value": "May '26",
-      "source_url": "https://cohere.com/blog/command-a-plus#snapshot:~:text=command-a-plus-05-2026",
-      "comment": "Command A+ model update powers agentic workflows and coding benchmarks, while North remains the enterprise agent platform.",
-      "sort_date": "2026-05-01"
+      "value": "Jun '26",
+      "source_url": "https://cohere.com/blog/north-mini-code#introducing-north-mini-code-coheres-first-model-for-developers:~:text=Introducing%20North%20Mini%20Code%3A%20Cohere%E2%80%99s%20first%20model%20for%20developers",
+      "comment": "Cohere launched North Mini Code on June 9, 2026: a small open-source agentic coding model optimized for code generation, software engineering, and terminal tasks, available through Hugging Face, Cohere API, Model Vault, OpenRouter, and OpenCode-compatible harnesses.",
+      "sort_date": "2026-06-01"
     },
     "rules": {
       "support": "partial",
@@ -1350,8 +1350,8 @@
     },
     "latest_major_update": {
       "value": "Jun '26",
-      "source_url": "https://cursor.com/changelog/sdk-updates-jun-2026#custom-stores-custom-tools-and-auto-review-for-the-cursor-sdk:~:text=Custom%20stores%2C%20custom%20tools%2C%20and%20auto-review%20for%20the%20Cursor%20SDK",
-      "comment": "June 4, 2026 SDK update: custom metadata stores, custom tools, local auto-review, and nested subagents, plus production reliability/performance fixes.",
+      "source_url": "https://cursor.com/changelog#source:~:text=Cloud%20Environment%20Setup%20and%20Cloud%20Subagents%20in%20Agents%20Window",
+      "comment": "June 17, 2026 changelog: cloud environment setup and snapshots for cloud agents, `/in-cloud` cloud subagents in the Agents Window, cloud/local handoff improvements, PR babysitting, and background cloud-agent execution.",
       "sort_date": "2026-06-01"
     },
     "rules": {
@@ -1521,10 +1521,10 @@
         "Web",
         "SDK"
       ],
-      "source_url": "https://docs.devin.ai/cli#quickstart:~:text=Install%20Devin%20CLI",
-      "comment": "Web app + VS Code extension + CLI + Slack/Teams + REST API and official devin-sdk (Python). CLI installs the `devin` binary via Devin Desktop or the standalone CLI installer/Homebrew cask. Per-form-factor links: Extension: https://docs.devin.ai/work-with-devin/ide-extensions; CLI: https://docs.devin.ai/cli; Web: https://app.devin.ai/; SDK: https://docs.devin.ai/api-reference/overview.",
+      "source_url": "https://docs.devin.ai/cli#quickstart:~:text=Devin%20CLI%20is%20a%20local%20coding%20agent%20that%20runs%20directly%20in%20your%20terminal",
+      "comment": "Web app + Devin Desktop/IDE plugin surfaces + CLI + Slack/Teams + REST API and official devin-sdk (Python). CLI installs the `devin` binary via Devin Desktop or the standalone CLI installer/Homebrew cask. Per-form-factor links: Extension: https://docs.devin.ai/desktop/command/plugins-overview; CLI: https://docs.devin.ai/cli; Web: https://app.devin.ai/; SDK: https://docs.devin.ai/api-reference/overview.",
       "links": {
-        "Extension": "https://docs.devin.ai/work-with-devin/ide-extensions",
+        "Extension": "https://docs.devin.ai/desktop/command/plugins-overview",
         "CLI": "https://docs.devin.ai/cli",
         "Web": "https://app.devin.ai/",
         "SDK": "https://docs.devin.ai/api-reference/overview"
@@ -1537,10 +1537,10 @@
       "sort_date": "2024-12-01"
     },
     "latest_major_update": {
-      "value": "Feb '26",
-      "source_url": "https://cognition.ai/blog/introducing-devin-2-2#introducing-devin-22:~:text=Today%20we%27re%20releasing%20Devin%202.2%2C%20one%20of%20our%20biggest%20updates",
-      "comment": "Devin 2.2 (Feb 24, 2026): 3x faster startup, end-to-end desktop testing, Devin Review Autofix, redesigned UI. Continuous weekly releases since.",
-      "sort_date": "2026-02-01"
+      "value": "Jun '26",
+      "source_url": "https://docs.devin.ai/release-notes/overview#june-19-2026:~:text=MCP%20Marketplace%20Expansion",
+      "comment": "June 19, 2026 release notes expand the MCP Marketplace, add a dedicated MCP management page, enable GitLab user identity linking, improve integration-origin indicators and Slack rendering, and promote more MCP connectors to general availability.",
+      "sort_date": "2026-06-01"
     },
     "rules": {
       "support": "full",
@@ -1709,10 +1709,10 @@
         "Web"
       ],
       "source_url": "https://docs.factory.ai/reference/cli-reference#page-title:~:text=CLI",
-      "comment": "Droid CLI plus Factory App, IDE integrations, and Droid Computers. Per-form-factor links: CLI: https://docs.factory.ai/reference/cli-reference; Extension: https://docs.factory.ai/cli/integrations/ide-integrations; Web: https://app.factory.ai/.",
+      "comment": "Droid CLI plus Factory App, IDE integrations, and Droid Computers. Per-form-factor links: CLI: https://docs.factory.ai/reference/cli-reference; Extension: https://docs.factory.ai/integrations/ide-integrations; Web: https://app.factory.ai/.",
       "links": {
         "CLI": "https://docs.factory.ai/reference/cli-reference",
-        "Extension": "https://docs.factory.ai/cli/integrations/ide-integrations",
+        "Extension": "https://docs.factory.ai/integrations/ide-integrations",
         "Web": "https://app.factory.ai/"
       }
     },
@@ -1723,10 +1723,10 @@
       "sort_date": "2025-01-01"
     },
     "latest_major_update": {
-      "value": "May '26",
-      "source_url": "https://docs.factory.ai/reference/cli-reference#_R_2tdbsnlht5debsnpfdb_:~:text=Complete%20reference%20for%20the%20Droid%20CLI",
-      "comment": "Current CLI reference includes plugins, MCP, skills, hooks, worktrees, Droid Exec, and custom droids.",
-      "sort_date": "2026-05-01"
+      "value": "Jun '26",
+      "source_url": "https://docs.factory.ai/models#source:~:text=As%20of%20June%2012%2C%202026",
+      "comment": "June 2026 Factory model/docs refresh: available-models guidance updated with new managed and Droid Core coding models, reasoning effort options, multipliers, and current CLI defaults.",
+      "sort_date": "2026-06-01"
     },
     "rules": {
       "support": "full",
@@ -2089,12 +2089,12 @@
         "SDK",
         "Web"
       ],
-      "source_url": "https://docs.github.com/en/copilot/using-github-copilot/getting-code-suggestions-in-your-ide#source:~:text=IDE",
-      "comment": "IDE agent mode (VS Code, JetBrains, Xcode, Neovim, Eclipse) + CLI + hosted cloud agent + @github/copilot-sdk (public preview). On GitHub CLI installs, Copilot is launched as `gh copilot`, which downloads/runs the Copilot CLI payload. Per-form-factor links: IDE: https://docs.github.com/en/copilot/using-github-copilot/getting-code-suggestions-in-your-ide; Extension: https://marketplace.visualstudio.com/items?itemName=GitHub.copilot; CLI: https://docs.github.com/en/copilot/using-github-copilot/using-github-copilot-in-the-command-line; SDK: https://docs.github.com/en/copilot/how-tos/copilot-sdk; Web: https://github.com/features/copilot.",
+      "source_url": "https://docs.github.com/en/copilot/get-started/features#inline-suggestions:~:text=Autocomplete-style%20suggestions%20from%20Copilot%20in%20supported%20IDEs",
+      "comment": "IDE agent mode (VS Code, JetBrains, Xcode, Neovim, Eclipse) + CLI + hosted cloud agent + @github/copilot-sdk (public preview). On GitHub CLI installs, Copilot is launched as `gh copilot`, which downloads/runs the Copilot CLI payload. Per-form-factor links: IDE: https://docs.github.com/en/copilot/get-started/features; Extension: https://marketplace.visualstudio.com/items?itemName=GitHub.copilot; CLI: https://docs.github.com/en/copilot/how-tos/copilot-cli/use-copilot-cli/overview; SDK: https://docs.github.com/en/copilot/how-tos/copilot-sdk; Web: https://github.com/features/copilot.",
       "links": {
-        "IDE": "https://docs.github.com/en/copilot/using-github-copilot/getting-code-suggestions-in-your-ide",
+        "IDE": "https://docs.github.com/en/copilot/get-started/features",
         "Extension": "https://marketplace.visualstudio.com/items?itemName=GitHub.copilot",
-        "CLI": "https://docs.github.com/en/copilot/using-github-copilot/using-github-copilot-in-the-command-line",
+        "CLI": "https://docs.github.com/en/copilot/how-tos/copilot-cli/use-copilot-cli/overview",
         "SDK": "https://docs.github.com/en/copilot/how-tos/copilot-sdk",
         "Web": "https://github.com/features/copilot"
       }
@@ -2283,10 +2283,10 @@
       "sort_date": "2026-05-01"
     },
     "latest_major_update": {
-      "value": "May '26",
-      "source_url": "https://x.ai/news/grok-build-cli#introducing-grok-build:~:text=Today%20we%27re%20launching%20an%20early%20beta%20of%20Grok%20Build",
-      "comment": "Initial public beta launch.",
-      "sort_date": "2026-05-01"
+      "value": "Jun '26",
+      "source_url": "https://x.ai/news/introducing-goal#introducing-goal:~:text=Use%20%2Fgoal%20for%20long-running%20autonomous%20task%20execution%20in%20Grok%20Build",
+      "comment": "June 2026 updates added `/goal` for long-running autonomous execution, a plugin marketplace, an agent dashboard for parallel sessions, and Composer 2.5 model access in Grok Build.",
+      "sort_date": "2026-06-01"
     },
     "rules": {
       "support": "full",
@@ -2309,14 +2309,14 @@
       "comment": "MCP servers work out of the box according to xAI. Location: MCP server configuration picked up from the repo/tooling; exact disk root not yet public."
     },
     "custom_commands": {
-      "support": "unknown",
-      "source_url": "https://x.ai/news/grok-build-cli#source:~:text=Type%20%60%2Ffeedback%60%20in%20the%20CLI",
-      "comment": "Slash command UX exists, but public docs do not yet show user-defined commands. Location: custom command folder not documented; slash UX exists for built-ins like `/feedback`."
+      "support": "partial",
+      "source_url": "https://x.ai/news/grok-plugin-marketplace#grok-build-plugin-marketplace:~:text=A%20plugin%20bundles%20skills%2C%20slash%20commands%2C%20agents%2C%20hooks%2C%20MCP%20servers%2C%20and%20LSPs",
+      "comment": "Plugin marketplace can bundle slash commands, but public docs reviewed still do not document a user-editable custom command folder."
     },
     "goal_command": {
-      "support": "none",
-      "source_url": "https://x.ai/news/grok-build-cli#built-to-fit-your-workflow:~:text=Grok%20Build",
-      "comment": "Grok Build launch materials mention plugins, hooks, and skills but not a `/goal` slash command."
+      "support": "full",
+      "source_url": "https://x.ai/news/introducing-goal#set-a-goal-in-one-line:~:text=Give%20%60%2Fgoal%60%20an%20objective%20and%20Grok%20Build%20takes%20it%20from%20there",
+      "comment": "Built-in `/goal` mode for long-running autonomous task execution with progress checklist and steering commands."
     },
     "subagents": {
       "support": "full",
@@ -2819,9 +2819,9 @@
     },
     "latest_major_update": {
       "value": "Jun '26",
-      "source_url": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.3.50#source:~:text=Show%20a%20BYOK%20badge%20for%20Kilo%20Gateway%20models",
-      "comment": "Latest release checked: v7.3.50 (June 19, 2026). Release notes add BYOK badges for Kilo Gateway models, custom-provider wording cleanup, redo/revert fixes, parent-session-only completion sounds, Agent Manager startup and concurrent-subagent webview fixes, faster worktree hover cards, and a wider chat readable lane.",
-      "sort_date": "2026-06-22"
+      "source_url": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.3.54#source:~:text=No%20notable%20changes",
+      "comment": "Latest release checked: v7.3.54 (June 23, 2026). Release notes say no notable changes.",
+      "sort_date": "2026-06-24"
     },
     "rules": {
       "support": "full",
@@ -3195,10 +3195,10 @@
       "sort_date": "2025-07-01"
     },
     "latest_major_update": {
-      "value": "May '26",
-      "source_url": "https://kiro.dev/docs/powers/create/#creating-powermd:~:text=POWER.md",
-      "comment": "Current docs include Powers, CLI hooks, custom agents, and ACP workflows.",
-      "sort_date": "2026-05-01"
+      "value": "Jun '26",
+      "source_url": "https://kiro.dev/docs/cli/reference/cli-commands/#source:~:text=Agent%20name%20is%20now%20a%20positional%20argument",
+      "comment": "June 2026 Kiro CLI docs refresh adds v1.26.0 custom-agent command changes, expanded model guidance, updated built-in tools, Kiro/Q Developer migration details, and refreshed powers/knowledge-management pages.",
+      "sort_date": "2026-06-01"
     },
     "rules": {
       "support": "full",
@@ -3382,9 +3382,9 @@
     },
     "latest_major_update": {
       "value": "Jun '26",
-      "source_url": "https://github.com/XiaomiMiMo/MiMo-Code/releases/tag/v0.1.1#v011:~:text=MiMoCode%20v0.1.1",
-      "comment": "Latest public release captured for this row is v0.1.1 on 2026-06-15.",
-      "sort_date": "2026-06-22"
+      "source_url": "https://github.com/XiaomiMiMo/MiMo-Code/releases/tag/v0.1.3#v013:~:text=MiMoCode%20v0.1.3",
+      "comment": "Latest public release captured for this row is v0.1.3 on 2026-06-24.",
+      "sort_date": "2026-06-24"
     },
     "rules": {
       "support": "full",
@@ -3582,7 +3582,7 @@
       "value": "Jun '26",
       "source_url": "https://github.com/anomalyco/opencode/releases/tag/v1.17.9#source:~:text=Honor%20configured%20agent%20step%20limits",
       "comment": "Latest release v1.17.9 (June 21, 2026) honors configured agent step limits with a final text response, fixes Devstral model detection casing and Copilot custom headers, adds GLM-5.2 high/max thinking variants, improves prompt caching for follow-ups, and hides the background subagent shortcut when unsupported.",
-      "sort_date": "2026-06-22"
+      "sort_date": "2026-06-24"
     },
     "rules": {
       "support": "full",
@@ -3774,9 +3774,9 @@
     },
     "latest_major_update": {
       "value": "Jun '26",
-      "source_url": "https://github.com/earendil-works/pi/releases/tag/v0.79.8#source:~:text=Selective%20provider%20base%20entry%20points",
-      "comment": "Latest release v0.79.8 (June 19, 2026) adds selective provider base entry points for SDK bundling, Mistral prompt caching with cost accounting, post-compaction token estimates, an OpenRouter Fusion alias, runtime dependency security updates, and compaction retry/empty-summary fixes.",
-      "sort_date": "2026-06-22"
+      "source_url": "https://github.com/earendil-works/pi/releases/tag/v0.80.2#source:~:text=ApiKeyCredential%20to%20use%20the%20auth.json-compatible%20discriminator",
+      "comment": "Latest release v0.80.2 (June 23, 2026) aligns API-key credential discriminators with `auth.json`, renames inherited shell execution option types, fixes Anthropic-compatible custom-model metadata, restores request-scoped auth/base-URL resolution, and restores legacy stream aliases and runtime compatibility fallback paths.",
+      "sort_date": "2026-06-24"
     },
     "rules": {
       "support": "full",
@@ -3949,25 +3949,25 @@
         "Extension",
         "SDK"
       ],
-      "source_url": "https://qwenlm.github.io/qwen-code-docs/getting-started/#source:~:text=CLI",
-      "comment": "CLI + VS Code + Zed + JetBrains via ACP, plus @qwen-code/sdk (TypeScript) and Python SDK. Per-form-factor links: CLI: https://qwenlm.github.io/qwen-code-docs/getting-started/; Extension: https://qwenlm.github.io/qwen-code-docs/en/users/extension/introduction/; SDK: https://qwenlm-qwen-code.mintlify.app/sdk/quick-start.",
+      "source_url": "https://qwenlm.github.io/qwen-code-docs/en/users/quickstart/#source:~:text=This%20quickstart%20guide%20will%20have%20you%20using%20AI-powered%20coding%20assistance",
+      "comment": "CLI + VS Code + Zed + JetBrains via ACP, plus @qwen-code/sdk (TypeScript) and Python SDK. Per-form-factor links: CLI: https://qwenlm.github.io/qwen-code-docs/en/users/quickstart/; Extension: https://qwenlm.github.io/qwen-code-docs/en/users/extension/introduction/; SDK: https://qwenlm-qwen-code.mintlify.app/sdk/quick-start.",
       "links": {
-        "CLI": "https://qwenlm.github.io/qwen-code-docs/getting-started/",
+        "CLI": "https://qwenlm.github.io/qwen-code-docs/en/users/quickstart/",
         "Extension": "https://qwenlm.github.io/qwen-code-docs/en/users/extension/introduction/",
         "SDK": "https://qwenlm-qwen-code.mintlify.app/sdk/quick-start"
       }
     },
     "released_in": {
       "value": "Jun '25",
-      "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.18.5#source:~:text=Release%20v0.18.5",
-      "comment": "GitHub repo created 2025-06-26. Earliest releases (v0.0.5+) shortly after. Current latest release: v0.18.5 (2026-06-21).",
+      "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.19.2#source:~:text=Release%20v0.19.2",
+      "comment": "GitHub repo created 2025-06-26. Earliest releases (v0.0.5+) shortly after. Current latest release: v0.19.2 (2026-06-24).",
       "sort_date": "2025-08-01"
     },
     "latest_major_update": {
       "value": "Jun '26",
-      "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.18.5#source:~:text=support%20MCP%20resources%20and%20reliably%20surface%20prompts",
-      "comment": "Latest release v0.18.5 (June 21, 2026) adds MCP resources and reliable prompt surfacing, Requesty provider support, Token Plan model updates, ACP model-invocable commands, stricter boundary/env validation, and multiple CLI/desktop/extension path and URL-scheme fixes.",
-      "sort_date": "2026-06-22"
+      "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.19.2#source:~:text=Add%20remote%20LSP%20status%20route",
+      "comment": "Latest release v0.19.2 (June 24, 2026) adds a remote LSP status route, fork-turn caps and fork permission bubbling, image-to-text vision bridge support for text-only models, deterministic destructive-command guards in auto mode, extension operation polling, global bare-@ MCP resource matching, workspace permissions rules APIs, and multiple CLI/SDK/daemon fixes.",
+      "sort_date": "2026-06-24"
     },
     "rules": {
       "support": "full",
@@ -4141,10 +4141,10 @@
       "sort_date": "2024-09-01"
     },
     "latest_major_update": {
-      "value": "Sep '25",
-      "source_url": "https://replit.com/blog/introducing-agent-3-our-most-autonomous-agent-yet#introducing-agent-3-our-most-autonomous-agent-yet:~:text=Introducing%20Agent%203",
-      "comment": "Agent 3: more autonomous testing and fixing loop.",
-      "sort_date": "2025-09-01"
+      "value": "Jun '26",
+      "source_url": "https://replit.com/blog/live-from-hq-agent4-launch-pt2#source:~:text=Customize%20Replit%20Agent%20with%20Skills%20%26%20Custom%20Instructions",
+      "comment": "Agent 4 shipped in March 2026 with Infinite Canvas, parallel tasks, multi-artifact builds, and team collaboration; June 2026 updates added Agent Customization with Custom Instructions and Skills.",
+      "sort_date": "2026-06-01"
     },
     "rules": {
       "support": "partial",
@@ -4152,9 +4152,9 @@
       "comment": "Project context exists inside Replit, but no AGENTS.md-style standard confirmed. Location: hosted/web/API-managed; no local disk folder documented."
     },
     "skills": {
-      "support": "none",
-      "source_url": "https://replit.com/blog/introducing-agent-3-our-most-autonomous-agent-yet#source:~:text=build%20other%20agents",
-      "comment": "No reusable skill-folder system found. Location: hosted/web/API-managed; no local disk folder documented."
+      "support": "full",
+      "source_url": "https://replit.com/blog/live-from-hq-agent4-launch-pt2#source:~:text=Today%20we%27re%20launching%20Agent%20Customization%3A%20a%20way%20to%20give%20Replit%20Agent%20the%20context",
+      "comment": "Replit Agent Customization includes Custom Instructions and Skills for reusable team/project context. Location: hosted/web-managed; no local disk folder documented."
     },
     "hooks": {
       "support": "partial",
@@ -4484,12 +4484,12 @@
         "Extension",
         "CLI"
       ],
-      "source_url": "https://windsurf.com/download#source:~:text=IDE",
-      "comment": "Standalone VS Code fork IDE + JetBrains plugin + CLI launcher. The `windsurf` command is installed from the IDE/desktop command palette rather than a separate standalone agent package. Per-form-factor links: IDE: https://windsurf.com/download; Extension: https://docs.windsurf.com/windsurf/cascade/cascade-in-ides; CLI: https://docs.windsurf.com/windsurf/cascade/command-line.",
+      "source_url": "https://devin.ai/download#source:~:text=Download",
+      "comment": "Devin Desktop/Windsurf IDE + JetBrains plugin + CLI launcher. The legacy `surf`/`windsurf` shell commands are retained for compatibility, while the current install command is `devin-desktop`. Per-form-factor links: IDE: https://devin.ai/download; Extension: https://docs.devin.ai/desktop/command/plugins-overview; CLI: https://docs.devin.ai/desktop/devin-desktop-faq.",
       "links": {
-        "IDE": "https://windsurf.com/download",
-        "Extension": "https://docs.windsurf.com/windsurf/cascade/cascade-in-ides",
-        "CLI": "https://docs.windsurf.com/windsurf/cascade/command-line"
+        "IDE": "https://devin.ai/download",
+        "Extension": "https://docs.devin.ai/desktop/command/plugins-overview",
+        "CLI": "https://docs.devin.ai/desktop/devin-desktop-faq"
       }
     },
     "released_in": {
@@ -4500,8 +4500,8 @@
     },
     "latest_major_update": {
       "value": "Jun '26",
-      "source_url": "https://windsurf.com/changelog/windsurf-next#source:~:text=v3.0.1028",
-      "comment": "Windsurf 2.0 (April 15, 2026): Agent Command Center, Devin cloud integration, Spaces. Latest Windsurf Next update captured: v3.0.1028 (June 2026), with enterprise model-picker pricing simplification; v2.0.1067 fixed OAuth for some MCP servers.",
+      "source_url": "https://docs.devin.ai/desktop/changelog#v3318:~:text=v3.3.18%20June%2023%2C%202026",
+      "comment": "Devin Desktop/Windsurf v3.3.18 (June 23, 2026) shows Devin ACU usage in-client, fixes settings/extensions migration for Windows system-wide installs, resolves Windows bash to Git Bash, adds default subagent models, warms the MCP registry cache, fixes ACP agent-message merging, and adds an attribution config option.",
       "sort_date": "2026-06-01"
     },
     "rules": {

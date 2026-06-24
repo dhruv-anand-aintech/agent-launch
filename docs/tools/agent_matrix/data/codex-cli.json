@@ -31,8 +31,8 @@
   },
   "latest_major_update": {
     "value": "Jun '26",
-    "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.141.0#source:~:text=Remote%20executors%20now%20use%20authenticated%2C%20end-to-end%20encrypted%20Noise%20relay%20channels",
-    "comment": "Latest Codex CLI release rust-v0.141.0 (June 18, 2026) adds authenticated encrypted remote-executor relay channels, cross-platform remote execution path/shell preservation, per-thread plugin MCP activation, app-server child-thread/rate-limit-credit APIs, realtime speech controls, and TUI auto-resolving input prompts."
+    "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.142.0#source:~:text=%2Fusage%20can%20now%20show%20and%20redeem%20earned%20usage-limit%20reset%20credits",
+    "comment": "Latest stable Codex CLI release rust-v0.142.0 (June 22, 2026) adds `/usage` reset-credit redemption, organized remote plugin catalogs with recommendations, rollout token budgets, configurable multi-agent delegation, indexed web-search mode, scheduled/current-time reminders, and remote/session reliability fixes."
   },
   "rules": {
     "support": "full",

@@ -13,10 +13,10 @@
       "Web",
       "SDK"
     ],
-    "source_url": "https://docs.devin.ai/cli#quickstart:~:text=Install%20Devin%20CLI",
-    "comment": "Web app + VS Code extension + CLI + Slack/Teams + REST API and official devin-sdk (Python). CLI installs the `devin` binary via Devin Desktop or the standalone CLI installer/Homebrew cask. Per-form-factor links: Extension: https://docs.devin.ai/work-with-devin/ide-extensions; CLI: https://docs.devin.ai/cli; Web: https://app.devin.ai/; SDK: https://docs.devin.ai/api-reference/overview.",
+    "source_url": "https://docs.devin.ai/cli#quickstart:~:text=Devin%20CLI%20is%20a%20local%20coding%20agent%20that%20runs%20directly%20in%20your%20terminal",
+    "comment": "Web app + Devin Desktop/IDE plugin surfaces + CLI + Slack/Teams + REST API and official devin-sdk (Python). CLI installs the `devin` binary via Devin Desktop or the standalone CLI installer/Homebrew cask. Per-form-factor links: Extension: https://docs.devin.ai/desktop/command/plugins-overview; CLI: https://docs.devin.ai/cli; Web: https://app.devin.ai/; SDK: https://docs.devin.ai/api-reference/overview.",
     "links": {
-      "Extension": "https://docs.devin.ai/work-with-devin/ide-extensions",
+      "Extension": "https://docs.devin.ai/desktop/command/plugins-overview",
       "CLI": "https://docs.devin.ai/cli",
       "Web": "https://app.devin.ai/",
       "SDK": "https://docs.devin.ai/api-reference/overview"
@@ -28,9 +28,9 @@
     "comment": "First publicly demoed March 2024. Made Generally Available (GA) on December 10, 2024."
   },
   "latest_major_update": {
-    "value": "Feb '26",
-    "source_url": "https://cognition.ai/blog/introducing-devin-2-2#introducing-devin-22:~:text=Today%20we%27re%20releasing%20Devin%202.2%2C%20one%20of%20our%20biggest%20updates",
-    "comment": "Devin 2.2 (Feb 24, 2026): 3x faster startup, end-to-end desktop testing, Devin Review Autofix, redesigned UI. Continuous weekly releases since."
+    "value": "Jun '26",
+    "source_url": "https://docs.devin.ai/release-notes/overview#june-19-2026:~:text=MCP%20Marketplace%20Expansion",
+    "comment": "June 19, 2026 release notes expand the MCP Marketplace, add a dedicated MCP management page, enable GitLab user identity linking, improve integration-origin indicators and Slack rendering, and promote more MCP connectors to general availability."
   },
   "rules": {
     "support": "full",

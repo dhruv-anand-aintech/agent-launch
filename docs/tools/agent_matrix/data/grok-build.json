@@ -22,9 +22,9 @@
     "comment": "xAI launch announcement for the early beta."
   },
   "latest_major_update": {
-    "value": "May '26",
-    "source_url": "https://x.ai/news/grok-build-cli#introducing-grok-build:~:text=Today%20we%27re%20launching%20an%20early%20beta%20of%20Grok%20Build",
-    "comment": "Initial public beta launch."
+    "value": "Jun '26",
+    "source_url": "https://x.ai/news/introducing-goal#introducing-goal:~:text=Use%20%2Fgoal%20for%20long-running%20autonomous%20task%20execution%20in%20Grok%20Build",
+    "comment": "June 2026 updates added `/goal` for long-running autonomous execution, a plugin marketplace, an agent dashboard for parallel sessions, and Composer 2.5 model access in Grok Build."
   },
   "rules": {
     "support": "full",
@@ -47,14 +47,14 @@
     "comment": "MCP servers work out of the box according to xAI. Location: MCP server configuration picked up from the repo/tooling; exact disk root not yet public."
   },
   "custom_commands": {
-    "support": "unknown",
-    "source_url": "https://x.ai/news/grok-build-cli#source:~:text=Type%20%60%2Ffeedback%60%20in%20the%20CLI",
-    "comment": "Slash command UX exists, but public docs do not yet show user-defined commands. Location: custom command folder not documented; slash UX exists for built-ins like `/feedback`."
+    "support": "partial",
+    "source_url": "https://x.ai/news/grok-plugin-marketplace#grok-build-plugin-marketplace:~:text=A%20plugin%20bundles%20skills%2C%20slash%20commands%2C%20agents%2C%20hooks%2C%20MCP%20servers%2C%20and%20LSPs",
+    "comment": "Plugin marketplace can bundle slash commands, but public docs reviewed still do not document a user-editable custom command folder."
   },
   "goal_command": {
-    "support": "none",
-    "source_url": "https://x.ai/news/grok-build-cli#built-to-fit-your-workflow:~:text=Grok%20Build",
-    "comment": "Grok Build launch materials mention plugins, hooks, and skills but not a `/goal` slash command."
+    "support": "full",
+    "source_url": "https://x.ai/news/introducing-goal#set-a-goal-in-one-line:~:text=Give%20%60%2Fgoal%60%20an%20objective%20and%20Grok%20Build%20takes%20it%20from%20there",
+    "comment": "Built-in `/goal` mode for long-running autonomous task execution with progress checklist and steering commands."
   },
   "subagents": {
     "support": "full",
