@@ -12,12 +12,12 @@
       "Extension",
       "CLI"
     ],
-    "source_url": "https://windsurf.com/download#source:~:text=IDE",
-    "comment": "Standalone VS Code fork IDE + JetBrains plugin + CLI launcher. The `windsurf` command is installed from the IDE/desktop command palette rather than a separate standalone agent package. Per-form-factor links: IDE: https://windsurf.com/download; Extension: https://docs.windsurf.com/windsurf/cascade/cascade-in-ides; CLI: https://docs.windsurf.com/windsurf/cascade/command-line.",
+    "source_url": "https://devin.ai/download#source:~:text=Download",
+    "comment": "Devin Desktop/Windsurf IDE + JetBrains plugin + CLI launcher. The legacy `surf`/`windsurf` shell commands are retained for compatibility, while the current install command is `devin-desktop`. Per-form-factor links: IDE: https://devin.ai/download; Extension: https://docs.devin.ai/desktop/command/plugins-overview; CLI: https://docs.devin.ai/desktop/devin-desktop-faq.",
     "links": {
-      "IDE": "https://windsurf.com/download",
-      "Extension": "https://docs.windsurf.com/windsurf/cascade/cascade-in-ides",
-      "CLI": "https://docs.windsurf.com/windsurf/cascade/command-line"
+      "IDE": "https://devin.ai/download",
+      "Extension": "https://docs.devin.ai/desktop/command/plugins-overview",
+      "CLI": "https://docs.devin.ai/desktop/devin-desktop-faq"
     }
   },
   "released_in": {
@@ -27,8 +27,8 @@
   },
   "latest_major_update": {
     "value": "Jun '26",
-    "source_url": "https://windsurf.com/changelog/windsurf-next#source:~:text=v3.0.1028",
-    "comment": "Windsurf 2.0 (April 15, 2026): Agent Command Center, Devin cloud integration, Spaces. Latest Windsurf Next update captured: v3.0.1028 (June 2026), with enterprise model-picker pricing simplification; v2.0.1067 fixed OAuth for some MCP servers."
+    "source_url": "https://docs.devin.ai/desktop/changelog#v3318:~:text=v3.3.18%20June%2023%2C%202026",
+    "comment": "Devin Desktop/Windsurf v3.3.18 (June 23, 2026) shows Devin ACU usage in-client, fixes settings/extensions migration for Windows system-wide installs, resolves Windows bash to Git Bash, adds default subagent models, warms the MCP registry cache, fixes ACP agent-message merging, and adds an attribution config option."
   },
   "rules": {
     "support": "full",

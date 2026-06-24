@@ -24,9 +24,9 @@
     "comment": "North early access announcement."
   },
   "latest_major_update": {
-    "value": "May '26",
-    "source_url": "https://cohere.com/blog/command-a-plus#snapshot:~:text=command-a-plus-05-2026",
-    "comment": "Command A+ model update powers agentic workflows and coding benchmarks, while North remains the enterprise agent platform."
+    "value": "Jun '26",
+    "source_url": "https://cohere.com/blog/north-mini-code#introducing-north-mini-code-coheres-first-model-for-developers:~:text=Introducing%20North%20Mini%20Code%3A%20Cohere%E2%80%99s%20first%20model%20for%20developers",
+    "comment": "Cohere launched North Mini Code on June 9, 2026: a small open-source agentic coding model optimized for code generation, software engineering, and terminal tasks, available through Hugging Face, Cohere API, Model Vault, OpenRouter, and OpenCode-compatible harnesses."
   },
   "rules": {
     "support": "partial",

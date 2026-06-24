@@ -22,9 +22,9 @@
     "comment": "Replit Agent launched publicly in 2024; Agent 3 followed in September 2025."
   },
   "latest_major_update": {
-    "value": "Sep '25",
-    "source_url": "https://replit.com/blog/introducing-agent-3-our-most-autonomous-agent-yet#introducing-agent-3-our-most-autonomous-agent-yet:~:text=Introducing%20Agent%203",
-    "comment": "Agent 3: more autonomous testing and fixing loop."
+    "value": "Jun '26",
+    "source_url": "https://replit.com/blog/live-from-hq-agent4-launch-pt2#source:~:text=Customize%20Replit%20Agent%20with%20Skills%20%26%20Custom%20Instructions",
+    "comment": "Agent 4 shipped in March 2026 with Infinite Canvas, parallel tasks, multi-artifact builds, and team collaboration; June 2026 updates added Agent Customization with Custom Instructions and Skills."
   },
   "rules": {
     "support": "partial",
@@ -32,9 +32,9 @@
     "comment": "Project context exists inside Replit, but no AGENTS.md-style standard confirmed. Location: hosted/web/API-managed; no local disk folder documented."
   },
   "skills": {
-    "support": "none",
-    "source_url": "https://replit.com/blog/introducing-agent-3-our-most-autonomous-agent-yet#source:~:text=build%20other%20agents",
-    "comment": "No reusable skill-folder system found. Location: hosted/web/API-managed; no local disk folder documented."
+    "support": "full",
+    "source_url": "https://replit.com/blog/live-from-hq-agent4-launch-pt2#source:~:text=Today%20we%27re%20launching%20Agent%20Customization%3A%20a%20way%20to%20give%20Replit%20Agent%20the%20context",
+    "comment": "Replit Agent Customization includes Custom Instructions and Skills for reusable team/project context. Location: hosted/web-managed; no local disk folder documented."
   },
   "hooks": {
     "support": "partial",

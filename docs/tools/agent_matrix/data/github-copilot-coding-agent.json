@@ -14,12 +14,12 @@
       "SDK",
       "Web"
     ],
-    "source_url": "https://docs.github.com/en/copilot/using-github-copilot/getting-code-suggestions-in-your-ide#source:~:text=IDE",
-    "comment": "IDE agent mode (VS Code, JetBrains, Xcode, Neovim, Eclipse) + CLI + hosted cloud agent + @github/copilot-sdk (public preview). On GitHub CLI installs, Copilot is launched as `gh copilot`, which downloads/runs the Copilot CLI payload. Per-form-factor links: IDE: https://docs.github.com/en/copilot/using-github-copilot/getting-code-suggestions-in-your-ide; Extension: https://marketplace.visualstudio.com/items?itemName=GitHub.copilot; CLI: https://docs.github.com/en/copilot/using-github-copilot/using-github-copilot-in-the-command-line; SDK: https://docs.github.com/en/copilot/how-tos/copilot-sdk; Web: https://github.com/features/copilot.",
+    "source_url": "https://docs.github.com/en/copilot/get-started/features#inline-suggestions:~:text=Autocomplete-style%20suggestions%20from%20Copilot%20in%20supported%20IDEs",
+    "comment": "IDE agent mode (VS Code, JetBrains, Xcode, Neovim, Eclipse) + CLI + hosted cloud agent + @github/copilot-sdk (public preview). On GitHub CLI installs, Copilot is launched as `gh copilot`, which downloads/runs the Copilot CLI payload. Per-form-factor links: IDE: https://docs.github.com/en/copilot/get-started/features; Extension: https://marketplace.visualstudio.com/items?itemName=GitHub.copilot; CLI: https://docs.github.com/en/copilot/how-tos/copilot-cli/use-copilot-cli/overview; SDK: https://docs.github.com/en/copilot/how-tos/copilot-sdk; Web: https://github.com/features/copilot.",
     "links": {
-      "IDE": "https://docs.github.com/en/copilot/using-github-copilot/getting-code-suggestions-in-your-ide",
+      "IDE": "https://docs.github.com/en/copilot/get-started/features",
       "Extension": "https://marketplace.visualstudio.com/items?itemName=GitHub.copilot",
-      "CLI": "https://docs.github.com/en/copilot/using-github-copilot/using-github-copilot-in-the-command-line",
+      "CLI": "https://docs.github.com/en/copilot/how-tos/copilot-cli/use-copilot-cli/overview",
       "SDK": "https://docs.github.com/en/copilot/how-tos/copilot-sdk",
       "Web": "https://github.com/features/copilot"
     }

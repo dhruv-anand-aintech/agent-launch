@@ -27,8 +27,8 @@
   },
   "latest_major_update": {
     "value": "Jun '26",
-    "source_url": "https://cursor.com/changelog/sdk-updates-jun-2026#custom-stores-custom-tools-and-auto-review-for-the-cursor-sdk:~:text=Custom%20stores%2C%20custom%20tools%2C%20and%20auto-review%20for%20the%20Cursor%20SDK",
-    "comment": "June 4, 2026 SDK update: custom metadata stores, custom tools, local auto-review, and nested subagents, plus production reliability/performance fixes."
+    "source_url": "https://cursor.com/changelog#source:~:text=Cloud%20Environment%20Setup%20and%20Cloud%20Subagents%20in%20Agents%20Window",
+    "comment": "June 17, 2026 changelog: cloud environment setup and snapshots for cloud agents, `/in-cloud` cloud subagents in the Agents Window, cloud/local handoff improvements, PR babysitting, and background cloud-agent execution."
   },
   "rules": {
     "support": "full",
