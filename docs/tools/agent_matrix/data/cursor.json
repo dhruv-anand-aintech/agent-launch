@@ -27,8 +27,8 @@
   },
   "latest_major_update": {
     "value": "Jun '26",
-    "source_url": "https://cursor.com/changelog#source:~:text=Cloud%20Environment%20Setup%20and%20Cloud%20Subagents%20in%20Agents%20Window",
-    "comment": "June 17, 2026 changelog: cloud environment setup and snapshots for cloud agents, `/in-cloud` cloud subagents in the Agents Window, cloud/local handoff improvements, PR babysitting, and background cloud-agent execution."
+    "source_url": "https://cursor.com/changelog/06-18-26#improvements-to-cursor-automations:~:text=Cursor%20Automations%20save%20you%20time%20by%20automating%20repetitive%20tasks%20with%20always-on%20agents",
+    "comment": "June 18, 2026 changelog: Cursor Automations added the `/automate` skill, GitHub and Slack triggers, and computer-use support for always-on agent workflows, following June 17 cloud-agent setup and `/in-cloud` subagent updates."
   },
   "rules": {
     "support": "full",

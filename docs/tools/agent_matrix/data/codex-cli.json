@@ -31,8 +31,8 @@
   },
   "latest_major_update": {
     "value": "Jun '26",
-    "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.142.0#source:~:text=%2Fusage%20can%20now%20show%20and%20redeem%20earned%20usage-limit%20reset%20credits",
-    "comment": "Latest stable Codex CLI release rust-v0.142.0 (June 22, 2026) adds `/usage` reset-credit redemption, organized remote plugin catalogs with recommendations, rollout token budgets, configurable multi-agent delegation, indexed web-search mode, scheduled/current-time reminders, and remote/session reliability fixes."
+    "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.142.2#source:~:text=MCP%20tools%20now%20use%20tool%20search%20by%20default%20when%20supported",
+    "comment": "Latest stable Codex CLI release rust-v0.142.2 (June 25, 2026) makes MCP tools use tool search by default when supported, adds macOS system proxy support for authentication clients, dark-mode plugin logos, richer safety-buffering UI metadata, featured remote-plugin rankings, and remote/MCP/image-input reliability fixes."
   },
   "rules": {
     "support": "full",

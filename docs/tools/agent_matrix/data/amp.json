@@ -31,8 +31,8 @@
   },
   "latest_major_update": {
     "value": "Jun '26",
-    "source_url": "https://ampcode.com/news/agents-everywhere#agents-everywhere:~:text=June%204%2C%202026",
-    "comment": "June 4, 2026 — 'Agents, Everywhere' added the new UI/sidebar for web, mobile, and CLI on top of May's durable, plugin-powered Neo rewrite."
+    "source_url": "https://ampcode.com/news/diffs#diffs:~:text=You%20can%20now%20review%20any%20thread%27s%20code%20changes%20directly%20in%20Amp%2C%20on%20desktop%20or%20mobile",
+    "comment": "June 16, 2026 — Amp added in-app diff review for thread code changes on desktop/mobile, with change requests, interactive staging, and duplicate-block-aware diffing."
   },
   "rules": {
     "support": "full",

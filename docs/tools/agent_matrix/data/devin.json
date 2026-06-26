@@ -29,8 +29,8 @@
   },
   "latest_major_update": {
     "value": "Jun '26",
-    "source_url": "https://docs.devin.ai/release-notes/overview#june-19-2026:~:text=MCP%20Marketplace%20Expansion",
-    "comment": "June 19, 2026 release notes expand the MCP Marketplace, add a dedicated MCP management page, enable GitLab user identity linking, improve integration-origin indicators and Slack rendering, and promote more MCP connectors to general availability."
+    "source_url": "https://docs.devin.ai/release-notes/2026#june-24-2026:~:text=Start%20Session%20in%20Background",
+    "comment": "June 24, 2026 release notes add start-session-in-background, command-palette pin/unpin, file-tab latest-version affordances, security findings in Ask Devin, repo-rule badges on Lifeguard findings, split-view auto-disable, and usage-analytics Top 10 rankings."
   },
   "rules": {
     "support": "full",

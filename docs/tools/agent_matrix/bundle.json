@@ -225,8 +225,8 @@
     },
     "latest_major_update": {
       "value": "Jun '26",
-      "source_url": "https://ampcode.com/news/agents-everywhere#agents-everywhere:~:text=June%204%2C%202026",
-      "comment": "June 4, 2026 \u2014 'Agents, Everywhere' added the new UI/sidebar for web, mobile, and CLI on top of May's durable, plugin-powered Neo rewrite.",
+      "source_url": "https://ampcode.com/news/diffs#diffs:~:text=You%20can%20now%20review%20any%20thread%27s%20code%20changes%20directly%20in%20Amp%2C%20on%20desktop%20or%20mobile",
+      "comment": "June 16, 2026 \u2014 Amp added in-app diff review for thread code changes on desktop/mobile, with change requests, interactive staging, and duplicate-block-aware diffing.",
       "sort_date": "2026-06-01"
     },
     "rules": {
@@ -599,9 +599,9 @@
     },
     "latest_major_update": {
       "value": "Jun '26",
-      "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.190#source:~:text=Bug%20fixes%20and%20reliability%20improvements",
-      "comment": "Latest release v2.1.190 (June 24, 2026) includes bug fixes and reliability improvements.",
-      "sort_date": "2026-06-24"
+      "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.193#source:~:text=Added%20%60autoMode.classifyAllShell%60%20setting%20to%20route%20all%20Bash%2FPowerShell%20commands%20through%20the%20auto-mode%20classifier",
+      "comment": "Latest release v2.1.193 (June 25, 2026) adds all-shell auto-mode classification, denial reasons in transcripts/toasts, live bash-mode path autocomplete, MCP-auth startup notices, background-shell pressure reaping, and background-agent fixes.",
+      "sort_date": "2026-06-25"
     },
     "rules": {
       "support": "full",
@@ -780,9 +780,9 @@
     },
     "latest_major_update": {
       "value": "Jun '26",
-      "source_url": "https://github.com/cline/cline/releases/tag/cli-v3.0.29#source:~:text=Costs%20are%20now%20hidden%20for%20Cline%20free%20models",
-      "comment": "CLI latest checked: v3.0.29 (June 20, 2026), hiding costs for Cline free models, fixing Z.ai model metadata resolution through the Cline provider, and reverting model-picker/status-bar display behavior from v3.0.28.",
-      "sort_date": "2026-06-24"
+      "source_url": "https://github.com/cline/cline/releases/tag/v4.0.0#source:~:text=Add%20the%20SDK-backed%20VS%20Code%20extension%20runtime",
+      "comment": "Latest release v4.0.0 (June 26, 2026) migrates the VS Code extension to the shared Cline SDK runtime, adds ClinePass onboarding, Customize marketplace support for skills/MCP/plugins, plugin-bundled skills, queued prompts, edit-and-regenerate, broader SDK provider/model settings, and temporarily disables subagents in the VS Code extension while the SDK-backed experience stabilizes.",
+      "sort_date": "2026-06-26"
     },
     "rules": {
       "support": "full",
@@ -815,9 +815,9 @@
       "comment": "Cline supports custom slash commands via workflow files; no built-in `/goal` for auto-continuing until a completion condition."
     },
     "subagents": {
-      "support": "full",
-      "source_url": "https://docs.cline.bot/features/subagents#documentation-index:~:text=Subagents%20let%20Cline%20spawn%20focused%20research%20agents%20that%20run%20in%20parallel",
-      "comment": "Full subagent system: use_subagents tool spawns parallel read-only research agents with separate context/token budgets."
+      "support": "partial",
+      "source_url": "https://github.com/cline/cline/releases/tag/v4.0.0#source:~:text=Temporarily%20disable%20subagents%20in%20the%20VS%20Code%20extension",
+      "comment": "Subagents remain documented as a focused parallel research-agent system, but v4.0.0 temporarily disables subagents in the VS Code extension while the SDK-backed runtime stabilizes."
     },
     "model_selection": {
       "support": "full",
@@ -980,9 +980,9 @@
     },
     "latest_major_update": {
       "value": "Jun '26",
-      "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.142.0#source:~:text=%2Fusage%20can%20now%20show%20and%20redeem%20earned%20usage-limit%20reset%20credits",
-      "comment": "Latest stable Codex CLI release rust-v0.142.0 (June 22, 2026) adds `/usage` reset-credit redemption, organized remote plugin catalogs with recommendations, rollout token budgets, configurable multi-agent delegation, indexed web-search mode, scheduled/current-time reminders, and remote/session reliability fixes.",
-      "sort_date": "2026-06-24"
+      "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.142.2#source:~:text=MCP%20tools%20now%20use%20tool%20search%20by%20default%20when%20supported",
+      "comment": "Latest stable Codex CLI release rust-v0.142.2 (June 25, 2026) makes MCP tools use tool search by default when supported, adds macOS system proxy support for authentication clients, dark-mode plugin logos, richer safety-buffering UI metadata, featured remote-plugin rankings, and remote/MCP/image-input reliability fixes.",
+      "sort_date": "2026-06-26"
     },
     "rules": {
       "support": "full",
@@ -1350,8 +1350,8 @@
     },
     "latest_major_update": {
       "value": "Jun '26",
-      "source_url": "https://cursor.com/changelog#source:~:text=Cloud%20Environment%20Setup%20and%20Cloud%20Subagents%20in%20Agents%20Window",
-      "comment": "June 17, 2026 changelog: cloud environment setup and snapshots for cloud agents, `/in-cloud` cloud subagents in the Agents Window, cloud/local handoff improvements, PR babysitting, and background cloud-agent execution.",
+      "source_url": "https://cursor.com/changelog/06-18-26#improvements-to-cursor-automations:~:text=Cursor%20Automations%20save%20you%20time%20by%20automating%20repetitive%20tasks%20with%20always-on%20agents",
+      "comment": "June 18, 2026 changelog: Cursor Automations added the `/automate` skill, GitHub and Slack triggers, and computer-use support for always-on agent workflows, following June 17 cloud-agent setup and `/in-cloud` subagent updates.",
       "sort_date": "2026-06-01"
     },
     "rules": {
@@ -1538,8 +1538,8 @@
     },
     "latest_major_update": {
       "value": "Jun '26",
-      "source_url": "https://docs.devin.ai/release-notes/overview#june-19-2026:~:text=MCP%20Marketplace%20Expansion",
-      "comment": "June 19, 2026 release notes expand the MCP Marketplace, add a dedicated MCP management page, enable GitLab user identity linking, improve integration-origin indicators and Slack rendering, and promote more MCP connectors to general availability.",
+      "source_url": "https://docs.devin.ai/release-notes/2026#june-24-2026:~:text=Start%20Session%20in%20Background",
+      "comment": "June 24, 2026 release notes add start-session-in-background, command-palette pin/unpin, file-tab latest-version affordances, security findings in Ask Devin, repo-rule badges on Lifeguard findings, split-view auto-disable, and usage-analytics Top 10 rankings.",
       "sort_date": "2026-06-01"
     },
     "rules": {
@@ -1912,8 +1912,8 @@
     },
     "latest_major_update": {
       "value": "Jun '26",
-      "source_url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.47.0#source:~:text=Add%20documentation%20and%20migration%20commands%20for%20Antigravity%20CLI",
-      "comment": "Latest Gemini CLI release v0.47.0 (June 18, 2026), with Antigravity CLI migration docs/commands, MCP tool-discovery atomic update fixes, Vertex AI model mapping fixes, TOML parse recovery, and resume-session cleanup.",
+      "source_url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.49.0#source:~:text=Release%20v0.49.0",
+      "comment": "Latest Gemini CLI release v0.49.0 (June 25, 2026) includes zero-quota fail-fast behavior, path-traversal hardening during skill install, pending-tool/trust-override fixes, GDC air-gapped service identity support, tmux background-detection fixes, coreTools-to-tools.core migration, and eval inventory commands/reporting.",
       "sort_date": "2026-06-01"
     },
     "rules": {
@@ -2148,8 +2148,8 @@
     },
     "model_selection": {
       "support": "full",
-      "source_url": "https://docs.github.com/en/copilot/how-tos/use-ai-models/change-the-chat-model#further-reading:~:text=Choose%20from%20a%20selection%20of%20models%2C%20each%20with%20its%20own%20particular%20strengths",
-      "comment": "Models from Anthropic, Google, OpenAI, xAI. Auto model selection available. Each model has a premium request multiplier."
+      "source_url": "https://docs.github.com/en/copilot/reference/copilot-billing/models-and-pricing#how-model-pricing-works:~:text=The%20cost%20of%20an%20interaction%20depends%20on%20two%20things%3A%20the%20model%20and%20the%20number%20of%20tokens%20consumed",
+      "comment": "Models from Anthropic, Google, OpenAI, xAI, Microsoft, and GitHub-tuned models. Auto model selection is available; current billing uses token-based AI Credits by model, with legacy premium-request multipliers only for qualifying annual Pro/Pro+ subscribers."
     },
     "approval_mode": {
       "support": "partial",
@@ -2198,9 +2198,9 @@
     },
     "notes": "GitHub Copilot's agent capabilities span IDE, cloud, and CLI. The cloud agent is unique: runs in ephemeral GitHub Actions environment. Desktop app (preview) adds parallel agent sessions. Ecosystem is rapidly evolving with weekly feature drops.",
     "pricing": {
-      "value": "Free $0, Pro $10/mo, Pro+ $39/mo, Business $19/user/mo, Enterprise $39/user/mo",
-      "source_url": "https://github.com/features/copilot/plans#everything-in-pro-and:~:text=Free%20%240%2C%20Pro%20%2410%2Fmonth%2C%20Pro%2B%20%2439%2Fmonth",
-      "comment": "Free: $0/mo (50 premium requests). Pro: $10/mo (300 premium requests). Pro+: $39/mo (1500 premium requests). Usage-based billing starting June 2026."
+      "value": "Free $0, Pro $10/mo, Pro+ $39/mo, Max $100/mo, Business $19/user/mo, Enterprise $39/user/mo",
+      "source_url": "https://docs.github.com/en/copilot/get-started/plans#pricing:~:text=Copilot%20Free%20Copilot%20Student%20Copilot%20Pro%20Copilot%20Pro%2BCopilot%20Max%20Copilot%20Business%20Copilot%20Enterprise",
+      "comment": "Current plans use GitHub AI Credits allowances. Pro is $10/mo, Pro+ $39/mo, Max $100/mo, Business $19/seat/mo, Enterprise $39/seat/mo; usage beyond included credits is billed under usage-based billing, while legacy premium-request billing remains only for qualifying annual Pro/Pro+ subscribers."
     },
     "hosted_agent": {
       "support": "full",
@@ -2821,7 +2821,7 @@
       "value": "Jun '26",
       "source_url": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.3.54#source:~:text=No%20notable%20changes",
       "comment": "Latest release checked: v7.3.54 (June 23, 2026). Release notes say no notable changes.",
-      "sort_date": "2026-06-24"
+      "sort_date": "2026-06-26"
     },
     "rules": {
       "support": "full",
@@ -3384,7 +3384,7 @@
       "value": "Jun '26",
       "source_url": "https://github.com/XiaomiMiMo/MiMo-Code/releases/tag/v0.1.3#v013:~:text=MiMoCode%20v0.1.3",
       "comment": "Latest public release captured for this row is v0.1.3 on 2026-06-24.",
-      "sort_date": "2026-06-24"
+      "sort_date": "2026-06-26"
     },
     "rules": {
       "support": "full",
@@ -3580,9 +3580,9 @@
     },
     "latest_major_update": {
       "value": "Jun '26",
-      "source_url": "https://github.com/anomalyco/opencode/releases/tag/v1.17.9#source:~:text=Honor%20configured%20agent%20step%20limits",
-      "comment": "Latest release v1.17.9 (June 21, 2026) honors configured agent step limits with a final text response, fixes Devstral model detection casing and Copilot custom headers, adds GLM-5.2 high/max thinking variants, improves prompt caching for follow-ups, and hides the background subagent shortcut when unsupported.",
-      "sort_date": "2026-06-24"
+      "source_url": "https://github.com/anomalyco/opencode/releases/tag/v1.17.11#source:~:text=Add%20session%20snapshots%20and%20revert%20controls",
+      "comment": "Latest release v1.17.11 (June 25, 2026) adds session snapshots and revert controls, always prints MCP OAuth URLs for manual sign-in, improves desktop tab cycling/dragging and empty-state/session layouts, and fixes prompt drafts, provider dialogs, prompt rollbacks, async attachments, todo docks, and stale tab/session behavior.",
+      "sort_date": "2026-06-26"
     },
     "rules": {
       "support": "full",
@@ -3776,7 +3776,7 @@
       "value": "Jun '26",
       "source_url": "https://github.com/earendil-works/pi/releases/tag/v0.80.2#source:~:text=ApiKeyCredential%20to%20use%20the%20auth.json-compatible%20discriminator",
       "comment": "Latest release v0.80.2 (June 23, 2026) aligns API-key credential discriminators with `auth.json`, renames inherited shell execution option types, fixes Anthropic-compatible custom-model metadata, restores request-scoped auth/base-URL resolution, and restores legacy stream aliases and runtime compatibility fallback paths.",
-      "sort_date": "2026-06-24"
+      "sort_date": "2026-06-26"
     },
     "rules": {
       "support": "full",
@@ -3967,7 +3967,7 @@
       "value": "Jun '26",
       "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.19.2#source:~:text=Add%20remote%20LSP%20status%20route",
       "comment": "Latest release v0.19.2 (June 24, 2026) adds a remote LSP status route, fork-turn caps and fork permission bubbling, image-to-text vision bridge support for text-only models, deterministic destructive-command guards in auto mode, extension operation polling, global bare-@ MCP resource matching, workspace permissions rules APIs, and multiple CLI/SDK/daemon fixes.",
-      "sort_date": "2026-06-24"
+      "sort_date": "2026-06-26"
     },
     "rules": {
       "support": "full",

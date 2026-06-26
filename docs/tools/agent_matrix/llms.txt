@@ -1,6 +1,6 @@
 # Coding Agent Feature Matrix
 > Compare 25 coding agents, CLIs, and IDEs across features.
-> https://compare.ainorthstar.tech | Updated 2026-06-25
+> https://compare.ainorthstar.tech | Updated 2026-06-27
 
 Agent             Rel    FF     Fre   NoA   Oth   Rul   Skl   Hks   MCP   Cmd   Gol   Sub   Trn   Mod   App   San   Res   Con   Hdl   Fmt   Sta   Tel   Hst  BYOM
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -8,7 +8,7 @@ Aider             Jun '2 CLI        Y     Y     Y     ~     ~     ~     N     N 
 Amp               May '2 CLI/Ext    Y                 Y     Y     Y     Y     N     N     Y     ?     ~     ~     N     Y     Y     Y     Y     N     ?     N     ~
 Antigravity       2025  CLI/IDE    Y                 Y     Y     Y     Y     ~     N     ?     ~     ?     ~     ~     Y     Y     Y     ?     ?     ?     N     ?
 Claude Code       Feb '2 CLI/Ext                      Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     ~     Y     Y     Y     Y     Y     Y     ~     ~
-Cline             Jul '2 CLI/Ext    Y     Y     Y     Y     Y     Y     Y     Y     N     Y     ?     Y     Y     ~     Y     ~     Y     Y     N     Y     N     Y
+Cline             Jul '2 CLI/Ext    Y     Y     Y     Y     Y     Y     Y     Y     N     ~     ?     Y     Y     ~     Y     ~     Y     Y     N     Y     N     Y
 OpenAI Codex CLI  Apr '2 CLI/Ext    Y           Y     Y     Y     Y     Y     ~     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y
 Cohere North      Jan '2 SDK/Web                      ~     ~     Y     Y     N     N     Y     ~     ~     ~     Y     ~     ~     ~     ~     N     ~     Y     N
 Cursor            2023  CLI/IDE    Y                 Y     Y     ?     Y     Y     N     Y     Y     Y     Y     Y     Y     Y     Y     ~     ~     Y     Y     Y
@@ -177,7 +177,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Mcp Servers: full — Full MCP support with STDIO and HTTP/SSE transports, MCP Marketplace for one-click install, cline mcp CLI wizard. Location: no public disk folder/file location found in docs reviewed.
 - Custom Commands: full — Built-in slash commands plus skills auto-register as slash commands. SDK plugins can also register custom commands. Location: no public disk folder/file location found in docs reviewed.
 - Goal Command: none — Cline supports custom slash commands via workflow files; no built-in `/goal` for auto-continuing until a completion condition.
-- Subagents: full — Full subagent system: use_subagents tool spawns parallel read-only research agents with separate context/token budgets.
+- Subagents: partial — Subagents remain documented as a focused parallel research-agent system, but v4.0.0 temporarily disables subagents in the VS Code extension while the SDK-backed runtime stabilizes.
 - Transcripts: unknown — Location: transcript/session disk storage was not found in public docs reviewed.
 - Model Selection: full — 30+ documented providers: Anthropic, OpenAI, Google, AWS Bedrock, Azure, GCP Vertex, OpenRouter (200+ models), Ollama, LM Studio, and any OpenAI-compatible endpoint.
 - Approval Mode: full — Granular auto-approve per category: Read, Edit, Execute, Browser, MCP. YOLO mode for everything. --auto-approve flag.
@@ -399,7 +399,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Goal Command: none — GitHub Copilot CLI has slash commands and agent modes but no `/goal` for persistent completion conditions across turns.
 - Subagents: full — Subagents in VS Code and JetBrains IDE agent mode. Isolated context window. Invocation: automatic, direct, or via #runSubagent. Cannot create sub-subagents.
 - Transcripts: unknown — Location: transcript/session disk storage was not found in public docs reviewed.
-- Model Selection: full — Models from Anthropic, Google, OpenAI, xAI. Auto model selection available. Each model has a premium request multiplier.
+- Model Selection: full — Models from Anthropic, Google, OpenAI, xAI, Microsoft, and GitHub-tuned models. Auto model selection is available; current billing uses token-based AI Credits by model, with legacy premium-request multipliers only for qualifying annual Pro/Pro+ subscribers.
 - Approval Mode: partial — Desktop app has Interactive, Plan, and Autopilot modes. preToolUse hook can approve/deny. No universal 'always ask before X' toggle.
 - Sandbox Mode: partial — Cloud agent runs in ephemeral GitHub Actions environment (natural sandbox). CLI has tool permission controls. No explicit sandbox toggle.
 - Resume: full — CLI: copilot --resume opens session picker, copilot --resume SESSION-ID jumps to specific session. /resume during interactive session.
@@ -410,7 +410,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Telemetry: partial — Enterprise audit logging, agent session monitoring. Data retention: prompts retained 28 days. Users can opt out of training data. No granular telemetry UI.
 - Hosted Agent: full — Copilot Cloud Agent runs autonomously in GitHub Actions-powered ephemeral environment.
 - Custom Model Provider: full — BYOK in CLI: env vars for provider type, base URL, API key. OpenAI-compatible endpoints, Azure OpenAI, Anthropic, local models via Ollama.
-- Pricing: Free $0, Pro $10/mo, Pro+ $39/mo, Business $19/user/mo, Enterprise $39/user/mo
+- Pricing: Free $0, Pro $10/mo, Pro+ $39/mo, Max $100/mo, Business $19/user/mo, Enterprise $39/user/mo
 - Notes: GitHub Copilot's agent capabilities span IDE, cloud, and CLI. The cloud agent is unique: runs in ephemeral GitHub Actions environment. Desktop app (preview) adds parallel agent sessions. Ecosystem is rapidly evolving with weekly feature drops.
 
 ### Grok Build

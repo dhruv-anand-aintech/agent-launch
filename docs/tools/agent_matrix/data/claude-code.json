@@ -31,8 +31,8 @@
   },
   "latest_major_update": {
     "value": "Jun '26",
-    "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.190#source:~:text=Bug%20fixes%20and%20reliability%20improvements",
-    "comment": "Latest release v2.1.190 (June 24, 2026) includes bug fixes and reliability improvements."
+    "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.193#source:~:text=Added%20%60autoMode.classifyAllShell%60%20setting%20to%20route%20all%20Bash%2FPowerShell%20commands%20through%20the%20auto-mode%20classifier",
+    "comment": "Latest release v2.1.193 (June 25, 2026) adds all-shell auto-mode classification, denial reasons in transcripts/toasts, live bash-mode path autocomplete, MCP-auth startup notices, background-shell pressure reaping, and background-agent fixes."
   },
   "rules": {
     "support": "full",

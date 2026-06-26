@@ -29,8 +29,8 @@
   },
   "latest_major_update": {
     "value": "Jun '26",
-    "source_url": "https://github.com/anomalyco/opencode/releases/tag/v1.17.9#source:~:text=Honor%20configured%20agent%20step%20limits",
-    "comment": "Latest release v1.17.9 (June 21, 2026) honors configured agent step limits with a final text response, fixes Devstral model detection casing and Copilot custom headers, adds GLM-5.2 high/max thinking variants, improves prompt caching for follow-ups, and hides the background subagent shortcut when unsupported."
+    "source_url": "https://github.com/anomalyco/opencode/releases/tag/v1.17.11#source:~:text=Add%20session%20snapshots%20and%20revert%20controls",
+    "comment": "Latest release v1.17.11 (June 25, 2026) adds session snapshots and revert controls, always prints MCP OAuth URLs for manual sign-in, improves desktop tab cycling/dragging and empty-state/session layouts, and fixes prompt drafts, provider dialogs, prompt rollbacks, async attachments, todo docks, and stale tab/session behavior."
   },
   "rules": {
     "support": "full",
