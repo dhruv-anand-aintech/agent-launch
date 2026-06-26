@@ -27,8 +27,8 @@
   },
   "latest_major_update": {
     "value": "Jun '26",
-    "source_url": "https://github.com/cline/cline/releases/tag/cli-v3.0.29#source:~:text=Costs%20are%20now%20hidden%20for%20Cline%20free%20models",
-    "comment": "CLI latest checked: v3.0.29 (June 20, 2026), hiding costs for Cline free models, fixing Z.ai model metadata resolution through the Cline provider, and reverting model-picker/status-bar display behavior from v3.0.28."
+    "source_url": "https://github.com/cline/cline/releases/tag/v4.0.0#source:~:text=Add%20the%20SDK-backed%20VS%20Code%20extension%20runtime",
+    "comment": "Latest release v4.0.0 (June 26, 2026) migrates the VS Code extension to the shared Cline SDK runtime, adds ClinePass onboarding, Customize marketplace support for skills/MCP/plugins, plugin-bundled skills, queued prompts, edit-and-regenerate, broader SDK provider/model settings, and temporarily disables subagents in the VS Code extension while the SDK-backed experience stabilizes."
   },
   "rules": {
     "support": "full",
@@ -61,9 +61,9 @@
     "comment": "Cline supports custom slash commands via workflow files; no built-in `/goal` for auto-continuing until a completion condition."
   },
   "subagents": {
-    "support": "full",
-    "source_url": "https://docs.cline.bot/features/subagents#documentation-index:~:text=Subagents%20let%20Cline%20spawn%20focused%20research%20agents%20that%20run%20in%20parallel",
-    "comment": "Full subagent system: use_subagents tool spawns parallel read-only research agents with separate context/token budgets."
+    "support": "partial",
+    "source_url": "https://github.com/cline/cline/releases/tag/v4.0.0#source:~:text=Temporarily%20disable%20subagents%20in%20the%20VS%20Code%20extension",
+    "comment": "Subagents remain documented as a focused parallel research-agent system, but v4.0.0 temporarily disables subagents in the VS Code extension while the SDK-backed runtime stabilizes."
   },
   "model_selection": {
     "support": "full",

@@ -71,8 +71,8 @@
   },
   "model_selection": {
     "support": "full",
-    "source_url": "https://docs.github.com/en/copilot/how-tos/use-ai-models/change-the-chat-model#further-reading:~:text=Choose%20from%20a%20selection%20of%20models%2C%20each%20with%20its%20own%20particular%20strengths",
-    "comment": "Models from Anthropic, Google, OpenAI, xAI. Auto model selection available. Each model has a premium request multiplier."
+    "source_url": "https://docs.github.com/en/copilot/reference/copilot-billing/models-and-pricing#how-model-pricing-works:~:text=The%20cost%20of%20an%20interaction%20depends%20on%20two%20things%3A%20the%20model%20and%20the%20number%20of%20tokens%20consumed",
+    "comment": "Models from Anthropic, Google, OpenAI, xAI, Microsoft, and GitHub-tuned models. Auto model selection is available; current billing uses token-based AI Credits by model, with legacy premium-request multipliers only for qualifying annual Pro/Pro+ subscribers."
   },
   "approval_mode": {
     "support": "partial",
@@ -121,9 +121,9 @@
   },
   "notes": "GitHub Copilot's agent capabilities span IDE, cloud, and CLI. The cloud agent is unique: runs in ephemeral GitHub Actions environment. Desktop app (preview) adds parallel agent sessions. Ecosystem is rapidly evolving with weekly feature drops.",
   "pricing": {
-    "value": "Free $0, Pro $10/mo, Pro+ $39/mo, Business $19/user/mo, Enterprise $39/user/mo",
-    "source_url": "https://github.com/features/copilot/plans#everything-in-pro-and:~:text=Free%20%240%2C%20Pro%20%2410%2Fmonth%2C%20Pro%2B%20%2439%2Fmonth",
-    "comment": "Free: $0/mo (50 premium requests). Pro: $10/mo (300 premium requests). Pro+: $39/mo (1500 premium requests). Usage-based billing starting June 2026."
+    "value": "Free $0, Pro $10/mo, Pro+ $39/mo, Max $100/mo, Business $19/user/mo, Enterprise $39/user/mo",
+    "source_url": "https://docs.github.com/en/copilot/get-started/plans#pricing:~:text=Copilot%20Free%20Copilot%20Student%20Copilot%20Pro%20Copilot%20Pro%2BCopilot%20Max%20Copilot%20Business%20Copilot%20Enterprise",
+    "comment": "Current plans use GitHub AI Credits allowances. Pro is $10/mo, Pro+ $39/mo, Max $100/mo, Business $19/seat/mo, Enterprise $39/seat/mo; usage beyond included credits is billed under usage-based billing, while legacy premium-request billing remains only for qualifying annual Pro/Pro+ subscribers."
   },
   "hosted_agent": {
     "support": "full",
