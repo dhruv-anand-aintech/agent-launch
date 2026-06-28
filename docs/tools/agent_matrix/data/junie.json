@@ -9,13 +9,19 @@
   "form_factor": {
     "values": [
       "IDE",
-      "CLI"
+      "CLI",
+      "GitHub Action",
+      "GitLab CI/CD",
+      "Web"
     ],
-    "source_url": "https://junie.jetbrains.com/docs/junie-cli.html#step-1-install-junie-cli:~:text=Install%20Junie%20CLI",
-    "comment": "JetBrains IDE agent with Junie CLI documentation. CLI install paths include JetBrains' install script, Homebrew tap/formula, and npm package @jetbrains/junie-cli. Per-form-factor links: IDE: https://www.jetbrains.com/help/ai-assistant/junie-agent.html; CLI: https://junie.jetbrains.com/docs/junie-cli.html.",
+    "source_url": "https://junie.jetbrains.com/#source:~:text=Junie%20CLI%20works%20with",
+    "comment": "JetBrains IDE agent plus Junie CLI, GitHub Action, GitLab CI/CD, and Remote Mode web UI. Per-form-factor links: IDE: https://junie.jetbrains.com/docs/junie-ide-plugin.html; CLI: https://junie.jetbrains.com/docs/junie-cli.html; GitHub Action: https://junie.jetbrains.com/docs/junie-on-github.html; GitLab CI/CD: https://junie.jetbrains.com/docs/junie-gitlab-ci-cd.html; Web: https://junie.jetbrains.com/docs/junie-cli-remote-mode.html.",
     "links": {
-      "IDE": "https://www.jetbrains.com/help/ai-assistant/junie-agent.html",
-      "CLI": "https://junie.jetbrains.com/docs/junie-cli.html"
+      "IDE": "https://junie.jetbrains.com/docs/junie-ide-plugin.html",
+      "CLI": "https://junie.jetbrains.com/docs/junie-cli.html",
+      "GitHub Action": "https://junie.jetbrains.com/docs/junie-on-github.html",
+      "GitLab CI/CD": "https://junie.jetbrains.com/docs/junie-gitlab-ci-cd.html",
+      "Web": "https://junie.jetbrains.com/docs/junie-cli-remote-mode.html"
     }
   },
   "released_in": {
@@ -24,34 +30,34 @@
     "comment": "Introduced by JetBrains as a coding agent in early 2025."
   },
   "latest_major_update": {
-    "value": "May '26",
-    "source_url": "https://junie.jetbrains.com/#agentic-debugging:~:text=starts%20a%20real%20debugger",
-    "comment": "Current product page emphasizes debugger-backed agent behavior."
+    "value": "Jun '26",
+    "source_url": "https://junie.jetbrains.com/docs/junie-cli-extensions.html#add-and-configure-extensions:~:text=Extensions%20are%20reusable%20bundles%20that%20extend%20Junie%20CLI%20with%20project-specific%20or%20domain-specific%20capabilities",
+    "comment": "June 26, 2026 Junie CLI docs refresh documents extensions, AGENTS.md guidelines, custom slash commands, MCP configuration, custom subagents, hooks, BYOK/custom models, headless CI/CD, GitHub Action, GitLab CI/CD, and Remote Mode."
   },
   "rules": {
-    "support": "partial",
-    "source_url": "https://www.jetbrains.com/help/ai-assistant/junie-agent.html#junie-guidelines:~:text=guidelines",
-    "comment": "JetBrains documents project guidance for Junie, but not AGENTS.md-compatible rules. Location: no public disk folder/file location found in docs reviewed."
+    "support": "full",
+    "source_url": "https://junie.jetbrains.com/docs/guidelines-and-memory.html#guidelines:~:text=Junie%20CLI%20reads%20guidelines%20from%20the%20%60AGENTS.md%60%20file",
+    "comment": "Full guideline support. Junie CLI reads `.junie/AGENTS.md`, project `AGENTS.md`, legacy `.junie/guidelines.md` or `.junie/guidelines/`, and global `~/.junie/AGENTS.md`."
   },
   "skills": {
-    "support": "unknown",
-    "source_url": "https://www.jetbrains.com/help/ai-assistant/junie-agent.html#ai-assistant-20261-help:~:text=plan%20and%20execute",
-    "comment": "No reusable skill folder standard found. Location: no public disk folder/file location found in docs reviewed."
+    "support": "full",
+    "source_url": "https://junie.jetbrains.com/docs/junie-cli-extensions.html#add-and-configure-extensions:~:text=A%20single%20extension%20can%20package%20any%20combination%20of%3A",
+    "comment": "Full support through Junie CLI extensions, which can package agent skills. Extension references live in `.junie/extensions.json` or `~/.junie/extensions/extensions.json`; cached content is under `~/.junie/extensions/<marketplace>/<extension>/`."
   },
   "hooks": {
-    "support": "none",
-    "source_url": "https://www.jetbrains.com/help/ai-assistant/junie-agent.html#ai-assistant-20261-help:~:text=autonomously%20plan%20and%20execute",
-    "comment": "No lifecycle hook system found."
+    "support": "full",
+    "source_url": "https://junie.jetbrains.com/docs/junie-cli-configuration.html#supported-configuration-fields:~:text=%60hooks%20%60%20Shell%20commands%20to%20run%20on%20session%20lifecycle%20events",
+    "comment": "Full support via config.json hooks. Hooks are shell commands on session lifecycle events; default project hooks are ignored for safety unless explicitly loaded."
   },
   "mcp_servers": {
-    "support": "unknown",
-    "source_url": "https://www.jetbrains.com/help/ai-assistant/junie-agent.html#Junie_agent.topic:~:text=Junie",
-    "comment": "No Junie-specific MCP configuration found in public docs reviewed. Location: no public disk folder/file location found in docs reviewed."
+    "support": "full",
+    "source_url": "https://junie.jetbrains.com/docs/junie-cli-mcp-configuration.html#add-and-configure-mcp-servers:~:text=You%20can%20connect%20Junie%20CLI%20to%20external%20tools%20via%20Model%20Context%20Protocol%20(MCP)",
+    "comment": "Full MCP support. `/mcp` manages project `.junie/mcp/mcp.json` and user `~/.junie/mcp/mcp.json`; supports local and remote MCP servers plus an installation assistant."
   },
   "custom_commands": {
-    "support": "unknown",
-    "source_url": "https://www.jetbrains.com/help/ai-assistant/junie-agent.html#Junie_agent.topic:~:text=prompt",
-    "comment": "No custom slash-command system found. Location: no public disk folder/file location found in docs reviewed."
+    "support": "full",
+    "source_url": "https://junie.jetbrains.com/docs/custom-slash-commands.html#custom-slash-commands:~:text=Junie%20CLI%20supports%20custom%20slash%20commands",
+    "comment": "Full custom slash command support. Project commands are Markdown files in `.junie/commands`; user commands are in `~/.junie/commands`; `/commands` creates and manages them."
   },
   "goal_command": {
     "support": "none",
@@ -59,19 +65,19 @@
     "comment": "Junie runs as an IDE agent with tasks and modes; no built-in `/goal` slash command documented."
   },
   "subagents": {
-    "support": "unknown",
-    "source_url": "https://www.jetbrains.com/help/ai-assistant/junie-agent.html#ai-assistant-20261-help:~:text=multi-step",
-    "comment": "No first-class subagent docs found."
+    "support": "full",
+    "source_url": "https://junie.jetbrains.com/docs/junie-cli-subagents.html#custom-subagents:~:text=Subagents%20in%20Junie%20extend%20the%20built-in%20logic%20of%20the%20main%20agent",
+    "comment": "Full custom subagent support. Subagents define tailored prompts, tool restrictions, model usage, and skills; Junie delegates automatically and stores custom agents in configured agent locations."
   },
   "model_selection": {
-    "support": "partial",
-    "source_url": "https://www.jetbrains.com/help/ide-services-cloud/manage-aie.html#junie:~:text=OpenAI%20and%20Amazon%20Bedrock",
-    "comment": "Enterprise docs mention JetBrains AI service plus selected OpenAI/Bedrock models."
+    "support": "full",
+    "source_url": "https://junie.jetbrains.com/docs/slash-commands.html#built-in-slash-commands:~:text=%60%2Fmodel%20%60%20Select%20the%20main%20Large%20Language%20Model",
+    "comment": "Full model selection through `/model` and config. Junie CLI can select the main LLM and reasoning effort; the home page advertises 10+ models via BYOK."
   },
   "approval_mode": {
     "support": "full",
-    "source_url": "https://junie.jetbrains.com/#agentic-debugging:~:text=Modes%3A%20autonomous%20%2F%20user-assisted%20%2F%20semi-auto",
-    "comment": "Product page lists autonomous, user-assisted, and semi-auto modes."
+    "source_url": "https://junie.jetbrains.com/docs/slash-commands.html#built-in-slash-commands:~:text=%60%2Fbrave%20%60%20Cycle%20through%20the%20brave%20mode%20levels",
+    "comment": "Full approval control through brave mode levels (Off, Auto, On), action allowlist, and settings/config."
   },
   "sandbox_mode": {
     "support": "partial",
@@ -79,19 +85,19 @@
     "comment": "Runs inside JetBrains IDE context; no explicit standalone sandbox controls found."
   },
   "resume": {
-    "support": "partial",
-    "source_url": "https://www.jetbrains.com/help/ai-assistant/junie-agent.html#source:~:text=reports%20progress",
-    "comment": "IDE tasks have progress/history, but explicit session resume docs are limited."
+    "support": "full",
+    "source_url": "https://junie.jetbrains.com/docs/slash-commands.html#built-in-slash-commands:~:text=%60%2Fhistory%20%60%20See%20the%20session%20history%20and%20resume%20one%20of%20the%20previous%20sessions",
+    "comment": "Supports session history and resuming previous sessions through `/history`."
   },
   "continue": {
     "support": "partial",
-    "source_url": "https://www.jetbrains.com/help/ai-assistant/junie-agent.html#source:~:text=reports%20progress",
-    "comment": "Interactive IDE task continuation is available; no CLI continue command confirmed."
+    "source_url": "https://junie.jetbrains.com/docs/slash-commands.html#built-in-slash-commands:~:text=%60%2Fhistory%20%60%20See%20the%20session%20history%20and%20resume%20one%20of%20the%20previous%20sessions",
+    "comment": "Previous sessions can be resumed from `/history`; no separate continue-latest command was found."
   },
   "non_interactive": {
-    "support": "unknown",
-    "source_url": "https://junie.jetbrains.com/docs/junie-cli.html#step-1-install-junie-cli:~:text=Install%20Junie%20CLI",
-    "comment": "CLI exists and is documented for terminal use, but no verified headless automation flag was found in docs reviewed."
+    "support": "full",
+    "source_url": "https://junie.jetbrains.com/docs/junie-headless.html#headless-mode:~:text=You%20can%20run%20Junie%20CLI%20in%20headless%20mode%20without%20interactive%20UI",
+    "comment": "Supports headless mode for CI/CD environments and build pipelines."
   },
   "output_format": {
     "support": "unknown",
@@ -104,30 +110,30 @@
     "comment": "IDE UI, no custom CLI statusline found."
   },
   "telemetry": {
-    "support": "unknown",
-    "source_url": "https://www.jetbrains.com/help/ai-assistant/junie-agent.html#Junie_agent.topic:~:text=JetBrains",
-    "comment": "No Junie-specific telemetry toggle found in docs reviewed."
+    "support": "partial",
+    "source_url": "https://junie.jetbrains.com/docs/slash-commands.html#built-in-slash-commands:~:text=A%20ZIP%20file%20with%20the%20current%20session%20logs%20is%20automatically%20attached",
+    "comment": "Feedback flow attaches current session logs; no broader telemetry-disable setting was found in docs reviewed."
   },
   "hosted_agent": {
-    "support": "none",
-    "source_url": "https://www.jetbrains.com/help/ai-assistant/junie-agent.html#source:~:text=supported%20JetBrains%20IntelliJ%20IDEA-based%20IDEs",
-    "comment": "Primarily an IDE agent rather than a managed cloud worker."
+    "support": "partial",
+    "source_url": "https://junie.jetbrains.com/docs/junie-on-github.html#junie-github-action:~:text=Turning%20issues%20into%20fixes",
+    "comment": "Junie can run from GitHub Action and GitLab CI/CD on issues, PRs, or MRs; this is CI-hosted automation rather than a managed always-on cloud worker."
   },
   "custom_model_provider": {
-    "support": "partial",
-    "source_url": "https://www.jetbrains.com/help/ide-services-cloud/manage-aie.html#junie:~:text=OpenAI%20and%20Amazon%20Bedrock",
-    "comment": "Enterprise service supports selected provider/model options, not arbitrary endpoints."
+    "support": "full",
+    "source_url": "https://junie.jetbrains.com/docs/custom-llm-models.html#custom-llms:~:text=Junie%20CLI%20supports%20custom%20models%20defined%20via%20JSON%20profiles",
+    "comment": "Full custom model/BYOK support through custom JSON model profiles, local providers such as Ollama, enterprise proxies, and supported API-compatible endpoints."
   },
   "pricing": {
     "value": "Bundled with JetBrains AI tiers/free credits",
     "source_url": "https://blog.jetbrains.com/blog/2025/04/16/jetbrains-ides-go-ai/#all-jetbrains-ai-tools-under-a-single-subscription-with-a-free-tier:~:text=AI%20Free%20tier",
     "comment": "Junie is included in JetBrains AI subscription/free-tier credit model."
   },
-  "notes": "Strong fit for JetBrains users, especially debugger-aware workflows. Public docs expose less extensibility detail than CLI-first agents. macOS installs may involve app-bundle/shim setup rather than a simple standalone binary.",
+  "notes": "Strong fit for JetBrains users, debugger-aware workflows, CLI/headless CI, and JetBrains IDE integration. June 2026 docs now expose extensibility details for guidelines, extensions, MCP, subagents, commands, hooks, BYOK/custom models, and CI/CD.",
   "transcripts": {
-    "support": "unknown",
-    "source_url": "https://www.jetbrains.com/help/ai-assistant/junie-agent.html#source:~:text=session",
-    "comment": "Location: transcript/session disk storage was not found in public docs reviewed."
+    "support": "full",
+    "source_url": "https://junie.jetbrains.com/docs/slash-commands.html#navigation:~:text=%60Ctrl%2BT%20%60%20Open%20the%20full%20transcript%20of%20the%20current%20session",
+    "comment": "Interactive CLI exposes the full current-session transcript with Ctrl+T and session history with `/history`; public docs do not specify the disk storage path."
   },
   "keyboard_shortcuts": {
     "support": "unknown",
@@ -135,9 +141,9 @@
     "comment": "Research needed. Check official documentation for keybinding customization options."
   },
   "theme_customization": {
-    "support": "unknown",
-    "source_url": "https://docs.example.com/#documentation:~:text=theme",
-    "comment": "Research needed. Check for theme/appearance customization options."
+    "support": "full",
+    "source_url": "https://junie.jetbrains.com/docs/slash-commands.html#built-in-slash-commands:~:text=%60%2Fsettings%20%60%20Change%20Junie%20settings%2C%20including%20theme",
+    "comment": "Theme can be changed through `/settings`."
   },
   "auto_save": {
     "support": "unknown",
@@ -145,9 +151,9 @@
     "comment": "Research needed. Check for auto-save or session persistence features."
   },
   "debugging_output": {
-    "support": "unknown",
-    "source_url": "https://docs.example.com/#documentation:~:text=debugging",
-    "comment": "Research needed. Check for debug mode or verbose logging options."
+    "support": "full",
+    "source_url": "https://junie.jetbrains.com/docs/slash-commands.html#built-in-slash-commands:~:text=%60%2Fdebug%20%60%20Toggle%20debug%20mode",
+    "comment": "Supports `/debug` mode, where Junie CLI acts as an AI debugging assistant against a live debugger session in a connected JetBrains IDE."
   },
   "context_window": {
     "support": "unknown",
@@ -160,9 +166,9 @@
     "comment": "Research needed. Check for formatter/linter integration or auto-format options."
   },
   "git_integration": {
-    "support": "unknown",
-    "source_url": "https://docs.example.com/#documentation:~:text=git",
-    "comment": "Research needed. Check for git command support or version control integration."
+    "support": "full",
+    "source_url": "https://junie.jetbrains.com/docs/junie-review-agent.html#code-review-agent:~:text=Review%20current%20changes%20in%20the%20repository%20junie%20--review",
+    "comment": "Full git workflow support through review mode, GitHub Action, GitLab CI/CD, issue/MR/PR triggers, worktrees, and automated PR/code-review workflows."
   },
   "performance_mode": {
     "support": "unknown",
@@ -170,8 +176,8 @@
     "comment": "Research needed. Check for caching, optimization, or resource management settings."
   },
   "ui_customization": {
-    "support": "unknown",
-    "source_url": "https://docs.example.com/#documentation:~:text=ui-customization",
-    "comment": "Research needed. Check for UI layout, sidebar, or panel customization."
+    "support": "partial",
+    "source_url": "https://junie.jetbrains.com/docs/slash-commands.html#built-in-slash-commands:~:text=%60%2Fsettings%20%60%20Change%20Junie%20settings%2C%20including%20theme%2C%20notifications%2C%20step%20limit%2C%20subagents%20mode%2C%20and%20diff%20view%20mode",
+    "comment": "CLI settings include theme, notifications, step limit, subagents mode, and diff view mode; no broad layout customization was found."
   }
 }

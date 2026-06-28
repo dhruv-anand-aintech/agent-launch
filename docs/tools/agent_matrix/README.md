@@ -32,14 +32,14 @@ Form factor values are deliberately strict: each value should have a concrete pe
 | Claude Code | CLI, Extension, SDK, Web, Mac App | Feb '25 | Jun '26 |  |  |  | full | full | full | full | full | partial | partial |
 | Cline | CLI, Extension, SDK | Jul '24 | Jun '26 | full | full | full | full | full | unknown | full | full | none | full |
 | Cohere North | SDK, Web | Jan '25 | Jun '26 |  |  |  | partial | partial | partial | full | full | full | none |
-| Cursor | CLI, IDE, SDK | 2023 | Jun '26 | full |  |  | full | full | full | unknown | full | full | full |
+| Cursor | CLI, IDE, SDK | 2023 | Jun '26 | full |  |  | full | full | full | full | full | full | full |
 | Devin | CLI, Extension, SDK, Web | Dec '24 | Jun '26 | full |  |  | full | full | partial | full | full | full | unknown |
 | Factory Droid | CLI, Extension, Web | 2025 | Jun '26 |  | partial | full | full | full | partial | full | full | partial | full |
 | Gemini CLI | CLI | Jun '25 | Jun '26 | full |  | full | full | partial | unknown | full | full | none | partial |
 | GitHub Copilot | CLI, IDE, Extension, SDK, Web | Jun '25 | May '26 |  |  |  | full | full | unknown | full | full | full | full |
-| Google Jules | Web | Aug '25 | May '26 |  |  |  | unknown | none | partial | partial | unknown | full | none |
+| Google Jules | Web | Aug '25 | Mar '26 |  |  |  | unknown | none | partial | partial | partial | full | none |
 | Grok Build | CLI | May '26 | Jun '26 |  |  |  | full | full | unknown | full | full | none | partial |
-| JetBrains Junie | CLI, IDE | Jan '25 | May '26 |  |  |  | partial | unknown | unknown | none | unknown | none | partial |
+| JetBrains Junie | CLI, IDE, Web, GitHub Action, GitLab CI/CD | Jan '25 | Jun '26 |  |  |  | full | full | full | full | full | partial | full |
 | Kilo Code | CLI, Extension | Feb '26 | Jun '26 | full | full | full | full | full | unknown | full | full | partial | full |
 | Kimi CLI | CLI, Extension, SDK | Oct '25 | Jun '26 |  |  |  | full | full | unknown | partial | full | none | full |
 | Kiro | CLI, IDE, Web | Jul '25 | Jun '26 | full |  |  | full | full | partial | full | full | partial | none |

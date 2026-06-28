@@ -58,9 +58,9 @@
     "comment": "Deprecated Gemini CLI surface; no documented `/goal`. Google points CLI users to Antigravity, which also lacks a `/goal` command in public docs."
   },
   "subagents": {
-    "support": "unknown",
-    "source_url": "https://google-gemini.github.io/gemini-cli/#source:~:text=subagents",
-    "comment": ""
+    "support": "full",
+    "source_url": "https://github.com/google-gemini/gemini-cli/blob/main/docs/core/subagents.md#what-are-subagents:~:text=Subagents%20are%20specialized%20agents%20that%20operate%20within%20your%20main%20Gemini%20CLI%20session",
+    "comment": "Full subagent support in Gemini CLI docs: specialized agents with separate prompts, tools, and context loops; automatic delegation, @ forcing, built-in agents, browser agent, tool isolation, and extension subagents."
   },
   "model_selection": {
     "support": "full",

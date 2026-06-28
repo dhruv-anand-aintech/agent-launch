@@ -31,8 +31,8 @@
   },
   "latest_major_update": {
     "value": "Jun '26",
-    "source_url": "https://ampcode.com/news/diffs#diffs:~:text=You%20can%20now%20review%20any%20thread%27s%20code%20changes%20directly%20in%20Amp%2C%20on%20desktop%20or%20mobile",
-    "comment": "June 16, 2026 — Amp added in-app diff review for thread code changes on desktop/mobile, with change requests, interactive staging, and duplicate-block-aware diffing."
+    "source_url": "https://ampcode.com/news/custom-agents#custom-agents:~:text=You%20can%20now%20create%20custom%20agents%20in%20Amp%20with%20plugins",
+    "comment": "June 19, 2026 - Amp added custom agents via plugins, usable as the main agent, as subagents, in amp -x tool pipelines, or as many parallel worker agents."
   },
   "rules": {
     "support": "full",

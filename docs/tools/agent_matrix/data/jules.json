@@ -22,9 +22,9 @@
     "comment": "General availability after public beta."
   },
   "latest_major_update": {
-    "value": "May '26",
-    "source_url": "https://jules.google/#source:~:text=Gemini%203%20Pro",
-    "comment": "Current site advertises Gemini 3 Pro access and tiered concurrent task limits."
+    "value": "Mar '26",
+    "source_url": "https://jules.google/docs/changelog/#gemini-31-pro-is-now-available-in-jules:~:text=Gemini%203.1%20Pro%20is%20now%20available%20in%20Jules%20for%20Google%20Pro%20plan%20users",
+    "comment": "Latest official Jules changelog item is March 9, 2026: Gemini 3.1 Pro became available for Google Pro plan users and replaced Gemini 3 Pro as the Pro default model."
   },
   "rules": {
     "support": "unknown",
@@ -42,9 +42,9 @@
     "comment": "GitHub issue label assignment acts as a lightweight trigger."
   },
   "mcp_servers": {
-    "support": "unknown",
-    "source_url": "https://jules.google/#source:~:text=Cloud%20VM",
-    "comment": "No public MCP server configuration found. Location: hosted/web/API-managed; no local disk folder documented."
+    "support": "partial",
+    "source_url": "https://jules.google/docs/changelog/#mcp-support-comes-to-jules:~:text=Today%20we%E2%80%99re%20launching%20MCP%20Server%20support%20in%20Jules%20starting%20with",
+    "comment": "Jules supports a vetted set of MCP server integrations through Settings, initially including Linear, Stitch, Neon, Tinybird, Context7, and Supabase; arbitrary MCP server configuration was not documented."
   },
   "custom_commands": {
     "support": "none",
