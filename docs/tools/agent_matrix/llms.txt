@@ -1,6 +1,6 @@
 # Coding Agent Feature Matrix
 > Compare 25 coding agents, CLIs, and IDEs across features.
-> https://compare.ainorthstar.tech | Updated 2026-06-27
+> https://compare.ainorthstar.tech | Updated 2026-06-29
 
 Agent             Rel    FF     Fre   NoA   Oth   Rul   Skl   Hks   MCP   Cmd   Gol   Sub   Trn   Mod   App   San   Res   Con   Hdl   Fmt   Sta   Tel   Hst  BYOM
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -8,17 +8,17 @@ Aider             Jun '2 CLI        Y     Y     Y     ~     ~     ~     N     N 
 Amp               May '2 CLI/Ext    Y                 Y     Y     Y     Y     N     N     Y     ?     ~     ~     N     Y     Y     Y     Y     N     ?     N     ~
 Antigravity       2025  CLI/IDE    Y                 Y     Y     Y     Y     ~     N     ?     ~     ?     ~     ~     Y     Y     Y     ?     ?     ?     N     ?
 Claude Code       Feb '2 CLI/Ext                      Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     ~     Y     Y     Y     Y     Y     Y     ~     ~
-Cline             Jul '2 CLI/Ext    Y     Y     Y     Y     Y     Y     Y     Y     N     ~     ?     Y     Y     ~     Y     ~     Y     Y     N     Y     N     Y
+Cline             Jul '2 CLI/Ext    Y     Y     Y     Y     Y     Y     Y     Y     N     Y     ?     Y     Y     ~     Y     ~     Y     Y     N     Y     N     Y
 OpenAI Codex CLI  Apr '2 CLI/Ext    Y           Y     Y     Y     Y     Y     ~     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y
 Cohere North      Jan '2 SDK/Web                      ~     ~     Y     Y     N     N     Y     ~     ~     ~     Y     ~     ~     ~     ~     N     ~     Y     N
-Cursor            2023  CLI/IDE    Y                 Y     Y     ?     Y     Y     N     Y     Y     Y     Y     Y     Y     Y     Y     ~     ~     Y     Y     Y
+Cursor            2023  CLI/IDE    Y                 Y     Y     Y     Y     Y     N     Y     Y     Y     Y     Y     Y     Y     Y     ~     ~     Y     Y     Y
 Devin             Dec '2 CLI/Ext    Y                 Y     Y     Y     Y     Y     N     Y     ~     ?     ~     Y     Y     Y     Y     ~     N     ?     Y     ?
 Factory Droid     2025  CLI/Ext          ~     Y     Y     Y     Y     Y     Y     N     Y     ~     Y     Y     Y     Y     Y     Y     Y     Y     ?     ~     Y
-Gemini CLI        Jun '2 CLI        Y           Y     Y     ~     Y     Y     Y     N     ?     ?     Y     Y     Y     Y     Y     Y     ~     ?     Y     N     ~
+Gemini CLI        Jun '2 CLI        Y           Y     Y     ~     Y     Y     Y     N     Y     ?     Y     Y     Y     Y     Y     Y     ~     ?     Y     N     ~
 GitHub Copilot    Jun '2 CLI/IDE                      Y     Y     Y     Y     ~     N     Y     ?     Y     ~     ~     Y     Y     Y     ~     N     ~     Y     Y
 Grok Build        May '2 CLI                          Y     Y     Y     Y     ~     Y     Y     ?     ~     Y     ~     ?     ?     Y     ?     ?     ?     N     ~
-Google Jules      Aug '2 Web                          ?     N     ~     ?     N     N     ~     ~     ~     Y     Y     ~     ~     ~     ~     N     ?     Y     N
-JetBrains Junie   Jan '2 CLI/IDE                      ~     ?     N     ?     ?     N     ?     ?     ~     Y     ~     ~     ~     ?     ?     N     ?     N     ~
+Google Jules      Aug '2 Web                          ?     N     ~     ~     N     N     ~     ~     ~     Y     Y     ~     ~     ~     ~     N     ?     Y     N
+JetBrains Junie   Jan '2 CLI/IDE                      Y     Y     Y     Y     Y     N     Y     Y     Y     Y     ~     Y     ~     Y     ?     N     ~     ~     Y
 Kilo Code         Feb '2 CLI/Ext    Y     Y     Y     Y     Y     Y     Y     Y     N     Y     ?     Y     Y     ~     Y     Y     Y     Y     N     Y     ~     Y
 Kimi CLI          Oct '2 CLI/Ext                      Y     Y     ~     Y     ~     N     Y     ?     Y     Y     N     Y     Y     Y     Y     Y     ?     N     Y
 Kiro              Jul '2 CLI/IDE    Y                 Y     Y     Y     Y     Y     N     Y     ~     Y     Y     ~     Y     Y     Y     ~     ?     ?     ~     N
@@ -177,7 +177,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Mcp Servers: full — Full MCP support with STDIO and HTTP/SSE transports, MCP Marketplace for one-click install, cline mcp CLI wizard. Location: no public disk folder/file location found in docs reviewed.
 - Custom Commands: full — Built-in slash commands plus skills auto-register as slash commands. SDK plugins can also register custom commands. Location: no public disk folder/file location found in docs reviewed.
 - Goal Command: none — Cline supports custom slash commands via workflow files; no built-in `/goal` for auto-continuing until a completion condition.
-- Subagents: partial — Subagents remain documented as a focused parallel research-agent system, but v4.0.0 temporarily disables subagents in the VS Code extension while the SDK-backed runtime stabilizes.
+- Subagents: full — Subagents are documented as enabled by default across VS Code, JetBrains, CLI, and other editors, with a Settings -> Features -> Agent toggle to disable the use_subagents tool.
 - Transcripts: unknown — Location: transcript/session disk storage was not found in public docs reviewed.
 - Model Selection: full — 30+ documented providers: Anthropic, OpenAI, Google, AWS Bedrock, Azure, GCP Vertex, OpenRouter (200+ models), Ollama, LM Studio, and any OpenAI-compatible endpoint.
 - Approval Mode: full — Granular auto-approve per category: Read, Edit, Execute, Browser, MCP. YOLO mode for everything. --auto-approve flag.
@@ -266,7 +266,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Can Use Other Subscriptions: blank
 - Rules: full — Supports project and user rules. Location: `.cursor/rules/*.mdc` in a project; user/global rules are configured in Cursor settings.
 - Skills: full — Supports skills. Location: Cursor rules/agents features, not a SKILL.md folder standard in this row.
-- Hooks: unknown — No lifecycle hooks documented for IDE or CLI.
+- Hooks: full — Customize Cursor documents hook management at user, team, and workspace levels alongside plugins, skills, MCPs, subagents, rules, and commands.
 - Mcp Servers: full — Supports MCP servers in both IDE and CLI. Location: `.cursor/mcp.json` for project MCP servers or user-level Cursor MCP settings.
 - Custom Commands: full — CLI exposes full command controls; IDE has reusable rule/workflow patterns. Location: custom command support is through Cursor features/SDK rather than a repo command folder.
 - Goal Command: none — Cursor Agent CLI documents `/plan`, `/ask`, and `/resume` slash commands but no built-in `/goal` for persistent completion conditions.
@@ -365,7 +365,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Mcp Servers: full — Supports MCP servers. Location: no public disk folder/file location found in docs reviewed.
 - Custom Commands: full — Supports commands. Location: no public disk folder/file location found in docs reviewed.
 - Goal Command: none — Deprecated Gemini CLI surface; no documented `/goal`. Google points CLI users to Antigravity, which also lacks a `/goal` command in public docs.
-- Subagents: unknown
+- Subagents: full — Full subagent support in Gemini CLI docs: specialized agents with separate prompts, tools, and context loops; automatic delegation, @ forcing, built-in agents, browser agent, tool isolation, and extension subagents.
 - Transcripts: unknown — Location: transcript/session disk storage was not found in public docs reviewed.
 - Model Selection: full — Model can be configured.
 - Approval Mode: full — Approval mode is configurable.
@@ -449,14 +449,14 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Website: https://jules.google/
 - Form factor: Web
 - Released: Aug '25
-- Latest update: May '26
+- Latest update: Mar '26
 - Some Free Usage: blank
 - No Account Required: blank
 - Can Use Other Subscriptions: blank
 - Rules: unknown — No public docs found for persistent repo instruction files. Location: hosted/web/API-managed; no local disk folder documented.
 - Skills: none — No reusable skill/playbook system found. Location: hosted/web/API-managed; no local disk folder documented.
 - Hooks: partial — GitHub issue label assignment acts as a lightweight trigger.
-- Mcp Servers: unknown — No public MCP server configuration found. Location: hosted/web/API-managed; no local disk folder documented.
+- Mcp Servers: partial — Jules supports a vetted set of MCP server integrations through Settings, initially including Linear, Stitch, Neon, Tinybird, Context7, and Supabase; arbitrary MCP server configuration was not documented.
 - Custom Commands: none — Prompt and issue assignment workflow, not user-defined slash commands. Location: hosted/web/API-managed; no local disk folder documented.
 - Goal Command: none — Jules is a hosted async agent for GitHub issues/PRs; no interactive `/goal` slash command in public docs.
 - Subagents: partial — Plan tiers advertise multi-agent development and high concurrent task counts.
@@ -478,33 +478,33 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 ### JetBrains Junie
 - Docs: https://junie.jetbrains.com/docs/junie-cli.html
 - Website: https://junie.jetbrains.com/
-- Form factor: CLI, IDE
+- Form factor: CLI, IDE, Web, GitHub Action, GitLab CI/CD
 - Released: Jan '25
-- Latest update: May '26
+- Latest update: Jun '26
 - Some Free Usage: blank
 - No Account Required: blank
 - Can Use Other Subscriptions: blank
-- Rules: partial — JetBrains documents project guidance for Junie, but not AGENTS.md-compatible rules. Location: no public disk folder/file location found in docs reviewed.
-- Skills: unknown — No reusable skill folder standard found. Location: no public disk folder/file location found in docs reviewed.
-- Hooks: none — No lifecycle hook system found.
-- Mcp Servers: unknown — No Junie-specific MCP configuration found in public docs reviewed. Location: no public disk folder/file location found in docs reviewed.
-- Custom Commands: unknown — No custom slash-command system found. Location: no public disk folder/file location found in docs reviewed.
+- Rules: full — Full guideline support. Junie CLI reads `.junie/AGENTS.md`, project `AGENTS.md`, legacy `.junie/guidelines.md` or `.junie/guidelines/`, and global `~/.junie/AGENTS.md`.
+- Skills: full — Full support through Junie CLI extensions, which can package agent skills. Extension references live in `.junie/extensions.json` or `~/.junie/extensions/extensions.json`; cached content is under `~/.junie/extensions/<marketplace>/<extension>/`.
+- Hooks: full — Full support via config.json hooks. Hooks are shell commands on session lifecycle events; default project hooks are ignored for safety unless explicitly loaded.
+- Mcp Servers: full — Full MCP support. `/mcp` manages project `.junie/mcp/mcp.json` and user `~/.junie/mcp/mcp.json`; supports local and remote MCP servers plus an installation assistant.
+- Custom Commands: full — Full custom slash command support. Project commands are Markdown files in `.junie/commands`; user commands are in `~/.junie/commands`; `/commands` creates and manages them.
 - Goal Command: none — Junie runs as an IDE agent with tasks and modes; no built-in `/goal` slash command documented.
-- Subagents: unknown — No first-class subagent docs found.
-- Transcripts: unknown — Location: transcript/session disk storage was not found in public docs reviewed.
-- Model Selection: partial — Enterprise docs mention JetBrains AI service plus selected OpenAI/Bedrock models.
-- Approval Mode: full — Product page lists autonomous, user-assisted, and semi-auto modes.
+- Subagents: full — Full custom subagent support. Subagents define tailored prompts, tool restrictions, model usage, and skills; Junie delegates automatically and stores custom agents in configured agent locations.
+- Transcripts: full — Interactive CLI exposes the full current-session transcript with Ctrl+T and session history with `/history`; public docs do not specify the disk storage path.
+- Model Selection: full — Full model selection through `/model` and config. Junie CLI can select the main LLM and reasoning effort; the home page advertises 10+ models via BYOK.
+- Approval Mode: full — Full approval control through brave mode levels (Off, Auto, On), action allowlist, and settings/config.
 - Sandbox Mode: partial — Runs inside JetBrains IDE context; no explicit standalone sandbox controls found.
-- Resume: partial — IDE tasks have progress/history, but explicit session resume docs are limited.
-- Continue: partial — Interactive IDE task continuation is available; no CLI continue command confirmed.
-- Non Interactive: unknown — CLI exists and is documented for terminal use, but no verified headless automation flag was found in docs reviewed.
+- Resume: full — Supports session history and resuming previous sessions through `/history`.
+- Continue: partial — Previous sessions can be resumed from `/history`; no separate continue-latest command was found.
+- Non Interactive: full — Supports headless mode for CI/CD environments and build pipelines.
 - Output Format: unknown — No machine-readable output mode found.
 - Statusline: none — IDE UI, no custom CLI statusline found.
-- Telemetry: unknown — No Junie-specific telemetry toggle found in docs reviewed.
-- Hosted Agent: none — Primarily an IDE agent rather than a managed cloud worker.
-- Custom Model Provider: partial — Enterprise service supports selected provider/model options, not arbitrary endpoints.
+- Telemetry: partial — Feedback flow attaches current session logs; no broader telemetry-disable setting was found in docs reviewed.
+- Hosted Agent: partial — Junie can run from GitHub Action and GitLab CI/CD on issues, PRs, or MRs; this is CI-hosted automation rather than a managed always-on cloud worker.
+- Custom Model Provider: full — Full custom model/BYOK support through custom JSON model profiles, local providers such as Ollama, enterprise proxies, and supported API-compatible endpoints.
 - Pricing: Bundled with JetBrains AI tiers/free credits
-- Notes: Strong fit for JetBrains users, especially debugger-aware workflows. Public docs expose less extensibility detail than CLI-first agents. macOS installs may involve app-bundle/shim setup rather than a simple standalone binary.
+- Notes: Strong fit for JetBrains users, debugger-aware workflows, CLI/headless CI, and JetBrains IDE integration. June 2026 docs now expose extensibility details for guidelines, extensions, MCP, subagents, commands, hooks, BYOK/custom models, and CI/CD.
 
 ### Kilo Code
 - Docs: https://kilo.ai/docs/getting-started
@@ -522,7 +522,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Mcp Servers: full — Full MCP support. Local (STDIO) and remote (HTTP Streamable) transports. OAuth 2.0. Tool permissions via allow/ask/deny. Built-in Playwright MCP. Location: no public disk folder/file location found in docs reviewed.
 - Custom Commands: full — Full support via Workflows (slash commands). Markdown files in ~/.config/kilo/commands/ or .kilo/commands/. YAML frontmatter with description, agent, model. Location: no public disk folder/file location found in docs reviewed.
 - Goal Command: none — Kilo Code uses custom workflows/slash commands; no first-party `/goal` for persistent session objectives.
-- Subagents: full — Full subagent support. Custom modes/agents with mode property: primary, subagent, or all. Per-agent prompts, models, permissions, temperature. task tool spawns sub-agents.
+- Subagents: full — Full custom subagent support. Kilo Code CLI supports subagents via config or Markdown agent files, invocable by agents or users with @ mentions, with isolated sessions, prompts, model/tool/permission settings, and built-in general/explore subagents.
 - Transcripts: unknown — Location: transcript/session disk storage was not found in public docs reviewed.
 - Model Selection: full — 500+ models via 15+ providers. Switch mid-session with /models. Per-agent model pinning. CLI flags: -m, --model. Auto model routing.
 - Approval Mode: full — Three-tier: allow (auto-approve), ask (prompt), deny (block). Glob patterns. --auto flag for autonomous mode. Per-agent permission overrides.

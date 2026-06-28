@@ -27,8 +27,8 @@
   },
   "latest_major_update": {
     "value": "Jun '26",
-    "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.19.2#source:~:text=Add%20remote%20LSP%20status%20route",
-    "comment": "Latest release v0.19.2 (June 24, 2026) adds a remote LSP status route, fork-turn caps and fork permission bubbling, image-to-text vision bridge support for text-only models, deterministic destructive-command guards in auto mode, extension operation polling, global bare-@ MCP resource matching, workspace permissions rules APIs, and multiple CLI/SDK/daemon fixes."
+    "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.19.3#source:~:text=feat(memory)%3A%20add%20a%20git-shared%20team%20memory%20tier",
+    "comment": "Latest release v0.19.3 (June 28, 2026) adds daemon workspace voice/control APIs, skill usage stats, auto-generated-skill confirmation, OpenAI streaming inactivity timeout, git-shared team memory, extension creator skill, @extension autocomplete, web-shell MCP resource browsing, workspace session sidebar, /model --vision fallback model selection, and many CLI/core/web-shell fixes."
   },
   "rules": {
     "support": "full",
@@ -115,7 +115,7 @@
     "source_url": "https://qwenlm.github.io/qwen-code-docs/en/users/configuration/model-providers/#selection-persistence-and-recommendations:~:text=Use%20modelProviders%20to%20declare%20curated%20model%20lists%20per%20auth%20type",
     "comment": "modelProviders config with openai/anthropic/gemini auth types. Local models via any OpenAI-compatible endpoint (Ollama, vLLM, LM Studio). OpenRouter, Fireworks AI."
   },
-  "notes": "Qwen Code by Alibaba (QwenLM) is the most feature-complete open-source coding agent in this matrix — 20/20 fields at full (tied with Cline). Standout features: macOS Seatbelt + Docker sandbox, OpenTelemetry telemetry, custom status line, three output formats. Apache-2.0, 24.6k stars.",
+  "notes": "Qwen Code by Alibaba (QwenLM) is the most feature-complete open-source coding agent in this matrix \u2014 20/20 fields at full (tied with Cline). Standout features: macOS Seatbelt + Docker sandbox, OpenTelemetry telemetry, custom status line, three output formats. Apache-2.0, 24.6k stars.",
   "pricing": {
     "value": "Free (Apache-2.0)",
     "source_url": "https://github.com/QwenLM/qwen-code#acknowledgments:~:text=Apache-2.0%20license",

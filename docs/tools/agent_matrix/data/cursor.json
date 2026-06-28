@@ -27,8 +27,8 @@
   },
   "latest_major_update": {
     "value": "Jun '26",
-    "source_url": "https://cursor.com/changelog/06-18-26#improvements-to-cursor-automations:~:text=Cursor%20Automations%20save%20you%20time%20by%20automating%20repetitive%20tasks%20with%20always-on%20agents",
-    "comment": "June 18, 2026 changelog: Cursor Automations added the `/automate` skill, GitHub and Slack triggers, and computer-use support for always-on agent workflows, following June 17 cloud-agent setup and `/in-cloud` subagent updates."
+    "source_url": "https://cursor.com/changelog#customize-cursor:~:text=You%20can%20now%20add%20and%20manage%20plugins%2C%20skills%2C%20MCPs%2C%20subagents%2C%20rules%2C%20commands%2C%20and%20hooks",
+    "comment": "June 22, 2026 changelog: Customize Cursor brings plugins, skills, MCPs, subagents, rules, commands, hooks, custom MCPs, marketplace leaderboards, plugin canvases, and team marketplace imports into one management surface."
   },
   "rules": {
     "support": "full",
@@ -41,9 +41,9 @@
     "comment": "Supports skills. Location: Cursor rules/agents features, not a SKILL.md folder standard in this row."
   },
   "hooks": {
-    "support": "unknown",
-    "source_url": "https://docs.cursor.com/#source:~:text=hooks",
-    "comment": "No lifecycle hooks documented for IDE or CLI."
+    "support": "full",
+    "source_url": "https://cursor.com/changelog#customize-cursor:~:text=You%20can%20now%20add%20and%20manage%20plugins%2C%20skills%2C%20MCPs%2C%20subagents%2C%20rules%2C%20commands%2C%20and%20hooks",
+    "comment": "Customize Cursor documents hook management at user, team, and workspace levels alongside plugins, skills, MCPs, subagents, rules, and commands."
   },
   "mcp_servers": {
     "support": "full",
