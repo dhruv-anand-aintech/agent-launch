@@ -21,13 +21,13 @@
       "value": "Jun '23",
       "source_url": "https://github.com/Aider-AI/aider/releases/tag/v0.5.0#v050:~:text=v0.5.0",
       "comment": "First public release v0.5.0 on June 7, 2023.",
-      "sort_date": "2023-06-01"
+      "sort_date": "2023-06-07"
     },
     "latest_major_update": {
-      "value": "Aug '25",
+      "value": "May '26",
       "source_url": "https://github.com/Aider-AI/aider/releases/tag/v0.86.0#source:~:text=Expanded%20GPT-5%20model%20support%20across%20family%20variants",
       "comment": "Latest tagged release v0.86.0 (Aug 9, 2025). Main branch is actively developed beyond that.",
-      "sort_date": "2025-08-01"
+      "sort_date": "2026-05-22"
     },
     "rules": {
       "support": "partial",
@@ -788,13 +788,13 @@
       "value": "Feb '25",
       "source_url": "https://www.anthropic.com/news/claude-3-7-sonnet#claude-37-sonnet-and-claude-code:~:text=Claude%20Code",
       "comment": "Claude Code was introduced as a limited research preview.",
-      "sort_date": "2025-02-01"
+      "sort_date": "2025-12-19"
     },
     "latest_major_update": {
       "value": "Jun '26",
       "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.195#source:~:text=Added%20%60CLAUDE_CODE_DISABLE_MOUSE_CLICKS%60",
       "comment": "Latest release v2.1.195 (June 26, 2026) adds CLAUDE_CODE_DISABLE_MOUSE_CLICKS, exact hook matching for hyphenated identifiers, voice dictation fixes, plugin-consent and plugin enable/disable fixes, background-agent reliability fixes, Linux voice-mode diagnostics, and remote-session startup checklist improvements.",
-      "sort_date": "2026-06-01"
+      "sort_date": "2026-06-26"
     },
     "rules": {
       "support": "full",
@@ -969,13 +969,13 @@
       "value": "Jul '24",
       "source_url": "https://github.com/cline/cline/releases?page=27#source:~:text=v1.0.4%2C%2028%20Jul%2001%3A14",
       "comment": "Initial release was v1.0.4 on July 28, 2024 (originally named 'Claude Dev' by Saoud Rizwan). 8M+ installs by May 2026.",
-      "sort_date": "2024-07-01"
+      "sort_date": "2024-07-28"
     },
     "latest_major_update": {
       "value": "Jun '26",
       "source_url": "https://github.com/cline/cline/releases/tag/v4.0.1#source:~:text=Roll%20the%20stable%20VS%20Code%20extension%20back%20to%20the%20pre-SDK-migration%20codebase",
       "comment": "Latest release v4.0.1 (June 28, 2026) rolls the stable VS Code extension back to the pre-SDK-migration 3.89.2 codebase to resolve regressions reported in 4.0.0 while SDK migration continues on main.",
-      "sort_date": "2026-06-01"
+      "sort_date": "2026-06-29"
     },
     "rules": {
       "support": "full",
@@ -1169,13 +1169,13 @@
       "value": "Apr '25",
       "source_url": "https://github.com/openai/codex#installing-and-running-codex-cli:~:text=Codex%20CLI",
       "comment": "Open-source CLI public release.",
-      "sort_date": "2025-04-01"
+      "sort_date": "2025-04-30"
     },
     "latest_major_update": {
       "value": "Jun '26",
       "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.142.3#source:~:text=Maintenance-only%20patch%20release%20with%20no%20user-facing%20changes%20since%200.142.2",
       "comment": "Latest stable Codex CLI release rust-v0.142.3 (June 26, 2026) is a maintenance-only patch with no user-facing changes since 0.142.2.",
-      "sort_date": "2026-06-01"
+      "sort_date": "2026-06-29"
     },
     "rules": {
       "support": "full",
@@ -1543,7 +1543,7 @@
       "value": "Jun '26",
       "source_url": "https://github.com/charmbracelet/crush/releases/tag/v0.79.1#source:~:text=Bang%20Bang",
       "comment": "Latest tagged release v0.79.1 (2026-06-20), \"Bang Bang\" UX release. Crush ships frequent point releases (180+ tags); main branch under active daily development.",
-      "sort_date": "2026-06-20"
+      "sort_date": "2026-06-27"
     },
     "rules": {
       "support": "full",
@@ -2482,13 +2482,13 @@
       "value": "Sep '25",
       "source_url": "https://github.blog/changelog/2025-09-25-github-copilot-cli-is-now-in-public-preview/#source:~:text=public%20preview",
       "comment": "Public preview announced September 25, 2025, authenticated with existing GitHub account, usable with existing Copilot Pro/Pro+/Business/Enterprise plans.",
-      "sort_date": "2025-09-01"
+      "sort_date": "2025-09-26"
     },
     "latest_major_update": {
-      "value": "Feb '26",
+      "value": "Jun '26",
       "source_url": "https://github.blog/changelog/2026-02-25-github-copilot-cli-is-now-generally-available/#source:~:text=is%20now%20generally%20available",
       "comment": "Reached general availability for all Copilot subscribers on Feb 25, 2026, adding autopilot mode, /diff and /review commands, cross-session repo memory, and auto-compaction. Later 2026 updates added cloud/local sandboxes (--cloud, /sandbox enable), a unified /settings command, rubber duck critic agent, voice input, and prompt scheduling.",
-      "sort_date": "2026-02-01"
+      "sort_date": "2026-06-24"
     },
     "rules": {
       "support": "full",
@@ -2861,13 +2861,13 @@
       "value": "Jan '25",
       "source_url": "https://block.xyz/inside/block-open-source-introduces-codename-goose#source:~:text=codename%20goose",
       "comment": "Block's Open Source Program Office publicly announced \"codename goose\" on January 28, 2025, after ~9 months of internal development.",
-      "sort_date": "2025-01-01"
+      "sort_date": "2024-09-10"
     },
     "latest_major_update": {
-      "value": "May '26",
+      "value": "Jun '26",
       "source_url": "https://goose-docs.ai/blog/2026/05/14/goose-hooks/#source:~:text=goose%20now%20supports%20lifecycle%20hooks",
       "comment": "Lifecycle hooks (SessionStart, PreToolUse/PostToolUse, BeforeShellExecution, etc. via plugin hooks.json) shipped May 14, 2026. Project moved under the Linux Foundation's Agentic AI Foundation (AAIF) in Dec 2025; repo now also tracked at aaif-goose/goose with block/goose as a mirror/redirect.",
-      "sort_date": "2026-05-01"
+      "sort_date": "2026-06-29"
     },
     "rules": {
       "support": "full",
@@ -3594,13 +3594,13 @@
       "value": "Feb '26",
       "source_url": "https://github.com/Kilo-Org/kilocode#source:~:text=Created%3A%202025-03-10T15%3A34%3A26Z",
       "comment": "Repository created 2025-03-10. First stable public release effectively Feb 2026 (v1.0.25). v7 rewrite announced May 2026.",
-      "sort_date": "2026-02-01"
+      "sort_date": "2026-02-23"
     },
     "latest_major_update": {
       "value": "Jun '26",
       "source_url": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.3.54#source:~:text=No%20notable%20changes",
       "comment": "Latest release checked: v7.3.54 (June 23, 2026). Release notes say no notable changes.",
-      "sort_date": "2026-06-01"
+      "sort_date": "2026-06-29"
     },
     "rules": {
       "support": "full",
@@ -3790,13 +3790,13 @@
       "value": "Oct '25",
       "source_url": "https://github.com/MoonshotAI/kimi-cli/releases/tag/1.48.0#source:~:text=1.48.0",
       "comment": "First public release v0.34 on 2025-10-21. Reached v1.0 on 2026-01-27. Current latest release: v1.48.0 (2026-06-22).",
-      "sort_date": "2025-10-01"
+      "sort_date": "2025-10-21"
     },
     "latest_major_update": {
       "value": "Jun '26",
       "source_url": "https://github.com/MoonshotAI/kimi-cli/releases/tag/1.48.0#source:~:text=round-trip%20empty%20reasoning%20content",
       "comment": "Latest release v1.48.0 (June 22, 2026) fixes empty reasoning-content round trips, escalates repeated-tool-call reminders, force-stops dead-end streaks, and bumps kosong to 0.54.0.",
-      "sort_date": "2026-06-01"
+      "sort_date": "2026-06-22"
     },
     "rules": {
       "support": "full",
@@ -4157,13 +4157,13 @@
       "value": "Jun '26",
       "source_url": "https://github.com/XiaomiMiMo/MiMo-Code/releases/tag/v0.1.0#v010:~:text=v0.1.0",
       "comment": "GitHub shows v0.1.0 as the first public release on 2026-06-10.",
-      "sort_date": "2026-06-01"
+      "sort_date": "2026-06-10"
     },
     "latest_major_update": {
       "value": "Jun '26",
       "source_url": "https://github.com/XiaomiMiMo/MiMo-Code/releases/tag/v0.1.3#v013:~:text=MiMoCode%20v0.1.3",
       "comment": "Latest public release captured for this row is v0.1.3 on 2026-06-24.",
-      "sort_date": "2026-06-01"
+      "sort_date": "2026-06-28"
     },
     "rules": {
       "support": "full",
@@ -4355,13 +4355,13 @@
       "value": "2025",
       "source_url": "https://github.com/sst/opencode#anomalycoopencode:~:text=opencode",
       "comment": "Exact public launch month not confirmed in public docs captured for this dataset.",
-      "sort_date": "2025-01-01"
+      "sort_date": "2025-05-14"
     },
     "latest_major_update": {
       "value": "Jun '26",
       "source_url": "https://github.com/anomalyco/opencode/releases/tag/v1.17.11#source:~:text=Add%20session%20snapshots%20and%20revert%20controls",
       "comment": "Latest release v1.17.11 (June 25, 2026) adds session snapshots and revert controls, always prints MCP OAuth URLs for manual sign-in, improves desktop tab cycling/dragging and empty-state/session layouts, and fixes prompt drafts, provider dialogs, prompt rollbacks, async attachments, todo docks, and stale tab/session behavior.",
-      "sort_date": "2026-06-01"
+      "sort_date": "2026-06-29"
     },
     "rules": {
       "support": "full",

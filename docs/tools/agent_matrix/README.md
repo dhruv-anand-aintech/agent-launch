@@ -26,7 +26,7 @@ Form factor values are deliberately strict: each value should have a concrete pe
 
 | Name | Form factor | Released | Latest major update | Some free | No account | Other subs | Rules | Skills | Transcripts | Hooks | MCP | Hosted agent | Arbitrary models |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Aider | CLI | Jun '23 | Aug '25 | full | full | full | partial | partial | partial | partial | none | none | full |
+| Aider | CLI | Jun '23 | May '26 | full | full | full | partial | partial | partial | partial | none | none | full |
 | Amazon Q Developer CLI | CLI | Mar '25 | Nov '25 | full | none | none | full | partial | partial | full | full | none | none |
 | Amp | CLI, Extension, SDK, Web, Mobile | May '25 | Jun '26 | full |  |  | full | full | unknown | full | full | none | partial |
 | Antigravity | CLI, IDE | 2025 | May '26 | full |  |  | full | full | partial | full | full | none | unknown |
@@ -39,9 +39,9 @@ Form factor values are deliberately strict: each value should have a concrete pe
 | Factory Droid | CLI, Extension, Web | 2025 | Jun '26 |  | partial | full | full | full | partial | full | full | partial | full |
 | Gemini CLI | CLI | Jun '25 | Jun '26 | full |  | full | full | partial | unknown | full | full | none | partial |
 | GitHub Copilot | CLI, IDE, Extension, SDK, Web | Jun '25 | May '26 |  |  |  | full | full | unknown | full | full | full | full |
-| GitHub Copilot CLI | CLI | Sep '25 | Feb '26 | partial | none | full | full | full | full | full | full | none | full |
+| GitHub Copilot CLI | CLI | Sep '25 | Jun '26 | partial | none | full | full | full | full | full | full | none | full |
 | Google Jules | Web | Aug '25 | Mar '26 |  |  |  | unknown | none | partial | partial | partial | full | none |
-| Goose | CLI, Desktop App | Jan '25 | May '26 | full | full | full | full | full | full | full | full | none | full |
+| Goose | CLI, Desktop App | Jan '25 | Jun '26 | full | full | full | full | full | full | full | full | none | full |
 | Grok Build | CLI | May '26 | Jun '26 |  |  |  | full | full | unknown | full | full | none | partial |
 | JetBrains Junie | CLI, IDE, Web, GitHub Action, GitLab CI/CD | Jan '25 | Jun '26 |  |  |  | full | full | full | full | full | partial | full |
 | Kilo Code | CLI, Extension | Feb '26 | Jun '26 | full | full | full | full | full | unknown | full | full | partial | full |
