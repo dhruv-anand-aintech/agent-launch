@@ -42,7 +42,7 @@ AGENTS: dict[str, AgentSpec] = {
     "mimo": AgentSpec("mimo", "", "", "pro"),
     "opencode": AgentSpec("opencode", "opencode-go/deepseek-v4-flash", "opencode-go/kimi-k2.6", "pro"),
     "openhands": AgentSpec("openhands", "", "", "pro"),
-    "pi": AgentSpec("pi", "", "", "pro"),
+    "pi": AgentSpec("pi", "opencode-go/deepseek-v4-flash", "opencode-go/kimi-k2.6", "pro"),
     "qwen": AgentSpec("qwen", "", "", "pro"),
     "cursor": AgentSpec("agent", "composer-2.5-fast", "composer-2.5-fast", "fast"),
 }
@@ -54,6 +54,7 @@ RANDOM_AGENTS = (
     "codex",
     "cursor",
     "opencode",
+    "pi",
 )
 DEFAULT_AGENT_ORDER = (
     "codex",

@@ -254,11 +254,12 @@ Built-in defaults:
 | Claude Code | `sonnet` | `opus` | `pro` |
 | Gemini CLI | `gemini-2.5-flash` | `gemini-2.5-pro` | `pro` |
 | OpenCode | `opencode-go/deepseek-v4-flash` | `opencode-go/kimi-k2.6` | `pro` |
+| Pi Coding Agent | `opencode-go/deepseek-v4-flash` | `opencode-go/kimi-k2.6` | `pro` |
 | Cursor Agent | `composer-2.5-fast` | `composer-2.5-fast` | `fast` |
 
 Antigravity CLI does not expose a launch-time model flag in `agy --help`; set its default model interactively with `/model`, which persists across sessions.
 
-`--agent random` chooses one concrete backend uniformly at runtime from the installed subset of `antigravity`, `claude`, `codex`, `cursor`, and `opencode` (each backend's CLI must be on `PATH`), then uses that backend's normal fast/pro mapping where supported. Consecutive random launches never repeat the immediately previous pick when another installed option exists (state is stored under `$XDG_STATE_HOME/agent-launch/last-random-agent`, defaulting to `~/.local/state`). Gemini CLI remains available explicitly via `--agent gemini`, but is not in the random pool.
+`--agent random` chooses one concrete backend uniformly at runtime from the installed subset of `antigravity`, `claude`, `codex`, `cursor`, `opencode`, and `pi` (each backend's CLI must be on `PATH`), then uses that backend's normal fast/pro mapping where supported. Consecutive random launches never repeat the immediately previous pick when another installed option exists (state is stored under `$XDG_STATE_HOME/agent-launch/last-random-agent`, defaulting to `~/.local/state`). Gemini CLI remains available explicitly via `--agent gemini`, but is not in the random pool.
 
 You can override these without editing the script:
 
