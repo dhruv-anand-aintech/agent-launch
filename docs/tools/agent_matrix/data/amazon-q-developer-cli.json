@@ -1,0 +1,191 @@
+{
+  "name": "Amazon Q Developer CLI",
+  "deprecated": true,
+  "links": {
+    "docs": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-chat.html",
+    "github": "https://github.com/aws/amazon-q-developer-cli",
+    "website": "https://aws.amazon.com/q/developer/",
+    "slug": "amazon-q-developer-cli"
+  },
+  "form_factor": {
+    "values": [
+      "CLI"
+    ],
+    "source_url": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line.html#source:~:text=Amazon%20Q%20Developer%20on%20the%20command%20line",
+    "comment": "Standalone terminal CLI (`q chat`). Amazon Q Developer also ships as IDE extensions/plugins, but those are a separate surface not covered by this entry. Per-form-factor links: CLI: https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-installing.html.",
+    "links": {
+      "CLI": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-installing.html"
+    }
+  },
+  "released_in": {
+    "value": "Mar '25",
+    "source_url": "https://aws.amazon.com/blogs/devops/introducing-the-enhanced-command-line-interface-in-amazon-q-developer/#source:~:text=Amazon%20Q%20Developer%20introduced%20an%20enhanced%20CLI%20agent",
+    "comment": "Enhanced agentic `q chat` CLI experience (multi-turn, tool use, Claude 3.7 Sonnet reasoning) announced March 6, 2025. Earlier non-agentic CLI completions predate this, but agentic chat is the surface tracked here."
+  },
+  "latest_major_update": {
+    "value": "Nov '25",
+    "source_url": "https://github.com/aws/amazon-q-developer-cli/releases#source:~:text=v1.19.7",
+    "comment": "v1.19.7 (Nov 17, 2025) is the last tagged release before the project transitioned to the closed-source Kiro CLI; AWS has since announced Amazon Q Developer end-of-support with migration to Kiro CLI through 2026-2027."
+  },
+  "rules": {
+    "support": "full",
+    "source_url": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/context-project-rules.html#source:~:text=Rules%20are%20markdown%20files%20stored%20in%20the%20.amazonq/rules/%20directory",
+    "comment": "Markdown rule files in `.amazonq/rules/` are auto-scanned and applied per project. No AGENTS.md support (open feature request, GitHub issue #2712, unimplemented). Location: `.amazonq/rules/*.md`, referenced via agent config `resources`."
+  },
+  "skills": {
+    "support": "partial",
+    "source_url": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-custom-agents-overview.html#source:~:text=custom%20agents",
+    "comment": "Custom agent JSON configs (prompt, tools, resources, hooks) act as reusable, switchable capability profiles, but there is no dedicated 'skills' folder/format distinct from agent configs. Location: agent config files, typically under `.amazonq/cli-agents/` or `~/.aws/amazonq/cli-agents/`."
+  },
+  "hooks": {
+    "support": "full",
+    "source_url": "https://github.com/aws/amazon-q-developer-cli/blob/main/docs/agent-format.md#source:~:text=agentSpawn%2C%20userPromptSubmit%2C%20preToolUse%2C%20postToolUse%2C%20stop",
+    "comment": "Agent config `hooks` field supports agentSpawn, userPromptSubmit, preToolUse, postToolUse, and stop lifecycle hooks that run shell commands and inject output into context."
+  },
+  "mcp_servers": {
+    "support": "full",
+    "source_url": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-mcp-configuration.html#source:~:text=Global%20Configuration%20at%20~/.aws/amazonq/mcp.json",
+    "comment": "Supports both local (stdio) and remote (HTTP/OAuth) MCP servers via global `~/.aws/amazonq/mcp.json` and workspace `.amazonq/mcp.json`, merged with workspace taking precedence on conflicts."
+  },
+  "custom_commands": {
+    "support": "partial",
+    "source_url": "https://github.com/aws/amazon-q-developer-cli/blob/main/docs/agent-format.md#source:~:text=hooks",
+    "comment": "No first-class user-defined slash command system; closest equivalent is agent-config hooks/prompts and `/agent create` to switch agent profiles with different tool/resource sets."
+  },
+  "goal_command": {
+    "support": "none",
+    "source_url": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-chat.html#source:~:text=chat",
+    "comment": "No built-in `/goal`-style persistent-objective auto-continue loop; sessions proceed turn-by-turn or via `--no-interactive` single-shot prompts."
+  },
+  "subagents": {
+    "support": "none",
+    "source_url": "https://github.com/aws/amazon-q-developer-cli/blob/main/docs/agent-format.md#source:~:text=Agent%20Architecture",
+    "comment": "Custom agents are independent, user-selected configuration profiles (one active per session); there is no delegation/spawning of subagents from within a running session."
+  },
+  "transcripts": {
+    "support": "partial",
+    "source_url": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-chat.html#source:~:text=q%20chat%20--resume",
+    "comment": "Conversation history is auto-saved per working directory to support `--resume`, but there is no documented user-facing export/transcript file format akin to a JSONL log."
+  },
+  "model_selection": {
+    "support": "full",
+    "source_url": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-chat-models.html#source:~:text=/model",
+    "comment": "Switch models in-session with `/model`, at launch with `q chat --model <name>`, or set a default via `q settings chat.defaultModel <name>`. Choices are limited to AWS-hosted Claude models (3.5/3.7 Sonnet, Sonnet 4, Sonnet 4.5, and an 'auto' option) served over Bedrock."
+  },
+  "approval_mode": {
+    "support": "full",
+    "source_url": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-chat-tools.html#source:~:text=fs_read%20is%20the%20only%20tool%20that%20is%20trusted%20by%20default",
+    "comment": "Per-tool trust model: only `fs_read` is trusted by default; `/tools trust`, `/tools trust-all`, and CLI flags `--trust-all-tools`/`--trust-tools=<list>` control auto-approval, with `/tools reset` to restore defaults."
+  },
+  "sandbox_mode": {
+    "support": "none",
+    "source_url": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-chat-security.html#source:~:text=security%20considerations",
+    "comment": "No filesystem/network sandbox; security guidance instead recommends running in a dedicated environment and using tool-trust controls (`/tools untrust`) to gate risky actions like `use_aws` or `execute_bash`."
+  },
+  "resume": {
+    "support": "full",
+    "source_url": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-chat.html#source:~:text=q%20chat%20--resume",
+    "comment": "`q chat --resume` automatically picks up the most recent conversation saved for the current working directory."
+  },
+  "continue": {
+    "support": "full",
+    "source_url": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-chat.html#source:~:text=q%20chat%20--resume",
+    "comment": "`--resume` continues the latest session for the current directory without needing an explicit session ID, satisfying both resume and continue behavior."
+  },
+  "non_interactive": {
+    "support": "full",
+    "source_url": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-reference.html#source:~:text=q%20chat%20--no-interactive%20--trust-all-tools%20%22Show%20me%20the%20current%20directory%22",
+    "comment": "`q chat --no-interactive \"<prompt>\"` runs a single headless turn and exits; commonly paired with `--trust-all-tools` to avoid approval prompts in scripts/CI. Some early versions had bugs around prompts still appearing or trusted-tools lists being ignored (GitHub issues #1951, #1995), later patched (e.g. v2.0.1 fix notes)."
+  },
+  "output_format": {
+    "support": "none",
+    "source_url": "https://github.com/aws/amazon-q-developer-cli/issues/2713#source:~:text=Feature%3A%20JSON%20and%20Streaming-JSON%20output%20formats%20for%20%60q%20chat%60",
+    "comment": "`q chat` only emits plain text/Markdown even in `--no-interactive` mode; structured `-f json|json-pretty` output exists only for other subcommands like `q settings`/`q whoami`, not for chat. A JSON/stream-JSON chat output format is an open, unimplemented feature request (issue #2713)."
+  },
+  "statusline": {
+    "support": "none",
+    "source_url": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-settings.html#source:~:text=settings",
+    "comment": "No user-configurable status line; `q settings` covers behavior toggles (telemetry, default model) rather than a persistent status bar."
+  },
+  "telemetry": {
+    "support": "full",
+    "source_url": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/opt-out-IDE.html#source:~:text=Opt%20out%20of%20data%20sharing",
+    "comment": "Telemetry/data-sharing is user-configurable via `q settings telemetry.enabled true|false`; Free tier content may be used for service improvement, Pro tier content is excluded by policy."
+  },
+  "keyboard_shortcuts": {
+    "support": "partial",
+    "source_url": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-chat.html#source:~:text=Ctrl%20%2B%20D",
+    "comment": "A handful of fixed shortcuts exist (Ctrl+D to exit, Ctrl+S for slash-command fuzzy search) but there is no user-customizable keybinding configuration."
+  },
+  "theme_customization": {
+    "support": "none",
+    "source_url": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-settings.html#source:~:text=settings",
+    "comment": "No documented theme/color customization for the terminal chat UI."
+  },
+  "auto_save": {
+    "support": "full",
+    "source_url": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-chat.html#source:~:text=automatically%20saved%20by%20working%20directory",
+    "comment": "Conversations are automatically saved per working directory without user action, enabling `--resume`."
+  },
+  "debugging_output": {
+    "support": "partial",
+    "source_url": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-reference.html#source:~:text=--verbose",
+    "comment": "CLI reference documents a `--verbose` style flag and `/tools` introspection, but there is no dedicated structured debug/trace log format."
+  },
+  "context_window": {
+    "support": "partial",
+    "source_url": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-context.html#source:~:text=/usage",
+    "comment": "`/usage` shows estimated context window consumption and `/compact` summarizes history to free space, but the window size itself is fixed by the selected model, not user-configurable."
+  },
+  "code_formatting": {
+    "support": "none",
+    "source_url": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-chat-tools.html#source:~:text=execute_bash",
+    "comment": "No built-in formatter/linter integration; any formatting happens only if the agent invokes external tools (e.g. via `execute_bash`) itself."
+  },
+  "git_integration": {
+    "support": "partial",
+    "source_url": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-chat-tools.html#source:~:text=execute_bash",
+    "comment": "No dedicated git tool/UI; git operations happen through the general `execute_bash` tool like any other shell command, subject to the same trust/approval rules."
+  },
+  "performance_mode": {
+    "support": "none",
+    "source_url": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-settings.html#source:~:text=settings",
+    "comment": "No documented caching/performance-tuning controls exposed to users beyond model choice and context compaction."
+  },
+  "ui_customization": {
+    "support": "none",
+    "source_url": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-chat.html#source:~:text=chat",
+    "comment": "Single-pane terminal chat UI; no panel/layout customization since this is a CLI, not an IDE surface."
+  },
+  "hosted_agent": {
+    "support": "none",
+    "source_url": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line.html#source:~:text=command%20line",
+    "comment": "Runs as a local terminal process talking to the AWS-hosted backend for inference; there is no separate hosted/cloud agent execution platform for this CLI surface."
+  },
+  "custom_model_provider": {
+    "support": "none",
+    "source_url": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-chat-models.html#source:~:text=Claude%20Sonnet%204",
+    "comment": "Model choice is restricted to a fixed list of Claude models served via AWS's own Amazon Bedrock-backed Q Developer service; no support for arbitrary/OpenAI-compatible model endpoints or bring-your-own-API-key providers."
+  },
+  "notes": "Amazon Q Developer CLI (`q chat`) is AWS's Rust-based, Bedrock-backed agentic terminal coding agent, launched as an enhanced agentic experience in March 2025. It requires AWS Builder ID or IAM Identity Center sign-in (no API-key-only or account-free path), supports MCP, lifecycle hooks, and per-project `.amazonq/rules/` markdown rules, but lacks AGENTS.md support, subagent delegation, sandboxing, and structured JSON chat output. As of mid-2026 the open-source repo is no longer actively maintained: AWS is sunsetting Amazon Q Developer in favor of the backward-compatible, closed-source Kiro CLI (same `q`/`q chat` entry points, configs auto-migrated to `~/.kiro/`), with new signups blocked from May 2026 and full IDE/subscription end-of-support by April 2027.",
+  "pricing": {
+    "value": "Free tier + Pro $19/user/mo",
+    "source_url": "https://aws.amazon.com/q/developer/pricing/#source:~:text=Pro%20tier",
+    "comment": "Perpetual Free Tier (Builder ID or IAM) with monthly agentic-request limits; Pro tier is $19/user/month with higher limits and enterprise admin controls. New Free Tier/Pro signups are blocked starting May 15, 2026 as part of the Kiro CLI migration."
+  },
+  "some_free_usage": {
+    "support": "full",
+    "source_url": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/q-tiers.html#source:~:text=Free%20Tier",
+    "comment": "Free Tier includes a documented monthly allotment of agentic chat requests and code suggestions at no cost via AWS Builder ID."
+  },
+  "no_account_required": {
+    "support": "none",
+    "source_url": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/getting-started-builderid.html#source:~:text=AWS%20Builder%20ID",
+    "comment": "Requires signing in with an AWS Builder ID or IAM Identity Center/IAM credentials before any chat session; there is no local-model or account-free path."
+  },
+  "can_use_other_subscriptions": {
+    "support": "none",
+    "source_url": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-chat-models.html#source:~:text=Claude%20Sonnet",
+    "comment": "Models are served exclusively through AWS's own Amazon Bedrock-backed Q Developer service (Builder ID/IAM Identity Center auth); no option to route usage through a personal Anthropic/OpenAI API key or other vendor subscription."
+  }
+}

@@ -1,0 +1,192 @@
+{
+  "name": "Goose",
+  "links": {
+    "docs": "https://goose-docs.ai/docs/",
+    "github": "https://github.com/block/goose",
+    "website": "https://goose-docs.ai/",
+    "slug": "goose"
+  },
+  "form_factor": {
+    "values": [
+      "CLI",
+      "Desktop App"
+    ],
+    "source_url": "https://goose-docs.ai/docs/getting-started/installation#source:~:text=goose%20Desktop%20for%20macOS",
+    "comment": "Ships as a single Rust binary CLI plus a separate Desktop app (macOS/Linux/Windows) and an API. Per-form-factor links: CLI: https://goose-docs.ai/docs/getting-started/installation; Desktop App: https://goose-docs.ai/docs/getting-started/installation.",
+    "links": {
+      "CLI": "https://goose-docs.ai/docs/getting-started/installation",
+      "Desktop App": "https://goose-docs.ai/docs/getting-started/installation"
+    }
+  },
+  "released_in": {
+    "value": "Jan '25",
+    "source_url": "https://block.xyz/inside/block-open-source-introduces-codename-goose#source:~:text=codename%20goose",
+    "comment": "Block's Open Source Program Office publicly announced \"codename goose\" on January 28, 2025, after ~9 months of internal development."
+  },
+  "latest_major_update": {
+    "value": "May '26",
+    "source_url": "https://goose-docs.ai/blog/2026/05/14/goose-hooks/#source:~:text=goose%20now%20supports%20lifecycle%20hooks",
+    "comment": "Lifecycle hooks (SessionStart, PreToolUse/PostToolUse, BeforeShellExecution, etc. via plugin hooks.json) shipped May 14, 2026. Project moved under the Linux Foundation's Agentic AI Foundation (AAIF) in Dec 2025; repo now also tracked at aaif-goose/goose with block/goose as a mirror/redirect."
+  },
+  "rules": {
+    "support": "full",
+    "source_url": "https://goose-docs.ai/docs/guides/context-engineering/#source:~:text=Goose%20looks%20for%20AGENTS.md%20then%20.goosehints%20files%20by%20default",
+    "comment": "Goose looks for AGENTS.md then .goosehints by default, at both global (~/.config/goose/.goosehints) and per-directory/nested project scope; filename configurable via CONTEXT_FILE_NAMES env var. Location: ~/.config/goose/.goosehints (global), ./.goosehints or ./AGENTS.md (project, nested lookup)."
+  },
+  "skills": {
+    "support": "full",
+    "source_url": "https://goose-docs.ai/docs/guides/recipes/#source:~:text=You%20can%20make%20a%20recipe%20a%20slash%20command",
+    "comment": "Recipes are reusable, parameterized YAML workflow files (instructions, extensions, params, sub-recipes) that can be bound to custom slash commands, shared, and scheduled via cron. `/skills` slash command also lists available skills in-session. Location: recipe YAML files, e.g. ~/.config/goose/recipes/ or project-local paths passed via --recipe."
+  },
+  "hooks": {
+    "support": "full",
+    "source_url": "https://goose-docs.ai/blog/2026/05/14/goose-hooks/#source:~:text=goose%20now%20supports%20lifecycle%20hooks",
+    "comment": "Lifecycle hooks run shell scripts on events: SessionStart, SessionEnd, Stop, UserPromptSubmit, PreToolUse, PostToolUse, PostToolUseFailure, BeforeReadFile, AfterFileEdit, BeforeShellExecution, AfterShellExecution. Configured via hooks.json in plugin dirs. Location: ~/.agents/plugins/<name>/hooks/hooks.json (user scope) or <project>/.agents/plugins/<name>/hooks/hooks.json (project scope)."
+  },
+  "mcp_servers": {
+    "support": "full",
+    "source_url": "https://github.com/block/goose#source:~:text=Connect%20to%2070%2B%20extensions%20via%20the%20Model%20Context%20Protocol%20open%20standard",
+    "comment": "Goose's extension system is built natively on MCP; connects to 70+ documented extensions (GitHub, Docker, Postgres, Slack, Google Drive, browser automation, etc.) and any MCP-compatible server. Configurable via `goose configure`, `/extension`, `--with-extension`, `--with-streamable-http-extension`, or config.yaml."
+  },
+  "custom_commands": {
+    "support": "full",
+    "source_url": "https://goose-docs.ai/docs/guides/recipes/#source:~:text=You%20can%20make%20a%20recipe%20a%20slash%20command",
+    "comment": "Recipes can be turned into custom slash commands (e.g. /weekly-status) usable in CLI or Desktop sessions. Location: recipe files referenced from goose config."
+  },
+  "goal_command": {
+    "support": "none",
+    "source_url": "https://goose-docs.ai/docs/guides/goose-cli-commands/#source:~:text=/plan%20%3Ctext%3E%20-%20Enter%20plan%20mode",
+    "comment": "No built-in `/goal` command for a persisted auto-continuing objective. Has `/plan` and `/endplan` for a plan-then-act mode, and recipes/schedule for repeatable automation, but not an auto-continuing goal loop."
+  },
+  "subagents": {
+    "support": "full",
+    "source_url": "https://goose-docs.ai/docs/guides/subagents/#source:~:text=Subagents",
+    "comment": "First-class subagent delegation: temporary AI instances spun up via natural language in a prompt for one-off tasks, running in isolation from the main session. Distinct from sub-recipes (pre-written reusable YAML workflows). Up to 10 concurrent parallel workers total across subagents/sub-recipes. Location: invoked ad hoc; sub-recipes configured via --sub-recipe / recipe YAML."
+  },
+  "transcripts": {
+    "support": "full",
+    "source_url": "https://goose-docs.ai/docs/guides/managing-goose-sessions/#source:~:text=Unix-like%3A%20~/.local/share/goose/sessions/sessions.db",
+    "comment": "Sessions stored in SQLite (v1.10.0+) at ~/.local/share/goose/sessions/sessions.db (Unix) or %APPDATA%\\Block\\goose\\data\\sessions\\sessions.db (Windows); pre-v1.10.0 used per-session .jsonl files under ~/.local/share/goose/sessions/. `session export` can output markdown/json/yaml; `session list`/`session diagnostics` also available."
+  },
+  "model_selection": {
+    "support": "full",
+    "source_url": "https://goose-docs.ai/docs/guides/environment-variables/#source:~:text=GOOSE_MODEL%20overrides%20the%20configured%20model",
+    "comment": "Full model/provider selection via `goose configure`, `--provider`/`--model` flags on `goose run`, or GOOSE_PROVIDER/GOOSE_MODEL env vars (e.g. export GOOSE_MODEL=claude-sonnet-4-5-20250929)."
+  },
+  "approval_mode": {
+    "support": "full",
+    "source_url": "https://deepwiki.com/block/goose/6.2-permission-modes-and-tool-approval#source:~:text=Goose%20supports%20four%20distinct%20execution%20modes%E2%80%94Chat%2C%20Auto%2C%20Approve%2C%20and%20SmartApprove",
+    "comment": "Four permission modes: auto (full automation), approve (ask every tool unless allow/deny-listed), chat (no tool access), smart_approve (LLM-based PermissionJudge auto-approves safe calls, asks for risky ones). Set via `goose config set-mode <mode>`, the GOOSE_MODE env var, or in-session `/mode <name>`. No dedicated `--mode` CLI flag on `goose run`/`goose session`."
+  },
+  "sandbox_mode": {
+    "support": "full",
+    "source_url": "https://goose-docs.ai/docs/tutorials/goose-in-docker/#source:~:text=Run%20extensions%20inside%20your%20Docker%20containers",
+    "comment": "`--container <id>` flag (on `goose session` and `goose run`) runs extensions inside a specified Docker container; goose CLI must be installed inside the container for built-in extensions to work."
+  },
+  "resume": {
+    "support": "full",
+    "source_url": "https://goose-docs.ai/docs/guides/goose-cli-commands/#source:~:text=Resume%20from%20a%20previous%20run",
+    "comment": "`-r`/`--resume` flag on both `goose session` (resume previous chat) and `goose run` (resume from a previous run); also `--fork` to duplicate a session's history into a new one."
+  },
+  "continue": {
+    "support": "partial",
+    "source_url": "https://goose-docs.ai/docs/guides/goose-cli-commands/#source:~:text=-r%2C%20--resume",
+    "comment": "`--resume` without a session id/name resumes the most recent session by default, giving an effective \"continue latest\" path, but there is no separate dedicated `--continue` flag distinct from `--resume`."
+  },
+  "non_interactive": {
+    "support": "full",
+    "source_url": "https://goose-docs.ai/docs/guides/goose-cli-commands/#source:~:text=Suppress%20non-response%20output%2C%20printing%20only%20the%20model%20response%20to%20stdout",
+    "comment": "`goose run -t \"...\"` (or -i file) executes headlessly and exits; `--quiet`/`-q` suppresses non-response output for scripting; `--no-session` skips session file creation entirely. Designed for automation/CI pipelines."
+  },
+  "output_format": {
+    "support": "full",
+    "source_url": "https://goose-docs.ai/docs/guides/goose-cli-commands/#source:~:text=--output-format%20%3CFORMAT%3E%20-%20Output%20format%20(text%2C%20json%2C%20stream-json)",
+    "comment": "`--output-format <text|json|stream-json>` on `goose run` for machine-readable output; json gives final result, stream-json emits events as they occur. `session list`/`export` also support text/json/markdown/yaml."
+  },
+  "statusline": {
+    "support": "none",
+    "source_url": "https://goose-docs.ai/docs/guides/goose-cli-commands/#source:~:text=Configuration",
+    "comment": "No documented user-configurable status line. CLI has theme and prompt-editor configuration but no status bar concept."
+  },
+  "telemetry": {
+    "support": "full",
+    "source_url": "https://goose-docs.ai/docs/guides/usage-data/#source:~:text=GOOSE_TELEMETRY_ENABLED",
+    "comment": "Anonymous usage data is opt-in/opt-out configurable interactively via `goose configure` or via GOOSE_TELEMETRY_ENABLED=false/true env var. No central control plane or phone-home by default per project description."
+  },
+  "keyboard_shortcuts": {
+    "support": "partial",
+    "source_url": "https://goose-docs.ai/docs/guides/goose-cli-commands/#source:~:text=Ctrl%2BJ%20-%20Add%20newline%20(customizable%20via%20GOOSE_CLI_NEWLINE_KEY)",
+    "comment": "Some built-in shortcuts (Ctrl+C, Cmd+Up/Down history, Ctrl+R search) with limited customization, e.g. GOOSE_CLI_NEWLINE_KEY for the newline key. Not a fully remappable keybinding system."
+  },
+  "theme_customization": {
+    "support": "full",
+    "source_url": "https://goose-docs.ai/docs/guides/goose-cli-commands/#source:~:text=GOOSE_CLI_THEME",
+    "comment": "Theme set via `/t` slash command (light, dark, ansi) or GOOSE_CLI_THEME/GOOSE_CLI_LIGHT_THEME/GOOSE_CLI_DARK_THEME env vars for syntax highlighting."
+  },
+  "auto_save": {
+    "support": "full",
+    "source_url": "https://goose-docs.ai/docs/guides/managing-goose-sessions/#source:~:text=sessions.db",
+    "comment": "Sessions are automatically persisted to the local SQLite session store as the conversation progresses; `--no-session` can disable this for one-off runs."
+  },
+  "debugging_output": {
+    "support": "full",
+    "source_url": "https://goose-docs.ai/docs/guides/goose-cli-commands/#source:~:text=Output%20complete%20tool%20responses%2C%20detailed%20parameter%20values%2C%20and%20full%20file%20paths",
+    "comment": "`--debug` flag on `goose run`/`goose session` outputs complete tool responses, detailed parameter values, and full file paths. `goose session diagnostics` exports a debug bundle."
+  },
+  "context_window": {
+    "support": "full",
+    "source_url": "https://goose-docs.ai/docs/guides/sessions/smart-context-management/#source:~:text=Auto-compaction%20is%20triggered%20by%20default%20when%20you%20reach%2080%25%20of%20the%20token%20limit",
+    "comment": "Smart Context Management auto-compacts/summarizes older conversation turns at 80% of the model's token limit by default; GOOSE_CONTEXT_LIMIT overrides the displayed limit and GOOSE_AUTO_COMPACT_THRESHOLD controls the compaction trigger ratio."
+  },
+  "code_formatting": {
+    "support": "partial",
+    "source_url": "https://goose-docs.ai/blog/2026/05/14/goose-hooks/#source:~:text=PostToolUse",
+    "comment": "No built-in formatter; auto-run linters/formatters/tests can be wired via PostToolUse/AfterFileEdit lifecycle hooks or MCP developer/shell extensions rather than a native formatting feature."
+  },
+  "git_integration": {
+    "support": "full",
+    "source_url": "https://block.github.io/goose/docs/tutorials/github-mcp/#source:~:text=goose%20takes%20care%20of%20cloning%2C%20branching%2C%20editing%20files%2C%20and%20committing%20the%20changes",
+    "comment": "Built-in Developer extension can run git directly via shell; GitHub MCP extension handles cloning, branching, editing, and committing changes end-to-end."
+  },
+  "performance_mode": {
+    "support": "partial",
+    "source_url": "https://goose-docs.ai/docs/guides/sessions/smart-context-management/#source:~:text=GOOSE_AUTO_COMPACT_THRESHOLD",
+    "comment": "Smart context compaction and `--max-tool-repetitions`/`--max-turns` limits act as performance/runaway-loop controls; no separate dedicated performance-tuning mode."
+  },
+  "ui_customization": {
+    "support": "partial",
+    "source_url": "https://goose-docs.ai/docs/guides/goose-cli-commands/#source:~:text=GOOSE_CLI_THEME",
+    "comment": "CLI offers theme switching and a configurable external prompt editor (GOOSE_PROMPT_EDITOR); Desktop app has its own UI but no documented panel/layout rearrangement."
+  },
+  "hosted_agent": {
+    "support": "none",
+    "source_url": "https://github.com/block/goose#source:~:text=Goose%20is%20a%20general-purpose%20AI%20agent%20that%20runs%20locally%20on%20a%20developer%27s%20machine",
+    "comment": "Runs locally as CLI/Desktop/API with no central control plane; no Goose-hosted cloud agent platform. `goose acp` exposes it as an Agent Client Protocol server for editor integration, not a hosted service."
+  },
+  "custom_model_provider": {
+    "support": "full",
+    "source_url": "https://github.com/block/goose#source:~:text=15%2B%20LLM%20providers",
+    "comment": "Supports 15+ LLM providers (Anthropic, OpenAI, Google, Azure, Bedrock, Databricks, Groq, OpenRouter, local Ollama, and more) including OpenAI-compatible custom endpoints, configured via `goose configure` or GOOSE_PROVIDER/GOOSE_MODEL plus provider API key env vars."
+  },
+  "notes": "Goose is an open-source (Apache-2.0), Rust-based agentic CLI and Desktop app originally built by Block and now stewarded by the Linux Foundation's Agentic AI Foundation (AAIF). It was the first open-source agent to support MCP and ships 70+ first-party MCP extensions, recipes/sub-recipes for reusable workflows, real subagent delegation, four-tier permission modes (auto/approve/chat/smart_approve via GOOSE_MODE), Docker-based execution sandboxing, and a recently added lifecycle-hooks plugin system. No paid tier; cost is purely BYOK LLM usage, with a fully free/no-account path via local Ollama models.",
+  "pricing": {
+    "value": "Free (Apache-2.0), BYOK LLM costs",
+    "source_url": "https://github.com/block/goose#source:~:text=License-Apache-2.0",
+    "comment": "Goose itself is free and open source under Apache-2.0 with no subscription or usage cap; users pay only for whichever LLM provider API they connect (or use free local Ollama models)."
+  },
+  "some_free_usage": {
+    "support": "full",
+    "source_url": "https://goose-docs.ai/docs/getting-started/installation#source:~:text=Google%20Gemini%20offers%20a%20free%20tier",
+    "comment": "Google Gemini's free tier and free local Ollama models give a documented no-cost usage path alongside paid providers."
+  },
+  "no_account_required": {
+    "support": "full",
+    "source_url": "https://github.com/block/goose#source:~:text=15%2B%20LLM%20providers%20(including%20local%20Ollama)",
+    "comment": "Can run entirely against local Ollama models with no Goose account and no cloud provider account required."
+  },
+  "can_use_other_subscriptions": {
+    "support": "full",
+    "source_url": "https://github.com/block/goose#source:~:text=15%2B%20LLM%20providers",
+    "comment": "Routes agent usage through the user's own provider account/API key (Anthropic, OpenAI, Azure, Bedrock, Databricks, Groq, OpenRouter, etc.) or local inference (Ollama) rather than a Goose-owned subscription."
+  }
+}

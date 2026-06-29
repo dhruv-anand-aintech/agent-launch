@@ -24,19 +24,24 @@ class AgentSpec:
 
 AGENTS: dict[str, AgentSpec] = {
     "aider": AgentSpec("aider", "", "", "pro"),
+    "amazonq": AgentSpec("q", "", "", "pro"),
     "amp": AgentSpec("amp", "", "", "pro"),
     "antigravity": AgentSpec("agy", "", "", "pro"),
     "codex": AgentSpec("codex", "gpt-5.4-mini", "gpt-5.5", "pro"),
     "claude": AgentSpec("claude", "haiku", "sonnet", "pro"),
     "cline": AgentSpec("cline", "", "", "pro"),
+    "copilot": AgentSpec("copilot", "", "", "pro"),
+    "crush": AgentSpec("crush", "", "", "pro"),
     "droid": AgentSpec("droid", "claude-opus-4-8-fast", "claude-opus-4-8", "pro"),
     "gemini": AgentSpec("gemini", "gemini-2.5-flash", "gemini-2.5-pro", "pro"),
+    "goose": AgentSpec("goose", "", "", "pro"),
     "grok": AgentSpec("grok", "", "", "pro"),
     "kilo": AgentSpec("kilo", "", "", "pro"),
     "kimi": AgentSpec("kimi", "", "", "pro"),
     "kiro": AgentSpec("kiro-cli", "", "", "pro"),
     "mimo": AgentSpec("mimo", "", "", "pro"),
     "opencode": AgentSpec("opencode", "opencode-go/deepseek-v4-flash", "opencode-go/kimi-k2.6", "pro"),
+    "openhands": AgentSpec("openhands", "", "", "pro"),
     "pi": AgentSpec("pi", "", "", "pro"),
     "qwen": AgentSpec("qwen", "", "", "pro"),
     "cursor": AgentSpec("agent", "composer-2.5-fast", "composer-2.5-fast", "fast"),
@@ -68,6 +73,11 @@ DEFAULT_AGENT_ORDER = (
     "mimo",
     "pi",
     "qwen",
+    "goose",
+    "copilot",
+    "crush",
+    "openhands",
+    "amazonq",
 )
 MODES = ("default", "ask", "plan", "auto", "danger")
 
@@ -121,11 +131,15 @@ def choose_random_agent(persist: bool = True) -> str:
 MODEL_CLASSES = ("fast", "pro")
 MODEL_FLAG_AGENTS = {
     "aider",
+    "amazonq",
     "cline",
     "codex",
     "claude",
+    "copilot",
+    "crush",
     "droid",
     "gemini",
+    "goose",
     "grok",
     "kilo",
     "kimi",
@@ -461,6 +475,30 @@ def mode_flags(agent: str, mode: str, non_interactive: bool) -> list[str]:
             "auto": ["--force"],
             "danger": ["--yolo", "--sandbox", "disabled"],
         },
+        "amazonq": {
+            "ask": [],
+            "plan": [],
+            "auto": ["--trust-tools=fs_read,fs_write,execute_bash"],
+            "danger": ["--trust-all-tools"],
+        },
+        "copilot": {
+            "ask": [],
+            "plan": ["--plan"],
+            "auto": ["--autopilot"],
+            "danger": ["--allow-all"],
+        },
+        "crush": {
+            "ask": [],
+            "plan": [],
+            "auto": [],
+            "danger": ["-y"],
+        },
+        "openhands": {
+            "ask": [],
+            "plan": [],
+            "auto": ["--llm-approve"],
+            "danger": ["--always-approve"],
+        },
     }
     return mappings[agent][mode]
 
@@ -474,7 +512,7 @@ def append_model(cmd: list[str], agent: str, model: str | None) -> None:
 
 def append_reasoning_effort(cmd: list[str], agent: str, model_class: str, model: str | None) -> None:
     if agent == "codex" and model_class == "pro" and model == "gpt-5.5":
-        cmd += ["-c", "model_reasoning_effort=low"]
+        cmd += ["-c", "model_reasoning_effort=high"]
 
 
 def append_passthrough(cmd: list[str], args: argparse.Namespace) -> None:
@@ -755,6 +793,92 @@ def build_command(args: argparse.Namespace) -> list[str]:
             else:
                 cmd.append(prompt)
 
+    elif agent == "amazonq":
+        cmd += ["chat"]
+        cmd += mode_flags(agent, args.mode, non_interactive)
+        append_model(cmd, agent, model)
+        append_passthrough(cmd, args)
+        if resume_requested or continue_session:
+            cmd += ["--resume"]
+        if non_interactive:
+            cmd += ["--no-interactive"]
+        if prompt:
+            cmd.append(prompt)
+
+    elif agent == "copilot":
+        cmd += ["-C", args.cwd]
+        cmd += mode_flags(agent, args.mode, non_interactive)
+        append_model(cmd, agent, model)
+        append_passthrough(cmd, args)
+        if resume_id:
+            cmd += ["--resume", resume_id]
+        elif continue_session:
+            cmd += ["--continue"]
+        elif resume_requested:
+            cmd += ["--resume"]
+        if non_interactive:
+            if "--allow-all" not in cmd and "--allow-all-tools" not in cmd:
+                cmd += ["--allow-all-tools"]
+            if prompt:
+                cmd += ["-p", prompt]
+        elif prompt:
+            cmd += ["-i", prompt]
+
+    elif agent == "crush":
+        if non_interactive:
+            cmd += ["run"]
+        else:
+            # --yolo/-y is a root-only flag; `crush run` rejects it outright.
+            cmd += mode_flags(agent, args.mode, non_interactive)
+        cmd += ["-c", args.cwd]
+        append_model(cmd, agent, model)
+        append_passthrough(cmd, args)
+        if resume_id:
+            cmd += ["--session", resume_id]
+        elif resume_requested or continue_session:
+            cmd += ["--continue"]
+        if non_interactive and prompt:
+            cmd.append(prompt)
+
+    elif agent == "goose":
+        env_mode = {
+            "default": None,
+            "ask": "approve",
+            "plan": "chat",
+            "auto": "smart_approve",
+            "danger": "auto",
+        }[args.mode]
+        if env_mode:
+            cmd = ["env", f"GOOSE_MODE={env_mode}", spec.executable]
+        cmd += ["run"]
+        cmd += ["--quiet"] if non_interactive else ["--interactive"]
+        append_model(cmd, agent, model)
+        append_passthrough(cmd, args)
+        if resume_id:
+            cmd += ["--resume", "--name", resume_id]
+        elif resume_requested or continue_session:
+            cmd += ["--resume"]
+        if prompt:
+            cmd += ["--text", prompt]
+
+    elif agent == "openhands":
+        if model:
+            cmd = ["env", f"LLM_MODEL={model}", spec.executable]
+        if non_interactive:
+            cmd += ["--headless"]
+        cmd += mode_flags(agent, args.mode, non_interactive)
+        if model:
+            cmd += ["--override-with-envs"]
+        append_passthrough(cmd, args)
+        if resume_id:
+            cmd += ["--resume", resume_id]
+        elif continue_session:
+            cmd += ["--resume", "--last"]
+        elif resume_requested:
+            cmd += ["--resume"]
+        if prompt:
+            cmd += ["-t", prompt]
+
     elif agent == "cursor":
         cmd += ["--workspace", args.cwd]
         cmd += mode_flags(agent, args.mode, non_interactive)
@@ -784,6 +908,8 @@ def print_mappings() -> None:
             )
         elif name in MODEL_FLAG_AGENTS:
             print(f"  {name}: executable={spec.executable}, no built-in model default; supports explicit --model")
+        elif name == "openhands":
+            print(f"  {name}: executable={spec.executable}, no --model flag; --model sets LLM_MODEL env + --override-with-envs")
         else:
             print(f"  {name}: executable={spec.executable}, model flag unsupported")
     print(
@@ -791,7 +917,7 @@ def print_mappings() -> None:
         "(never the same as the previous random pick when another installed option exists)"
     )
     print(f"  default order: {', '.join(DEFAULT_AGENT_ORDER)}")
-    print("  codex pro: adds -c model_reasoning_effort=low when using gpt-5.5")
+    print("  codex pro: adds -c model_reasoning_effort=high when using gpt-5.5")
     print("\nModes:")
     for mode in MODES:
         print(f"  {mode}")

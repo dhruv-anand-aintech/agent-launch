@@ -1,0 +1,190 @@
+{
+  "name": "GitHub Copilot CLI",
+  "links": {
+    "docs": "https://docs.github.com/en/copilot/concepts/agents/about-copilot-cli",
+    "github": "https://github.com/github/copilot-cli",
+    "website": "https://github.com/features/copilot/cli",
+    "slug": "github-copilot-cli"
+  },
+  "form_factor": {
+    "values": [
+      "CLI"
+    ],
+    "source_url": "https://docs.github.com/en/copilot/how-tos/copilot-cli/set-up-copilot-cli/install-copilot-cli#source:~:text=npm%20install%20-g%20%40github/copilot",
+    "comment": "Standalone terminal CLI, distinct from the GitHub Copilot cloud coding agent and IDE agent mode (see github-copilot-coding-agent entry). Installed via npm, Homebrew, WinGet, or install script; run as `copilot`. Per-form-factor links: CLI: https://docs.github.com/en/copilot/how-tos/copilot-cli/set-up-copilot-cli/install-copilot-cli.",
+    "links": {
+      "CLI": "https://docs.github.com/en/copilot/how-tos/copilot-cli/set-up-copilot-cli/install-copilot-cli"
+    }
+  },
+  "released_in": {
+    "value": "Sep '25",
+    "source_url": "https://github.blog/changelog/2025-09-25-github-copilot-cli-is-now-in-public-preview/#source:~:text=public%20preview",
+    "comment": "Public preview announced September 25, 2025, authenticated with existing GitHub account, usable with existing Copilot Pro/Pro+/Business/Enterprise plans."
+  },
+  "latest_major_update": {
+    "value": "Feb '26",
+    "source_url": "https://github.blog/changelog/2026-02-25-github-copilot-cli-is-now-generally-available/#source:~:text=is%20now%20generally%20available",
+    "comment": "Reached general availability for all Copilot subscribers on Feb 25, 2026, adding autopilot mode, /diff and /review commands, cross-session repo memory, and auto-compaction. Later 2026 updates added cloud/local sandboxes (--cloud, /sandbox enable), a unified /settings command, rubber duck critic agent, voice input, and prompt scheduling."
+  },
+  "rules": {
+    "support": "full",
+    "source_url": "https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/add-custom-instructions#source:~:text=the%20repository%27s%20root%20directory%2C%20in%20the%20current%20working%20directory%2C%20or%20in%20any%20of%20the%20directories%20specified%20by%20a%20comma-separated%20list%20of%20paths%20in%20the%20COPILOT_CUSTOM_INSTRUCTIONS_DIRS%20environment%20variable",
+    "comment": "Reads AGENTS.md (repo root, cwd, or COPILOT_CUSTOM_INSTRUCTIONS_DIRS paths) and .github/instructions/**/*.instructions.md, plus CLAUDE.md/GEMINI.md at repo root, and a personal $HOME/.copilot/copilot-instructions.md. Disable with --no-custom-instructions."
+  },
+  "skills": {
+    "support": "full",
+    "source_url": "https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/add-skills#source:~:text=Agent%20skills%20are%20folders%20of%20instructions%2C%20scripts%2C%20and%20resources",
+    "comment": "Open Agent Skills standard: SKILL.md plus optional supplementary files/scripts, loaded when relevant to a task."
+  },
+  "hooks": {
+    "support": "full",
+    "source_url": "https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/use-hooks#source:~:text=Hooks%20are%20external%20commands%20that%20execute%20at%20specific%20lifecycle%20points",
+    "comment": "sessionStart, sessionEnd, preToolUse (can deny/modify tool calls), postToolUse hooks, run synchronously and can block execution. Configured as JSON files at .github/hooks/*.json."
+  },
+  "mcp_servers": {
+    "support": "full",
+    "source_url": "https://github.com/github/copilot-cli#source:~:text=MCP%20Support",
+    "comment": "Ships with the GitHub MCP server enabled by default plus support for arbitrary custom MCP servers (stdio/http/sse). Flags: --additional-mcp-config, --disable-mcp-server, --disable-builtin-mcps, --add-github-mcp-tool(set), --enable-all-github-mcp-tools. /mcp slash command lists configured servers."
+  },
+  "custom_commands": {
+    "support": "partial",
+    "source_url": "https://docs.github.com/en/copilot/how-tos/copilot-cli/use-copilot-cli/overview#source:~:text=slash%20commands",
+    "comment": "Built-in slash commands (/resume, /cwd, /add-dir, /mcp, /diff, /review, /settings, /theme, /sandbox, /rewind) plus custom agents act as a structured-prompt mechanism, but no user-defined arbitrary slash command syntax is documented."
+  },
+  "goal_command": {
+    "support": "partial",
+    "source_url": "https://docs.github.com/en/copilot/concepts/agents/copilot-cli/autopilot#source:~:text=Autopilot%20mode%20allows%20Copilot%20CLI%20to%20work%20through%20a%20task%20without%20waiting%20for%20your%20input%20after%20each%20step",
+    "comment": "No `/goal` command, but --autopilot / --mode autopilot (Shift+Tab to cycle modes) auto-continues until the agent decides the task is complete, hits a blocking problem, Ctrl+C, or --max-autopilot-continues is reached. Scoped to a single task/session, not a persistent cross-session objective."
+  },
+  "subagents": {
+    "support": "full",
+    "source_url": "https://docs.github.com/en/copilot/concepts/agents/copilot-cli/about-custom-agents#source:~:text=Work%20performed%20by%20a%20custom%20agent%20is%20carried%20out%20using%20a%20subagent%2C%20which%20is%20a%20temporary%20agent%20spun%20up%20to%20complete%20the%20task",
+    "comment": "Custom agents defined as Markdown agent-profile files (prompts, tools, MCP servers), invoked via --agent=NAME or in-session. Each spins up a subagent with its own isolated context window. Built-in specialized agents include Explore, Task, and the Rubber Duck critic agent."
+  },
+  "transcripts": {
+    "support": "full",
+    "source_url": "https://docs.github.com/en/copilot/reference/copilot-cli-reference/cli-command-reference#source:~:text=--share%3DPATH",
+    "comment": "Local session logs under ~/.copilot/logs/ (configurable via --log-dir). Sessions can be exported with --share=PATH (Markdown file) or --share-gist (secret GitHub gist) after a programmatic run."
+  },
+  "model_selection": {
+    "support": "full",
+    "source_url": "https://docs.github.com/en/copilot/reference/copilot-cli-reference/cli-command-reference#source:~:text=--model%3DMODEL",
+    "comment": "--model=MODEL flag or COPILOT_MODEL env var, plus in-session /model picker. Choices include Anthropic Claude, OpenAI GPT, and Google Gemini family models; `auto` lets Copilot pick automatically. BYOK external models also appear in the picker."
+  },
+  "approval_mode": {
+    "support": "full",
+    "source_url": "https://docs.github.com/en/copilot/how-tos/copilot-cli/use-copilot-cli/allowing-tools#source:~:text=--allow-all-tools",
+    "comment": "Per-action approval prompts by default (Yes / Yes-and-approve-for-session / No-and-redirect). Granular flags: --allow-tool, --deny-tool, --allow-all-tools, --allow-all-paths, --allow-all-urls, --allow-url/--deny-url, --add-dir, plus --allow-all/--yolo to bypass everything. Enterprises can disable bypass via permissions.disableBypassPermissionsMode."
+  },
+  "sandbox_mode": {
+    "support": "full",
+    "source_url": "https://docs.github.com/en/copilot/concepts/about-cloud-and-local-sandboxes#source:~:text=Local%20sandboxing%20lets%20Copilot%20run%20in%20a%20sandboxed%20environment%20directly%20on%20your%20machine",
+    "comment": "Public preview (as of mid-2026): local sandbox via /sandbox enable restricts filesystem/network/system access (built on Microsoft MXC, included in standard seat); cloud sandbox via `copilot --cloud` runs a fully isolated, ephemeral GitHub-hosted Linux environment (Azure Container Apps Sandboxes) resumable from any device."
+  },
+  "resume": {
+    "support": "full",
+    "source_url": "https://docs.github.com/en/copilot/reference/copilot-cli-reference/cli-command-reference#source:~:text=Resume%20a%20previous%20interactive%20session%20by%20choosing%20from%20a%20list",
+    "comment": "-r/--resume[=VALUE] picks from a session list or jumps to a session ID/prefix/name; /resume in-session. --connect[=SESSION-ID] attaches to a remote session; --remote enables resuming a remote task locally."
+  },
+  "continue": {
+    "support": "full",
+    "source_url": "https://docs.github.com/en/copilot/reference/copilot-cli-reference/cli-command-reference#source:~:text=Resume%20the%20most%20recent%20session%20in%20the%20current%20working%20directory",
+    "comment": "--continue resumes the most recent session in the current working directory, falling back to the globally most recent session, without needing a session ID."
+  },
+  "non_interactive": {
+    "support": "full",
+    "source_url": "https://docs.github.com/en/copilot/reference/copilot-cli-reference/cli-command-reference#source:~:text=Execute%20a%20prompt%20programmatically%20%28exits%20after%20completion%29",
+    "comment": "-p/--prompt=PROMPT executes a prompt programmatically and exits; --allow-all-tools is required for unattended runs. -i/--interactive=PROMPT starts interactive with an initial prompt. Documented for use in scripts and GitHub Actions workflows."
+  },
+  "output_format": {
+    "support": "full",
+    "source_url": "https://docs.github.com/en/copilot/reference/copilot-cli-reference/cli-command-reference#source:~:text=FORMAT%20can%20be%20%60text%60%20%28default%29%20or%20%60json%60",
+    "comment": "--output-format=text|json (JSON outputs JSONL, one object per line). -s/--silent restricts output to just the agent response (no usage stats), useful when combined with -p for scripting."
+  },
+  "statusline": {
+    "support": "partial",
+    "source_url": "https://docs.github.com/en/copilot/reference/copilot-cli-reference/cli-config-dir-reference#source:~:text=statusLine.command",
+    "comment": "Experimental statusLine.command setting in ~/.copilot/settings.json runs a user script (receives session JSON over stdin) to render a custom status line; community tools (Oh My Posh integrations, copilot-statusline, copilot-hud) build on it. Marked experimental/subject to change as of mid-2026."
+  },
+  "telemetry": {
+    "support": "partial",
+    "source_url": "https://docs.github.com/en/copilot/responsible-use-of-github-copilot-features/responsible-use-of-github-copilot-in-the-cli#source:~:text=telemetry",
+    "comment": "Enterprise/org-level audit logging and data-retention controls inherited from GitHub Copilot governance; --secret-env-vars redacts env vars from logs/MCP servers. No granular end-user telemetry opt-out UI documented specifically for the CLI."
+  },
+  "keyboard_shortcuts": {
+    "support": "partial",
+    "source_url": "https://github.blog/changelog/2026-06-02-copilot-cli-improved-ui-rubber-duck-prompt-scheduling-and-voice-input/#source:~:text=Shift%2BTab",
+    "comment": "Fixed shortcuts documented (Shift+Tab to cycle agent modes, Ctrl+C to stop autopilot, Ctrl+X then V or hold space for voice input); no user-remappable keybinding config found."
+  },
+  "theme_customization": {
+    "support": "partial",
+    "source_url": "https://docs.github.com/en/copilot/reference/copilot-cli-reference/cli-config-dir-reference#source:~:text=/theme",
+    "comment": "/theme command and settings.json support auto/dark/light color modes only; no custom color palette/theme file support as of mid-2026 (feature requests open in github/copilot-cli issues)."
+  },
+  "auto_save": {
+    "support": "full",
+    "source_url": "https://docs.github.com/en/copilot/how-tos/copilot-cli/use-copilot-cli/chronicle#source:~:text=session",
+    "comment": "Sessions are automatically persisted locally (and to the cloud when --remote/sandbox features are used) without an explicit save step, enabling --resume/--continue."
+  },
+  "debugging_output": {
+    "support": "full",
+    "source_url": "https://docs.github.com/en/copilot/reference/copilot-cli-reference/cli-command-reference#source:~:text=Set%20the%20log%20level%20%28choices%3A%20%60none%60%2C%20%60error%60%2C%20%60warning%60%2C%20%60info%60%2C%20%60debug%60%2C%20%60all%60%2C%20%60default%60%29",
+    "comment": "--log-level=none|error|warning|info|debug|all|default and --log-dir=DIRECTORY (default ~/.copilot/logs/) for verbose/diagnostic logging."
+  },
+  "context_window": {
+    "support": "partial",
+    "source_url": "https://github.blog/changelog/2026-02-25-github-copilot-cli-is-now-generally-available/#source:~:text=auto-compaction",
+    "comment": "Automatic context auto-compaction and cross-session repository memory are documented; no explicit user-configurable context-length/token-limit setting found."
+  },
+  "code_formatting": {
+    "support": "unknown",
+    "source_url": "https://docs.github.com/en/copilot/concepts/agents/about-copilot-cli#source:~:text=write%20and%20debug%20code",
+    "comment": "No documented built-in formatter/linter integration toggle beyond what shell tool execution and repo tooling (e.g. pre-commit) provide."
+  },
+  "git_integration": {
+    "support": "full",
+    "source_url": "https://github.blog/changelog/2026-02-25-github-copilot-cli-is-now-generally-available/#source:~:text=/diff%20and%20/review",
+    "comment": "/diff and /review commands for reviewing changes, GitHub.com integration for issues/PRs via natural language, an experimental git-free /rewind to restore only Copilot-changed files, and shell passthrough (prefix `!`) for arbitrary git commands."
+  },
+  "performance_mode": {
+    "support": "partial",
+    "source_url": "https://docs.github.com/en/copilot/reference/copilot-cli-reference/cli-command-reference#source:~:text=--effort%3DLEVEL%2C%20--reasoning-effort%3DLEVEL",
+    "comment": "--effort/--reasoning-effort=low|medium|high|xhigh|max tunes reasoning depth vs. speed for supporting models; --enable-reasoning-summaries for OpenAI models. No general cache/perf toggle beyond this."
+  },
+  "ui_customization": {
+    "support": "partial",
+    "source_url": "https://github.blog/changelog/2026-06-02-copilot-cli-improved-ui-rubber-duck-prompt-scheduling-and-voice-input/#source:~:text=experimental%20terminal%20interface",
+    "comment": "--banner/--no-banner, --mouse/--no-mouse, --screen-reader, --plain-diff, --stream=MODE flags, plus an experimental redesigned terminal UI (/experimental) with tabs for Session/Issues/Pull requests/Gists. /settings unifies most config since June 2026."
+  },
+  "hosted_agent": {
+    "support": "none",
+    "source_url": "https://docs.github.com/en/copilot/concepts/agents/about-copilot-cli#source:~:text=command-line%20interface%20%28CLI%29%20for%20GitHub%20Copilot",
+    "comment": "Copilot CLI itself is a local terminal client. Cloud sandbox (`copilot --cloud`) runs the same CLI session in a GitHub-hosted ephemeral environment but is still user-initiated/interactive, not the autonomous GitHub Actions cloud agent (see separate github-copilot-coding-agent entry, hosted_agent=full)."
+  },
+  "custom_model_provider": {
+    "support": "full",
+    "source_url": "https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models#source:~:text=Anthropic%2C%20including%20locally%20running%20models%20such%20as%20Ollama",
+    "comment": "BYOK env vars (COPILOT_PROVIDER_TYPE, COPILOT_PROVIDER_BASE_URL, COPILOT_PROVIDER_API_KEY, COPILOT_MODEL) connect Anthropic, OpenAI-compatible endpoints, Azure OpenAI, AWS Bedrock, Google AI Studio, xAI/Microsoft Foundry, and local Ollama models."
+  },
+  "notes": "GitHub Copilot CLI is the standalone, local terminal coding agent (`copilot`, npm package @github/copilot, repo github/copilot-cli) — distinct from the asynchronous GitHub Actions-based Copilot cloud coding agent. Public preview Sep 2025, GA Feb 2026, runs on an existing Copilot subscription with no separate CLI fee. Strong open-standard support (AGENTS.md, Agent Skills, MCP, hooks, custom agents/subagents) and BYOK for external model providers, plus newer cloud/local sandboxing, autopilot mode, and an experimental redesigned terminal UI.",
+  "pricing": {
+    "value": "Included with Copilot Pro $10/mo, Pro+ $39/mo, Business $19/user/mo, Enterprise $39/user/mo; Free tier has limited usage",
+    "source_url": "https://docs.github.com/en/copilot/concepts/billing/copilot-requests#source:~:text=Copilot%20CLI",
+    "comment": "Consumes GitHub AI Credits/premium requests against existing Copilot plan; usage-based billing for all plans started June 1, 2026, replacing the old premium-request counter. No CLI-specific surcharge."
+  },
+  "some_free_usage": {
+    "support": "partial",
+    "source_url": "https://pecollective.com/tools/github-copilot-pricing/#source:~:text=Free",
+    "comment": "GitHub Copilot Free plan includes limited chat/agent requests (e.g. 50 chat requests/mo) usable via the CLI, but no unlimited free local-model path is documented for Copilot CLI itself."
+  },
+  "no_account_required": {
+    "support": "none",
+    "source_url": "https://github.blog/changelog/2025-09-25-github-copilot-cli-is-now-in-public-preview/#source:~:text=authenticated%20with%20your%20existing%20GitHub%20account",
+    "comment": "Requires sign-in with a GitHub account holding an active Copilot subscription/seat; `/login` flow inside the CLI."
+  },
+  "can_use_other_subscriptions": {
+    "support": "full",
+    "source_url": "https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models#source:~:text=Using%20your%20own%20LLM%20models%20in%20GitHub%20Copilot%20CLI",
+    "comment": "BYOK support for Anthropic, OpenAI, Azure OpenAI, AWS Bedrock, Google AI Studio, xAI/Microsoft Foundry, any OpenAI-compatible endpoint, and local models via Ollama, configured with COPILOT_PROVIDER_TYPE / COPILOT_PROVIDER_BASE_URL / COPILOT_PROVIDER_API_KEY / COPILOT_MODEL env vars."
+  }
+}

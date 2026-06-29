@@ -1,0 +1,198 @@
+{
+  "name": "OpenHands",
+  "links": {
+    "docs": "https://docs.openhands.dev/",
+    "github": "https://github.com/OpenHands/OpenHands",
+    "website": "https://www.openhands.dev/",
+    "slug": "openhands"
+  },
+  "form_factor": {
+    "values": [
+      "CLI",
+      "Web",
+      "Docker",
+      "Hosted Agent",
+      "IDE"
+    ],
+    "source_url": "https://docs.openhands.dev/openhands/usage/cli/quick-start#overview:~:text=The%20OpenHands%20CLI%20provides%20multiple%20ways%20to%20interact%20with%20the%20OpenHands%20AI%20agent",
+    "comment": "Local terminal CLI (`openhands`), browser terminal UI (`openhands web`), full Docker-based GUI server (`openhands serve`), OpenHands Cloud hosted agent (`openhands cloud`/`openhands login`), and IDE integration via Agent Client Protocol (`openhands acp`) for Zed/VS Code/JetBrains. Per-form-factor links: CLI: https://docs.openhands.dev/openhands/usage/cli/installation; Web: https://docs.openhands.dev/openhands/usage/cli/web-interface; Docker: https://docs.openhands.dev/openhands/usage/sandboxes/docker; Hosted Agent: https://app.all-hands.dev/; IDE: https://docs.openhands.dev/openhands/usage/cli/ide/overview.",
+    "links": {
+      "CLI": "https://docs.openhands.dev/openhands/usage/cli/installation",
+      "Web": "https://docs.openhands.dev/openhands/usage/cli/web-interface",
+      "Docker": "https://docs.openhands.dev/openhands/usage/sandboxes/docker",
+      "Hosted Agent": "https://app.all-hands.dev/",
+      "IDE": "https://docs.openhands.dev/openhands/usage/cli/ide/overview"
+    }
+  },
+  "released_in": {
+    "value": "Mar '24",
+    "source_url": "https://github.com/OpenDevin/OpenDevin/releases#source:~:text=0.6.1",
+    "comment": "Launched March 12, 2024 as 'OpenDevin' (replicating Devin). First tagged GitHub release v0.6.1 on 2024-06-04 (earlier 0.1-0.5 history predates the public releases page). Renamed to OpenHands in mid-2024, and the GitHub org All-Hands-AI was renamed to OpenHands on 2025-10-20."
+  },
+  "latest_major_update": {
+    "value": "Jun '26",
+    "source_url": "https://github.com/OpenHands/OpenHands/releases#source:~:text=1.8.0",
+    "comment": "v1.8.0 (June 10, 2026). The 1.0.0 release (Dec 16, 2025) was a major rewrite onto the new 'software-agent-sdk', changing config format from TOML to JSON, switching MCP config format, and rebranding microagents to 'Skills' (AgentSkills standard)."
+  },
+  "rules": {
+    "support": "full",
+    "source_url": "https://github.com/OpenHands/docs/blob/main/overview/skills.mdx#source:~:text=For%20repository-wide%2C%20always-on%20instructions%2C%20prefer%20a%20root-level%20%60AGENTS.md%60%20file",
+    "comment": "Root-level AGENTS.md (also supports CLAUDE.md/GEMINI.md variants) is injected into the system prompt at conversation start as always-on context. Location: repo root `AGENTS.md`."
+  },
+  "skills": {
+    "support": "full",
+    "source_url": "https://github.com/OpenHands/docs/blob/main/overview/skills.mdx#source:~:text=OpenHands%20supports%20an%20extended%20version%20of%20the%20AgentSkills%20standard",
+    "comment": "Supports the AgentSkills standard (SKILL.md with progressive disclosure) plus a legacy simple format. Community registry at github.com/OpenHands/extensions. Older 'microagents' (.openhands/microagents/) are deprecated in favor of .agents/skills/. Location: `.agents/skills/<name>/SKILL.md` (recommended) or `.agents/skills/*.md` (legacy)."
+  },
+  "hooks": {
+    "support": "full",
+    "source_url": "https://github.com/OpenHands/docs/blob/main/openhands/usage/customization/hooks.mdx#source:~:text=Hooks%20let%20you%20run%20custom%20shell%20scripts%20at%20key%20moments%20during%20an%20OpenHands%20session",
+    "comment": "Full lifecycle hooks (PreToolUse, PostToolUse, UserPromptSubmit, Stop, SessionStart, SessionEnd) configured via `.openhands/hooks.json`, format explicitly compatible with Claude Code hooks. Works across Cloud, CLI, and local GUI. Location: `.openhands/hooks.json` + `.openhands/hooks/*.sh`."
+  },
+  "mcp_servers": {
+    "support": "full",
+    "source_url": "https://github.com/OpenHands/docs/blob/main/openhands/usage/cli/mcp-servers.mdx#source:~:text=Model%20Context%20Protocol%20(MCP)%20servers%20provide%20additional%20tools%20and%20context%20to%20OpenHands%20agents",
+    "comment": "Full MCP support with stdio, SSE, and HTTP transports, OAuth/header auth, managed via `openhands mcp add/list/get/remove/enable/disable` CLI subcommands or by editing `~/.openhands/mcp.json` directly. `/mcp` shows live status in-session."
+  },
+  "custom_commands": {
+    "support": "partial",
+    "source_url": "https://github.com/OpenHands/docs/blob/main/openhands/usage/cli/command-reference.mdx#source:~:text=Interactive%20Commands",
+    "comment": "Fixed set of built-in interactive `/` commands (/help, /new, /history, /confirm, /condense, /skills, /feedback, /exit). No documented mechanism for users to define their own custom slash commands (skills serve a similar reusable-prompt purpose instead)."
+  },
+  "goal_command": {
+    "support": "none",
+    "source_url": "https://github.com/OpenHands/docs/blob/main/openhands/usage/cli/command-reference.mdx#interactive-commands:~:text=/condense",
+    "comment": "No built-in `/goal` command for a persistent auto-continuing session objective; `/condense` manages context but does not implement a goal-loop."
+  },
+  "subagents": {
+    "support": "none",
+    "source_url": "https://github.com/OpenHands/docs/blob/main/openhands/usage/cli/command-reference.mdx#source:~:text=Interactive%20Commands",
+    "comment": "No documented first-class delegated/spawned subagent system for the CLI (contrast with Devin's 'Managed Devins'); OpenHands runs a single agent loop per conversation."
+  },
+  "transcripts": {
+    "support": "full",
+    "source_url": "https://github.com/OpenHands/docs/blob/main/openhands/usage/cli/installation.mdx#first-run:~:text=The%20conversation%20history%20will%20be%20saved%20in%20%60~/.openhands/conversations%60",
+    "comment": "Conversation history automatically saved locally. Location: `~/.openhands/conversations/`. `--resume` lists and reopens prior conversations."
+  },
+  "model_selection": {
+    "support": "full",
+    "source_url": "https://github.com/OpenHands/docs/blob/main/openhands/usage/cli/command-reference.mdx#changing-your-model:~:text=Via%20Configuration%20File",
+    "comment": "Set via Settings UI (Ctrl+P > Settings), persisted in `~/.openhands/agent_settings.json` (`llm.model` field), or temporarily overridden with `LLM_MODEL`/`LLM_API_KEY`/`LLM_BASE_URL` env vars plus the `--override-with-envs` flag."
+  },
+  "approval_mode": {
+    "support": "full",
+    "source_url": "https://github.com/OpenHands/docs/blob/main/openhands/usage/confirmation-mode.mdx#configuration:~:text=In%20CLI%20mode%2C%20confirmation%20is%20enabled%20by%20default",
+    "comment": "Confirmation enabled by default with LLM Risk Analyzer (auto-confirms low/medium risk, prompts on high risk). CLI flags `--always-approve` (auto-approve everything) and `--llm-approve` (force LLM-based analyzer) override behavior; `/confirm` adjusts in-session."
+  },
+  "sandbox_mode": {
+    "support": "full",
+    "source_url": "https://github.com/OpenHands/docs/blob/main/openhands/usage/sandboxes/overview.mdx#sandbox-providers:~:text=Docker%20sandbox%20(recommended)",
+    "comment": "Three sandbox providers: Docker (isolated container, default/recommended for `openhands serve`), Process (no isolation, runs directly as a local process — this is what the plain `openhands` CLI uses by default), and Remote (managed/hosted). Selected via legacy `RUNTIME` env var (docker/process/remote)."
+  },
+  "resume": {
+    "support": "full",
+    "source_url": "https://github.com/OpenHands/docs/blob/main/openhands/usage/cli/command-reference.mdx#global-options:~:text=--resume%20%5BID%5D",
+    "comment": "`--resume [ID]` resumes a specific conversation by ID, or lists recent conversations to pick from if no ID given."
+  },
+  "continue": {
+    "support": "full",
+    "source_url": "https://github.com/OpenHands/docs/blob/main/openhands/usage/cli/command-reference.mdx#global-options:~:text=--last",
+    "comment": "`--resume --last` resumes the most recent conversation without needing to specify an ID."
+  },
+  "non_interactive": {
+    "support": "full",
+    "source_url": "https://github.com/OpenHands/docs/blob/main/openhands/usage/cli/headless.mdx#overview:~:text=Headless%20mode%20runs%20OpenHands%20without%20the%20interactive%20terminal%20UI",
+    "comment": "`openhands --headless -t \"task\"` (or `-f file`) runs with no UI for CI/CD and scripting. Always runs in always-approve mode in headless (cannot use --llm-approve here)."
+  },
+  "output_format": {
+    "support": "full",
+    "source_url": "https://github.com/OpenHands/docs/blob/main/openhands/usage/cli/headless.mdx#json-output-mode:~:text=The%20--json%20flag%20enables%20structured%20JSONL%20(JSON%20Lines)%20output",
+    "comment": "`--json` flag (requires `--headless`) streams structured JSONL events (action/observation objects) for machine parsing in CI pipelines."
+  },
+  "statusline": {
+    "support": "none",
+    "source_url": "https://github.com/OpenHands/docs/blob/main/openhands/usage/cli/terminal.mdx#source:~:text=Live%20status%20monitoring",
+    "comment": "Has 'live status monitoring' of agent progress in the TUI but no user-configurable status line / status bar string feature documented."
+  },
+  "telemetry": {
+    "support": "partial",
+    "source_url": "https://github.com/OpenHands/docs/blob/main/openhands/usage/cli/command-reference.mdx#interactive-commands:~:text=/feedback",
+    "comment": "`/feedback` sends anonymous feedback about the CLI; no documented granular opt-in/opt-out telemetry settings page found beyond this and general OSS analytics conventions."
+  },
+  "keyboard_shortcuts": {
+    "support": "partial",
+    "source_url": "https://github.com/OpenHands/docs/blob/main/openhands/usage/cli/command-reference.mdx#command-palette:~:text=Keys",
+    "comment": "Fixed shortcuts (Ctrl+P command palette, Esc pause, Ctrl+Q/`/exit` quit, Ctrl+\\ alt palette) viewable via palette 'Keys' option; no documented user remapping/customization."
+  },
+  "theme_customization": {
+    "support": "partial",
+    "source_url": "https://github.com/OpenHands/docs/blob/main/openhands/usage/cli/command-reference.mdx#command-palette:~:text=Theme",
+    "comment": "Command palette has a 'Theme' option to toggle color theme; no evidence of fully custom user-authored themes beyond toggling presets."
+  },
+  "auto_save": {
+    "support": "full",
+    "source_url": "https://github.com/OpenHands/docs/blob/main/openhands/usage/cli/installation.mdx#first-run:~:text=The%20conversation%20history%20will%20be%20saved%20in%20%60~/.openhands/conversations%60",
+    "comment": "Conversation/session state and settings are auto-saved locally with no manual save step; file edits are written directly to disk by the agent as it works."
+  },
+  "debugging_output": {
+    "support": "full",
+    "source_url": "https://github.com/OpenHands/docs/blob/main/openhands/usage/cli/command-reference.mdx#subcommands:~:text=--debug",
+    "comment": "`openhands web --debug` enables debug mode; `--json`/headless mode exposes structured event logs for diagnostics; broader DEBUG-related env vars exist in the wider config surface."
+  },
+  "context_window": {
+    "support": "partial",
+    "source_url": "https://github.com/OpenHands/docs/blob/main/openhands/usage/cli/command-reference.mdx#interactive-commands:~:text=/condense",
+    "comment": "`/condense` manually condenses conversation history to manage context; model-dependent context length is not separately user-configurable as a token-limit setting in the CLI."
+  },
+  "code_formatting": {
+    "support": "none",
+    "source_url": "https://github.com/OpenHands/docs/blob/main/openhands/usage/customization/repository.mdx#setup-script:~:text=.openhands/setup.sh",
+    "comment": "No built-in formatter/linter integration; users wire their own lint/format checks via `.openhands/setup.sh` or Stop hooks (e.g. `.openhands/hooks/lint_check.sh`) rather than a native formatting feature."
+  },
+  "git_integration": {
+    "support": "full",
+    "source_url": "https://github.com/OpenHands/docs/blob/main/openhands/usage/customization/hooks.mdx#inject-git-context-userpromptsubmit:~:text=git%20status",
+    "comment": "Agent runs git commands directly in the sandbox/process (clone, commit, branch, PR creation via GitHub integration); hooks can inject git status into prompts. GitHub Action integration also available (`run-openhands/github-action`)."
+  },
+  "performance_mode": {
+    "support": "none",
+    "source_url": "https://github.com/OpenHands/docs/blob/main/openhands/usage/cli/command-reference.mdx#global-options:~:text=Global%20Options",
+    "comment": "No documented user-facing caching/performance-tuning toggle in the CLI flag/config reference."
+  },
+  "ui_customization": {
+    "support": "none",
+    "source_url": "https://github.com/OpenHands/docs/blob/main/openhands/usage/cli/terminal.mdx#source:~:text=Command%20Palette",
+    "comment": "Terminal UI is fixed layout; no panel/sidebar/layout customization documented beyond theme toggle."
+  },
+  "hosted_agent": {
+    "support": "full",
+    "source_url": "https://github.com/OpenHands/docs/blob/main/openhands/usage/cli/command-reference.mdx#cloud:~:text=Create%20a%20new%20conversation%20in%20OpenHands%20Cloud",
+    "comment": "OpenHands Cloud (app.all-hands.dev) is a fully managed hosted agent platform; `openhands login`/`openhands cloud -t \"task\"` create and run cloud-hosted conversations from the local CLI."
+  },
+  "custom_model_provider": {
+    "support": "full",
+    "source_url": "https://docs.openhands.dev/openhands/usage/cli/command-reference#environment-variables:~:text=LLM_BASE_URL",
+    "comment": "LLM_BASE_URL plus LiteLLM backend allow pointing at any OpenAI-compatible endpoint, including local model servers (Ollama, vLLM, SGLang) and proxies."
+  },
+  "notes": "OpenHands launched in March 2024 as 'OpenDevin' (an open clone of Cognition's Devin), renamed OpenHands mid-2024, and had its GitHub org renamed All-Hands-AI -> OpenHands on 2025-10-20. The 1.0.0 release (Dec 2025) was a ground-up rewrite onto a new 'software-agent-sdk', changing config from TOML to JSON and rebranding 'microagents' to the AgentSkills-standard 'Skills' system. It has a genuine local CLI (`openhands`, installable via `uv tool install openhands` or `pip install openhands`, MIT licensed) that runs as a plain local process by default — Docker is only required for the separate `openhands serve` full-GUI mode, not the terminal CLI/headless mode.",
+  "pricing": {
+    "value": "Free (MIT, self-hosted); OpenHands Cloud free tier + at-cost usage; Enterprise custom",
+    "source_url": "https://www.openhands.dev/pricing#source:~:text=Free%2C%20local%20OpenHands%20for%20getting%20started",
+    "comment": "Self-hosted/local CLI is free and open source (MIT license) other than your own LLM API costs. OpenHands Cloud Individual tier is free to sign up with a cap (10 max daily conversations) and offers at-cost LLM usage with no markup if you don't bring your own key. Enterprise (SaaS or self-hosted VPC) is custom-priced."
+  },
+  "some_free_usage": {
+    "support": "full",
+    "source_url": "https://www.openhands.dev/pricing#source:~:text=Bring%20your%20own%20key%20or%20use%20our%20providers%20at-cost",
+    "comment": "OpenHands Cloud Individual tier is free to use (capped at 10 daily conversations) and self-hosted CLI is entirely free software; cost is only the LLM provider's own usage."
+  },
+  "no_account_required": {
+    "support": "full",
+    "source_url": "https://docs.openhands.dev/openhands/usage/cli/installation#first-run:~:text=The%20first%20time%20you%20run%20the%20CLI%2C%20it%20will%20take%20you%20through%20configuring%20the%20required%20LLM%20settings",
+    "comment": "Local CLI installed via uv/pip/binary runs fully on your machine; first-run setup just configures your own LLM provider/API key in ~/.openhands/settings.json, no OpenHands account needed unless using `openhands login`/OpenHands Cloud."
+  },
+  "can_use_other_subscriptions": {
+    "support": "full",
+    "source_url": "https://docs.openhands.dev/openhands/usage/cli/command-reference#environment-variables:~:text=LLM_API_KEY",
+    "comment": "Connects to any LiteLLM-supported provider (Anthropic, OpenAI, OpenRouter, local Ollama/vLLM/SGLang, etc.) via your own API key, configured through Settings UI, ~/.openhands/agent_settings.json, or LLM_API_KEY/LLM_MODEL/LLM_BASE_URL env vars with --override-with-envs."
+  }
+}
