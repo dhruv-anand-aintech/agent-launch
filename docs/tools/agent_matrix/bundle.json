@@ -21,13 +21,13 @@
       "value": "Jun '23",
       "source_url": "https://github.com/Aider-AI/aider/releases/tag/v0.5.0#v050:~:text=v0.5.0",
       "comment": "First public release v0.5.0 on June 7, 2023.",
-      "sort_date": "2023-06-07"
+      "sort_date": "2023-06-01"
     },
     "latest_major_update": {
-      "value": "May '26",
+      "value": "Aug '25",
       "source_url": "https://github.com/Aider-AI/aider/releases/tag/v0.86.0#source:~:text=Expanded%20GPT-5%20model%20support%20across%20family%20variants",
       "comment": "Latest tagged release v0.86.0 (Aug 9, 2025). Main branch is actively developed beyond that.",
-      "sort_date": "2026-05-22"
+      "sort_date": "2025-08-01"
     },
     "rules": {
       "support": "partial",
@@ -189,6 +189,199 @@
       "support": "none",
       "source_url": "https://aider.chat/docs/#cli:~:text=customization",
       "comment": "CLI-based; no UI customization."
+    }
+  },
+  {
+    "name": "Amazon Q Developer CLI",
+    "deprecated": true,
+    "links": {
+      "docs": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-chat.html",
+      "github": "https://github.com/aws/amazon-q-developer-cli",
+      "website": "https://aws.amazon.com/q/developer/",
+      "slug": "amazon-q-developer-cli"
+    },
+    "form_factor": {
+      "values": [
+        "CLI"
+      ],
+      "source_url": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line.html#source:~:text=Amazon%20Q%20Developer%20on%20the%20command%20line",
+      "comment": "Standalone terminal CLI (`q chat`). Amazon Q Developer also ships as IDE extensions/plugins, but those are a separate surface not covered by this entry. Per-form-factor links: CLI: https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-installing.html.",
+      "links": {
+        "CLI": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-installing.html"
+      }
+    },
+    "released_in": {
+      "value": "Mar '25",
+      "source_url": "https://aws.amazon.com/blogs/devops/introducing-the-enhanced-command-line-interface-in-amazon-q-developer/#source:~:text=Amazon%20Q%20Developer%20introduced%20an%20enhanced%20CLI%20agent",
+      "comment": "Enhanced agentic `q chat` CLI experience (multi-turn, tool use, Claude 3.7 Sonnet reasoning) announced March 6, 2025. Earlier non-agentic CLI completions predate this, but agentic chat is the surface tracked here.",
+      "sort_date": "2025-03-01"
+    },
+    "latest_major_update": {
+      "value": "Nov '25",
+      "source_url": "https://github.com/aws/amazon-q-developer-cli/releases#source:~:text=v1.19.7",
+      "comment": "v1.19.7 (Nov 17, 2025) is the last tagged release before the project transitioned to the closed-source Kiro CLI; AWS has since announced Amazon Q Developer end-of-support with migration to Kiro CLI through 2026-2027.",
+      "sort_date": "2025-11-01"
+    },
+    "rules": {
+      "support": "full",
+      "source_url": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/context-project-rules.html#source:~:text=Rules%20are%20markdown%20files%20stored%20in%20the%20.amazonq/rules/%20directory",
+      "comment": "Markdown rule files in `.amazonq/rules/` are auto-scanned and applied per project. No AGENTS.md support (open feature request, GitHub issue #2712, unimplemented). Location: `.amazonq/rules/*.md`, referenced via agent config `resources`."
+    },
+    "skills": {
+      "support": "partial",
+      "source_url": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-custom-agents-overview.html#source:~:text=custom%20agents",
+      "comment": "Custom agent JSON configs (prompt, tools, resources, hooks) act as reusable, switchable capability profiles, but there is no dedicated 'skills' folder/format distinct from agent configs. Location: agent config files, typically under `.amazonq/cli-agents/` or `~/.aws/amazonq/cli-agents/`."
+    },
+    "hooks": {
+      "support": "full",
+      "source_url": "https://github.com/aws/amazon-q-developer-cli/blob/main/docs/agent-format.md#source:~:text=agentSpawn%2C%20userPromptSubmit%2C%20preToolUse%2C%20postToolUse%2C%20stop",
+      "comment": "Agent config `hooks` field supports agentSpawn, userPromptSubmit, preToolUse, postToolUse, and stop lifecycle hooks that run shell commands and inject output into context."
+    },
+    "mcp_servers": {
+      "support": "full",
+      "source_url": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-mcp-configuration.html#source:~:text=Global%20Configuration%20at%20~/.aws/amazonq/mcp.json",
+      "comment": "Supports both local (stdio) and remote (HTTP/OAuth) MCP servers via global `~/.aws/amazonq/mcp.json` and workspace `.amazonq/mcp.json`, merged with workspace taking precedence on conflicts."
+    },
+    "custom_commands": {
+      "support": "partial",
+      "source_url": "https://github.com/aws/amazon-q-developer-cli/blob/main/docs/agent-format.md#source:~:text=hooks",
+      "comment": "No first-class user-defined slash command system; closest equivalent is agent-config hooks/prompts and `/agent create` to switch agent profiles with different tool/resource sets."
+    },
+    "goal_command": {
+      "support": "none",
+      "source_url": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-chat.html#source:~:text=chat",
+      "comment": "No built-in `/goal`-style persistent-objective auto-continue loop; sessions proceed turn-by-turn or via `--no-interactive` single-shot prompts."
+    },
+    "subagents": {
+      "support": "none",
+      "source_url": "https://github.com/aws/amazon-q-developer-cli/blob/main/docs/agent-format.md#source:~:text=Agent%20Architecture",
+      "comment": "Custom agents are independent, user-selected configuration profiles (one active per session); there is no delegation/spawning of subagents from within a running session."
+    },
+    "transcripts": {
+      "support": "partial",
+      "source_url": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-chat.html#source:~:text=q%20chat%20--resume",
+      "comment": "Conversation history is auto-saved per working directory to support `--resume`, but there is no documented user-facing export/transcript file format akin to a JSONL log."
+    },
+    "model_selection": {
+      "support": "full",
+      "source_url": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-chat-models.html#source:~:text=/model",
+      "comment": "Switch models in-session with `/model`, at launch with `q chat --model <name>`, or set a default via `q settings chat.defaultModel <name>`. Choices are limited to AWS-hosted Claude models (3.5/3.7 Sonnet, Sonnet 4, Sonnet 4.5, and an 'auto' option) served over Bedrock."
+    },
+    "approval_mode": {
+      "support": "full",
+      "source_url": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-chat-tools.html#source:~:text=fs_read%20is%20the%20only%20tool%20that%20is%20trusted%20by%20default",
+      "comment": "Per-tool trust model: only `fs_read` is trusted by default; `/tools trust`, `/tools trust-all`, and CLI flags `--trust-all-tools`/`--trust-tools=<list>` control auto-approval, with `/tools reset` to restore defaults."
+    },
+    "sandbox_mode": {
+      "support": "none",
+      "source_url": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-chat-security.html#source:~:text=security%20considerations",
+      "comment": "No filesystem/network sandbox; security guidance instead recommends running in a dedicated environment and using tool-trust controls (`/tools untrust`) to gate risky actions like `use_aws` or `execute_bash`."
+    },
+    "resume": {
+      "support": "full",
+      "source_url": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-chat.html#source:~:text=q%20chat%20--resume",
+      "comment": "`q chat --resume` automatically picks up the most recent conversation saved for the current working directory."
+    },
+    "continue": {
+      "support": "full",
+      "source_url": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-chat.html#source:~:text=q%20chat%20--resume",
+      "comment": "`--resume` continues the latest session for the current directory without needing an explicit session ID, satisfying both resume and continue behavior."
+    },
+    "non_interactive": {
+      "support": "full",
+      "source_url": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-reference.html#source:~:text=q%20chat%20--no-interactive%20--trust-all-tools%20%22Show%20me%20the%20current%20directory%22",
+      "comment": "`q chat --no-interactive \"<prompt>\"` runs a single headless turn and exits; commonly paired with `--trust-all-tools` to avoid approval prompts in scripts/CI. Some early versions had bugs around prompts still appearing or trusted-tools lists being ignored (GitHub issues #1951, #1995), later patched (e.g. v2.0.1 fix notes)."
+    },
+    "output_format": {
+      "support": "none",
+      "source_url": "https://github.com/aws/amazon-q-developer-cli/issues/2713#source:~:text=Feature%3A%20JSON%20and%20Streaming-JSON%20output%20formats%20for%20%60q%20chat%60",
+      "comment": "`q chat` only emits plain text/Markdown even in `--no-interactive` mode; structured `-f json|json-pretty` output exists only for other subcommands like `q settings`/`q whoami`, not for chat. A JSON/stream-JSON chat output format is an open, unimplemented feature request (issue #2713)."
+    },
+    "statusline": {
+      "support": "none",
+      "source_url": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-settings.html#source:~:text=settings",
+      "comment": "No user-configurable status line; `q settings` covers behavior toggles (telemetry, default model) rather than a persistent status bar."
+    },
+    "telemetry": {
+      "support": "full",
+      "source_url": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/opt-out-IDE.html#source:~:text=Opt%20out%20of%20data%20sharing",
+      "comment": "Telemetry/data-sharing is user-configurable via `q settings telemetry.enabled true|false`; Free tier content may be used for service improvement, Pro tier content is excluded by policy."
+    },
+    "keyboard_shortcuts": {
+      "support": "partial",
+      "source_url": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-chat.html#source:~:text=Ctrl%20%2B%20D",
+      "comment": "A handful of fixed shortcuts exist (Ctrl+D to exit, Ctrl+S for slash-command fuzzy search) but there is no user-customizable keybinding configuration."
+    },
+    "theme_customization": {
+      "support": "none",
+      "source_url": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-settings.html#source:~:text=settings",
+      "comment": "No documented theme/color customization for the terminal chat UI."
+    },
+    "auto_save": {
+      "support": "full",
+      "source_url": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-chat.html#source:~:text=automatically%20saved%20by%20working%20directory",
+      "comment": "Conversations are automatically saved per working directory without user action, enabling `--resume`."
+    },
+    "debugging_output": {
+      "support": "partial",
+      "source_url": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-reference.html#source:~:text=--verbose",
+      "comment": "CLI reference documents a `--verbose` style flag and `/tools` introspection, but there is no dedicated structured debug/trace log format."
+    },
+    "context_window": {
+      "support": "partial",
+      "source_url": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-context.html#source:~:text=/usage",
+      "comment": "`/usage` shows estimated context window consumption and `/compact` summarizes history to free space, but the window size itself is fixed by the selected model, not user-configurable."
+    },
+    "code_formatting": {
+      "support": "none",
+      "source_url": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-chat-tools.html#source:~:text=execute_bash",
+      "comment": "No built-in formatter/linter integration; any formatting happens only if the agent invokes external tools (e.g. via `execute_bash`) itself."
+    },
+    "git_integration": {
+      "support": "partial",
+      "source_url": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-chat-tools.html#source:~:text=execute_bash",
+      "comment": "No dedicated git tool/UI; git operations happen through the general `execute_bash` tool like any other shell command, subject to the same trust/approval rules."
+    },
+    "performance_mode": {
+      "support": "none",
+      "source_url": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-settings.html#source:~:text=settings",
+      "comment": "No documented caching/performance-tuning controls exposed to users beyond model choice and context compaction."
+    },
+    "ui_customization": {
+      "support": "none",
+      "source_url": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-chat.html#source:~:text=chat",
+      "comment": "Single-pane terminal chat UI; no panel/layout customization since this is a CLI, not an IDE surface."
+    },
+    "hosted_agent": {
+      "support": "none",
+      "source_url": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line.html#source:~:text=command%20line",
+      "comment": "Runs as a local terminal process talking to the AWS-hosted backend for inference; there is no separate hosted/cloud agent execution platform for this CLI surface."
+    },
+    "custom_model_provider": {
+      "support": "none",
+      "source_url": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-chat-models.html#source:~:text=Claude%20Sonnet%204",
+      "comment": "Model choice is restricted to a fixed list of Claude models served via AWS's own Amazon Bedrock-backed Q Developer service; no support for arbitrary/OpenAI-compatible model endpoints or bring-your-own-API-key providers."
+    },
+    "notes": "Amazon Q Developer CLI (`q chat`) is AWS's Rust-based, Bedrock-backed agentic terminal coding agent, launched as an enhanced agentic experience in March 2025. It requires AWS Builder ID or IAM Identity Center sign-in (no API-key-only or account-free path), supports MCP, lifecycle hooks, and per-project `.amazonq/rules/` markdown rules, but lacks AGENTS.md support, subagent delegation, sandboxing, and structured JSON chat output. As of mid-2026 the open-source repo is no longer actively maintained: AWS is sunsetting Amazon Q Developer in favor of the backward-compatible, closed-source Kiro CLI (same `q`/`q chat` entry points, configs auto-migrated to `~/.kiro/`), with new signups blocked from May 2026 and full IDE/subscription end-of-support by April 2027.",
+    "pricing": {
+      "value": "Free tier + Pro $19/user/mo",
+      "source_url": "https://aws.amazon.com/q/developer/pricing/#source:~:text=Pro%20tier",
+      "comment": "Perpetual Free Tier (Builder ID or IAM) with monthly agentic-request limits; Pro tier is $19/user/month with higher limits and enterprise admin controls. New Free Tier/Pro signups are blocked starting May 15, 2026 as part of the Kiro CLI migration."
+    },
+    "some_free_usage": {
+      "support": "full",
+      "source_url": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/q-tiers.html#source:~:text=Free%20Tier",
+      "comment": "Free Tier includes a documented monthly allotment of agentic chat requests and code suggestions at no cost via AWS Builder ID."
+    },
+    "no_account_required": {
+      "support": "none",
+      "source_url": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/getting-started-builderid.html#source:~:text=AWS%20Builder%20ID",
+      "comment": "Requires signing in with an AWS Builder ID or IAM Identity Center/IAM credentials before any chat session; there is no local-model or account-free path."
+    },
+    "can_use_other_subscriptions": {
+      "support": "none",
+      "source_url": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-chat-models.html#source:~:text=Claude%20Sonnet",
+      "comment": "Models are served exclusively through AWS's own Amazon Bedrock-backed Q Developer service (Builder ID/IAM Identity Center auth); no option to route usage through a personal Anthropic/OpenAI API key or other vendor subscription."
     }
   },
   {
@@ -595,13 +788,13 @@
       "value": "Feb '25",
       "source_url": "https://www.anthropic.com/news/claude-3-7-sonnet#claude-37-sonnet-and-claude-code:~:text=Claude%20Code",
       "comment": "Claude Code was introduced as a limited research preview.",
-      "sort_date": "2025-12-19"
+      "sort_date": "2025-02-01"
     },
     "latest_major_update": {
       "value": "Jun '26",
       "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.195#source:~:text=Added%20%60CLAUDE_CODE_DISABLE_MOUSE_CLICKS%60",
       "comment": "Latest release v2.1.195 (June 26, 2026) adds CLAUDE_CODE_DISABLE_MOUSE_CLICKS, exact hook matching for hyphenated identifiers, voice dictation fixes, plugin-consent and plugin enable/disable fixes, background-agent reliability fixes, Linux voice-mode diagnostics, and remote-session startup checklist improvements.",
-      "sort_date": "2026-06-26"
+      "sort_date": "2026-06-01"
     },
     "rules": {
       "support": "full",
@@ -776,13 +969,13 @@
       "value": "Jul '24",
       "source_url": "https://github.com/cline/cline/releases?page=27#source:~:text=v1.0.4%2C%2028%20Jul%2001%3A14",
       "comment": "Initial release was v1.0.4 on July 28, 2024 (originally named 'Claude Dev' by Saoud Rizwan). 8M+ installs by May 2026.",
-      "sort_date": "2024-07-28"
+      "sort_date": "2024-07-01"
     },
     "latest_major_update": {
       "value": "Jun '26",
       "source_url": "https://github.com/cline/cline/releases/tag/v4.0.1#source:~:text=Roll%20the%20stable%20VS%20Code%20extension%20back%20to%20the%20pre-SDK-migration%20codebase",
       "comment": "Latest release v4.0.1 (June 28, 2026) rolls the stable VS Code extension back to the pre-SDK-migration 3.89.2 codebase to resolve regressions reported in 4.0.0 while SDK migration continues on main.",
-      "sort_date": "2026-06-28"
+      "sort_date": "2026-06-01"
     },
     "rules": {
       "support": "full",
@@ -976,13 +1169,13 @@
       "value": "Apr '25",
       "source_url": "https://github.com/openai/codex#installing-and-running-codex-cli:~:text=Codex%20CLI",
       "comment": "Open-source CLI public release.",
-      "sort_date": "2025-04-30"
+      "sort_date": "2025-04-01"
     },
     "latest_major_update": {
       "value": "Jun '26",
       "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.142.3#source:~:text=Maintenance-only%20patch%20release%20with%20no%20user-facing%20changes%20since%200.142.2",
       "comment": "Latest stable Codex CLI release rust-v0.142.3 (June 26, 2026) is a maintenance-only patch with no user-facing changes since 0.142.2.",
-      "sort_date": "2026-06-28"
+      "sort_date": "2026-06-01"
     },
     "rules": {
       "support": "full",
@@ -1321,6 +1514,200 @@
     }
   },
   {
+    "name": "Crush",
+    "links": {
+      "docs": "https://github.com/charmbracelet/crush#readme",
+      "github": "https://github.com/charmbracelet/crush",
+      "website": "https://charm.land/crush",
+      "slug": "crush"
+    },
+    "form_factor": {
+      "values": [
+        "CLI",
+        "TUI"
+      ],
+      "source_url": "https://github.com/charmbracelet/crush#source:~:text=A%20glamorous%20AI%20coding%20agent%20for%20your%20favorite%20terminal",
+      "comment": "Terminal-first AI coding agent with a full-screen Bubble Tea TUI plus a `crush run` CLI/headless mode. Per-form-factor links: CLI/TUI install via package managers or `go install`.",
+      "links": {
+        "CLI": "https://github.com/charmbracelet/crush#installation",
+        "TUI": "https://github.com/charmbracelet/crush#installation"
+      }
+    },
+    "released_in": {
+      "value": "Jul '25",
+      "source_url": "https://github.com/charmbracelet/crush/releases/tag/v0.1.0#source:~:text=v0.1.0",
+      "comment": "First tagged release v0.1.0, committed 2025-07-29. Repo created 2025-05-21.",
+      "sort_date": "2025-07-29"
+    },
+    "latest_major_update": {
+      "value": "Jun '26",
+      "source_url": "https://github.com/charmbracelet/crush/releases/tag/v0.79.1#source:~:text=Bang%20Bang",
+      "comment": "Latest tagged release v0.79.1 (2026-06-20), \"Bang Bang\" UX release. Crush ships frequent point releases (180+ tags); main branch under active daily development.",
+      "sort_date": "2026-06-20"
+    },
+    "rules": {
+      "support": "full",
+      "source_url": "https://github.com/charmbracelet/crush/blob/main/AGENTS.md#source:~:text=AGENTS.md",
+      "comment": "Auto-loaded global/project context files: `~/.config/crush/CRUSH.md` (Crush-specific) and `~/.config/AGENTS.md`/project `AGENTS.md` (generic, cross-tool standard). Path override via `global_context_paths`; supports folder recursion for `.md` files."
+    },
+    "skills": {
+      "support": "full",
+      "source_url": "https://github.com/charmbracelet/crush/blob/main/internal/skills#source:~:text=Agent%20Skills",
+      "comment": "Supports the open 'Agent Skills' standard (SKILL.md packages). Discoverable from `$CRUSH_SKILLS_DIR`, `~/.config/agents/skills/`, and project `.agents/skills/`; invocable via the command palette with `user:`/`project:` prefixes; toggle via `disabled_skills`/`skills_paths` config."
+    },
+    "hooks": {
+      "support": "partial",
+      "source_url": "https://github.com/charmbracelet/crush#source:~:text=Crush%20has%20preliminary%20support%20for%20hooks",
+      "comment": "\"Crush has preliminary support for hooks\" per the README, deferring to a separate hook guide. Early/limited lifecycle hook support compared to mature hook systems."
+    },
+    "mcp_servers": {
+      "support": "full",
+      "source_url": "https://github.com/charmbracelet/crush#source:~:text=Extensible%3A%20add%20capabilities%20via%20MCPs%20(http%2C%20stdio%2C%20and%20sse)",
+      "comment": "Full MCP support across stdio, http, and sse transports, configured under `mcp` in crush.json. Supports shell-style value expansion ($VAR, ${VAR:-default}, $(command)), required-credential syntax (${VAR:?message}), per-server `disabled_tools`, and per-server timeouts."
+    },
+    "custom_commands": {
+      "support": "full",
+      "source_url": "https://github.com/charmbracelet/crush/issues/2219#issuecomment-3897889482#source:~:text=Crush%20already%20supports%20user%20commands",
+      "comment": "User-defined Markdown command files placed in `~/.config/crush/commands/` (or project-level), invoked from the command palette (press `/` or Ctrl+P, then Tab to list user commands). Public docs (COMMANDS.md) not yet merged to main as of mid-2026 but the feature is shipped."
+    },
+    "goal_command": {
+      "support": "none",
+      "source_url": "https://github.com/charmbracelet/crush#source:~:text=crush%20run",
+      "comment": "No built-in `/goal` persistent-objective auto-continue loop. Sessions and `crush run --continue` support resuming work, but no dedicated goal-tracking/completion-condition command."
+    },
+    "subagents": {
+      "support": "full",
+      "source_url": "https://deepwiki.com/charmbracelet/crush/6.7-agent-delegation-and-nested-tools#source:~:text=Agent%20Tool%20and%20Recursion",
+      "comment": "Built-in \"Coder\" and \"Task\" agent types; the Coder agent can spawn restricted-permission Task subagents for delegated subtasks via an agent/task tool, with costs rolling up to the parent session. Agents configurable (model, allowed tools/MCP, context paths) via the `agents` config section."
+    },
+    "transcripts": {
+      "support": "full",
+      "source_url": "https://github.com/charmbracelet/crush/blob/main/internal/cmd/session.go#source:~:text=Manage%20Crush%20sessions",
+      "comment": "Local SQLite-backed session storage with a dedicated `crush session` CLI subcommand: `list`, `show <id>`, `last`, `delete`, `rename`, each supporting `--json` for machine-readable transcripts including full message parts (text, reasoning, tool calls/results)."
+    },
+    "model_selection": {
+      "support": "full",
+      "source_url": "https://github.com/charmbracelet/crush/blob/main/internal/cmd/run.go#source:~:text=runCmd.Flags().StringP(%22model%22%2C%20%22m%22%2C%20%22%22%2C%20%22Model%20to%20use",
+      "comment": "`-m/--model` and `--small-model` flags on `crush run`; in-TUI model switching mid-session while preserving context. Model database from Catwalk (community-supported open registry), auto-updated unless `disable_provider_auto_update`/`CRUSH_DISABLE_PROVIDER_AUTO_UPDATE=1` is set."
+    },
+    "approval_mode": {
+      "support": "full",
+      "source_url": "https://github.com/charmbracelet/crush/blob/main/internal/cmd/root.go#source:~:text=rootCmd.Flags().BoolP(%22yolo%22%2C%20%22y%22%2C%20false%2C%20%22Automatically%20accept%20all%20permissions%20(dangerous%20mode)%22)",
+      "comment": "Default mode prompts for permission before tool calls. `-y/--yolo` flag (or `permissions.yolo`/`SkipPermissionRequests`) auto-accepts all permissions. Granular `permissions.allowed_tools` allowlist for specific tools without prompting."
+    },
+    "sandbox_mode": {
+      "support": "none",
+      "source_url": "https://github.com/charmbracelet/crush#source:~:text=Crush%20will%20ask%20you%20for%20permission",
+      "comment": "No filesystem/network sandbox. Safety relies on permission prompts and the `--yolo` opt-out, plus `.crushignore` to exclude files from agent access."
+    },
+    "resume": {
+      "support": "full",
+      "source_url": "https://github.com/charmbracelet/crush/blob/main/internal/cmd/root.go#source:~:text=rootCmd.Flags().StringP(%22session%22%2C%20%22s%22%2C%20%22%22%2C%20%22Continue%20a%20previous%20session%20by%20ID%22)",
+      "comment": "`-s/--session <id>` resumes a specific prior session by full UUID, hash, or hash prefix; works both for the interactive TUI (`crush --session`) and `crush run --session`."
+    },
+    "continue": {
+      "support": "full",
+      "source_url": "https://github.com/charmbracelet/crush/blob/main/internal/cmd/root.go#source:~:text=rootCmd.Flags().BoolP(%22continue%22%2C%20%22C%22%2C%20false%2C%20%22Continue%20the%20most%20recent%20session%22)",
+      "comment": "`-C/--continue` flag continues the most recently updated top-level session without needing an ID, for both `crush` (TUI) and `crush run` (non-interactive)."
+    },
+    "non_interactive": {
+      "support": "full",
+      "source_url": "https://github.com/charmbracelet/crush/blob/main/internal/cmd/run.go#source:~:text=Run%20a%20single%20prompt%20in%20non-interactive%20mode%20and%20exit",
+      "comment": "`crush run \"<prompt>\"` (alias `r`) runs a single prompt non-interactively and exits; supports stdin piping, output redirection, `-q/--quiet` (hide spinner), `-v/--verbose` (show logs), and session continuation flags."
+    },
+    "output_format": {
+      "support": "partial",
+      "source_url": "https://github.com/charmbracelet/crush/blob/main/internal/cmd/session.go#source:~:text=output%20in%20JSON%20format",
+      "comment": "`crush session list/show/last/delete/rename --json` give structured machine-readable output. `crush run` itself streams plain assistant text to stdout (no `--output-format json` for the run command)."
+    },
+    "statusline": {
+      "support": "none",
+      "source_url": "https://github.com/charmbracelet/crush#source:~:text=Crush%20is%20a%20glamorous%20AI%20coding%20agent",
+      "comment": "No user-configurable status line concept documented; the TUI shows fixed chrome (model, session, busy state) rather than a customizable status line."
+    },
+    "telemetry": {
+      "support": "full",
+      "source_url": "https://github.com/charmbracelet/crush#source:~:text=Crush%20records%20pseudonymous%20usage%20metrics",
+      "comment": "Pseudonymous usage metrics tied to a device-specific hash; prompts/responses are never collected. Opt-out via `CRUSH_DISABLE_METRICS=1`, `disable_metrics: true` in config, or the `DO_NOT_TRACK=1` convention."
+    },
+    "keyboard_shortcuts": {
+      "support": "partial",
+      "source_url": "https://github.com/charmbracelet/crush/issues/1382#source:~:text=Ctrl%2BA%20selects%20everything",
+      "comment": "Built-in keybindings (e.g. `/` or Ctrl+P for command palette, Ctrl+O to open editor) exist and are documented in-app, but no general user-remappable keybindings config has been confirmed; some keybinding behavior is still being refined (open issues)."
+    },
+    "theme_customization": {
+      "support": "none",
+      "source_url": "https://github.com/charmbracelet/crush/blob/main/internal/config/config.go#source:~:text=Here%20we%20can%20add%20themes%20later",
+      "comment": "Colors are auto-derived per model provider and dark/light terminal background detection (via charmtone/lipgloss); a TODO comment in config.go notes themes may be added later, but no user-selectable theme config exists yet. `transparent` TUI background toggle is supported."
+    },
+    "auto_save": {
+      "support": "full",
+      "source_url": "https://github.com/charmbracelet/crush/blob/main/internal/cmd/root.go#source:~:text=createDotCrushDir",
+      "comment": "Sessions/messages persist automatically to a local SQLite database under the data directory; no manual save action is required."
+    },
+    "debugging_output": {
+      "support": "full",
+      "source_url": "https://github.com/charmbracelet/crush/blob/main/internal/cmd/root.go#source:~:text=rootCmd.PersistentFlags().BoolP(%22debug%22%2C%20%22d%22%2C%20false%2C%20%22Debug%22)",
+      "comment": "Global `-d/--debug` flag and `debug`/`debug_lsp` config options; `crush run -v/--verbose` shows logs; `crush logs [--tail N] [--follow]` views/tails the log file at `./.crush/logs/crush.log`."
+    },
+    "context_window": {
+      "support": "none",
+      "source_url": "https://github.com/charmbracelet/crush#source:~:text=switch%20LLMs%20mid-session%20while%20preserving%20context",
+      "comment": "No user-configurable context window/token-limit override documented; context window is determined by the selected model/provider via the Catwalk model database."
+    },
+    "code_formatting": {
+      "support": "none",
+      "source_url": "https://github.com/charmbracelet/crush#source:~:text=Crush%20uses%20LSPs%20for%20additional%20context",
+      "comment": "No built-in formatter/linter integration documented beyond LSP-provided diagnostics; relies on LSP servers (gopls, typescript-language-server, etc.) for code intelligence rather than auto-formatting."
+    },
+    "git_integration": {
+      "support": "partial",
+      "source_url": "https://github.com/charmbracelet/crush#source:~:text=Crush%20uses%20LSPs%20for%20additional%20context%2C%20just%20like%20you%20do",
+      "comment": "Respects `.gitignore` by default (plus `.crushignore` for extra exclusions); commit/PR message attribution customizable via `attribution.trailer_style` (assisted-by/co-authored-by/none) and `generated_with`. No dedicated diff-view UI or branch-management commands beyond what the agent does via shell tools."
+    },
+    "performance_mode": {
+      "support": "none",
+      "source_url": "https://github.com/charmbracelet/crush#source:~:text=Crush%20is%20a%20glamorous%20AI%20coding%20agent",
+      "comment": "No documented caching/performance-tuning controls beyond standard provider model selection (large/small model split for cost/speed tradeoffs)."
+    },
+    "ui_customization": {
+      "support": "partial",
+      "source_url": "https://github.com/charmbracelet/crush/blob/main/internal/config/config.go#source:~:text=CompactMode",
+      "comment": "TUI options include `compact_mode`, `diff_mode`, completion behavior, and `transparent` background toggle, but no panel/layout rearrangement or sidebar customization."
+    },
+    "hosted_agent": {
+      "support": "none",
+      "source_url": "https://github.com/charmbracelet/crush#source:~:text=A%20glamorous%20AI%20coding%20agent%20for%20your%20favorite%20terminal",
+      "comment": "Runs locally as a terminal binary (optionally with a local client/server mode via `crush serve` for shared workspaces); no Charm-hosted cloud agent platform."
+    },
+    "custom_model_provider": {
+      "support": "full",
+      "source_url": "https://github.com/charmbracelet/crush#source:~:text=Anthropic%2C%20OpenAI%2C%20Groq%2C%20OpenRouter%2C%20Vercel%20AI%20Gateway%2C%20Google%20Gemini",
+      "comment": "Connects to Anthropic, OpenAI, Groq, OpenRouter, Vercel AI Gateway, Google Gemini, Synthetic, Z.ai, MiniMax, Hugging Face, Cerebras, io.net, Alibaba, Avian, Google Cloud Vertex AI, Amazon Bedrock, Azure OpenAI, and local models (Ollama, LM Studio, MLX, LiteLLM) via Catwalk's open model registry plus fully custom OpenAI-/Anthropic-compatible provider configs."
+    },
+    "notes": "Crush is Charm's open-source (FSL-1.1-MIT), terminal-first AI coding agent, first released July 2025 and under very active daily development (180+ tagged releases by mid-2026, 25k+ GitHub stars). It pairs a polished Bubble Tea TUI with a scriptable `crush run` headless mode, broad MCP/LSP/provider support via the community Catwalk model registry, and an emerging Agent Skills + custom-commands + Task-subagent ecosystem. Notable gaps versus more mature agents: no sandboxing, no user-selectable themes yet (TODO in source), and only preliminary lifecycle hooks.",
+    "pricing": {
+      "value": "Free (FSL-1.1-MIT), BYO API key",
+      "source_url": "https://github.com/charmbracelet/crush#source:~:text=FSL-1.1-MIT",
+      "comment": "Free and source-available under the Functional Source License (converts to MIT after 2 years per version). Users pay only for their own LLM provider usage; some providers offer Crush-specific coding plans (GLM Coding Plan, Kimi Code, MiniMax Coding Plan)."
+    },
+    "some_free_usage": {
+      "support": "full",
+      "source_url": "https://github.com/charmbracelet/crush#source:~:text=local%20models%20(Ollama%2C%20LMStudio%2C%20OMLX%2C%20LiteLLM)",
+      "comment": "Local model backends (Ollama, LM Studio, MLX, LiteLLM) and some free-tier provider plans allow free agent usage without paying for hosted inference."
+    },
+    "no_account_required": {
+      "support": "full",
+      "source_url": "https://github.com/charmbracelet/crush#source:~:text=Ollama%2C%20LMStudio%2C%20OMLX%2C%20LiteLLM",
+      "comment": "Can run entirely against local Ollama/LM Studio/MLX models without any Crush account or vendor sign-in; the CLI itself requires no account to install or run."
+    },
+    "can_use_other_subscriptions": {
+      "support": "full",
+      "source_url": "https://github.com/charmbracelet/crush#source:~:text=Crush%20supports%20a%20wide%20range%20of%20LLMs",
+      "comment": "Routes through the user's own API keys/accounts for any supported provider (Anthropic, OpenAI, etc.) or coding-plan subscriptions (GLM Coding Plan, Kimi Code, MiniMax Coding Plan, Synthetic) rather than a Crush-owned subscription."
+    }
+  },
+  {
     "name": "Cursor",
     "links": {
       "docs": "https://docs.cursor.com/",
@@ -1366,8 +1753,8 @@
     },
     "hooks": {
       "support": "full",
-      "source_url": "https://cursor.com/changelog#customize-cursor:~:text=You%20can%20now%20add%20and%20manage%20plugins%2C%20skills%2C%20MCPs%2C%20subagents%2C%20rules%2C%20commands%2C%20and%20hooks",
-      "comment": "Customize Cursor documents hook management at user, team, and workspace levels alongside plugins, skills, MCPs, subagents, rules, and commands."
+      "source_url": "https://cursor.com/docs/hooks#hooks:~:text=Hooks%20let%20you%20observe",
+      "comment": "Dedicated hooks surface: sessionStart/sessionEnd, preToolUse/postToolUse/postToolUseFailure, subagentStart/subagentStop, beforeShellExecution/afterShellExecution, beforeMCPExecution/afterMCPExecution, beforeReadFile/afterFileEdit, beforeSubmitPrompt, preCompact, stop, afterAgentResponse/afterAgentThought, Tab hooks, and workspaceOpen. Configured via .cursor/hooks.json at project, user, team, and enterprise levels; cloud agents run project/team/enterprise command-based hooks. Third-party Claude Code hooks are also supported."
     },
     "mcp_servers": {
       "support": "full",
@@ -2074,6 +2461,198 @@
     }
   },
   {
+    "name": "GitHub Copilot CLI",
+    "links": {
+      "docs": "https://docs.github.com/en/copilot/concepts/agents/about-copilot-cli",
+      "github": "https://github.com/github/copilot-cli",
+      "website": "https://github.com/features/copilot/cli",
+      "slug": "github-copilot-cli"
+    },
+    "form_factor": {
+      "values": [
+        "CLI"
+      ],
+      "source_url": "https://docs.github.com/en/copilot/how-tos/copilot-cli/set-up-copilot-cli/install-copilot-cli#source:~:text=npm%20install%20-g%20%40github/copilot",
+      "comment": "Standalone terminal CLI, distinct from the GitHub Copilot cloud coding agent and IDE agent mode (see github-copilot-coding-agent entry). Installed via npm, Homebrew, WinGet, or install script; run as `copilot`. Per-form-factor links: CLI: https://docs.github.com/en/copilot/how-tos/copilot-cli/set-up-copilot-cli/install-copilot-cli.",
+      "links": {
+        "CLI": "https://docs.github.com/en/copilot/how-tos/copilot-cli/set-up-copilot-cli/install-copilot-cli"
+      }
+    },
+    "released_in": {
+      "value": "Sep '25",
+      "source_url": "https://github.blog/changelog/2025-09-25-github-copilot-cli-is-now-in-public-preview/#source:~:text=public%20preview",
+      "comment": "Public preview announced September 25, 2025, authenticated with existing GitHub account, usable with existing Copilot Pro/Pro+/Business/Enterprise plans.",
+      "sort_date": "2025-09-01"
+    },
+    "latest_major_update": {
+      "value": "Feb '26",
+      "source_url": "https://github.blog/changelog/2026-02-25-github-copilot-cli-is-now-generally-available/#source:~:text=is%20now%20generally%20available",
+      "comment": "Reached general availability for all Copilot subscribers on Feb 25, 2026, adding autopilot mode, /diff and /review commands, cross-session repo memory, and auto-compaction. Later 2026 updates added cloud/local sandboxes (--cloud, /sandbox enable), a unified /settings command, rubber duck critic agent, voice input, and prompt scheduling.",
+      "sort_date": "2026-02-01"
+    },
+    "rules": {
+      "support": "full",
+      "source_url": "https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/add-custom-instructions#source:~:text=the%20repository%27s%20root%20directory%2C%20in%20the%20current%20working%20directory%2C%20or%20in%20any%20of%20the%20directories%20specified%20by%20a%20comma-separated%20list%20of%20paths%20in%20the%20COPILOT_CUSTOM_INSTRUCTIONS_DIRS%20environment%20variable",
+      "comment": "Reads AGENTS.md (repo root, cwd, or COPILOT_CUSTOM_INSTRUCTIONS_DIRS paths) and .github/instructions/**/*.instructions.md, plus CLAUDE.md/GEMINI.md at repo root, and a personal $HOME/.copilot/copilot-instructions.md. Disable with --no-custom-instructions."
+    },
+    "skills": {
+      "support": "full",
+      "source_url": "https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/add-skills#source:~:text=Agent%20skills%20are%20folders%20of%20instructions%2C%20scripts%2C%20and%20resources",
+      "comment": "Open Agent Skills standard: SKILL.md plus optional supplementary files/scripts, loaded when relevant to a task."
+    },
+    "hooks": {
+      "support": "full",
+      "source_url": "https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/use-hooks#source:~:text=Hooks%20are%20external%20commands%20that%20execute%20at%20specific%20lifecycle%20points",
+      "comment": "sessionStart, sessionEnd, preToolUse (can deny/modify tool calls), postToolUse hooks, run synchronously and can block execution. Configured as JSON files at .github/hooks/*.json."
+    },
+    "mcp_servers": {
+      "support": "full",
+      "source_url": "https://github.com/github/copilot-cli#source:~:text=MCP%20Support",
+      "comment": "Ships with the GitHub MCP server enabled by default plus support for arbitrary custom MCP servers (stdio/http/sse). Flags: --additional-mcp-config, --disable-mcp-server, --disable-builtin-mcps, --add-github-mcp-tool(set), --enable-all-github-mcp-tools. /mcp slash command lists configured servers."
+    },
+    "custom_commands": {
+      "support": "partial",
+      "source_url": "https://docs.github.com/en/copilot/how-tos/copilot-cli/use-copilot-cli/overview#source:~:text=slash%20commands",
+      "comment": "Built-in slash commands (/resume, /cwd, /add-dir, /mcp, /diff, /review, /settings, /theme, /sandbox, /rewind) plus custom agents act as a structured-prompt mechanism, but no user-defined arbitrary slash command syntax is documented."
+    },
+    "goal_command": {
+      "support": "partial",
+      "source_url": "https://docs.github.com/en/copilot/concepts/agents/copilot-cli/autopilot#source:~:text=Autopilot%20mode%20allows%20Copilot%20CLI%20to%20work%20through%20a%20task%20without%20waiting%20for%20your%20input%20after%20each%20step",
+      "comment": "No `/goal` command, but --autopilot / --mode autopilot (Shift+Tab to cycle modes) auto-continues until the agent decides the task is complete, hits a blocking problem, Ctrl+C, or --max-autopilot-continues is reached. Scoped to a single task/session, not a persistent cross-session objective."
+    },
+    "subagents": {
+      "support": "full",
+      "source_url": "https://docs.github.com/en/copilot/concepts/agents/copilot-cli/about-custom-agents#source:~:text=Work%20performed%20by%20a%20custom%20agent%20is%20carried%20out%20using%20a%20subagent%2C%20which%20is%20a%20temporary%20agent%20spun%20up%20to%20complete%20the%20task",
+      "comment": "Custom agents defined as Markdown agent-profile files (prompts, tools, MCP servers), invoked via --agent=NAME or in-session. Each spins up a subagent with its own isolated context window. Built-in specialized agents include Explore, Task, and the Rubber Duck critic agent."
+    },
+    "transcripts": {
+      "support": "full",
+      "source_url": "https://docs.github.com/en/copilot/reference/copilot-cli-reference/cli-command-reference#source:~:text=--share%3DPATH",
+      "comment": "Local session logs under ~/.copilot/logs/ (configurable via --log-dir). Sessions can be exported with --share=PATH (Markdown file) or --share-gist (secret GitHub gist) after a programmatic run."
+    },
+    "model_selection": {
+      "support": "full",
+      "source_url": "https://docs.github.com/en/copilot/reference/copilot-cli-reference/cli-command-reference#source:~:text=--model%3DMODEL",
+      "comment": "--model=MODEL flag or COPILOT_MODEL env var, plus in-session /model picker. Choices include Anthropic Claude, OpenAI GPT, and Google Gemini family models; `auto` lets Copilot pick automatically. BYOK external models also appear in the picker."
+    },
+    "approval_mode": {
+      "support": "full",
+      "source_url": "https://docs.github.com/en/copilot/how-tos/copilot-cli/use-copilot-cli/allowing-tools#source:~:text=--allow-all-tools",
+      "comment": "Per-action approval prompts by default (Yes / Yes-and-approve-for-session / No-and-redirect). Granular flags: --allow-tool, --deny-tool, --allow-all-tools, --allow-all-paths, --allow-all-urls, --allow-url/--deny-url, --add-dir, plus --allow-all/--yolo to bypass everything. Enterprises can disable bypass via permissions.disableBypassPermissionsMode."
+    },
+    "sandbox_mode": {
+      "support": "full",
+      "source_url": "https://docs.github.com/en/copilot/concepts/about-cloud-and-local-sandboxes#source:~:text=Local%20sandboxing%20lets%20Copilot%20run%20in%20a%20sandboxed%20environment%20directly%20on%20your%20machine",
+      "comment": "Public preview (as of mid-2026): local sandbox via /sandbox enable restricts filesystem/network/system access (built on Microsoft MXC, included in standard seat); cloud sandbox via `copilot --cloud` runs a fully isolated, ephemeral GitHub-hosted Linux environment (Azure Container Apps Sandboxes) resumable from any device."
+    },
+    "resume": {
+      "support": "full",
+      "source_url": "https://docs.github.com/en/copilot/reference/copilot-cli-reference/cli-command-reference#source:~:text=Resume%20a%20previous%20interactive%20session%20by%20choosing%20from%20a%20list",
+      "comment": "-r/--resume[=VALUE] picks from a session list or jumps to a session ID/prefix/name; /resume in-session. --connect[=SESSION-ID] attaches to a remote session; --remote enables resuming a remote task locally."
+    },
+    "continue": {
+      "support": "full",
+      "source_url": "https://docs.github.com/en/copilot/reference/copilot-cli-reference/cli-command-reference#source:~:text=Resume%20the%20most%20recent%20session%20in%20the%20current%20working%20directory",
+      "comment": "--continue resumes the most recent session in the current working directory, falling back to the globally most recent session, without needing a session ID."
+    },
+    "non_interactive": {
+      "support": "full",
+      "source_url": "https://docs.github.com/en/copilot/reference/copilot-cli-reference/cli-command-reference#source:~:text=Execute%20a%20prompt%20programmatically%20%28exits%20after%20completion%29",
+      "comment": "-p/--prompt=PROMPT executes a prompt programmatically and exits; --allow-all-tools is required for unattended runs. -i/--interactive=PROMPT starts interactive with an initial prompt. Documented for use in scripts and GitHub Actions workflows."
+    },
+    "output_format": {
+      "support": "full",
+      "source_url": "https://docs.github.com/en/copilot/reference/copilot-cli-reference/cli-command-reference#source:~:text=FORMAT%20can%20be%20%60text%60%20%28default%29%20or%20%60json%60",
+      "comment": "--output-format=text|json (JSON outputs JSONL, one object per line). -s/--silent restricts output to just the agent response (no usage stats), useful when combined with -p for scripting."
+    },
+    "statusline": {
+      "support": "partial",
+      "source_url": "https://docs.github.com/en/copilot/reference/copilot-cli-reference/cli-config-dir-reference#source:~:text=statusLine.command",
+      "comment": "Experimental statusLine.command setting in ~/.copilot/settings.json runs a user script (receives session JSON over stdin) to render a custom status line; community tools (Oh My Posh integrations, copilot-statusline, copilot-hud) build on it. Marked experimental/subject to change as of mid-2026."
+    },
+    "telemetry": {
+      "support": "partial",
+      "source_url": "https://docs.github.com/en/copilot/responsible-use-of-github-copilot-features/responsible-use-of-github-copilot-in-the-cli#source:~:text=telemetry",
+      "comment": "Enterprise/org-level audit logging and data-retention controls inherited from GitHub Copilot governance; --secret-env-vars redacts env vars from logs/MCP servers. No granular end-user telemetry opt-out UI documented specifically for the CLI."
+    },
+    "keyboard_shortcuts": {
+      "support": "partial",
+      "source_url": "https://github.blog/changelog/2026-06-02-copilot-cli-improved-ui-rubber-duck-prompt-scheduling-and-voice-input/#source:~:text=Shift%2BTab",
+      "comment": "Fixed shortcuts documented (Shift+Tab to cycle agent modes, Ctrl+C to stop autopilot, Ctrl+X then V or hold space for voice input); no user-remappable keybinding config found."
+    },
+    "theme_customization": {
+      "support": "partial",
+      "source_url": "https://docs.github.com/en/copilot/reference/copilot-cli-reference/cli-config-dir-reference#source:~:text=/theme",
+      "comment": "/theme command and settings.json support auto/dark/light color modes only; no custom color palette/theme file support as of mid-2026 (feature requests open in github/copilot-cli issues)."
+    },
+    "auto_save": {
+      "support": "full",
+      "source_url": "https://docs.github.com/en/copilot/how-tos/copilot-cli/use-copilot-cli/chronicle#source:~:text=session",
+      "comment": "Sessions are automatically persisted locally (and to the cloud when --remote/sandbox features are used) without an explicit save step, enabling --resume/--continue."
+    },
+    "debugging_output": {
+      "support": "full",
+      "source_url": "https://docs.github.com/en/copilot/reference/copilot-cli-reference/cli-command-reference#source:~:text=Set%20the%20log%20level%20%28choices%3A%20%60none%60%2C%20%60error%60%2C%20%60warning%60%2C%20%60info%60%2C%20%60debug%60%2C%20%60all%60%2C%20%60default%60%29",
+      "comment": "--log-level=none|error|warning|info|debug|all|default and --log-dir=DIRECTORY (default ~/.copilot/logs/) for verbose/diagnostic logging."
+    },
+    "context_window": {
+      "support": "partial",
+      "source_url": "https://github.blog/changelog/2026-02-25-github-copilot-cli-is-now-generally-available/#source:~:text=auto-compaction",
+      "comment": "Automatic context auto-compaction and cross-session repository memory are documented; no explicit user-configurable context-length/token-limit setting found."
+    },
+    "code_formatting": {
+      "support": "unknown",
+      "source_url": "https://docs.github.com/en/copilot/concepts/agents/about-copilot-cli#source:~:text=write%20and%20debug%20code",
+      "comment": "No documented built-in formatter/linter integration toggle beyond what shell tool execution and repo tooling (e.g. pre-commit) provide."
+    },
+    "git_integration": {
+      "support": "full",
+      "source_url": "https://github.blog/changelog/2026-02-25-github-copilot-cli-is-now-generally-available/#source:~:text=/diff%20and%20/review",
+      "comment": "/diff and /review commands for reviewing changes, GitHub.com integration for issues/PRs via natural language, an experimental git-free /rewind to restore only Copilot-changed files, and shell passthrough (prefix `!`) for arbitrary git commands."
+    },
+    "performance_mode": {
+      "support": "partial",
+      "source_url": "https://docs.github.com/en/copilot/reference/copilot-cli-reference/cli-command-reference#source:~:text=--effort%3DLEVEL%2C%20--reasoning-effort%3DLEVEL",
+      "comment": "--effort/--reasoning-effort=low|medium|high|xhigh|max tunes reasoning depth vs. speed for supporting models; --enable-reasoning-summaries for OpenAI models. No general cache/perf toggle beyond this."
+    },
+    "ui_customization": {
+      "support": "partial",
+      "source_url": "https://github.blog/changelog/2026-06-02-copilot-cli-improved-ui-rubber-duck-prompt-scheduling-and-voice-input/#source:~:text=experimental%20terminal%20interface",
+      "comment": "--banner/--no-banner, --mouse/--no-mouse, --screen-reader, --plain-diff, --stream=MODE flags, plus an experimental redesigned terminal UI (/experimental) with tabs for Session/Issues/Pull requests/Gists. /settings unifies most config since June 2026."
+    },
+    "hosted_agent": {
+      "support": "none",
+      "source_url": "https://docs.github.com/en/copilot/concepts/agents/about-copilot-cli#source:~:text=command-line%20interface%20%28CLI%29%20for%20GitHub%20Copilot",
+      "comment": "Copilot CLI itself is a local terminal client. Cloud sandbox (`copilot --cloud`) runs the same CLI session in a GitHub-hosted ephemeral environment but is still user-initiated/interactive, not the autonomous GitHub Actions cloud agent (see separate github-copilot-coding-agent entry, hosted_agent=full)."
+    },
+    "custom_model_provider": {
+      "support": "full",
+      "source_url": "https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models#source:~:text=Anthropic%2C%20including%20locally%20running%20models%20such%20as%20Ollama",
+      "comment": "BYOK env vars (COPILOT_PROVIDER_TYPE, COPILOT_PROVIDER_BASE_URL, COPILOT_PROVIDER_API_KEY, COPILOT_MODEL) connect Anthropic, OpenAI-compatible endpoints, Azure OpenAI, AWS Bedrock, Google AI Studio, xAI/Microsoft Foundry, and local Ollama models."
+    },
+    "notes": "GitHub Copilot CLI is the standalone, local terminal coding agent (`copilot`, npm package @github/copilot, repo github/copilot-cli) \u2014 distinct from the asynchronous GitHub Actions-based Copilot cloud coding agent. Public preview Sep 2025, GA Feb 2026, runs on an existing Copilot subscription with no separate CLI fee. Strong open-standard support (AGENTS.md, Agent Skills, MCP, hooks, custom agents/subagents) and BYOK for external model providers, plus newer cloud/local sandboxing, autopilot mode, and an experimental redesigned terminal UI.",
+    "pricing": {
+      "value": "Included with Copilot Pro $10/mo, Pro+ $39/mo, Business $19/user/mo, Enterprise $39/user/mo; Free tier has limited usage",
+      "source_url": "https://docs.github.com/en/copilot/concepts/billing/copilot-requests#source:~:text=Copilot%20CLI",
+      "comment": "Consumes GitHub AI Credits/premium requests against existing Copilot plan; usage-based billing for all plans started June 1, 2026, replacing the old premium-request counter. No CLI-specific surcharge."
+    },
+    "some_free_usage": {
+      "support": "partial",
+      "source_url": "https://pecollective.com/tools/github-copilot-pricing/#source:~:text=Free",
+      "comment": "GitHub Copilot Free plan includes limited chat/agent requests (e.g. 50 chat requests/mo) usable via the CLI, but no unlimited free local-model path is documented for Copilot CLI itself."
+    },
+    "no_account_required": {
+      "support": "none",
+      "source_url": "https://github.blog/changelog/2025-09-25-github-copilot-cli-is-now-in-public-preview/#source:~:text=authenticated%20with%20your%20existing%20GitHub%20account",
+      "comment": "Requires sign-in with a GitHub account holding an active Copilot subscription/seat; `/login` flow inside the CLI."
+    },
+    "can_use_other_subscriptions": {
+      "support": "full",
+      "source_url": "https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models#source:~:text=Using%20your%20own%20LLM%20models%20in%20GitHub%20Copilot%20CLI",
+      "comment": "BYOK support for Anthropic, OpenAI, Azure OpenAI, AWS Bedrock, Google AI Studio, xAI/Microsoft Foundry, any OpenAI-compatible endpoint, and local models via Ollama, configured with COPILOT_PROVIDER_TYPE / COPILOT_PROVIDER_BASE_URL / COPILOT_PROVIDER_API_KEY / COPILOT_MODEL env vars."
+    }
+  },
+  {
     "name": "GitHub Copilot",
     "links": {
       "docs": "https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent",
@@ -2256,6 +2835,200 @@
       "support": "unknown",
       "source_url": "https://docs.example.com/#documentation:~:text=ui-customization",
       "comment": "Research needed. Check for UI layout, sidebar, or panel customization."
+    }
+  },
+  {
+    "name": "Goose",
+    "links": {
+      "docs": "https://goose-docs.ai/docs/",
+      "github": "https://github.com/block/goose",
+      "website": "https://goose-docs.ai/",
+      "slug": "goose"
+    },
+    "form_factor": {
+      "values": [
+        "CLI",
+        "Desktop App"
+      ],
+      "source_url": "https://goose-docs.ai/docs/getting-started/installation#source:~:text=goose%20Desktop%20for%20macOS",
+      "comment": "Ships as a single Rust binary CLI plus a separate Desktop app (macOS/Linux/Windows) and an API. Per-form-factor links: CLI: https://goose-docs.ai/docs/getting-started/installation; Desktop App: https://goose-docs.ai/docs/getting-started/installation.",
+      "links": {
+        "CLI": "https://goose-docs.ai/docs/getting-started/installation",
+        "Desktop App": "https://goose-docs.ai/docs/getting-started/installation"
+      }
+    },
+    "released_in": {
+      "value": "Jan '25",
+      "source_url": "https://block.xyz/inside/block-open-source-introduces-codename-goose#source:~:text=codename%20goose",
+      "comment": "Block's Open Source Program Office publicly announced \"codename goose\" on January 28, 2025, after ~9 months of internal development.",
+      "sort_date": "2025-01-01"
+    },
+    "latest_major_update": {
+      "value": "May '26",
+      "source_url": "https://goose-docs.ai/blog/2026/05/14/goose-hooks/#source:~:text=goose%20now%20supports%20lifecycle%20hooks",
+      "comment": "Lifecycle hooks (SessionStart, PreToolUse/PostToolUse, BeforeShellExecution, etc. via plugin hooks.json) shipped May 14, 2026. Project moved under the Linux Foundation's Agentic AI Foundation (AAIF) in Dec 2025; repo now also tracked at aaif-goose/goose with block/goose as a mirror/redirect.",
+      "sort_date": "2026-05-01"
+    },
+    "rules": {
+      "support": "full",
+      "source_url": "https://goose-docs.ai/docs/guides/context-engineering/#source:~:text=Goose%20looks%20for%20AGENTS.md%20then%20.goosehints%20files%20by%20default",
+      "comment": "Goose looks for AGENTS.md then .goosehints by default, at both global (~/.config/goose/.goosehints) and per-directory/nested project scope; filename configurable via CONTEXT_FILE_NAMES env var. Location: ~/.config/goose/.goosehints (global), ./.goosehints or ./AGENTS.md (project, nested lookup)."
+    },
+    "skills": {
+      "support": "full",
+      "source_url": "https://goose-docs.ai/docs/guides/recipes/#source:~:text=You%20can%20make%20a%20recipe%20a%20slash%20command",
+      "comment": "Recipes are reusable, parameterized YAML workflow files (instructions, extensions, params, sub-recipes) that can be bound to custom slash commands, shared, and scheduled via cron. `/skills` slash command also lists available skills in-session. Location: recipe YAML files, e.g. ~/.config/goose/recipes/ or project-local paths passed via --recipe."
+    },
+    "hooks": {
+      "support": "full",
+      "source_url": "https://goose-docs.ai/blog/2026/05/14/goose-hooks/#source:~:text=goose%20now%20supports%20lifecycle%20hooks",
+      "comment": "Lifecycle hooks run shell scripts on events: SessionStart, SessionEnd, Stop, UserPromptSubmit, PreToolUse, PostToolUse, PostToolUseFailure, BeforeReadFile, AfterFileEdit, BeforeShellExecution, AfterShellExecution. Configured via hooks.json in plugin dirs. Location: ~/.agents/plugins/<name>/hooks/hooks.json (user scope) or <project>/.agents/plugins/<name>/hooks/hooks.json (project scope)."
+    },
+    "mcp_servers": {
+      "support": "full",
+      "source_url": "https://github.com/block/goose#source:~:text=Connect%20to%2070%2B%20extensions%20via%20the%20Model%20Context%20Protocol%20open%20standard",
+      "comment": "Goose's extension system is built natively on MCP; connects to 70+ documented extensions (GitHub, Docker, Postgres, Slack, Google Drive, browser automation, etc.) and any MCP-compatible server. Configurable via `goose configure`, `/extension`, `--with-extension`, `--with-streamable-http-extension`, or config.yaml."
+    },
+    "custom_commands": {
+      "support": "full",
+      "source_url": "https://goose-docs.ai/docs/guides/recipes/#source:~:text=You%20can%20make%20a%20recipe%20a%20slash%20command",
+      "comment": "Recipes can be turned into custom slash commands (e.g. /weekly-status) usable in CLI or Desktop sessions. Location: recipe files referenced from goose config."
+    },
+    "goal_command": {
+      "support": "none",
+      "source_url": "https://goose-docs.ai/docs/guides/goose-cli-commands/#source:~:text=/plan%20%3Ctext%3E%20-%20Enter%20plan%20mode",
+      "comment": "No built-in `/goal` command for a persisted auto-continuing objective. Has `/plan` and `/endplan` for a plan-then-act mode, and recipes/schedule for repeatable automation, but not an auto-continuing goal loop."
+    },
+    "subagents": {
+      "support": "full",
+      "source_url": "https://goose-docs.ai/docs/guides/subagents/#source:~:text=Subagents",
+      "comment": "First-class subagent delegation: temporary AI instances spun up via natural language in a prompt for one-off tasks, running in isolation from the main session. Distinct from sub-recipes (pre-written reusable YAML workflows). Up to 10 concurrent parallel workers total across subagents/sub-recipes. Location: invoked ad hoc; sub-recipes configured via --sub-recipe / recipe YAML."
+    },
+    "transcripts": {
+      "support": "full",
+      "source_url": "https://goose-docs.ai/docs/guides/managing-goose-sessions/#source:~:text=Unix-like%3A%20~/.local/share/goose/sessions/sessions.db",
+      "comment": "Sessions stored in SQLite (v1.10.0+) at ~/.local/share/goose/sessions/sessions.db (Unix) or %APPDATA%\\Block\\goose\\data\\sessions\\sessions.db (Windows); pre-v1.10.0 used per-session .jsonl files under ~/.local/share/goose/sessions/. `session export` can output markdown/json/yaml; `session list`/`session diagnostics` also available."
+    },
+    "model_selection": {
+      "support": "full",
+      "source_url": "https://goose-docs.ai/docs/guides/environment-variables/#source:~:text=GOOSE_MODEL%20overrides%20the%20configured%20model",
+      "comment": "Full model/provider selection via `goose configure`, `--provider`/`--model` flags on `goose run`, or GOOSE_PROVIDER/GOOSE_MODEL env vars (e.g. export GOOSE_MODEL=claude-sonnet-4-5-20250929)."
+    },
+    "approval_mode": {
+      "support": "full",
+      "source_url": "https://deepwiki.com/block/goose/6.2-permission-modes-and-tool-approval#source:~:text=Goose%20supports%20four%20distinct%20execution%20modes%E2%80%94Chat%2C%20Auto%2C%20Approve%2C%20and%20SmartApprove",
+      "comment": "Four permission modes: auto (full automation), approve (ask every tool unless allow/deny-listed), chat (no tool access), smart_approve (LLM-based PermissionJudge auto-approves safe calls, asks for risky ones). Set via `goose config set-mode <mode>`, the GOOSE_MODE env var, or in-session `/mode <name>`. No dedicated `--mode` CLI flag on `goose run`/`goose session`."
+    },
+    "sandbox_mode": {
+      "support": "full",
+      "source_url": "https://goose-docs.ai/docs/tutorials/goose-in-docker/#source:~:text=Run%20extensions%20inside%20your%20Docker%20containers",
+      "comment": "`--container <id>` flag (on `goose session` and `goose run`) runs extensions inside a specified Docker container; goose CLI must be installed inside the container for built-in extensions to work."
+    },
+    "resume": {
+      "support": "full",
+      "source_url": "https://goose-docs.ai/docs/guides/goose-cli-commands/#source:~:text=Resume%20from%20a%20previous%20run",
+      "comment": "`-r`/`--resume` flag on both `goose session` (resume previous chat) and `goose run` (resume from a previous run); also `--fork` to duplicate a session's history into a new one."
+    },
+    "continue": {
+      "support": "partial",
+      "source_url": "https://goose-docs.ai/docs/guides/goose-cli-commands/#source:~:text=-r%2C%20--resume",
+      "comment": "`--resume` without a session id/name resumes the most recent session by default, giving an effective \"continue latest\" path, but there is no separate dedicated `--continue` flag distinct from `--resume`."
+    },
+    "non_interactive": {
+      "support": "full",
+      "source_url": "https://goose-docs.ai/docs/guides/goose-cli-commands/#source:~:text=Suppress%20non-response%20output%2C%20printing%20only%20the%20model%20response%20to%20stdout",
+      "comment": "`goose run -t \"...\"` (or -i file) executes headlessly and exits; `--quiet`/`-q` suppresses non-response output for scripting; `--no-session` skips session file creation entirely. Designed for automation/CI pipelines."
+    },
+    "output_format": {
+      "support": "full",
+      "source_url": "https://goose-docs.ai/docs/guides/goose-cli-commands/#source:~:text=--output-format%20%3CFORMAT%3E%20-%20Output%20format%20(text%2C%20json%2C%20stream-json)",
+      "comment": "`--output-format <text|json|stream-json>` on `goose run` for machine-readable output; json gives final result, stream-json emits events as they occur. `session list`/`export` also support text/json/markdown/yaml."
+    },
+    "statusline": {
+      "support": "none",
+      "source_url": "https://goose-docs.ai/docs/guides/goose-cli-commands/#source:~:text=Configuration",
+      "comment": "No documented user-configurable status line. CLI has theme and prompt-editor configuration but no status bar concept."
+    },
+    "telemetry": {
+      "support": "full",
+      "source_url": "https://goose-docs.ai/docs/guides/usage-data/#source:~:text=GOOSE_TELEMETRY_ENABLED",
+      "comment": "Anonymous usage data is opt-in/opt-out configurable interactively via `goose configure` or via GOOSE_TELEMETRY_ENABLED=false/true env var. No central control plane or phone-home by default per project description."
+    },
+    "keyboard_shortcuts": {
+      "support": "partial",
+      "source_url": "https://goose-docs.ai/docs/guides/goose-cli-commands/#source:~:text=Ctrl%2BJ%20-%20Add%20newline%20(customizable%20via%20GOOSE_CLI_NEWLINE_KEY)",
+      "comment": "Some built-in shortcuts (Ctrl+C, Cmd+Up/Down history, Ctrl+R search) with limited customization, e.g. GOOSE_CLI_NEWLINE_KEY for the newline key. Not a fully remappable keybinding system."
+    },
+    "theme_customization": {
+      "support": "full",
+      "source_url": "https://goose-docs.ai/docs/guides/goose-cli-commands/#source:~:text=GOOSE_CLI_THEME",
+      "comment": "Theme set via `/t` slash command (light, dark, ansi) or GOOSE_CLI_THEME/GOOSE_CLI_LIGHT_THEME/GOOSE_CLI_DARK_THEME env vars for syntax highlighting."
+    },
+    "auto_save": {
+      "support": "full",
+      "source_url": "https://goose-docs.ai/docs/guides/managing-goose-sessions/#source:~:text=sessions.db",
+      "comment": "Sessions are automatically persisted to the local SQLite session store as the conversation progresses; `--no-session` can disable this for one-off runs."
+    },
+    "debugging_output": {
+      "support": "full",
+      "source_url": "https://goose-docs.ai/docs/guides/goose-cli-commands/#source:~:text=Output%20complete%20tool%20responses%2C%20detailed%20parameter%20values%2C%20and%20full%20file%20paths",
+      "comment": "`--debug` flag on `goose run`/`goose session` outputs complete tool responses, detailed parameter values, and full file paths. `goose session diagnostics` exports a debug bundle."
+    },
+    "context_window": {
+      "support": "full",
+      "source_url": "https://goose-docs.ai/docs/guides/sessions/smart-context-management/#source:~:text=Auto-compaction%20is%20triggered%20by%20default%20when%20you%20reach%2080%25%20of%20the%20token%20limit",
+      "comment": "Smart Context Management auto-compacts/summarizes older conversation turns at 80% of the model's token limit by default; GOOSE_CONTEXT_LIMIT overrides the displayed limit and GOOSE_AUTO_COMPACT_THRESHOLD controls the compaction trigger ratio."
+    },
+    "code_formatting": {
+      "support": "partial",
+      "source_url": "https://goose-docs.ai/blog/2026/05/14/goose-hooks/#source:~:text=PostToolUse",
+      "comment": "No built-in formatter; auto-run linters/formatters/tests can be wired via PostToolUse/AfterFileEdit lifecycle hooks or MCP developer/shell extensions rather than a native formatting feature."
+    },
+    "git_integration": {
+      "support": "full",
+      "source_url": "https://block.github.io/goose/docs/tutorials/github-mcp/#source:~:text=goose%20takes%20care%20of%20cloning%2C%20branching%2C%20editing%20files%2C%20and%20committing%20the%20changes",
+      "comment": "Built-in Developer extension can run git directly via shell; GitHub MCP extension handles cloning, branching, editing, and committing changes end-to-end."
+    },
+    "performance_mode": {
+      "support": "partial",
+      "source_url": "https://goose-docs.ai/docs/guides/sessions/smart-context-management/#source:~:text=GOOSE_AUTO_COMPACT_THRESHOLD",
+      "comment": "Smart context compaction and `--max-tool-repetitions`/`--max-turns` limits act as performance/runaway-loop controls; no separate dedicated performance-tuning mode."
+    },
+    "ui_customization": {
+      "support": "partial",
+      "source_url": "https://goose-docs.ai/docs/guides/goose-cli-commands/#source:~:text=GOOSE_CLI_THEME",
+      "comment": "CLI offers theme switching and a configurable external prompt editor (GOOSE_PROMPT_EDITOR); Desktop app has its own UI but no documented panel/layout rearrangement."
+    },
+    "hosted_agent": {
+      "support": "none",
+      "source_url": "https://github.com/block/goose#source:~:text=Goose%20is%20a%20general-purpose%20AI%20agent%20that%20runs%20locally%20on%20a%20developer%27s%20machine",
+      "comment": "Runs locally as CLI/Desktop/API with no central control plane; no Goose-hosted cloud agent platform. `goose acp` exposes it as an Agent Client Protocol server for editor integration, not a hosted service."
+    },
+    "custom_model_provider": {
+      "support": "full",
+      "source_url": "https://github.com/block/goose#source:~:text=15%2B%20LLM%20providers",
+      "comment": "Supports 15+ LLM providers (Anthropic, OpenAI, Google, Azure, Bedrock, Databricks, Groq, OpenRouter, local Ollama, and more) including OpenAI-compatible custom endpoints, configured via `goose configure` or GOOSE_PROVIDER/GOOSE_MODEL plus provider API key env vars."
+    },
+    "notes": "Goose is an open-source (Apache-2.0), Rust-based agentic CLI and Desktop app originally built by Block and now stewarded by the Linux Foundation's Agentic AI Foundation (AAIF). It was the first open-source agent to support MCP and ships 70+ first-party MCP extensions, recipes/sub-recipes for reusable workflows, real subagent delegation, four-tier permission modes (auto/approve/chat/smart_approve via GOOSE_MODE), Docker-based execution sandboxing, and a recently added lifecycle-hooks plugin system. No paid tier; cost is purely BYOK LLM usage, with a fully free/no-account path via local Ollama models.",
+    "pricing": {
+      "value": "Free (Apache-2.0), BYOK LLM costs",
+      "source_url": "https://github.com/block/goose#source:~:text=License-Apache-2.0",
+      "comment": "Goose itself is free and open source under Apache-2.0 with no subscription or usage cap; users pay only for whichever LLM provider API they connect (or use free local Ollama models)."
+    },
+    "some_free_usage": {
+      "support": "full",
+      "source_url": "https://goose-docs.ai/docs/getting-started/installation#source:~:text=Google%20Gemini%20offers%20a%20free%20tier",
+      "comment": "Google Gemini's free tier and free local Ollama models give a documented no-cost usage path alongside paid providers."
+    },
+    "no_account_required": {
+      "support": "full",
+      "source_url": "https://github.com/block/goose#source:~:text=15%2B%20LLM%20providers%20(including%20local%20Ollama)",
+      "comment": "Can run entirely against local Ollama models with no Goose account and no cloud provider account required."
+    },
+    "can_use_other_subscriptions": {
+      "support": "full",
+      "source_url": "https://github.com/block/goose#source:~:text=15%2B%20LLM%20providers",
+      "comment": "Routes agent usage through the user's own provider account/API key (Anthropic, OpenAI, Azure, Bedrock, Databricks, Groq, OpenRouter, etc.) or local inference (Ollama) rather than a Goose-owned subscription."
     }
   },
   {
@@ -2821,13 +3594,13 @@
       "value": "Feb '26",
       "source_url": "https://github.com/Kilo-Org/kilocode#source:~:text=Created%3A%202025-03-10T15%3A34%3A26Z",
       "comment": "Repository created 2025-03-10. First stable public release effectively Feb 2026 (v1.0.25). v7 rewrite announced May 2026.",
-      "sort_date": "2026-02-23"
+      "sort_date": "2026-02-01"
     },
     "latest_major_update": {
       "value": "Jun '26",
       "source_url": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.3.54#source:~:text=No%20notable%20changes",
       "comment": "Latest release checked: v7.3.54 (June 23, 2026). Release notes say no notable changes.",
-      "sort_date": "2026-06-27"
+      "sort_date": "2026-06-01"
     },
     "rules": {
       "support": "full",
@@ -3017,13 +3790,13 @@
       "value": "Oct '25",
       "source_url": "https://github.com/MoonshotAI/kimi-cli/releases/tag/1.48.0#source:~:text=1.48.0",
       "comment": "First public release v0.34 on 2025-10-21. Reached v1.0 on 2026-01-27. Current latest release: v1.48.0 (2026-06-22).",
-      "sort_date": "2025-10-21"
+      "sort_date": "2025-10-01"
     },
     "latest_major_update": {
       "value": "Jun '26",
       "source_url": "https://github.com/MoonshotAI/kimi-cli/releases/tag/1.48.0#source:~:text=round-trip%20empty%20reasoning%20content",
       "comment": "Latest release v1.48.0 (June 22, 2026) fixes empty reasoning-content round trips, escalates repeated-tool-call reminders, force-stops dead-end streaks, and bumps kosong to 0.54.0.",
-      "sort_date": "2026-06-22"
+      "sort_date": "2026-06-01"
     },
     "rules": {
       "support": "full",
@@ -3384,13 +4157,13 @@
       "value": "Jun '26",
       "source_url": "https://github.com/XiaomiMiMo/MiMo-Code/releases/tag/v0.1.0#v010:~:text=v0.1.0",
       "comment": "GitHub shows v0.1.0 as the first public release on 2026-06-10.",
-      "sort_date": "2026-06-10"
+      "sort_date": "2026-06-01"
     },
     "latest_major_update": {
       "value": "Jun '26",
       "source_url": "https://github.com/XiaomiMiMo/MiMo-Code/releases/tag/v0.1.3#v013:~:text=MiMoCode%20v0.1.3",
       "comment": "Latest public release captured for this row is v0.1.3 on 2026-06-24.",
-      "sort_date": "2026-06-28"
+      "sort_date": "2026-06-01"
     },
     "rules": {
       "support": "full",
@@ -3582,13 +4355,13 @@
       "value": "2025",
       "source_url": "https://github.com/sst/opencode#anomalycoopencode:~:text=opencode",
       "comment": "Exact public launch month not confirmed in public docs captured for this dataset.",
-      "sort_date": "2025-05-14"
+      "sort_date": "2025-01-01"
     },
     "latest_major_update": {
       "value": "Jun '26",
       "source_url": "https://github.com/anomalyco/opencode/releases/tag/v1.17.11#source:~:text=Add%20session%20snapshots%20and%20revert%20controls",
       "comment": "Latest release v1.17.11 (June 25, 2026) adds session snapshots and revert controls, always prints MCP OAuth URLs for manual sign-in, improves desktop tab cycling/dragging and empty-state/session layouts, and fixes prompt drafts, provider dialogs, prompt rollbacks, async attachments, todo docks, and stale tab/session behavior.",
-      "sort_date": "2026-06-28"
+      "sort_date": "2026-06-01"
     },
     "rules": {
       "support": "full",
@@ -3753,6 +4526,206 @@
     }
   },
   {
+    "name": "OpenHands",
+    "links": {
+      "docs": "https://docs.openhands.dev/",
+      "github": "https://github.com/OpenHands/OpenHands",
+      "website": "https://www.openhands.dev/",
+      "slug": "openhands"
+    },
+    "form_factor": {
+      "values": [
+        "CLI",
+        "Web",
+        "Docker",
+        "Hosted Agent",
+        "IDE"
+      ],
+      "source_url": "https://docs.openhands.dev/openhands/usage/cli/quick-start#overview:~:text=The%20OpenHands%20CLI%20provides%20multiple%20ways%20to%20interact%20with%20the%20OpenHands%20AI%20agent",
+      "comment": "Local terminal CLI (`openhands`), browser terminal UI (`openhands web`), full Docker-based GUI server (`openhands serve`), OpenHands Cloud hosted agent (`openhands cloud`/`openhands login`), and IDE integration via Agent Client Protocol (`openhands acp`) for Zed/VS Code/JetBrains. Per-form-factor links: CLI: https://docs.openhands.dev/openhands/usage/cli/installation; Web: https://docs.openhands.dev/openhands/usage/cli/web-interface; Docker: https://docs.openhands.dev/openhands/usage/sandboxes/docker; Hosted Agent: https://app.all-hands.dev/; IDE: https://docs.openhands.dev/openhands/usage/cli/ide/overview.",
+      "links": {
+        "CLI": "https://docs.openhands.dev/openhands/usage/cli/installation",
+        "Web": "https://docs.openhands.dev/openhands/usage/cli/web-interface",
+        "Docker": "https://docs.openhands.dev/openhands/usage/sandboxes/docker",
+        "Hosted Agent": "https://app.all-hands.dev/",
+        "IDE": "https://docs.openhands.dev/openhands/usage/cli/ide/overview"
+      }
+    },
+    "released_in": {
+      "value": "Mar '24",
+      "source_url": "https://github.com/OpenDevin/OpenDevin/releases#source:~:text=0.6.1",
+      "comment": "Launched March 12, 2024 as 'OpenDevin' (replicating Devin). First tagged GitHub release v0.6.1 on 2024-06-04 (earlier 0.1-0.5 history predates the public releases page). Renamed to OpenHands in mid-2024, and the GitHub org All-Hands-AI was renamed to OpenHands on 2025-10-20.",
+      "sort_date": "2024-03-01"
+    },
+    "latest_major_update": {
+      "value": "Jun '26",
+      "source_url": "https://github.com/OpenHands/OpenHands/releases#source:~:text=1.8.0",
+      "comment": "v1.8.0 (June 10, 2026). The 1.0.0 release (Dec 16, 2025) was a major rewrite onto the new 'software-agent-sdk', changing config format from TOML to JSON, switching MCP config format, and rebranding microagents to 'Skills' (AgentSkills standard).",
+      "sort_date": "2026-06-01"
+    },
+    "rules": {
+      "support": "full",
+      "source_url": "https://github.com/OpenHands/docs/blob/main/overview/skills.mdx#source:~:text=For%20repository-wide%2C%20always-on%20instructions%2C%20prefer%20a%20root-level%20%60AGENTS.md%60%20file",
+      "comment": "Root-level AGENTS.md (also supports CLAUDE.md/GEMINI.md variants) is injected into the system prompt at conversation start as always-on context. Location: repo root `AGENTS.md`."
+    },
+    "skills": {
+      "support": "full",
+      "source_url": "https://github.com/OpenHands/docs/blob/main/overview/skills.mdx#source:~:text=OpenHands%20supports%20an%20extended%20version%20of%20the%20AgentSkills%20standard",
+      "comment": "Supports the AgentSkills standard (SKILL.md with progressive disclosure) plus a legacy simple format. Community registry at github.com/OpenHands/extensions. Older 'microagents' (.openhands/microagents/) are deprecated in favor of .agents/skills/. Location: `.agents/skills/<name>/SKILL.md` (recommended) or `.agents/skills/*.md` (legacy)."
+    },
+    "hooks": {
+      "support": "full",
+      "source_url": "https://github.com/OpenHands/docs/blob/main/openhands/usage/customization/hooks.mdx#source:~:text=Hooks%20let%20you%20run%20custom%20shell%20scripts%20at%20key%20moments%20during%20an%20OpenHands%20session",
+      "comment": "Full lifecycle hooks (PreToolUse, PostToolUse, UserPromptSubmit, Stop, SessionStart, SessionEnd) configured via `.openhands/hooks.json`, format explicitly compatible with Claude Code hooks. Works across Cloud, CLI, and local GUI. Location: `.openhands/hooks.json` + `.openhands/hooks/*.sh`."
+    },
+    "mcp_servers": {
+      "support": "full",
+      "source_url": "https://github.com/OpenHands/docs/blob/main/openhands/usage/cli/mcp-servers.mdx#source:~:text=Model%20Context%20Protocol%20(MCP)%20servers%20provide%20additional%20tools%20and%20context%20to%20OpenHands%20agents",
+      "comment": "Full MCP support with stdio, SSE, and HTTP transports, OAuth/header auth, managed via `openhands mcp add/list/get/remove/enable/disable` CLI subcommands or by editing `~/.openhands/mcp.json` directly. `/mcp` shows live status in-session."
+    },
+    "custom_commands": {
+      "support": "partial",
+      "source_url": "https://github.com/OpenHands/docs/blob/main/openhands/usage/cli/command-reference.mdx#source:~:text=Interactive%20Commands",
+      "comment": "Fixed set of built-in interactive `/` commands (/help, /new, /history, /confirm, /condense, /skills, /feedback, /exit). No documented mechanism for users to define their own custom slash commands (skills serve a similar reusable-prompt purpose instead)."
+    },
+    "goal_command": {
+      "support": "none",
+      "source_url": "https://github.com/OpenHands/docs/blob/main/openhands/usage/cli/command-reference.mdx#interactive-commands:~:text=/condense",
+      "comment": "No built-in `/goal` command for a persistent auto-continuing session objective; `/condense` manages context but does not implement a goal-loop."
+    },
+    "subagents": {
+      "support": "none",
+      "source_url": "https://github.com/OpenHands/docs/blob/main/openhands/usage/cli/command-reference.mdx#source:~:text=Interactive%20Commands",
+      "comment": "No documented first-class delegated/spawned subagent system for the CLI (contrast with Devin's 'Managed Devins'); OpenHands runs a single agent loop per conversation."
+    },
+    "transcripts": {
+      "support": "full",
+      "source_url": "https://github.com/OpenHands/docs/blob/main/openhands/usage/cli/installation.mdx#first-run:~:text=The%20conversation%20history%20will%20be%20saved%20in%20%60~/.openhands/conversations%60",
+      "comment": "Conversation history automatically saved locally. Location: `~/.openhands/conversations/`. `--resume` lists and reopens prior conversations."
+    },
+    "model_selection": {
+      "support": "full",
+      "source_url": "https://github.com/OpenHands/docs/blob/main/openhands/usage/cli/command-reference.mdx#changing-your-model:~:text=Via%20Configuration%20File",
+      "comment": "Set via Settings UI (Ctrl+P > Settings), persisted in `~/.openhands/agent_settings.json` (`llm.model` field), or temporarily overridden with `LLM_MODEL`/`LLM_API_KEY`/`LLM_BASE_URL` env vars plus the `--override-with-envs` flag."
+    },
+    "approval_mode": {
+      "support": "full",
+      "source_url": "https://github.com/OpenHands/docs/blob/main/openhands/usage/confirmation-mode.mdx#configuration:~:text=In%20CLI%20mode%2C%20confirmation%20is%20enabled%20by%20default",
+      "comment": "Confirmation enabled by default with LLM Risk Analyzer (auto-confirms low/medium risk, prompts on high risk). CLI flags `--always-approve` (auto-approve everything) and `--llm-approve` (force LLM-based analyzer) override behavior; `/confirm` adjusts in-session."
+    },
+    "sandbox_mode": {
+      "support": "full",
+      "source_url": "https://github.com/OpenHands/docs/blob/main/openhands/usage/sandboxes/overview.mdx#sandbox-providers:~:text=Docker%20sandbox%20(recommended)",
+      "comment": "Three sandbox providers: Docker (isolated container, default/recommended for `openhands serve`), Process (no isolation, runs directly as a local process \u2014 this is what the plain `openhands` CLI uses by default), and Remote (managed/hosted). Selected via legacy `RUNTIME` env var (docker/process/remote)."
+    },
+    "resume": {
+      "support": "full",
+      "source_url": "https://github.com/OpenHands/docs/blob/main/openhands/usage/cli/command-reference.mdx#global-options:~:text=--resume%20%5BID%5D",
+      "comment": "`--resume [ID]` resumes a specific conversation by ID, or lists recent conversations to pick from if no ID given."
+    },
+    "continue": {
+      "support": "full",
+      "source_url": "https://github.com/OpenHands/docs/blob/main/openhands/usage/cli/command-reference.mdx#global-options:~:text=--last",
+      "comment": "`--resume --last` resumes the most recent conversation without needing to specify an ID."
+    },
+    "non_interactive": {
+      "support": "full",
+      "source_url": "https://github.com/OpenHands/docs/blob/main/openhands/usage/cli/headless.mdx#overview:~:text=Headless%20mode%20runs%20OpenHands%20without%20the%20interactive%20terminal%20UI",
+      "comment": "`openhands --headless -t \"task\"` (or `-f file`) runs with no UI for CI/CD and scripting. Always runs in always-approve mode in headless (cannot use --llm-approve here)."
+    },
+    "output_format": {
+      "support": "full",
+      "source_url": "https://github.com/OpenHands/docs/blob/main/openhands/usage/cli/headless.mdx#json-output-mode:~:text=The%20--json%20flag%20enables%20structured%20JSONL%20(JSON%20Lines)%20output",
+      "comment": "`--json` flag (requires `--headless`) streams structured JSONL events (action/observation objects) for machine parsing in CI pipelines."
+    },
+    "statusline": {
+      "support": "none",
+      "source_url": "https://github.com/OpenHands/docs/blob/main/openhands/usage/cli/terminal.mdx#source:~:text=Live%20status%20monitoring",
+      "comment": "Has 'live status monitoring' of agent progress in the TUI but no user-configurable status line / status bar string feature documented."
+    },
+    "telemetry": {
+      "support": "partial",
+      "source_url": "https://github.com/OpenHands/docs/blob/main/openhands/usage/cli/command-reference.mdx#interactive-commands:~:text=/feedback",
+      "comment": "`/feedback` sends anonymous feedback about the CLI; no documented granular opt-in/opt-out telemetry settings page found beyond this and general OSS analytics conventions."
+    },
+    "keyboard_shortcuts": {
+      "support": "partial",
+      "source_url": "https://github.com/OpenHands/docs/blob/main/openhands/usage/cli/command-reference.mdx#command-palette:~:text=Keys",
+      "comment": "Fixed shortcuts (Ctrl+P command palette, Esc pause, Ctrl+Q/`/exit` quit, Ctrl+\\ alt palette) viewable via palette 'Keys' option; no documented user remapping/customization."
+    },
+    "theme_customization": {
+      "support": "partial",
+      "source_url": "https://github.com/OpenHands/docs/blob/main/openhands/usage/cli/command-reference.mdx#command-palette:~:text=Theme",
+      "comment": "Command palette has a 'Theme' option to toggle color theme; no evidence of fully custom user-authored themes beyond toggling presets."
+    },
+    "auto_save": {
+      "support": "full",
+      "source_url": "https://github.com/OpenHands/docs/blob/main/openhands/usage/cli/installation.mdx#first-run:~:text=The%20conversation%20history%20will%20be%20saved%20in%20%60~/.openhands/conversations%60",
+      "comment": "Conversation/session state and settings are auto-saved locally with no manual save step; file edits are written directly to disk by the agent as it works."
+    },
+    "debugging_output": {
+      "support": "full",
+      "source_url": "https://github.com/OpenHands/docs/blob/main/openhands/usage/cli/command-reference.mdx#subcommands:~:text=--debug",
+      "comment": "`openhands web --debug` enables debug mode; `--json`/headless mode exposes structured event logs for diagnostics; broader DEBUG-related env vars exist in the wider config surface."
+    },
+    "context_window": {
+      "support": "partial",
+      "source_url": "https://github.com/OpenHands/docs/blob/main/openhands/usage/cli/command-reference.mdx#interactive-commands:~:text=/condense",
+      "comment": "`/condense` manually condenses conversation history to manage context; model-dependent context length is not separately user-configurable as a token-limit setting in the CLI."
+    },
+    "code_formatting": {
+      "support": "none",
+      "source_url": "https://github.com/OpenHands/docs/blob/main/openhands/usage/customization/repository.mdx#setup-script:~:text=.openhands/setup.sh",
+      "comment": "No built-in formatter/linter integration; users wire their own lint/format checks via `.openhands/setup.sh` or Stop hooks (e.g. `.openhands/hooks/lint_check.sh`) rather than a native formatting feature."
+    },
+    "git_integration": {
+      "support": "full",
+      "source_url": "https://github.com/OpenHands/docs/blob/main/openhands/usage/customization/hooks.mdx#inject-git-context-userpromptsubmit:~:text=git%20status",
+      "comment": "Agent runs git commands directly in the sandbox/process (clone, commit, branch, PR creation via GitHub integration); hooks can inject git status into prompts. GitHub Action integration also available (`run-openhands/github-action`)."
+    },
+    "performance_mode": {
+      "support": "none",
+      "source_url": "https://github.com/OpenHands/docs/blob/main/openhands/usage/cli/command-reference.mdx#global-options:~:text=Global%20Options",
+      "comment": "No documented user-facing caching/performance-tuning toggle in the CLI flag/config reference."
+    },
+    "ui_customization": {
+      "support": "none",
+      "source_url": "https://github.com/OpenHands/docs/blob/main/openhands/usage/cli/terminal.mdx#source:~:text=Command%20Palette",
+      "comment": "Terminal UI is fixed layout; no panel/sidebar/layout customization documented beyond theme toggle."
+    },
+    "hosted_agent": {
+      "support": "full",
+      "source_url": "https://github.com/OpenHands/docs/blob/main/openhands/usage/cli/command-reference.mdx#cloud:~:text=Create%20a%20new%20conversation%20in%20OpenHands%20Cloud",
+      "comment": "OpenHands Cloud (app.all-hands.dev) is a fully managed hosted agent platform; `openhands login`/`openhands cloud -t \"task\"` create and run cloud-hosted conversations from the local CLI."
+    },
+    "custom_model_provider": {
+      "support": "full",
+      "source_url": "https://docs.openhands.dev/openhands/usage/cli/command-reference#environment-variables:~:text=LLM_BASE_URL",
+      "comment": "LLM_BASE_URL plus LiteLLM backend allow pointing at any OpenAI-compatible endpoint, including local model servers (Ollama, vLLM, SGLang) and proxies."
+    },
+    "notes": "OpenHands launched in March 2024 as 'OpenDevin' (an open clone of Cognition's Devin), renamed OpenHands mid-2024, and had its GitHub org renamed All-Hands-AI -> OpenHands on 2025-10-20. The 1.0.0 release (Dec 2025) was a ground-up rewrite onto a new 'software-agent-sdk', changing config from TOML to JSON and rebranding 'microagents' to the AgentSkills-standard 'Skills' system. It has a genuine local CLI (`openhands`, installable via `uv tool install openhands` or `pip install openhands`, MIT licensed) that runs as a plain local process by default \u2014 Docker is only required for the separate `openhands serve` full-GUI mode, not the terminal CLI/headless mode.",
+    "pricing": {
+      "value": "Free (MIT, self-hosted); OpenHands Cloud free tier + at-cost usage; Enterprise custom",
+      "source_url": "https://www.openhands.dev/pricing#source:~:text=Free%2C%20local%20OpenHands%20for%20getting%20started",
+      "comment": "Self-hosted/local CLI is free and open source (MIT license) other than your own LLM API costs. OpenHands Cloud Individual tier is free to sign up with a cap (10 max daily conversations) and offers at-cost LLM usage with no markup if you don't bring your own key. Enterprise (SaaS or self-hosted VPC) is custom-priced."
+    },
+    "some_free_usage": {
+      "support": "full",
+      "source_url": "https://www.openhands.dev/pricing#source:~:text=Bring%20your%20own%20key%20or%20use%20our%20providers%20at-cost",
+      "comment": "OpenHands Cloud Individual tier is free to use (capped at 10 daily conversations) and self-hosted CLI is entirely free software; cost is only the LLM provider's own usage."
+    },
+    "no_account_required": {
+      "support": "full",
+      "source_url": "https://docs.openhands.dev/openhands/usage/cli/installation#first-run:~:text=The%20first%20time%20you%20run%20the%20CLI%2C%20it%20will%20take%20you%20through%20configuring%20the%20required%20LLM%20settings",
+      "comment": "Local CLI installed via uv/pip/binary runs fully on your machine; first-run setup just configures your own LLM provider/API key in ~/.openhands/settings.json, no OpenHands account needed unless using `openhands login`/OpenHands Cloud."
+    },
+    "can_use_other_subscriptions": {
+      "support": "full",
+      "source_url": "https://docs.openhands.dev/openhands/usage/cli/command-reference#environment-variables:~:text=LLM_API_KEY",
+      "comment": "Connects to any LiteLLM-supported provider (Anthropic, OpenAI, OpenRouter, local Ollama/vLLM/SGLang, etc.) via your own API key, configured through Settings UI, ~/.openhands/agent_settings.json, or LLM_API_KEY/LLM_MODEL/LLM_BASE_URL env vars with --override-with-envs."
+    }
+  },
+  {
     "name": "Pi",
     "links": {
       "docs": "https://pi.dev/docs/latest",
@@ -3776,13 +4749,13 @@
       "value": "May '26",
       "source_url": "https://github.com/earendil-works/pi/blob/main/packages/coding-agent/CHANGELOG.md#changelog:~:text=0.74.0",
       "comment": "Pi changelog shows first listed public release as 0.74.0 dated 2026-05-07.",
-      "sort_date": "2025-12-02"
+      "sort_date": "2026-05-01"
     },
     "latest_major_update": {
       "value": "Jun '26",
       "source_url": "https://github.com/earendil-works/pi/releases/tag/v0.80.2#source:~:text=ApiKeyCredential%20to%20use%20the%20auth.json-compatible%20discriminator",
       "comment": "Latest release v0.80.2 (June 23, 2026) aligns API-key credential discriminators with `auth.json`, renames inherited shell execution option types, fixes Anthropic-compatible custom-model metadata, restores request-scoped auth/base-URL resolution, and restores legacy stream aliases and runtime compatibility fallback paths.",
-      "sort_date": "2026-06-28"
+      "sort_date": "2026-06-01"
     },
     "rules": {
       "support": "full",
@@ -3967,13 +4940,13 @@
       "value": "Jun '25",
       "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.19.2#source:~:text=Release%20v0.19.2",
       "comment": "GitHub repo created 2025-06-26. Earliest releases (v0.0.5+) shortly after. Current latest release: v0.19.2 (2026-06-24).",
-      "sort_date": "2025-08-01"
+      "sort_date": "2025-06-01"
     },
     "latest_major_update": {
       "value": "Jun '26",
       "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.19.3#source:~:text=feat(memory)%3A%20add%20a%20git-shared%20team%20memory%20tier",
       "comment": "Latest release v0.19.3 (June 28, 2026) adds daemon workspace voice/control APIs, skill usage stats, auto-generated-skill confirmation, OpenAI streaming inactivity timeout, git-shared team memory, extension creator skill, @extension autocomplete, web-shell MCP resource browsing, workspace session sidebar, /model --vision fallback model selection, and many CLI/core/web-shell fixes.",
-      "sort_date": "2026-06-28"
+      "sort_date": "2026-06-01"
     },
     "rules": {
       "support": "full",
@@ -4320,14 +5293,13 @@
     "released_in": {
       "value": "Mid-2025",
       "source_url": "https://github.com/RooCodeInc/Roo-Code/releases/tag/v3.54.0#release-v3540:~:text=Release%20v3.54.0",
-      "comment": "Forked from Cline. Earliest releases ~mid-2025. Reached v3.54.0 by shutdown on May 15, 2026.",
-      "sort_date": "2025-03-19"
+      "comment": "Forked from Cline. Earliest releases ~mid-2025. Reached v3.54.0 by shutdown on May 15, 2026."
     },
     "latest_major_update": {
       "value": "May '26",
       "source_url": "https://github.com/RooCodeInc/Roo-Code/releases/tag/v3.54.0#release-v3540:~:text=Release%20v3.54.0",
       "comment": "Final release v3.54.0 on May 15, 2026 (shutdown/sunsetting release). Repository archived, read-only.",
-      "sort_date": "2026-05-15"
+      "sort_date": "2026-05-01"
     },
     "rules": {
       "support": "full",

@@ -1,34 +1,39 @@
 # Coding Agent Feature Matrix
-> Compare 25 coding agents, CLIs, and IDEs across features.
+> Compare 30 coding agents, CLIs, and IDEs across features.
 > https://compare.ainorthstar.tech | Updated 2026-06-29
 
-Agent             Rel    FF     Fre   NoA   Oth   Rul   Skl   Hks   MCP   Cmd   Gol   Sub   Trn   Mod   App   San   Res   Con   Hdl   Fmt   Sta   Tel   Hst  BYOM
------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Aider             Jun '2 CLI        Y     Y     Y     ~     ~     ~     N     N     N     ~     ~     Y     ~     N     N     ~     Y     N     N     Y     N     Y
-Amp               May '2 CLI/Ext    Y                 Y     Y     Y     Y     N     N     Y     ?     ~     ~     N     Y     Y     Y     Y     N     ?     N     ~
-Antigravity       2025  CLI/IDE    Y                 Y     Y     Y     Y     ~     N     ?     ~     ?     ~     ~     Y     Y     Y     ?     ?     ?     N     ?
-Claude Code       Feb '2 CLI/Ext                      Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     ~     Y     Y     Y     Y     Y     Y     ~     ~
-Cline             Jul '2 CLI/Ext    Y     Y     Y     Y     Y     Y     Y     Y     N     Y     ?     Y     Y     ~     Y     ~     Y     Y     N     Y     N     Y
-OpenAI Codex CLI  Apr '2 CLI/Ext    Y           Y     Y     Y     Y     Y     ~     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y
-Cohere North      Jan '2 SDK/Web                      ~     ~     Y     Y     N     N     Y     ~     ~     ~     Y     ~     ~     ~     ~     N     ~     Y     N
-Cursor            2023  CLI/IDE    Y                 Y     Y     Y     Y     Y     N     Y     Y     Y     Y     Y     Y     Y     Y     ~     ~     Y     Y     Y
-Devin             Dec '2 CLI/Ext    Y                 Y     Y     Y     Y     Y     N     Y     ~     ?     ~     Y     Y     Y     Y     ~     N     ?     Y     ?
-Factory Droid     2025  CLI/Ext          ~     Y     Y     Y     Y     Y     Y     N     Y     ~     Y     Y     Y     Y     Y     Y     Y     Y     ?     ~     Y
-Gemini CLI        Jun '2 CLI        Y           Y     Y     ~     Y     Y     Y     N     Y     ?     Y     Y     Y     Y     Y     Y     ~     ?     Y     N     ~
-GitHub Copilot    Jun '2 CLI/IDE                      Y     Y     Y     Y     ~     N     Y     ?     Y     ~     ~     Y     Y     Y     ~     N     ~     Y     Y
-Grok Build        May '2 CLI                          Y     Y     Y     Y     ~     Y     Y     ?     ~     Y     ~     ?     ?     Y     ?     ?     ?     N     ~
-Google Jules      Aug '2 Web                          ?     N     ~     ~     N     N     ~     ~     ~     Y     Y     ~     ~     ~     ~     N     ?     Y     N
-JetBrains Junie   Jan '2 CLI/IDE                      Y     Y     Y     Y     Y     N     Y     Y     Y     Y     ~     Y     ~     Y     ?     N     ~     ~     Y
-Kilo Code         Feb '2 CLI/Ext    Y     Y     Y     Y     Y     Y     Y     Y     N     Y     ?     Y     Y     ~     Y     Y     Y     Y     N     Y     ~     Y
-Kimi CLI          Oct '2 CLI/Ext                      Y     Y     ~     Y     ~     N     Y     ?     Y     Y     N     Y     Y     Y     Y     Y     ?     N     Y
-Kiro              Jul '2 CLI/IDE    Y                 Y     Y     Y     Y     Y     N     Y     ~     Y     Y     ~     Y     Y     Y     ~     ?     ?     ~     N
-MiMo Code         Jun '2 CLI/IDE    Y     Y     Y     Y     Y     ~     Y     Y     Y     Y     Y     Y     Y     ~     Y     Y     Y     Y     ?     ?     N     Y
-OpenCode          2025  CLI/Ext    Y     Y     Y     Y     Y     Y     Y     Y     N     Y     Y     Y     Y     ~     Y     Y     Y     Y     ?     Y     N     Y
-Pi                May '2 CLI/SDK          Y     Y     Y     Y     Y     N     Y     N     N     Y     Y     N     N     Y     Y     Y     Y     N     ~     N     Y
-Qwen Code         Jun '2 CLI/Ext                      Y     Y     Y     Y     Y     N     Y     ?     Y     Y     Y     Y     Y     Y     Y     Y     Y     ~     Y
-Replit Agent      Sep '2 Web                          ~     Y     ~     ?     N     N     ~     ~     N     ~     Y     ~     ~     N     N     N     ?     Y     N
-Roo Code          Mid-20 Extensi                      Y     Y     N     Y     Y     N     Y     ?     Y     Y     N     ~     Y     Y     ~     N     Y     N     Y
-Windsurf Cascade  Nov '2 CLI/IDE                      Y     Y     Y     Y     Y     N     Y     ?     Y     Y     ~     Y     Y     ~     ~     ~     ~     Y     ~
+Agent                   Rel    FF     Fre   NoA   Oth   Rul   Skl   Hks   MCP   Cmd   Gol   Sub   Trn   Mod   App   San   Res   Con   Hdl   Fmt   Sta   Tel   Hst  BYOM
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Aider                   Jun '2 CLI        Y     Y     Y     ~     ~     ~     N     N     N     ~     ~     Y     ~     N     N     ~     Y     N     N     Y     N     Y
+Amazon Q Developer CLI  Mar '2 CLI        Y     N     N     Y     ~     Y     Y     ~     N     N     ~     Y     Y     N     Y     Y     Y     N     N     Y     N     N
+Amp                     May '2 CLI/Ext    Y                 Y     Y     Y     Y     N     N     Y     ?     ~     ~     N     Y     Y     Y     Y     N     ?     N     ~
+Antigravity             2025  CLI/IDE    Y                 Y     Y     Y     Y     ~     N     ?     ~     ?     ~     ~     Y     Y     Y     ?     ?     ?     N     ?
+Claude Code             Feb '2 CLI/Ext                      Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     ~     Y     Y     Y     Y     Y     Y     ~     ~
+Cline                   Jul '2 CLI/Ext    Y     Y     Y     Y     Y     Y     Y     Y     N     Y     ?     Y     Y     ~     Y     ~     Y     Y     N     Y     N     Y
+OpenAI Codex CLI        Apr '2 CLI/Ext    Y           Y     Y     Y     Y     Y     ~     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y
+Cohere North            Jan '2 SDK/Web                      ~     ~     Y     Y     N     N     Y     ~     ~     ~     Y     ~     ~     ~     ~     N     ~     Y     N
+Crush                   Jul '2 CLI/TUI    Y     Y     Y     Y     Y     ~     Y     Y     N     Y     Y     Y     Y     N     Y     Y     Y     ~     N     Y     N     Y
+Cursor                  2023  CLI/IDE    Y                 Y     Y     Y     Y     Y     N     Y     Y     Y     Y     Y     Y     Y     Y     ~     ~     Y     Y     Y
+Devin                   Dec '2 CLI/Ext    Y                 Y     Y     Y     Y     Y     N     Y     ~     ?     ~     Y     Y     Y     Y     ~     N     ?     Y     ?
+Factory Droid           2025  CLI/Ext          ~     Y     Y     Y     Y     Y     Y     N     Y     ~     Y     Y     Y     Y     Y     Y     Y     Y     ?     ~     Y
+Gemini CLI              Jun '2 CLI        Y           Y     Y     ~     Y     Y     Y     N     Y     ?     Y     Y     Y     Y     Y     Y     ~     ?     Y     N     ~
+GitHub Copilot CLI      Sep '2 CLI        ~     N     Y     Y     Y     Y     Y     ~     ~     Y     Y     Y     Y     Y     Y     Y     Y     Y     ~     ~     N     Y
+GitHub Copilot          Jun '2 CLI/IDE                      Y     Y     Y     Y     ~     N     Y     ?     Y     ~     ~     Y     Y     Y     ~     N     ~     Y     Y
+Goose                   Jan '2 CLI/Des    Y     Y     Y     Y     Y     Y     Y     Y     N     Y     Y     Y     Y     Y     Y     ~     Y     Y     N     Y     N     Y
+Grok Build              May '2 CLI                          Y     Y     Y     Y     ~     Y     Y     ?     ~     Y     ~     ?     ?     Y     ?     ?     ?     N     ~
+Google Jules            Aug '2 Web                          ?     N     ~     ~     N     N     ~     ~     ~     Y     Y     ~     ~     ~     ~     N     ?     Y     N
+JetBrains Junie         Jan '2 CLI/IDE                      Y     Y     Y     Y     Y     N     Y     Y     Y     Y     ~     Y     ~     Y     ?     N     ~     ~     Y
+Kilo Code               Feb '2 CLI/Ext    Y     Y     Y     Y     Y     Y     Y     Y     N     Y     ?     Y     Y     ~     Y     Y     Y     Y     N     Y     ~     Y
+Kimi CLI                Oct '2 CLI/Ext                      Y     Y     ~     Y     ~     N     Y     ?     Y     Y     N     Y     Y     Y     Y     Y     ?     N     Y
+Kiro                    Jul '2 CLI/IDE    Y                 Y     Y     Y     Y     Y     N     Y     ~     Y     Y     ~     Y     Y     Y     ~     ?     ?     ~     N
+MiMo Code               Jun '2 CLI/IDE    Y     Y     Y     Y     Y     ~     Y     Y     Y     Y     Y     Y     Y     ~     Y     Y     Y     Y     ?     ?     N     Y
+OpenCode                2025  CLI/Ext    Y     Y     Y     Y     Y     Y     Y     Y     N     Y     Y     Y     Y     ~     Y     Y     Y     Y     ?     Y     N     Y
+OpenHands               Mar '2 CLI/IDE    Y     Y     Y     Y     Y     Y     Y     ~     N     N     Y     Y     Y     Y     Y     Y     Y     Y     N     ~     Y     Y
+Pi                      May '2 CLI/SDK          Y     Y     Y     Y     Y     N     Y     N     N     Y     Y     N     N     Y     Y     Y     Y     N     ~     N     Y
+Qwen Code               Jun '2 CLI/Ext                      Y     Y     Y     Y     Y     N     Y     ?     Y     Y     Y     Y     Y     Y     Y     Y     Y     ~     Y
+Replit Agent            Sep '2 Web                          ~     Y     ~     ?     N     N     ~     ~     N     ~     Y     ~     ~     N     N     N     ?     Y     N
+Roo Code                Mid-20 Extensi                      Y     Y     N     Y     Y     N     Y     ?     Y     Y     N     ~     Y     Y     ~     N     Y     N     Y
+Windsurf Cascade        Nov '2 CLI/IDE                      Y     Y     Y     Y     Y     N     Y     ?     Y     Y     ~     Y     Y     ~     ~     ~     ~     Y     ~
 
 ## Feature legend
 Code = Y: full | ~: partial | N: none | ?: unknown |  : 
@@ -42,7 +47,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Website: https://aider.chat/
 - Form factor: CLI
 - Released: Jun '23
-- Latest update: May '26
+- Latest update: Aug '25
 - Some Free Usage: full — Aider documents free API providers and local-model options, so some agent usage can be free depending on provider/model choice.
 - No Account Required: full — Can run against local Ollama models without signing into an Aider-hosted account.
 - Can Use Other Subscriptions: full — Can use external provider accounts/API keys and local OpenAI-compatible endpoints instead of an Aider-owned subscription.
@@ -67,6 +72,39 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Custom Model Provider: full — Connects to any LLM via litellm. Supports OpenAI, Anthropic, Gemini, DeepSeek, Ollama, OpenRouter, any OpenAI-compatible endpoint, and more.
 - Pricing: Free (Apache-2.0)
 - Notes: Aider is a mature open-source CLI coding agent (45k+ stars) since June 2023. Deep git integration, repo mapping for codebase context, extensive LLM provider support through litellm. No published embed SDK (CLI/scripting only). Notable gaps vs newer agents: no MCP, no user-defined slash commands, no sandbox, no subagent delegation, no resume/continue flags, no structured output. Apache-2.0 licensed.
+
+### Amazon Q Developer CLI
+- Docs: https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-chat.html
+- GitHub: https://github.com/aws/amazon-q-developer-cli
+- Website: https://aws.amazon.com/q/developer/
+- Form factor: CLI
+- Status: Deprecated
+- Released: Mar '25
+- Latest update: Nov '25
+- Some Free Usage: full — Free Tier includes a documented monthly allotment of agentic chat requests and code suggestions at no cost via AWS Builder ID.
+- No Account Required: none — Requires signing in with an AWS Builder ID or IAM Identity Center/IAM credentials before any chat session; there is no local-model or account-free path.
+- Can Use Other Subscriptions: none — Models are served exclusively through AWS's own Amazon Bedrock-backed Q Developer service (Builder ID/IAM Identity Center auth); no option to route usage through a personal Anthropic/OpenAI API key or other vendor subscription.
+- Rules: full — Markdown rule files in `.amazonq/rules/` are auto-scanned and applied per project. No AGENTS.md support (open feature request, GitHub issue #2712, unimplemented). Location: `.amazonq/rules/*.md`, referenced via agent config `resources`.
+- Skills: partial — Custom agent JSON configs (prompt, tools, resources, hooks) act as reusable, switchable capability profiles, but there is no dedicated 'skills' folder/format distinct from agent configs. Location: agent config files, typically under `.amazonq/cli-agents/` or `~/.aws/amazonq/cli-agents/`.
+- Hooks: full — Agent config `hooks` field supports agentSpawn, userPromptSubmit, preToolUse, postToolUse, and stop lifecycle hooks that run shell commands and inject output into context.
+- Mcp Servers: full — Supports both local (stdio) and remote (HTTP/OAuth) MCP servers via global `~/.aws/amazonq/mcp.json` and workspace `.amazonq/mcp.json`, merged with workspace taking precedence on conflicts.
+- Custom Commands: partial — No first-class user-defined slash command system; closest equivalent is agent-config hooks/prompts and `/agent create` to switch agent profiles with different tool/resource sets.
+- Goal Command: none — No built-in `/goal`-style persistent-objective auto-continue loop; sessions proceed turn-by-turn or via `--no-interactive` single-shot prompts.
+- Subagents: none — Custom agents are independent, user-selected configuration profiles (one active per session); there is no delegation/spawning of subagents from within a running session.
+- Transcripts: partial — Conversation history is auto-saved per working directory to support `--resume`, but there is no documented user-facing export/transcript file format akin to a JSONL log.
+- Model Selection: full — Switch models in-session with `/model`, at launch with `q chat --model <name>`, or set a default via `q settings chat.defaultModel <name>`. Choices are limited to AWS-hosted Claude models (3.5/3.7 Sonnet, Sonnet 4, Sonnet 4.5, and an 'auto' option) served over Bedrock.
+- Approval Mode: full — Per-tool trust model: only `fs_read` is trusted by default; `/tools trust`, `/tools trust-all`, and CLI flags `--trust-all-tools`/`--trust-tools=<list>` control auto-approval, with `/tools reset` to restore defaults.
+- Sandbox Mode: none — No filesystem/network sandbox; security guidance instead recommends running in a dedicated environment and using tool-trust controls (`/tools untrust`) to gate risky actions like `use_aws` or `execute_bash`.
+- Resume: full — `q chat --resume` automatically picks up the most recent conversation saved for the current working directory.
+- Continue: full — `--resume` continues the latest session for the current directory without needing an explicit session ID, satisfying both resume and continue behavior.
+- Non Interactive: full — `q chat --no-interactive "<prompt>"` runs a single headless turn and exits; commonly paired with `--trust-all-tools` to avoid approval prompts in scripts/CI. Some early versions had bugs around prompts still appearing or trusted-tools lists being ignored (GitHub issues #1951, #1995), later patched (e.g. v2.0.1 fix notes).
+- Output Format: none — `q chat` only emits plain text/Markdown even in `--no-interactive` mode; structured `-f json|json-pretty` output exists only for other subcommands like `q settings`/`q whoami`, not for chat. A JSON/stream-JSON chat output format is an open, unimplemented feature request (issue #2713).
+- Statusline: none — No user-configurable status line; `q settings` covers behavior toggles (telemetry, default model) rather than a persistent status bar.
+- Telemetry: full — Telemetry/data-sharing is user-configurable via `q settings telemetry.enabled true|false`; Free tier content may be used for service improvement, Pro tier content is excluded by policy.
+- Hosted Agent: none — Runs as a local terminal process talking to the AWS-hosted backend for inference; there is no separate hosted/cloud agent execution platform for this CLI surface.
+- Custom Model Provider: none — Model choice is restricted to a fixed list of Claude models served via AWS's own Amazon Bedrock-backed Q Developer service; no support for arbitrary/OpenAI-compatible model endpoints or bring-your-own-API-key providers.
+- Pricing: Free tier + Pro $19/user/mo
+- Notes: Amazon Q Developer CLI (`q chat`) is AWS's Rust-based, Bedrock-backed agentic terminal coding agent, launched as an enhanced agentic experience in March 2025. It requires AWS Builder ID or IAM Identity Center sign-in (no API-key-only or account-free path), supports MCP, lifecycle hooks, and per-project `.amazonq/rules/` markdown rules, but lacks AGENTS.md support, subagent delegation, sandboxing, and structured JSON chat output. As of mid-2026 the open-source repo is no longer actively maintained: AWS is sunsetting Amazon Q Developer in favor of the backward-compatible, closed-source Kiro CLI (same `q`/`q chat` entry points, configs auto-migrated to `~/.kiro/`), with new signups blocked from May 2026 and full IDE/subscription end-of-support by April 2027.
 
 ### Amp
 - Docs: https://ampcode.com/manual
@@ -255,6 +293,38 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Pricing: Enterprise/demo-based
 - Notes: Included because the request mentioned Cohere. This is an enterprise agent platform with coding-capable Command A+ underneath, not a direct Claude Code/Codex-style coding agent.
 
+### Crush
+- Docs: https://github.com/charmbracelet/crush#readme
+- GitHub: https://github.com/charmbracelet/crush
+- Website: https://charm.land/crush
+- Form factor: CLI, TUI
+- Released: Jul '25
+- Latest update: Jun '26
+- Some Free Usage: full — Local model backends (Ollama, LM Studio, MLX, LiteLLM) and some free-tier provider plans allow free agent usage without paying for hosted inference.
+- No Account Required: full — Can run entirely against local Ollama/LM Studio/MLX models without any Crush account or vendor sign-in; the CLI itself requires no account to install or run.
+- Can Use Other Subscriptions: full — Routes through the user's own API keys/accounts for any supported provider (Anthropic, OpenAI, etc.) or coding-plan subscriptions (GLM Coding Plan, Kimi Code, MiniMax Coding Plan, Synthetic) rather than a Crush-owned subscription.
+- Rules: full — Auto-loaded global/project context files: `~/.config/crush/CRUSH.md` (Crush-specific) and `~/.config/AGENTS.md`/project `AGENTS.md` (generic, cross-tool standard). Path override via `global_context_paths`; supports folder recursion for `.md` files.
+- Skills: full — Supports the open 'Agent Skills' standard (SKILL.md packages). Discoverable from `$CRUSH_SKILLS_DIR`, `~/.config/agents/skills/`, and project `.agents/skills/`; invocable via the command palette with `user:`/`project:` prefixes; toggle via `disabled_skills`/`skills_paths` config.
+- Hooks: partial — "Crush has preliminary support for hooks" per the README, deferring to a separate hook guide. Early/limited lifecycle hook support compared to mature hook systems.
+- Mcp Servers: full — Full MCP support across stdio, http, and sse transports, configured under `mcp` in crush.json. Supports shell-style value expansion ($VAR, ${VAR:-default}, $(command)), required-credential syntax (${VAR:?message}), per-server `disabled_tools`, and per-server timeouts.
+- Custom Commands: full — User-defined Markdown command files placed in `~/.config/crush/commands/` (or project-level), invoked from the command palette (press `/` or Ctrl+P, then Tab to list user commands). Public docs (COMMANDS.md) not yet merged to main as of mid-2026 but the feature is shipped.
+- Goal Command: none — No built-in `/goal` persistent-objective auto-continue loop. Sessions and `crush run --continue` support resuming work, but no dedicated goal-tracking/completion-condition command.
+- Subagents: full — Built-in "Coder" and "Task" agent types; the Coder agent can spawn restricted-permission Task subagents for delegated subtasks via an agent/task tool, with costs rolling up to the parent session. Agents configurable (model, allowed tools/MCP, context paths) via the `agents` config section.
+- Transcripts: full — Local SQLite-backed session storage with a dedicated `crush session` CLI subcommand: `list`, `show <id>`, `last`, `delete`, `rename`, each supporting `--json` for machine-readable transcripts including full message parts (text, reasoning, tool calls/results).
+- Model Selection: full — `-m/--model` and `--small-model` flags on `crush run`; in-TUI model switching mid-session while preserving context. Model database from Catwalk (community-supported open registry), auto-updated unless `disable_provider_auto_update`/`CRUSH_DISABLE_PROVIDER_AUTO_UPDATE=1` is set.
+- Approval Mode: full — Default mode prompts for permission before tool calls. `-y/--yolo` flag (or `permissions.yolo`/`SkipPermissionRequests`) auto-accepts all permissions. Granular `permissions.allowed_tools` allowlist for specific tools without prompting.
+- Sandbox Mode: none — No filesystem/network sandbox. Safety relies on permission prompts and the `--yolo` opt-out, plus `.crushignore` to exclude files from agent access.
+- Resume: full — `-s/--session <id>` resumes a specific prior session by full UUID, hash, or hash prefix; works both for the interactive TUI (`crush --session`) and `crush run --session`.
+- Continue: full — `-C/--continue` flag continues the most recently updated top-level session without needing an ID, for both `crush` (TUI) and `crush run` (non-interactive).
+- Non Interactive: full — `crush run "<prompt>"` (alias `r`) runs a single prompt non-interactively and exits; supports stdin piping, output redirection, `-q/--quiet` (hide spinner), `-v/--verbose` (show logs), and session continuation flags.
+- Output Format: partial — `crush session list/show/last/delete/rename --json` give structured machine-readable output. `crush run` itself streams plain assistant text to stdout (no `--output-format json` for the run command).
+- Statusline: none — No user-configurable status line concept documented; the TUI shows fixed chrome (model, session, busy state) rather than a customizable status line.
+- Telemetry: full — Pseudonymous usage metrics tied to a device-specific hash; prompts/responses are never collected. Opt-out via `CRUSH_DISABLE_METRICS=1`, `disable_metrics: true` in config, or the `DO_NOT_TRACK=1` convention.
+- Hosted Agent: none — Runs locally as a terminal binary (optionally with a local client/server mode via `crush serve` for shared workspaces); no Charm-hosted cloud agent platform.
+- Custom Model Provider: full — Connects to Anthropic, OpenAI, Groq, OpenRouter, Vercel AI Gateway, Google Gemini, Synthetic, Z.ai, MiniMax, Hugging Face, Cerebras, io.net, Alibaba, Avian, Google Cloud Vertex AI, Amazon Bedrock, Azure OpenAI, and local models (Ollama, LM Studio, MLX, LiteLLM) via Catwalk's open model registry plus fully custom OpenAI-/Anthropic-compatible provider configs.
+- Pricing: Free (FSL-1.1-MIT), BYO API key
+- Notes: Crush is Charm's open-source (FSL-1.1-MIT), terminal-first AI coding agent, first released July 2025 and under very active daily development (180+ tagged releases by mid-2026, 25k+ GitHub stars). It pairs a polished Bubble Tea TUI with a scriptable `crush run` headless mode, broad MCP/LSP/provider support via the community Catwalk model registry, and an emerging Agent Skills + custom-commands + Task-subagent ecosystem. Notable gaps versus more mature agents: no sandboxing, no user-selectable themes yet (TODO in source), and only preliminary lifecycle hooks.
+
 ### Cursor
 - Docs: https://docs.cursor.com/
 - Website: https://cursor.com/
@@ -266,7 +336,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Can Use Other Subscriptions: blank
 - Rules: full — Supports project and user rules. Location: `.cursor/rules/*.mdc` in a project; user/global rules are configured in Cursor settings.
 - Skills: full — Supports skills. Location: Cursor rules/agents features, not a SKILL.md folder standard in this row.
-- Hooks: full — Customize Cursor documents hook management at user, team, and workspace levels alongside plugins, skills, MCPs, subagents, rules, and commands.
+- Hooks: full — Dedicated hooks surface: sessionStart/sessionEnd, preToolUse/postToolUse/postToolUseFailure, subagentStart/subagentStop, beforeShellExecution/afterShellExecution, beforeMCPExecution/afterMCPExecution, beforeReadFile/afterFileEdit, beforeSubmitPrompt, preCompact, stop, afterAgentResponse/afterAgentThought, Tab hooks, and workspaceOpen. Configured via .cursor/hooks.json at project, user, team, and enterprise levels; cloud agents run project/team/enterprise command-based hooks. Third-party Claude Code hooks are also supported.
 - Mcp Servers: full — Supports MCP servers in both IDE and CLI. Location: `.cursor/mcp.json` for project MCP servers or user-level Cursor MCP settings.
 - Custom Commands: full — CLI exposes full command controls; IDE has reusable rule/workflow patterns. Location: custom command support is through Cursor features/SDK rather than a repo command folder.
 - Goal Command: none — Cursor Agent CLI documents `/plan`, `/ask`, and `/resume` slash commands but no built-in `/goal` for persistent completion conditions.
@@ -381,6 +451,38 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Pricing: Free (Apache-2.0), Gemini API usage billed separately
 - Notes: Deprecated: Google points new CLI work to Antigravity. Kept as an explicit agent-launch option, but excluded from random selection in this repo. Headless/scripting mode only; no published agent embed SDK.
 
+### GitHub Copilot CLI
+- Docs: https://docs.github.com/en/copilot/concepts/agents/about-copilot-cli
+- GitHub: https://github.com/github/copilot-cli
+- Website: https://github.com/features/copilot/cli
+- Form factor: CLI
+- Released: Sep '25
+- Latest update: Feb '26
+- Some Free Usage: partial — GitHub Copilot Free plan includes limited chat/agent requests (e.g. 50 chat requests/mo) usable via the CLI, but no unlimited free local-model path is documented for Copilot CLI itself.
+- No Account Required: none — Requires sign-in with a GitHub account holding an active Copilot subscription/seat; `/login` flow inside the CLI.
+- Can Use Other Subscriptions: full — BYOK support for Anthropic, OpenAI, Azure OpenAI, AWS Bedrock, Google AI Studio, xAI/Microsoft Foundry, any OpenAI-compatible endpoint, and local models via Ollama, configured with COPILOT_PROVIDER_TYPE / COPILOT_PROVIDER_BASE_URL / COPILOT_PROVIDER_API_KEY / COPILOT_MODEL env vars.
+- Rules: full — Reads AGENTS.md (repo root, cwd, or COPILOT_CUSTOM_INSTRUCTIONS_DIRS paths) and .github/instructions/**/*.instructions.md, plus CLAUDE.md/GEMINI.md at repo root, and a personal $HOME/.copilot/copilot-instructions.md. Disable with --no-custom-instructions.
+- Skills: full — Open Agent Skills standard: SKILL.md plus optional supplementary files/scripts, loaded when relevant to a task.
+- Hooks: full — sessionStart, sessionEnd, preToolUse (can deny/modify tool calls), postToolUse hooks, run synchronously and can block execution. Configured as JSON files at .github/hooks/*.json.
+- Mcp Servers: full — Ships with the GitHub MCP server enabled by default plus support for arbitrary custom MCP servers (stdio/http/sse). Flags: --additional-mcp-config, --disable-mcp-server, --disable-builtin-mcps, --add-github-mcp-tool(set), --enable-all-github-mcp-tools. /mcp slash command lists configured servers.
+- Custom Commands: partial — Built-in slash commands (/resume, /cwd, /add-dir, /mcp, /diff, /review, /settings, /theme, /sandbox, /rewind) plus custom agents act as a structured-prompt mechanism, but no user-defined arbitrary slash command syntax is documented.
+- Goal Command: partial — No `/goal` command, but --autopilot / --mode autopilot (Shift+Tab to cycle modes) auto-continues until the agent decides the task is complete, hits a blocking problem, Ctrl+C, or --max-autopilot-continues is reached. Scoped to a single task/session, not a persistent cross-session objective.
+- Subagents: full — Custom agents defined as Markdown agent-profile files (prompts, tools, MCP servers), invoked via --agent=NAME or in-session. Each spins up a subagent with its own isolated context window. Built-in specialized agents include Explore, Task, and the Rubber Duck critic agent.
+- Transcripts: full — Local session logs under ~/.copilot/logs/ (configurable via --log-dir). Sessions can be exported with --share=PATH (Markdown file) or --share-gist (secret GitHub gist) after a programmatic run.
+- Model Selection: full — --model=MODEL flag or COPILOT_MODEL env var, plus in-session /model picker. Choices include Anthropic Claude, OpenAI GPT, and Google Gemini family models; `auto` lets Copilot pick automatically. BYOK external models also appear in the picker.
+- Approval Mode: full — Per-action approval prompts by default (Yes / Yes-and-approve-for-session / No-and-redirect). Granular flags: --allow-tool, --deny-tool, --allow-all-tools, --allow-all-paths, --allow-all-urls, --allow-url/--deny-url, --add-dir, plus --allow-all/--yolo to bypass everything. Enterprises can disable bypass via permissions.disableBypassPermissionsMode.
+- Sandbox Mode: full — Public preview (as of mid-2026): local sandbox via /sandbox enable restricts filesystem/network/system access (built on Microsoft MXC, included in standard seat); cloud sandbox via `copilot --cloud` runs a fully isolated, ephemeral GitHub-hosted Linux environment (Azure Container Apps Sandboxes) resumable from any device.
+- Resume: full — -r/--resume[=VALUE] picks from a session list or jumps to a session ID/prefix/name; /resume in-session. --connect[=SESSION-ID] attaches to a remote session; --remote enables resuming a remote task locally.
+- Continue: full — --continue resumes the most recent session in the current working directory, falling back to the globally most recent session, without needing a session ID.
+- Non Interactive: full — -p/--prompt=PROMPT executes a prompt programmatically and exits; --allow-all-tools is required for unattended runs. -i/--interactive=PROMPT starts interactive with an initial prompt. Documented for use in scripts and GitHub Actions workflows.
+- Output Format: full — --output-format=text|json (JSON outputs JSONL, one object per line). -s/--silent restricts output to just the agent response (no usage stats), useful when combined with -p for scripting.
+- Statusline: partial — Experimental statusLine.command setting in ~/.copilot/settings.json runs a user script (receives session JSON over stdin) to render a custom status line; community tools (Oh My Posh integrations, copilot-statusline, copilot-hud) build on it. Marked experimental/subject to change as of mid-2026.
+- Telemetry: partial — Enterprise/org-level audit logging and data-retention controls inherited from GitHub Copilot governance; --secret-env-vars redacts env vars from logs/MCP servers. No granular end-user telemetry opt-out UI documented specifically for the CLI.
+- Hosted Agent: none — Copilot CLI itself is a local terminal client. Cloud sandbox (`copilot --cloud`) runs the same CLI session in a GitHub-hosted ephemeral environment but is still user-initiated/interactive, not the autonomous GitHub Actions cloud agent (see separate github-copilot-coding-agent entry, hosted_agent=full).
+- Custom Model Provider: full — BYOK env vars (COPILOT_PROVIDER_TYPE, COPILOT_PROVIDER_BASE_URL, COPILOT_PROVIDER_API_KEY, COPILOT_MODEL) connect Anthropic, OpenAI-compatible endpoints, Azure OpenAI, AWS Bedrock, Google AI Studio, xAI/Microsoft Foundry, and local Ollama models.
+- Pricing: Included with Copilot Pro $10/mo, Pro+ $39/mo, Business $19/user/mo, Enterprise $39/user/mo; Free tier has limited usage
+- Notes: GitHub Copilot CLI is the standalone, local terminal coding agent (`copilot`, npm package @github/copilot, repo github/copilot-cli) — distinct from the asynchronous GitHub Actions-based Copilot cloud coding agent. Public preview Sep 2025, GA Feb 2026, runs on an existing Copilot subscription with no separate CLI fee. Strong open-standard support (AGENTS.md, Agent Skills, MCP, hooks, custom agents/subagents) and BYOK for external model providers, plus newer cloud/local sandboxing, autopilot mode, and an experimental redesigned terminal UI.
+
 ### GitHub Copilot
 - Docs: https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent
 - GitHub: https://github.com/features/copilot
@@ -412,6 +514,38 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Custom Model Provider: full — BYOK in CLI: env vars for provider type, base URL, API key. OpenAI-compatible endpoints, Azure OpenAI, Anthropic, local models via Ollama.
 - Pricing: Free $0, Pro $10/mo, Pro+ $39/mo, Max $100/mo, Business $19/user/mo, Enterprise $39/user/mo
 - Notes: GitHub Copilot's agent capabilities span IDE, cloud, and CLI. The cloud agent is unique: runs in ephemeral GitHub Actions environment. Desktop app (preview) adds parallel agent sessions. Ecosystem is rapidly evolving with weekly feature drops.
+
+### Goose
+- Docs: https://goose-docs.ai/docs/
+- GitHub: https://github.com/block/goose
+- Website: https://goose-docs.ai/
+- Form factor: CLI, Desktop App
+- Released: Jan '25
+- Latest update: May '26
+- Some Free Usage: full — Google Gemini's free tier and free local Ollama models give a documented no-cost usage path alongside paid providers.
+- No Account Required: full — Can run entirely against local Ollama models with no Goose account and no cloud provider account required.
+- Can Use Other Subscriptions: full — Routes agent usage through the user's own provider account/API key (Anthropic, OpenAI, Azure, Bedrock, Databricks, Groq, OpenRouter, etc.) or local inference (Ollama) rather than a Goose-owned subscription.
+- Rules: full — Goose looks for AGENTS.md then .goosehints by default, at both global (~/.config/goose/.goosehints) and per-directory/nested project scope; filename configurable via CONTEXT_FILE_NAMES env var. Location: ~/.config/goose/.goosehints (global), ./.goosehints or ./AGENTS.md (project, nested lookup).
+- Skills: full — Recipes are reusable, parameterized YAML workflow files (instructions, extensions, params, sub-recipes) that can be bound to custom slash commands, shared, and scheduled via cron. `/skills` slash command also lists available skills in-session. Location: recipe YAML files, e.g. ~/.config/goose/recipes/ or project-local paths passed via --recipe.
+- Hooks: full — Lifecycle hooks run shell scripts on events: SessionStart, SessionEnd, Stop, UserPromptSubmit, PreToolUse, PostToolUse, PostToolUseFailure, BeforeReadFile, AfterFileEdit, BeforeShellExecution, AfterShellExecution. Configured via hooks.json in plugin dirs. Location: ~/.agents/plugins/<name>/hooks/hooks.json (user scope) or <project>/.agents/plugins/<name>/hooks/hooks.json (project scope).
+- Mcp Servers: full — Goose's extension system is built natively on MCP; connects to 70+ documented extensions (GitHub, Docker, Postgres, Slack, Google Drive, browser automation, etc.) and any MCP-compatible server. Configurable via `goose configure`, `/extension`, `--with-extension`, `--with-streamable-http-extension`, or config.yaml.
+- Custom Commands: full — Recipes can be turned into custom slash commands (e.g. /weekly-status) usable in CLI or Desktop sessions. Location: recipe files referenced from goose config.
+- Goal Command: none — No built-in `/goal` command for a persisted auto-continuing objective. Has `/plan` and `/endplan` for a plan-then-act mode, and recipes/schedule for repeatable automation, but not an auto-continuing goal loop.
+- Subagents: full — First-class subagent delegation: temporary AI instances spun up via natural language in a prompt for one-off tasks, running in isolation from the main session. Distinct from sub-recipes (pre-written reusable YAML workflows). Up to 10 concurrent parallel workers total across subagents/sub-recipes. Location: invoked ad hoc; sub-recipes configured via --sub-recipe / recipe YAML.
+- Transcripts: full — Sessions stored in SQLite (v1.10.0+) at ~/.local/share/goose/sessions/sessions.db (Unix) or %APPDATA%\Block\goose\data\sessions\sessions.db (Windows); pre-v1.10.0 used per-session .jsonl files under ~/.local/share/goose/sessions/. `session export` can output markdown/json/yaml; `session list`/`session diagnostics` also available.
+- Model Selection: full — Full model/provider selection via `goose configure`, `--provider`/`--model` flags on `goose run`, or GOOSE_PROVIDER/GOOSE_MODEL env vars (e.g. export GOOSE_MODEL=claude-sonnet-4-5-20250929).
+- Approval Mode: full — Four permission modes: auto (full automation), approve (ask every tool unless allow/deny-listed), chat (no tool access), smart_approve (LLM-based PermissionJudge auto-approves safe calls, asks for risky ones). Set via `goose config set-mode <mode>`, the GOOSE_MODE env var, or in-session `/mode <name>`. No dedicated `--mode` CLI flag on `goose run`/`goose session`.
+- Sandbox Mode: full — `--container <id>` flag (on `goose session` and `goose run`) runs extensions inside a specified Docker container; goose CLI must be installed inside the container for built-in extensions to work.
+- Resume: full — `-r`/`--resume` flag on both `goose session` (resume previous chat) and `goose run` (resume from a previous run); also `--fork` to duplicate a session's history into a new one.
+- Continue: partial — `--resume` without a session id/name resumes the most recent session by default, giving an effective "continue latest" path, but there is no separate dedicated `--continue` flag distinct from `--resume`.
+- Non Interactive: full — `goose run -t "..."` (or -i file) executes headlessly and exits; `--quiet`/`-q` suppresses non-response output for scripting; `--no-session` skips session file creation entirely. Designed for automation/CI pipelines.
+- Output Format: full — `--output-format <text|json|stream-json>` on `goose run` for machine-readable output; json gives final result, stream-json emits events as they occur. `session list`/`export` also support text/json/markdown/yaml.
+- Statusline: none — No documented user-configurable status line. CLI has theme and prompt-editor configuration but no status bar concept.
+- Telemetry: full — Anonymous usage data is opt-in/opt-out configurable interactively via `goose configure` or via GOOSE_TELEMETRY_ENABLED=false/true env var. No central control plane or phone-home by default per project description.
+- Hosted Agent: none — Runs locally as CLI/Desktop/API with no central control plane; no Goose-hosted cloud agent platform. `goose acp` exposes it as an Agent Client Protocol server for editor integration, not a hosted service.
+- Custom Model Provider: full — Supports 15+ LLM providers (Anthropic, OpenAI, Google, Azure, Bedrock, Databricks, Groq, OpenRouter, local Ollama, and more) including OpenAI-compatible custom endpoints, configured via `goose configure` or GOOSE_PROVIDER/GOOSE_MODEL plus provider API key env vars.
+- Pricing: Free (Apache-2.0), BYOK LLM costs
+- Notes: Goose is an open-source (Apache-2.0), Rust-based agentic CLI and Desktop app originally built by Block and now stewarded by the Linux Foundation's Agentic AI Foundation (AAIF). It was the first open-source agent to support MCP and ships 70+ first-party MCP extensions, recipes/sub-recipes for reusable workflows, real subagent delegation, four-tier permission modes (auto/approve/chat/smart_approve via GOOSE_MODE), Docker-based execution sandboxing, and a recently added lifecycle-hooks plugin system. No paid tier; cost is purely BYOK LLM usage, with a fully free/no-account path via local Ollama models.
 
 ### Grok Build
 - Docs: https://x.ai/news/grok-build-cli
@@ -663,6 +797,38 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Hosted Agent: none — Runs entirely locally.
 - Custom Model Provider: full — Supports many providers and custom provider configuration.
 - Pricing: Free (MIT, BYOK), Go $10/mo (first month $5), Zen pay-per-token (min $20), Enterprise per-seat
+
+### OpenHands
+- Docs: https://docs.openhands.dev/
+- GitHub: https://github.com/OpenHands/OpenHands
+- Website: https://www.openhands.dev/
+- Form factor: CLI, IDE, Web, Docker, Hosted Agent
+- Released: Mar '24
+- Latest update: Jun '26
+- Some Free Usage: full — OpenHands Cloud Individual tier is free to use (capped at 10 daily conversations) and self-hosted CLI is entirely free software; cost is only the LLM provider's own usage.
+- No Account Required: full — Local CLI installed via uv/pip/binary runs fully on your machine; first-run setup just configures your own LLM provider/API key in ~/.openhands/settings.json, no OpenHands account needed unless using `openhands login`/OpenHands Cloud.
+- Can Use Other Subscriptions: full — Connects to any LiteLLM-supported provider (Anthropic, OpenAI, OpenRouter, local Ollama/vLLM/SGLang, etc.) via your own API key, configured through Settings UI, ~/.openhands/agent_settings.json, or LLM_API_KEY/LLM_MODEL/LLM_BASE_URL env vars with --override-with-envs.
+- Rules: full — Root-level AGENTS.md (also supports CLAUDE.md/GEMINI.md variants) is injected into the system prompt at conversation start as always-on context. Location: repo root `AGENTS.md`.
+- Skills: full — Supports the AgentSkills standard (SKILL.md with progressive disclosure) plus a legacy simple format. Community registry at github.com/OpenHands/extensions. Older 'microagents' (.openhands/microagents/) are deprecated in favor of .agents/skills/. Location: `.agents/skills/<name>/SKILL.md` (recommended) or `.agents/skills/*.md` (legacy).
+- Hooks: full — Full lifecycle hooks (PreToolUse, PostToolUse, UserPromptSubmit, Stop, SessionStart, SessionEnd) configured via `.openhands/hooks.json`, format explicitly compatible with Claude Code hooks. Works across Cloud, CLI, and local GUI. Location: `.openhands/hooks.json` + `.openhands/hooks/*.sh`.
+- Mcp Servers: full — Full MCP support with stdio, SSE, and HTTP transports, OAuth/header auth, managed via `openhands mcp add/list/get/remove/enable/disable` CLI subcommands or by editing `~/.openhands/mcp.json` directly. `/mcp` shows live status in-session.
+- Custom Commands: partial — Fixed set of built-in interactive `/` commands (/help, /new, /history, /confirm, /condense, /skills, /feedback, /exit). No documented mechanism for users to define their own custom slash commands (skills serve a similar reusable-prompt purpose instead).
+- Goal Command: none — No built-in `/goal` command for a persistent auto-continuing session objective; `/condense` manages context but does not implement a goal-loop.
+- Subagents: none — No documented first-class delegated/spawned subagent system for the CLI (contrast with Devin's 'Managed Devins'); OpenHands runs a single agent loop per conversation.
+- Transcripts: full — Conversation history automatically saved locally. Location: `~/.openhands/conversations/`. `--resume` lists and reopens prior conversations.
+- Model Selection: full — Set via Settings UI (Ctrl+P > Settings), persisted in `~/.openhands/agent_settings.json` (`llm.model` field), or temporarily overridden with `LLM_MODEL`/`LLM_API_KEY`/`LLM_BASE_URL` env vars plus the `--override-with-envs` flag.
+- Approval Mode: full — Confirmation enabled by default with LLM Risk Analyzer (auto-confirms low/medium risk, prompts on high risk). CLI flags `--always-approve` (auto-approve everything) and `--llm-approve` (force LLM-based analyzer) override behavior; `/confirm` adjusts in-session.
+- Sandbox Mode: full — Three sandbox providers: Docker (isolated container, default/recommended for `openhands serve`), Process (no isolation, runs directly as a local process — this is what the plain `openhands` CLI uses by default), and Remote (managed/hosted). Selected via legacy `RUNTIME` env var (docker/process/remote).
+- Resume: full — `--resume [ID]` resumes a specific conversation by ID, or lists recent conversations to pick from if no ID given.
+- Continue: full — `--resume --last` resumes the most recent conversation without needing to specify an ID.
+- Non Interactive: full — `openhands --headless -t "task"` (or `-f file`) runs with no UI for CI/CD and scripting. Always runs in always-approve mode in headless (cannot use --llm-approve here).
+- Output Format: full — `--json` flag (requires `--headless`) streams structured JSONL events (action/observation objects) for machine parsing in CI pipelines.
+- Statusline: none — Has 'live status monitoring' of agent progress in the TUI but no user-configurable status line / status bar string feature documented.
+- Telemetry: partial — `/feedback` sends anonymous feedback about the CLI; no documented granular opt-in/opt-out telemetry settings page found beyond this and general OSS analytics conventions.
+- Hosted Agent: full — OpenHands Cloud (app.all-hands.dev) is a fully managed hosted agent platform; `openhands login`/`openhands cloud -t "task"` create and run cloud-hosted conversations from the local CLI.
+- Custom Model Provider: full — LLM_BASE_URL plus LiteLLM backend allow pointing at any OpenAI-compatible endpoint, including local model servers (Ollama, vLLM, SGLang) and proxies.
+- Pricing: Free (MIT, self-hosted); OpenHands Cloud free tier + at-cost usage; Enterprise custom
+- Notes: OpenHands launched in March 2024 as 'OpenDevin' (an open clone of Cognition's Devin), renamed OpenHands mid-2024, and had its GitHub org renamed All-Hands-AI -> OpenHands on 2025-10-20. The 1.0.0 release (Dec 2025) was a ground-up rewrite onto a new 'software-agent-sdk', changing config from TOML to JSON and rebranding 'microagents' to the AgentSkills-standard 'Skills' system. It has a genuine local CLI (`openhands`, installable via `uv tool install openhands` or `pip install openhands`, MIT licensed) that runs as a plain local process by default — Docker is only required for the separate `openhands serve` full-GUI mode, not the terminal CLI/headless mode.
 
 ### Pi
 - Docs: https://pi.dev/docs/latest

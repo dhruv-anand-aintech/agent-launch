@@ -42,8 +42,8 @@
   },
   "hooks": {
     "support": "full",
-    "source_url": "https://cursor.com/changelog#customize-cursor:~:text=You%20can%20now%20add%20and%20manage%20plugins%2C%20skills%2C%20MCPs%2C%20subagents%2C%20rules%2C%20commands%2C%20and%20hooks",
-    "comment": "Customize Cursor documents hook management at user, team, and workspace levels alongside plugins, skills, MCPs, subagents, rules, and commands."
+    "source_url": "https://cursor.com/docs/hooks#hooks:~:text=Hooks%20let%20you%20observe",
+    "comment": "Dedicated hooks surface: sessionStart/sessionEnd, preToolUse/postToolUse/postToolUseFailure, subagentStart/subagentStop, beforeShellExecution/afterShellExecution, beforeMCPExecution/afterMCPExecution, beforeReadFile/afterFileEdit, beforeSubmitPrompt, preCompact, stop, afterAgentResponse/afterAgentThought, Tab hooks, and workspaceOpen. Configured via .cursor/hooks.json at project, user, team, and enterprise levels; cloud agents run project/team/enterprise command-based hooks. Third-party Claude Code hooks are also supported."
   },
   "mcp_servers": {
     "support": "full",
