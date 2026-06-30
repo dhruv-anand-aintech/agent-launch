@@ -26,9 +26,9 @@
   },
   "latest_major_update": {
     "value": "Jun '26",
-    "source_url": "https://github.com/charmbracelet/crush/releases/tag/v0.79.1#source:~:text=Bang%20Bang",
-    "comment": "Latest tagged release v0.79.1 (2026-06-20), \"Bang Bang\" UX release. Crush ships frequent point releases (180+ tags); main branch under active daily development.",
-    "sort_date": "2026-06-20"
+    "source_url": "https://github.com/charmbracelet/crush/releases/tag/v0.81.0#source:~:text=Chat%20scrollbar",
+    "comment": "Latest tagged release v0.81.0 (2026-06-29) is a UX-focused release adding a chat scrollbar and other interface/session improvements.",
+    "sort_date": "2026-06-29"
   },
   "rules": {
     "support": "full",

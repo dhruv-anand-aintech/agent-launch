@@ -792,9 +792,9 @@
     },
     "latest_major_update": {
       "value": "Jun '26",
-      "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.195#source:~:text=Added%20%60CLAUDE_CODE_DISABLE_MOUSE_CLICKS%60",
-      "comment": "Latest release v2.1.195 (June 26, 2026) adds CLAUDE_CODE_DISABLE_MOUSE_CLICKS, exact hook matching for hyphenated identifiers, voice dictation fixes, plugin-consent and plugin enable/disable fixes, background-agent reliability fixes, Linux voice-mode diagnostics, and remote-session startup checklist improvements.",
-      "sort_date": "2026-06-26"
+      "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.197#source:~:text=Introducing%20Claude%20Sonnet%205",
+      "comment": "Latest release v2.1.197 (June 30, 2026) introduces Claude Sonnet 5 as the default model in Claude Code, with native 1M-token context and promotional pricing through August 31, plus smaller reliability fixes from the late-June release line.",
+      "sort_date": "2026-06-30"
     },
     "rules": {
       "support": "full",
@@ -973,9 +973,9 @@
     },
     "latest_major_update": {
       "value": "Jun '26",
-      "source_url": "https://github.com/cline/cline/releases/tag/v4.0.1#source:~:text=Roll%20the%20stable%20VS%20Code%20extension%20back%20to%20the%20pre-SDK-migration%20codebase",
-      "comment": "Latest release v4.0.1 (June 28, 2026) rolls the stable VS Code extension back to the pre-SDK-migration 3.89.2 codebase to resolve regressions reported in 4.0.0 while SDK migration continues on main.",
-      "sort_date": "2026-06-29"
+      "source_url": "https://github.com/cline/cline/releases/tag/v4.0.5#source:~:text=Add%20support%20for%20Claude%20Sonnet%205",
+      "comment": "Latest release v4.0.5 (June 30, 2026) adds Claude Sonnet 5 support across Anthropic, Bedrock, Vertex, Claude Code, SAP AI Core, OpenRouter, and Vercel AI Gateway providers, including model-picker and recommended-model updates.",
+      "sort_date": "2026-06-30"
     },
     "rules": {
       "support": "full",
@@ -1173,9 +1173,9 @@
     },
     "latest_major_update": {
       "value": "Jun '26",
-      "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.142.3#source:~:text=Maintenance-only%20patch%20release%20with%20no%20user-facing%20changes%20since%200.142.2",
-      "comment": "Latest stable Codex CLI release rust-v0.142.3 (June 26, 2026) is a maintenance-only patch with no user-facing changes since 0.142.2.",
-      "sort_date": "2026-06-29"
+      "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.142.4#source:~:text=No%20user-facing%20changes%20were%20identified%20for%20this%20release",
+      "comment": "Latest stable Codex CLI release rust-v0.142.4 (June 29, 2026) is a maintenance-only patch with no identified user-facing changes since rust-v0.142.3.",
+      "sort_date": "2026-06-30"
     },
     "rules": {
       "support": "full",
@@ -1541,9 +1541,9 @@
     },
     "latest_major_update": {
       "value": "Jun '26",
-      "source_url": "https://github.com/charmbracelet/crush/releases/tag/v0.79.1#source:~:text=Bang%20Bang",
-      "comment": "Latest tagged release v0.79.1 (2026-06-20), \"Bang Bang\" UX release. Crush ships frequent point releases (180+ tags); main branch under active daily development.",
-      "sort_date": "2026-06-27"
+      "source_url": "https://github.com/charmbracelet/crush/releases/tag/v0.81.0#source:~:text=Chat%20scrollbar",
+      "comment": "Latest tagged release v0.81.0 (2026-06-29) is a UX-focused release adding a chat scrollbar and other interface/session improvements.",
+      "sort_date": "2026-06-30"
     },
     "rules": {
       "support": "full",
@@ -1925,8 +1925,8 @@
     },
     "latest_major_update": {
       "value": "Jun '26",
-      "source_url": "https://docs.devin.ai/release-notes/2026#june-24-2026:~:text=Start%20Session%20in%20Background",
-      "comment": "June 24, 2026 release notes add start-session-in-background, command-palette pin/unpin, file-tab latest-version affordances, security findings in Ask Devin, repo-rule badges on Lifeguard findings, split-view auto-disable, and usage-analytics Top 10 rankings.",
+      "source_url": "https://docs.devin.ai/release-notes/2026#june-26-2026:~:text=Archive%2FUnarchive%20Sessions%20from%20Command%20Palette",
+      "comment": "June 26, 2026 release notes add command-palette archive/unarchive, run-once automation schedules, MCP installation-out-of-date banners, Blueprint Post Build guidance, readable PR Review labels, and Consumption Dashboard analytics improvements.",
       "sort_date": "2026-06-01"
     },
     "rules": {
@@ -2488,7 +2488,7 @@
       "value": "Jun '26",
       "source_url": "https://github.blog/changelog/2026-02-25-github-copilot-cli-is-now-generally-available/#source:~:text=is%20now%20generally%20available",
       "comment": "Reached general availability for all Copilot subscribers on Feb 25, 2026, adding autopilot mode, /diff and /review commands, cross-session repo memory, and auto-compaction. Later 2026 updates added cloud/local sandboxes (--cloud, /sandbox enable), a unified /settings command, rubber duck critic agent, voice input, and prompt scheduling.",
-      "sort_date": "2026-06-24"
+      "sort_date": "2026-06-30"
     },
     "rules": {
       "support": "full",
@@ -2865,9 +2865,9 @@
     },
     "latest_major_update": {
       "value": "Jun '26",
-      "source_url": "https://goose-docs.ai/blog/2026/05/14/goose-hooks/#source:~:text=goose%20now%20supports%20lifecycle%20hooks",
-      "comment": "Lifecycle hooks (SessionStart, PreToolUse/PostToolUse, BeforeShellExecution, etc. via plugin hooks.json) shipped May 14, 2026. Project moved under the Linux Foundation's Agentic AI Foundation (AAIF) in Dec 2025; repo now also tracked at aaif-goose/goose with block/goose as a mirror/redirect.",
-      "sort_date": "2026-06-29"
+      "source_url": "https://github.com/aaif-goose/goose/releases/tag/v1.39.0#source:~:text=ACP%20method%20for%20managing%20recipes%20and%20UI%20changes",
+      "comment": "Latest AAIF Goose release v1.39.0 (June 25, 2026) adds ACP methods for managing recipes, global config, and session extensions, improves recipe handling in new sessions, and continues post-AAIF migration development.",
+      "sort_date": "2026-06-30"
     },
     "rules": {
       "support": "full",
@@ -3600,7 +3600,7 @@
       "value": "Jun '26",
       "source_url": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.3.54#source:~:text=No%20notable%20changes",
       "comment": "Latest release checked: v7.3.54 (June 23, 2026). Release notes say no notable changes.",
-      "sort_date": "2026-06-29"
+      "sort_date": "2026-06-30"
     },
     "rules": {
       "support": "full",
@@ -4161,9 +4161,9 @@
     },
     "latest_major_update": {
       "value": "Jun '26",
-      "source_url": "https://github.com/XiaomiMiMo/MiMo-Code/releases/tag/v0.1.3#v013:~:text=MiMoCode%20v0.1.3",
-      "comment": "Latest public release captured for this row is v0.1.3 on 2026-06-24.",
-      "sort_date": "2026-06-28"
+      "source_url": "https://github.com/XiaomiMiMo/MiMo-Code/releases/tag/v0.1.4#v014:~:text=MiMoCode%20v0.1.4",
+      "comment": "Latest public release captured for this row is v0.1.4 on 2026-06-29.",
+      "sort_date": "2026-06-30"
     },
     "rules": {
       "support": "full",
@@ -4359,9 +4359,9 @@
     },
     "latest_major_update": {
       "value": "Jun '26",
-      "source_url": "https://github.com/anomalyco/opencode/releases/tag/v1.17.11#source:~:text=Add%20session%20snapshots%20and%20revert%20controls",
-      "comment": "Latest release v1.17.11 (June 25, 2026) adds session snapshots and revert controls, always prints MCP OAuth URLs for manual sign-in, improves desktop tab cycling/dragging and empty-state/session layouts, and fixes prompt drafts, provider dialogs, prompt rollbacks, async attachments, todo docks, and stale tab/session behavior.",
-      "sort_date": "2026-06-29"
+      "source_url": "https://github.com/anomalyco/opencode/releases/tag/v1.17.12#source:~:text=Enable%20adaptive%20thinking%20for%20Claude%20Sonnet%205",
+      "comment": "Latest release v1.17.12 (June 30, 2026) enables adaptive thinking for Claude Sonnet 5, improves MCP content-response handling and OAuth reconnect behavior, and fixes several desktop, chat, and plan-mode issues.",
+      "sort_date": "2026-06-30"
     },
     "rules": {
       "support": "full",
@@ -4555,13 +4555,13 @@
       "value": "Mar '24",
       "source_url": "https://github.com/OpenDevin/OpenDevin/releases#source:~:text=0.6.1",
       "comment": "Launched March 12, 2024 as 'OpenDevin' (replicating Devin). First tagged GitHub release v0.6.1 on 2024-06-04 (earlier 0.1-0.5 history predates the public releases page). Renamed to OpenHands in mid-2024, and the GitHub org All-Hands-AI was renamed to OpenHands on 2025-10-20.",
-      "sort_date": "2024-03-01"
+      "sort_date": "2024-06-04"
     },
     "latest_major_update": {
       "value": "Jun '26",
-      "source_url": "https://github.com/OpenHands/OpenHands/releases#source:~:text=1.8.0",
-      "comment": "v1.8.0 (June 10, 2026). The 1.0.0 release (Dec 16, 2025) was a major rewrite onto the new 'software-agent-sdk', changing config format from TOML to JSON, switching MCP config format, and rebranding microagents to 'Skills' (AgentSkills standard).",
-      "sort_date": "2026-06-01"
+      "source_url": "https://github.com/OpenHands/OpenHands/releases/tag/cloud-1.40.0#source:~:text=Add%20full%20Git%20history%20user%20setting",
+      "comment": "Latest public OpenHands release is cloud-1.40.0 (June 26, 2026), adding a full Git history user setting plus follow-up cloud fixes. The local/self-hosted 1.8.0 release remains the latest non-cloud semver release.",
+      "sort_date": "2026-06-30"
     },
     "rules": {
       "support": "full",
@@ -4749,13 +4749,13 @@
       "value": "May '26",
       "source_url": "https://github.com/earendil-works/pi/blob/main/packages/coding-agent/CHANGELOG.md#changelog:~:text=0.74.0",
       "comment": "Pi changelog shows first listed public release as 0.74.0 dated 2026-05-07.",
-      "sort_date": "2026-05-01"
+      "sort_date": "2025-12-02"
     },
     "latest_major_update": {
       "value": "Jun '26",
-      "source_url": "https://github.com/earendil-works/pi/releases/tag/v0.80.2#source:~:text=ApiKeyCredential%20to%20use%20the%20auth.json-compatible%20discriminator",
-      "comment": "Latest release v0.80.2 (June 23, 2026) aligns API-key credential discriminators with `auth.json`, renames inherited shell execution option types, fixes Anthropic-compatible custom-model metadata, restores request-scoped auth/base-URL resolution, and restores legacy stream aliases and runtime compatibility fallback paths.",
-      "sort_date": "2026-06-01"
+      "source_url": "https://github.com/earendil-works/pi/releases/tag/v0.80.3#source:~:text=Anthropic%20Claude%20Sonnet%205%20support",
+      "comment": "Latest release v0.80.3 (June 30, 2026) adds Anthropic Claude Sonnet 5 support through inherited Anthropic-compatible and Bedrock provider catalogs with adaptive thinking enabled.",
+      "sort_date": "2026-06-30"
     },
     "rules": {
       "support": "full",
@@ -4940,13 +4940,13 @@
       "value": "Jun '25",
       "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.19.2#source:~:text=Release%20v0.19.2",
       "comment": "GitHub repo created 2025-06-26. Earliest releases (v0.0.5+) shortly after. Current latest release: v0.19.2 (2026-06-24).",
-      "sort_date": "2025-06-01"
+      "sort_date": "2025-08-01"
     },
     "latest_major_update": {
       "value": "Jun '26",
       "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.19.3#source:~:text=feat(memory)%3A%20add%20a%20git-shared%20team%20memory%20tier",
       "comment": "Latest release v0.19.3 (June 28, 2026) adds daemon workspace voice/control APIs, skill usage stats, auto-generated-skill confirmation, OpenAI streaming inactivity timeout, git-shared team memory, extension creator skill, @extension autocomplete, web-shell MCP resource browsing, workspace session sidebar, /model --vision fallback model selection, and many CLI/core/web-shell fixes.",
-      "sort_date": "2026-06-01"
+      "sort_date": "2026-06-30"
     },
     "rules": {
       "support": "full",
@@ -5293,13 +5293,14 @@
     "released_in": {
       "value": "Mid-2025",
       "source_url": "https://github.com/RooCodeInc/Roo-Code/releases/tag/v3.54.0#release-v3540:~:text=Release%20v3.54.0",
-      "comment": "Forked from Cline. Earliest releases ~mid-2025. Reached v3.54.0 by shutdown on May 15, 2026."
+      "comment": "Forked from Cline. Earliest releases ~mid-2025. Reached v3.54.0 by shutdown on May 15, 2026.",
+      "sort_date": "2025-03-19"
     },
     "latest_major_update": {
       "value": "May '26",
       "source_url": "https://github.com/RooCodeInc/Roo-Code/releases/tag/v3.54.0#release-v3540:~:text=Release%20v3.54.0",
       "comment": "Final release v3.54.0 on May 15, 2026 (shutdown/sunsetting release). Repository archived, read-only.",
-      "sort_date": "2026-05-01"
+      "sort_date": "2026-05-15"
     },
     "rules": {
       "support": "full",

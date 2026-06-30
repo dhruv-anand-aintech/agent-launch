@@ -29,8 +29,8 @@
   },
   "latest_major_update": {
     "value": "Jun '26",
-    "source_url": "https://github.com/anomalyco/opencode/releases/tag/v1.17.11#source:~:text=Add%20session%20snapshots%20and%20revert%20controls",
-    "comment": "Latest release v1.17.11 (June 25, 2026) adds session snapshots and revert controls, always prints MCP OAuth URLs for manual sign-in, improves desktop tab cycling/dragging and empty-state/session layouts, and fixes prompt drafts, provider dialogs, prompt rollbacks, async attachments, todo docks, and stale tab/session behavior."
+    "source_url": "https://github.com/anomalyco/opencode/releases/tag/v1.17.12#source:~:text=Enable%20adaptive%20thinking%20for%20Claude%20Sonnet%205",
+    "comment": "Latest release v1.17.12 (June 30, 2026) enables adaptive thinking for Claude Sonnet 5, improves MCP content-response handling and OAuth reconnect behavior, and fixes several desktop, chat, and plan-mode issues."
   },
   "rules": {
     "support": "full",

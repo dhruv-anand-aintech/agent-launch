@@ -27,8 +27,8 @@
   },
   "latest_major_update": {
     "value": "Jun '26",
-    "source_url": "https://github.com/cline/cline/releases/tag/v4.0.1#source:~:text=Roll%20the%20stable%20VS%20Code%20extension%20back%20to%20the%20pre-SDK-migration%20codebase",
-    "comment": "Latest release v4.0.1 (June 28, 2026) rolls the stable VS Code extension back to the pre-SDK-migration 3.89.2 codebase to resolve regressions reported in 4.0.0 while SDK migration continues on main."
+    "source_url": "https://github.com/cline/cline/releases/tag/v4.0.5#source:~:text=Add%20support%20for%20Claude%20Sonnet%205",
+    "comment": "Latest release v4.0.5 (June 30, 2026) adds Claude Sonnet 5 support across Anthropic, Bedrock, Vertex, Claude Code, SAP AI Core, OpenRouter, and Vercel AI Gateway providers, including model-picker and recommended-model updates."
   },
   "rules": {
     "support": "full",

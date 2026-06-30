@@ -29,8 +29,8 @@
   },
   "latest_major_update": {
     "value": "Jun '26",
-    "source_url": "https://docs.devin.ai/release-notes/2026#june-24-2026:~:text=Start%20Session%20in%20Background",
-    "comment": "June 24, 2026 release notes add start-session-in-background, command-palette pin/unpin, file-tab latest-version affordances, security findings in Ask Devin, repo-rule badges on Lifeguard findings, split-view auto-disable, and usage-analytics Top 10 rankings."
+    "source_url": "https://docs.devin.ai/release-notes/2026#june-26-2026:~:text=Archive%2FUnarchive%20Sessions%20from%20Command%20Palette",
+    "comment": "June 26, 2026 release notes add command-palette archive/unarchive, run-once automation schedules, MCP installation-out-of-date banners, Blueprint Post Build guidance, readable PR Review labels, and Consumption Dashboard analytics improvements."
   },
   "rules": {
     "support": "full",
