@@ -25,8 +25,8 @@
   },
   "latest_major_update": {
     "value": "May '26",
-    "source_url": "https://goose-docs.ai/blog/2026/05/14/goose-hooks/#source:~:text=goose%20now%20supports%20lifecycle%20hooks",
-    "comment": "Lifecycle hooks (SessionStart, PreToolUse/PostToolUse, BeforeShellExecution, etc. via plugin hooks.json) shipped May 14, 2026. Project moved under the Linux Foundation's Agentic AI Foundation (AAIF) in Dec 2025; repo now also tracked at aaif-goose/goose with block/goose as a mirror/redirect."
+    "source_url": "https://github.com/aaif-goose/goose/releases/tag/v1.39.0#source:~:text=ACP%20method%20for%20managing%20recipes%20and%20UI%20changes",
+    "comment": "Latest AAIF Goose release v1.39.0 (June 25, 2026) adds ACP methods for managing recipes, global config, and session extensions, improves recipe handling in new sessions, and continues post-AAIF migration development."
   },
   "rules": {
     "support": "full",

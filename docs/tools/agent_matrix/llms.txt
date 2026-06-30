@@ -1,6 +1,6 @@
 # Coding Agent Feature Matrix
 > Compare 30 coding agents, CLIs, and IDEs across features.
-> https://compare.ainorthstar.tech | Updated 2026-06-29
+> https://compare.ainorthstar.tech | Updated 2026-07-01
 
 Agent                   Rel    FF     Fre   NoA   Oth   Rul   Skl   Hks   MCP   Cmd   Gol   Sub   Trn   Mod   App   San   Res   Con   Hdl   Fmt   Sta   Tel   Hst  BYOM
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------

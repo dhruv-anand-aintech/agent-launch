@@ -25,8 +25,8 @@
   },
   "latest_major_update": {
     "value": "Jun '26",
-    "source_url": "https://github.com/earendil-works/pi/releases/tag/v0.80.2#source:~:text=ApiKeyCredential%20to%20use%20the%20auth.json-compatible%20discriminator",
-    "comment": "Latest release v0.80.2 (June 23, 2026) aligns API-key credential discriminators with `auth.json`, renames inherited shell execution option types, fixes Anthropic-compatible custom-model metadata, restores request-scoped auth/base-URL resolution, and restores legacy stream aliases and runtime compatibility fallback paths."
+    "source_url": "https://github.com/earendil-works/pi/releases/tag/v0.80.3#source:~:text=Anthropic%20Claude%20Sonnet%205%20support",
+    "comment": "Latest release v0.80.3 (June 30, 2026) adds Anthropic Claude Sonnet 5 support through inherited Anthropic-compatible and Bedrock provider catalogs with adaptive thinking enabled."
   },
   "rules": {
     "support": "full",

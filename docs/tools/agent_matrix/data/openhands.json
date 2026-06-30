@@ -31,8 +31,8 @@
   },
   "latest_major_update": {
     "value": "Jun '26",
-    "source_url": "https://github.com/OpenHands/OpenHands/releases#source:~:text=1.8.0",
-    "comment": "v1.8.0 (June 10, 2026). The 1.0.0 release (Dec 16, 2025) was a major rewrite onto the new 'software-agent-sdk', changing config format from TOML to JSON, switching MCP config format, and rebranding microagents to 'Skills' (AgentSkills standard)."
+    "source_url": "https://github.com/OpenHands/OpenHands/releases/tag/cloud-1.40.0#source:~:text=Add%20full%20Git%20history%20user%20setting",
+    "comment": "Latest public OpenHands release is cloud-1.40.0 (June 26, 2026), adding a full Git history user setting plus follow-up cloud fixes. The local/self-hosted 1.8.0 release remains the latest non-cloud semver release."
   },
   "rules": {
     "support": "full",
