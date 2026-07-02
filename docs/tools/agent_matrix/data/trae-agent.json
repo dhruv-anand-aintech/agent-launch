@@ -1,0 +1,190 @@
+{
+  "name": "Trae Agent",
+  "links": {
+    "docs": "https://github.com/bytedance/trae-agent",
+    "github": "https://github.com/bytedance/trae-agent",
+    "website": "https://www.trae.ai/",
+    "slug": "trae-agent"
+  },
+  "form_factor": {
+    "values": [
+      "CLI"
+    ],
+    "source_url": "https://github.com/bytedance/trae-agent#usage:~:text=trae-cli%20run%20%22Create%20a%20hello%20world%20Python%20script%22",
+    "comment": "Research-friendly CLI coding agent. Per-form-factor links: CLI: https://github.com/bytedance/trae-agent#usage.",
+    "links": {
+      "CLI": "https://github.com/bytedance/trae-agent#usage"
+    }
+  },
+  "released_in": {
+    "value": "Jun '25",
+    "source_url": "https://api.github.com/repos/bytedance/trae-agent#created-at:~:text=%222025-06-13T12%3A05%3A15Z%22",
+    "comment": "GitHub repository created June 13, 2025; no published GitHub releases as of this run."
+  },
+  "latest_major_update": {
+    "value": "No releases",
+    "source_url": "https://github.com/bytedance/trae-agent#about:~:text=Trae%20Agent%20is%20an%20LLM-based%20agent%20for%20general%20purpose%20software%20engineering%20tasks",
+    "comment": "No GitHub releases are published. Current main README describes active development, Python 3.12+, CLI task execution, interactive mode, trajectory recording, YAML config, MCP services, Docker execution flags, and multi-provider support."
+  },
+  "rules": {
+    "support": "partial",
+    "source_url": "https://github.com/bytedance/trae-agent#yaml-configuration-recommended:~:text=trae_config.yaml",
+    "comment": "YAML configuration can define agent model, max steps, and tool set, but no AGENTS.md-style repository instruction file is documented."
+  },
+  "skills": {
+    "support": "none",
+    "source_url": "https://github.com/bytedance/trae-agent#features:~:text=Rich%20Tool%20Ecosystem",
+    "comment": "No reusable skill system documented; roadmap focuses on SDK, sandbox, trajectory analysis, MCP, and multi-agent support."
+  },
+  "hooks": {
+    "support": "none",
+    "source_url": "https://github.com/bytedance/trae-agent#features:~:text=Trajectory%20Recording",
+    "comment": "No lifecycle hooks documented."
+  },
+  "mcp_servers": {
+    "support": "partial",
+    "source_url": "https://github.com/bytedance/trae-agent#mcp-services-optional:~:text=To%20enable%20Model%20Context%20Protocol%20(MCP)%20services",
+    "comment": "README documents optional `mcp_servers` configuration; roadmap says MCP/tool ecosystem expansion is still planned."
+  },
+  "custom_commands": {
+    "support": "none",
+    "source_url": "https://github.com/bytedance/trae-agent#basic-commands:~:text=Basic%20Commands",
+    "comment": "Only built-in CLI commands (`run`, `interactive`, `show-config`, `tools`) are documented."
+  },
+  "goal_command": {
+    "support": "none",
+    "source_url": "https://github.com/bytedance/trae-agent#basic-commands:~:text=trae-cli%20run",
+    "comment": "No persistent `/goal` or auto-continue-until-complete command documented."
+  },
+  "subagents": {
+    "support": "none",
+    "source_url": "https://github.com/bytedance/trae-agent/blob/main/docs/roadmap.md#advanced-agentic-flows-and-multi-agent-support:~:text=Develop%20sophisticated%20agent%20orchestration%20capabilities",
+    "comment": "Multi-agent support is listed on the roadmap, not documented as current functionality."
+  },
+  "model_selection": {
+    "support": "full",
+    "source_url": "https://github.com/bytedance/trae-agent#provider-specific-examples:~:text=--provider%20openai%20--model%20gpt-4o",
+    "comment": "Supports `--provider`, `--model`, `--model-base-url`, and config-file model providers."
+  },
+  "approval_mode": {
+    "support": "none",
+    "source_url": "https://github.com/bytedance/trae-agent#usage:~:text=trae-cli%20run",
+    "comment": "No tool approval/autonomy mode flags documented."
+  },
+  "sandbox_mode": {
+    "support": "partial",
+    "source_url": "https://github.com/bytedance/trae-agent#usage:~:text=--docker-image",
+    "comment": "`trae-cli run` supports Docker image/container/Dockerfile flags, but no default local sandbox mode."
+  },
+  "resume": {
+    "support": "none",
+    "source_url": "https://github.com/bytedance/trae-agent#basic-commands:~:text=interactive",
+    "comment": "No resume/session ID command documented."
+  },
+  "continue": {
+    "support": "none",
+    "source_url": "https://github.com/bytedance/trae-agent#basic-commands:~:text=interactive",
+    "comment": "No continue-latest command documented."
+  },
+  "non_interactive": {
+    "support": "full",
+    "source_url": "https://github.com/bytedance/trae-agent#basic-commands:~:text=trae-cli%20run%20%22Create%20a%20hello%20world%20Python%20script%22",
+    "comment": "`trae-cli run` executes a single task and exits."
+  },
+  "output_format": {
+    "support": "partial",
+    "source_url": "https://github.com/bytedance/trae-agent#trajectory-recording:~:text=trajectory_YYYYMMDD_HHMMSS.json",
+    "comment": "No stdout JSON mode documented, but trajectory files capture LLM interactions, agent steps, tool usage, and metadata as JSON."
+  },
+  "statusline": {
+    "support": "none",
+    "source_url": "https://github.com/bytedance/trae-agent#features:~:text=CLI%20interface",
+    "comment": "No configurable statusline documented."
+  },
+  "telemetry": {
+    "support": "none",
+    "source_url": "https://github.com/bytedance/trae-agent#trajectory-recording:~:text=Trajectory%20Recording",
+    "comment": "No product telemetry collection documented; trajectory recording is local/debug oriented."
+  },
+  "custom_model_provider": {
+    "support": "full",
+    "source_url": "https://github.com/bytedance/trae-agent#features:~:text=OpenAI%2C%20Anthropic%2C%20Doubao%2C%20Azure%2C%20OpenRouter%2C%20Ollama%20and%20Google%20Gemini",
+    "comment": "Supports OpenAI, Anthropic, Doubao, Azure, OpenRouter, Ollama, Google Gemini, custom base URLs, and config-file providers."
+  },
+  "pricing": {
+    "value": "Free (MIT), BYOK/provider costs",
+    "source_url": "https://github.com/bytedance/trae-agent#license:~:text=MIT%20License",
+    "comment": "Trae Agent is MIT-licensed. Users provide provider API keys or local Ollama models."
+  },
+  "some_free_usage": {
+    "support": "full",
+    "source_url": "https://github.com/bytedance/trae-agent#features:~:text=Ollama",
+    "comment": "Local Ollama provider support enables account-free/free local model usage."
+  },
+  "no_account_required": {
+    "support": "full",
+    "source_url": "https://github.com/bytedance/trae-agent#features:~:text=Ollama",
+    "comment": "Can run with local Ollama models without a hosted Trae account."
+  },
+  "can_use_other_subscriptions": {
+    "support": "full",
+    "source_url": "https://github.com/bytedance/trae-agent#features:~:text=OpenAI%2C%20Anthropic%2C%20Doubao%2C%20Azure%2C%20OpenRouter%2C%20Ollama%20and%20Google%20Gemini",
+    "comment": "Bring-your-own provider/API keys for multiple providers."
+  },
+  "hosted_agent": {
+    "support": "none",
+    "source_url": "https://github.com/bytedance/trae-agent#usage:~:text=trae-cli",
+    "comment": "Local CLI agent; no hosted/cloud agent platform documented."
+  },
+  "transcripts": {
+    "support": "full",
+    "source_url": "https://github.com/bytedance/trae-agent#trajectory-recording:~:text=Trajectory%20files%20contain%20LLM%20interactions%2C%20agent%20steps%2C%20tool%20usage%2C%20and%20execution%20metadata",
+    "comment": "Trajectory recording is first-class, with auto-generated or custom trajectory JSON files."
+  },
+  "keyboard_shortcuts": {
+    "support": "unknown",
+    "source_url": "https://docs.example.com/#documentation:~:text=unknown",
+    "comment": "Research needed. Public docs did not expose enough detail in this run."
+  },
+  "theme_customization": {
+    "support": "none",
+    "source_url": "https://github.com/bytedance/trae-agent#basic-commands:~:text=interactive",
+    "comment": "CLI/interactive interface has no documented theme customization."
+  },
+  "auto_save": {
+    "support": "unknown",
+    "source_url": "https://docs.example.com/#documentation:~:text=unknown",
+    "comment": "Research needed. Public docs did not expose enough detail in this run."
+  },
+  "debugging_output": {
+    "support": "full",
+    "source_url": "https://github.com/bytedance/trae-agent#trajectory-recording:~:text=for%20debugging%20and%20analysis",
+    "comment": "Trajectory files and `show-config` support debugging/analysis."
+  },
+  "context_window": {
+    "support": "partial",
+    "source_url": "https://github.com/bytedance/trae-agent#yaml-configuration-recommended:~:text=max_tokens",
+    "comment": "Model config includes `max_tokens`, but no dedicated context-window management/compaction docs were found."
+  },
+  "code_formatting": {
+    "support": "unknown",
+    "source_url": "https://docs.example.com/#documentation:~:text=unknown",
+    "comment": "Research needed. Public docs did not expose enough detail in this run."
+  },
+  "git_integration": {
+    "support": "partial",
+    "source_url": "https://github.com/bytedance/trae-agent#usage:~:text=--patch-path",
+    "comment": "Supports patch generation/application paths and file editing, but no first-class git commit/PR workflow documented."
+  },
+  "performance_mode": {
+    "support": "unknown",
+    "source_url": "https://docs.example.com/#documentation:~:text=unknown",
+    "comment": "Research needed. Public docs did not expose enough detail in this run."
+  },
+  "ui_customization": {
+    "support": "partial",
+    "source_url": "https://github.com/bytedance/trae-agent#usage:~:text=--console-type%20%5Bsimple%7Crich%5D",
+    "comment": "CLI supports simple/rich console types; no broader UI customization documented."
+  },
+  "notes": "Official ByteDance open-source CLI agent for software engineering research and development. Verified locally from documented `uv sync --all-extras`: `trae-cli --help`, `trae-cli run --help`, and `trae-cli interactive --help` work. Added to agent-launch as `--agent trae` targeting `trae-cli`."
+}

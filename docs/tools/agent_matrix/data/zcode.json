@@ -1,0 +1,184 @@
+{
+  "name": "ZCode",
+  "links": {
+    "docs": "https://zcode.z.ai/en/docs",
+    "github": "",
+    "website": "https://zcode.z.ai/en",
+    "slug": "zcode"
+  },
+  "form_factor": {
+    "values": [
+      "IDE",
+      "Desktop App",
+      "Mobile"
+    ],
+    "source_url": "https://zcode.z.ai/en/docs/install#download:~:text=Currently%20supported%20platforms%20include%20macOS%20(Apple%20Silicon%20%2F%20Intel)%20and%20Windows",
+    "comment": "Desktop agentic development environment for macOS and Windows, Linux beta group, plus mobile Remote Control for directing an open desktop workspace. Per-form-factor links: IDE: https://zcode.z.ai/en; Desktop App: https://zcode.z.ai/en/docs/install; Mobile: https://zcode.z.ai/en/docs/remote-control.",
+    "links": {
+      "IDE": "https://zcode.z.ai/en",
+      "Desktop App": "https://zcode.z.ai/en/docs/install",
+      "Mobile": "https://zcode.z.ai/en/docs/remote-control"
+    }
+  },
+  "released_in": {
+    "value": "2026",
+    "source_url": "https://zcode.z.ai/en/docs#release-highlights:~:text=In-house%20ZCode%20Agent",
+    "comment": "Public ZCode docs and desktop downloads are live in 2026; exact public launch date not confirmed in accessible docs."
+  },
+  "latest_major_update": {
+    "value": "Jul '26",
+    "source_url": "https://zcode.z.ai/en/changelog#release-v322:~:text=Release%20v3.2.2",
+    "comment": "Latest public ZCode release v3.2.2 (July 1, 2026) adds built-in plugin update/uninstall management, file-rewind safety summaries, improved prompt command trigger suggestions, more accurate subagent/tool usage counts, clearer external-tool errors, stopped-goal status visibility, spacing/text fixes, and stronger sensitive-data redaction in log export."
+  },
+  "rules": {
+    "support": "full",
+    "source_url": "https://zcode.z.ai/en/docs/agents#project-instructions-file:~:text=ZCode%20currently%20reads%20two%20sources",
+    "comment": "Reads user global `~/.zcode/AGENTS.md` and workspace `AGENTS.md`; workspace instructions are primary and CLAUDE.md is only a one-time onboarding migration source."
+  },
+  "skills": {
+    "support": "full",
+    "source_url": "https://zcode.z.ai/en/docs/skill#create-a-skill:~:text=~%2F.zcode%2Fskills%2F%3Cskill-name%3E%2FSKILL.md",
+    "comment": "First-class `SKILL.md` skills under `~/.zcode/skills/<skill-name>/SKILL.md`, with Settings management and import from other agents."
+  },
+  "hooks": {
+    "support": "partial",
+    "source_url": "https://zcode.z.ai/en/docs/legacy/plugin#plugin-types:~:text=Hook%20Hooks%20that%20auto-execute%20on%20specific%20events",
+    "comment": "Plugin system advertises Hook plugin types, but current public docs do not expose a full standalone hook API like some CLIs."
+  },
+  "mcp_servers": {
+    "support": "full",
+    "source_url": "https://zcode.z.ai/en/docs/mcp-services#create-an-mcp-server:~:text=stdio%20(SSE%20and%20HTTP%20remote%20servers%20are%20also%20supported)",
+    "comment": "Supports stdio, HTTP, and SSE MCP servers, full JSON config import, env vars/headers, plugin MCP servers, and importing MCP config from Claude Code, Codex CLI, OpenCode, and `.agents`."
+  },
+  "custom_commands": {
+    "support": "full",
+    "source_url": "https://zcode.z.ai/en/docs/commands#create-a-command:~:text=Open%20Commands%20in%20ZCode%20settings%2C%20then%20create%20a%20new%20command",
+    "comment": "User/workspace custom slash commands can be created in settings and invoked from `/` in ZCode Agent."
+  },
+  "goal_command": {
+    "support": "full",
+    "source_url": "https://zcode.z.ai/en/docs/goal#set-and-manage-a-goal:~:text=%2Fgoal%20%3Cobjective%3E%20Set%20the%20session%20goal",
+    "comment": "Built-in `/goal` supports set, replace, pause, resume, and clear; the agent automatically verifies each round and continues until the goal is complete."
+  },
+  "subagents": {
+    "support": "full",
+    "source_url": "https://zcode.z.ai/en/docs/subagents#custom-subagents-beta:~:text=You%20can%20now%20create%20your%20own%20subagents%20from%20Settings",
+    "comment": "Built-in general-purpose and Explore subagents plus beta user-level custom subagents under `~/.zcode/agents/<name>.md`, with custom model/tool permissions/instructions."
+  },
+  "model_selection": {
+    "support": "full",
+    "source_url": "https://zcode.z.ai/en/docs/configuration#method-2-model-selector:~:text=click%20the%20model%20name%20inside%20the%20chat%20box%20to%20open%20the%20model%20selector",
+    "comment": "Model selector and model settings support Z.ai, BigModel, GLM Coding Plan, and API-key providers."
+  },
+  "approval_mode": {
+    "support": "full",
+    "source_url": "https://zcode.z.ai/en/docs/agents#execution-modes:~:text=The%20ZCode%20Agent%20execution%20mode%20menu%20currently%20includes%20the%20following%20modes",
+    "comment": "Execution modes include Default, Confirm Before Changes, and Auto Edit; safety confirmation pauses risky actions for approval."
+  },
+  "sandbox_mode": {
+    "support": "partial",
+    "source_url": "https://zcode.z.ai/en/docs/remote-development#remote-development:~:text=run%20a%20workspace%20inside%20a%20remote%20host%20or%20a%20local%20container",
+    "comment": "Remote development can run workspaces in SSH hosts or local Docker containers; no standalone local sandbox flag is documented."
+  },
+  "resume": {
+    "support": "partial",
+    "source_url": "https://zcode.z.ai/en/docs/agents#workspace-entry:~:text=task%20list",
+    "comment": "Desktop task list/conversation history supports returning to prior work, but no CLI-style `--resume` flag is documented."
+  },
+  "continue": {
+    "support": "partial",
+    "source_url": "https://zcode.z.ai/en/docs/remote-control#control-model:~:text=Confirm%2C%20continue%2C%20or%20stop%20a%20long-running%20task",
+    "comment": "Existing tasks can be continued from desktop or mobile Remote Control; no headless continue command is documented."
+  },
+  "non_interactive": {
+    "support": "none",
+    "source_url": "https://zcode.z.ai/en/docs/install#verify-installation:~:text=Open%20the%20app%20and%20complete%20sign-in",
+    "comment": "ZCode is a desktop ADE; no local headless CLI entry point was found."
+  },
+  "output_format": {
+    "support": "none",
+    "source_url": "https://zcode.z.ai/en/docs/agents#workspace-entry:~:text=chat%20input",
+    "comment": "No JSON/structured output mode documented for the desktop agent."
+  },
+  "statusline": {
+    "support": "partial",
+    "source_url": "https://zcode.z.ai/en/docs/goal#live-tracking-in-the-summary-panel:~:text=A%20goal%20card%20appears%20in%20the%20top-right%20summary%20panel",
+    "comment": "Goal summary panel shows status, elapsed time, tokens, and iteration count, but no custom statusline API is documented."
+  },
+  "telemetry": {
+    "support": "unknown",
+    "source_url": "https://zcode.z.ai/en/docs/usage-stats#usage-stats:~:text=Usage%20Stats%20shows%20how%20ZCode%20is%20being%20used",
+    "comment": "Usage Stats exists; no telemetry opt-out/control docs found."
+  },
+  "custom_model_provider": {
+    "support": "full",
+    "source_url": "https://zcode.z.ai/en/docs/configuration#other-ways-to-connect:~:text=Connect%20compatible%20model%20services%20through%20the%20Anthropic%20%2F%20OpenAI%20protocols",
+    "comment": "Supports third-party compatible model services through Anthropic/OpenAI protocols and API key mode."
+  },
+  "pricing": {
+    "value": "5-day free trial; GLM Coding Plan or API/provider billing",
+    "source_url": "https://zcode.z.ai/en/docs#glm-52-and-exclusive-benefits:~:text=First-time%20ZCode%20users%20get%205%20days%20of%20free%20benefits",
+    "comment": "First-time ZCode users get a 5-day free trial; GLM Coding Plan subscribers get limited-time ~1.5x quota in ZCode through July 31, 2026. Longer-term use depends on GLM Coding Plan/API/provider billing."
+  },
+  "some_free_usage": {
+    "support": "full",
+    "source_url": "https://zcode.z.ai/en/docs#glm-52-and-exclusive-benefits:~:text=First-time%20ZCode%20users%20get%205%20days%20of%20free%20benefits",
+    "comment": "First-time ZCode users receive a 5-day free trial with daily GLM-5.2/GLM-5-Turbo token benefits."
+  },
+  "hosted_agent": {
+    "support": "none",
+    "source_url": "https://zcode.z.ai/en/docs/remote-control#remote-control:~:text=the%20actual%20code%20changes%2C%20commands%2C%20and%20project%20environment%20stay%20on%20the%20desktop",
+    "comment": "Runtime remains the desktop workspace or remote SSH/Docker target; mobile remote only controls the open desktop workspace."
+  },
+  "transcripts": {
+    "support": "partial",
+    "source_url": "https://zcode.z.ai/en/docs/agents#workspace-entry:~:text=task%20list",
+    "comment": "Task list/conversation history is first-class in the desktop UI, but public docs do not expose disk transcript paths."
+  },
+  "keyboard_shortcuts": {
+    "support": "full",
+    "source_url": "https://zcode.z.ai/en/docs/ADE-tools#command-center:~:text=Press%20Command%20%2B%20K",
+    "comment": "Command Center is opened with Command+K; docs include keyboard shortcut support."
+  },
+  "theme_customization": {
+    "support": "full",
+    "source_url": "https://zcode.z.ai/en/docs/ADE-tools#command-center:~:text=switch%20theme",
+    "comment": "Command Center includes switch-theme actions."
+  },
+  "auto_save": {
+    "support": "unknown",
+    "source_url": "https://docs.example.com/#documentation:~:text=unknown",
+    "comment": "Research needed. Public docs did not expose enough detail in this run."
+  },
+  "debugging_output": {
+    "support": "partial",
+    "source_url": "https://zcode.z.ai/en/changelog#release-v322:~:text=Log%20export%20now%20applies%20more%20thorough%20sensitive%20data%20redaction",
+    "comment": "Log export exists and was improved in v3.2.2; public docs do not expose a full debug/verbose mode."
+  },
+  "context_window": {
+    "support": "full",
+    "source_url": "https://zcode.z.ai/en/docs#core-capabilities:~:text=stable%201M%20context",
+    "comment": "ZCode is built around GLM-5.2 long-context coding workflows and usage stats show context-window breakdown."
+  },
+  "code_formatting": {
+    "support": "unknown",
+    "source_url": "https://docs.example.com/#documentation:~:text=unknown",
+    "comment": "Research needed. Public docs did not expose enough detail in this run."
+  },
+  "git_integration": {
+    "support": "full",
+    "source_url": "https://zcode.z.ai/en/docs/agents#workspace-entry:~:text=Git%20branch%20state",
+    "comment": "ZCode Agent understands Git branch state and combines workspace state, tool results, and Git changes during tasks."
+  },
+  "performance_mode": {
+    "support": "partial",
+    "source_url": "https://zcode.z.ai/en/docs/agents#execution-modes:~:text=Execution%20modes%20control",
+    "comment": "Execution modes and model selector can trade off confirmation/autonomy and model choice, but no named performance mode is documented."
+  },
+  "ui_customization": {
+    "support": "partial",
+    "source_url": "https://zcode.z.ai/en/changelog#release-v314:~:text=Interface%20scaling%20supports%20a%20larger%20magnification%20ratio",
+    "comment": "Desktop UI supports interface scaling and theme switching; deeper layout customization is not documented."
+  },
+  "notes": "Z.ai/Zhipu desktop ADE with in-house ZCode Agent, GLM-5.2 focus, AGENTS.md, skills, commands, MCP, subagents, plugins, goal mode, mobile remote control, bot channels, and remote SSH/Docker development. No local CLI command was found, so no agent-launch backend was added."
+}

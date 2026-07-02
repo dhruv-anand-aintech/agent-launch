@@ -28,9 +28,9 @@
     "comment": "First publicly demoed March 2024. Made Generally Available (GA) on December 10, 2024."
   },
   "latest_major_update": {
-    "value": "Jun '26",
-    "source_url": "https://docs.devin.ai/release-notes/2026#june-26-2026:~:text=Archive%2FUnarchive%20Sessions%20from%20Command%20Palette",
-    "comment": "June 26, 2026 release notes add command-palette archive/unarchive, run-once automation schedules, MCP installation-out-of-date banners, Blueprint Post Build guidance, readable PR Review labels, and Consumption Dashboard analytics improvements."
+    "value": "Jul '26",
+    "source_url": "https://docs.devin.ai/release-notes/2026#july-1-2026:~:text=Network%20Access%20Requests%20In%20network-restricted%20sessions%2C%20Devin%20can%20now%20request%20access%20to%20specific%20domains",
+    "comment": "July 1, 2026 release notes add network access requests for restricted sessions, PR-link preferences, persisted default model selection, Slack bidirectional thread sync and bang-command improvements, MCP read-only mode, webhook setup improvements, skills analytics, ACU audit trails, redesigned environments, cross-platform repository cloning, and numerous review/analytics/UI fixes."
   },
   "rules": {
     "support": "full",

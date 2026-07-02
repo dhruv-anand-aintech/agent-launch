@@ -286,15 +286,16 @@ def enrich_github_dates(rows: list[dict]) -> None:
 
         owner, repo_name = repo
         try:
-            oldest_release = fetch_oldest_release_date(owner, repo_name, token)
+            released = row.get("released_in")
+            needs_released_sort = not (isinstance(released, dict) and released.get("sort_date"))
+            oldest_release = fetch_oldest_release_date(owner, repo_name, token) if needs_released_sort else None
             latest_commit = fetch_latest_commit_date(owner, repo_name, token)
-            if not oldest_release:
+            if needs_released_sort and not oldest_release:
                 oldest_release = fetch_repo_created_at(owner, repo_name, token)
         except Exception as exc:
             print(f"  warn: {name}: GitHub dates skipped ({exc})", file=sys.stderr)
             continue
 
-        released = row.get("released_in")
         if isinstance(released, dict) and oldest_release:
             _set_sort_date(released, oldest_release)
 

@@ -44,6 +44,7 @@ AGENTS: dict[str, AgentSpec] = {
     "openhands": AgentSpec("openhands", "", "", "pro"),
     "pi": AgentSpec("pi", "opencode-go/deepseek-v4-flash", "opencode-go/kimi-k2.6", "pro"),
     "qwen": AgentSpec("qwen", "", "", "pro"),
+    "trae": AgentSpec("trae-cli", "", "", "pro"),
     "cursor": AgentSpec("agent", "composer-2.5-fast", "composer-2.5-fast", "fast"),
 }
 
@@ -74,6 +75,7 @@ DEFAULT_AGENT_ORDER = (
     "mimo",
     "pi",
     "qwen",
+    "trae",
     "goose",
     "copilot",
     "crush",
@@ -149,6 +151,7 @@ MODEL_FLAG_AGENTS = {
     "opencode",
     "pi",
     "qwen",
+    "trae",
     "cursor",
 }
 
@@ -469,6 +472,12 @@ def mode_flags(agent: str, mode: str, non_interactive: bool) -> list[str]:
             "plan": ["--approval-mode", "plan"],
             "auto": ["--approval-mode", "auto_edit"],
             "danger": ["--yolo"],
+        },
+        "trae": {
+            "ask": [],
+            "plan": [],
+            "auto": [],
+            "danger": [],
         },
         "cursor": {
             "ask": ["--mode", "ask"],
@@ -793,6 +802,20 @@ def build_command(args: argparse.Namespace) -> list[str]:
                 cmd += ["--prompt", prompt]
             else:
                 cmd.append(prompt)
+
+    elif agent == "trae":
+        if non_interactive or prompt:
+            cmd += ["run", "--working-dir", args.cwd]
+            cmd += mode_flags(agent, args.mode, non_interactive)
+            append_model(cmd, agent, model)
+            append_passthrough(cmd, args)
+            if prompt:
+                cmd.append(prompt)
+        else:
+            cmd += ["interactive"]
+            cmd += mode_flags(agent, args.mode, non_interactive)
+            append_model(cmd, agent, model)
+            append_passthrough(cmd, args)
 
     elif agent == "amazonq":
         cmd += ["chat"]

@@ -30,9 +30,9 @@
     "comment": "Open-source CLI public release."
   },
   "latest_major_update": {
-    "value": "Jun '26",
-    "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.142.4#source:~:text=No%20user-facing%20changes%20were%20identified%20for%20this%20release",
-    "comment": "Latest stable Codex CLI release rust-v0.142.4 (June 29, 2026) is a maintenance-only patch with no identified user-facing changes since rust-v0.142.3."
+    "value": "Jul '26",
+    "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.142.5#source:~:text=Prevented%20full%20Responses%20WebSocket%20request%20payloads%20from%20being%20written%20to%20trace%20logs",
+    "comment": "Latest stable Codex CLI release rust-v0.142.5 (July 1, 2026) is a security/privacy maintenance patch preventing full Responses WebSocket request payloads from being written to trace logs."
   },
   "rules": {
     "support": "full",

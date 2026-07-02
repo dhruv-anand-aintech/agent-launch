@@ -24,9 +24,9 @@
     "comment": "Block's Open Source Program Office publicly announced \"codename goose\" on January 28, 2025, after ~9 months of internal development."
   },
   "latest_major_update": {
-    "value": "May '26",
-    "source_url": "https://github.com/aaif-goose/goose/releases/tag/v1.39.0#source:~:text=ACP%20method%20for%20managing%20recipes%20and%20UI%20changes",
-    "comment": "Latest AAIF Goose release v1.39.0 (June 25, 2026) adds ACP methods for managing recipes, global config, and session extensions, improves recipe handling in new sessions, and continues post-AAIF migration development."
+    "value": "Jul '26",
+    "source_url": "https://github.com/aaif-goose/goose/releases/tag/v1.40.0#source:~:text=%2Fgoal%20command%20for%20agent%20self-evaluation%20before%20finishing",
+    "comment": "Latest AAIF Goose release v1.40.0 (July 2, 2026) adds desktop localization, CLI /status, /model and /goal commands, local goose review, async-task peek mode, delegate context/working_dir overrides, GLM-5.2 and many declarative providers, MLX local inference, streamable HTTP deeplink support, global ~/.agents/AGENTS.md hints, and unified thinking effort."
   },
   "rules": {
     "support": "full",
@@ -54,9 +54,9 @@
     "comment": "Recipes can be turned into custom slash commands (e.g. /weekly-status) usable in CLI or Desktop sessions. Location: recipe files referenced from goose config."
   },
   "goal_command": {
-    "support": "none",
-    "source_url": "https://goose-docs.ai/docs/guides/goose-cli-commands/#source:~:text=/plan%20%3Ctext%3E%20-%20Enter%20plan%20mode",
-    "comment": "No built-in `/goal` command for a persisted auto-continuing objective. Has `/plan` and `/endplan` for a plan-then-act mode, and recipes/schedule for repeatable automation, but not an auto-continuing goal loop."
+    "support": "full",
+    "source_url": "https://github.com/aaif-goose/goose/releases/tag/v1.40.0#source:~:text=%2Fgoal%20command%20for%20agent%20self-evaluation%20before%20finishing",
+    "comment": "Goose v1.40.0 adds a built-in `/goal` command for agent self-evaluation before finishing."
   },
   "subagents": {
     "support": "full",

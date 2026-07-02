@@ -30,9 +30,9 @@
     "comment": "Claude Code was introduced as a limited research preview."
   },
   "latest_major_update": {
-    "value": "Jun '26",
-    "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.197#source:~:text=Introducing%20Claude%20Sonnet%205",
-    "comment": "Latest release v2.1.197 (June 30, 2026) introduces Claude Sonnet 5 as the default model in Claude Code, with native 1M-token context and promotional pricing through August 31, plus smaller reliability fixes from the late-June release line."
+    "value": "Jul '26",
+    "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.198#source:~:text=Claude%20in%20Chrome%20is%20now%20generally%20available",
+    "comment": "Latest release v2.1.198 (July 1, 2026) makes Claude in Chrome generally available, adds background-agent notifications, adds a /dataviz skill, improves background-agent PR handoff, lets Explore inherit the main session model, and fixes background-agent, plan-mode, network-retry, AWS gateway, rules, and UI issues."
   },
   "rules": {
     "support": "full",

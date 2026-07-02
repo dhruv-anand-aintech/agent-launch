@@ -10,14 +10,16 @@
     "values": [
       "CLI",
       "Extension",
-      "SDK"
+      "SDK",
+      "Desktop App"
     ],
-    "source_url": "https://qwenlm.github.io/qwen-code-docs/en/users/quickstart/#source:~:text=This%20quickstart%20guide%20will%20have%20you%20using%20AI-powered%20coding%20assistance",
-    "comment": "CLI + VS Code + Zed + JetBrains via ACP, plus @qwen-code/sdk (TypeScript) and Python SDK. Per-form-factor links: CLI: https://qwenlm.github.io/qwen-code-docs/en/users/quickstart/; Extension: https://qwenlm.github.io/qwen-code-docs/en/users/extension/introduction/; SDK: https://qwenlm-qwen-code.mintlify.app/sdk/quick-start.",
+    "source_url": "https://github.com/QwenLM/qwen-code#how-to-use-qwen-code:~:text=Desktop%20%E2%80%94%20Qwen%20Code%20Desktop%20%E2%80%94%20GUI%20for%20macOS%2C%20Windows%2C%20Linux",
+    "comment": "CLI + VS Code/Zed/JetBrains IDE integrations + official Qwen Code Desktop + daemon mode + SDKs + IM bots/channels. Per-form-factor links: CLI: https://qwenlm.github.io/qwen-code-docs/en/users/quickstart/; Extension: https://qwenlm.github.io/qwen-code-docs/en/users/extension/introduction/; SDK: https://qwenlm-qwen-code.mintlify.app/sdk/quick-start; Desktop App: https://github.com/QwenLM/qwen-code#how-to-use-qwen-code.",
     "links": {
       "CLI": "https://qwenlm.github.io/qwen-code-docs/en/users/quickstart/",
       "Extension": "https://qwenlm.github.io/qwen-code-docs/en/users/extension/introduction/",
-      "SDK": "https://qwenlm-qwen-code.mintlify.app/sdk/quick-start"
+      "SDK": "https://qwenlm-qwen-code.mintlify.app/sdk/quick-start",
+      "Desktop App": "https://github.com/QwenLM/qwen-code#how-to-use-qwen-code"
     }
   },
   "released_in": {
@@ -26,9 +28,9 @@
     "comment": "GitHub repo created 2025-06-26. Earliest releases (v0.0.5+) shortly after. Current latest release: v0.19.2 (2026-06-24)."
   },
   "latest_major_update": {
-    "value": "Jun '26",
-    "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.19.3#source:~:text=feat(memory)%3A%20add%20a%20git-shared%20team%20memory%20tier",
-    "comment": "Latest release v0.19.3 (June 28, 2026) adds daemon workspace voice/control APIs, skill usage stats, auto-generated-skill confirmation, OpenAI streaming inactivity timeout, git-shared team memory, extension creator skill, @extension autocomplete, web-shell MCP resource browsing, workspace session sidebar, /model --vision fallback model selection, and many CLI/core/web-shell fixes."
+    "value": "Jul '26",
+    "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.19.4#source:~:text=feat(core%2Ccli%2Csdk)%3A%20resume%20an%20interrupted%20turn%20without%20a%20synthetic%20%22continue%22%20message",
+    "comment": "Latest release v0.19.4 (July 1, 2026) adds configurable auto-compact threshold and Stop-hook context usage, resumes interrupted turns without synthetic continue messages, adds desktop voice dictation, revives the Chrome extension through daemon-direct architecture, improves loop task injection, starts channel-agent bridge work, and fixes CLI/core/web-shell/standalone issues."
   },
   "rules": {
     "support": "full",
@@ -56,9 +58,9 @@
     "comment": "Full custom commands: Markdown files in ~/.qwen/commands/ (global) and .qwen/commands/ (project). Support {{args}}, !{shell}, @{file} references. Namespace support. Location: Qwen Code extensions can package custom commands via `qwen-extension.json`."
   },
   "goal_command": {
-    "support": "none",
-    "source_url": "https://qwenlm.github.io/qwen-code-docs/en/users/features/commands/#source:~:text=commands",
-    "comment": "Qwen Code supports custom shortcut commands; no built-in `/goal` for auto-continuing until a completion condition."
+    "support": "full",
+    "source_url": "https://qwenlm.github.io/qwen-code-docs/en/users/features/commands/#source:~:text=%2Fgoal%20%60Set%20a%20goal%20%E2%80%94%20keep%20working%20until%20condition%20met",
+    "comment": "Built-in `/goal` sets a goal and keeps working until the condition is met; supports `/goal <condition>` and `/goal clear`."
   },
   "subagents": {
     "support": "full",
@@ -115,7 +117,7 @@
     "source_url": "https://qwenlm.github.io/qwen-code-docs/en/users/configuration/model-providers/#selection-persistence-and-recommendations:~:text=Use%20modelProviders%20to%20declare%20curated%20model%20lists%20per%20auth%20type",
     "comment": "modelProviders config with openai/anthropic/gemini auth types. Local models via any OpenAI-compatible endpoint (Ollama, vLLM, LM Studio). OpenRouter, Fireworks AI."
   },
-  "notes": "Qwen Code by Alibaba (QwenLM) is the most feature-complete open-source coding agent in this matrix \u2014 20/20 fields at full (tied with Cline). Standout features: macOS Seatbelt + Docker sandbox, OpenTelemetry telemetry, custom status line, three output formats. Apache-2.0, 24.6k stars.",
+  "notes": "Qwen Code by Alibaba (QwenLM) is the most feature-complete open-source coding agent in this matrix -- 20/20 fields at full (tied with Cline). Standout features: macOS Seatbelt + Docker sandbox, OpenTelemetry telemetry, custom status line, three output formats. Apache-2.0, 24.6k stars.",
   "pricing": {
     "value": "Free (Apache-2.0)",
     "source_url": "https://github.com/QwenLM/qwen-code#acknowledgments:~:text=Apache-2.0%20license",
@@ -152,9 +154,9 @@
     "comment": "Research needed. Check for debug mode or verbose logging options."
   },
   "context_window": {
-    "support": "unknown",
-    "source_url": "https://docs.example.com/#documentation:~:text=context-window",
-    "comment": "Research needed. Check for configurable context length or token limits."
+    "support": "full",
+    "source_url": "https://qwenlm.github.io/qwen-code-docs/en/users/configuration/settings/#source:~:text=contextWindowSize%3A%20Overrides%20the%20default%20context%20window%20size%20for%20the%20selected%20model",
+    "comment": "`model.generationConfig.contextWindowSize` overrides the assumed model context window, and `context.autoCompactThreshold` configures auto-compaction at a fraction of the context window."
   },
   "code_formatting": {
     "support": "unknown",

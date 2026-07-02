@@ -10,14 +10,16 @@
     "values": [
       "IDE",
       "CLI",
-      "SDK"
+      "SDK",
+      "Mobile"
     ],
-    "source_url": "https://cursor.com/downloads#source:~:text=IDE",
-    "comment": "VS Code-derived AI IDE with standalone CLI (cursor-agent) and @cursor/sdk (TypeScript/Python) for programmatic local or cloud agents. Per-form-factor links: IDE: https://cursor.com/downloads; CLI: https://docs.cursor.com/en/cli/installation; SDK: https://cursor.com/docs/sdk/typescript.",
+    "source_url": "https://cursor.com/changelog#cursor-mobile-app-for-ios:~:text=Cursor%20for%20iOS%20is%20now%20available%20in%20public%20beta%20on%20all%20paid%20plans",
+    "comment": "VS Code-derived AI IDE with standalone CLI (cursor-agent), @cursor/sdk (TypeScript/Python), and iOS mobile app for launching/managing cloud agents. Per-form-factor links: IDE: https://cursor.com/downloads; CLI: https://docs.cursor.com/en/cli/installation; SDK: https://cursor.com/docs/sdk/typescript; Mobile: https://cursor.com/changelog#cursor-mobile-app-for-ios.",
     "links": {
       "IDE": "https://cursor.com/downloads",
       "CLI": "https://docs.cursor.com/en/cli/installation",
-      "SDK": "https://cursor.com/docs/sdk/typescript"
+      "SDK": "https://cursor.com/docs/sdk/typescript",
+      "Mobile": "https://cursor.com/changelog#cursor-mobile-app-for-ios"
     }
   },
   "released_in": {
@@ -27,8 +29,8 @@
   },
   "latest_major_update": {
     "value": "Jun '26",
-    "source_url": "https://cursor.com/changelog#customize-cursor:~:text=You%20can%20now%20add%20and%20manage%20plugins%2C%20skills%2C%20MCPs%2C%20subagents%2C%20rules%2C%20commands%2C%20and%20hooks",
-    "comment": "June 22, 2026 changelog: Customize Cursor brings plugins, skills, MCPs, subagents, rules, commands, hooks, custom MCPs, marketplace leaderboards, plugin canvases, and team marketplace imports into one management surface."
+    "source_url": "https://cursor.com/changelog#mcps-and-organizations-in-team-marketplaces:~:text=Admins%20can%20now%20configure%20Team%20MCP%20servers%20once%20and%20distribute%20them%20across%20cloud%20agents%2C%20the%20agents%20window%2C%20IDE%2C%20and%20CLI",
+    "comment": "June 30, 2026 changelog expands Team Marketplaces with Team MCP servers distributed across cloud agents, the agents window, IDE, and CLI, plus organization-group marketplace access. June 29 also added the Cursor iOS public beta for launching and managing cloud agents from mobile."
   },
   "rules": {
     "support": "full",
