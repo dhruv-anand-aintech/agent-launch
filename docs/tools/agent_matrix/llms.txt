@@ -1,6 +1,6 @@
 # Coding Agent Feature Matrix
-> Compare 30 coding agents, CLIs, and IDEs across features.
-> https://compare.ainorthstar.tech | Updated 2026-07-01
+> Compare 32 coding agents, CLIs, and IDEs across features.
+> https://compare.ainorthstar.tech | Updated 2026-07-02
 
 Agent                   Rel    FF     Fre   NoA   Oth   Rul   Skl   Hks   MCP   Cmd   Gol   Sub   Trn   Mod   App   San   Res   Con   Hdl   Fmt   Sta   Tel   Hst  BYOM
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -19,7 +19,7 @@ Factory Droid           2025  CLI/Ext          ~     Y     Y     Y     Y     Y  
 Gemini CLI              Jun '2 CLI        Y           Y     Y     ~     Y     Y     Y     N     Y     ?     Y     Y     Y     Y     Y     Y     ~     ?     Y     N     ~
 GitHub Copilot CLI      Sep '2 CLI        ~     N     Y     Y     Y     Y     Y     ~     ~     Y     Y     Y     Y     Y     Y     Y     Y     Y     ~     ~     N     Y
 GitHub Copilot          Jun '2 CLI/IDE                      Y     Y     Y     Y     ~     N     Y     ?     Y     ~     ~     Y     Y     Y     ~     N     ~     Y     Y
-Goose                   Jan '2 CLI/Des    Y     Y     Y     Y     Y     Y     Y     Y     N     Y     Y     Y     Y     Y     Y     ~     Y     Y     N     Y     N     Y
+Goose                   Jan '2 CLI/Des    Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     ~     Y     Y     N     Y     N     Y
 Grok Build              May '2 CLI                          Y     Y     Y     Y     ~     Y     Y     ?     ~     Y     ~     ?     ?     Y     ?     ?     ?     N     ~
 Google Jules            Aug '2 Web                          ?     N     ~     ~     N     N     ~     ~     ~     Y     Y     ~     ~     ~     ~     N     ?     Y     N
 JetBrains Junie         Jan '2 CLI/IDE                      Y     Y     Y     Y     Y     N     Y     Y     Y     Y     ~     Y     ~     Y     ?     N     ~     ~     Y
@@ -30,10 +30,12 @@ MiMo Code               Jun '2 CLI/IDE    Y     Y     Y     Y     Y     ~     Y 
 OpenCode                2025  CLI/Ext    Y     Y     Y     Y     Y     Y     Y     Y     N     Y     Y     Y     Y     ~     Y     Y     Y     Y     ?     Y     N     Y
 OpenHands               Mar '2 CLI/IDE    Y     Y     Y     Y     Y     Y     Y     ~     N     N     Y     Y     Y     Y     Y     Y     Y     Y     N     ~     Y     Y
 Pi                      May '2 CLI/SDK          Y     Y     Y     Y     Y     N     Y     N     N     Y     Y     N     N     Y     Y     Y     Y     N     ~     N     Y
-Qwen Code               Jun '2 CLI/Ext                      Y     Y     Y     Y     Y     N     Y     ?     Y     Y     Y     Y     Y     Y     Y     Y     Y     ~     Y
+Qwen Code               Jun '2 CLI/Ext                      Y     Y     Y     Y     Y     Y     Y     ?     Y     Y     Y     Y     Y     Y     Y     Y     Y     ~     Y
 Replit Agent            Sep '2 Web                          ~     Y     ~     ?     N     N     ~     ~     N     ~     Y     ~     ~     N     N     N     ?     Y     N
 Roo Code                Mid-20 Extensi                      Y     Y     N     Y     Y     N     Y     ?     Y     Y     N     ~     Y     Y     ~     N     Y     N     Y
+Trae Agent              Jun '2 CLI        Y     Y     Y     ~     N     N     ~     N     N     N     Y     Y     N     ~     N     N     Y     ~     N     N     N     Y
 Windsurf Cascade        Nov '2 CLI/IDE                      Y     Y     Y     Y     Y     N     Y     ?     Y     Y     ~     Y     Y     ~     ~     ~     ~     Y     ~
+ZCode                   2026  IDE/Des    Y                 Y     Y     ~     Y     Y     Y     Y     ~     Y     Y     ~     ~     ~     N     N     ~     ?     N     Y
 
 ## Feature legend
 Code = Y: full | ~: partial | N: none | ?: unknown |  : 
@@ -174,7 +176,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Website: https://www.anthropic.com/claude-code
 - Form factor: CLI, Extension, SDK, Web, Mac App
 - Released: Feb '25
-- Latest update: Jun '26
+- Latest update: Jul '26
 - Some Free Usage: blank
 - No Account Required: blank
 - Can Use Other Subscriptions: blank
@@ -205,7 +207,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Website: https://cline.bot/
 - Form factor: CLI, Extension, SDK
 - Released: Jul '24
-- Latest update: Jun '26
+- Latest update: Jul '26
 - Some Free Usage: full — Cline is free for individual developers; AI inference is paid separately or BYOK/local.
 - No Account Required: full — Can run with local models via Ollama or LM Studio without a Cline-hosted account.
 - Can Use Other Subscriptions: full — Cline documents OpenAI Codex OAuth so users can bring a ChatGPT subscription, and also supports BYOK providers.
@@ -237,7 +239,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Website: https://openai.com/codex/
 - Form factor: CLI, Extension, SDK, Web, Mac App
 - Released: Apr '25
-- Latest update: Jun '26
+- Latest update: Jul '26
 - Some Free Usage: full — Codex pricing documents limited access included on the ChatGPT Free plan.
 - No Account Required: blank
 - Can Use Other Subscriptions: full — Codex CLI can authenticate with a ChatGPT plan instead of only an API key flow.
@@ -299,7 +301,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Website: https://charm.land/crush
 - Form factor: CLI, TUI
 - Released: Jul '25
-- Latest update: Jun '26
+- Latest update: Jul '26
 - Some Free Usage: full — Local model backends (Ollama, LM Studio, MLX, LiteLLM) and some free-tier provider plans allow free agent usage without paying for hosted inference.
 - No Account Required: full — Can run entirely against local Ollama/LM Studio/MLX models without any Crush account or vendor sign-in; the CLI itself requires no account to install or run.
 - Can Use Other Subscriptions: full — Routes through the user's own API keys/accounts for any supported provider (Anthropic, OpenAI, etc.) or coding-plan subscriptions (GLM Coding Plan, Kimi Code, MiniMax Coding Plan, Synthetic) rather than a Crush-owned subscription.
@@ -328,7 +330,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 ### Cursor
 - Docs: https://docs.cursor.com/
 - Website: https://cursor.com/
-- Form factor: CLI, IDE, SDK
+- Form factor: CLI, IDE, SDK, Mobile
 - Released: 2023
 - Latest update: Jun '26
 - Some Free Usage: full — Cursor pricing documents a Hobby Free plan with limited Agent requests and Tab completions.
@@ -361,7 +363,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Website: https://devin.ai/
 - Form factor: CLI, Extension, SDK, Web
 - Released: Dec '24
-- Latest update: Jun '26
+- Latest update: Jul '26
 - Some Free Usage: full — Cognition announced a Free self-serve Devin plan with limited access.
 - No Account Required: blank
 - Can Use Other Subscriptions: blank
@@ -457,7 +459,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Website: https://github.com/features/copilot/cli
 - Form factor: CLI
 - Released: Sep '25
-- Latest update: Jun '26
+- Latest update: Jul '26
 - Some Free Usage: partial — GitHub Copilot Free plan includes limited chat/agent requests (e.g. 50 chat requests/mo) usable via the CLI, but no unlimited free local-model path is documented for Copilot CLI itself.
 - No Account Required: none — Requires sign-in with a GitHub account holding an active Copilot subscription/seat; `/login` flow inside the CLI.
 - Can Use Other Subscriptions: full — BYOK support for Anthropic, OpenAI, Azure OpenAI, AWS Bedrock, Google AI Studio, xAI/Microsoft Foundry, any OpenAI-compatible endpoint, and local models via Ollama, configured with COPILOT_PROVIDER_TYPE / COPILOT_PROVIDER_BASE_URL / COPILOT_PROVIDER_API_KEY / COPILOT_MODEL env vars.
@@ -521,7 +523,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Website: https://goose-docs.ai/
 - Form factor: CLI, Desktop App
 - Released: Jan '25
-- Latest update: Jun '26
+- Latest update: Jul '26
 - Some Free Usage: full — Google Gemini's free tier and free local Ollama models give a documented no-cost usage path alongside paid providers.
 - No Account Required: full — Can run entirely against local Ollama models with no Goose account and no cloud provider account required.
 - Can Use Other Subscriptions: full — Routes agent usage through the user's own provider account/API key (Anthropic, OpenAI, Azure, Bedrock, Databricks, Groq, OpenRouter, etc.) or local inference (Ollama) rather than a Goose-owned subscription.
@@ -530,7 +532,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Hooks: full — Lifecycle hooks run shell scripts on events: SessionStart, SessionEnd, Stop, UserPromptSubmit, PreToolUse, PostToolUse, PostToolUseFailure, BeforeReadFile, AfterFileEdit, BeforeShellExecution, AfterShellExecution. Configured via hooks.json in plugin dirs. Location: ~/.agents/plugins/<name>/hooks/hooks.json (user scope) or <project>/.agents/plugins/<name>/hooks/hooks.json (project scope).
 - Mcp Servers: full — Goose's extension system is built natively on MCP; connects to 70+ documented extensions (GitHub, Docker, Postgres, Slack, Google Drive, browser automation, etc.) and any MCP-compatible server. Configurable via `goose configure`, `/extension`, `--with-extension`, `--with-streamable-http-extension`, or config.yaml.
 - Custom Commands: full — Recipes can be turned into custom slash commands (e.g. /weekly-status) usable in CLI or Desktop sessions. Location: recipe files referenced from goose config.
-- Goal Command: none — No built-in `/goal` command for a persisted auto-continuing objective. Has `/plan` and `/endplan` for a plan-then-act mode, and recipes/schedule for repeatable automation, but not an auto-continuing goal loop.
+- Goal Command: full — Goose v1.40.0 adds a built-in `/goal` command for agent self-evaluation before finishing.
 - Subagents: full — First-class subagent delegation: temporary AI instances spun up via natural language in a prompt for one-off tasks, running in isolation from the main session. Distinct from sub-recipes (pre-written reusable YAML workflows). Up to 10 concurrent parallel workers total across subagents/sub-recipes. Location: invoked ad hoc; sub-recipes configured via --sub-recipe / recipe YAML.
 - Transcripts: full — Sessions stored in SQLite (v1.10.0+) at ~/.local/share/goose/sessions/sessions.db (Unix) or %APPDATA%\Block\goose\data\sessions\sessions.db (Windows); pre-v1.10.0 used per-session .jsonl files under ~/.local/share/goose/sessions/. `session export` can output markdown/json/yaml; `session list`/`session diagnostics` also available.
 - Model Selection: full — Full model/provider selection via `goose configure`, `--provider`/`--model` flags on `goose run`, or GOOSE_PROVIDER/GOOSE_MODEL env vars (e.g. export GOOSE_MODEL=claude-sonnet-4-5-20250929).
@@ -646,7 +648,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Website: https://kilo.ai/
 - Form factor: CLI, Extension
 - Released: Feb '26
-- Latest update: Jun '26
+- Latest update: Jul '26
 - Some Free Usage: full — Kilo Code documents free/open-source access plus Auto Free/BYOK/local inference options.
 - No Account Required: full — Can run local models via Ollama, LM Studio, or Atomic Chat without a Kilo-hosted account.
 - Can Use Other Subscriptions: full — Kilo documents use of an existing ChatGPT Plus/Pro subscription and BYOK/local provider options.
@@ -741,7 +743,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Website: https://mimo.xiaomi.com/mimocode/start
 - Form factor: CLI, IDE, Extension
 - Released: Jun '26
-- Latest update: Jun '26
+- Latest update: Jul '26
 - Some Free Usage: full — README documents MiMo Auto as a free-for-limited-time anonymous channel.
 - No Account Required: full — README lists MiMo Auto as anonymous and zero configuration.
 - Can Use Other Subscriptions: full — First-launch options include importing Claude Code authentication and custom OpenAI-compatible provider setup.
@@ -773,7 +775,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Website: https://opencode.ai/
 - Form factor: CLI, Extension, SDK, Mac App
 - Released: 2025
-- Latest update: Jun '26
+- Latest update: Jul '26
 - Some Free Usage: full — OpenCode homepage documents free models included.
 - No Account Required: full — OpenCode supports running local models, so it can be used without an OpenCode-hosted account when configured locally.
 - Can Use Other Subscriptions: full — OpenCode supports 75+ LLM providers and local models via provider configuration/API keys.
@@ -804,7 +806,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Website: https://www.openhands.dev/
 - Form factor: CLI, IDE, Web, Docker, Hosted Agent
 - Released: Mar '24
-- Latest update: Jun '26
+- Latest update: Jul '26
 - Some Free Usage: full — OpenHands Cloud Individual tier is free to use (capped at 10 daily conversations) and self-hosted CLI is entirely free software; cost is only the LLM provider's own usage.
 - No Account Required: full — Local CLI installed via uv/pip/binary runs fully on your machine; first-run setup just configures your own LLM provider/API key in ~/.openhands/settings.json, no OpenHands account needed unless using `openhands login`/OpenHands Cloud.
 - Can Use Other Subscriptions: full — Connects to any LiteLLM-supported provider (Anthropic, OpenAI, OpenRouter, local Ollama/vLLM/SGLang, etc.) via your own API key, configured through Settings UI, ~/.openhands/agent_settings.json, or LLM_API_KEY/LLM_MODEL/LLM_BASE_URL env vars with --override-with-envs.
@@ -836,7 +838,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Website: https://pi.dev
 - Form factor: CLI, SDK
 - Released: May '26
-- Latest update: Jun '26
+- Latest update: Jul '26
 - Some Free Usage: blank
 - No Account Required: full — Pi supports custom providers/models including Ollama, vLLM, LM Studio, and proxies, so local usage need not require a Pi-hosted account.
 - Can Use Other Subscriptions: full — Pi documents subscription-based providers via OAuth plus API-key providers and auth-file/env configuration.
@@ -866,9 +868,9 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Docs: https://qwenlm.github.io/qwen-code-docs/en/users/overview
 - GitHub: https://github.com/QwenLM/qwen-code
 - Website: https://qwenlm.github.io/qwen-code-docs/
-- Form factor: CLI, Extension, SDK
+- Form factor: CLI, Extension, SDK, Desktop App
 - Released: Jun '25
-- Latest update: Jun '26
+- Latest update: Jul '26
 - Some Free Usage: blank
 - No Account Required: blank
 - Can Use Other Subscriptions: blank
@@ -877,7 +879,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Hooks: full — 14 hook events: PreToolUse, PostToolUse, SessionStart, SessionEnd, SubagentStart/Stop, PreCompact, PostCompact, Notification, PermissionRequest. Three executors: command, http, function.
 - Mcp Servers: full — Full MCP: stdio, SSE, HTTP transports. OAuth 2.0, tool filtering, server trust, global allow/deny lists. CLI management via qwen mcp commands. Location: Qwen Code MCP settings in Qwen config/extension packages.
 - Custom Commands: full — Full custom commands: Markdown files in ~/.qwen/commands/ (global) and .qwen/commands/ (project). Support {{args}}, !{shell}, @{file} references. Namespace support. Location: Qwen Code extensions can package custom commands via `qwen-extension.json`.
-- Goal Command: none — Qwen Code supports custom shortcut commands; no built-in `/goal` for auto-continuing until a completion condition.
+- Goal Command: full — Built-in `/goal` sets a goal and keeps working until the condition is met; supports `/goal <condition>` and `/goal clear`.
 - Subagents: full — Full subagent system: named subagents with YAML frontmatter, fork subagents (context-inheriting), per-agent model/permission/tool config, extension subagents.
 - Transcripts: unknown — Location: transcript/session disk storage was not found in public docs reviewed.
 - Model Selection: full — Full model switching via /model. Supports OpenAI-compatible, Anthropic, Gemini protocols. Local models via Ollama/vLLM. Per-model reasoning config.
@@ -892,7 +894,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Hosted Agent: partial — Can use Alibaba Cloud Coding Plan for hosted model access; agent runs locally.
 - Custom Model Provider: full — modelProviders config with openai/anthropic/gemini auth types. Local models via any OpenAI-compatible endpoint (Ollama, vLLM, LM Studio). OpenRouter, Fireworks AI.
 - Pricing: Free (Apache-2.0)
-- Notes: Qwen Code by Alibaba (QwenLM) is the most feature-complete open-source coding agent in this matrix — 20/20 fields at full (tied with Cline). Standout features: macOS Seatbelt + Docker sandbox, OpenTelemetry telemetry, custom status line, three output formats. Apache-2.0, 24.6k stars.
+- Notes: Qwen Code by Alibaba (QwenLM) is the most feature-complete open-source coding agent in this matrix -- 20/20 fields at full (tied with Cline). Standout features: macOS Seatbelt + Docker sandbox, OpenTelemetry telemetry, custom status line, three output formats. Apache-2.0, 24.6k stars.
 
 ### Replit Agent
 - Docs: https://docs.replit.com/replitai/agent
@@ -957,6 +959,38 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Pricing: Free (Apache-2.0)
 - Notes: Roo Code was a popular Cline fork (24k stars, 574k VS Code installs) that was shut down on May 15, 2026. The repository is now archived and read-only. VS Code extension-host API only; no standalone npm agent SDK. Community forks include ZooCode and Cline.
 
+### Trae Agent
+- Docs: https://github.com/bytedance/trae-agent
+- GitHub: https://github.com/bytedance/trae-agent
+- Website: https://www.trae.ai/
+- Form factor: CLI
+- Released: Jun '25
+- Latest update: Feb '26
+- Some Free Usage: full — Local Ollama provider support enables account-free/free local model usage.
+- No Account Required: full — Can run with local Ollama models without a hosted Trae account.
+- Can Use Other Subscriptions: full — Bring-your-own provider/API keys for multiple providers.
+- Rules: partial — YAML configuration can define agent model, max steps, and tool set, but no AGENTS.md-style repository instruction file is documented.
+- Skills: none — No reusable skill system documented; roadmap focuses on SDK, sandbox, trajectory analysis, MCP, and multi-agent support.
+- Hooks: none — No lifecycle hooks documented.
+- Mcp Servers: partial — README documents optional `mcp_servers` configuration; roadmap says MCP/tool ecosystem expansion is still planned.
+- Custom Commands: none — Only built-in CLI commands (`run`, `interactive`, `show-config`, `tools`) are documented.
+- Goal Command: none — No persistent `/goal` or auto-continue-until-complete command documented.
+- Subagents: none — Multi-agent support is listed on the roadmap, not documented as current functionality.
+- Transcripts: full — Trajectory recording is first-class, with auto-generated or custom trajectory JSON files.
+- Model Selection: full — Supports `--provider`, `--model`, `--model-base-url`, and config-file model providers.
+- Approval Mode: none — No tool approval/autonomy mode flags documented.
+- Sandbox Mode: partial — `trae-cli run` supports Docker image/container/Dockerfile flags, but no default local sandbox mode.
+- Resume: none — No resume/session ID command documented.
+- Continue: none — No continue-latest command documented.
+- Non Interactive: full — `trae-cli run` executes a single task and exits.
+- Output Format: partial — No stdout JSON mode documented, but trajectory files capture LLM interactions, agent steps, tool usage, and metadata as JSON.
+- Statusline: none — No configurable statusline documented.
+- Telemetry: none — No product telemetry collection documented; trajectory recording is local/debug oriented.
+- Hosted Agent: none — Local CLI agent; no hosted/cloud agent platform documented.
+- Custom Model Provider: full — Supports OpenAI, Anthropic, Doubao, Azure, OpenRouter, Ollama, Google Gemini, custom base URLs, and config-file providers.
+- Pricing: Free (MIT), BYOK/provider costs
+- Notes: Official ByteDance open-source CLI agent for software engineering research and development. Verified locally from documented `uv sync --all-extras`: `trae-cli --help`, `trae-cli run --help`, and `trae-cli interactive --help` work. Added to agent-launch as `--agent trae` targeting `trae-cli`.
+
 ### Windsurf Cascade
 - Docs: https://docs.windsurf.com/
 - Website: https://windsurf.com/
@@ -987,3 +1021,34 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Custom Model Provider: partial — BYOK for Anthropic models (Claude Sonnet 4, Opus 4) for Free/Pro users. No generic custom OpenAI-compatible endpoint configuration documented.
 - Pricing: Free $0, Pro $20/mo, Max $200/mo, Teams $40/user/mo
 - Notes: Windsurf by Codeium (acquired by Cognition AI in April 2026) is a standalone VS Code fork IDE with integrated coding agent (Cascade). Enterprise analytics API only; no agent embed SDK. Competes directly with Cursor IDE.
+
+### ZCode
+- Docs: https://zcode.z.ai/en/docs
+- Website: https://zcode.z.ai/en
+- Form factor: IDE, Desktop App, Mobile
+- Released: 2026
+- Latest update: Jul '26
+- Some Free Usage: full — First-time ZCode users receive a 5-day free trial with daily GLM-5.2/GLM-5-Turbo token benefits.
+- No Account Required: blank
+- Can Use Other Subscriptions: blank
+- Rules: full — Reads user global `~/.zcode/AGENTS.md` and workspace `AGENTS.md`; workspace instructions are primary and CLAUDE.md is only a one-time onboarding migration source.
+- Skills: full — First-class `SKILL.md` skills under `~/.zcode/skills/<skill-name>/SKILL.md`, with Settings management and import from other agents.
+- Hooks: partial — Plugin system advertises Hook plugin types, but current public docs do not expose a full standalone hook API like some CLIs.
+- Mcp Servers: full — Supports stdio, HTTP, and SSE MCP servers, full JSON config import, env vars/headers, plugin MCP servers, and importing MCP config from Claude Code, Codex CLI, OpenCode, and `.agents`.
+- Custom Commands: full — User/workspace custom slash commands can be created in settings and invoked from `/` in ZCode Agent.
+- Goal Command: full — Built-in `/goal` supports set, replace, pause, resume, and clear; the agent automatically verifies each round and continues until the goal is complete.
+- Subagents: full — Built-in general-purpose and Explore subagents plus beta user-level custom subagents under `~/.zcode/agents/<name>.md`, with custom model/tool permissions/instructions.
+- Transcripts: partial — Task list/conversation history is first-class in the desktop UI, but public docs do not expose disk transcript paths.
+- Model Selection: full — Model selector and model settings support Z.ai, BigModel, GLM Coding Plan, and API-key providers.
+- Approval Mode: full — Execution modes include Default, Confirm Before Changes, and Auto Edit; safety confirmation pauses risky actions for approval.
+- Sandbox Mode: partial — Remote development can run workspaces in SSH hosts or local Docker containers; no standalone local sandbox flag is documented.
+- Resume: partial — Desktop task list/conversation history supports returning to prior work, but no CLI-style `--resume` flag is documented.
+- Continue: partial — Existing tasks can be continued from desktop or mobile Remote Control; no headless continue command is documented.
+- Non Interactive: none — ZCode is a desktop ADE; no local headless CLI entry point was found.
+- Output Format: none — No JSON/structured output mode documented for the desktop agent.
+- Statusline: partial — Goal summary panel shows status, elapsed time, tokens, and iteration count, but no custom statusline API is documented.
+- Telemetry: unknown — Usage Stats exists; no telemetry opt-out/control docs found.
+- Hosted Agent: none — Runtime remains the desktop workspace or remote SSH/Docker target; mobile remote only controls the open desktop workspace.
+- Custom Model Provider: full — Supports third-party compatible model services through Anthropic/OpenAI protocols and API key mode.
+- Pricing: 5-day free trial; GLM Coding Plan or API/provider billing
+- Notes: Z.ai/Zhipu desktop ADE with in-house ZCode Agent, GLM-5.2 focus, AGENTS.md, skills, commands, MCP, subagents, plugins, goal mode, mobile remote control, bot channels, and remote SSH/Docker development. No local CLI command was found, so no agent-launch backend was added.

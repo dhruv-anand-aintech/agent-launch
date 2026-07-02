@@ -21,7 +21,7 @@
       "value": "Jun '23",
       "source_url": "https://github.com/Aider-AI/aider/releases/tag/v0.5.0#v050:~:text=v0.5.0",
       "comment": "First public release v0.5.0 on June 7, 2023.",
-      "sort_date": "2023-06-07"
+      "sort_date": "2023-06-01"
     },
     "latest_major_update": {
       "value": "May '26",
@@ -788,13 +788,13 @@
       "value": "Feb '25",
       "source_url": "https://www.anthropic.com/news/claude-3-7-sonnet#claude-37-sonnet-and-claude-code:~:text=Claude%20Code",
       "comment": "Claude Code was introduced as a limited research preview.",
-      "sort_date": "2025-12-19"
+      "sort_date": "2025-02-01"
     },
     "latest_major_update": {
-      "value": "Jun '26",
-      "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.197#source:~:text=Introducing%20Claude%20Sonnet%205",
-      "comment": "Latest release v2.1.197 (June 30, 2026) introduces Claude Sonnet 5 as the default model in Claude Code, with native 1M-token context and promotional pricing through August 31, plus smaller reliability fixes from the late-June release line.",
-      "sort_date": "2026-06-30"
+      "value": "Jul '26",
+      "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.198#source:~:text=Claude%20in%20Chrome%20is%20now%20generally%20available",
+      "comment": "Latest release v2.1.198 (July 1, 2026) makes Claude in Chrome generally available, adds background-agent notifications, adds a /dataviz skill, improves background-agent PR handoff, lets Explore inherit the main session model, and fixes background-agent, plan-mode, network-retry, AWS gateway, rules, and UI issues.",
+      "sort_date": "2026-07-01"
     },
     "rules": {
       "support": "full",
@@ -969,13 +969,13 @@
       "value": "Jul '24",
       "source_url": "https://github.com/cline/cline/releases?page=27#source:~:text=v1.0.4%2C%2028%20Jul%2001%3A14",
       "comment": "Initial release was v1.0.4 on July 28, 2024 (originally named 'Claude Dev' by Saoud Rizwan). 8M+ installs by May 2026.",
-      "sort_date": "2024-07-28"
+      "sort_date": "2024-07-01"
     },
     "latest_major_update": {
-      "value": "Jun '26",
+      "value": "Jul '26",
       "source_url": "https://github.com/cline/cline/releases/tag/v4.0.5#source:~:text=Add%20support%20for%20Claude%20Sonnet%205",
       "comment": "Latest release v4.0.5 (June 30, 2026) adds Claude Sonnet 5 support across Anthropic, Bedrock, Vertex, Claude Code, SAP AI Core, OpenRouter, and Vercel AI Gateway providers, including model-picker and recommended-model updates.",
-      "sort_date": "2026-06-30"
+      "sort_date": "2026-07-01"
     },
     "rules": {
       "support": "full",
@@ -1169,13 +1169,13 @@
       "value": "Apr '25",
       "source_url": "https://github.com/openai/codex#installing-and-running-codex-cli:~:text=Codex%20CLI",
       "comment": "Open-source CLI public release.",
-      "sort_date": "2025-04-30"
+      "sort_date": "2025-04-01"
     },
     "latest_major_update": {
-      "value": "Jun '26",
-      "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.142.4#source:~:text=No%20user-facing%20changes%20were%20identified%20for%20this%20release",
-      "comment": "Latest stable Codex CLI release rust-v0.142.4 (June 29, 2026) is a maintenance-only patch with no identified user-facing changes since rust-v0.142.3.",
-      "sort_date": "2026-06-30"
+      "value": "Jul '26",
+      "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.142.5#source:~:text=Prevented%20full%20Responses%20WebSocket%20request%20payloads%20from%20being%20written%20to%20trace%20logs",
+      "comment": "Latest stable Codex CLI release rust-v0.142.5 (July 1, 2026) is a security/privacy maintenance patch preventing full Responses WebSocket request payloads from being written to trace logs.",
+      "sort_date": "2026-07-02"
     },
     "rules": {
       "support": "full",
@@ -1540,10 +1540,10 @@
       "sort_date": "2025-07-29"
     },
     "latest_major_update": {
-      "value": "Jun '26",
+      "value": "Jul '26",
       "source_url": "https://github.com/charmbracelet/crush/releases/tag/v0.81.0#source:~:text=Chat%20scrollbar",
       "comment": "Latest tagged release v0.81.0 (2026-06-29) is a UX-focused release adding a chat scrollbar and other interface/session improvements.",
-      "sort_date": "2026-06-30"
+      "sort_date": "2026-07-01"
     },
     "rules": {
       "support": "full",
@@ -1719,14 +1719,16 @@
       "values": [
         "IDE",
         "CLI",
-        "SDK"
+        "SDK",
+        "Mobile"
       ],
-      "source_url": "https://cursor.com/downloads#source:~:text=IDE",
-      "comment": "VS Code-derived AI IDE with standalone CLI (cursor-agent) and @cursor/sdk (TypeScript/Python) for programmatic local or cloud agents. Per-form-factor links: IDE: https://cursor.com/downloads; CLI: https://docs.cursor.com/en/cli/installation; SDK: https://cursor.com/docs/sdk/typescript.",
+      "source_url": "https://cursor.com/changelog#cursor-mobile-app-for-ios:~:text=Cursor%20for%20iOS%20is%20now%20available%20in%20public%20beta%20on%20all%20paid%20plans",
+      "comment": "VS Code-derived AI IDE with standalone CLI (cursor-agent), @cursor/sdk (TypeScript/Python), and iOS mobile app for launching/managing cloud agents. Per-form-factor links: IDE: https://cursor.com/downloads; CLI: https://docs.cursor.com/en/cli/installation; SDK: https://cursor.com/docs/sdk/typescript; Mobile: https://cursor.com/changelog#cursor-mobile-app-for-ios.",
       "links": {
         "IDE": "https://cursor.com/downloads",
         "CLI": "https://docs.cursor.com/en/cli/installation",
-        "SDK": "https://cursor.com/docs/sdk/typescript"
+        "SDK": "https://cursor.com/docs/sdk/typescript",
+        "Mobile": "https://cursor.com/changelog#cursor-mobile-app-for-ios"
       }
     },
     "released_in": {
@@ -1737,8 +1739,8 @@
     },
     "latest_major_update": {
       "value": "Jun '26",
-      "source_url": "https://cursor.com/changelog#customize-cursor:~:text=You%20can%20now%20add%20and%20manage%20plugins%2C%20skills%2C%20MCPs%2C%20subagents%2C%20rules%2C%20commands%2C%20and%20hooks",
-      "comment": "June 22, 2026 changelog: Customize Cursor brings plugins, skills, MCPs, subagents, rules, commands, hooks, custom MCPs, marketplace leaderboards, plugin canvases, and team marketplace imports into one management surface.",
+      "source_url": "https://cursor.com/changelog#mcps-and-organizations-in-team-marketplaces:~:text=Admins%20can%20now%20configure%20Team%20MCP%20servers%20once%20and%20distribute%20them%20across%20cloud%20agents%2C%20the%20agents%20window%2C%20IDE%2C%20and%20CLI",
+      "comment": "June 30, 2026 changelog expands Team Marketplaces with Team MCP servers distributed across cloud agents, the agents window, IDE, and CLI, plus organization-group marketplace access. June 29 also added the Cursor iOS public beta for launching and managing cloud agents from mobile.",
       "sort_date": "2026-06-01"
     },
     "rules": {
@@ -1924,10 +1926,10 @@
       "sort_date": "2024-12-01"
     },
     "latest_major_update": {
-      "value": "Jun '26",
-      "source_url": "https://docs.devin.ai/release-notes/2026#june-26-2026:~:text=Archive%2FUnarchive%20Sessions%20from%20Command%20Palette",
-      "comment": "June 26, 2026 release notes add command-palette archive/unarchive, run-once automation schedules, MCP installation-out-of-date banners, Blueprint Post Build guidance, readable PR Review labels, and Consumption Dashboard analytics improvements.",
-      "sort_date": "2026-06-01"
+      "value": "Jul '26",
+      "source_url": "https://docs.devin.ai/release-notes/2026#july-1-2026:~:text=Network%20Access%20Requests%20In%20network-restricted%20sessions%2C%20Devin%20can%20now%20request%20access%20to%20specific%20domains",
+      "comment": "July 1, 2026 release notes add network access requests for restricted sessions, PR-link preferences, persisted default model selection, Slack bidirectional thread sync and bang-command improvements, MCP read-only mode, webhook setup improvements, skills analytics, ACU audit trails, redesigned environments, cross-platform repository cloning, and numerous review/analytics/UI fixes.",
+      "sort_date": "2026-07-01"
     },
     "rules": {
       "support": "full",
@@ -2482,13 +2484,13 @@
       "value": "Sep '25",
       "source_url": "https://github.blog/changelog/2025-09-25-github-copilot-cli-is-now-in-public-preview/#source:~:text=public%20preview",
       "comment": "Public preview announced September 25, 2025, authenticated with existing GitHub account, usable with existing Copilot Pro/Pro+/Business/Enterprise plans.",
-      "sort_date": "2025-09-26"
+      "sort_date": "2025-09-01"
     },
     "latest_major_update": {
-      "value": "Jun '26",
+      "value": "Jul '26",
       "source_url": "https://github.blog/changelog/2026-02-25-github-copilot-cli-is-now-generally-available/#source:~:text=is%20now%20generally%20available",
       "comment": "Reached general availability for all Copilot subscribers on Feb 25, 2026, adding autopilot mode, /diff and /review commands, cross-session repo memory, and auto-compaction. Later 2026 updates added cloud/local sandboxes (--cloud, /sandbox enable), a unified /settings command, rubber duck critic agent, voice input, and prompt scheduling.",
-      "sort_date": "2026-06-30"
+      "sort_date": "2026-07-01"
     },
     "rules": {
       "support": "full",
@@ -2861,13 +2863,13 @@
       "value": "Jan '25",
       "source_url": "https://block.xyz/inside/block-open-source-introduces-codename-goose#source:~:text=codename%20goose",
       "comment": "Block's Open Source Program Office publicly announced \"codename goose\" on January 28, 2025, after ~9 months of internal development.",
-      "sort_date": "2024-09-10"
+      "sort_date": "2025-01-01"
     },
     "latest_major_update": {
-      "value": "Jun '26",
-      "source_url": "https://github.com/aaif-goose/goose/releases/tag/v1.39.0#source:~:text=ACP%20method%20for%20managing%20recipes%20and%20UI%20changes",
-      "comment": "Latest AAIF Goose release v1.39.0 (June 25, 2026) adds ACP methods for managing recipes, global config, and session extensions, improves recipe handling in new sessions, and continues post-AAIF migration development.",
-      "sort_date": "2026-06-30"
+      "value": "Jul '26",
+      "source_url": "https://github.com/aaif-goose/goose/releases/tag/v1.40.0#source:~:text=%2Fgoal%20command%20for%20agent%20self-evaluation%20before%20finishing",
+      "comment": "Latest AAIF Goose release v1.40.0 (July 2, 2026) adds desktop localization, CLI /status, /model and /goal commands, local goose review, async-task peek mode, delegate context/working_dir overrides, GLM-5.2 and many declarative providers, MLX local inference, streamable HTTP deeplink support, global ~/.agents/AGENTS.md hints, and unified thinking effort.",
+      "sort_date": "2026-07-02"
     },
     "rules": {
       "support": "full",
@@ -2895,9 +2897,9 @@
       "comment": "Recipes can be turned into custom slash commands (e.g. /weekly-status) usable in CLI or Desktop sessions. Location: recipe files referenced from goose config."
     },
     "goal_command": {
-      "support": "none",
-      "source_url": "https://goose-docs.ai/docs/guides/goose-cli-commands/#source:~:text=/plan%20%3Ctext%3E%20-%20Enter%20plan%20mode",
-      "comment": "No built-in `/goal` command for a persisted auto-continuing objective. Has `/plan` and `/endplan` for a plan-then-act mode, and recipes/schedule for repeatable automation, but not an auto-continuing goal loop."
+      "support": "full",
+      "source_url": "https://github.com/aaif-goose/goose/releases/tag/v1.40.0#source:~:text=%2Fgoal%20command%20for%20agent%20self-evaluation%20before%20finishing",
+      "comment": "Goose v1.40.0 adds a built-in `/goal` command for agent self-evaluation before finishing."
     },
     "subagents": {
       "support": "full",
@@ -3594,13 +3596,13 @@
       "value": "Feb '26",
       "source_url": "https://github.com/Kilo-Org/kilocode#source:~:text=Created%3A%202025-03-10T15%3A34%3A26Z",
       "comment": "Repository created 2025-03-10. First stable public release effectively Feb 2026 (v1.0.25). v7 rewrite announced May 2026.",
-      "sort_date": "2026-02-23"
+      "sort_date": "2026-02-01"
     },
     "latest_major_update": {
-      "value": "Jun '26",
+      "value": "Jul '26",
       "source_url": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.3.54#source:~:text=No%20notable%20changes",
       "comment": "Latest release checked: v7.3.54 (June 23, 2026). Release notes say no notable changes.",
-      "sort_date": "2026-06-30"
+      "sort_date": "2026-07-02"
     },
     "rules": {
       "support": "full",
@@ -3790,7 +3792,7 @@
       "value": "Oct '25",
       "source_url": "https://github.com/MoonshotAI/kimi-cli/releases/tag/1.48.0#source:~:text=1.48.0",
       "comment": "First public release v0.34 on 2025-10-21. Reached v1.0 on 2026-01-27. Current latest release: v1.48.0 (2026-06-22).",
-      "sort_date": "2025-10-21"
+      "sort_date": "2025-10-01"
     },
     "latest_major_update": {
       "value": "Jun '26",
@@ -4157,13 +4159,13 @@
       "value": "Jun '26",
       "source_url": "https://github.com/XiaomiMiMo/MiMo-Code/releases/tag/v0.1.0#v010:~:text=v0.1.0",
       "comment": "GitHub shows v0.1.0 as the first public release on 2026-06-10.",
-      "sort_date": "2026-06-10"
+      "sort_date": "2026-06-01"
     },
     "latest_major_update": {
-      "value": "Jun '26",
+      "value": "Jul '26",
       "source_url": "https://github.com/XiaomiMiMo/MiMo-Code/releases/tag/v0.1.4#v014:~:text=MiMoCode%20v0.1.4",
       "comment": "Latest public release captured for this row is v0.1.4 on 2026-06-29.",
-      "sort_date": "2026-06-30"
+      "sort_date": "2026-07-02"
     },
     "rules": {
       "support": "full",
@@ -4355,13 +4357,13 @@
       "value": "2025",
       "source_url": "https://github.com/sst/opencode#anomalycoopencode:~:text=opencode",
       "comment": "Exact public launch month not confirmed in public docs captured for this dataset.",
-      "sort_date": "2025-05-14"
+      "sort_date": "2025-01-01"
     },
     "latest_major_update": {
-      "value": "Jun '26",
-      "source_url": "https://github.com/anomalyco/opencode/releases/tag/v1.17.12#source:~:text=Enable%20adaptive%20thinking%20for%20Claude%20Sonnet%205",
-      "comment": "Latest release v1.17.12 (June 30, 2026) enables adaptive thinking for Claude Sonnet 5, improves MCP content-response handling and OAuth reconnect behavior, and fixes several desktop, chat, and plan-mode issues.",
-      "sort_date": "2026-06-30"
+      "value": "Jul '26",
+      "source_url": "https://github.com/anomalyco/opencode/releases/tag/v1.17.13#source:~:text=Force%20reasoning%20mode%20for%20OpenAI-compatible%20reasoning%20models",
+      "comment": "Latest release v1.17.13 (July 1, 2026) forces reasoning mode for OpenAI-compatible reasoning models, avoids stale GitHub Copilot response item IDs, and improves desktop question prompts, state cleanup, session tab scoping, v2 model picker, WSL setup, tab previews, and session-page failure isolation.",
+      "sort_date": "2026-07-02"
     },
     "rules": {
       "support": "full",
@@ -4555,13 +4557,13 @@
       "value": "Mar '24",
       "source_url": "https://github.com/OpenDevin/OpenDevin/releases#source:~:text=0.6.1",
       "comment": "Launched March 12, 2024 as 'OpenDevin' (replicating Devin). First tagged GitHub release v0.6.1 on 2024-06-04 (earlier 0.1-0.5 history predates the public releases page). Renamed to OpenHands in mid-2024, and the GitHub org All-Hands-AI was renamed to OpenHands on 2025-10-20.",
-      "sort_date": "2024-06-04"
+      "sort_date": "2024-03-01"
     },
     "latest_major_update": {
-      "value": "Jun '26",
+      "value": "Jul '26",
       "source_url": "https://github.com/OpenHands/OpenHands/releases/tag/cloud-1.40.0#source:~:text=Add%20full%20Git%20history%20user%20setting",
       "comment": "Latest public OpenHands release is cloud-1.40.0 (June 26, 2026), adding a full Git history user setting plus follow-up cloud fixes. The local/self-hosted 1.8.0 release remains the latest non-cloud semver release.",
-      "sort_date": "2026-06-30"
+      "sort_date": "2026-07-02"
     },
     "rules": {
       "support": "full",
@@ -4749,13 +4751,13 @@
       "value": "May '26",
       "source_url": "https://github.com/earendil-works/pi/blob/main/packages/coding-agent/CHANGELOG.md#changelog:~:text=0.74.0",
       "comment": "Pi changelog shows first listed public release as 0.74.0 dated 2026-05-07.",
-      "sort_date": "2025-12-02"
+      "sort_date": "2026-05-01"
     },
     "latest_major_update": {
-      "value": "Jun '26",
+      "value": "Jul '26",
       "source_url": "https://github.com/earendil-works/pi/releases/tag/v0.80.3#source:~:text=Anthropic%20Claude%20Sonnet%205%20support",
       "comment": "Latest release v0.80.3 (June 30, 2026) adds Anthropic Claude Sonnet 5 support through inherited Anthropic-compatible and Bedrock provider catalogs with adaptive thinking enabled.",
-      "sort_date": "2026-06-30"
+      "sort_date": "2026-07-02"
     },
     "rules": {
       "support": "full",
@@ -4926,27 +4928,29 @@
       "values": [
         "CLI",
         "Extension",
-        "SDK"
+        "SDK",
+        "Desktop App"
       ],
-      "source_url": "https://qwenlm.github.io/qwen-code-docs/en/users/quickstart/#source:~:text=This%20quickstart%20guide%20will%20have%20you%20using%20AI-powered%20coding%20assistance",
-      "comment": "CLI + VS Code + Zed + JetBrains via ACP, plus @qwen-code/sdk (TypeScript) and Python SDK. Per-form-factor links: CLI: https://qwenlm.github.io/qwen-code-docs/en/users/quickstart/; Extension: https://qwenlm.github.io/qwen-code-docs/en/users/extension/introduction/; SDK: https://qwenlm-qwen-code.mintlify.app/sdk/quick-start.",
+      "source_url": "https://github.com/QwenLM/qwen-code#how-to-use-qwen-code:~:text=Desktop%20%E2%80%94%20Qwen%20Code%20Desktop%20%E2%80%94%20GUI%20for%20macOS%2C%20Windows%2C%20Linux",
+      "comment": "CLI + VS Code/Zed/JetBrains IDE integrations + official Qwen Code Desktop + daemon mode + SDKs + IM bots/channels. Per-form-factor links: CLI: https://qwenlm.github.io/qwen-code-docs/en/users/quickstart/; Extension: https://qwenlm.github.io/qwen-code-docs/en/users/extension/introduction/; SDK: https://qwenlm-qwen-code.mintlify.app/sdk/quick-start; Desktop App: https://github.com/QwenLM/qwen-code#how-to-use-qwen-code.",
       "links": {
         "CLI": "https://qwenlm.github.io/qwen-code-docs/en/users/quickstart/",
         "Extension": "https://qwenlm.github.io/qwen-code-docs/en/users/extension/introduction/",
-        "SDK": "https://qwenlm-qwen-code.mintlify.app/sdk/quick-start"
+        "SDK": "https://qwenlm-qwen-code.mintlify.app/sdk/quick-start",
+        "Desktop App": "https://github.com/QwenLM/qwen-code#how-to-use-qwen-code"
       }
     },
     "released_in": {
       "value": "Jun '25",
       "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.19.2#source:~:text=Release%20v0.19.2",
       "comment": "GitHub repo created 2025-06-26. Earliest releases (v0.0.5+) shortly after. Current latest release: v0.19.2 (2026-06-24).",
-      "sort_date": "2025-08-01"
+      "sort_date": "2025-06-01"
     },
     "latest_major_update": {
-      "value": "Jun '26",
-      "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.19.3#source:~:text=feat(memory)%3A%20add%20a%20git-shared%20team%20memory%20tier",
-      "comment": "Latest release v0.19.3 (June 28, 2026) adds daemon workspace voice/control APIs, skill usage stats, auto-generated-skill confirmation, OpenAI streaming inactivity timeout, git-shared team memory, extension creator skill, @extension autocomplete, web-shell MCP resource browsing, workspace session sidebar, /model --vision fallback model selection, and many CLI/core/web-shell fixes.",
-      "sort_date": "2026-06-30"
+      "value": "Jul '26",
+      "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.19.4#source:~:text=feat(core%2Ccli%2Csdk)%3A%20resume%20an%20interrupted%20turn%20without%20a%20synthetic%20%22continue%22%20message",
+      "comment": "Latest release v0.19.4 (July 1, 2026) adds configurable auto-compact threshold and Stop-hook context usage, resumes interrupted turns without synthetic continue messages, adds desktop voice dictation, revives the Chrome extension through daemon-direct architecture, improves loop task injection, starts channel-agent bridge work, and fixes CLI/core/web-shell/standalone issues.",
+      "sort_date": "2026-07-02"
     },
     "rules": {
       "support": "full",
@@ -4974,9 +4978,9 @@
       "comment": "Full custom commands: Markdown files in ~/.qwen/commands/ (global) and .qwen/commands/ (project). Support {{args}}, !{shell}, @{file} references. Namespace support. Location: Qwen Code extensions can package custom commands via `qwen-extension.json`."
     },
     "goal_command": {
-      "support": "none",
-      "source_url": "https://qwenlm.github.io/qwen-code-docs/en/users/features/commands/#source:~:text=commands",
-      "comment": "Qwen Code supports custom shortcut commands; no built-in `/goal` for auto-continuing until a completion condition."
+      "support": "full",
+      "source_url": "https://qwenlm.github.io/qwen-code-docs/en/users/features/commands/#source:~:text=%2Fgoal%20%60Set%20a%20goal%20%E2%80%94%20keep%20working%20until%20condition%20met",
+      "comment": "Built-in `/goal` sets a goal and keeps working until the condition is met; supports `/goal <condition>` and `/goal clear`."
     },
     "subagents": {
       "support": "full",
@@ -5033,7 +5037,7 @@
       "source_url": "https://qwenlm.github.io/qwen-code-docs/en/users/configuration/model-providers/#selection-persistence-and-recommendations:~:text=Use%20modelProviders%20to%20declare%20curated%20model%20lists%20per%20auth%20type",
       "comment": "modelProviders config with openai/anthropic/gemini auth types. Local models via any OpenAI-compatible endpoint (Ollama, vLLM, LM Studio). OpenRouter, Fireworks AI."
     },
-    "notes": "Qwen Code by Alibaba (QwenLM) is the most feature-complete open-source coding agent in this matrix \u2014 20/20 fields at full (tied with Cline). Standout features: macOS Seatbelt + Docker sandbox, OpenTelemetry telemetry, custom status line, three output formats. Apache-2.0, 24.6k stars.",
+    "notes": "Qwen Code by Alibaba (QwenLM) is the most feature-complete open-source coding agent in this matrix -- 20/20 fields at full (tied with Cline). Standout features: macOS Seatbelt + Docker sandbox, OpenTelemetry telemetry, custom status line, three output formats. Apache-2.0, 24.6k stars.",
     "pricing": {
       "value": "Free (Apache-2.0)",
       "source_url": "https://github.com/QwenLM/qwen-code#acknowledgments:~:text=Apache-2.0%20license",
@@ -5070,9 +5074,9 @@
       "comment": "Research needed. Check for debug mode or verbose logging options."
     },
     "context_window": {
-      "support": "unknown",
-      "source_url": "https://docs.example.com/#documentation:~:text=context-window",
-      "comment": "Research needed. Check for configurable context length or token limits."
+      "support": "full",
+      "source_url": "https://qwenlm.github.io/qwen-code-docs/en/users/configuration/settings/#source:~:text=contextWindowSize%3A%20Overrides%20the%20default%20context%20window%20size%20for%20the%20selected%20model",
+      "comment": "`model.generationConfig.contextWindowSize` overrides the assumed model context window, and `context.autoCompactThreshold` configures auto-compaction at a fraction of the context window."
     },
     "code_formatting": {
       "support": "unknown",
@@ -5450,6 +5454,198 @@
     }
   },
   {
+    "name": "Trae Agent",
+    "links": {
+      "docs": "https://github.com/bytedance/trae-agent",
+      "github": "https://github.com/bytedance/trae-agent",
+      "website": "https://www.trae.ai/",
+      "slug": "trae-agent"
+    },
+    "form_factor": {
+      "values": [
+        "CLI"
+      ],
+      "source_url": "https://github.com/bytedance/trae-agent#usage:~:text=trae-cli%20run%20%22Create%20a%20hello%20world%20Python%20script%22",
+      "comment": "Research-friendly CLI coding agent. Per-form-factor links: CLI: https://github.com/bytedance/trae-agent#usage.",
+      "links": {
+        "CLI": "https://github.com/bytedance/trae-agent#usage"
+      }
+    },
+    "released_in": {
+      "value": "Jun '25",
+      "source_url": "https://api.github.com/repos/bytedance/trae-agent#created-at:~:text=%222025-06-13T12%3A05%3A15Z%22",
+      "comment": "GitHub repository created June 13, 2025; no published GitHub releases as of this run.",
+      "sort_date": "2025-06-01"
+    },
+    "latest_major_update": {
+      "value": "Feb '26",
+      "source_url": "https://github.com/bytedance/trae-agent#about:~:text=Trae%20Agent%20is%20an%20LLM-based%20agent%20for%20general%20purpose%20software%20engineering%20tasks",
+      "comment": "No GitHub releases are published. Current main README describes active development, Python 3.12+, CLI task execution, interactive mode, trajectory recording, YAML config, MCP services, Docker execution flags, and multi-provider support.",
+      "sort_date": "2026-02-05"
+    },
+    "rules": {
+      "support": "partial",
+      "source_url": "https://github.com/bytedance/trae-agent#yaml-configuration-recommended:~:text=trae_config.yaml",
+      "comment": "YAML configuration can define agent model, max steps, and tool set, but no AGENTS.md-style repository instruction file is documented."
+    },
+    "skills": {
+      "support": "none",
+      "source_url": "https://github.com/bytedance/trae-agent#features:~:text=Rich%20Tool%20Ecosystem",
+      "comment": "No reusable skill system documented; roadmap focuses on SDK, sandbox, trajectory analysis, MCP, and multi-agent support."
+    },
+    "hooks": {
+      "support": "none",
+      "source_url": "https://github.com/bytedance/trae-agent#features:~:text=Trajectory%20Recording",
+      "comment": "No lifecycle hooks documented."
+    },
+    "mcp_servers": {
+      "support": "partial",
+      "source_url": "https://github.com/bytedance/trae-agent#mcp-services-optional:~:text=To%20enable%20Model%20Context%20Protocol%20(MCP)%20services",
+      "comment": "README documents optional `mcp_servers` configuration; roadmap says MCP/tool ecosystem expansion is still planned."
+    },
+    "custom_commands": {
+      "support": "none",
+      "source_url": "https://github.com/bytedance/trae-agent#basic-commands:~:text=Basic%20Commands",
+      "comment": "Only built-in CLI commands (`run`, `interactive`, `show-config`, `tools`) are documented."
+    },
+    "goal_command": {
+      "support": "none",
+      "source_url": "https://github.com/bytedance/trae-agent#basic-commands:~:text=trae-cli%20run",
+      "comment": "No persistent `/goal` or auto-continue-until-complete command documented."
+    },
+    "subagents": {
+      "support": "none",
+      "source_url": "https://github.com/bytedance/trae-agent/blob/main/docs/roadmap.md#advanced-agentic-flows-and-multi-agent-support:~:text=Develop%20sophisticated%20agent%20orchestration%20capabilities",
+      "comment": "Multi-agent support is listed on the roadmap, not documented as current functionality."
+    },
+    "model_selection": {
+      "support": "full",
+      "source_url": "https://github.com/bytedance/trae-agent#provider-specific-examples:~:text=--provider%20openai%20--model%20gpt-4o",
+      "comment": "Supports `--provider`, `--model`, `--model-base-url`, and config-file model providers."
+    },
+    "approval_mode": {
+      "support": "none",
+      "source_url": "https://github.com/bytedance/trae-agent#usage:~:text=trae-cli%20run",
+      "comment": "No tool approval/autonomy mode flags documented."
+    },
+    "sandbox_mode": {
+      "support": "partial",
+      "source_url": "https://github.com/bytedance/trae-agent#usage:~:text=--docker-image",
+      "comment": "`trae-cli run` supports Docker image/container/Dockerfile flags, but no default local sandbox mode."
+    },
+    "resume": {
+      "support": "none",
+      "source_url": "https://github.com/bytedance/trae-agent#basic-commands:~:text=interactive",
+      "comment": "No resume/session ID command documented."
+    },
+    "continue": {
+      "support": "none",
+      "source_url": "https://github.com/bytedance/trae-agent#basic-commands:~:text=interactive",
+      "comment": "No continue-latest command documented."
+    },
+    "non_interactive": {
+      "support": "full",
+      "source_url": "https://github.com/bytedance/trae-agent#basic-commands:~:text=trae-cli%20run%20%22Create%20a%20hello%20world%20Python%20script%22",
+      "comment": "`trae-cli run` executes a single task and exits."
+    },
+    "output_format": {
+      "support": "partial",
+      "source_url": "https://github.com/bytedance/trae-agent#trajectory-recording:~:text=trajectory_YYYYMMDD_HHMMSS.json",
+      "comment": "No stdout JSON mode documented, but trajectory files capture LLM interactions, agent steps, tool usage, and metadata as JSON."
+    },
+    "statusline": {
+      "support": "none",
+      "source_url": "https://github.com/bytedance/trae-agent#features:~:text=CLI%20interface",
+      "comment": "No configurable statusline documented."
+    },
+    "telemetry": {
+      "support": "none",
+      "source_url": "https://github.com/bytedance/trae-agent#trajectory-recording:~:text=Trajectory%20Recording",
+      "comment": "No product telemetry collection documented; trajectory recording is local/debug oriented."
+    },
+    "custom_model_provider": {
+      "support": "full",
+      "source_url": "https://github.com/bytedance/trae-agent#features:~:text=OpenAI%2C%20Anthropic%2C%20Doubao%2C%20Azure%2C%20OpenRouter%2C%20Ollama%20and%20Google%20Gemini",
+      "comment": "Supports OpenAI, Anthropic, Doubao, Azure, OpenRouter, Ollama, Google Gemini, custom base URLs, and config-file providers."
+    },
+    "pricing": {
+      "value": "Free (MIT), BYOK/provider costs",
+      "source_url": "https://github.com/bytedance/trae-agent#license:~:text=MIT%20License",
+      "comment": "Trae Agent is MIT-licensed. Users provide provider API keys or local Ollama models."
+    },
+    "some_free_usage": {
+      "support": "full",
+      "source_url": "https://github.com/bytedance/trae-agent#features:~:text=Ollama",
+      "comment": "Local Ollama provider support enables account-free/free local model usage."
+    },
+    "no_account_required": {
+      "support": "full",
+      "source_url": "https://github.com/bytedance/trae-agent#features:~:text=Ollama",
+      "comment": "Can run with local Ollama models without a hosted Trae account."
+    },
+    "can_use_other_subscriptions": {
+      "support": "full",
+      "source_url": "https://github.com/bytedance/trae-agent#features:~:text=OpenAI%2C%20Anthropic%2C%20Doubao%2C%20Azure%2C%20OpenRouter%2C%20Ollama%20and%20Google%20Gemini",
+      "comment": "Bring-your-own provider/API keys for multiple providers."
+    },
+    "hosted_agent": {
+      "support": "none",
+      "source_url": "https://github.com/bytedance/trae-agent#usage:~:text=trae-cli",
+      "comment": "Local CLI agent; no hosted/cloud agent platform documented."
+    },
+    "transcripts": {
+      "support": "full",
+      "source_url": "https://github.com/bytedance/trae-agent#trajectory-recording:~:text=Trajectory%20files%20contain%20LLM%20interactions%2C%20agent%20steps%2C%20tool%20usage%2C%20and%20execution%20metadata",
+      "comment": "Trajectory recording is first-class, with auto-generated or custom trajectory JSON files."
+    },
+    "keyboard_shortcuts": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=unknown",
+      "comment": "Research needed. Public docs did not expose enough detail in this run."
+    },
+    "theme_customization": {
+      "support": "none",
+      "source_url": "https://github.com/bytedance/trae-agent#basic-commands:~:text=interactive",
+      "comment": "CLI/interactive interface has no documented theme customization."
+    },
+    "auto_save": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=unknown",
+      "comment": "Research needed. Public docs did not expose enough detail in this run."
+    },
+    "debugging_output": {
+      "support": "full",
+      "source_url": "https://github.com/bytedance/trae-agent#trajectory-recording:~:text=for%20debugging%20and%20analysis",
+      "comment": "Trajectory files and `show-config` support debugging/analysis."
+    },
+    "context_window": {
+      "support": "partial",
+      "source_url": "https://github.com/bytedance/trae-agent#yaml-configuration-recommended:~:text=max_tokens",
+      "comment": "Model config includes `max_tokens`, but no dedicated context-window management/compaction docs were found."
+    },
+    "code_formatting": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=unknown",
+      "comment": "Research needed. Public docs did not expose enough detail in this run."
+    },
+    "git_integration": {
+      "support": "partial",
+      "source_url": "https://github.com/bytedance/trae-agent#usage:~:text=--patch-path",
+      "comment": "Supports patch generation/application paths and file editing, but no first-class git commit/PR workflow documented."
+    },
+    "performance_mode": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=unknown",
+      "comment": "Research needed. Public docs did not expose enough detail in this run."
+    },
+    "ui_customization": {
+      "support": "partial",
+      "source_url": "https://github.com/bytedance/trae-agent#usage:~:text=--console-type%20%5Bsimple%7Crich%5D",
+      "comment": "CLI supports simple/rich console types; no broader UI customization documented."
+    },
+    "notes": "Official ByteDance open-source CLI agent for software engineering research and development. Verified locally from documented `uv sync --all-extras`: `trae-cli --help`, `trae-cli run --help`, and `trae-cli interactive --help` work. Added to agent-launch as `--agent trae` targeting `trae-cli`."
+  },
+  {
     "name": "Windsurf Cascade",
     "links": {
       "docs": "https://docs.windsurf.com/",
@@ -5629,5 +5825,191 @@
       "source_url": "https://docs.example.com/#documentation:~:text=ui-customization",
       "comment": "Research needed. Check for UI layout, sidebar, or panel customization."
     }
+  },
+  {
+    "name": "ZCode",
+    "links": {
+      "docs": "https://zcode.z.ai/en/docs",
+      "github": "",
+      "website": "https://zcode.z.ai/en",
+      "slug": "zcode"
+    },
+    "form_factor": {
+      "values": [
+        "IDE",
+        "Desktop App",
+        "Mobile"
+      ],
+      "source_url": "https://zcode.z.ai/en/docs/install#download:~:text=Currently%20supported%20platforms%20include%20macOS%20(Apple%20Silicon%20%2F%20Intel)%20and%20Windows",
+      "comment": "Desktop agentic development environment for macOS and Windows, Linux beta group, plus mobile Remote Control for directing an open desktop workspace. Per-form-factor links: IDE: https://zcode.z.ai/en; Desktop App: https://zcode.z.ai/en/docs/install; Mobile: https://zcode.z.ai/en/docs/remote-control.",
+      "links": {
+        "IDE": "https://zcode.z.ai/en",
+        "Desktop App": "https://zcode.z.ai/en/docs/install",
+        "Mobile": "https://zcode.z.ai/en/docs/remote-control"
+      }
+    },
+    "released_in": {
+      "value": "2026",
+      "source_url": "https://zcode.z.ai/en/docs#release-highlights:~:text=In-house%20ZCode%20Agent",
+      "comment": "Public ZCode docs and desktop downloads are live in 2026; exact public launch date not confirmed in accessible docs.",
+      "sort_date": "2026-01-01"
+    },
+    "latest_major_update": {
+      "value": "Jul '26",
+      "source_url": "https://zcode.z.ai/en/changelog#release-v322:~:text=Release%20v3.2.2",
+      "comment": "Latest public ZCode release v3.2.2 (July 1, 2026) adds built-in plugin update/uninstall management, file-rewind safety summaries, improved prompt command trigger suggestions, more accurate subagent/tool usage counts, clearer external-tool errors, stopped-goal status visibility, spacing/text fixes, and stronger sensitive-data redaction in log export.",
+      "sort_date": "2026-07-01"
+    },
+    "rules": {
+      "support": "full",
+      "source_url": "https://zcode.z.ai/en/docs/agents#project-instructions-file:~:text=ZCode%20currently%20reads%20two%20sources",
+      "comment": "Reads user global `~/.zcode/AGENTS.md` and workspace `AGENTS.md`; workspace instructions are primary and CLAUDE.md is only a one-time onboarding migration source."
+    },
+    "skills": {
+      "support": "full",
+      "source_url": "https://zcode.z.ai/en/docs/skill#create-a-skill:~:text=~%2F.zcode%2Fskills%2F%3Cskill-name%3E%2FSKILL.md",
+      "comment": "First-class `SKILL.md` skills under `~/.zcode/skills/<skill-name>/SKILL.md`, with Settings management and import from other agents."
+    },
+    "hooks": {
+      "support": "partial",
+      "source_url": "https://zcode.z.ai/en/docs/legacy/plugin#plugin-types:~:text=Hook%20Hooks%20that%20auto-execute%20on%20specific%20events",
+      "comment": "Plugin system advertises Hook plugin types, but current public docs do not expose a full standalone hook API like some CLIs."
+    },
+    "mcp_servers": {
+      "support": "full",
+      "source_url": "https://zcode.z.ai/en/docs/mcp-services#create-an-mcp-server:~:text=stdio%20(SSE%20and%20HTTP%20remote%20servers%20are%20also%20supported)",
+      "comment": "Supports stdio, HTTP, and SSE MCP servers, full JSON config import, env vars/headers, plugin MCP servers, and importing MCP config from Claude Code, Codex CLI, OpenCode, and `.agents`."
+    },
+    "custom_commands": {
+      "support": "full",
+      "source_url": "https://zcode.z.ai/en/docs/commands#create-a-command:~:text=Open%20Commands%20in%20ZCode%20settings%2C%20then%20create%20a%20new%20command",
+      "comment": "User/workspace custom slash commands can be created in settings and invoked from `/` in ZCode Agent."
+    },
+    "goal_command": {
+      "support": "full",
+      "source_url": "https://zcode.z.ai/en/docs/goal#set-and-manage-a-goal:~:text=%2Fgoal%20%3Cobjective%3E%20Set%20the%20session%20goal",
+      "comment": "Built-in `/goal` supports set, replace, pause, resume, and clear; the agent automatically verifies each round and continues until the goal is complete."
+    },
+    "subagents": {
+      "support": "full",
+      "source_url": "https://zcode.z.ai/en/docs/subagents#custom-subagents-beta:~:text=You%20can%20now%20create%20your%20own%20subagents%20from%20Settings",
+      "comment": "Built-in general-purpose and Explore subagents plus beta user-level custom subagents under `~/.zcode/agents/<name>.md`, with custom model/tool permissions/instructions."
+    },
+    "model_selection": {
+      "support": "full",
+      "source_url": "https://zcode.z.ai/en/docs/configuration#method-2-model-selector:~:text=click%20the%20model%20name%20inside%20the%20chat%20box%20to%20open%20the%20model%20selector",
+      "comment": "Model selector and model settings support Z.ai, BigModel, GLM Coding Plan, and API-key providers."
+    },
+    "approval_mode": {
+      "support": "full",
+      "source_url": "https://zcode.z.ai/en/docs/agents#execution-modes:~:text=The%20ZCode%20Agent%20execution%20mode%20menu%20currently%20includes%20the%20following%20modes",
+      "comment": "Execution modes include Default, Confirm Before Changes, and Auto Edit; safety confirmation pauses risky actions for approval."
+    },
+    "sandbox_mode": {
+      "support": "partial",
+      "source_url": "https://zcode.z.ai/en/docs/remote-development#remote-development:~:text=run%20a%20workspace%20inside%20a%20remote%20host%20or%20a%20local%20container",
+      "comment": "Remote development can run workspaces in SSH hosts or local Docker containers; no standalone local sandbox flag is documented."
+    },
+    "resume": {
+      "support": "partial",
+      "source_url": "https://zcode.z.ai/en/docs/agents#workspace-entry:~:text=task%20list",
+      "comment": "Desktop task list/conversation history supports returning to prior work, but no CLI-style `--resume` flag is documented."
+    },
+    "continue": {
+      "support": "partial",
+      "source_url": "https://zcode.z.ai/en/docs/remote-control#control-model:~:text=Confirm%2C%20continue%2C%20or%20stop%20a%20long-running%20task",
+      "comment": "Existing tasks can be continued from desktop or mobile Remote Control; no headless continue command is documented."
+    },
+    "non_interactive": {
+      "support": "none",
+      "source_url": "https://zcode.z.ai/en/docs/install#verify-installation:~:text=Open%20the%20app%20and%20complete%20sign-in",
+      "comment": "ZCode is a desktop ADE; no local headless CLI entry point was found."
+    },
+    "output_format": {
+      "support": "none",
+      "source_url": "https://zcode.z.ai/en/docs/agents#workspace-entry:~:text=chat%20input",
+      "comment": "No JSON/structured output mode documented for the desktop agent."
+    },
+    "statusline": {
+      "support": "partial",
+      "source_url": "https://zcode.z.ai/en/docs/goal#live-tracking-in-the-summary-panel:~:text=A%20goal%20card%20appears%20in%20the%20top-right%20summary%20panel",
+      "comment": "Goal summary panel shows status, elapsed time, tokens, and iteration count, but no custom statusline API is documented."
+    },
+    "telemetry": {
+      "support": "unknown",
+      "source_url": "https://zcode.z.ai/en/docs/usage-stats#usage-stats:~:text=Usage%20Stats%20shows%20how%20ZCode%20is%20being%20used",
+      "comment": "Usage Stats exists; no telemetry opt-out/control docs found."
+    },
+    "custom_model_provider": {
+      "support": "full",
+      "source_url": "https://zcode.z.ai/en/docs/configuration#other-ways-to-connect:~:text=Connect%20compatible%20model%20services%20through%20the%20Anthropic%20%2F%20OpenAI%20protocols",
+      "comment": "Supports third-party compatible model services through Anthropic/OpenAI protocols and API key mode."
+    },
+    "pricing": {
+      "value": "5-day free trial; GLM Coding Plan or API/provider billing",
+      "source_url": "https://zcode.z.ai/en/docs#glm-52-and-exclusive-benefits:~:text=First-time%20ZCode%20users%20get%205%20days%20of%20free%20benefits",
+      "comment": "First-time ZCode users get a 5-day free trial; GLM Coding Plan subscribers get limited-time ~1.5x quota in ZCode through July 31, 2026. Longer-term use depends on GLM Coding Plan/API/provider billing."
+    },
+    "some_free_usage": {
+      "support": "full",
+      "source_url": "https://zcode.z.ai/en/docs#glm-52-and-exclusive-benefits:~:text=First-time%20ZCode%20users%20get%205%20days%20of%20free%20benefits",
+      "comment": "First-time ZCode users receive a 5-day free trial with daily GLM-5.2/GLM-5-Turbo token benefits."
+    },
+    "hosted_agent": {
+      "support": "none",
+      "source_url": "https://zcode.z.ai/en/docs/remote-control#remote-control:~:text=the%20actual%20code%20changes%2C%20commands%2C%20and%20project%20environment%20stay%20on%20the%20desktop",
+      "comment": "Runtime remains the desktop workspace or remote SSH/Docker target; mobile remote only controls the open desktop workspace."
+    },
+    "transcripts": {
+      "support": "partial",
+      "source_url": "https://zcode.z.ai/en/docs/agents#workspace-entry:~:text=task%20list",
+      "comment": "Task list/conversation history is first-class in the desktop UI, but public docs do not expose disk transcript paths."
+    },
+    "keyboard_shortcuts": {
+      "support": "full",
+      "source_url": "https://zcode.z.ai/en/docs/ADE-tools#command-center:~:text=Press%20Command%20%2B%20K",
+      "comment": "Command Center is opened with Command+K; docs include keyboard shortcut support."
+    },
+    "theme_customization": {
+      "support": "full",
+      "source_url": "https://zcode.z.ai/en/docs/ADE-tools#command-center:~:text=switch%20theme",
+      "comment": "Command Center includes switch-theme actions."
+    },
+    "auto_save": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=unknown",
+      "comment": "Research needed. Public docs did not expose enough detail in this run."
+    },
+    "debugging_output": {
+      "support": "partial",
+      "source_url": "https://zcode.z.ai/en/changelog#release-v322:~:text=Log%20export%20now%20applies%20more%20thorough%20sensitive%20data%20redaction",
+      "comment": "Log export exists and was improved in v3.2.2; public docs do not expose a full debug/verbose mode."
+    },
+    "context_window": {
+      "support": "full",
+      "source_url": "https://zcode.z.ai/en/docs#core-capabilities:~:text=stable%201M%20context",
+      "comment": "ZCode is built around GLM-5.2 long-context coding workflows and usage stats show context-window breakdown."
+    },
+    "code_formatting": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=unknown",
+      "comment": "Research needed. Public docs did not expose enough detail in this run."
+    },
+    "git_integration": {
+      "support": "full",
+      "source_url": "https://zcode.z.ai/en/docs/agents#workspace-entry:~:text=Git%20branch%20state",
+      "comment": "ZCode Agent understands Git branch state and combines workspace state, tool results, and Git changes during tasks."
+    },
+    "performance_mode": {
+      "support": "partial",
+      "source_url": "https://zcode.z.ai/en/docs/agents#execution-modes:~:text=Execution%20modes%20control",
+      "comment": "Execution modes and model selector can trade off confirmation/autonomy and model choice, but no named performance mode is documented."
+    },
+    "ui_customization": {
+      "support": "partial",
+      "source_url": "https://zcode.z.ai/en/changelog#release-v314:~:text=Interface%20scaling%20supports%20a%20larger%20magnification%20ratio",
+      "comment": "Desktop UI supports interface scaling and theme switching; deeper layout customization is not documented."
+    },
+    "notes": "Z.ai/Zhipu desktop ADE with in-house ZCode Agent, GLM-5.2 focus, AGENTS.md, skills, commands, MCP, subagents, plugins, goal mode, mobile remote control, bot channels, and remote SSH/Docker development. No local CLI command was found, so no agent-launch backend was added."
   }
 ]

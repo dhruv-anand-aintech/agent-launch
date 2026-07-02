@@ -20,6 +20,7 @@ agents=(
   'opencode:OpenCode'
   'pi:Pi Coding Agent'
   'qwen:Qwen Code'
+  'trae:Trae Agent'
   'random:Uniform random installed agent'
 )
 
