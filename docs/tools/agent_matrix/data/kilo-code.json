@@ -120,14 +120,9 @@
   },
   "notes": "Kilo Code is a rapidly evolving open-source coding agent (MIT, 19k+ stars). Originally forked from Continue, now independent. Notable for extensive plugin system, 500+ model support through Kilo Gateway, and cross-surface session sync.",
   "pricing": {
-    "value": "Free (MIT), Kilo Pass $19-199/mo, Teams $15/user/mo",
-    "source_url": "https://kilo.ai/pricing#simple-transparent-pricing:~:text=Simple%2C%20transparent%20pricing",
-    "comment": "App is free & MIT. Kilo Pass (Starter $19/mo, Pro $49/mo, Expert $199/mo). BYOK (no markup). Free models. Teams: $15/user/mo."
-  },
-  "first_party_coding_model_plans": {
-    "value": "Kilo Pass $19-$199/mo; Teams $15/user/mo",
-    "source_url": "https://kilo.ai/pricing#simple-transparent-pricing:~:text=Simple%2C%20transparent%20pricing",
-    "comment": "Pricing for native first-party coding/model access, using the product pricing source already tracked by this matrix."
+    "value": "Kilo Code free; Teams $15/user/mo; Kilo Gateway exact provider rates; Kilo Pass $19/$49/$199/mo credit subscriptions; KiloClaw $55/mo",
+    "source_url": "https://kilo.ai/pricing#simple-transparent-pricing:~:text=Kilo%20Code%20Open%20source%20AI%20coding%20agent",
+    "comment": "Official pricing now separates free Kilo Code, Teams/Enterprise, pay-as-you-go Gateway, Kilo Pass credit subscriptions, BYOK/local paths, and the separate KiloClaw hosted product."
   },
   "some_free_usage": {
     "support": "full",

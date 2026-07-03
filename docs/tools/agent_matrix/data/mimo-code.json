@@ -122,14 +122,9 @@
   },
   "notes": "MiMo Code is a Xiaomi MiMo open-source terminal coding agent forked from OpenCode, adding cross-session memory, checkpoints, subagent orchestration, goal-driven loops, compose workflows, and dream/distill self-improvement.",
   "pricing": {
-    "value": "Free open source; hosted MiMo services optional",
-    "source_url": "https://github.com/XiaomiMiMo/MiMo-Code#license:~:text=Source%20code%20is%20licensed%20under%20the%20MIT%20License",
-    "comment": "Source code is MIT-licensed. README says MiMo Auto is free for a limited time and hosted services are subject to Xiaomi MiMo terms."
-  },
-  "first_party_coding_model_plans": {
-    "value": "None documented in current matrix source; free open-source CLI, hosted MiMo services optional",
-    "source_url": "https://github.com/XiaomiMiMo/MiMo-Code#license:~:text=Source%20code%20is%20licensed%20under%20the%20MIT%20License",
-    "comment": "No native first-party model subscription is documented for this surface in the current matrix source; model usage is BYOK, local, or provider-billed."
+    "value": "MiMo Code free/open-source; MiMo Token Plan Lite $6/mo, Standard $16/mo, Pro $50/mo, Max $100/mo; API pay-as-you-go also available",
+    "source_url": "https://mimo.mi.com/docs/en-US/price/token-plan#token-plan:~:text=%246%2Fmonth%2C%20%C2%A539%2Fmonth",
+    "comment": "Fresh search found Xiaomi official Token Plan pricing. MiMo Code docs recommend MiMo Token Plan for new users connecting models; the Token Plan supports MiMo V2.5 models and mainstream coding tools."
   },
   "some_free_usage": {
     "support": "full",

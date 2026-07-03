@@ -122,14 +122,9 @@
   },
   "notes": "Kimi CLI by Moonshot AI (Beijing) is an Apache-2.0 open-source coding agent with rapid development pace (97 releases in 7 months). Strong AGENTS.md, skills, MCP, subagent, and YOLO/AFK approval mode support. Notable for status bar with badges and comprehensive JSON streaming output.",
   "pricing": {
-    "value": "Membership (credits) or BYOK",
-    "source_url": "https://www.kimi.com/help/kimi-code/benefits#billing:~:text=included%20in%20your%20subscription%20fee",
-    "comment": "Kimi Code platform via membership subscription (credits-based, 7-day refresh cycle) or pay-as-you-go via api.moonshot.cn. Also supports own API key from OpenAI/Anthropic/Gemini."
-  },
-  "first_party_coding_model_plans": {
-    "value": "Kimi membership credits or BYOK",
-    "source_url": "https://www.kimi.com/help/kimi-code/benefits#billing:~:text=included%20in%20your%20subscription%20fee",
-    "comment": "Pricing for native first-party coding/model access, using the product pricing source already tracked by this matrix."
+    "value": "Kimi Code usage included in Kimi subscription credits; credit amounts vary by plan; API/token billing and BYOK also available",
+    "source_url": "https://www.kimi.com/help/kimi-code/benefits#billing:~:text=Kimi%20Code%20usage%20is%20included%20in%20your%20subscription%20fee",
+    "comment": "Kimi help says Kimi Code usage is included in the subscription fee and consumes a Kimi Code quota pool; API and BYOK paths remain separate."
   },
   "hosted_agent": {
     "support": "none",

@@ -124,14 +124,9 @@
   },
   "notes": "",
   "pricing": {
-    "value": "Free (MIT, BYOK), Go $10/mo (first month $5), Zen pay-per-token (min $20), Enterprise per-seat",
-    "source_url": "https://opencode.ai/docs/zen/#pricing:~:text=Pricing",
-    "comment": "Free tier: bring your own API key + limited free models. Go ($10/mo): curated open-source models with usage caps. Zen: pay-per-token access to all models (min $20 top-up). Enterprise: per-seat custom pricing."
-  },
-  "first_party_coding_model_plans": {
-    "value": "Go $10/mo; Zen pay-per-token (min $20); Enterprise per-seat; BYOK free",
-    "source_url": "https://opencode.ai/docs/zen/#pricing:~:text=Pricing",
-    "comment": "Pricing for native first-party coding/model access, using the product pricing source already tracked by this matrix."
+    "value": "Free MIT/BYOK; OpenCode Go $5 first month then $10/mo; Zen pay-as-you-go with $20 balance/top-up; Enterprise/per-seat paths",
+    "source_url": "https://opencode.ai/docs/go/#go:~:text=%245%20for%20your%20first%20month%2C%20then%20%2410%2Fmonth",
+    "comment": "OpenCode Go is the fixed subscription for open coding models; Zen is the pay-as-you-go model gateway and BYOK remains free."
   },
   "some_free_usage": {
     "support": "full",

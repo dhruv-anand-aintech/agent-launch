@@ -126,14 +126,9 @@
     "comment": "Bring Your Own Key/custom model path is documented."
   },
   "pricing": {
-    "value": "Factory plans; usage details in Factory pricing",
-    "source_url": "https://docs.factory.ai/reference/cli-reference#source:~:text=Plans%20%26%20Pricing",
-    "comment": "CLI docs route to Factory plans and pricing."
-  },
-  "first_party_coding_model_plans": {
-    "value": "Factory subscription/usage plans; CLI docs route to Factory pricing",
-    "source_url": "https://docs.factory.ai/reference/cli-reference#source:~:text=Plans%20%26%20Pricing",
-    "comment": "Pricing for native first-party coding/model access, using the product pricing source already tracked by this matrix."
+    "value": "Pro $20/mo; Plus $100/mo; Max $200/mo; Teams custom; Extra Usage prepaid $10 minimum; Droid Core free",
+    "source_url": "https://docs.factory.ai/pricing#plans:~:text=Pro%20%E2%80%94%20%2420%2Fmo",
+    "comment": "Factory docs list Pro, Plus, Max, Teams, Droid Core, and prepaid Extra Usage; Droid CLI/App/SDK are included in the paid Factory plans."
   },
   "no_account_required": {
     "support": "partial",

@@ -130,14 +130,9 @@
     "comment": "Full custom model/BYOK support through custom JSON model profiles, local providers such as Ollama, enterprise proxies, and supported API-compatible endpoints."
   },
   "pricing": {
-    "value": "Bundled with JetBrains AI tiers/free credits",
+    "value": "Bundled with JetBrains AI tiers/free credits; paid JetBrains AI plans apply",
     "source_url": "https://blog.jetbrains.com/blog/2025/04/16/jetbrains-ides-go-ai/#all-jetbrains-ai-tools-under-a-single-subscription-with-a-free-tier:~:text=AI%20Free%20tier",
-    "comment": "Junie is included in JetBrains AI subscription/free-tier credit model."
-  },
-  "first_party_coding_model_plans": {
-    "value": "JetBrains AI free tier/credits and paid AI tiers",
-    "source_url": "https://blog.jetbrains.com/blog/2025/04/16/jetbrains-ides-go-ai/#all-jetbrains-ai-tools-under-a-single-subscription-with-a-free-tier:~:text=AI%20Free%20tier",
-    "comment": "Pricing for native first-party coding/model access, using the product pricing source already tracked by this matrix."
+    "comment": "JetBrains positions Junie under JetBrains AI subscription/credit tiers; no separate public Junie-only self-serve price was found."
   },
   "notes": "Strong fit for JetBrains users, debugger-aware workflows, CLI/headless CI, and JetBrains IDE integration. June 2026 docs now expose extensibility details for guidelines, extensions, MCP, subagents, commands, hooks, BYOK/custom models, and CI/CD.",
   "transcripts": {

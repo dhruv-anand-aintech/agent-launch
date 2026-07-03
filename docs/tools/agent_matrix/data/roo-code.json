@@ -118,14 +118,9 @@
   },
   "notes": "Roo Code was a popular Cline fork (24k stars, 574k VS Code installs) that was shut down on May 15, 2026. The repository is now archived and read-only. VS Code extension-host API only; no standalone npm agent SDK. Community forks include ZooCode and Cline.",
   "pricing": {
-    "value": "Free (Apache-2.0)",
+    "value": "Free open-source extension; BYOK/provider costs",
     "source_url": "https://roocodeinc.github.io/Roo-Code/faq/#is-roo-code-free-to-use:~:text=The%20Roo%20Code%20extension%20is%20free%20and%20open%2Dsource",
-    "comment": "Free and open-source (Apache 2.0). Users paid their own LLM provider API costs. Roo Code Router was a paid routing service. Now discontinued."
-  },
-  "first_party_coding_model_plans": {
-    "value": "None; free open-source extension, BYOK/provider costs",
-    "source_url": "https://roocodeinc.github.io/Roo-Code/faq/#is-roo-code-free-to-use:~:text=The%20Roo%20Code%20extension%20is%20free%20and%20open%2Dsource",
-    "comment": "No native first-party model subscription is documented for this surface in the current matrix source; model usage is BYOK, local, or provider-billed."
+    "comment": "Roo Code is free/open-source in public docs; no first-party coding model subscription was found in current official docs search."
   },
   "hosted_agent": {
     "support": "none",

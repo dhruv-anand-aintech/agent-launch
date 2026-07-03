@@ -122,14 +122,9 @@
     "comment": "Uses Gemini models; BYO provider not documented."
   },
   "pricing": {
-    "value": "Free 15 tasks/day; Pro 100 tasks/day; Ultra 300 tasks/day",
-    "source_url": "https://jules.google/#source:~:text=15%20tasks%20per%20day",
-    "comment": "Site lists daily task and concurrency limits by tier."
-  },
-  "first_party_coding_model_plans": {
-    "value": "Free 15 tasks/day; Pro 100 tasks/day; Ultra 300 tasks/day",
-    "source_url": "https://jules.google/#source:~:text=15%20tasks%20per%20day",
-    "comment": "Pricing for native first-party coding/model access, using the product pricing source already tracked by this matrix."
+    "value": "Free 15 tasks/day; Google AI Pro 100 tasks/day; Google AI Ultra 300 tasks/day",
+    "source_url": "https://jules.google/docs/usage-limits/#jules-in-ultra:~:text=Jules%20in%20Ultra%20is%20included",
+    "comment": "Google Jules docs and product pages list free usage and Pro/Ultra task-limit tiers; Pro/Ultra are Google AI plan benefits."
   },
   "notes": "Best categorized as an async hosted coding worker rather than a terminal pair-programmer. Strong on GitHub PR flow, approvals, Cloud VM isolation, and concurrency.",
   "transcripts": {

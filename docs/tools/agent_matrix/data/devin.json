@@ -124,14 +124,9 @@
   },
   "notes": "Devin pioneered the autonomous AI software engineer category. Focuses on enterprise: VM isolation, managed sub-agents, automations. Higher-end pricing reflects the hosted, managed approach. Windsurf acquisition announced April 2026.",
   "pricing": {
-    "value": "Free, Pro $20/mo, Max $200/mo, Teams $80+/mo",
-    "source_url": "https://devin.ai/pricing#source:~:text=Free%3AFree%2CPro%3A%2420%2Fmonth%2CMax%3A%24200%2Fmonth%2CTeams%3A%2480%2Fmonth",
-    "comment": "Free (limited), Pro ($20/mo), Max ($200/mo), Teams ($80/mo minimum). Enterprise: custom pricing with VPC, SAML/OIDC. ACU-based consumption model."
-  },
-  "first_party_coding_model_plans": {
-    "value": "Free; Pro $20/mo; Max $200/mo; Teams $80+/mo",
-    "source_url": "https://devin.ai/pricing#source:~:text=Free%3AFree%2CPro%3A%2420%2Fmonth%2CMax%3A%24200%2Fmonth%2CTeams%3A%2480%2Fmonth",
-    "comment": "Pricing for native first-party coding/model access, using the product pricing source already tracked by this matrix."
+    "value": "Free; Pro $20/mo; Max $200/mo; Teams $80/mo minimum + $40/mo per full dev seat; Enterprise custom",
+    "source_url": "https://docs.devin.ai/admin/billing/self-serve#plan-overview:~:text=Free%20Individuals%20trying%20Devin",
+    "comment": "Devin self-serve billing docs list Free, Pro, Max, and Teams; Teams starts at $80/month minimum and supports unlimited members with paid full dev seats."
   },
   "some_free_usage": {
     "support": "full",

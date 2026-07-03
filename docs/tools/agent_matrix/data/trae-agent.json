@@ -117,14 +117,9 @@
     "comment": "Supports OpenAI, Anthropic, Doubao, Azure, OpenRouter, Ollama, Google Gemini, custom base URLs, and config-file providers."
   },
   "pricing": {
-    "value": "Free (MIT), BYOK/provider costs",
+    "value": "Free MIT open-source CLI; BYOK/provider costs",
     "source_url": "https://github.com/bytedance/trae-agent#license:~:text=MIT%20License",
-    "comment": "Trae Agent is MIT-licensed. Users provide provider API keys or local Ollama models."
-  },
-  "first_party_coding_model_plans": {
-    "value": "None; free open-source CLI, BYOK/provider costs",
-    "source_url": "https://github.com/bytedance/trae-agent#license:~:text=MIT%20License",
-    "comment": "No native first-party model subscription is documented for this surface in the current matrix source; model usage is BYOK, local, or provider-billed."
+    "comment": "Trae Agent is an MIT open-source CLI in the ByteDance GitHub repo; no first-party paid model subscription was found for the open-source Trae Agent surface."
   },
   "some_free_usage": {
     "support": "full",

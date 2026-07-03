@@ -119,14 +119,9 @@
   },
   "notes": "Deprecated: Google points new CLI work to Antigravity. Kept as an explicit agent-launch option, but excluded from random selection in this repo. Headless/scripting mode only; no published agent embed SDK.",
   "pricing": {
-    "value": "Free (Apache-2.0), Gemini API usage billed separately",
+    "value": "Free open-source CLI; Gemini API usage billed separately",
     "source_url": "https://ai.google.dev/gemini-api/docs/pricing#enterprise:~:text=Gemini%20API",
-    "comment": "Gemini CLI is open source (Apache-2.0). API usage billed through Google AI Studio or Vertex AI."
-  },
-  "first_party_coding_model_plans": {
-    "value": "Gemini API usage pricing; Gemini CLI itself is free/open-source",
-    "source_url": "https://ai.google.dev/gemini-api/docs/pricing#enterprise:~:text=Gemini%20API",
-    "comment": "Pricing for native first-party coding/model access, using the product pricing source already tracked by this matrix."
+    "comment": "Gemini CLI is free/open-source; model use is through Gemini API, provider subscription, or local/provider credentials rather than a separate CLI subscription."
   },
   "some_free_usage": {
     "support": "full",

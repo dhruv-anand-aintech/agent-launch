@@ -173,14 +173,9 @@
   },
   "notes": "GitHub Copilot CLI is the standalone, local terminal coding agent (`copilot`, npm package @github/copilot, repo github/copilot-cli) \u2014 distinct from the asynchronous GitHub Actions-based Copilot cloud coding agent. Public preview Sep 2025, GA Feb 2026, runs on an existing Copilot subscription with no separate CLI fee. Strong open-standard support (AGENTS.md, Agent Skills, MCP, hooks, custom agents/subagents) and BYOK for external model providers, plus newer cloud/local sandboxing, autopilot mode, and an experimental redesigned terminal UI.",
   "pricing": {
-    "value": "Included with Copilot Pro $10/mo, Pro+ $39/mo, Business $19/user/mo, Enterprise $39/user/mo; Free tier has limited usage",
-    "source_url": "https://docs.github.com/en/copilot/concepts/billing/copilot-requests#source:~:text=Copilot%20CLI",
-    "comment": "Consumes GitHub AI Credits/premium requests against existing Copilot plan; usage-based billing for all plans started June 1, 2026, replacing the old premium-request counter. No CLI-specific surcharge."
-  },
-  "first_party_coding_model_plans": {
-    "value": "Copilot Free/Student/Pro/Pro+/Max/Business/Enterprise include Copilot CLI; paid plans from $10/mo to $39/seat/mo; Max $100/mo",
-    "source_url": "https://docs.github.com/en/copilot/concepts/billing/copilot-requests#source:~:text=Copilot%20CLI",
-    "comment": "Pricing for native first-party coding/model access, using the product pricing source already tracked by this matrix."
+    "value": "Included with Copilot Free/Pro $10/mo/Pro+ $39/mo/Max $100/mo/Business $19/user/mo/Enterprise $39/user/mo; AI Credits billing",
+    "source_url": "https://github.blog/news-insights/company-news/github-copilot-is-moving-to-usage-based-billing/#what-this-means-for-individuals:~:text=Copilot%20Pro%3A%20%2410%2Fmonth",
+    "comment": "Copilot CLI consumes the existing Copilot plan/AI Credits model; GitHub documents Pro and Pro+ AI Credits and Copilot plan tiers."
   },
   "some_free_usage": {
     "support": "partial",

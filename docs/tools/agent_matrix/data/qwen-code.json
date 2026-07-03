@@ -124,14 +124,9 @@
   },
   "notes": "Qwen Code by Alibaba (QwenLM) is the most feature-complete open-source coding agent in this matrix -- 20/20 fields at full (tied with Cline). Standout features: macOS Seatbelt + Docker sandbox, OpenTelemetry telemetry, custom status line, three output formats. Apache-2.0, 24.6k stars.",
   "pricing": {
-    "value": "Free (Apache-2.0)",
-    "source_url": "https://github.com/QwenLM/qwen-code#acknowledgments:~:text=Apache-2.0%20license",
-    "comment": "Tool is free and open-source (Apache 2.0). Model costs: BYO API key (provider pricing), Alibaba Cloud Coding Plan (fixed monthly), or local models (free)."
-  },
-  "first_party_coding_model_plans": {
-    "value": "None documented in current matrix source; free open-source CLI, BYOK/local/provider costs",
-    "source_url": "https://github.com/QwenLM/qwen-code#acknowledgments:~:text=Apache-2.0%20license",
-    "comment": "No native first-party model subscription is documented for this surface in the current matrix source; model usage is BYOK, local, or provider-billed."
+    "value": "Free open-source CLI; Alibaba Cloud auth supports Token Plan (Team), Coding Plan fixed monthly, or pay-as-you-go; Qwen Cloud free quota/API pricing also available",
+    "source_url": "https://help.aliyun.com/en/model-studio/qwen-code#configure-access-credentials:~:text=Alibaba%20Cloud%20Model%20Studio%20offers%20three%20billing%20plans",
+    "comment": "Fresh search found Alibaba Cloud Qwen Code docs with three billing plans: Token Plan, Coding Plan, and pay-as-you-go. Alibaba also documents Coding Plan as fixed monthly access to Qwen/GLM/Kimi/MiniMax models in coding tools."
   },
   "hosted_agent": {
     "support": "partial",

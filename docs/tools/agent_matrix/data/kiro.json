@@ -126,14 +126,9 @@
     "comment": "Docs describe Kiro's model set/Auto agent, not arbitrary model providers."
   },
   "pricing": {
-    "value": "Included in Kiro pricing tiers",
-    "source_url": "https://kiro.dev/cli/#source:~:text=No.%20Kiro%20CLI%20pricing%20is%20included%20in%20the%20standard%20Kiro%20%5Bpricing%20tiers%5D(%2Fpricing%2F).",
-    "comment": "CLI and IDE share Kiro subscription pricing."
-  },
-  "first_party_coding_model_plans": {
-    "value": "Included in Kiro pricing tiers",
-    "source_url": "https://kiro.dev/cli/#source:~:text=No.%20Kiro%20CLI%20pricing%20is%20included%20in%20the%20standard%20Kiro%20%5Bpricing%20tiers%5D(%2Fpricing%2F).",
-    "comment": "Pricing for native first-party coding/model access, using the product pricing source already tracked by this matrix."
+    "value": "Kiro Free; Pro $20/mo; Pro+ $40/mo; Power $200/mo; overages $0.04/credit on paid tiers",
+    "source_url": "https://kiro.dev/blog/new-pricing-plans-and-auto/#pricing-plans:~:text=Pro%20(%2420%2Fmonth)%2C%20Pro%2B%20(%2440%2Fmonth)%2C%20to%20Power%20(%24200%2Fmonth)",
+    "comment": "Kiro docs describe Free/Pro/Pro+/Pro Max/Power tiers; Kiro pricing blog gives Pro, Pro+, Power prices and overage pricing."
   },
   "some_free_usage": {
     "support": "full",

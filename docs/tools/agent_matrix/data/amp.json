@@ -126,14 +126,9 @@
   },
   "notes": "Amp is opinionated and aggressively removes features it considers obsolete (custom commands, slash commands, themes). Focuses on frontier models. Plugin API provides extensive extensibility for those who need it. Closed-source product; some auxiliary tools open source on GitHub.",
   "pricing": {
-    "value": "Usage-based with free tier",
+    "value": "Usage-based LLM billing with free tier",
     "source_url": "https://ampcode.com/manual#pricing:~:text=Amp%20charges%20you%20based%20on%20your%20actual%20usage%20of%20LLMs",
-    "comment": "Usage-based: pay-as-you-go with zero markup on API costs for individuals. Minimum $5 credit purchase. Free mode (ad-supported, no longer shows ads). Enterprise: 50% markup + $1,000 one-time fee."
-  },
-  "first_party_coding_model_plans": {
-    "value": "Usage-based Amp LLM charges; free tier",
-    "source_url": "https://ampcode.com/manual#pricing:~:text=Amp%20charges%20you%20based%20on%20your%20actual%20usage%20of%20LLMs",
-    "comment": "Pricing for native first-party coding/model access, using the product pricing source already tracked by this matrix."
+    "comment": "Amp charges based on actual LLM usage and documents a free tier; no separate fixed first-party model-plan row is needed."
   },
   "some_free_usage": {
     "support": "full",

@@ -19,7 +19,7 @@ const columns = Object.entries(schema.properties)
   });
 
 const groups = [...new Set(columns.map(c => c.group))];
-const META_COLUMN_KEYS = ["name", "form_factor", "released_in", "latest_major_update", "pricing", "first_party_coding_model_plans", "notes"];
+const META_COLUMN_KEYS = ["name", "form_factor", "released_in", "latest_major_update", "pricing", "notes"];
 const featureCount = columns.filter(c => !META_COLUMN_KEYS.includes(c.key)).length;
 
 function htmlEscape(v) { return String(v ?? "").replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;").replaceAll('"',"&quot;"); }

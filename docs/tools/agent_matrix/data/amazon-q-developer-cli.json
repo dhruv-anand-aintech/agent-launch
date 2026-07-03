@@ -174,14 +174,9 @@
   },
   "notes": "Amazon Q Developer CLI (`q chat`) is AWS's Rust-based, Bedrock-backed agentic terminal coding agent, launched as an enhanced agentic experience in March 2025. It requires AWS Builder ID or IAM Identity Center sign-in (no API-key-only or account-free path), supports MCP, lifecycle hooks, and per-project `.amazonq/rules/` markdown rules, but lacks AGENTS.md support, subagent delegation, sandboxing, and structured JSON chat output. As of mid-2026 the open-source repo is no longer actively maintained: AWS is sunsetting Amazon Q Developer in favor of the backward-compatible, closed-source Kiro CLI (same `q`/`q chat` entry points, configs auto-migrated to `~/.kiro/`), with new signups blocked from May 2026 and full IDE/subscription end-of-support by April 2027.",
   "pricing": {
-    "value": "Free tier + Pro $19/user/mo",
-    "source_url": "https://aws.amazon.com/q/developer/pricing/#source:~:text=Pro%20tier",
-    "comment": "Perpetual Free Tier (Builder ID or IAM) with monthly agentic-request limits; Pro tier is $19/user/month with higher limits and enterprise admin controls. New Free Tier/Pro signups are blocked starting May 15, 2026 as part of the Kiro CLI migration."
-  },
-  "first_party_coding_model_plans": {
-    "value": "Free tier; Pro $19/user/mo",
-    "source_url": "https://aws.amazon.com/q/developer/pricing/#source:~:text=Pro%20tier",
-    "comment": "Pricing for native first-party coding/model access, using the product pricing source already tracked by this matrix."
+    "value": "Free tier; Pro $19/user/mo; transformation overages $0.003/LOC",
+    "source_url": "https://aws.amazon.com/q/developer/pricing/#pricing-overview:~:text=Free%20Tier%3A%20Advanced%20capabilities%20at%20zero%20cost",
+    "comment": "AWS lists a Free tier and Pro at $19/user/month. Free includes 50 agentic IDE/CLI requests/month; Pro increases limits and includes Java/.NET transformation capacity, with extra transformation lines billed at $0.003/LOC."
   },
   "some_free_usage": {
     "support": "full",

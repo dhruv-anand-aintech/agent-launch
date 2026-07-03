@@ -121,14 +121,9 @@
     "comment": "Supports third-party compatible model services through Anthropic/OpenAI protocols and API key mode."
   },
   "pricing": {
-    "value": "5-day free trial; GLM Coding Plan or API/provider billing",
-    "source_url": "https://zcode.z.ai/en/docs#glm-52-and-exclusive-benefits:~:text=First-time%20ZCode%20users%20get%205%20days%20of%20free%20benefits",
-    "comment": "First-time ZCode users get a 5-day free trial; GLM Coding Plan subscribers get limited-time ~1.5x quota in ZCode through July 31, 2026. Longer-term use depends on GLM Coding Plan/API/provider billing."
-  },
-  "first_party_coding_model_plans": {
-    "value": "5-day free trial; GLM Coding Plan or API/provider billing",
-    "source_url": "https://zcode.z.ai/en/docs#glm-52-and-exclusive-benefits:~:text=First-time%20ZCode%20users%20get%205%20days%20of%20free%20benefits",
-    "comment": "Pricing for native first-party coding/model access, using the product pricing source already tracked by this matrix."
+    "value": "5-day/free daily trial quota; GLM Coding Lite $16.20/mo ($18 list), Pro $64.80/mo ($72 list), Max $144/mo ($160 list); API/resource package billing also available",
+    "source_url": "https://zcode.z.ai/en#code-with-glm-coding-plan:~:text=Lite%20For%20lightweight%20workloads",
+    "comment": "ZCode and Z.ai docs list GLM Coding Plan tiers and explain that ZCode can route either Coding Plan quota or API/resource-package billing."
   },
   "some_free_usage": {
     "support": "full",

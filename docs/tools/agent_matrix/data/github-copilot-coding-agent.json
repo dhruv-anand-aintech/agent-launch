@@ -126,14 +126,9 @@
   },
   "notes": "GitHub Copilot's agent capabilities span IDE, cloud, and CLI. The cloud agent is unique: runs in ephemeral GitHub Actions environment. Desktop app (preview) adds parallel agent sessions. Ecosystem is rapidly evolving with weekly feature drops.",
   "pricing": {
-    "value": "Free $0, Pro $10/mo, Pro+ $39/mo, Max $100/mo, Business $19/user/mo, Enterprise $39/user/mo",
-    "source_url": "https://docs.github.com/en/copilot/get-started/plans#pricing:~:text=Copilot%20Free%20Copilot%20Student%20Copilot%20Pro%20Copilot%20Pro%2BCopilot%20Max%20Copilot%20Business%20Copilot%20Enterprise",
-    "comment": "Current plans use GitHub AI Credits allowances. Pro is $10/mo, Pro+ $39/mo, Max $100/mo, Business $19/seat/mo, Enterprise $39/seat/mo; usage beyond included credits is billed under usage-based billing, while legacy premium-request billing remains only for qualifying annual Pro/Pro+ subscribers."
-  },
-  "first_party_coding_model_plans": {
-    "value": "Copilot Free/Student/Pro $10/mo/Pro+ $39/mo/Max $100/mo/Business $19/seat/mo/Enterprise $39/seat/mo",
-    "source_url": "https://docs.github.com/en/copilot/get-started/plans#pricing:~:text=Copilot%20Free%20Copilot%20Student%20Copilot%20Pro%20Copilot%20Pro%2BCopilot%20Max%20Copilot%20Business%20Copilot%20Enterprise",
-    "comment": "Pricing for native first-party coding/model access, using the product pricing source already tracked by this matrix."
+    "value": "Copilot Free; Pro $10/mo; Pro+ $39/mo; Max $100/mo; Business $19/user/mo; Enterprise $39/user/mo; AI Credits plus Actions minutes",
+    "source_url": "https://github.com/features/copilot/plans#pricing:~:text=Copilot%20Free%20Copilot%20Student%20Copilot%20Pro",
+    "comment": "GitHub Copilot plans cover coding agent access; the hosted coding agent runs on GitHub Actions and consumes plan AI Credits/Actions minutes where applicable."
   },
   "hosted_agent": {
     "support": "full",

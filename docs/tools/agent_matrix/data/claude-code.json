@@ -126,14 +126,9 @@
   },
   "notes": "",
   "pricing": {
-    "value": "Included in Pro $20/mo, Max 5x $100/mo, Max 20x $200/mo, Team $25-125/seat/mo, Enterprise $20/seat + API rates",
-    "source_url": "https://www.anthropic.com/pricing#claude-code:~:text=Claude%20Code",
-    "comment": "Claude Code is included in all subscription plans (Pro, Max, Team, Enterprise). Also available via API at standard token rates."
-  },
-  "first_party_coding_model_plans": {
-    "value": "Claude Pro/Max/Team/Enterprise include Claude Code; API token pricing also applies",
-    "source_url": "https://www.anthropic.com/pricing#claude-code:~:text=Claude%20Code",
-    "comment": "Pricing for native first-party coding/model access, using the product pricing source already tracked by this matrix."
+    "value": "Included with Claude Free/Pro $20/mo/Max $100-200/mo/Team/Enterprise; API token billing also available",
+    "source_url": "https://support.claude.com/en/articles/11049762-choose-a-claude-plan#h_e898f8dcea:~:text=Pro%20%2420%2Fmonth",
+    "comment": "Claude plans list Free, Pro, Max 5x, Max 20x, Team, and Enterprise tiers; Claude Code also supports API usage at API rates."
   },
   "hosted_agent": {
     "support": "partial",

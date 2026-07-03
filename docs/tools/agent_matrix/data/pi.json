@@ -120,14 +120,9 @@
   },
   "notes": "Pi is a minimal terminal coding harness with extensibility-first defaults (extensions, skills, prompt templates, themes, packages), plus SDK and RPC/event-stream integrations.",
   "pricing": {
-    "value": "Free (MIT)",
-    "source_url": "https://github.com/earendil-works/pi/blob/main/packages/coding-agent/package.json#license:~:text=license",
-    "comment": "Repository is MIT-licensed and distributed as npm package `@earendil-works/pi-coding-agent`; there is no separate paid subscription model documented in public docs."
-  },
-  "first_party_coding_model_plans": {
-    "value": "None; free open-source/local/BYOK",
-    "source_url": "https://github.com/earendil-works/pi/blob/main/packages/coding-agent/package.json#license:~:text=license",
-    "comment": "No native first-party model subscription is documented for this surface in the current matrix source; model usage is BYOK, local, or provider-billed."
+    "value": "Free MIT/local tool; BYOK/provider or local-model costs",
+    "source_url": "https://pi.dev/#15-providers-hundreds-of-models:~:text=Authenticate%20via%20API%20keys%20or%20OAuth",
+    "comment": "Pi's official page documents provider authentication via API keys or OAuth. Current official page and repo/package search did not show a first-party paid model subscription; use BYOK/provider/local inference."
   },
   "no_account_required": {
     "support": "full",

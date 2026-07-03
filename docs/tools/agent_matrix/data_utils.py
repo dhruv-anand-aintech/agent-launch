@@ -368,7 +368,6 @@ def generate_llms_txt(bundle_path: str, output_path: str) -> None:
         "released_in",
         "latest_major_update",
         "pricing",
-        "first_party_coding_model_plans",
         "notes",
         "links",
         "hosted_agent",
@@ -451,8 +450,6 @@ def generate_llms_txt(bundle_path: str, output_path: str) -> None:
             lines.append(line)
         if row.get("pricing", {}).get("value"):
             lines.append(f"- Pricing: {row['pricing']['value']}")
-        if row.get("first_party_coding_model_plans", {}).get("value"):
-            lines.append(f"- First-party coding model plans: {row['first_party_coding_model_plans']['value']}")
         if row.get("notes"):
             lines.append(f"- Notes: {row['notes']}")
 

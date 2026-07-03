@@ -175,14 +175,9 @@
   },
   "notes": "Goose is an open-source (Apache-2.0), Rust-based agentic CLI and Desktop app originally built by Block and now stewarded by the Linux Foundation's Agentic AI Foundation (AAIF). It was the first open-source agent to support MCP and ships 70+ first-party MCP extensions, recipes/sub-recipes for reusable workflows, real subagent delegation, four-tier permission modes (auto/approve/chat/smart_approve via GOOSE_MODE), Docker-based execution sandboxing, and a recently added lifecycle-hooks plugin system. No paid tier; cost is purely BYOK LLM usage, with a fully free/no-account path via local Ollama models.",
   "pricing": {
-    "value": "Free (Apache-2.0), BYOK LLM costs",
+    "value": "Free open-source; BYOK/provider or local-model costs",
     "source_url": "https://github.com/block/goose#source:~:text=License-Apache-2.0",
-    "comment": "Goose itself is free and open source under Apache-2.0 with no subscription or usage cap; users pay only for whichever LLM provider API they connect (or use free local Ollama models)."
-  },
-  "first_party_coding_model_plans": {
-    "value": "None; BYOK/local/provider pricing only",
-    "source_url": "https://github.com/block/goose#source:~:text=License-Apache-2.0",
-    "comment": "No native first-party model subscription is documented for this surface in the current matrix source; model usage is BYOK, local, or provider-billed."
+    "comment": "Goose is an open-source local agent. No first-party paid model subscription was found in official docs/GitHub search; users pay chosen provider or local inference costs."
   },
   "some_free_usage": {
     "support": "full",

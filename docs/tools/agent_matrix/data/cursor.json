@@ -129,14 +129,9 @@
   },
   "notes": "Cursor is a VS Code-derived AI IDE with a companion CLI (cursor-agent) for headless/CI use and @cursor/sdk for programmatic local/cloud agents.",
   "pricing": {
-    "value": "Pro $20, Pro+ $60, Ultra $200/mo",
-    "source_url": "https://cursor.com/help/models-and-usage/usage-limits#how-much-usage-does-each-plan-include:~:text=Pro%20Plus",
-    "comment": "Individual: Pro $20/mo ($20 API usage), Pro+ $60/mo ($70 API usage), Ultra $200/mo ($400 API usage). Teams $40/user/mo."
-  },
-  "first_party_coding_model_plans": {
     "value": "Hobby Free; Pro $20/mo; Pro+ $60/mo; Ultra $200/mo; Teams/Enterprise plans",
-    "source_url": "https://cursor.com/help/models-and-usage/usage-limits#how-much-usage-does-each-plan-include:~:text=Pro%20Plus",
-    "comment": "Pricing for native first-party coding/model access, using the product pricing source already tracked by this matrix."
+    "source_url": "https://cursor.com/pricing#pricing:~:text=Pro%2B",
+    "comment": "Cursor pricing and usage docs describe the Hobby, Pro, Pro+, Ultra, Teams, and Enterprise plan structure for agent/model usage."
   },
   "some_free_usage": {
     "support": "full",

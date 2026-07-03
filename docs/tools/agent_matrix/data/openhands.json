@@ -181,14 +181,9 @@
   },
   "notes": "OpenHands launched in March 2024 as 'OpenDevin' (an open clone of Cognition's Devin), renamed OpenHands mid-2024, and had its GitHub org renamed All-Hands-AI -> OpenHands on 2025-10-20. The 1.0.0 release (Dec 2025) was a ground-up rewrite onto a new 'software-agent-sdk', changing config from TOML to JSON and rebranding 'microagents' to the AgentSkills-standard 'Skills' system. It has a genuine local CLI (`openhands`, installable via `uv tool install openhands` or `pip install openhands`, MIT licensed) that runs as a plain local process by default \u2014 Docker is only required for the separate `openhands serve` full-GUI mode, not the terminal CLI/headless mode.",
   "pricing": {
-    "value": "Free (MIT, self-hosted); OpenHands Cloud free tier + at-cost usage; Enterprise custom",
+    "value": "Free MIT self-hosted/local; OpenHands Cloud free tier + at-cost usage; Enterprise custom",
     "source_url": "https://www.openhands.dev/pricing#source:~:text=Free%2C%20local%20OpenHands%20for%20getting%20started",
-    "comment": "Self-hosted/local CLI is free and open source (MIT license) other than your own LLM API costs. OpenHands Cloud Individual tier is free to sign up with a cap (10 max daily conversations) and offers at-cost LLM usage with no markup if you don't bring your own key. Enterprise (SaaS or self-hosted VPC) is custom-priced."
-  },
-  "first_party_coding_model_plans": {
-    "value": "OpenHands Cloud free tier + at-cost provider usage; Enterprise custom; local free/BYOK",
-    "source_url": "https://www.openhands.dev/pricing#source:~:text=Free%2C%20local%20OpenHands%20for%20getting%20started",
-    "comment": "Pricing for native first-party coding/model access, using the product pricing source already tracked by this matrix."
+    "comment": "OpenHands local/self-hosted is free aside from provider costs; OpenHands Cloud has a free tier and at-cost usage path, with Enterprise custom pricing."
   },
   "some_free_usage": {
     "support": "full",

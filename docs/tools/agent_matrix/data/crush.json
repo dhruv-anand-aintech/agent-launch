@@ -177,14 +177,9 @@
   },
   "notes": "Crush is Charm's open-source (FSL-1.1-MIT), terminal-first AI coding agent, first released July 2025 and under very active daily development (180+ tagged releases by mid-2026, 25k+ GitHub stars). It pairs a polished Bubble Tea TUI with a scriptable `crush run` headless mode, broad MCP/LSP/provider support via the community Catwalk model registry, and an emerging Agent Skills + custom-commands + Task-subagent ecosystem. Notable gaps versus more mature agents: no sandboxing, no user-selectable themes yet (TODO in source), and only preliminary lifecycle hooks.",
   "pricing": {
-    "value": "Free (FSL-1.1-MIT), BYO API key",
+    "value": "Free source-available/open-source tool; BYOK/provider or local-model costs",
     "source_url": "https://github.com/charmbracelet/crush#source:~:text=FSL-1.1-MIT",
-    "comment": "Free and source-available under the Functional Source License (converts to MIT after 2 years per version). Users pay only for their own LLM provider usage; some providers offer Crush-specific coding plans (GLM Coding Plan, Kimi Code, MiniMax Coding Plan)."
-  },
-  "first_party_coding_model_plans": {
-    "value": "None; BYOK/local/provider pricing only",
-    "source_url": "https://github.com/charmbracelet/crush#source:~:text=FSL-1.1-MIT",
-    "comment": "No native first-party model subscription is documented for this surface in the current matrix source; model usage is BYOK, local, or provider-billed."
+    "comment": "Crush itself is published openly/source-available; no first-party coding model subscription was found in current official product/GitHub search, so model cost is BYOK/provider/local."
   },
   "some_free_usage": {
     "support": "full",
