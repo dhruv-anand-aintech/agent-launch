@@ -63,6 +63,11 @@
     "source_url": "https://antigravity.google/docs/cli-features#source:~:text=subagents",
     "comment": ""
   },
+  "monitor": {
+    "support": "unknown",
+    "source_url": "https://antigravity.google/docs/cli-features#source:~:text=subagents",
+    "comment": "Public Antigravity CLI/plugin docs reviewed here do not establish whether an agent-side background monitor/watch primitive exists."
+  },
   "model_selection": {
     "support": "unknown",
     "source_url": "https://antigravity.google/docs/#source:~:text=model",

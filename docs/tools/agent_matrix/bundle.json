@@ -64,6 +64,11 @@
       "source_url": "https://aider.chat/docs/usage/modes.html#architect-mode-and-the-editor-model:~:text=Architect%20mode%20and%20the%20editor%20model",
       "comment": "Architect/Editor mode uses two models but no general subagent delegation system. No spawning of independent worker agents."
     },
+    "monitor": {
+      "support": "none",
+      "source_url": "https://aider.chat/docs/usage/modes.html#architect-mode-and-the-editor-model:~:text=Architect%20mode%20and%20the%20editor%20model",
+      "comment": "No first-class background monitor/watch primitive found in reviewed docs. Aider has non-interactive one-shot execution and optional commands like --test/--lint, but no Monitor-equivalent for waiting on spawned jobs or event streams."
+    },
     "model_selection": {
       "support": "full",
       "source_url": "https://aider.chat/docs/config/options.html#--model-model:~:text=--model%20MODEL%0ASpecify%20the%20model%20to%20use%20for%20the%20main%20chat",
@@ -256,6 +261,11 @@
       "support": "none",
       "source_url": "https://github.com/aws/amazon-q-developer-cli/blob/main/docs/agent-format.md#source:~:text=Agent%20Architecture",
       "comment": "Custom agents are independent, user-selected configuration profiles (one active per session); there is no delegation/spawning of subagents from within a running session."
+    },
+    "monitor": {
+      "support": "none",
+      "source_url": "https://github.com/aws/amazon-q-developer-cli/blob/main/docs/agent-format.md#source:~:text=Agent%20Architecture",
+      "comment": "No Monitor-equivalent found in reviewed CLI docs. Amazon Q Developer CLI supports lifecycle hooks and custom agent profiles, but not a documented background command/subagent monitor that wakes the session on completion or output."
     },
     "transcripts": {
       "support": "partial",
@@ -457,6 +467,11 @@
       "source_url": "https://ampcode.com/manual#subagents:~:text=Amp%20can%20spawn%20subagents%20(via%20the%20Task%20tool)",
       "comment": "Full support. Spawned via Task tool. Built-in specialized subagents: Oracle (GPT-5.4), Librarian (code search), Painter (image gen), Review, Search."
     },
+    "monitor": {
+      "support": "partial",
+      "source_url": "https://ampcode.com/manual#subagents:~:text=Amp%20can%20spawn%20subagents%20(via%20the%20Task%20tool)",
+      "comment": "Task/subagent execution and stream-json/headless operation cover some wait-for-result workflows, but no dedicated background command/log/WebSocket monitor primitive was found in the manual."
+    },
     "model_selection": {
       "support": "partial",
       "source_url": "https://ampcode.com/models#agent-modes:~:text=Agent%20Modes",
@@ -641,6 +656,11 @@
       "source_url": "https://antigravity.google/docs/cli-features#source:~:text=subagents",
       "comment": ""
     },
+    "monitor": {
+      "support": "unknown",
+      "source_url": "https://antigravity.google/docs/cli-features#source:~:text=subagents",
+      "comment": "Public Antigravity CLI/plugin docs reviewed here do not establish whether an agent-side background monitor/watch primitive exists."
+    },
     "model_selection": {
       "support": "unknown",
       "source_url": "https://antigravity.google/docs/#source:~:text=model",
@@ -794,7 +814,7 @@
       "value": "Jul '26",
       "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.198#source:~:text=Claude%20in%20Chrome%20is%20now%20generally%20available",
       "comment": "Latest release v2.1.198 (July 1, 2026) makes Claude in Chrome generally available, adds background-agent notifications, adds a /dataviz skill, improves background-agent PR handoff, lets Explore inherit the main session model, and fixes background-agent, plan-mode, network-retry, AWS gateway, rules, and UI issues.",
-      "sort_date": "2026-07-01"
+      "sort_date": "2026-07-02"
     },
     "rules": {
       "support": "full",
@@ -830,6 +850,11 @@
       "support": "full",
       "source_url": "https://docs.anthropic.com/en/docs/claude-code/sub-agents#page-title:~:text=subagents",
       "comment": "Supports custom subagents."
+    },
+    "monitor": {
+      "support": "full",
+      "source_url": "https://code.claude.com/docs/en/tools-reference#monitor-tool:~:text=The%20Monitor%20tool%20lets%20Claude%20watch%20something%20in%20the%20background",
+      "comment": "Dedicated Monitor tool runs a command in the background or connects to a WebSocket, feeds events back to Claude, and lets the same session continue until output/status changes arrive."
     },
     "model_selection": {
       "support": "full",
@@ -975,7 +1000,7 @@
       "value": "Jul '26",
       "source_url": "https://github.com/cline/cline/releases/tag/v4.0.5#source:~:text=Add%20support%20for%20Claude%20Sonnet%205",
       "comment": "Latest release v4.0.5 (June 30, 2026) adds Claude Sonnet 5 support across Anthropic, Bedrock, Vertex, Claude Code, SAP AI Core, OpenRouter, and Vercel AI Gateway providers, including model-picker and recommended-model updates.",
-      "sort_date": "2026-07-01"
+      "sort_date": "2026-07-03"
     },
     "rules": {
       "support": "full",
@@ -1011,6 +1036,11 @@
       "support": "full",
       "source_url": "https://docs.cline.bot/features/subagents#enabling-subagents:~:text=Subagents%20are%20enabled%20by%20default",
       "comment": "Subagents are documented as enabled by default across VS Code, JetBrains, CLI, and other editors, with a Settings -> Features -> Agent toggle to disable the use_subagents tool."
+    },
+    "monitor": {
+      "support": "partial",
+      "source_url": "https://docs.cline.bot/features/subagents#enabling-subagents:~:text=Subagents%20are%20enabled%20by%20default",
+      "comment": "Cline exposes runtime/session/tool hooks and subagent task workflows, but reviewed docs do not show a dedicated command/log/WebSocket Monitor tool equivalent."
     },
     "model_selection": {
       "support": "full",
@@ -1175,7 +1205,7 @@
       "value": "Jul '26",
       "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.142.5#source:~:text=Prevented%20full%20Responses%20WebSocket%20request%20payloads%20from%20being%20written%20to%20trace%20logs",
       "comment": "Latest stable Codex CLI release rust-v0.142.5 (July 1, 2026) is a security/privacy maintenance patch preventing full Responses WebSocket request payloads from being written to trace logs.",
-      "sort_date": "2026-07-02"
+      "sort_date": "2026-07-03"
     },
     "rules": {
       "support": "full",
@@ -1211,6 +1241,11 @@
       "support": "full",
       "source_url": "https://developers.openai.com/codex/skills/#agent-skills:~:text=Skills",
       "comment": "Codex supports sub-agent/delegation workflows in agent contexts."
+    },
+    "monitor": {
+      "support": "partial",
+      "source_url": "https://developers.openai.com/codex/cli/slash-commands#check-background-terminals-with-ps:~:text=Show%20experimental%20background%20terminals",
+      "comment": "Codex documents experimental background terminal status via /ps and subagent orchestration that can wait for results, but current public docs do not list a Claude-style Monitor tool for event-driven command/WebSocket watching."
     },
     "model_selection": {
       "support": "full",
@@ -1401,6 +1436,11 @@
       "source_url": "https://cohere.com/north/agent-studio#built-for-scale-designed-for-control:~:text=agent-to-agent%20coordination",
       "comment": "Agent-to-agent coordination is listed as an extensibility feature."
     },
+    "monitor": {
+      "support": "partial",
+      "source_url": "https://cohere.com/north/agent-studio#built-for-scale-designed-for-control:~:text=agent-to-agent%20coordination",
+      "comment": "North Agent Studio supports hosted workflow automations and agent-to-agent coordination, but no local coding-agent Monitor-style command/log/WebSocket watcher was found."
+    },
     "model_selection": {
       "support": "partial",
       "source_url": "https://cohere.com/blog/command-a-plus#snapshot:~:text=command-a-plus-05-2026",
@@ -1543,7 +1583,7 @@
       "value": "Jul '26",
       "source_url": "https://github.com/charmbracelet/crush/releases/tag/v0.81.0#source:~:text=Chat%20scrollbar",
       "comment": "Latest tagged release v0.81.0 (2026-06-29) is a UX-focused release adding a chat scrollbar and other interface/session improvements.",
-      "sort_date": "2026-07-01"
+      "sort_date": "2026-07-02"
     },
     "rules": {
       "support": "full",
@@ -1579,6 +1619,11 @@
       "support": "full",
       "source_url": "https://deepwiki.com/charmbracelet/crush/6.7-agent-delegation-and-nested-tools#source:~:text=Agent%20Tool%20and%20Recursion",
       "comment": "Built-in \"Coder\" and \"Task\" agent types; the Coder agent can spawn restricted-permission Task subagents for delegated subtasks via an agent/task tool, with costs rolling up to the parent session. Agents configurable (model, allowed tools/MCP, context paths) via the `agents` config section."
+    },
+    "monitor": {
+      "support": "partial",
+      "source_url": "https://deepwiki.com/charmbracelet/crush/6.7-agent-delegation-and-nested-tools#source:~:text=Agent%20Tool%20and%20Recursion",
+      "comment": "Crush can delegate to Task subagents and has preliminary hooks, but reviewed docs do not show a dedicated monitor/watch primitive for long-running commands or event streams."
     },
     "transcripts": {
       "support": "full",
@@ -1778,6 +1823,11 @@
       "source_url": "https://cursor.com/changelog/sdk-updates-jun-2026#custom-stores-custom-tools-and-auto-review-for-the-cursor-sdk:~:text=nest%20subagents%20to%20any%20depth",
       "comment": "Full support in Cursor SDK as of June 2026: agents can nest subagents to any depth. IDE agent tasks remain available."
     },
+    "monitor": {
+      "support": "partial",
+      "source_url": "https://cursor.com/changelog/sdk-updates-jun-2026#custom-stores-custom-tools-and-auto-review-for-the-cursor-sdk:~:text=nest%20subagents%20to%20any%20depth",
+      "comment": "Cursor supports hooks, cloud agents, and nested subagents, giving partial task/status monitoring, but reviewed docs do not show a dedicated command/log/WebSocket Monitor tool."
+    },
     "model_selection": {
       "support": "full",
       "source_url": "https://cursor.com/docs#models:~:text=models",
@@ -1966,6 +2016,11 @@
       "source_url": "https://docs.devin.ai/work-with-devin/advanced-capabilities#managed-devins:~:text=Devin%20can%20break%20down%20large%20tasks%20and%20delegate%20them%20to%20a%20team%20of%20managed%20Devins%20working%20in%20parallel",
       "comment": "Yes, called 'Managed Devins'. Coordinator spawns child Devin sessions in isolated VMs for parallel work. Auto-triage also spawns sub-devins."
     },
+    "monitor": {
+      "support": "partial",
+      "source_url": "https://docs.devin.ai/work-with-devin/advanced-capabilities#managed-devins:~:text=Devin%20can%20break%20down%20large%20tasks%20and%20delegate%20them%20to%20a%20team%20of%20managed%20Devins%20working%20in%20parallel",
+      "comment": "Devin sessions and Managed Devins are cloud-hosted and inspectable, but reviewed docs do not expose a Monitor-style primitive for an agent to watch arbitrary command output or event streams."
+    },
     "model_selection": {
       "support": "unknown",
       "source_url": "https://docs.devin.ai/admin/billing/self-serve#source:~:text=Fast%20Mode",
@@ -2151,6 +2206,11 @@
       "support": "full",
       "source_url": "https://docs.factory.ai/reference/cli-reference#source:~:text=%2Fdroids%20Manage%20custom%20droids",
       "comment": "Custom Droids are documented as subagents."
+    },
+    "monitor": {
+      "support": "partial",
+      "source_url": "https://docs.factory.ai/reference/cli-reference#source:~:text=%2Fdroids%20Manage%20custom%20droids",
+      "comment": "Droid has lifecycle hooks, custom Droids, and headless exec flows, but reviewed docs do not show a dedicated background monitor/watch primitive."
     },
     "model_selection": {
       "support": "full",
@@ -2340,6 +2400,11 @@
       "source_url": "https://github.com/google-gemini/gemini-cli/blob/main/docs/core/subagents.md#what-are-subagents:~:text=Subagents%20are%20specialized%20agents%20that%20operate%20within%20your%20main%20Gemini%20CLI%20session",
       "comment": "Full subagent support in Gemini CLI docs: specialized agents with separate prompts, tools, and context loops; automatic delegation, @ forcing, built-in agents, browser agent, tool isolation, and extension subagents."
     },
+    "monitor": {
+      "support": "partial",
+      "source_url": "https://github.com/google-gemini/gemini-cli/blob/main/docs/core/subagents.md#what-are-subagents:~:text=Subagents%20are%20specialized%20agents%20that%20operate%20within%20your%20main%20Gemini%20CLI%20session",
+      "comment": "Gemini CLI has hooks and subagents, so tasks can be delegated and observed through lifecycle surfaces, but no dedicated command/log/WebSocket monitor primitive was found."
+    },
     "model_selection": {
       "support": "full",
       "source_url": "https://google-gemini.github.io/gemini-cli/docs/cli/configuration.html#source:~:text=model",
@@ -2526,6 +2591,11 @@
       "support": "full",
       "source_url": "https://docs.github.com/en/copilot/concepts/agents/copilot-cli/about-custom-agents#source:~:text=Work%20performed%20by%20a%20custom%20agent%20is%20carried%20out%20using%20a%20subagent%2C%20which%20is%20a%20temporary%20agent%20spun%20up%20to%20complete%20the%20task",
       "comment": "Custom agents defined as Markdown agent-profile files (prompts, tools, MCP servers), invoked via --agent=NAME or in-session. Each spins up a subagent with its own isolated context window. Built-in specialized agents include Explore, Task, and the Rubber Duck critic agent."
+    },
+    "monitor": {
+      "support": "partial",
+      "source_url": "https://docs.github.com/en/copilot/concepts/agents/copilot-cli/about-custom-agents#source:~:text=Work%20performed%20by%20a%20custom%20agent%20is%20carried%20out%20using%20a%20subagent%2C%20which%20is%20a%20temporary%20agent%20spun%20up%20to%20complete%20the%20task",
+      "comment": "Copilot CLI supports hooks, custom agents, and cloud/headless execution, but reviewed docs do not show a dedicated Monitor-equivalent for waiting on arbitrary background command output or event feeds."
     },
     "transcripts": {
       "support": "full",
@@ -2727,6 +2797,11 @@
       "source_url": "https://docs.github.com/en/copilot/how-tos/chat-with-copilot/chat-in-ide#using-subagents-3:~:text=You%20can%20use%20subagents%20to%20delegate%20tasks%20to%20an%20isolated%20agent%20with%20its%20own%20context%20window",
       "comment": "Subagents in VS Code and JetBrains IDE agent mode. Isolated context window. Invocation: automatic, direct, or via #runSubagent. Cannot create sub-subagents."
     },
+    "monitor": {
+      "support": "partial",
+      "source_url": "https://docs.github.com/en/copilot/how-tos/chat-with-copilot/chat-in-ide#using-subagents-3:~:text=You%20can%20use%20subagents%20to%20delegate%20tasks%20to%20an%20isolated%20agent%20with%20its%20own%20context%20window",
+      "comment": "Copilot coding agent runs hosted jobs and exposes session/progress surfaces, but no Monitor-style command/log/WebSocket watcher for arbitrary agent-side events was found."
+    },
     "model_selection": {
       "support": "full",
       "source_url": "https://docs.github.com/en/copilot/reference/copilot-billing/models-and-pricing#how-model-pricing-works:~:text=The%20cost%20of%20an%20interaction%20depends%20on%20two%20things%3A%20the%20model%20and%20the%20number%20of%20tokens%20consumed",
@@ -2905,6 +2980,11 @@
       "support": "full",
       "source_url": "https://goose-docs.ai/docs/guides/subagents/#source:~:text=Subagents",
       "comment": "First-class subagent delegation: temporary AI instances spun up via natural language in a prompt for one-off tasks, running in isolation from the main session. Distinct from sub-recipes (pre-written reusable YAML workflows). Up to 10 concurrent parallel workers total across subagents/sub-recipes. Location: invoked ad hoc; sub-recipes configured via --sub-recipe / recipe YAML."
+    },
+    "monitor": {
+      "support": "partial",
+      "source_url": "https://goose-docs.ai/docs/guides/subagents/#source:~:text=Subagents",
+      "comment": "Goose can delegate to subagents and run hooks around lifecycle/tool events, but reviewed docs do not show a dedicated background command/log monitor primitive."
     },
     "transcripts": {
       "support": "full",
@@ -3098,6 +3178,11 @@
       "source_url": "https://x.ai/news/grok-build-cli#subagents-that-work-in-parallel:~:text=Subagents%20that%20work%20in%20parallel",
       "comment": "Delegates larger tasks to specialized parallel subagents, with worktree integration."
     },
+    "monitor": {
+      "support": "unknown",
+      "source_url": "https://x.ai/news/grok-build-cli#subagents-that-work-in-parallel:~:text=Subagents%20that%20work%20in%20parallel",
+      "comment": "Public Grok Build docs reviewed here mention hooks/subagents but do not establish whether a Monitor-style background watch primitive exists."
+    },
     "model_selection": {
       "support": "partial",
       "source_url": "https://x.ai/news/grok-build-cli#plan-review-approve:~:text=Point%20users%20to%20%60config.toml%60%20for%20models%20and%20API%20keys",
@@ -3274,6 +3359,11 @@
       "support": "partial",
       "source_url": "https://jules.google/#source:~:text=fully%20async%2C%20multi-agent%20development",
       "comment": "Plan tiers advertise multi-agent development and high concurrent task counts."
+    },
+    "monitor": {
+      "support": "partial",
+      "source_url": "https://jules.google/#source:~:text=fully%20async%2C%20multi-agent%20development",
+      "comment": "Jules is an async hosted agent with task status/completion UX, but reviewed docs do not show a local Monitor-style command/log/WebSocket watcher."
     },
     "model_selection": {
       "support": "partial",
@@ -3460,6 +3550,11 @@
       "source_url": "https://junie.jetbrains.com/docs/junie-cli-subagents.html#custom-subagents:~:text=Subagents%20in%20Junie%20extend%20the%20built-in%20logic%20of%20the%20main%20agent",
       "comment": "Full custom subagent support. Subagents define tailored prompts, tool restrictions, model usage, and skills; Junie delegates automatically and stores custom agents in configured agent locations."
     },
+    "monitor": {
+      "support": "partial",
+      "source_url": "https://junie.jetbrains.com/docs/junie-cli-subagents.html#custom-subagents:~:text=Subagents%20in%20Junie%20extend%20the%20built-in%20logic%20of%20the%20main%20agent",
+      "comment": "Junie supports subagents, headless CI, and lifecycle hooks, but reviewed docs do not show a dedicated monitor/watch primitive for arbitrary long-running commands or event streams."
+    },
     "model_selection": {
       "support": "full",
       "source_url": "https://junie.jetbrains.com/docs/slash-commands.html#built-in-slash-commands:~:text=%60%2Fmodel%20%60%20Select%20the%20main%20Large%20Language%20Model",
@@ -3638,6 +3733,11 @@
       "support": "full",
       "source_url": "https://kilo.ai/docs/customize/custom-subagents#custom-subagents:~:text=Kilo%20Code%27s%20CLI%20supports%20custom%20subagents",
       "comment": "Full custom subagent support. Kilo Code CLI supports subagents via config or Markdown agent files, invocable by agents or users with @ mentions, with isolated sessions, prompts, model/tool/permission settings, and built-in general/explore subagents."
+    },
+    "monitor": {
+      "support": "partial",
+      "source_url": "https://kilo.ai/docs/customize/custom-subagents#custom-subagents:~:text=Kilo%20Code%27s%20CLI%20supports%20custom%20subagents",
+      "comment": "Kilo Code has plugin event hooks, workflows, and subagents, but reviewed docs do not show a dedicated Monitor-equivalent for arbitrary background command output or WebSocket events."
     },
     "model_selection": {
       "support": "full",
@@ -3835,6 +3935,11 @@
       "source_url": "https://www.kimi.com/code/docs/en/kimi-code-cli/customization/sub-agents.html#agents-and-subagents:~:text=subagents",
       "comment": "Full subagent support. Built-in types: coder, explore, plan. YAML agent files with inheritance. Agent tool with subagent_type, model, resume, run_in_background params."
     },
+    "monitor": {
+      "support": "partial",
+      "source_url": "https://www.kimi.com/code/docs/en/kimi-code-cli/customization/sub-agents.html#agents-and-subagents:~:text=subagents",
+      "comment": "Kimi CLI has beta hooks and subagents, but reviewed docs do not show a dedicated monitor/watch primitive for arbitrary long-running commands or event streams."
+    },
     "model_selection": {
       "support": "full",
       "source_url": "https://www.kimi.com/code/docs/en/kimi-code-cli/configuration/providers-and-models.html#provider-types:~:text=Provider%20Types",
@@ -4015,6 +4120,11 @@
       "support": "full",
       "source_url": "https://kiro.dev/docs/chat/subagents/#subagents:~:text=Kiro%20has%20two%20built-in%20subagents",
       "comment": "Built-in subagents for context gathering and parallel general-purpose tasks."
+    },
+    "monitor": {
+      "support": "partial",
+      "source_url": "https://kiro.dev/docs/chat/subagents/#subagents:~:text=Kiro%20has%20two%20built-in%20subagents",
+      "comment": "Kiro has smart hooks and subagents, but reviewed docs do not show a dedicated Monitor-style background command/log/WebSocket watcher."
     },
     "model_selection": {
       "support": "full",
@@ -4202,6 +4312,11 @@
       "source_url": "https://github.com/XiaomiMiMo/MiMo-Code#subagent-system:~:text=The%20primary%20agent%20can%20create%20subagents%20on%20demand",
       "comment": "README documents on-demand subagents with shared context, parallel work, lifecycle tracking, cancellation, and background execution."
     },
+    "monitor": {
+      "support": "partial",
+      "source_url": "https://github.com/XiaomiMiMo/MiMo-Code#subagent-system:~:text=The%20primary%20agent%20can%20create%20subagents%20on%20demand",
+      "comment": "MiMo Code documents background subagents with lifecycle tracking and cancellation, but reviewed docs do not show a dedicated arbitrary command/log/WebSocket monitor primitive."
+    },
     "model_selection": {
       "support": "full",
       "source_url": "https://mimo.xiaomi.com/mimocode/cli-options#run:~:text=%60--model%60%60-m%20%60Model%20to%20use%20in%20the%20form%20of%20provider%2Fmodel",
@@ -4363,7 +4478,7 @@
       "value": "Jul '26",
       "source_url": "https://github.com/anomalyco/opencode/releases/tag/v1.17.13#source:~:text=Force%20reasoning%20mode%20for%20OpenAI-compatible%20reasoning%20models",
       "comment": "Latest release v1.17.13 (July 1, 2026) forces reasoning mode for OpenAI-compatible reasoning models, avoids stale GitHub Copilot response item IDs, and improves desktop question prompts, state cleanup, session tab scoping, v2 model picker, WSL setup, tab previews, and session-page failure isolation.",
-      "sort_date": "2026-07-02"
+      "sort_date": "2026-07-03"
     },
     "rules": {
       "support": "full",
@@ -4399,6 +4514,11 @@
       "support": "full",
       "source_url": "https://opencode.ai/docs/agents/#_top:~:text=agents",
       "comment": "Supports custom agents."
+    },
+    "monitor": {
+      "support": "partial",
+      "source_url": "https://opencode.ai/docs/agents/#_top:~:text=agents",
+      "comment": "OpenCode supports custom agents and run mode; reviewed docs do not show a dedicated Monitor-equivalent for arbitrary background command output or event streams."
     },
     "model_selection": {
       "support": "full",
@@ -4563,7 +4683,7 @@
       "value": "Jul '26",
       "source_url": "https://github.com/OpenHands/OpenHands/releases/tag/cloud-1.40.0#source:~:text=Add%20full%20Git%20history%20user%20setting",
       "comment": "Latest public OpenHands release is cloud-1.40.0 (June 26, 2026), adding a full Git history user setting plus follow-up cloud fixes. The local/self-hosted 1.8.0 release remains the latest non-cloud semver release.",
-      "sort_date": "2026-07-02"
+      "sort_date": "2026-07-03"
     },
     "rules": {
       "support": "full",
@@ -4599,6 +4719,11 @@
       "support": "none",
       "source_url": "https://github.com/OpenHands/docs/blob/main/openhands/usage/cli/command-reference.mdx#source:~:text=Interactive%20Commands",
       "comment": "No documented first-class delegated/spawned subagent system for the CLI (contrast with Devin's 'Managed Devins'); OpenHands runs a single agent loop per conversation."
+    },
+    "monitor": {
+      "support": "none",
+      "source_url": "https://github.com/OpenHands/docs/blob/main/openhands/usage/cli/command-reference.mdx#source:~:text=Interactive%20Commands",
+      "comment": "No first-class delegated subagent or Monitor-style background watch primitive found in reviewed CLI docs; headless mode runs a task rather than monitoring arbitrary background jobs."
     },
     "transcripts": {
       "support": "full",
@@ -4794,6 +4919,11 @@
       "source_url": "https://github.com/earendil-works/pi/blob/main/packages/coding-agent/README.md#source:~:text=MCP",
       "comment": "README says \"No sub-agents.\" suggests using spawned pi instances/context tools instead of native subagent orchestration."
     },
+    "monitor": {
+      "support": "none",
+      "source_url": "https://github.com/earendil-works/pi/blob/main/packages/coding-agent/README.md#source:~:text=MCP",
+      "comment": "Pi docs explicitly say there are no native subagents, and reviewed docs do not show a Monitor-style background watch primitive."
+    },
     "model_selection": {
       "support": "full",
       "source_url": "https://pi.dev/docs/latest/usage#source:~:text=model",
@@ -4950,7 +5080,7 @@
       "value": "Jul '26",
       "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.19.4#source:~:text=feat(core%2Ccli%2Csdk)%3A%20resume%20an%20interrupted%20turn%20without%20a%20synthetic%20%22continue%22%20message",
       "comment": "Latest release v0.19.4 (July 1, 2026) adds configurable auto-compact threshold and Stop-hook context usage, resumes interrupted turns without synthetic continue messages, adds desktop voice dictation, revives the Chrome extension through daemon-direct architecture, improves loop task injection, starts channel-agent bridge work, and fixes CLI/core/web-shell/standalone issues.",
-      "sort_date": "2026-07-02"
+      "sort_date": "2026-07-03"
     },
     "rules": {
       "support": "full",
@@ -4986,6 +5116,11 @@
       "support": "full",
       "source_url": "https://qwenlm.github.io/qwen-code-docs/en/users/features/sub-agents/#limits:~:text=Subagents%20are%20specialized%20AI%20assistants%20that%20handle%20specific%20types%20of%20tasks%20within%20Qwen%20Code",
       "comment": "Full subagent system: named subagents with YAML frontmatter, fork subagents (context-inheriting), per-agent model/permission/tool config, extension subagents."
+    },
+    "monitor": {
+      "support": "partial",
+      "source_url": "https://qwenlm.github.io/qwen-code-docs/en/users/features/sub-agents/#limits:~:text=Subagents%20are%20specialized%20AI%20assistants%20that%20handle%20specific%20types%20of%20tasks%20within%20Qwen%20Code",
+      "comment": "Qwen Code has subagents, hooks, headless mode, and status surfaces, but reviewed docs do not show a dedicated Monitor-style arbitrary command/log/WebSocket watcher."
     },
     "model_selection": {
       "support": "full",
@@ -5164,6 +5299,11 @@
       "source_url": "https://replit.com/blog/introducing-agent-3-our-most-autonomous-agent-yet#source:~:text=build%20other%20agents",
       "comment": "Agent 3 can build agents and run background tasks, but no first-class custom subagent framework found."
     },
+    "monitor": {
+      "support": "partial",
+      "source_url": "https://replit.com/blog/introducing-agent-3-our-most-autonomous-agent-yet#source:~:text=build%20other%20agents",
+      "comment": "Replit Agent runs hosted autonomous/background work and reports task state, but reviewed docs do not show a Monitor-style primitive for arbitrary command output or event streams."
+    },
     "model_selection": {
       "support": "none",
       "source_url": "https://docs.replit.com/replitai/agent#agent:~:text=Agent",
@@ -5341,6 +5481,11 @@
       "source_url": "https://docs.roocode.com/features/boomerang-tasks#source:~:text=Boomerang%20Tasks%20(also%20known%20as%20subtasks%20or%20task%20orchestration)%20allow%20you%20to%20break%20down%20complex%20projects",
       "comment": "Full orchestration via Orchestrator Mode (Boomerang Mode). new_task tool delegates to specialized modes. Isolated context with explicit context transfer."
     },
+    "monitor": {
+      "support": "partial",
+      "source_url": "https://docs.roocode.com/features/boomerang-tasks#source:~:text=Boomerang%20Tasks%20(also%20known%20as%20subtasks%20or%20task%20orchestration)%20allow%20you%20to%20break%20down%20complex%20projects",
+      "comment": "Roo Code can delegate work through Orchestrator/Boomerang mode, but reviewed docs do not show a dedicated background command/log/WebSocket monitor primitive."
+    },
     "model_selection": {
       "support": "full",
       "source_url": "https://docs.roocode.com/providers/#source:~:text=Roo%20is%20model%2Dagnostic%2C%20allowing%20you%20to%20choose%20the%20model%20that%20best%20fits%20your%20needs",
@@ -5517,6 +5662,11 @@
       "support": "none",
       "source_url": "https://github.com/bytedance/trae-agent/blob/main/docs/roadmap.md#advanced-agentic-flows-and-multi-agent-support:~:text=Develop%20sophisticated%20agent%20orchestration%20capabilities",
       "comment": "Multi-agent support is listed on the roadmap, not documented as current functionality."
+    },
+    "monitor": {
+      "support": "none",
+      "source_url": "https://github.com/bytedance/trae-agent/blob/main/docs/roadmap.md#advanced-agentic-flows-and-multi-agent-support:~:text=Develop%20sophisticated%20agent%20orchestration%20capabilities",
+      "comment": "Multi-agent support is still roadmap-only and reviewed CLI docs do not show a Monitor-style background watch primitive."
     },
     "model_selection": {
       "support": "full",
@@ -5714,6 +5864,11 @@
       "source_url": "https://docs.windsurf.com/windsurf/devin#delegating-work-to-devin:~:text=Delegating%20Work%20to%20Devin",
       "comment": "Devin Cloud (autonomous agent on own VM), Devin Local Agent, Fast Context (specialized 20x faster retrieval), Agent Command Center manages all agents in Kanban view."
     },
+    "monitor": {
+      "support": "partial",
+      "source_url": "https://docs.windsurf.com/windsurf/devin#delegating-work-to-devin:~:text=Delegating%20Work%20to%20Devin",
+      "comment": "Windsurf/Devin surfaces support cloud/local agent status, hooks, and agent command workflows, but reviewed docs do not show a dedicated arbitrary command/log/WebSocket monitor primitive."
+    },
     "model_selection": {
       "support": "full",
       "source_url": "https://docs.windsurf.com/windsurf/models#page-title:~:text=Models",
@@ -5894,6 +6049,11 @@
       "support": "full",
       "source_url": "https://zcode.z.ai/en/docs/subagents#custom-subagents-beta:~:text=You%20can%20now%20create%20your%20own%20subagents%20from%20Settings",
       "comment": "Built-in general-purpose and Explore subagents plus beta user-level custom subagents under `~/.zcode/agents/<name>.md`, with custom model/tool permissions/instructions."
+    },
+    "monitor": {
+      "support": "partial",
+      "source_url": "https://zcode.z.ai/en/docs/subagents#custom-subagents-beta:~:text=You%20can%20now%20create%20your%20own%20subagents%20from%20Settings",
+      "comment": "ZCode has built-in/custom subagents and workspace task surfaces, but reviewed docs do not show a dedicated command/log/WebSocket Monitor-equivalent."
     },
     "model_selection": {
       "support": "full",

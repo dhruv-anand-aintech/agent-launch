@@ -65,6 +65,11 @@
     "source_url": "https://zcode.z.ai/en/docs/subagents#custom-subagents-beta:~:text=You%20can%20now%20create%20your%20own%20subagents%20from%20Settings",
     "comment": "Built-in general-purpose and Explore subagents plus beta user-level custom subagents under `~/.zcode/agents/<name>.md`, with custom model/tool permissions/instructions."
   },
+  "monitor": {
+    "support": "partial",
+    "source_url": "https://zcode.z.ai/en/docs/subagents#custom-subagents-beta:~:text=You%20can%20now%20create%20your%20own%20subagents%20from%20Settings",
+    "comment": "ZCode has built-in/custom subagents and workspace task surfaces, but reviewed docs do not show a dedicated command/log/WebSocket Monitor-equivalent."
+  },
   "model_selection": {
     "support": "full",
     "source_url": "https://zcode.z.ai/en/docs/configuration#method-2-model-selector:~:text=click%20the%20model%20name%20inside%20the%20chat%20box%20to%20open%20the%20model%20selector",

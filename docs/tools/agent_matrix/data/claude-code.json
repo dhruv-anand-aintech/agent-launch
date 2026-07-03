@@ -69,6 +69,11 @@
     "source_url": "https://docs.anthropic.com/en/docs/claude-code/sub-agents#page-title:~:text=subagents",
     "comment": "Supports custom subagents."
   },
+  "monitor": {
+    "support": "full",
+    "source_url": "https://code.claude.com/docs/en/tools-reference#monitor-tool:~:text=The%20Monitor%20tool%20lets%20Claude%20watch%20something%20in%20the%20background",
+    "comment": "Dedicated Monitor tool runs a command in the background or connects to a WebSocket, feeds events back to Claude, and lets the same session continue until output/status changes arrive."
+  },
   "model_selection": {
     "support": "full",
     "source_url": "https://docs.anthropic.com/en/docs/claude-code/settings#model-and-responses:~:text=model",

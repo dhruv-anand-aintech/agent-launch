@@ -67,6 +67,11 @@
     "source_url": "https://qwenlm.github.io/qwen-code-docs/en/users/features/sub-agents/#limits:~:text=Subagents%20are%20specialized%20AI%20assistants%20that%20handle%20specific%20types%20of%20tasks%20within%20Qwen%20Code",
     "comment": "Full subagent system: named subagents with YAML frontmatter, fork subagents (context-inheriting), per-agent model/permission/tool config, extension subagents."
   },
+  "monitor": {
+    "support": "partial",
+    "source_url": "https://qwenlm.github.io/qwen-code-docs/en/users/features/sub-agents/#limits:~:text=Subagents%20are%20specialized%20AI%20assistants%20that%20handle%20specific%20types%20of%20tasks%20within%20Qwen%20Code",
+    "comment": "Qwen Code has subagents, hooks, headless mode, and status surfaces, but reviewed docs do not show a dedicated Monitor-style arbitrary command/log/WebSocket watcher."
+  },
   "model_selection": {
     "support": "full",
     "source_url": "https://qwenlm.github.io/qwen-code-docs/en/users/configuration/model-providers/#selection-persistence-and-recommendations:~:text=Qwen%20Code%20allows%20you%20to%20configure%20multiple%20model%20providers%20through%20the%20modelProviders%20setting",

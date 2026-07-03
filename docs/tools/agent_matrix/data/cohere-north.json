@@ -63,6 +63,11 @@
     "source_url": "https://cohere.com/north/agent-studio#built-for-scale-designed-for-control:~:text=agent-to-agent%20coordination",
     "comment": "Agent-to-agent coordination is listed as an extensibility feature."
   },
+  "monitor": {
+    "support": "partial",
+    "source_url": "https://cohere.com/north/agent-studio#built-for-scale-designed-for-control:~:text=agent-to-agent%20coordination",
+    "comment": "North Agent Studio supports hosted workflow automations and agent-to-agent coordination, but no local coding-agent Monitor-style command/log/WebSocket watcher was found."
+  },
   "model_selection": {
     "support": "partial",
     "source_url": "https://cohere.com/blog/command-a-plus#snapshot:~:text=command-a-plus-05-2026",

@@ -69,6 +69,11 @@
     "source_url": "https://ampcode.com/manual#subagents:~:text=Amp%20can%20spawn%20subagents%20(via%20the%20Task%20tool)",
     "comment": "Full support. Spawned via Task tool. Built-in specialized subagents: Oracle (GPT-5.4), Librarian (code search), Painter (image gen), Review, Search."
   },
+  "monitor": {
+    "support": "partial",
+    "source_url": "https://ampcode.com/manual#subagents:~:text=Amp%20can%20spawn%20subagents%20(via%20the%20Task%20tool)",
+    "comment": "Task/subagent execution and stream-json/headless operation cover some wait-for-result workflows, but no dedicated background command/log/WebSocket monitor primitive was found in the manual."
+  },
   "model_selection": {
     "support": "partial",
     "source_url": "https://ampcode.com/models#agent-modes:~:text=Agent%20Modes",

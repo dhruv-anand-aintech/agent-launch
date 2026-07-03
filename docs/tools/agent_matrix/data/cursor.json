@@ -67,6 +67,11 @@
     "source_url": "https://cursor.com/changelog/sdk-updates-jun-2026#custom-stores-custom-tools-and-auto-review-for-the-cursor-sdk:~:text=nest%20subagents%20to%20any%20depth",
     "comment": "Full support in Cursor SDK as of June 2026: agents can nest subagents to any depth. IDE agent tasks remain available."
   },
+  "monitor": {
+    "support": "partial",
+    "source_url": "https://cursor.com/changelog/sdk-updates-jun-2026#custom-stores-custom-tools-and-auto-review-for-the-cursor-sdk:~:text=nest%20subagents%20to%20any%20depth",
+    "comment": "Cursor supports hooks, cloud agents, and nested subagents, giving partial task/status monitoring, but reviewed docs do not show a dedicated command/log/WebSocket Monitor tool."
+  },
   "model_selection": {
     "support": "full",
     "source_url": "https://cursor.com/docs#models:~:text=models",

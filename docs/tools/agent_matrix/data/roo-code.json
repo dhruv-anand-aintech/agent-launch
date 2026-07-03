@@ -61,6 +61,11 @@
     "source_url": "https://docs.roocode.com/features/boomerang-tasks#source:~:text=Boomerang%20Tasks%20(also%20known%20as%20subtasks%20or%20task%20orchestration)%20allow%20you%20to%20break%20down%20complex%20projects",
     "comment": "Full orchestration via Orchestrator Mode (Boomerang Mode). new_task tool delegates to specialized modes. Isolated context with explicit context transfer."
   },
+  "monitor": {
+    "support": "partial",
+    "source_url": "https://docs.roocode.com/features/boomerang-tasks#source:~:text=Boomerang%20Tasks%20(also%20known%20as%20subtasks%20or%20task%20orchestration)%20allow%20you%20to%20break%20down%20complex%20projects",
+    "comment": "Roo Code can delegate work through Orchestrator/Boomerang mode, but reviewed docs do not show a dedicated background command/log/WebSocket monitor primitive."
+  },
   "model_selection": {
     "support": "full",
     "source_url": "https://docs.roocode.com/providers/#source:~:text=Roo%20is%20model%2Dagnostic%2C%20allowing%20you%20to%20choose%20the%20model%20that%20best%20fits%20your%20needs",

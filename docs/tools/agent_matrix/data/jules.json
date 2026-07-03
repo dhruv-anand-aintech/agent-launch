@@ -61,6 +61,11 @@
     "source_url": "https://jules.google/#source:~:text=fully%20async%2C%20multi-agent%20development",
     "comment": "Plan tiers advertise multi-agent development and high concurrent task counts."
   },
+  "monitor": {
+    "support": "partial",
+    "source_url": "https://jules.google/#source:~:text=fully%20async%2C%20multi-agent%20development",
+    "comment": "Jules is an async hosted agent with task status/completion UX, but reviewed docs do not show a local Monitor-style command/log/WebSocket watcher."
+  },
   "model_selection": {
     "support": "partial",
     "source_url": "https://jules.google/#source:~:text=Higher%20access%20to%20the%20latest%20models%2C%20starting%20with%20Gemini%203%20Pro",

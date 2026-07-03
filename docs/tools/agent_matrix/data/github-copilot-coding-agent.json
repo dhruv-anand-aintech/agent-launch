@@ -69,6 +69,11 @@
     "source_url": "https://docs.github.com/en/copilot/how-tos/chat-with-copilot/chat-in-ide#using-subagents-3:~:text=You%20can%20use%20subagents%20to%20delegate%20tasks%20to%20an%20isolated%20agent%20with%20its%20own%20context%20window",
     "comment": "Subagents in VS Code and JetBrains IDE agent mode. Isolated context window. Invocation: automatic, direct, or via #runSubagent. Cannot create sub-subagents."
   },
+  "monitor": {
+    "support": "partial",
+    "source_url": "https://docs.github.com/en/copilot/how-tos/chat-with-copilot/chat-in-ide#using-subagents-3:~:text=You%20can%20use%20subagents%20to%20delegate%20tasks%20to%20an%20isolated%20agent%20with%20its%20own%20context%20window",
+    "comment": "Copilot coding agent runs hosted jobs and exposes session/progress surfaces, but no Monitor-style command/log/WebSocket watcher for arbitrary agent-side events was found."
+  },
   "model_selection": {
     "support": "full",
     "source_url": "https://docs.github.com/en/copilot/reference/copilot-billing/models-and-pricing#how-model-pricing-works:~:text=The%20cost%20of%20an%20interaction%20depends%20on%20two%20things%3A%20the%20model%20and%20the%20number%20of%20tokens%20consumed",

@@ -63,6 +63,11 @@
     "source_url": "https://github.com/earendil-works/pi/blob/main/packages/coding-agent/README.md#source:~:text=MCP",
     "comment": "README says \"No sub-agents.\" suggests using spawned pi instances/context tools instead of native subagent orchestration."
   },
+  "monitor": {
+    "support": "none",
+    "source_url": "https://github.com/earendil-works/pi/blob/main/packages/coding-agent/README.md#source:~:text=MCP",
+    "comment": "Pi docs explicitly say there are no native subagents, and reviewed docs do not show a Monitor-style background watch primitive."
+  },
   "model_selection": {
     "support": "full",
     "source_url": "https://pi.dev/docs/latest/usage#source:~:text=model",

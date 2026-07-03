@@ -67,6 +67,11 @@
     "source_url": "https://opencode.ai/docs/agents/#_top:~:text=agents",
     "comment": "Supports custom agents."
   },
+  "monitor": {
+    "support": "partial",
+    "source_url": "https://opencode.ai/docs/agents/#_top:~:text=agents",
+    "comment": "OpenCode supports custom agents and run mode; reviewed docs do not show a dedicated Monitor-equivalent for arbitrary background command output or event streams."
+  },
   "model_selection": {
     "support": "full",
     "source_url": "https://opencode.ai/docs/providers/#_top:~:text=providers",

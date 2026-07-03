@@ -11,6 +11,7 @@
     "rules",
     "skills",
     "hooks",
+    "monitor",
     "custom_model_provider"
   ],
   "properties": {
@@ -30,6 +31,7 @@
     "custom_commands": {"allOf": [{"$ref": "#/$defs/featureWithSource"}], "$comment": "Automation | Commands | User-defined slash/custom commands."},
     "goal_command": {"allOf": [{"$ref": "#/$defs/featureWithSource"}], "$comment": "Automation | /goal | Built-in `/goal` slash command for a persistent session objective that auto-continues until a completion condition is met (or pause/clear)."},
     "subagents": {"allOf": [{"$ref": "#/$defs/featureWithSource"}], "$comment": "Automation | Subagents | First-class custom or delegated subagent support."},
+    "monitor": {"allOf": [{"$ref": "#/$defs/featureWithSource"}], "$comment": "Automation | Monitor | Background monitor/watch capability that lets the agent wait on, observe, or react to long-running commands, subagents, jobs, logs, WebSockets, or task status changes without blocking normal interaction."},
     "transcripts": {"allOf": [{"$ref": "#/$defs/featureWithSource"}], "$comment": "Context | Transcripts | Local or exported conversation/session transcript storage."},
     "model_selection": {"allOf": [{"$ref": "#/$defs/featureWithSource"}], "$comment": "Settings | Model | Explicit model selection in CLI/settings."},
     "approval_mode": {"allOf": [{"$ref": "#/$defs/featureWithSource"}], "$comment": "Settings | Approvals | Approval or permission-mode controls."},

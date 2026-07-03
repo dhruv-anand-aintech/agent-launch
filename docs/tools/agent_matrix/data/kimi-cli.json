@@ -65,6 +65,11 @@
     "source_url": "https://www.kimi.com/code/docs/en/kimi-code-cli/customization/sub-agents.html#agents-and-subagents:~:text=subagents",
     "comment": "Full subagent support. Built-in types: coder, explore, plan. YAML agent files with inheritance. Agent tool with subagent_type, model, resume, run_in_background params."
   },
+  "monitor": {
+    "support": "partial",
+    "source_url": "https://www.kimi.com/code/docs/en/kimi-code-cli/customization/sub-agents.html#agents-and-subagents:~:text=subagents",
+    "comment": "Kimi CLI has beta hooks and subagents, but reviewed docs do not show a dedicated monitor/watch primitive for arbitrary long-running commands or event streams."
+  },
   "model_selection": {
     "support": "full",
     "source_url": "https://www.kimi.com/code/docs/en/kimi-code-cli/configuration/providers-and-models.html#provider-types:~:text=Provider%20Types",

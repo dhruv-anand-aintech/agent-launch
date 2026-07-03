@@ -69,6 +69,11 @@
     "source_url": "https://developers.openai.com/codex/skills/#agent-skills:~:text=Skills",
     "comment": "Codex supports sub-agent/delegation workflows in agent contexts."
   },
+  "monitor": {
+    "support": "partial",
+    "source_url": "https://developers.openai.com/codex/cli/slash-commands#check-background-terminals-with-ps:~:text=Show%20experimental%20background%20terminals",
+    "comment": "Codex documents experimental background terminal status via /ps and subagent orchestration that can wait for results, but current public docs do not list a Claude-style Monitor tool for event-driven command/WebSocket watching."
+  },
   "model_selection": {
     "support": "full",
     "source_url": "https://github.com/openai/codex#source:~:text=model",

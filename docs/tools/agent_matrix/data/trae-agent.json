@@ -61,6 +61,11 @@
     "source_url": "https://github.com/bytedance/trae-agent/blob/main/docs/roadmap.md#advanced-agentic-flows-and-multi-agent-support:~:text=Develop%20sophisticated%20agent%20orchestration%20capabilities",
     "comment": "Multi-agent support is listed on the roadmap, not documented as current functionality."
   },
+  "monitor": {
+    "support": "none",
+    "source_url": "https://github.com/bytedance/trae-agent/blob/main/docs/roadmap.md#advanced-agentic-flows-and-multi-agent-support:~:text=Develop%20sophisticated%20agent%20orchestration%20capabilities",
+    "comment": "Multi-agent support is still roadmap-only and reviewed CLI docs do not show a Monitor-style background watch primitive."
+  },
   "model_selection": {
     "support": "full",
     "source_url": "https://github.com/bytedance/trae-agent#provider-specific-examples:~:text=--provider%20openai%20--model%20gpt-4o",

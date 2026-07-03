@@ -63,8 +63,8 @@ def _readme_support(row: dict, key: str) -> str:
 
 
 def _build_rows_markdown(rows: list[dict]) -> str:
-    header = "| Name | Form factor | Released | Latest major update | Some free | No account | Other subs | Rules | Skills | Transcripts | Hooks | MCP | Hosted agent | Arbitrary models |"
-    divider = "| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |"
+    header = "| Name | Form factor | Released | Latest major update | Some free | No account | Other subs | Rules | Skills | Monitor | Transcripts | Hooks | MCP | Hosted agent | Arbitrary models |"
+    divider = "| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |"
     lines = [header, divider]
 
     for row in sorted(rows, key=lambda r: r.get("name", "")):
@@ -83,6 +83,7 @@ def _build_rows_markdown(rows: list[dict]) -> str:
                     _readme_support(row, "can_use_other_subscriptions"),
                     _readme_support(row, "rules"),
                     _readme_support(row, "skills"),
+                    _readme_support(row, "monitor"),
                     _readme_support(row, "transcripts"),
                     _readme_support(row, "hooks"),
                     _readme_support(row, "mcp_servers"),
@@ -348,7 +349,7 @@ def generate_llms_txt(bundle_path: str, output_path: str) -> None:
 
     col_width = max(len(r["name"]) for r in rows)
     feature_short = {
-        "rules": "Rul", "skills": "Skl", "hooks": "Hks",
+        "rules": "Rul", "skills": "Skl", "monitor": "Mon", "hooks": "Hks",
         "mcp_servers": "MCP", "custom_commands": "Cmd", "goal_command": "Gol", "subagents": "Sub",
         "transcripts": "Trn",
         "model_selection": "Mod", "approval_mode": "App", "sandbox_mode": "San",

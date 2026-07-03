@@ -1,41 +1,41 @@
 # Coding Agent Feature Matrix
 > Compare 32 coding agents, CLIs, and IDEs across features.
-> https://compare.ainorthstar.tech | Updated 2026-07-02
+> https://compare.ainorthstar.tech | Updated 2026-07-03
 
-Agent                   Rel    FF     Fre   NoA   Oth   Rul   Skl   Hks   MCP   Cmd   Gol   Sub   Trn   Mod   App   San   Res   Con   Hdl   Fmt   Sta   Tel   Hst  BYOM
------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Aider                   Jun '2 CLI        Y     Y     Y     ~     ~     ~     N     N     N     ~     ~     Y     ~     N     N     ~     Y     N     N     Y     N     Y
-Amazon Q Developer CLI  Mar '2 CLI        Y     N     N     Y     ~     Y     Y     ~     N     N     ~     Y     Y     N     Y     Y     Y     N     N     Y     N     N
-Amp                     May '2 CLI/Ext    Y                 Y     Y     Y     Y     N     N     Y     ?     ~     ~     N     Y     Y     Y     Y     N     ?     N     ~
-Antigravity             2025  CLI/IDE    Y                 Y     Y     Y     Y     ~     N     ?     ~     ?     ~     ~     Y     Y     Y     ?     ?     ?     N     ?
-Claude Code             Feb '2 CLI/Ext                      Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     ~     Y     Y     Y     Y     Y     Y     ~     ~
-Cline                   Jul '2 CLI/Ext    Y     Y     Y     Y     Y     Y     Y     Y     N     Y     ?     Y     Y     ~     Y     ~     Y     Y     N     Y     N     Y
-OpenAI Codex CLI        Apr '2 CLI/Ext    Y           Y     Y     Y     Y     Y     ~     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y
-Cohere North            Jan '2 SDK/Web                      ~     ~     Y     Y     N     N     Y     ~     ~     ~     Y     ~     ~     ~     ~     N     ~     Y     N
-Crush                   Jul '2 CLI/TUI    Y     Y     Y     Y     Y     ~     Y     Y     N     Y     Y     Y     Y     N     Y     Y     Y     ~     N     Y     N     Y
-Cursor                  2023  CLI/IDE    Y                 Y     Y     Y     Y     Y     N     Y     Y     Y     Y     Y     Y     Y     Y     ~     ~     Y     Y     Y
-Devin                   Dec '2 CLI/Ext    Y                 Y     Y     Y     Y     Y     N     Y     ~     ?     ~     Y     Y     Y     Y     ~     N     ?     Y     ?
-Factory Droid           2025  CLI/Ext          ~     Y     Y     Y     Y     Y     Y     N     Y     ~     Y     Y     Y     Y     Y     Y     Y     Y     ?     ~     Y
-Gemini CLI              Jun '2 CLI        Y           Y     Y     ~     Y     Y     Y     N     Y     ?     Y     Y     Y     Y     Y     Y     ~     ?     Y     N     ~
-GitHub Copilot CLI      Sep '2 CLI        ~     N     Y     Y     Y     Y     Y     ~     ~     Y     Y     Y     Y     Y     Y     Y     Y     Y     ~     ~     N     Y
-GitHub Copilot          Jun '2 CLI/IDE                      Y     Y     Y     Y     ~     N     Y     ?     Y     ~     ~     Y     Y     Y     ~     N     ~     Y     Y
-Goose                   Jan '2 CLI/Des    Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     ~     Y     Y     N     Y     N     Y
-Grok Build              May '2 CLI                          Y     Y     Y     Y     ~     Y     Y     ?     ~     Y     ~     ?     ?     Y     ?     ?     ?     N     ~
-Google Jules            Aug '2 Web                          ?     N     ~     ~     N     N     ~     ~     ~     Y     Y     ~     ~     ~     ~     N     ?     Y     N
-JetBrains Junie         Jan '2 CLI/IDE                      Y     Y     Y     Y     Y     N     Y     Y     Y     Y     ~     Y     ~     Y     ?     N     ~     ~     Y
-Kilo Code               Feb '2 CLI/Ext    Y     Y     Y     Y     Y     Y     Y     Y     N     Y     ?     Y     Y     ~     Y     Y     Y     Y     N     Y     ~     Y
-Kimi CLI                Oct '2 CLI/Ext                      Y     Y     ~     Y     ~     N     Y     ?     Y     Y     N     Y     Y     Y     Y     Y     ?     N     Y
-Kiro                    Jul '2 CLI/IDE    Y                 Y     Y     Y     Y     Y     N     Y     ~     Y     Y     ~     Y     Y     Y     ~     ?     ?     ~     N
-MiMo Code               Jun '2 CLI/IDE    Y     Y     Y     Y     Y     ~     Y     Y     Y     Y     Y     Y     Y     ~     Y     Y     Y     Y     ?     ?     N     Y
-OpenCode                2025  CLI/Ext    Y     Y     Y     Y     Y     Y     Y     Y     N     Y     Y     Y     Y     ~     Y     Y     Y     Y     ?     Y     N     Y
-OpenHands               Mar '2 CLI/IDE    Y     Y     Y     Y     Y     Y     Y     ~     N     N     Y     Y     Y     Y     Y     Y     Y     Y     N     ~     Y     Y
-Pi                      May '2 CLI/SDK          Y     Y     Y     Y     Y     N     Y     N     N     Y     Y     N     N     Y     Y     Y     Y     N     ~     N     Y
-Qwen Code               Jun '2 CLI/Ext                      Y     Y     Y     Y     Y     Y     Y     ?     Y     Y     Y     Y     Y     Y     Y     Y     Y     ~     Y
-Replit Agent            Sep '2 Web                          ~     Y     ~     ?     N     N     ~     ~     N     ~     Y     ~     ~     N     N     N     ?     Y     N
-Roo Code                Mid-20 Extensi                      Y     Y     N     Y     Y     N     Y     ?     Y     Y     N     ~     Y     Y     ~     N     Y     N     Y
-Trae Agent              Jun '2 CLI        Y     Y     Y     ~     N     N     ~     N     N     N     Y     Y     N     ~     N     N     Y     ~     N     N     N     Y
-Windsurf Cascade        Nov '2 CLI/IDE                      Y     Y     Y     Y     Y     N     Y     ?     Y     Y     ~     Y     Y     ~     ~     ~     ~     Y     ~
-ZCode                   2026  IDE/Des    Y                 Y     Y     ~     Y     Y     Y     Y     ~     Y     Y     ~     ~     ~     N     N     ~     ?     N     Y
+Agent                   Rel    FF     Fre   NoA   Oth   Rul   Skl   Hks   MCP   Cmd   Gol   Sub   Mon   Trn   Mod   App   San   Res   Con   Hdl   Fmt   Sta   Tel   Hst  BYOM
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Aider                   Jun '2 CLI        Y     Y     Y     ~     ~     ~     N     N     N     ~     N     ~     Y     ~     N     N     ~     Y     N     N     Y     N     Y
+Amazon Q Developer CLI  Mar '2 CLI        Y     N     N     Y     ~     Y     Y     ~     N     N     N     ~     Y     Y     N     Y     Y     Y     N     N     Y     N     N
+Amp                     May '2 CLI/Ext    Y                 Y     Y     Y     Y     N     N     Y     ~     ?     ~     ~     N     Y     Y     Y     Y     N     ?     N     ~
+Antigravity             2025  CLI/IDE    Y                 Y     Y     Y     Y     ~     N     ?     ?     ~     ?     ~     ~     Y     Y     Y     ?     ?     ?     N     ?
+Claude Code             Feb '2 CLI/Ext                      Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     ~     Y     Y     Y     Y     Y     Y     ~     ~
+Cline                   Jul '2 CLI/Ext    Y     Y     Y     Y     Y     Y     Y     Y     N     Y     ~     ?     Y     Y     ~     Y     ~     Y     Y     N     Y     N     Y
+OpenAI Codex CLI        Apr '2 CLI/Ext    Y           Y     Y     Y     Y     Y     ~     Y     Y     ~     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y
+Cohere North            Jan '2 SDK/Web                      ~     ~     Y     Y     N     N     Y     ~     ~     ~     ~     Y     ~     ~     ~     ~     N     ~     Y     N
+Crush                   Jul '2 CLI/TUI    Y     Y     Y     Y     Y     ~     Y     Y     N     Y     ~     Y     Y     Y     N     Y     Y     Y     ~     N     Y     N     Y
+Cursor                  2023  CLI/IDE    Y                 Y     Y     Y     Y     Y     N     Y     ~     Y     Y     Y     Y     Y     Y     Y     ~     ~     Y     Y     Y
+Devin                   Dec '2 CLI/Ext    Y                 Y     Y     Y     Y     Y     N     Y     ~     ~     ?     ~     Y     Y     Y     Y     ~     N     ?     Y     ?
+Factory Droid           2025  CLI/Ext          ~     Y     Y     Y     Y     Y     Y     N     Y     ~     ~     Y     Y     Y     Y     Y     Y     Y     Y     ?     ~     Y
+Gemini CLI              Jun '2 CLI        Y           Y     Y     ~     Y     Y     Y     N     Y     ~     ?     Y     Y     Y     Y     Y     Y     ~     ?     Y     N     ~
+GitHub Copilot CLI      Sep '2 CLI        ~     N     Y     Y     Y     Y     Y     ~     ~     Y     ~     Y     Y     Y     Y     Y     Y     Y     Y     ~     ~     N     Y
+GitHub Copilot          Jun '2 CLI/IDE                      Y     Y     Y     Y     ~     N     Y     ~     ?     Y     ~     ~     Y     Y     Y     ~     N     ~     Y     Y
+Goose                   Jan '2 CLI/Des    Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     ~     Y     Y     Y     Y     Y     ~     Y     Y     N     Y     N     Y
+Grok Build              May '2 CLI                          Y     Y     Y     Y     ~     Y     Y     ?     ?     ~     Y     ~     ?     ?     Y     ?     ?     ?     N     ~
+Google Jules            Aug '2 Web                          ?     N     ~     ~     N     N     ~     ~     ~     ~     Y     Y     ~     ~     ~     ~     N     ?     Y     N
+JetBrains Junie         Jan '2 CLI/IDE                      Y     Y     Y     Y     Y     N     Y     ~     Y     Y     Y     ~     Y     ~     Y     ?     N     ~     ~     Y
+Kilo Code               Feb '2 CLI/Ext    Y     Y     Y     Y     Y     Y     Y     Y     N     Y     ~     ?     Y     Y     ~     Y     Y     Y     Y     N     Y     ~     Y
+Kimi CLI                Oct '2 CLI/Ext                      Y     Y     ~     Y     ~     N     Y     ~     ?     Y     Y     N     Y     Y     Y     Y     Y     ?     N     Y
+Kiro                    Jul '2 CLI/IDE    Y                 Y     Y     Y     Y     Y     N     Y     ~     ~     Y     Y     ~     Y     Y     Y     ~     ?     ?     ~     N
+MiMo Code               Jun '2 CLI/IDE    Y     Y     Y     Y     Y     ~     Y     Y     Y     Y     ~     Y     Y     Y     ~     Y     Y     Y     Y     ?     ?     N     Y
+OpenCode                2025  CLI/Ext    Y     Y     Y     Y     Y     Y     Y     Y     N     Y     ~     Y     Y     Y     ~     Y     Y     Y     Y     ?     Y     N     Y
+OpenHands               Mar '2 CLI/IDE    Y     Y     Y     Y     Y     Y     Y     ~     N     N     N     Y     Y     Y     Y     Y     Y     Y     Y     N     ~     Y     Y
+Pi                      May '2 CLI/SDK          Y     Y     Y     Y     Y     N     Y     N     N     N     Y     Y     N     N     Y     Y     Y     Y     N     ~     N     Y
+Qwen Code               Jun '2 CLI/Ext                      Y     Y     Y     Y     Y     Y     Y     ~     ?     Y     Y     Y     Y     Y     Y     Y     Y     Y     ~     Y
+Replit Agent            Sep '2 Web                          ~     Y     ~     ?     N     N     ~     ~     ~     N     ~     Y     ~     ~     N     N     N     ?     Y     N
+Roo Code                Mid-20 Extensi                      Y     Y     N     Y     Y     N     Y     ~     ?     Y     Y     N     ~     Y     Y     ~     N     Y     N     Y
+Trae Agent              Jun '2 CLI        Y     Y     Y     ~     N     N     ~     N     N     N     N     Y     Y     N     ~     N     N     Y     ~     N     N     N     Y
+Windsurf Cascade        Nov '2 CLI/IDE                      Y     Y     Y     Y     Y     N     Y     ~     ?     Y     Y     ~     Y     Y     ~     ~     ~     ~     Y     ~
+ZCode                   2026  IDE/Des    Y                 Y     Y     ~     Y     Y     Y     Y     ~     ~     Y     Y     ~     ~     ~     N     N     ~     ?     N     Y
 
 ## Feature legend
 Code = Y: full | ~: partial | N: none | ?: unknown |  : 
@@ -60,6 +60,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Custom Commands: none — 40+ built-in slash commands but no mechanism for users to define custom slash commands. Location: no custom command folder; uses CLI flags/config.
 - Goal Command: none — In-chat `/` commands (e.g. `/add`, `/commit`) are built-in chat commands, not a persisted `/goal` loop with pause/resume until a completion condition.
 - Subagents: partial — Architect/Editor mode uses two models but no general subagent delegation system. No spawning of independent worker agents.
+- Monitor: none — No first-class background monitor/watch primitive found in reviewed docs. Aider has non-interactive one-shot execution and optional commands like --test/--lint, but no Monitor-equivalent for waiting on spawned jobs or event streams.
 - Transcripts: partial — Location: optional chat history/transcript files are configured with Aider history settings such as `.aider.chat.history.md`.
 - Model Selection: full — Full model selection via --model, --weak-model, --editor-model. In-chat /model command. Model aliases supported.
 - Approval Mode: partial — Has --yes-always to auto-accept all confirmations. No granular approval mode like Cursor's always/accept-tool/plan-then-act.
@@ -93,6 +94,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Custom Commands: partial — No first-class user-defined slash command system; closest equivalent is agent-config hooks/prompts and `/agent create` to switch agent profiles with different tool/resource sets.
 - Goal Command: none — No built-in `/goal`-style persistent-objective auto-continue loop; sessions proceed turn-by-turn or via `--no-interactive` single-shot prompts.
 - Subagents: none — Custom agents are independent, user-selected configuration profiles (one active per session); there is no delegation/spawning of subagents from within a running session.
+- Monitor: none — No Monitor-equivalent found in reviewed CLI docs. Amazon Q Developer CLI supports lifecycle hooks and custom agent profiles, but not a documented background command/subagent monitor that wakes the session on completion or output.
 - Transcripts: partial — Conversation history is auto-saved per working directory to support `--resume`, but there is no documented user-facing export/transcript file format akin to a JSONL log.
 - Model Selection: full — Switch models in-session with `/model`, at launch with `q chat --model <name>`, or set a default via `q settings chat.defaultModel <name>`. Choices are limited to AWS-hosted Claude models (3.5/3.7 Sonnet, Sonnet 4, Sonnet 4.5, and an 'auto' option) served over Bedrock.
 - Approval Mode: full — Per-tool trust model: only `fs_read` is trusted by default; `/tools trust`, `/tools trust-all`, and CLI flags `--trust-all-tools`/`--trust-tools=<list>` control auto-approval, with `/tools reset` to restore defaults.
@@ -124,6 +126,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Custom Commands: none — Removed January 29, 2026. Replaced by skills and command palette (Ctrl+O) instead of slash commands. Location: not applicable; feature not supported.
 - Goal Command: none — Amp documents CLI and editor workflows but no built-in `/goal` slash command for persistent session objectives.
 - Subagents: full — Full support. Spawned via Task tool. Built-in specialized subagents: Oracle (GPT-5.4), Librarian (code search), Painter (image gen), Review, Search.
+- Monitor: partial — Task/subagent execution and stream-json/headless operation cover some wait-for-result workflows, but no dedicated background command/log/WebSocket monitor primitive was found in the manual.
 - Transcripts: unknown — Location: transcript/session disk storage was not found in public docs reviewed.
 - Model Selection: partial — Pre-set modes (smart=Claude Opus 4.7, deep=GPT-5.5 reasoning, rush=GPT-5.5 no-reasoning, free=mixed). You choose the mode, not the exact model.
 - Approval Mode: partial — Default: no approval (dangerously-allow-all is now default). Custom approval policies possible via Plugin API (tool.call event).
@@ -155,6 +158,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Custom Commands: partial — CLI via plugin capabilities; IDE via global workflows rather than classic slash-command folders. Location: command-like behavior is via plugins/workflows rather than a documented standalone command folder.
 - Goal Command: none — Antigravity CLI docs cover plugins, sandbox, and slash commands but do not document a Codex-style `/goal` primitive.
 - Subagents: unknown
+- Monitor: unknown — Public Antigravity CLI/plugin docs reviewed here do not establish whether an agent-side background monitor/watch primitive exists.
 - Transcripts: partial — Location: Antigravity brain/trajectory summaries are under `~/.gemini/antigravity/brain/<uuid>/*.md`; index data is in `~/Library/Application Support/Antigravity/User/globalStorage/state.vscdb`.
 - Model Selection: unknown — IDE model UI exists; agy --help does not expose a model flag as of this dataset.
 - Approval Mode: partial — CLI supports --dangerously-skip-permissions; IDE approval behavior not fully documented.
@@ -187,6 +191,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Custom Commands: full — Supports slash commands. Location: `.claude/commands/*.md` or `~/.claude/commands/*.md`.
 - Goal Command: full — Built-in `/goal` sets a completion condition; after each turn a fast evaluator decides whether Claude should continue until the condition holds (Claude Code v2.1.139+).
 - Subagents: full — Supports custom subagents.
+- Monitor: full — Dedicated Monitor tool runs a command in the background or connects to a WebSocket, feeds events back to Claude, and lets the same session continue until output/status changes arrive.
 - Transcripts: full — Location: Claude Code CLI transcripts are JSONL under `~/.claude/projects/<proj-path-dashes>/<sessionId>.jsonl`.
 - Model Selection: full — Model can be configured.
 - Approval Mode: full — Permission mode is configurable.
@@ -218,6 +223,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Custom Commands: full — Built-in slash commands plus skills auto-register as slash commands. SDK plugins can also register custom commands. Location: no public disk folder/file location found in docs reviewed.
 - Goal Command: none — Cline supports custom slash commands via workflow files; no built-in `/goal` for auto-continuing until a completion condition.
 - Subagents: full — Subagents are documented as enabled by default across VS Code, JetBrains, CLI, and other editors, with a Settings -> Features -> Agent toggle to disable the use_subagents tool.
+- Monitor: partial — Cline exposes runtime/session/tool hooks and subagent task workflows, but reviewed docs do not show a dedicated command/log/WebSocket Monitor tool equivalent.
 - Transcripts: unknown — Location: transcript/session disk storage was not found in public docs reviewed.
 - Model Selection: full — 30+ documented providers: Anthropic, OpenAI, Google, AWS Bedrock, Azure, GCP Vertex, OpenRouter (200+ models), Ollama, LM Studio, and any OpenAI-compatible endpoint.
 - Approval Mode: full — Granular auto-approve per category: Read, Edit, Execute, Browser, MCP. YOLO mode for everything. --auto-approve flag.
@@ -250,6 +256,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Custom Commands: partial — CLI supports slash-like workflows through prompts and tooling, but not a first-class command folder in this matrix. Location: no separate command folder documented; command-like workflows are provided by prompts, skills, plugins, and CLI slash commands.
 - Goal Command: full — Built-in `/goal` sets a persistent thread objective with pause, resume, view, and clear; Codex keeps working until the goal is met or you stop it. Enable with `features.goals` in config if missing from the slash menu.
 - Subagents: full — Codex supports sub-agent/delegation workflows in agent contexts.
+- Monitor: partial — Codex documents experimental background terminal status via /ps and subagent orchestration that can wait for results, but current public docs do not list a Claude-style Monitor tool for event-driven command/WebSocket watching.
 - Transcripts: full — Location: Codex session event streams are JSONL under `~/.codex/sessions/YYYY/MM/DD/rollout-<iso>-<id>.jsonl`.
 - Model Selection: full — CLI accepts model configuration/flags.
 - Approval Mode: full — Approval policy can be configured.
@@ -280,6 +287,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Custom Commands: none — No coding-agent slash-command surface found. Location: hosted/web/API-managed; no local disk folder documented.
 - Goal Command: none — North is a hosted agent studio with automations/goals in the product sense, not a terminal `/goal` slash command.
 - Subagents: full — Agent-to-agent coordination is listed as an extensibility feature.
+- Monitor: partial — North Agent Studio supports hosted workflow automations and agent-to-agent coordination, but no local coding-agent Monitor-style command/log/WebSocket watcher was found.
 - Transcripts: partial — Location: hosted/web/API-managed session history; no local transcript directory documented.
 - Model Selection: partial — Cohere model stack is selected through North/Cohere platform, not arbitrary coding-agent CLI flags.
 - Approval Mode: partial — Enterprise guardrails and human-agent collaboration; no per-shell-command approval model.
@@ -312,6 +320,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Custom Commands: full — User-defined Markdown command files placed in `~/.config/crush/commands/` (or project-level), invoked from the command palette (press `/` or Ctrl+P, then Tab to list user commands). Public docs (COMMANDS.md) not yet merged to main as of mid-2026 but the feature is shipped.
 - Goal Command: none — No built-in `/goal` persistent-objective auto-continue loop. Sessions and `crush run --continue` support resuming work, but no dedicated goal-tracking/completion-condition command.
 - Subagents: full — Built-in "Coder" and "Task" agent types; the Coder agent can spawn restricted-permission Task subagents for delegated subtasks via an agent/task tool, with costs rolling up to the parent session. Agents configurable (model, allowed tools/MCP, context paths) via the `agents` config section.
+- Monitor: partial — Crush can delegate to Task subagents and has preliminary hooks, but reviewed docs do not show a dedicated monitor/watch primitive for long-running commands or event streams.
 - Transcripts: full — Local SQLite-backed session storage with a dedicated `crush session` CLI subcommand: `list`, `show <id>`, `last`, `delete`, `rename`, each supporting `--json` for machine-readable transcripts including full message parts (text, reasoning, tool calls/results).
 - Model Selection: full — `-m/--model` and `--small-model` flags on `crush run`; in-TUI model switching mid-session while preserving context. Model database from Catwalk (community-supported open registry), auto-updated unless `disable_provider_auto_update`/`CRUSH_DISABLE_PROVIDER_AUTO_UPDATE=1` is set.
 - Approval Mode: full — Default mode prompts for permission before tool calls. `-y/--yolo` flag (or `permissions.yolo`/`SkipPermissionRequests`) auto-accepts all permissions. Granular `permissions.allowed_tools` allowlist for specific tools without prompting.
@@ -343,6 +352,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Custom Commands: full — CLI exposes full command controls; IDE has reusable rule/workflow patterns. Location: custom command support is through Cursor features/SDK rather than a repo command folder.
 - Goal Command: none — Cursor Agent CLI documents `/plan`, `/ask`, and `/resume` slash commands but no built-in `/goal` for persistent completion conditions.
 - Subagents: full — Full support in Cursor SDK as of June 2026: agents can nest subagents to any depth. IDE agent tasks remain available.
+- Monitor: partial — Cursor supports hooks, cloud agents, and nested subagents, giving partial task/status monitoring, but reviewed docs do not show a dedicated command/log/WebSocket Monitor tool.
 - Transcripts: full — Location: Cursor CLI transcripts live under `~/.cursor/projects/<slug>/agent-transcripts/<agentId>/<agentId>.jsonl`; Cursor IDE composer data is in SQLite `~/Library/Application Support/Cursor/User/globalStorage/state.vscdb`.
 - Model Selection: full — Supports model settings in IDE and CLI.
 - Approval Mode: full — Agent modes and CLI yolo/force controls expose approval controls.
@@ -374,6 +384,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Custom Commands: full — Built-in slash commands (/plan, /review, /test, /think-hard, /implement) plus org-level custom slash commands. Also @skills:name syntax and macros. Location: hosted/web/API-managed; no local disk folder documented.
 - Goal Command: none — Devin supports team custom slash commands; no documented `/goal` for persistent thread-level objectives with auto-continuation.
 - Subagents: full — Yes, called 'Managed Devins'. Coordinator spawns child Devin sessions in isolated VMs for parallel work. Auto-triage also spawns sub-devins.
+- Monitor: partial — Devin sessions and Managed Devins are cloud-hosted and inspectable, but reviewed docs do not expose a Monitor-style primitive for an agent to watch arbitrary command output or event streams.
 - Transcripts: partial — Location: hosted/web/API-managed session history; no local transcript directory documented.
 - Model Selection: unknown — Not explicitly user-facing. Devin offers 'Fast Mode' (~2x faster at 4x ACU). No documentation about letting users choose the underlying LLM model.
 - Approval Mode: partial — 'Secure Mode' (disables native deployment, restricts outbound access). ACU caps, RBAC, PR review approval. No granular approval per action.
@@ -405,6 +416,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Custom Commands: full — Custom slash commands are directly managed in the CLI. Location: Factory custom slash-command configuration in project/user Factory config.
 - Goal Command: none — Factory documents custom slash commands via `/commands`; no built-in `/goal` for persistent objectives.
 - Subagents: full — Custom Droids are documented as subagents.
+- Monitor: partial — Droid has lifecycle hooks, custom Droids, and headless exec flows, but reviewed docs do not show a dedicated background monitor/watch primitive.
 - Transcripts: partial — Location: local searchable Droid session data is managed by Factory CLI; exact transcript database path is not documented in the CLI reference.
 - Model Selection: full — Model IDs can be selected with -m/--model and /model.
 - Approval Mode: full — Tiered autonomy levels control action permissions.
@@ -438,6 +450,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Custom Commands: full — Supports commands. Location: no public disk folder/file location found in docs reviewed.
 - Goal Command: none — Deprecated Gemini CLI surface; no documented `/goal`. Google points CLI users to Antigravity, which also lacks a `/goal` command in public docs.
 - Subagents: full — Full subagent support in Gemini CLI docs: specialized agents with separate prompts, tools, and context loops; automatic delegation, @ forcing, built-in agents, browser agent, tool isolation, and extension subagents.
+- Monitor: partial — Gemini CLI has hooks and subagents, so tasks can be delegated and observed through lifecycle surfaces, but no dedicated command/log/WebSocket monitor primitive was found.
 - Transcripts: unknown — Location: transcript/session disk storage was not found in public docs reviewed.
 - Model Selection: full — Model can be configured.
 - Approval Mode: full — Approval mode is configurable.
@@ -470,6 +483,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Custom Commands: partial — Built-in slash commands (/resume, /cwd, /add-dir, /mcp, /diff, /review, /settings, /theme, /sandbox, /rewind) plus custom agents act as a structured-prompt mechanism, but no user-defined arbitrary slash command syntax is documented.
 - Goal Command: partial — No `/goal` command, but --autopilot / --mode autopilot (Shift+Tab to cycle modes) auto-continues until the agent decides the task is complete, hits a blocking problem, Ctrl+C, or --max-autopilot-continues is reached. Scoped to a single task/session, not a persistent cross-session objective.
 - Subagents: full — Custom agents defined as Markdown agent-profile files (prompts, tools, MCP servers), invoked via --agent=NAME or in-session. Each spins up a subagent with its own isolated context window. Built-in specialized agents include Explore, Task, and the Rubber Duck critic agent.
+- Monitor: partial — Copilot CLI supports hooks, custom agents, and cloud/headless execution, but reviewed docs do not show a dedicated Monitor-equivalent for waiting on arbitrary background command output or event feeds.
 - Transcripts: full — Local session logs under ~/.copilot/logs/ (configurable via --log-dir). Sessions can be exported with --share=PATH (Markdown file) or --share-gist (secret GitHub gist) after a programmatic run.
 - Model Selection: full — --model=MODEL flag or COPILOT_MODEL env var, plus in-session /model picker. Choices include Anthropic Claude, OpenAI GPT, and Google Gemini family models; `auto` lets Copilot pick automatically. BYOK external models also appear in the picker.
 - Approval Mode: full — Per-action approval prompts by default (Yes / Yes-and-approve-for-session / No-and-redirect). Granular flags: --allow-tool, --deny-tool, --allow-all-tools, --allow-all-paths, --allow-all-urls, --allow-url/--deny-url, --add-dir, plus --allow-all/--yolo to bypass everything. Enterprises can disable bypass via permissions.disableBypassPermissionsMode.
@@ -502,6 +516,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Custom Commands: partial — Built-in slash commands in IDE (/fix, /tests, /explain, /help) and CLI (/delegate, /pr, /resume). Prompt files (*.prompt.md) for reusable snippets. No user-defined custom slash commands. Location: no public disk folder/file location found in docs reviewed.
 - Goal Command: none — GitHub Copilot CLI has slash commands and agent modes but no `/goal` for persistent completion conditions across turns.
 - Subagents: full — Subagents in VS Code and JetBrains IDE agent mode. Isolated context window. Invocation: automatic, direct, or via #runSubagent. Cannot create sub-subagents.
+- Monitor: partial — Copilot coding agent runs hosted jobs and exposes session/progress surfaces, but no Monitor-style command/log/WebSocket watcher for arbitrary agent-side events was found.
 - Transcripts: unknown — Location: transcript/session disk storage was not found in public docs reviewed.
 - Model Selection: full — Models from Anthropic, Google, OpenAI, xAI, Microsoft, and GitHub-tuned models. Auto model selection is available; current billing uses token-based AI Credits by model, with legacy premium-request multipliers only for qualifying annual Pro/Pro+ subscribers.
 - Approval Mode: partial — Desktop app has Interactive, Plan, and Autopilot modes. preToolUse hook can approve/deny. No universal 'always ask before X' toggle.
@@ -534,6 +549,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Custom Commands: full — Recipes can be turned into custom slash commands (e.g. /weekly-status) usable in CLI or Desktop sessions. Location: recipe files referenced from goose config.
 - Goal Command: full — Goose v1.40.0 adds a built-in `/goal` command for agent self-evaluation before finishing.
 - Subagents: full — First-class subagent delegation: temporary AI instances spun up via natural language in a prompt for one-off tasks, running in isolation from the main session. Distinct from sub-recipes (pre-written reusable YAML workflows). Up to 10 concurrent parallel workers total across subagents/sub-recipes. Location: invoked ad hoc; sub-recipes configured via --sub-recipe / recipe YAML.
+- Monitor: partial — Goose can delegate to subagents and run hooks around lifecycle/tool events, but reviewed docs do not show a dedicated background command/log monitor primitive.
 - Transcripts: full — Sessions stored in SQLite (v1.10.0+) at ~/.local/share/goose/sessions/sessions.db (Unix) or %APPDATA%\Block\goose\data\sessions\sessions.db (Windows); pre-v1.10.0 used per-session .jsonl files under ~/.local/share/goose/sessions/. `session export` can output markdown/json/yaml; `session list`/`session diagnostics` also available.
 - Model Selection: full — Full model/provider selection via `goose configure`, `--provider`/`--model` flags on `goose run`, or GOOSE_PROVIDER/GOOSE_MODEL env vars (e.g. export GOOSE_MODEL=claude-sonnet-4-5-20250929).
 - Approval Mode: full — Four permission modes: auto (full automation), approve (ask every tool unless allow/deny-listed), chat (no tool access), smart_approve (LLM-based PermissionJudge auto-approves safe calls, asks for risky ones). Set via `goose config set-mode <mode>`, the GOOSE_MODE env var, or in-session `/mode <name>`. No dedicated `--mode` CLI flag on `goose run`/`goose session`.
@@ -565,6 +581,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Custom Commands: partial — Plugin marketplace can bundle slash commands, but public docs reviewed still do not document a user-editable custom command folder.
 - Goal Command: full — Built-in `/goal` mode for long-running autonomous task execution with progress checklist and steering commands.
 - Subagents: full — Delegates larger tasks to specialized parallel subagents, with worktree integration.
+- Monitor: unknown — Public Grok Build docs reviewed here mention hooks/subagents but do not establish whether a Monitor-style background watch primitive exists.
 - Transcripts: unknown — Location: transcript/session disk storage is not documented in the public beta launch page.
 - Model Selection: partial — Launch screenshot references config.toml for models and API keys; model catalog details are not yet public.
 - Approval Mode: full — Plan mode lets users approve, comment on, or rewrite a plan before execution.
@@ -596,6 +613,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Custom Commands: none — Prompt and issue assignment workflow, not user-defined slash commands. Location: hosted/web/API-managed; no local disk folder documented.
 - Goal Command: none — Jules is a hosted async agent for GitHub issues/PRs; no interactive `/goal` slash command in public docs.
 - Subagents: partial — Plan tiers advertise multi-agent development and high concurrent task counts.
+- Monitor: partial — Jules is an async hosted agent with task status/completion UX, but reviewed docs do not show a local Monitor-style command/log/WebSocket watcher.
 - Transcripts: partial — Location: hosted/web/API-managed session history; no local transcript directory documented.
 - Model Selection: partial — Tier-dependent model access; not arbitrary model selection.
 - Approval Mode: full — User reviews plan/diff and approves changes/PR.
@@ -627,6 +645,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Custom Commands: full — Full custom slash command support. Project commands are Markdown files in `.junie/commands`; user commands are in `~/.junie/commands`; `/commands` creates and manages them.
 - Goal Command: none — Junie runs as an IDE agent with tasks and modes; no built-in `/goal` slash command documented.
 - Subagents: full — Full custom subagent support. Subagents define tailored prompts, tool restrictions, model usage, and skills; Junie delegates automatically and stores custom agents in configured agent locations.
+- Monitor: partial — Junie supports subagents, headless CI, and lifecycle hooks, but reviewed docs do not show a dedicated monitor/watch primitive for arbitrary long-running commands or event streams.
 - Transcripts: full — Interactive CLI exposes the full current-session transcript with Ctrl+T and session history with `/history`; public docs do not specify the disk storage path.
 - Model Selection: full — Full model selection through `/model` and config. Junie CLI can select the main LLM and reasoning effort; the home page advertises 10+ models via BYOK.
 - Approval Mode: full — Full approval control through brave mode levels (Off, Auto, On), action allowlist, and settings/config.
@@ -659,6 +678,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Custom Commands: full — Full support via Workflows (slash commands). Markdown files in ~/.config/kilo/commands/ or .kilo/commands/. YAML frontmatter with description, agent, model. Location: no public disk folder/file location found in docs reviewed.
 - Goal Command: none — Kilo Code uses custom workflows/slash commands; no first-party `/goal` for persistent session objectives.
 - Subagents: full — Full custom subagent support. Kilo Code CLI supports subagents via config or Markdown agent files, invocable by agents or users with @ mentions, with isolated sessions, prompts, model/tool/permission settings, and built-in general/explore subagents.
+- Monitor: partial — Kilo Code has plugin event hooks, workflows, and subagents, but reviewed docs do not show a dedicated Monitor-equivalent for arbitrary background command output or WebSocket events.
 - Transcripts: unknown — Location: transcript/session disk storage was not found in public docs reviewed.
 - Model Selection: full — 500+ models via 15+ providers. Switch mid-session with /models. Per-agent model pinning. CLI flags: -m, --model. Auto model routing.
 - Approval Mode: full — Three-tier: allow (auto-approve), ask (prompt), deny (block). Glob patterns. --auto flag for autonomous mode. Per-agent permission overrides.
@@ -691,6 +711,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Custom Commands: partial — Custom plugins (Beta) via plugin.json with executable scripts. Slash commands (/skill:, /flow:) serve as custom invocation. No arbitrary custom aliases in config. Location: no public disk folder/file location found in docs reviewed.
 - Goal Command: none — Kimi Code CLI docs cover core operations and plugins but not a `/goal` command.
 - Subagents: full — Full subagent support. Built-in types: coder, explore, plan. YAML agent files with inheritance. Agent tool with subagent_type, model, resume, run_in_background params.
+- Monitor: partial — Kimi CLI has beta hooks and subagents, but reviewed docs do not show a dedicated monitor/watch primitive for arbitrary long-running commands or event streams.
 - Transcripts: unknown — Location: transcript/session disk storage was not found in public docs reviewed.
 - Model Selection: full — Full model selection. Provider types: kimi, openai_legacy, openai_responses, anthropic, gemini, vertexai. /model interactive picker. CLI flags: --model, --thinking.
 - Approval Mode: full — Full system: Normal (approval with diff preview), YOLO mode (--yolo, auto-approves all), AFK mode (--afk, auto-approves and dismisses questions). Status bar badges.
@@ -722,6 +743,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Custom Commands: full — CLI has slash commands and prompt/custom-agent workflows. Location: CLI slash commands are built in; custom agents/prompts are managed in Kiro custom-agent configuration.
 - Goal Command: none — Kiro CLI documents slash-style commands but no built-in `/goal` for persistent objectives.
 - Subagents: full — Built-in subagents for context gathering and parallel general-purpose tasks.
+- Monitor: partial — Kiro has smart hooks and subagents, but reviewed docs do not show a dedicated Monitor-style background command/log/WebSocket watcher.
 - Transcripts: partial — Location: Kiro CLI uses directory-based conversation persistence; exact transcript directory is not specified in the public docs reviewed.
 - Model Selection: full — CLI /model displays and selects available models.
 - Approval Mode: full — Custom agents can use predefined tool permissions and approved plans.
@@ -754,6 +776,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Custom Commands: full — Config files include a `command` object for custom command templates; built-in slash commands are documented separately.
 - Goal Command: full — README documents `/goal` with an independent judge model evaluating whether the stop condition is satisfied.
 - Subagents: full — README documents on-demand subagents with shared context, parallel work, lifecycle tracking, cancellation, and background execution.
+- Monitor: partial — MiMo Code documents background subagents with lifecycle tracking and cancellation, but reviewed docs do not show a dedicated arbitrary command/log/WebSocket monitor primitive.
 - Transcripts: full — MiMo persists every conversation as a session, with session data saved under MIMOCODE_HOME/data.
 - Model Selection: full — CLI supports `--model/-m`; config and auth docs also route through Models.dev/provider configuration.
 - Approval Mode: full — Permission rules resolve to allow, ask, or deny; run mode also exposes `--dangerously-skip-permissions`.
@@ -786,6 +809,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Custom Commands: full — Supports commands. Location: opencode custom commands are configured under opencode command/config files, not shell aliases.
 - Goal Command: none — Built-in TUI commands are `/init`, `/undo`, `/redo`, `/share`, and `/help` only; no first-party `/goal` for persistent session objectives yet.
 - Subagents: full — Supports custom agents.
+- Monitor: partial — OpenCode supports custom agents and run mode; reviewed docs do not show a dedicated Monitor-equivalent for arbitrary background command output or event streams.
 - Transcripts: full — Location: OpenCode stores sessions/messages in SQLite `~/.local/share/opencode/opencode.db`; legacy storage uses `~/.local/share/opencode/storage/session|message|part/`.
 - Model Selection: full — Supports provider/model selection.
 - Approval Mode: full — Permission controls are configurable.
@@ -817,6 +841,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Custom Commands: partial — Fixed set of built-in interactive `/` commands (/help, /new, /history, /confirm, /condense, /skills, /feedback, /exit). No documented mechanism for users to define their own custom slash commands (skills serve a similar reusable-prompt purpose instead).
 - Goal Command: none — No built-in `/goal` command for a persistent auto-continuing session objective; `/condense` manages context but does not implement a goal-loop.
 - Subagents: none — No documented first-class delegated/spawned subagent system for the CLI (contrast with Devin's 'Managed Devins'); OpenHands runs a single agent loop per conversation.
+- Monitor: none — No first-class delegated subagent or Monitor-style background watch primitive found in reviewed CLI docs; headless mode runs a task rather than monitoring arbitrary background jobs.
 - Transcripts: full — Conversation history automatically saved locally. Location: `~/.openhands/conversations/`. `--resume` lists and reopens prior conversations.
 - Model Selection: full — Set via Settings UI (Ctrl+P > Settings), persisted in `~/.openhands/agent_settings.json` (`llm.model` field), or temporarily overridden with `LLM_MODEL`/`LLM_API_KEY`/`LLM_BASE_URL` env vars plus the `--override-with-envs` flag.
 - Approval Mode: full — Confirmation enabled by default with LLM Risk Analyzer (auto-confirms low/medium risk, prompts on high risk). CLI flags `--always-approve` (auto-approve everything) and `--llm-approve` (force LLM-based analyzer) override behavior; `/confirm` adjusts in-session.
@@ -849,6 +874,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Custom Commands: full — Rich slash-command UI includes built-ins like `/model`, `/resume`, `/tree`, `/fork`, `/clone`, `/compact`, `/export`, `/share`, `/settings`, and `/login`.
 - Goal Command: none — No `/goal` concept is documented; README is explicit about what is *not* built in (including plan mode and no-permission prompts).
 - Subagents: none — README says "No sub-agents." suggests using spawned pi instances/context tools instead of native subagent orchestration.
+- Monitor: none — Pi docs explicitly say there are no native subagents, and reviewed docs do not show a Monitor-style background watch primitive.
 - Transcripts: full — Sessions are saved automatically to `~/.pi/agent/sessions/` with session IDs and `/session` command showing file and metadata.
 - Model Selection: full — Model/provider selection is fully exposed with `/model` in interactive mode and `--provider`, `--model`, `--models` CLI options.
 - Approval Mode: none — Philosophy page says there are no permission popups by default and no approval mode is documented as a first-class control.
@@ -881,6 +907,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Custom Commands: full — Full custom commands: Markdown files in ~/.qwen/commands/ (global) and .qwen/commands/ (project). Support {{args}}, !{shell}, @{file} references. Namespace support. Location: Qwen Code extensions can package custom commands via `qwen-extension.json`.
 - Goal Command: full — Built-in `/goal` sets a goal and keeps working until the condition is met; supports `/goal <condition>` and `/goal clear`.
 - Subagents: full — Full subagent system: named subagents with YAML frontmatter, fork subagents (context-inheriting), per-agent model/permission/tool config, extension subagents.
+- Monitor: partial — Qwen Code has subagents, hooks, headless mode, and status surfaces, but reviewed docs do not show a dedicated Monitor-style arbitrary command/log/WebSocket watcher.
 - Transcripts: unknown — Location: transcript/session disk storage was not found in public docs reviewed.
 - Model Selection: full — Full model switching via /model. Supports OpenAI-compatible, Anthropic, Gemini protocols. Local models via Ollama/vLLM. Per-model reasoning config.
 - Approval Mode: full — Four modes: Plan (read-only), Default (manual approval), Auto-Edit (auto file edits, manual shell), YOLO (auto all). Shift+Tab to cycle.
@@ -912,6 +939,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Custom Commands: none — Prompt/chat workflow, not user-defined slash-command folders. Location: hosted/web/API-managed; no local disk folder documented.
 - Goal Command: none — Replit Agent is a hosted web agent; no terminal `/goal` slash command.
 - Subagents: partial — Agent 3 can build agents and run background tasks, but no first-class custom subagent framework found.
+- Monitor: partial — Replit Agent runs hosted autonomous/background work and reports task state, but reviewed docs do not show a Monitor-style primitive for arbitrary command output or event streams.
 - Transcripts: partial — Location: hosted/web/API-managed session history; no local transcript directory documented.
 - Model Selection: none — No user model selection for Replit Agent found.
 - Approval Mode: partial — User reviews generated work in Replit; granular command approval controls are not documented.
@@ -944,6 +972,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Custom Commands: full — Full slash commands: .roo/commands/ (project) and ~/.roo/commands/ (global). Frontmatter with description, argument-hint, mode targeting. Built-in /init command. Location: no public disk folder/file location found in docs reviewed.
 - Goal Command: none — Roo Code supports custom slash commands; no built-in `/goal` for persistent session objectives.
 - Subagents: full — Full orchestration via Orchestrator Mode (Boomerang Mode). new_task tool delegates to specialized modes. Isolated context with explicit context transfer.
+- Monitor: partial — Roo Code can delegate work through Orchestrator/Boomerang mode, but reviewed docs do not show a dedicated background command/log/WebSocket monitor primitive.
 - Transcripts: unknown — Location: transcript/session disk storage was not found in public docs reviewed.
 - Model Selection: full — 22+ documented providers: Anthropic, OpenAI, AWS Bedrock, DeepSeek, Google Gemini, LM Studio, Ollama, OpenRouter, and more. Sticky models per mode.
 - Approval Mode: full — Granular auto-approval: read/write operations, approved commands (allowlist/denylist), MCP tools (dual permission), mode switching, subtasks, follow-up questions.
@@ -976,6 +1005,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Custom Commands: none — Only built-in CLI commands (`run`, `interactive`, `show-config`, `tools`) are documented.
 - Goal Command: none — No persistent `/goal` or auto-continue-until-complete command documented.
 - Subagents: none — Multi-agent support is listed on the roadmap, not documented as current functionality.
+- Monitor: none — Multi-agent support is still roadmap-only and reviewed CLI docs do not show a Monitor-style background watch primitive.
 - Transcripts: full — Trajectory recording is first-class, with auto-generated or custom trajectory JSON files.
 - Model Selection: full — Supports `--provider`, `--model`, `--model-base-url`, and config-file model providers.
 - Approval Mode: none — No tool approval/autonomy mode flags documented.
@@ -1007,6 +1037,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Custom Commands: full — Custom commands via Workflows (slash commands /[workflow-name]) and Command palette. Terminal has 4 auto-execution levels. Location: no public disk folder/file location found in docs reviewed.
 - Goal Command: none — Windsurf Cascade has workflows and hooks but no documented `/goal` slash command for persistent objectives.
 - Subagents: full — Devin Cloud (autonomous agent on own VM), Devin Local Agent, Fast Context (specialized 20x faster retrieval), Agent Command Center manages all agents in Kanban view.
+- Monitor: partial — Windsurf/Devin surfaces support cloud/local agent status, hooks, and agent command workflows, but reviewed docs do not show a dedicated arbitrary command/log/WebSocket monitor primitive.
 - Transcripts: unknown — Location: transcript/session disk storage was not found in public docs reviewed.
 - Model Selection: full — Full selection: SWE-1.6/1.5, Claude Opus/Sonnet, GPT-5.x series, Gemini, DeepSeek V4, Kimi, Grok, and more. Adaptive (intelligent router) and Arena Mode (side-by-side).
 - Approval Mode: full — 4 terminal levels: Disabled (require approval), Allowlist Only, Auto (Cascade judges), Turbo (all auto-executed). Allow/deny lists. Cascade Code/Chat/Ask mode distinctions.
@@ -1038,6 +1069,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Custom Commands: full — User/workspace custom slash commands can be created in settings and invoked from `/` in ZCode Agent.
 - Goal Command: full — Built-in `/goal` supports set, replace, pause, resume, and clear; the agent automatically verifies each round and continues until the goal is complete.
 - Subagents: full — Built-in general-purpose and Explore subagents plus beta user-level custom subagents under `~/.zcode/agents/<name>.md`, with custom model/tool permissions/instructions.
+- Monitor: partial — ZCode has built-in/custom subagents and workspace task surfaces, but reviewed docs do not show a dedicated command/log/WebSocket Monitor-equivalent.
 - Transcripts: partial — Task list/conversation history is first-class in the desktop UI, but public docs do not expose disk transcript paths.
 - Model Selection: full — Model selector and model settings support Z.ai, BigModel, GLM Coding Plan, and API-key providers.
 - Approval Mode: full — Execution modes include Default, Confirm Before Changes, and Auto Edit; safety confirmation pauses risky actions for approval.

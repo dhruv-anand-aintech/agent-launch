@@ -69,6 +69,11 @@
     "source_url": "https://github.com/OpenHands/docs/blob/main/openhands/usage/cli/command-reference.mdx#source:~:text=Interactive%20Commands",
     "comment": "No documented first-class delegated/spawned subagent system for the CLI (contrast with Devin's 'Managed Devins'); OpenHands runs a single agent loop per conversation."
   },
+  "monitor": {
+    "support": "none",
+    "source_url": "https://github.com/OpenHands/docs/blob/main/openhands/usage/cli/command-reference.mdx#source:~:text=Interactive%20Commands",
+    "comment": "No first-class delegated subagent or Monitor-style background watch primitive found in reviewed CLI docs; headless mode runs a task rather than monitoring arbitrary background jobs."
+  },
   "transcripts": {
     "support": "full",
     "source_url": "https://github.com/OpenHands/docs/blob/main/openhands/usage/cli/installation.mdx#first-run:~:text=The%20conversation%20history%20will%20be%20saved%20in%20%60~/.openhands/conversations%60",
@@ -87,7 +92,7 @@
   "sandbox_mode": {
     "support": "full",
     "source_url": "https://github.com/OpenHands/docs/blob/main/openhands/usage/sandboxes/overview.mdx#sandbox-providers:~:text=Docker%20sandbox%20(recommended)",
-    "comment": "Three sandbox providers: Docker (isolated container, default/recommended for `openhands serve`), Process (no isolation, runs directly as a local process — this is what the plain `openhands` CLI uses by default), and Remote (managed/hosted). Selected via legacy `RUNTIME` env var (docker/process/remote)."
+    "comment": "Three sandbox providers: Docker (isolated container, default/recommended for `openhands serve`), Process (no isolation, runs directly as a local process \u2014 this is what the plain `openhands` CLI uses by default), and Remote (managed/hosted). Selected via legacy `RUNTIME` env var (docker/process/remote)."
   },
   "resume": {
     "support": "full",
@@ -174,7 +179,7 @@
     "source_url": "https://docs.openhands.dev/openhands/usage/cli/command-reference#environment-variables:~:text=LLM_BASE_URL",
     "comment": "LLM_BASE_URL plus LiteLLM backend allow pointing at any OpenAI-compatible endpoint, including local model servers (Ollama, vLLM, SGLang) and proxies."
   },
-  "notes": "OpenHands launched in March 2024 as 'OpenDevin' (an open clone of Cognition's Devin), renamed OpenHands mid-2024, and had its GitHub org renamed All-Hands-AI -> OpenHands on 2025-10-20. The 1.0.0 release (Dec 2025) was a ground-up rewrite onto a new 'software-agent-sdk', changing config from TOML to JSON and rebranding 'microagents' to the AgentSkills-standard 'Skills' system. It has a genuine local CLI (`openhands`, installable via `uv tool install openhands` or `pip install openhands`, MIT licensed) that runs as a plain local process by default — Docker is only required for the separate `openhands serve` full-GUI mode, not the terminal CLI/headless mode.",
+  "notes": "OpenHands launched in March 2024 as 'OpenDevin' (an open clone of Cognition's Devin), renamed OpenHands mid-2024, and had its GitHub org renamed All-Hands-AI -> OpenHands on 2025-10-20. The 1.0.0 release (Dec 2025) was a ground-up rewrite onto a new 'software-agent-sdk', changing config from TOML to JSON and rebranding 'microagents' to the AgentSkills-standard 'Skills' system. It has a genuine local CLI (`openhands`, installable via `uv tool install openhands` or `pip install openhands`, MIT licensed) that runs as a plain local process by default \u2014 Docker is only required for the separate `openhands serve` full-GUI mode, not the terminal CLI/headless mode.",
   "pricing": {
     "value": "Free (MIT, self-hosted); OpenHands Cloud free tier + at-cost usage; Enterprise custom",
     "source_url": "https://www.openhands.dev/pricing#source:~:text=Free%2C%20local%20OpenHands%20for%20getting%20started",

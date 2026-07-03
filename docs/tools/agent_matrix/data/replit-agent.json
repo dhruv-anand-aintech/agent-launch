@@ -61,6 +61,11 @@
     "source_url": "https://replit.com/blog/introducing-agent-3-our-most-autonomous-agent-yet#source:~:text=build%20other%20agents",
     "comment": "Agent 3 can build agents and run background tasks, but no first-class custom subagent framework found."
   },
+  "monitor": {
+    "support": "partial",
+    "source_url": "https://replit.com/blog/introducing-agent-3-our-most-autonomous-agent-yet#source:~:text=build%20other%20agents",
+    "comment": "Replit Agent runs hosted autonomous/background work and reports task state, but reviewed docs do not show a Monitor-style primitive for arbitrary command output or event streams."
+  },
   "model_selection": {
     "support": "none",
     "source_url": "https://docs.replit.com/replitai/agent#agent:~:text=Agent",

@@ -63,6 +63,11 @@
     "source_url": "https://goose-docs.ai/docs/guides/subagents/#source:~:text=Subagents",
     "comment": "First-class subagent delegation: temporary AI instances spun up via natural language in a prompt for one-off tasks, running in isolation from the main session. Distinct from sub-recipes (pre-written reusable YAML workflows). Up to 10 concurrent parallel workers total across subagents/sub-recipes. Location: invoked ad hoc; sub-recipes configured via --sub-recipe / recipe YAML."
   },
+  "monitor": {
+    "support": "partial",
+    "source_url": "https://goose-docs.ai/docs/guides/subagents/#source:~:text=Subagents",
+    "comment": "Goose can delegate to subagents and run hooks around lifecycle/tool events, but reviewed docs do not show a dedicated background command/log monitor primitive."
+  },
   "transcripts": {
     "support": "full",
     "source_url": "https://goose-docs.ai/docs/guides/managing-goose-sessions/#source:~:text=Unix-like%3A%20~/.local/share/goose/sessions/sessions.db",

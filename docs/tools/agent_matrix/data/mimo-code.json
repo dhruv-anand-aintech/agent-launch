@@ -65,6 +65,11 @@
     "source_url": "https://github.com/XiaomiMiMo/MiMo-Code#subagent-system:~:text=The%20primary%20agent%20can%20create%20subagents%20on%20demand",
     "comment": "README documents on-demand subagents with shared context, parallel work, lifecycle tracking, cancellation, and background execution."
   },
+  "monitor": {
+    "support": "partial",
+    "source_url": "https://github.com/XiaomiMiMo/MiMo-Code#subagent-system:~:text=The%20primary%20agent%20can%20create%20subagents%20on%20demand",
+    "comment": "MiMo Code documents background subagents with lifecycle tracking and cancellation, but reviewed docs do not show a dedicated arbitrary command/log/WebSocket monitor primitive."
+  },
   "model_selection": {
     "support": "full",
     "source_url": "https://mimo.xiaomi.com/mimocode/cli-options#run:~:text=%60--model%60%60-m%20%60Model%20to%20use%20in%20the%20form%20of%20provider%2Fmodel",

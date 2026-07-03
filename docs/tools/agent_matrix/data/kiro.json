@@ -65,6 +65,11 @@
     "source_url": "https://kiro.dev/docs/chat/subagents/#subagents:~:text=Kiro%20has%20two%20built-in%20subagents",
     "comment": "Built-in subagents for context gathering and parallel general-purpose tasks."
   },
+  "monitor": {
+    "support": "partial",
+    "source_url": "https://kiro.dev/docs/chat/subagents/#subagents:~:text=Kiro%20has%20two%20built-in%20subagents",
+    "comment": "Kiro has smart hooks and subagents, but reviewed docs do not show a dedicated Monitor-style background command/log/WebSocket watcher."
+  },
   "model_selection": {
     "support": "full",
     "source_url": "https://kiro.dev/cli/#source:~:text=%2Fmodel%60%20%7CDisplays%20available%20models%20and%20allows%20you%20to%20select",

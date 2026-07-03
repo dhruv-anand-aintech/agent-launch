@@ -65,6 +65,11 @@
     "source_url": "https://docs.windsurf.com/windsurf/devin#delegating-work-to-devin:~:text=Delegating%20Work%20to%20Devin",
     "comment": "Devin Cloud (autonomous agent on own VM), Devin Local Agent, Fast Context (specialized 20x faster retrieval), Agent Command Center manages all agents in Kanban view."
   },
+  "monitor": {
+    "support": "partial",
+    "source_url": "https://docs.windsurf.com/windsurf/devin#delegating-work-to-devin:~:text=Delegating%20Work%20to%20Devin",
+    "comment": "Windsurf/Devin surfaces support cloud/local agent status, hooks, and agent command workflows, but reviewed docs do not show a dedicated arbitrary command/log/WebSocket monitor primitive."
+  },
   "model_selection": {
     "support": "full",
     "source_url": "https://docs.windsurf.com/windsurf/models#page-title:~:text=Models",

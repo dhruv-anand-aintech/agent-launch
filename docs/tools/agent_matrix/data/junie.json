@@ -69,6 +69,11 @@
     "source_url": "https://junie.jetbrains.com/docs/junie-cli-subagents.html#custom-subagents:~:text=Subagents%20in%20Junie%20extend%20the%20built-in%20logic%20of%20the%20main%20agent",
     "comment": "Full custom subagent support. Subagents define tailored prompts, tool restrictions, model usage, and skills; Junie delegates automatically and stores custom agents in configured agent locations."
   },
+  "monitor": {
+    "support": "partial",
+    "source_url": "https://junie.jetbrains.com/docs/junie-cli-subagents.html#custom-subagents:~:text=Subagents%20in%20Junie%20extend%20the%20built-in%20logic%20of%20the%20main%20agent",
+    "comment": "Junie supports subagents, headless CI, and lifecycle hooks, but reviewed docs do not show a dedicated monitor/watch primitive for arbitrary long-running commands or event streams."
+  },
   "model_selection": {
     "support": "full",
     "source_url": "https://junie.jetbrains.com/docs/slash-commands.html#built-in-slash-commands:~:text=%60%2Fmodel%20%60%20Select%20the%20main%20Large%20Language%20Model",

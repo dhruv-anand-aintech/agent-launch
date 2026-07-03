@@ -65,6 +65,11 @@
     "source_url": "https://docs.cline.bot/features/subagents#enabling-subagents:~:text=Subagents%20are%20enabled%20by%20default",
     "comment": "Subagents are documented as enabled by default across VS Code, JetBrains, CLI, and other editors, with a Settings -> Features -> Agent toggle to disable the use_subagents tool."
   },
+  "monitor": {
+    "support": "partial",
+    "source_url": "https://docs.cline.bot/features/subagents#enabling-subagents:~:text=Subagents%20are%20enabled%20by%20default",
+    "comment": "Cline exposes runtime/session/tool hooks and subagent task workflows, but reviewed docs do not show a dedicated command/log/WebSocket Monitor tool equivalent."
+  },
   "model_selection": {
     "support": "full",
     "source_url": "https://github.com/cline/cline#works-with-every-model:~:text=Cline%20is%20not%20locked%20to%20a%20single%20AI%20provider",

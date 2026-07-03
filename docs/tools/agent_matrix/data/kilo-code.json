@@ -63,6 +63,11 @@
     "source_url": "https://kilo.ai/docs/customize/custom-subagents#custom-subagents:~:text=Kilo%20Code%27s%20CLI%20supports%20custom%20subagents",
     "comment": "Full custom subagent support. Kilo Code CLI supports subagents via config or Markdown agent files, invocable by agents or users with @ mentions, with isolated sessions, prompts, model/tool/permission settings, and built-in general/explore subagents."
   },
+  "monitor": {
+    "support": "partial",
+    "source_url": "https://kilo.ai/docs/customize/custom-subagents#custom-subagents:~:text=Kilo%20Code%27s%20CLI%20supports%20custom%20subagents",
+    "comment": "Kilo Code has plugin event hooks, workflows, and subagents, but reviewed docs do not show a dedicated Monitor-equivalent for arbitrary background command output or WebSocket events."
+  },
   "model_selection": {
     "support": "full",
     "source_url": "https://kilo.ai/docs/code-with-ai/platforms/cli#agent-model-commands:~:text=%2Fmodels",

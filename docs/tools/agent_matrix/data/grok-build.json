@@ -61,6 +61,11 @@
     "source_url": "https://x.ai/news/grok-build-cli#subagents-that-work-in-parallel:~:text=Subagents%20that%20work%20in%20parallel",
     "comment": "Delegates larger tasks to specialized parallel subagents, with worktree integration."
   },
+  "monitor": {
+    "support": "unknown",
+    "source_url": "https://x.ai/news/grok-build-cli#subagents-that-work-in-parallel:~:text=Subagents%20that%20work%20in%20parallel",
+    "comment": "Public Grok Build docs reviewed here mention hooks/subagents but do not establish whether a Monitor-style background watch primitive exists."
+  },
   "model_selection": {
     "support": "partial",
     "source_url": "https://x.ai/news/grok-build-cli#plan-review-approve:~:text=Point%20users%20to%20%60config.toml%60%20for%20models%20and%20API%20keys",

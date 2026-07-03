@@ -67,6 +67,11 @@
     "source_url": "https://docs.devin.ai/work-with-devin/advanced-capabilities#managed-devins:~:text=Devin%20can%20break%20down%20large%20tasks%20and%20delegate%20them%20to%20a%20team%20of%20managed%20Devins%20working%20in%20parallel",
     "comment": "Yes, called 'Managed Devins'. Coordinator spawns child Devin sessions in isolated VMs for parallel work. Auto-triage also spawns sub-devins."
   },
+  "monitor": {
+    "support": "partial",
+    "source_url": "https://docs.devin.ai/work-with-devin/advanced-capabilities#managed-devins:~:text=Devin%20can%20break%20down%20large%20tasks%20and%20delegate%20them%20to%20a%20team%20of%20managed%20Devins%20working%20in%20parallel",
+    "comment": "Devin sessions and Managed Devins are cloud-hosted and inspectable, but reviewed docs do not expose a Monitor-style primitive for an agent to watch arbitrary command output or event streams."
+  },
   "model_selection": {
     "support": "unknown",
     "source_url": "https://docs.devin.ai/admin/billing/self-serve#source:~:text=Fast%20Mode",

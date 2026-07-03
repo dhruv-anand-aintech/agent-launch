@@ -65,6 +65,11 @@
     "source_url": "https://docs.factory.ai/reference/cli-reference#source:~:text=%2Fdroids%20Manage%20custom%20droids",
     "comment": "Custom Droids are documented as subagents."
   },
+  "monitor": {
+    "support": "partial",
+    "source_url": "https://docs.factory.ai/reference/cli-reference#source:~:text=%2Fdroids%20Manage%20custom%20droids",
+    "comment": "Droid has lifecycle hooks, custom Droids, and headless exec flows, but reviewed docs do not show a dedicated background monitor/watch primitive."
+  },
   "model_selection": {
     "support": "full",
     "source_url": "https://docs.factory.ai/reference/cli-reference#source:~:text=-m%2C%20--model%20%3Cid%3E%20Select%20a%20specific%20model%20ID%20droid%20exec%20-m%20claude-opus-4-7",

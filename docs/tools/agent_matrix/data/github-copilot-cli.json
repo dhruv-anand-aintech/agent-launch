@@ -61,6 +61,11 @@
     "source_url": "https://docs.github.com/en/copilot/concepts/agents/copilot-cli/about-custom-agents#source:~:text=Work%20performed%20by%20a%20custom%20agent%20is%20carried%20out%20using%20a%20subagent%2C%20which%20is%20a%20temporary%20agent%20spun%20up%20to%20complete%20the%20task",
     "comment": "Custom agents defined as Markdown agent-profile files (prompts, tools, MCP servers), invoked via --agent=NAME or in-session. Each spins up a subagent with its own isolated context window. Built-in specialized agents include Explore, Task, and the Rubber Duck critic agent."
   },
+  "monitor": {
+    "support": "partial",
+    "source_url": "https://docs.github.com/en/copilot/concepts/agents/copilot-cli/about-custom-agents#source:~:text=Work%20performed%20by%20a%20custom%20agent%20is%20carried%20out%20using%20a%20subagent%2C%20which%20is%20a%20temporary%20agent%20spun%20up%20to%20complete%20the%20task",
+    "comment": "Copilot CLI supports hooks, custom agents, and cloud/headless execution, but reviewed docs do not show a dedicated Monitor-equivalent for waiting on arbitrary background command output or event feeds."
+  },
   "transcripts": {
     "support": "full",
     "source_url": "https://docs.github.com/en/copilot/reference/copilot-cli-reference/cli-command-reference#source:~:text=--share%3DPATH",
@@ -166,7 +171,7 @@
     "source_url": "https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models#source:~:text=Anthropic%2C%20including%20locally%20running%20models%20such%20as%20Ollama",
     "comment": "BYOK env vars (COPILOT_PROVIDER_TYPE, COPILOT_PROVIDER_BASE_URL, COPILOT_PROVIDER_API_KEY, COPILOT_MODEL) connect Anthropic, OpenAI-compatible endpoints, Azure OpenAI, AWS Bedrock, Google AI Studio, xAI/Microsoft Foundry, and local Ollama models."
   },
-  "notes": "GitHub Copilot CLI is the standalone, local terminal coding agent (`copilot`, npm package @github/copilot, repo github/copilot-cli) — distinct from the asynchronous GitHub Actions-based Copilot cloud coding agent. Public preview Sep 2025, GA Feb 2026, runs on an existing Copilot subscription with no separate CLI fee. Strong open-standard support (AGENTS.md, Agent Skills, MCP, hooks, custom agents/subagents) and BYOK for external model providers, plus newer cloud/local sandboxing, autopilot mode, and an experimental redesigned terminal UI.",
+  "notes": "GitHub Copilot CLI is the standalone, local terminal coding agent (`copilot`, npm package @github/copilot, repo github/copilot-cli) \u2014 distinct from the asynchronous GitHub Actions-based Copilot cloud coding agent. Public preview Sep 2025, GA Feb 2026, runs on an existing Copilot subscription with no separate CLI fee. Strong open-standard support (AGENTS.md, Agent Skills, MCP, hooks, custom agents/subagents) and BYOK for external model providers, plus newer cloud/local sandboxing, autopilot mode, and an experimental redesigned terminal UI.",
   "pricing": {
     "value": "Included with Copilot Pro $10/mo, Pro+ $39/mo, Business $19/user/mo, Enterprise $39/user/mo; Free tier has limited usage",
     "source_url": "https://docs.github.com/en/copilot/concepts/billing/copilot-requests#source:~:text=Copilot%20CLI",

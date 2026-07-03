@@ -62,6 +62,11 @@
     "source_url": "https://github.com/aws/amazon-q-developer-cli/blob/main/docs/agent-format.md#source:~:text=Agent%20Architecture",
     "comment": "Custom agents are independent, user-selected configuration profiles (one active per session); there is no delegation/spawning of subagents from within a running session."
   },
+  "monitor": {
+    "support": "none",
+    "source_url": "https://github.com/aws/amazon-q-developer-cli/blob/main/docs/agent-format.md#source:~:text=Agent%20Architecture",
+    "comment": "No Monitor-equivalent found in reviewed CLI docs. Amazon Q Developer CLI supports lifecycle hooks and custom agent profiles, but not a documented background command/subagent monitor that wakes the session on completion or output."
+  },
   "transcripts": {
     "support": "partial",
     "source_url": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-chat.html#source:~:text=q%20chat%20--resume",

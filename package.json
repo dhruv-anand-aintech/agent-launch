@@ -18,7 +18,7 @@
     "matrix:validate": "python3 docs/tools/agent_matrix/data_utils.py validate",
     "matrix:bundle": "python3 docs/tools/agent_matrix/data_utils.py bundle",
     "matrix:llms-txt": "python3 docs/tools/agent_matrix/data_utils.py llms-txt",
-    "deploy:matrix": "npm run matrix:validate && npm run matrix:bundle && npm run matrix:llms-txt && wrangler deploy --config wrangler.toml"
+    "deploy:matrix": "npm run matrix:validate && npm run matrix:bundle && npm run matrix:llms-txt && wrangler deploy --config wrangler.toml --tag $(git rev-parse HEAD)"
   },
   "devDependencies": {
     "wrangler": "^4.98.0"

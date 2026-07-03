@@ -65,6 +65,11 @@
     "source_url": "https://deepwiki.com/charmbracelet/crush/6.7-agent-delegation-and-nested-tools#source:~:text=Agent%20Tool%20and%20Recursion",
     "comment": "Built-in \"Coder\" and \"Task\" agent types; the Coder agent can spawn restricted-permission Task subagents for delegated subtasks via an agent/task tool, with costs rolling up to the parent session. Agents configurable (model, allowed tools/MCP, context paths) via the `agents` config section."
   },
+  "monitor": {
+    "support": "partial",
+    "source_url": "https://deepwiki.com/charmbracelet/crush/6.7-agent-delegation-and-nested-tools#source:~:text=Agent%20Tool%20and%20Recursion",
+    "comment": "Crush can delegate to Task subagents and has preliminary hooks, but reviewed docs do not show a dedicated monitor/watch primitive for long-running commands or event streams."
+  },
   "transcripts": {
     "support": "full",
     "source_url": "https://github.com/charmbracelet/crush/blob/main/internal/cmd/session.go#source:~:text=Manage%20Crush%20sessions",

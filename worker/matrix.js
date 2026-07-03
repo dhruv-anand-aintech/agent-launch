@@ -458,19 +458,110 @@ function rankAgent(i) {
   return -cnt;
 }
 
+function defaultState() {
+  return {
+    cols: matrix.map(function(_,i){return i}).sort(function(a,b){return rankAgent(a)-rankAgent(b)}),
+    rows: featureCols.map(function(c){return c.key}),
+    hidden: [],
+    sort: []
+  };
+}
+function agentSlug(i) {
+  var agent = matrix[i] || {};
+  return (agent.links && agent.links.slug) || String(agent.name || i).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+}
+function compactList(values) {
+  return values.filter(function(v){ return v !== undefined && v !== null && String(v).length; }).join(',');
+}
+function parseListParam(params, key) {
+  var raw = params.get(key);
+  if (!raw) return null;
+  return raw.split(',').map(function(v){ return v.trim(); }).filter(Boolean);
+}
+function uniqueValidIndexesFromSlugs(slugs) {
+  var bySlug = {};
+  matrix.forEach(function(_, i){ bySlug[agentSlug(i)] = i; });
+  var seen = new Set();
+  return (slugs || []).map(function(slug){ return bySlug[slug]; }).filter(function(i){
+    if (i === undefined || seen.has(i)) return false;
+    seen.add(i);
+    return true;
+  });
+}
+function mergeIndexOrder(base, slugs) {
+  var parsed = uniqueValidIndexesFromSlugs(slugs);
+  if (!parsed.length) return base.slice();
+  var seen = new Set(parsed);
+  return parsed.concat(base.filter(function(i){ return !seen.has(i); }));
+}
+function uniqueValidRowKeys(keys) {
+  var valid = new Set(featureCols.map(function(c){ return c.key; }));
+  var seen = new Set();
+  return (keys || []).filter(function(key){
+    if (!valid.has(key) || seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+}
+function mergeRowOrder(base, keys) {
+  var parsed = uniqueValidRowKeys(keys);
+  if (!parsed.length) return base.slice();
+  var seen = new Set(parsed);
+  return parsed.concat(base.filter(function(key){ return !seen.has(key); }));
+}
+function sameArray(a, b) {
+  return a.length === b.length && a.every(function(v, i){ return v === b[i]; });
+}
 function loadState() {
-  var def = { cols: matrix.map(function(_,i){return i}).sort(function(a,b){return rankAgent(a)-rankAgent(b)}), rows: featureCols.map(function(c){return c.key}) };
+  var def = defaultState();
   try {
     var c = document.cookie.split('; ').find(r => r.startsWith(COOKIE+'='));
     if (c) { var p = JSON.parse(decodeURIComponent(c.split('=')[1]));
       if (Array.isArray(p.cols) && p.cols.length===matrix.length) def.cols = p.cols;
       if (Array.isArray(p.rows) && p.rows.length===featureCols.length) def.rows = p.rows;
+      if (Array.isArray(p.hidden)) def.hidden = p.hidden.filter(function(i){ return Number.isInteger(i) && i >= 0 && i < matrix.length; });
+      if (Array.isArray(p.sort)) def.sort = uniqueValidRowKeys(p.sort).map(function(key){ return {key:key}; });
     }
+  } catch(e) {}
+  try {
+    var params = new URLSearchParams(window.location.search);
+    var cols = parseListParam(params, 'cols');
+    var rows = parseListParam(params, 'rows');
+    var hide = parseListParam(params, 'hide');
+    var sort = parseListParam(params, 'sort');
+    if (cols) def.cols = mergeIndexOrder(defaultState().cols, cols);
+    if (rows) def.rows = mergeRowOrder(defaultState().rows, rows);
+    if (hide) def.hidden = uniqueValidIndexesFromSlugs(hide);
+    if (sort) def.sort = uniqueValidRowKeys(sort).map(function(key){ return {key:key}; });
   } catch(e) {}
   return def;
 }
 function saveState() {
-  document.cookie = COOKIE + '=' + encodeURIComponent(JSON.stringify({cols:colOrder, rows:rowOrder})) + ';path=/;max-age=31536000';
+  document.cookie = COOKIE + '=' + encodeURIComponent(JSON.stringify({cols:colOrder, rows:rowOrder, hidden:Array.from(hidden), sort:rowSort.map(function(s){return s.key;})})) + ';path=/;max-age=31536000';
+  syncUrlState();
+}
+function syncUrlState() {
+  try {
+    var url = new URL(window.location.href);
+    var params = url.searchParams;
+    var def = defaultState();
+    var hiddenList = Array.from(hidden).sort(function(a,b){return a-b});
+    var sortKeys = rowSort.map(function(s){ return s.key; });
+    var specs = [
+      ['cols', !sameArray(colOrder, def.cols), colOrder.map(agentSlug)],
+      ['rows', !sameArray(rowOrder, def.rows), rowOrder],
+      ['hide', hiddenList.length > 0, hiddenList.map(agentSlug)],
+      ['sort', sortKeys.length > 0, sortKeys]
+    ];
+    specs.forEach(function(spec) {
+      if (spec[1]) params.set(spec[0], compactList(spec[2]));
+      else params.delete(spec[0]);
+    });
+    var next = url.pathname + (params.toString() ? '?' + params.toString() : '') + url.hash;
+    if (next !== window.location.pathname + window.location.search + window.location.hash) {
+      window.history.replaceState(null, '', next);
+    }
+  } catch(e) {}
 }
 function esc(v) { return String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
 function rowLabelCell(label, extraClass, extraAttrs) {
@@ -641,12 +732,13 @@ function renderBody() {
   setupRowDrag();
   setupCellTips();
 }
-function toggleCol(i) { hidden.has(i)?hidden.delete(i):hidden.add(i); renderHeader(); renderBody(); updateColWidths(); scheduleFitAgentHeaderNames(); }
+function toggleCol(i) { hidden.has(i)?hidden.delete(i):hidden.add(i); saveState(); renderHeader(); renderBody(); updateColWidths(); scheduleFitAgentHeaderNames(); }
 function cycleSort(key) {
   if (DATE_SORT_ROWS.has(key)) return;
   var idx = rowSort.findIndex(function(s){ return s.key === key; });
   if (idx !== -1) rowSort.splice(idx, 1);
   else rowSort.push({key:key});
+  saveState();
   renderHeader();
   renderBody();
   updateColWidths();
@@ -730,8 +822,9 @@ function setupCellTips() {
     tip.addEventListener('click', function(e){ e.stopPropagation(); });
   });
 }
-var state = loadState(); colOrder = state.cols; rowOrder = state.rows;
+var state = loadState(); colOrder = state.cols; rowOrder = state.rows; hidden = new Set(state.hidden || []); rowSort = state.sort || [];
 renderHeader(); renderBody();
+syncUrlState();
 window.addEventListener('resize', function(){ updateColWidths(); scheduleFitAgentHeaderNames(); });
 </script>
 ${pwaScript()}
@@ -785,6 +878,17 @@ function renderSitemap() {
 </urlset>`;
 }
 
+function deploymentInfo(env) {
+  const version = env.CF_VERSION_METADATA || {};
+  return JSON.stringify({
+    service: "agent-launch-matrix",
+    git_commit: version.tag || "",
+    worker_version_id: version.id || "",
+    worker_version_timestamp: version.timestamp || null,
+    matrix_updated_at: updatedMeta.updated_at || "",
+  }, null, 2);
+}
+
 const bundleJson = JSON.stringify(matrix, null, 2);
 
 export default {
@@ -799,6 +903,7 @@ export default {
     if (url.pathname === "/llms.txt") return new Response(llmsTxt, {headers: {"content-type":"text/plain; charset=utf-8","cache-control":"public, max-age=300"}});
     if (url.pathname === "/robots.txt") return new Response(renderRobots(), {headers: {"content-type":"text/plain; charset=utf-8","cache-control":"public, max-age=86400"}});
     if (url.pathname === "/sitemap.xml") return new Response(renderSitemap(), {headers: {"content-type":"application/xml; charset=utf-8","cache-control":"public, max-age=3600"}});
+    if (url.pathname === "/deployment-info" || url.pathname === "/api/deployment-info") return new Response(deploymentInfo(env), {headers: {"content-type":"application/json; charset=utf-8","cache-control":"no-cache","access-control-allow-origin":"*"}});
     if (url.pathname === "/bundle.json") return new Response(bundleJson, {headers: {"content-type":"application/json; charset=utf-8","cache-control":"public, max-age=300","access-control-allow-origin":"*"}});
     return new Response(render(), {headers: {"content-type":"text/html; charset=utf-8","cache-control":"public, max-age=300"}});
   },

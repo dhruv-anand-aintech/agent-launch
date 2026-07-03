@@ -61,6 +61,11 @@
     "source_url": "https://aider.chat/docs/usage/modes.html#architect-mode-and-the-editor-model:~:text=Architect%20mode%20and%20the%20editor%20model",
     "comment": "Architect/Editor mode uses two models but no general subagent delegation system. No spawning of independent worker agents."
   },
+  "monitor": {
+    "support": "none",
+    "source_url": "https://aider.chat/docs/usage/modes.html#architect-mode-and-the-editor-model:~:text=Architect%20mode%20and%20the%20editor%20model",
+    "comment": "No first-class background monitor/watch primitive found in reviewed docs. Aider has non-interactive one-shot execution and optional commands like --test/--lint, but no Monitor-equivalent for waiting on spawned jobs or event streams."
+  },
   "model_selection": {
     "support": "full",
     "source_url": "https://aider.chat/docs/config/options.html#--model-model:~:text=--model%20MODEL%0ASpecify%20the%20model%20to%20use%20for%20the%20main%20chat",
