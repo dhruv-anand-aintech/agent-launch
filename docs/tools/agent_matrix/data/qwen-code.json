@@ -128,6 +128,11 @@
     "source_url": "https://github.com/QwenLM/qwen-code#acknowledgments:~:text=Apache-2.0%20license",
     "comment": "Tool is free and open-source (Apache 2.0). Model costs: BYO API key (provider pricing), Alibaba Cloud Coding Plan (fixed monthly), or local models (free)."
   },
+  "first_party_coding_model_plans": {
+    "value": "None documented in current matrix source; free open-source CLI, BYOK/local/provider costs",
+    "source_url": "https://github.com/QwenLM/qwen-code#acknowledgments:~:text=Apache-2.0%20license",
+    "comment": "No native first-party model subscription is documented for this surface in the current matrix source; model usage is BYOK, local, or provider-billed."
+  },
   "hosted_agent": {
     "support": "partial",
     "source_url": "https://github.com/QwenLM/qwen-code#usage:~:text=As%20an%20open-source%20terminal%20agent",

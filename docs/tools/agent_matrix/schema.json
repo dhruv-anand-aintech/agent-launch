@@ -21,6 +21,7 @@
     "released_in": {"allOf": [{"$ref": "#/$defs/stringWithSource"}], "$comment": "About | Released | First public release month and year for this surface."},
     "latest_major_update": {"allOf": [{"$ref": "#/$defs/stringWithSource"}], "$comment": "About | Latest Major Update | Most recent major public update captured in this dataset."},
     "pricing": {"allOf": [{"$ref": "#/$defs/stringWithSource"}], "$comment": "About | Pricing | Pricing source."},
+    "first_party_coding_model_plans": {"allOf": [{"$ref": "#/$defs/stringWithSource"}], "$comment": "About | Model Plan Pricing | Pricing for native first-party coding/model access plans, or BYOK/local-only status when no first-party plan is sold."},
     "some_free_usage": {"allOf": [{"$ref": "#/$defs/featureWithSource"}], "$comment": "Access | Some Free Usage | Has a documented free tier, free mode, free included usage, or local/free-model path for agent work."},
     "no_account_required": {"allOf": [{"$ref": "#/$defs/featureWithSource"}], "$comment": "Access | No Account Required | Can be used for agent work without signing into the product/vendor account, typically via local models."},
     "can_use_other_subscriptions": {"allOf": [{"$ref": "#/$defs/featureWithSource"}], "$comment": "Access | Can Use Other Subscriptions | Can route agent usage through another subscription, provider account, API key, or local inference backend."},

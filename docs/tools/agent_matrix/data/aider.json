@@ -122,6 +122,11 @@
     "source_url": "https://github.com/Aider-AI/aider#source:~:text=License-Apache-2.0",
     "comment": "Free and open source under Apache 2.0. Users pay only for LLM API usage through their own API keys."
   },
+  "first_party_coding_model_plans": {
+    "value": "None; BYOK/provider pricing only",
+    "source_url": "https://github.com/Aider-AI/aider#source:~:text=License-Apache-2.0",
+    "comment": "No native first-party model subscription is documented for this surface in the current matrix source; model usage is BYOK, local, or provider-billed."
+  },
   "some_free_usage": {
     "support": "full",
     "source_url": "https://aider.chat/docs/llms.html#free-models:~:text=Aider%20works%20with%20a%20number%20of%20free%20API%20providers",

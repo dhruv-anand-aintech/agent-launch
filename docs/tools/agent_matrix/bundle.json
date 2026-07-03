@@ -125,6 +125,11 @@
       "source_url": "https://github.com/Aider-AI/aider#source:~:text=License-Apache-2.0",
       "comment": "Free and open source under Apache 2.0. Users pay only for LLM API usage through their own API keys."
     },
+    "first_party_coding_model_plans": {
+      "value": "None; BYOK/provider pricing only",
+      "source_url": "https://github.com/Aider-AI/aider#source:~:text=License-Apache-2.0",
+      "comment": "No native first-party model subscription is documented for this surface in the current matrix source; model usage is BYOK, local, or provider-billed."
+    },
     "some_free_usage": {
       "support": "full",
       "source_url": "https://aider.chat/docs/llms.html#free-models:~:text=Aider%20works%20with%20a%20number%20of%20free%20API%20providers",
@@ -378,6 +383,11 @@
       "source_url": "https://aws.amazon.com/q/developer/pricing/#source:~:text=Pro%20tier",
       "comment": "Perpetual Free Tier (Builder ID or IAM) with monthly agentic-request limits; Pro tier is $19/user/month with higher limits and enterprise admin controls. New Free Tier/Pro signups are blocked starting May 15, 2026 as part of the Kiro CLI migration."
     },
+    "first_party_coding_model_plans": {
+      "value": "Free tier; Pro $19/user/mo",
+      "source_url": "https://aws.amazon.com/q/developer/pricing/#source:~:text=Pro%20tier",
+      "comment": "Pricing for native first-party coding/model access, using the product pricing source already tracked by this matrix."
+    },
     "some_free_usage": {
       "support": "full",
       "source_url": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/q-tiers.html#source:~:text=Free%20Tier",
@@ -527,6 +537,11 @@
       "value": "Usage-based with free tier",
       "source_url": "https://ampcode.com/manual#pricing:~:text=Amp%20charges%20you%20based%20on%20your%20actual%20usage%20of%20LLMs",
       "comment": "Usage-based: pay-as-you-go with zero markup on API costs for individuals. Minimum $5 credit purchase. Free mode (ad-supported, no longer shows ads). Enterprise: 50% markup + $1,000 one-time fee."
+    },
+    "first_party_coding_model_plans": {
+      "value": "Usage-based Amp LLM charges; free tier",
+      "source_url": "https://ampcode.com/manual#pricing:~:text=Amp%20charges%20you%20based%20on%20your%20actual%20usage%20of%20LLMs",
+      "comment": "Pricing for native first-party coding/model access, using the product pricing source already tracked by this matrix."
     },
     "some_free_usage": {
       "support": "full",
@@ -716,6 +731,11 @@
       "value": "Free (generous weekly rate limits), Google AI Pro/Ultra (undisclosed), Organization (consumption-based via Google Cloud)",
       "source_url": "https://antigravity.google/pricing#for-individuals-0month:~:text=For%20Individuals",
       "comment": "Free tier includes Gemini 3.5 Flash, 3.1 Pro, 3 Flash, Claude Sonnet & Opus 4.6, gpt-oss-120b. Pro/Ultra tiers offer more generous rate limits."
+    },
+    "first_party_coding_model_plans": {
+      "value": "Free individual plan; Google AI Pro/Ultra; organization consumption-based",
+      "source_url": "https://antigravity.google/pricing#for-individuals-0month:~:text=For%20Individuals",
+      "comment": "Pricing for native first-party coding/model access, using the product pricing source already tracked by this matrix."
     },
     "some_free_usage": {
       "support": "full",
@@ -912,6 +932,11 @@
       "source_url": "https://www.anthropic.com/pricing#claude-code:~:text=Claude%20Code",
       "comment": "Claude Code is included in all subscription plans (Pro, Max, Team, Enterprise). Also available via API at standard token rates."
     },
+    "first_party_coding_model_plans": {
+      "value": "Claude Pro/Max/Team/Enterprise include Claude Code; API token pricing also applies",
+      "source_url": "https://www.anthropic.com/pricing#claude-code:~:text=Claude%20Code",
+      "comment": "Pricing for native first-party coding/model access, using the product pricing source already tracked by this matrix."
+    },
     "hosted_agent": {
       "support": "partial",
       "source_url": "https://docs.anthropic.com/en/docs/claude-code/overview#use-claude-code:~:text=Claude%20Code",
@@ -1097,6 +1122,11 @@
       "value": "Free (Apache-2.0), Enterprise custom pricing",
       "source_url": "https://cline.bot/pricing#simple-transparent-pricing:~:text=Cline%20is%20free%20for%20individual%20developers.%20Pay%20only%20for%20AI%20inference%20on%20a%20usage%20basis",
       "comment": "Open source: free for individual developers. Pay only for AI inference. Enterprise: custom pricing with SSO/OIDC/SCIM, RBAC."
+    },
+    "first_party_coding_model_plans": {
+      "value": "Free for individual developers; enterprise custom pricing; AI inference billed separately",
+      "source_url": "https://cline.bot/pricing#simple-transparent-pricing:~:text=Cline%20is%20free%20for%20individual%20developers.%20Pay%20only%20for%20AI%20inference%20on%20a%20usage%20basis",
+      "comment": "Pricing for native first-party coding/model access, using the product pricing source already tracked by this matrix."
     },
     "some_free_usage": {
       "support": "full",
@@ -1303,6 +1333,11 @@
       "source_url": "https://developers.openai.com/codex/pricing#source:~:text=Codex%20is%20included%20in%20your%20ChatGPT%20Free%2C%20Go%2C%20Plus%2C%20Pro%2C%20Business%2C%20Edu%2C%20or%20Enterprise%20plan",
       "comment": "Free tier has limited Codex access. Plus ($20/mo) includes 15-350 local messages/5h. Pro $100/mo at 5x limits ($200/mo at 20x). Business at pay-as-you-go token credits. API key at per-token pricing."
     },
+    "first_party_coding_model_plans": {
+      "value": "Free $0; Go $8/mo; Plus $20/mo; Pro from $100/mo; Business $20/user/mo annually ($25 monthly); Enterprise/Edu custom; API token billing",
+      "source_url": "https://developers.openai.com/codex/pricing#source:~:text=Codex%20is%20included%20in%20your%20ChatGPT%20Free%2C%20Go%2C%20Plus%2C%20Pro%2C%20Business%2C%20Edu%2C%20or%20Enterprise%20plan",
+      "comment": "Pricing for native first-party coding/model access, using the product pricing source already tracked by this matrix."
+    },
     "some_free_usage": {
       "support": "full",
       "source_url": "https://chatgpt.com/codex/pricing/#pricing:~:text=Codex%20is%20included%20in%20your%20ChatGPT%20Free",
@@ -1500,6 +1535,11 @@
       "value": "Enterprise/demo-based",
       "source_url": "https://cohere.com/north#empower-your-workforce-with-ai-agents-that-operate-in-lockstep-with-your-people-data-and-tools:~:text=Request%20a%20demo",
       "comment": "North is sold through demo/sales motion."
+    },
+    "first_party_coding_model_plans": {
+      "value": "Enterprise/demo-based",
+      "source_url": "https://cohere.com/north#empower-your-workforce-with-ai-agents-that-operate-in-lockstep-with-your-people-data-and-tools:~:text=Request%20a%20demo",
+      "comment": "Pricing for native first-party coding/model access, using the product pricing source already tracked by this matrix."
     },
     "notes": "Included because the request mentioned Cohere. This is an enterprise agent platform with coding-capable Command A+ underneath, not a direct Claude Code/Codex-style coding agent.",
     "transcripts": {
@@ -1736,6 +1776,11 @@
       "source_url": "https://github.com/charmbracelet/crush#source:~:text=FSL-1.1-MIT",
       "comment": "Free and source-available under the Functional Source License (converts to MIT after 2 years per version). Users pay only for their own LLM provider usage; some providers offer Crush-specific coding plans (GLM Coding Plan, Kimi Code, MiniMax Coding Plan)."
     },
+    "first_party_coding_model_plans": {
+      "value": "None; BYOK/local/provider pricing only",
+      "source_url": "https://github.com/charmbracelet/crush#source:~:text=FSL-1.1-MIT",
+      "comment": "No native first-party model subscription is documented for this surface in the current matrix source; model usage is BYOK, local, or provider-billed."
+    },
     "some_free_usage": {
       "support": "full",
       "source_url": "https://github.com/charmbracelet/crush#source:~:text=local%20models%20(Ollama%2C%20LMStudio%2C%20OMLX%2C%20LiteLLM)",
@@ -1888,6 +1933,11 @@
       "value": "Pro $20, Pro+ $60, Ultra $200/mo",
       "source_url": "https://cursor.com/help/models-and-usage/usage-limits#how-much-usage-does-each-plan-include:~:text=Pro%20Plus",
       "comment": "Individual: Pro $20/mo ($20 API usage), Pro+ $60/mo ($70 API usage), Ultra $200/mo ($400 API usage). Teams $40/user/mo."
+    },
+    "first_party_coding_model_plans": {
+      "value": "Hobby Free; Pro $20/mo; Pro+ $60/mo; Ultra $200/mo; Teams/Enterprise plans",
+      "source_url": "https://cursor.com/help/models-and-usage/usage-limits#how-much-usage-does-each-plan-include:~:text=Pro%20Plus",
+      "comment": "Pricing for native first-party coding/model access, using the product pricing source already tracked by this matrix."
     },
     "some_free_usage": {
       "support": "full",
@@ -2076,6 +2126,11 @@
       "value": "Free, Pro $20/mo, Max $200/mo, Teams $80+/mo",
       "source_url": "https://devin.ai/pricing#source:~:text=Free%3AFree%2CPro%3A%2420%2Fmonth%2CMax%3A%24200%2Fmonth%2CTeams%3A%2480%2Fmonth",
       "comment": "Free (limited), Pro ($20/mo), Max ($200/mo), Teams ($80/mo minimum). Enterprise: custom pricing with VPC, SAML/OIDC. ACU-based consumption model."
+    },
+    "first_party_coding_model_plans": {
+      "value": "Free; Pro $20/mo; Max $200/mo; Teams $80+/mo",
+      "source_url": "https://devin.ai/pricing#source:~:text=Free%3AFree%2CPro%3A%2420%2Fmonth%2CMax%3A%24200%2Fmonth%2CTeams%3A%2480%2Fmonth",
+      "comment": "Pricing for native first-party coding/model access, using the product pricing source already tracked by this matrix."
     },
     "some_free_usage": {
       "support": "full",
@@ -2272,6 +2327,11 @@
       "source_url": "https://docs.factory.ai/reference/cli-reference#source:~:text=Plans%20%26%20Pricing",
       "comment": "CLI docs route to Factory plans and pricing."
     },
+    "first_party_coding_model_plans": {
+      "value": "Factory subscription/usage plans; CLI docs route to Factory pricing",
+      "source_url": "https://docs.factory.ai/reference/cli-reference#source:~:text=Plans%20%26%20Pricing",
+      "comment": "Pricing for native first-party coding/model access, using the product pricing source already tracked by this matrix."
+    },
     "no_account_required": {
       "support": "partial",
       "source_url": "https://docs.factory.ai/cli/byok/overview#bring-your-own-key-byok:~:text=run%20models%20locally%20on%20your%20hardware",
@@ -2460,6 +2520,11 @@
       "value": "Free (Apache-2.0), Gemini API usage billed separately",
       "source_url": "https://ai.google.dev/gemini-api/docs/pricing#enterprise:~:text=Gemini%20API",
       "comment": "Gemini CLI is open source (Apache-2.0). API usage billed through Google AI Studio or Vertex AI."
+    },
+    "first_party_coding_model_plans": {
+      "value": "Gemini API usage pricing; Gemini CLI itself is free/open-source",
+      "source_url": "https://ai.google.dev/gemini-api/docs/pricing#enterprise:~:text=Gemini%20API",
+      "comment": "Pricing for native first-party coding/model access, using the product pricing source already tracked by this matrix."
     },
     "some_free_usage": {
       "support": "full",
@@ -2708,6 +2773,11 @@
       "source_url": "https://docs.github.com/en/copilot/concepts/billing/copilot-requests#source:~:text=Copilot%20CLI",
       "comment": "Consumes GitHub AI Credits/premium requests against existing Copilot plan; usage-based billing for all plans started June 1, 2026, replacing the old premium-request counter. No CLI-specific surcharge."
     },
+    "first_party_coding_model_plans": {
+      "value": "Copilot Free/Student/Pro/Pro+/Max/Business/Enterprise include Copilot CLI; paid plans from $10/mo to $39/seat/mo; Max $100/mo",
+      "source_url": "https://docs.github.com/en/copilot/concepts/billing/copilot-requests#source:~:text=Copilot%20CLI",
+      "comment": "Pricing for native first-party coding/model access, using the product pricing source already tracked by this matrix."
+    },
     "some_free_usage": {
       "support": "partial",
       "source_url": "https://pecollective.com/tools/github-copilot-pricing/#source:~:text=Free",
@@ -2857,6 +2927,11 @@
       "value": "Free $0, Pro $10/mo, Pro+ $39/mo, Max $100/mo, Business $19/user/mo, Enterprise $39/user/mo",
       "source_url": "https://docs.github.com/en/copilot/get-started/plans#pricing:~:text=Copilot%20Free%20Copilot%20Student%20Copilot%20Pro%20Copilot%20Pro%2BCopilot%20Max%20Copilot%20Business%20Copilot%20Enterprise",
       "comment": "Current plans use GitHub AI Credits allowances. Pro is $10/mo, Pro+ $39/mo, Max $100/mo, Business $19/seat/mo, Enterprise $39/seat/mo; usage beyond included credits is billed under usage-based billing, while legacy premium-request billing remains only for qualifying annual Pro/Pro+ subscribers."
+    },
+    "first_party_coding_model_plans": {
+      "value": "Copilot Free/Student/Pro $10/mo/Pro+ $39/mo/Max $100/mo/Business $19/seat/mo/Enterprise $39/seat/mo",
+      "source_url": "https://docs.github.com/en/copilot/get-started/plans#pricing:~:text=Copilot%20Free%20Copilot%20Student%20Copilot%20Pro%20Copilot%20Pro%2BCopilot%20Max%20Copilot%20Business%20Copilot%20Enterprise",
+      "comment": "Pricing for native first-party coding/model access, using the product pricing source already tracked by this matrix."
     },
     "hosted_agent": {
       "support": "full",
@@ -3097,6 +3172,11 @@
       "source_url": "https://github.com/block/goose#source:~:text=License-Apache-2.0",
       "comment": "Goose itself is free and open source under Apache-2.0 with no subscription or usage cap; users pay only for whichever LLM provider API they connect (or use free local Ollama models)."
     },
+    "first_party_coding_model_plans": {
+      "value": "None; BYOK/local/provider pricing only",
+      "source_url": "https://github.com/block/goose#source:~:text=License-Apache-2.0",
+      "comment": "No native first-party model subscription is documented for this surface in the current matrix source; model usage is BYOK, local, or provider-billed."
+    },
     "some_free_usage": {
       "support": "full",
       "source_url": "https://goose-docs.ai/docs/getting-started/installation#source:~:text=Google%20Gemini%20offers%20a%20free%20tier",
@@ -3242,6 +3322,11 @@
       "value": "Included for SuperGrok and X Premium Plus subscribers during beta",
       "source_url": "https://x.ai/news/grok-build-cli#introducing-grok-build:~:text=Available%20now%20to%20all%20SuperGrok%20and%20X%20Premium%20Plus%20subscribers",
       "comment": "Early beta access is tied to paid xAI/X subscriptions."
+    },
+    "first_party_coding_model_plans": {
+      "value": "Included for SuperGrok and X Premium Plus subscribers during beta",
+      "source_url": "https://x.ai/news/grok-build-cli#introducing-grok-build:~:text=Available%20now%20to%20all%20SuperGrok%20and%20X%20Premium%20Plus%20subscribers",
+      "comment": "Pricing for native first-party coding/model access, using the product pricing source already tracked by this matrix."
     },
     "notes": "Early beta. Strong documented parity on AGENTS.md, skills, hooks, MCP, headless mode, ACP, and parallel subagents; lower confidence for session management and telemetry because public docs are still sparse.",
     "transcripts": {
@@ -3424,6 +3509,11 @@
       "value": "Free 15 tasks/day; Pro 100 tasks/day; Ultra 300 tasks/day",
       "source_url": "https://jules.google/#source:~:text=15%20tasks%20per%20day",
       "comment": "Site lists daily task and concurrency limits by tier."
+    },
+    "first_party_coding_model_plans": {
+      "value": "Free 15 tasks/day; Pro 100 tasks/day; Ultra 300 tasks/day",
+      "source_url": "https://jules.google/#source:~:text=15%20tasks%20per%20day",
+      "comment": "Pricing for native first-party coding/model access, using the product pricing source already tracked by this matrix."
     },
     "notes": "Best categorized as an async hosted coding worker rather than a terminal pair-programmer. Strong on GitHub PR flow, approvals, Cloud VM isolation, and concurrency.",
     "transcripts": {
@@ -3615,6 +3705,11 @@
       "source_url": "https://blog.jetbrains.com/blog/2025/04/16/jetbrains-ides-go-ai/#all-jetbrains-ai-tools-under-a-single-subscription-with-a-free-tier:~:text=AI%20Free%20tier",
       "comment": "Junie is included in JetBrains AI subscription/free-tier credit model."
     },
+    "first_party_coding_model_plans": {
+      "value": "JetBrains AI free tier/credits and paid AI tiers",
+      "source_url": "https://blog.jetbrains.com/blog/2025/04/16/jetbrains-ides-go-ai/#all-jetbrains-ai-tools-under-a-single-subscription-with-a-free-tier:~:text=AI%20Free%20tier",
+      "comment": "Pricing for native first-party coding/model access, using the product pricing source already tracked by this matrix."
+    },
     "notes": "Strong fit for JetBrains users, debugger-aware workflows, CLI/headless CI, and JetBrains IDE integration. June 2026 docs now expose extensibility details for guidelines, extensions, MCP, subagents, commands, hooks, BYOK/custom models, and CI/CD.",
     "transcripts": {
       "support": "full",
@@ -3697,7 +3792,7 @@
       "value": "Jul '26",
       "source_url": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.3.54#source:~:text=No%20notable%20changes",
       "comment": "Latest release checked: v7.3.54 (June 23, 2026). Release notes say no notable changes.",
-      "sort_date": "2026-07-02"
+      "sort_date": "2026-07-03"
     },
     "rules": {
       "support": "full",
@@ -3794,6 +3889,11 @@
       "value": "Free (MIT), Kilo Pass $19-199/mo, Teams $15/user/mo",
       "source_url": "https://kilo.ai/pricing#simple-transparent-pricing:~:text=Simple%2C%20transparent%20pricing",
       "comment": "App is free & MIT. Kilo Pass (Starter $19/mo, Pro $49/mo, Expert $199/mo). BYOK (no markup). Free models. Teams: $15/user/mo."
+    },
+    "first_party_coding_model_plans": {
+      "value": "Kilo Pass $19-$199/mo; Teams $15/user/mo",
+      "source_url": "https://kilo.ai/pricing#simple-transparent-pricing:~:text=Simple%2C%20transparent%20pricing",
+      "comment": "Pricing for native first-party coding/model access, using the product pricing source already tracked by this matrix."
     },
     "some_free_usage": {
       "support": "full",
@@ -3996,6 +4096,11 @@
       "source_url": "https://www.kimi.com/help/kimi-code/benefits#billing:~:text=included%20in%20your%20subscription%20fee",
       "comment": "Kimi Code platform via membership subscription (credits-based, 7-day refresh cycle) or pay-as-you-go via api.moonshot.cn. Also supports own API key from OpenAI/Anthropic/Gemini."
     },
+    "first_party_coding_model_plans": {
+      "value": "Kimi membership credits or BYOK",
+      "source_url": "https://www.kimi.com/help/kimi-code/benefits#billing:~:text=included%20in%20your%20subscription%20fee",
+      "comment": "Pricing for native first-party coding/model access, using the product pricing source already tracked by this matrix."
+    },
     "hosted_agent": {
       "support": "none",
       "source_url": "https://www.kimi.com/code/docs/en/kimi-code-cli/getting-started.html#what-is-kimi-code-cli:~:text=Kimi%20Code%20CLI%20is%20an%20AI%20agent%20that%20runs%20in%20the%20terminal",
@@ -4186,6 +4291,11 @@
       "source_url": "https://kiro.dev/cli/#source:~:text=No.%20Kiro%20CLI%20pricing%20is%20included%20in%20the%20standard%20Kiro%20%5Bpricing%20tiers%5D(%2Fpricing%2F).",
       "comment": "CLI and IDE share Kiro subscription pricing."
     },
+    "first_party_coding_model_plans": {
+      "value": "Included in Kiro pricing tiers",
+      "source_url": "https://kiro.dev/cli/#source:~:text=No.%20Kiro%20CLI%20pricing%20is%20included%20in%20the%20standard%20Kiro%20%5Bpricing%20tiers%5D(%2Fpricing%2F).",
+      "comment": "Pricing for native first-party coding/model access, using the product pricing source already tracked by this matrix."
+    },
     "some_free_usage": {
       "support": "full",
       "source_url": "https://kiro.dev/docs/billing/#billing-for-individuals:~:text=perpetual%20Kiro%20Free%20tier",
@@ -4275,7 +4385,7 @@
       "value": "Jul '26",
       "source_url": "https://github.com/XiaomiMiMo/MiMo-Code/releases/tag/v0.1.4#v014:~:text=MiMoCode%20v0.1.4",
       "comment": "Latest public release captured for this row is v0.1.4 on 2026-06-29.",
-      "sort_date": "2026-07-02"
+      "sort_date": "2026-07-03"
     },
     "rules": {
       "support": "full",
@@ -4372,6 +4482,11 @@
       "value": "Free open source; hosted MiMo services optional",
       "source_url": "https://github.com/XiaomiMiMo/MiMo-Code#license:~:text=Source%20code%20is%20licensed%20under%20the%20MIT%20License",
       "comment": "Source code is MIT-licensed. README says MiMo Auto is free for a limited time and hosted services are subject to Xiaomi MiMo terms."
+    },
+    "first_party_coding_model_plans": {
+      "value": "None documented in current matrix source; free open-source CLI, hosted MiMo services optional",
+      "source_url": "https://github.com/XiaomiMiMo/MiMo-Code#license:~:text=Source%20code%20is%20licensed%20under%20the%20MIT%20License",
+      "comment": "No native first-party model subscription is documented for this surface in the current matrix source; model usage is BYOK, local, or provider-billed."
     },
     "some_free_usage": {
       "support": "full",
@@ -4575,6 +4690,11 @@
       "value": "Free (MIT, BYOK), Go $10/mo (first month $5), Zen pay-per-token (min $20), Enterprise per-seat",
       "source_url": "https://opencode.ai/docs/zen/#pricing:~:text=Pricing",
       "comment": "Free tier: bring your own API key + limited free models. Go ($10/mo): curated open-source models with usage caps. Zen: pay-per-token access to all models (min $20 top-up). Enterprise: per-seat custom pricing."
+    },
+    "first_party_coding_model_plans": {
+      "value": "Go $10/mo; Zen pay-per-token (min $20); Enterprise per-seat; BYOK free",
+      "source_url": "https://opencode.ai/docs/zen/#pricing:~:text=Pricing",
+      "comment": "Pricing for native first-party coding/model access, using the product pricing source already tracked by this matrix."
     },
     "some_free_usage": {
       "support": "full",
@@ -4836,6 +4956,11 @@
       "source_url": "https://www.openhands.dev/pricing#source:~:text=Free%2C%20local%20OpenHands%20for%20getting%20started",
       "comment": "Self-hosted/local CLI is free and open source (MIT license) other than your own LLM API costs. OpenHands Cloud Individual tier is free to sign up with a cap (10 max daily conversations) and offers at-cost LLM usage with no markup if you don't bring your own key. Enterprise (SaaS or self-hosted VPC) is custom-priced."
     },
+    "first_party_coding_model_plans": {
+      "value": "OpenHands Cloud free tier + at-cost provider usage; Enterprise custom; local free/BYOK",
+      "source_url": "https://www.openhands.dev/pricing#source:~:text=Free%2C%20local%20OpenHands%20for%20getting%20started",
+      "comment": "Pricing for native first-party coding/model access, using the product pricing source already tracked by this matrix."
+    },
     "some_free_usage": {
       "support": "full",
       "source_url": "https://www.openhands.dev/pricing#source:~:text=Bring%20your%20own%20key%20or%20use%20our%20providers%20at-cost",
@@ -4882,7 +5007,7 @@
       "value": "Jul '26",
       "source_url": "https://github.com/earendil-works/pi/releases/tag/v0.80.3#source:~:text=Anthropic%20Claude%20Sonnet%205%20support",
       "comment": "Latest release v0.80.3 (June 30, 2026) adds Anthropic Claude Sonnet 5 support through inherited Anthropic-compatible and Bedrock provider catalogs with adaptive thinking enabled.",
-      "sort_date": "2026-07-02"
+      "sort_date": "2026-07-03"
     },
     "rules": {
       "support": "full",
@@ -4979,6 +5104,11 @@
       "value": "Free (MIT)",
       "source_url": "https://github.com/earendil-works/pi/blob/main/packages/coding-agent/package.json#license:~:text=license",
       "comment": "Repository is MIT-licensed and distributed as npm package `@earendil-works/pi-coding-agent`; there is no separate paid subscription model documented in public docs."
+    },
+    "first_party_coding_model_plans": {
+      "value": "None; free open-source/local/BYOK",
+      "source_url": "https://github.com/earendil-works/pi/blob/main/packages/coding-agent/package.json#license:~:text=license",
+      "comment": "No native first-party model subscription is documented for this surface in the current matrix source; model usage is BYOK, local, or provider-billed."
     },
     "no_account_required": {
       "support": "full",
@@ -5178,6 +5308,11 @@
       "source_url": "https://github.com/QwenLM/qwen-code#acknowledgments:~:text=Apache-2.0%20license",
       "comment": "Tool is free and open-source (Apache 2.0). Model costs: BYO API key (provider pricing), Alibaba Cloud Coding Plan (fixed monthly), or local models (free)."
     },
+    "first_party_coding_model_plans": {
+      "value": "None documented in current matrix source; free open-source CLI, BYOK/local/provider costs",
+      "source_url": "https://github.com/QwenLM/qwen-code#acknowledgments:~:text=Apache-2.0%20license",
+      "comment": "No native first-party model subscription is documented for this surface in the current matrix source; model usage is BYOK, local, or provider-billed."
+    },
     "hosted_agent": {
       "support": "partial",
       "source_url": "https://github.com/QwenLM/qwen-code#usage:~:text=As%20an%20open-source%20terminal%20agent",
@@ -5364,6 +5499,11 @@
       "source_url": "https://replit.com/pricing#source:~:text=Agent",
       "comment": "Replit pricing and Agent limits vary by plan."
     },
+    "first_party_coding_model_plans": {
+      "value": "Included in Replit plan/usage model",
+      "source_url": "https://replit.com/pricing#source:~:text=Agent",
+      "comment": "Pricing for native first-party coding/model access, using the product pricing source already tracked by this matrix."
+    },
     "notes": "Best for hosted app prototyping/build-deploy workflows, not for local repo terminal automation.",
     "transcripts": {
       "support": "partial",
@@ -5541,6 +5681,11 @@
       "value": "Free (Apache-2.0)",
       "source_url": "https://roocodeinc.github.io/Roo-Code/faq/#is-roo-code-free-to-use:~:text=The%20Roo%20Code%20extension%20is%20free%20and%20open%2Dsource",
       "comment": "Free and open-source (Apache 2.0). Users paid their own LLM provider API costs. Roo Code Router was a paid routing service. Now discontinued."
+    },
+    "first_party_coding_model_plans": {
+      "value": "None; free open-source extension, BYOK/provider costs",
+      "source_url": "https://roocodeinc.github.io/Roo-Code/faq/#is-roo-code-free-to-use:~:text=The%20Roo%20Code%20extension%20is%20free%20and%20open%2Dsource",
+      "comment": "No native first-party model subscription is documented for this surface in the current matrix source; model usage is BYOK, local, or provider-billed."
     },
     "hosted_agent": {
       "support": "none",
@@ -5722,6 +5867,11 @@
       "value": "Free (MIT), BYOK/provider costs",
       "source_url": "https://github.com/bytedance/trae-agent#license:~:text=MIT%20License",
       "comment": "Trae Agent is MIT-licensed. Users provide provider API keys or local Ollama models."
+    },
+    "first_party_coding_model_plans": {
+      "value": "None; free open-source CLI, BYOK/provider costs",
+      "source_url": "https://github.com/bytedance/trae-agent#license:~:text=MIT%20License",
+      "comment": "No native first-party model subscription is documented for this surface in the current matrix source; model usage is BYOK, local, or provider-billed."
     },
     "some_free_usage": {
       "support": "full",
@@ -5925,6 +6075,11 @@
       "source_url": "https://windsurf.com/pricing#compare-plans:~:text=Compare%20Plans",
       "comment": "Free ($0): Unlimited autocomplete, 50 Cascade requests weekly. Pro ($20/mo): Standard daily usage + extra at API prices. Max ($200/mo): Heavy daily usage. Teams ($40/user/mo)."
     },
+    "first_party_coding_model_plans": {
+      "value": "Free $0; Pro $20/mo; Max $200/mo; Teams $40/user/mo",
+      "source_url": "https://windsurf.com/pricing#compare-plans:~:text=Compare%20Plans",
+      "comment": "Pricing for native first-party coding/model access, using the product pricing source already tracked by this matrix."
+    },
     "hosted_agent": {
       "support": "full",
       "source_url": "https://docs.windsurf.com/windsurf/devin#delegating-work-to-devin:~:text=Delegating%20Work%20to%20Devin",
@@ -6109,6 +6264,11 @@
       "value": "5-day free trial; GLM Coding Plan or API/provider billing",
       "source_url": "https://zcode.z.ai/en/docs#glm-52-and-exclusive-benefits:~:text=First-time%20ZCode%20users%20get%205%20days%20of%20free%20benefits",
       "comment": "First-time ZCode users get a 5-day free trial; GLM Coding Plan subscribers get limited-time ~1.5x quota in ZCode through July 31, 2026. Longer-term use depends on GLM Coding Plan/API/provider billing."
+    },
+    "first_party_coding_model_plans": {
+      "value": "5-day free trial; GLM Coding Plan or API/provider billing",
+      "source_url": "https://zcode.z.ai/en/docs#glm-52-and-exclusive-benefits:~:text=First-time%20ZCode%20users%20get%205%20days%20of%20free%20benefits",
+      "comment": "Pricing for native first-party coding/model access, using the product pricing source already tracked by this matrix."
     },
     "some_free_usage": {
       "support": "full",

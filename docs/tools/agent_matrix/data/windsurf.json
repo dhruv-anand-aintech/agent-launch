@@ -126,6 +126,11 @@
     "source_url": "https://windsurf.com/pricing#compare-plans:~:text=Compare%20Plans",
     "comment": "Free ($0): Unlimited autocomplete, 50 Cascade requests weekly. Pro ($20/mo): Standard daily usage + extra at API prices. Max ($200/mo): Heavy daily usage. Teams ($40/user/mo)."
   },
+  "first_party_coding_model_plans": {
+    "value": "Free $0; Pro $20/mo; Max $200/mo; Teams $40/user/mo",
+    "source_url": "https://windsurf.com/pricing#compare-plans:~:text=Compare%20Plans",
+    "comment": "Pricing for native first-party coding/model access, using the product pricing source already tracked by this matrix."
+  },
   "hosted_agent": {
     "support": "full",
     "source_url": "https://docs.windsurf.com/windsurf/devin#delegating-work-to-devin:~:text=Delegating%20Work%20to%20Devin",

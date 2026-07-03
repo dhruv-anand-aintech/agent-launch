@@ -125,6 +125,11 @@
     "source_url": "https://zcode.z.ai/en/docs#glm-52-and-exclusive-benefits:~:text=First-time%20ZCode%20users%20get%205%20days%20of%20free%20benefits",
     "comment": "First-time ZCode users get a 5-day free trial; GLM Coding Plan subscribers get limited-time ~1.5x quota in ZCode through July 31, 2026. Longer-term use depends on GLM Coding Plan/API/provider billing."
   },
+  "first_party_coding_model_plans": {
+    "value": "5-day free trial; GLM Coding Plan or API/provider billing",
+    "source_url": "https://zcode.z.ai/en/docs#glm-52-and-exclusive-benefits:~:text=First-time%20ZCode%20users%20get%205%20days%20of%20free%20benefits",
+    "comment": "Pricing for native first-party coding/model access, using the product pricing source already tracked by this matrix."
+  },
   "some_free_usage": {
     "support": "full",
     "source_url": "https://zcode.z.ai/en/docs#glm-52-and-exclusive-benefits:~:text=First-time%20ZCode%20users%20get%205%20days%20of%20free%20benefits",

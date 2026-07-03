@@ -126,6 +126,11 @@
     "source_url": "https://replit.com/pricing#source:~:text=Agent",
     "comment": "Replit pricing and Agent limits vary by plan."
   },
+  "first_party_coding_model_plans": {
+    "value": "Included in Replit plan/usage model",
+    "source_url": "https://replit.com/pricing#source:~:text=Agent",
+    "comment": "Pricing for native first-party coding/model access, using the product pricing source already tracked by this matrix."
+  },
   "notes": "Best for hosted app prototyping/build-deploy workflows, not for local repo terminal automation.",
   "transcripts": {
     "support": "partial",

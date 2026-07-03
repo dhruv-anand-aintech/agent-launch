@@ -123,6 +123,11 @@
     "source_url": "https://ai.google.dev/gemini-api/docs/pricing#enterprise:~:text=Gemini%20API",
     "comment": "Gemini CLI is open source (Apache-2.0). API usage billed through Google AI Studio or Vertex AI."
   },
+  "first_party_coding_model_plans": {
+    "value": "Gemini API usage pricing; Gemini CLI itself is free/open-source",
+    "source_url": "https://ai.google.dev/gemini-api/docs/pricing#enterprise:~:text=Gemini%20API",
+    "comment": "Pricing for native first-party coding/model access, using the product pricing source already tracked by this matrix."
+  },
   "some_free_usage": {
     "support": "full",
     "source_url": "https://github.com/google-gemini/gemini-cli#option-1-sign-in-with-google-oauth-login-using-your-google-account:~:text=Free%20tier%3A%2060%20requests%2Fmin",

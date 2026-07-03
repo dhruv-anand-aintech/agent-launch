@@ -130,6 +130,11 @@
     "source_url": "https://developers.openai.com/codex/pricing#source:~:text=Codex%20is%20included%20in%20your%20ChatGPT%20Free%2C%20Go%2C%20Plus%2C%20Pro%2C%20Business%2C%20Edu%2C%20or%20Enterprise%20plan",
     "comment": "Free tier has limited Codex access. Plus ($20/mo) includes 15-350 local messages/5h. Pro $100/mo at 5x limits ($200/mo at 20x). Business at pay-as-you-go token credits. API key at per-token pricing."
   },
+  "first_party_coding_model_plans": {
+    "value": "Free $0; Go $8/mo; Plus $20/mo; Pro from $100/mo; Business $20/user/mo annually ($25 monthly); Enterprise/Edu custom; API token billing",
+    "source_url": "https://developers.openai.com/codex/pricing#source:~:text=Codex%20is%20included%20in%20your%20ChatGPT%20Free%2C%20Go%2C%20Plus%2C%20Pro%2C%20Business%2C%20Edu%2C%20or%20Enterprise%20plan",
+    "comment": "Pricing for native first-party coding/model access, using the product pricing source already tracked by this matrix."
+  },
   "some_free_usage": {
     "support": "full",
     "source_url": "https://chatgpt.com/codex/pricing/#pricing:~:text=Codex%20is%20included%20in%20your%20ChatGPT%20Free",

@@ -74,6 +74,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Hosted Agent: none — Runs entirely locally via pip. No hosted agent platform.
 - Custom Model Provider: full — Connects to any LLM via litellm. Supports OpenAI, Anthropic, Gemini, DeepSeek, Ollama, OpenRouter, any OpenAI-compatible endpoint, and more.
 - Pricing: Free (Apache-2.0)
+- First-party coding model plans: None; BYOK/provider pricing only
 - Notes: Aider is a mature open-source CLI coding agent (45k+ stars) since June 2023. Deep git integration, repo mapping for codebase context, extensive LLM provider support through litellm. No published embed SDK (CLI/scripting only). Notable gaps vs newer agents: no MCP, no user-defined slash commands, no sandbox, no subagent delegation, no resume/continue flags, no structured output. Apache-2.0 licensed.
 
 ### Amazon Q Developer CLI
@@ -108,6 +109,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Hosted Agent: none — Runs as a local terminal process talking to the AWS-hosted backend for inference; there is no separate hosted/cloud agent execution platform for this CLI surface.
 - Custom Model Provider: none — Model choice is restricted to a fixed list of Claude models served via AWS's own Amazon Bedrock-backed Q Developer service; no support for arbitrary/OpenAI-compatible model endpoints or bring-your-own-API-key providers.
 - Pricing: Free tier + Pro $19/user/mo
+- First-party coding model plans: Free tier; Pro $19/user/mo
 - Notes: Amazon Q Developer CLI (`q chat`) is AWS's Rust-based, Bedrock-backed agentic terminal coding agent, launched as an enhanced agentic experience in March 2025. It requires AWS Builder ID or IAM Identity Center sign-in (no API-key-only or account-free path), supports MCP, lifecycle hooks, and per-project `.amazonq/rules/` markdown rules, but lacks AGENTS.md support, subagent delegation, sandboxing, and structured JSON chat output. As of mid-2026 the open-source repo is no longer actively maintained: AWS is sunsetting Amazon Q Developer in favor of the backward-compatible, closed-source Kiro CLI (same `q`/`q chat` entry points, configs auto-migrated to `~/.kiro/`), with new signups blocked from May 2026 and full IDE/subscription end-of-support by April 2027.
 
 ### Amp
@@ -140,6 +142,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Hosted Agent: none — CLI runs locally. Threads shared via web but no managed agent platform.
 - Custom Model Provider: partial — No BYOM for the main agent (picks models per mode from providers). MCP servers can connect to external tools, and Plugin API allows custom tool registration.
 - Pricing: Usage-based with free tier
+- First-party coding model plans: Usage-based Amp LLM charges; free tier
 - Notes: Amp is opinionated and aggressively removes features it considers obsolete (custom commands, slash commands, themes). Focuses on frontier models. Plugin API provides extensive extensibility for those who need it. Closed-source product; some auxiliary tools open source on GitHub.
 
 ### Antigravity
@@ -172,6 +175,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Hosted Agent: none — Local IDE and CLI surfaces.
 - Custom Model Provider: unknown — No arbitrary provider configuration found in public CLI help/docs.
 - Pricing: Free (generous weekly rate limits), Google AI Pro/Ultra (undisclosed), Organization (consumption-based via Google Cloud)
+- First-party coding model plans: Free individual plan; Google AI Pro/Ultra; organization consumption-based
 - Notes: Google Antigravity spans an agentic IDE and the agy CLI. Distinct from deprecated Gemini CLI. No published programmatic SDK.
 
 ### Claude Code
@@ -205,6 +209,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Hosted Agent: partial — CLI runs locally; managed/cloud-based session execution is not directly exposed as a distinct platform.
 - Custom Model Provider: partial — Supports Bedrock/Vertex and related integrations, not arbitrary providers in the same way as OpenAI-compatible CLIs.
 - Pricing: Included in Pro $20/mo, Max 5x $100/mo, Max 20x $200/mo, Team $25-125/seat/mo, Enterprise $20/seat + API rates
+- First-party coding model plans: Claude Pro/Max/Team/Enterprise include Claude Code; API token pricing also applies
 
 ### Cline
 - Docs: https://docs.cline.bot/
@@ -237,6 +242,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Hosted Agent: none — Runs locally as VS Code extension or CLI.
 - Custom Model Provider: full — Any OpenAI-compatible API endpoint supported. 30+ documented providers. BYOK model.
 - Pricing: Free (Apache-2.0), Enterprise custom pricing
+- First-party coding model plans: Free for individual developers; enterprise custom pricing; AI inference billed separately
 - Notes: Cline has the most comprehensive feature set of any coding agent in this matrix — 17/20 fields at full support. Open source (Apache 2.0), originally 'Claude Dev'. Started as VS Code extension, expanded to CLI and SDK. 8M+ installs.
 
 ### OpenAI Codex CLI
@@ -270,6 +276,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Hosted Agent: full — Can run locally or on platform.openai.com managed infrastructure.
 - Custom Model Provider: full — Supports custom model providers in config.
 - Pricing: Free (limited), Plus $20/mo, Pro $100-200/mo, Business pay-as-you-go, API usage-based
+- First-party coding model plans: Free $0; Go $8/mo; Plus $20/mo; Pro from $100/mo; Business $20/user/mo annually ($25 monthly); Enterprise/Edu custom; API token billing
 
 ### Cohere North
 - Docs: https://cohere.com/north/agent-studio
@@ -301,6 +308,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Hosted Agent: full — North is an enterprise agent platform/workspace.
 - Custom Model Provider: none — Built around Cohere models/platform deployment, not arbitrary model providers.
 - Pricing: Enterprise/demo-based
+- First-party coding model plans: Enterprise/demo-based
 - Notes: Included because the request mentioned Cohere. This is an enterprise agent platform with coding-capable Command A+ underneath, not a direct Claude Code/Codex-style coding agent.
 
 ### Crush
@@ -334,6 +342,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Hosted Agent: none — Runs locally as a terminal binary (optionally with a local client/server mode via `crush serve` for shared workspaces); no Charm-hosted cloud agent platform.
 - Custom Model Provider: full — Connects to Anthropic, OpenAI, Groq, OpenRouter, Vercel AI Gateway, Google Gemini, Synthetic, Z.ai, MiniMax, Hugging Face, Cerebras, io.net, Alibaba, Avian, Google Cloud Vertex AI, Amazon Bedrock, Azure OpenAI, and local models (Ollama, LM Studio, MLX, LiteLLM) via Catwalk's open model registry plus fully custom OpenAI-/Anthropic-compatible provider configs.
 - Pricing: Free (FSL-1.1-MIT), BYO API key
+- First-party coding model plans: None; BYOK/local/provider pricing only
 - Notes: Crush is Charm's open-source (FSL-1.1-MIT), terminal-first AI coding agent, first released July 2025 and under very active daily development (180+ tagged releases by mid-2026, 25k+ GitHub stars). It pairs a polished Bubble Tea TUI with a scriptable `crush run` headless mode, broad MCP/LSP/provider support via the community Catwalk model registry, and an emerging Agent Skills + custom-commands + Task-subagent ecosystem. Notable gaps versus more mature agents: no sandboxing, no user-selectable themes yet (TODO in source), and only preliminary lifecycle hooks.
 
 ### Cursor
@@ -366,6 +375,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Hosted Agent: full — CLI agent can execute in Cursor's cloud runtime.
 - Custom Model Provider: full — Supports custom API keys/models in IDE and CLI.
 - Pricing: Pro $20, Pro+ $60, Ultra $200/mo
+- First-party coding model plans: Hobby Free; Pro $20/mo; Pro+ $60/mo; Ultra $200/mo; Teams/Enterprise plans
 - Notes: Cursor is a VS Code-derived AI IDE with a companion CLI (cursor-agent) for headless/CI use and @cursor/sdk for programmatic local/cloud agents.
 
 ### Devin
@@ -398,6 +408,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Hosted Agent: full — Primarily cloud-hosted at app.devin.ai; Devin CLI bridges to cloud agent.
 - Custom Model Provider: unknown — Cerebras mentioned as enterprise-ready inference provider. No self-serve BYO model option documented.
 - Pricing: Free, Pro $20/mo, Max $200/mo, Teams $80+/mo
+- First-party coding model plans: Free; Pro $20/mo; Max $200/mo; Teams $80+/mo
 - Notes: Devin pioneered the autonomous AI software engineer category. Focuses on enterprise: VM isolation, managed sub-agents, automations. Higher-end pricing reflects the hosted, managed approach. Windsurf acquisition announced April 2026.
 
 ### Factory Droid
@@ -430,6 +441,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Hosted Agent: partial — Factory App and Droid Computers exist; CLI can register machines and run daemon/server flows.
 - Custom Model Provider: full — Bring Your Own Key/custom model path is documented.
 - Pricing: Factory plans; usage details in Factory pricing
+- First-party coding model plans: Factory subscription/usage plans; CLI docs route to Factory pricing
 - Notes: One of the most feature-dense CLI surfaces in this update: autonomy levels, worktrees, custom droids, plugins, MCP, statusline, skills, hooks, and headless exec.
 
 ### Gemini CLI
@@ -464,6 +476,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Hosted Agent: none — Local CLI tool backed by Google Gemini API.
 - Custom Model Provider: partial — Primarily Gemini/Google-oriented provider configuration.
 - Pricing: Free (Apache-2.0), Gemini API usage billed separately
+- First-party coding model plans: Gemini API usage pricing; Gemini CLI itself is free/open-source
 - Notes: Deprecated: Google points new CLI work to Antigravity. Kept as an explicit agent-launch option, but excluded from random selection in this repo. Headless/scripting mode only; no published agent embed SDK.
 
 ### GitHub Copilot CLI
@@ -497,6 +510,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Hosted Agent: none — Copilot CLI itself is a local terminal client. Cloud sandbox (`copilot --cloud`) runs the same CLI session in a GitHub-hosted ephemeral environment but is still user-initiated/interactive, not the autonomous GitHub Actions cloud agent (see separate github-copilot-coding-agent entry, hosted_agent=full).
 - Custom Model Provider: full — BYOK env vars (COPILOT_PROVIDER_TYPE, COPILOT_PROVIDER_BASE_URL, COPILOT_PROVIDER_API_KEY, COPILOT_MODEL) connect Anthropic, OpenAI-compatible endpoints, Azure OpenAI, AWS Bedrock, Google AI Studio, xAI/Microsoft Foundry, and local Ollama models.
 - Pricing: Included with Copilot Pro $10/mo, Pro+ $39/mo, Business $19/user/mo, Enterprise $39/user/mo; Free tier has limited usage
+- First-party coding model plans: Copilot Free/Student/Pro/Pro+/Max/Business/Enterprise include Copilot CLI; paid plans from $10/mo to $39/seat/mo; Max $100/mo
 - Notes: GitHub Copilot CLI is the standalone, local terminal coding agent (`copilot`, npm package @github/copilot, repo github/copilot-cli) — distinct from the asynchronous GitHub Actions-based Copilot cloud coding agent. Public preview Sep 2025, GA Feb 2026, runs on an existing Copilot subscription with no separate CLI fee. Strong open-standard support (AGENTS.md, Agent Skills, MCP, hooks, custom agents/subagents) and BYOK for external model providers, plus newer cloud/local sandboxing, autopilot mode, and an experimental redesigned terminal UI.
 
 ### GitHub Copilot
@@ -530,6 +544,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Hosted Agent: full — Copilot Cloud Agent runs autonomously in GitHub Actions-powered ephemeral environment.
 - Custom Model Provider: full — BYOK in CLI: env vars for provider type, base URL, API key. OpenAI-compatible endpoints, Azure OpenAI, Anthropic, local models via Ollama.
 - Pricing: Free $0, Pro $10/mo, Pro+ $39/mo, Max $100/mo, Business $19/user/mo, Enterprise $39/user/mo
+- First-party coding model plans: Copilot Free/Student/Pro $10/mo/Pro+ $39/mo/Max $100/mo/Business $19/seat/mo/Enterprise $39/seat/mo
 - Notes: GitHub Copilot's agent capabilities span IDE, cloud, and CLI. The cloud agent is unique: runs in ephemeral GitHub Actions environment. Desktop app (preview) adds parallel agent sessions. Ecosystem is rapidly evolving with weekly feature drops.
 
 ### Goose
@@ -563,6 +578,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Hosted Agent: none — Runs locally as CLI/Desktop/API with no central control plane; no Goose-hosted cloud agent platform. `goose acp` exposes it as an Agent Client Protocol server for editor integration, not a hosted service.
 - Custom Model Provider: full — Supports 15+ LLM providers (Anthropic, OpenAI, Google, Azure, Bedrock, Databricks, Groq, OpenRouter, local Ollama, and more) including OpenAI-compatible custom endpoints, configured via `goose configure` or GOOSE_PROVIDER/GOOSE_MODEL plus provider API key env vars.
 - Pricing: Free (Apache-2.0), BYOK LLM costs
+- First-party coding model plans: None; BYOK/local/provider pricing only
 - Notes: Goose is an open-source (Apache-2.0), Rust-based agentic CLI and Desktop app originally built by Block and now stewarded by the Linux Foundation's Agentic AI Foundation (AAIF). It was the first open-source agent to support MCP and ships 70+ first-party MCP extensions, recipes/sub-recipes for reusable workflows, real subagent delegation, four-tier permission modes (auto/approve/chat/smart_approve via GOOSE_MODE), Docker-based execution sandboxing, and a recently added lifecycle-hooks plugin system. No paid tier; cost is purely BYOK LLM usage, with a fully free/no-account path via local Ollama models.
 
 ### Grok Build
@@ -595,6 +611,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Hosted Agent: none — Documented as a terminal CLI, not a managed hosted worker.
 - Custom Model Provider: partial — Config references models and API keys, but arbitrary OpenAI-compatible provider support is not documented.
 - Pricing: Included for SuperGrok and X Premium Plus subscribers during beta
+- First-party coding model plans: Included for SuperGrok and X Premium Plus subscribers during beta
 - Notes: Early beta. Strong documented parity on AGENTS.md, skills, hooks, MCP, headless mode, ACP, and parallel subagents; lower confidence for session management and telemetry because public docs are still sparse.
 
 ### Google Jules
@@ -627,6 +644,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Hosted Agent: full — Hosted async agent running in Google-managed Cloud VMs.
 - Custom Model Provider: none — Uses Gemini models; BYO provider not documented.
 - Pricing: Free 15 tasks/day; Pro 100 tasks/day; Ultra 300 tasks/day
+- First-party coding model plans: Free 15 tasks/day; Pro 100 tasks/day; Ultra 300 tasks/day
 - Notes: Best categorized as an async hosted coding worker rather than a terminal pair-programmer. Strong on GitHub PR flow, approvals, Cloud VM isolation, and concurrency.
 
 ### JetBrains Junie
@@ -659,6 +677,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Hosted Agent: partial — Junie can run from GitHub Action and GitLab CI/CD on issues, PRs, or MRs; this is CI-hosted automation rather than a managed always-on cloud worker.
 - Custom Model Provider: full — Full custom model/BYOK support through custom JSON model profiles, local providers such as Ollama, enterprise proxies, and supported API-compatible endpoints.
 - Pricing: Bundled with JetBrains AI tiers/free credits
+- First-party coding model plans: JetBrains AI free tier/credits and paid AI tiers
 - Notes: Strong fit for JetBrains users, debugger-aware workflows, CLI/headless CI, and JetBrains IDE integration. June 2026 docs now expose extensibility details for guidelines, extensions, MCP, subagents, commands, hooks, BYOK/custom models, and CI/CD.
 
 ### Kilo Code
@@ -692,6 +711,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Hosted Agent: partial — Cloud Agents feature allows web-based sessions; primary use is local via extension/CLI.
 - Custom Model Provider: full — BYOK for 15+ providers. Plugin system for entirely custom providers. Local models supported. 500+ models via Kilo Gateway at zero markup.
 - Pricing: Free (MIT), Kilo Pass $19-199/mo, Teams $15/user/mo
+- First-party coding model plans: Kilo Pass $19-$199/mo; Teams $15/user/mo
 - Notes: Kilo Code is a rapidly evolving open-source coding agent (MIT, 19k+ stars). Originally forked from Continue, now independent. Notable for extensive plugin system, 500+ model support through Kilo Gateway, and cross-surface session sync.
 
 ### Kimi CLI
@@ -725,6 +745,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Hosted Agent: none — Local CLI tool backed by Moonshot API.
 - Custom Model Provider: full — Full custom provider support. providers table in config.toml with type, base_url, api_key, custom_headers. Six provider types including OpenAI-compatible, Anthropic, Gemini.
 - Pricing: Membership (credits) or BYOK
+- First-party coding model plans: Kimi membership credits or BYOK
 - Notes: Kimi CLI by Moonshot AI (Beijing) is an Apache-2.0 open-source coding agent with rapid development pace (97 releases in 7 months). Strong AGENTS.md, skills, MCP, subagent, and YOLO/AFK approval mode support. Notable for status bar with badges and comprehensive JSON streaming output.
 
 ### Kiro
@@ -757,6 +778,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Hosted Agent: partial — Kiro Web exists, but the public CLI docs emphasize local terminal operation.
 - Custom Model Provider: none — Docs describe Kiro's model set/Auto agent, not arbitrary model providers.
 - Pricing: Included in Kiro pricing tiers
+- First-party coding model plans: Included in Kiro pricing tiers
 - Notes: Spec/steering-first agentic IDE plus CLI. Particularly strong on steering, hooks, custom agents, ACP-compatible IDEs, and CI automation.
 
 ### MiMo Code
@@ -790,6 +812,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Hosted Agent: none — Public README describes a terminal-native assistant; no managed cloud-hosted agent workspace was found.
 - Custom Model Provider: full — README documents custom OpenAI-compatible providers in the TUI; auth docs support configuring API keys for providers from Models.dev.
 - Pricing: Free open source; hosted MiMo services optional
+- First-party coding model plans: None documented in current matrix source; free open-source CLI, hosted MiMo services optional
 - Notes: MiMo Code is a Xiaomi MiMo open-source terminal coding agent forked from OpenCode, adding cross-session memory, checkpoints, subagent orchestration, goal-driven loops, compose workflows, and dream/distill self-improvement.
 
 ### OpenCode
@@ -823,6 +846,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Hosted Agent: none — Runs entirely locally.
 - Custom Model Provider: full — Supports many providers and custom provider configuration.
 - Pricing: Free (MIT, BYOK), Go $10/mo (first month $5), Zen pay-per-token (min $20), Enterprise per-seat
+- First-party coding model plans: Go $10/mo; Zen pay-per-token (min $20); Enterprise per-seat; BYOK free
 
 ### OpenHands
 - Docs: https://docs.openhands.dev/
@@ -855,6 +879,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Hosted Agent: full — OpenHands Cloud (app.all-hands.dev) is a fully managed hosted agent platform; `openhands login`/`openhands cloud -t "task"` create and run cloud-hosted conversations from the local CLI.
 - Custom Model Provider: full — LLM_BASE_URL plus LiteLLM backend allow pointing at any OpenAI-compatible endpoint, including local model servers (Ollama, vLLM, SGLang) and proxies.
 - Pricing: Free (MIT, self-hosted); OpenHands Cloud free tier + at-cost usage; Enterprise custom
+- First-party coding model plans: OpenHands Cloud free tier + at-cost provider usage; Enterprise custom; local free/BYOK
 - Notes: OpenHands launched in March 2024 as 'OpenDevin' (an open clone of Cognition's Devin), renamed OpenHands mid-2024, and had its GitHub org renamed All-Hands-AI -> OpenHands on 2025-10-20. The 1.0.0 release (Dec 2025) was a ground-up rewrite onto a new 'software-agent-sdk', changing config from TOML to JSON and rebranding 'microagents' to the AgentSkills-standard 'Skills' system. It has a genuine local CLI (`openhands`, installable via `uv tool install openhands` or `pip install openhands`, MIT licensed) that runs as a plain local process by default — Docker is only required for the separate `openhands serve` full-GUI mode, not the terminal CLI/headless mode.
 
 ### Pi
@@ -888,6 +913,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Hosted Agent: none — CLI is local-first; no dedicated hosted runtime platform is documented.
 - Custom Model Provider: full — Supports custom provider/API integration through `~/.pi/agent/models.json` and custom provider registration hooks for OpenAI-compatible, Anthropic, Google, and custom flows.
 - Pricing: Free (MIT)
+- First-party coding model plans: None; free open-source/local/BYOK
 - Notes: Pi is a minimal terminal coding harness with extensibility-first defaults (extensions, skills, prompt templates, themes, packages), plus SDK and RPC/event-stream integrations.
 
 ### Qwen Code
@@ -921,6 +947,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Hosted Agent: partial — Can use Alibaba Cloud Coding Plan for hosted model access; agent runs locally.
 - Custom Model Provider: full — modelProviders config with openai/anthropic/gemini auth types. Local models via any OpenAI-compatible endpoint (Ollama, vLLM, LM Studio). OpenRouter, Fireworks AI.
 - Pricing: Free (Apache-2.0)
+- First-party coding model plans: None documented in current matrix source; free open-source CLI, BYOK/local/provider costs
 - Notes: Qwen Code by Alibaba (QwenLM) is the most feature-complete open-source coding agent in this matrix -- 20/20 fields at full (tied with Cline). Standout features: macOS Seatbelt + Docker sandbox, OpenTelemetry telemetry, custom status line, three output formats. Apache-2.0, 24.6k stars.
 
 ### Replit Agent
@@ -953,6 +980,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Hosted Agent: full — Hosted app-building agent in Replit.
 - Custom Model Provider: none — No BYO model/provider support found.
 - Pricing: Included in Replit plan/usage model
+- First-party coding model plans: Included in Replit plan/usage model
 - Notes: Best for hosted app prototyping/build-deploy workflows, not for local repo terminal automation.
 
 ### Roo Code
@@ -986,6 +1014,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Hosted Agent: none — Runs locally as VS Code extension or CLI. Project is now archived.
 - Custom Model Provider: full — OpenAI Compatible provider for arbitrary API endpoints. LiteLLM routing. 22+ built-in providers. Debug proxy support. Model-agnostic.
 - Pricing: Free (Apache-2.0)
+- First-party coding model plans: None; free open-source extension, BYOK/provider costs
 - Notes: Roo Code was a popular Cline fork (24k stars, 574k VS Code installs) that was shut down on May 15, 2026. The repository is now archived and read-only. VS Code extension-host API only; no standalone npm agent SDK. Community forks include ZooCode and Cline.
 
 ### Trae Agent
@@ -1019,6 +1048,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Hosted Agent: none — Local CLI agent; no hosted/cloud agent platform documented.
 - Custom Model Provider: full — Supports OpenAI, Anthropic, Doubao, Azure, OpenRouter, Ollama, Google Gemini, custom base URLs, and config-file providers.
 - Pricing: Free (MIT), BYOK/provider costs
+- First-party coding model plans: None; free open-source CLI, BYOK/provider costs
 - Notes: Official ByteDance open-source CLI agent for software engineering research and development. Verified locally from documented `uv sync --all-extras`: `trae-cli --help`, `trae-cli run --help`, and `trae-cli interactive --help` work. Added to agent-launch as `--agent trae` targeting `trae-cli`.
 
 ### Windsurf Cascade
@@ -1051,6 +1081,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Hosted Agent: full — Devin cloud agent integration provides managed agent platform.
 - Custom Model Provider: partial — BYOK for Anthropic models (Claude Sonnet 4, Opus 4) for Free/Pro users. No generic custom OpenAI-compatible endpoint configuration documented.
 - Pricing: Free $0, Pro $20/mo, Max $200/mo, Teams $40/user/mo
+- First-party coding model plans: Free $0; Pro $20/mo; Max $200/mo; Teams $40/user/mo
 - Notes: Windsurf by Codeium (acquired by Cognition AI in April 2026) is a standalone VS Code fork IDE with integrated coding agent (Cascade). Enterprise analytics API only; no agent embed SDK. Competes directly with Cursor IDE.
 
 ### ZCode
@@ -1083,4 +1114,5 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Hosted Agent: none — Runtime remains the desktop workspace or remote SSH/Docker target; mobile remote only controls the open desktop workspace.
 - Custom Model Provider: full — Supports third-party compatible model services through Anthropic/OpenAI protocols and API key mode.
 - Pricing: 5-day free trial; GLM Coding Plan or API/provider billing
+- First-party coding model plans: 5-day free trial; GLM Coding Plan or API/provider billing
 - Notes: Z.ai/Zhipu desktop ADE with in-house ZCode Agent, GLM-5.2 focus, AGENTS.md, skills, commands, MCP, subagents, plugins, goal mode, mobile remote control, bot channels, and remote SSH/Docker development. No local CLI command was found, so no agent-launch backend was added.

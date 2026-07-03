@@ -177,6 +177,11 @@
     "source_url": "https://docs.github.com/en/copilot/concepts/billing/copilot-requests#source:~:text=Copilot%20CLI",
     "comment": "Consumes GitHub AI Credits/premium requests against existing Copilot plan; usage-based billing for all plans started June 1, 2026, replacing the old premium-request counter. No CLI-specific surcharge."
   },
+  "first_party_coding_model_plans": {
+    "value": "Copilot Free/Student/Pro/Pro+/Max/Business/Enterprise include Copilot CLI; paid plans from $10/mo to $39/seat/mo; Max $100/mo",
+    "source_url": "https://docs.github.com/en/copilot/concepts/billing/copilot-requests#source:~:text=Copilot%20CLI",
+    "comment": "Pricing for native first-party coding/model access, using the product pricing source already tracked by this matrix."
+  },
   "some_free_usage": {
     "support": "partial",
     "source_url": "https://pecollective.com/tools/github-copilot-pricing/#source:~:text=Free",

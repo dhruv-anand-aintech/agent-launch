@@ -124,6 +124,11 @@
     "source_url": "https://kilo.ai/pricing#simple-transparent-pricing:~:text=Simple%2C%20transparent%20pricing",
     "comment": "App is free & MIT. Kilo Pass (Starter $19/mo, Pro $49/mo, Expert $199/mo). BYOK (no markup). Free models. Teams: $15/user/mo."
   },
+  "first_party_coding_model_plans": {
+    "value": "Kilo Pass $19-$199/mo; Teams $15/user/mo",
+    "source_url": "https://kilo.ai/pricing#simple-transparent-pricing:~:text=Simple%2C%20transparent%20pricing",
+    "comment": "Pricing for native first-party coding/model access, using the product pricing source already tracked by this matrix."
+  },
   "some_free_usage": {
     "support": "full",
     "source_url": "https://kilo.ai/pricing#kilo-code:~:text=Free%20and%20open%20source",

@@ -128,6 +128,11 @@
     "source_url": "https://cohere.com/north#empower-your-workforce-with-ai-agents-that-operate-in-lockstep-with-your-people-data-and-tools:~:text=Request%20a%20demo",
     "comment": "North is sold through demo/sales motion."
   },
+  "first_party_coding_model_plans": {
+    "value": "Enterprise/demo-based",
+    "source_url": "https://cohere.com/north#empower-your-workforce-with-ai-agents-that-operate-in-lockstep-with-your-people-data-and-tools:~:text=Request%20a%20demo",
+    "comment": "Pricing for native first-party coding/model access, using the product pricing source already tracked by this matrix."
+  },
   "notes": "Included because the request mentioned Cohere. This is an enterprise agent platform with coding-capable Command A+ underneath, not a direct Claude Code/Codex-style coding agent.",
   "transcripts": {
     "support": "partial",

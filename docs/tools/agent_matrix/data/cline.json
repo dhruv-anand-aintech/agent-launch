@@ -126,6 +126,11 @@
     "source_url": "https://cline.bot/pricing#simple-transparent-pricing:~:text=Cline%20is%20free%20for%20individual%20developers.%20Pay%20only%20for%20AI%20inference%20on%20a%20usage%20basis",
     "comment": "Open source: free for individual developers. Pay only for AI inference. Enterprise: custom pricing with SSO/OIDC/SCIM, RBAC."
   },
+  "first_party_coding_model_plans": {
+    "value": "Free for individual developers; enterprise custom pricing; AI inference billed separately",
+    "source_url": "https://cline.bot/pricing#simple-transparent-pricing:~:text=Cline%20is%20free%20for%20individual%20developers.%20Pay%20only%20for%20AI%20inference%20on%20a%20usage%20basis",
+    "comment": "Pricing for native first-party coding/model access, using the product pricing source already tracked by this matrix."
+  },
   "some_free_usage": {
     "support": "full",
     "source_url": "https://cline.bot/pricing#simple-transparent-pricing:~:text=Cline%20is%20free%20for%20individual%20developers",

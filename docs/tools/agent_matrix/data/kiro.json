@@ -130,6 +130,11 @@
     "source_url": "https://kiro.dev/cli/#source:~:text=No.%20Kiro%20CLI%20pricing%20is%20included%20in%20the%20standard%20Kiro%20%5Bpricing%20tiers%5D(%2Fpricing%2F).",
     "comment": "CLI and IDE share Kiro subscription pricing."
   },
+  "first_party_coding_model_plans": {
+    "value": "Included in Kiro pricing tiers",
+    "source_url": "https://kiro.dev/cli/#source:~:text=No.%20Kiro%20CLI%20pricing%20is%20included%20in%20the%20standard%20Kiro%20%5Bpricing%20tiers%5D(%2Fpricing%2F).",
+    "comment": "Pricing for native first-party coding/model access, using the product pricing source already tracked by this matrix."
+  },
   "some_free_usage": {
     "support": "full",
     "source_url": "https://kiro.dev/docs/billing/#billing-for-individuals:~:text=perpetual%20Kiro%20Free%20tier",

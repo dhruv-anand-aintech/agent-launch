@@ -179,6 +179,11 @@
     "source_url": "https://github.com/block/goose#source:~:text=License-Apache-2.0",
     "comment": "Goose itself is free and open source under Apache-2.0 with no subscription or usage cap; users pay only for whichever LLM provider API they connect (or use free local Ollama models)."
   },
+  "first_party_coding_model_plans": {
+    "value": "None; BYOK/local/provider pricing only",
+    "source_url": "https://github.com/block/goose#source:~:text=License-Apache-2.0",
+    "comment": "No native first-party model subscription is documented for this surface in the current matrix source; model usage is BYOK, local, or provider-billed."
+  },
   "some_free_usage": {
     "support": "full",
     "source_url": "https://goose-docs.ai/docs/getting-started/installation#source:~:text=Google%20Gemini%20offers%20a%20free%20tier",

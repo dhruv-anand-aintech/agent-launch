@@ -335,7 +335,17 @@ def generate_llms_txt(bundle_path: str, output_path: str) -> None:
         for key, spec in properties.items()
         if spec.get("allOf", [{}])[0].get("$ref", "").endswith("featureWithSource")
     ]
-    meta_keys = {"name", "form_factor", "released_in", "latest_major_update", "pricing", "notes", "links", "hosted_agent"}
+    meta_keys = {
+        "name",
+        "form_factor",
+        "released_in",
+        "latest_major_update",
+        "pricing",
+        "first_party_coding_model_plans",
+        "notes",
+        "links",
+        "hosted_agent",
+    }
     meta_keys.add("hosted_agent")
     meta_cols = [k for k in properties if k in meta_keys and k != "links"]
 
@@ -414,6 +424,8 @@ def generate_llms_txt(bundle_path: str, output_path: str) -> None:
             lines.append(line)
         if row.get("pricing", {}).get("value"):
             lines.append(f"- Pricing: {row['pricing']['value']}")
+        if row.get("first_party_coding_model_plans", {}).get("value"):
+            lines.append(f"- First-party coding model plans: {row['first_party_coding_model_plans']['value']}")
         if row.get("notes"):
             lines.append(f"- Notes: {row['notes']}")
 

@@ -122,6 +122,11 @@
     "source_url": "https://roocodeinc.github.io/Roo-Code/faq/#is-roo-code-free-to-use:~:text=The%20Roo%20Code%20extension%20is%20free%20and%20open%2Dsource",
     "comment": "Free and open-source (Apache 2.0). Users paid their own LLM provider API costs. Roo Code Router was a paid routing service. Now discontinued."
   },
+  "first_party_coding_model_plans": {
+    "value": "None; free open-source extension, BYOK/provider costs",
+    "source_url": "https://roocodeinc.github.io/Roo-Code/faq/#is-roo-code-free-to-use:~:text=The%20Roo%20Code%20extension%20is%20free%20and%20open%2Dsource",
+    "comment": "No native first-party model subscription is documented for this surface in the current matrix source; model usage is BYOK, local, or provider-billed."
+  },
   "hosted_agent": {
     "support": "none",
     "source_url": "https://docs.roocode.com/#source:~:text=The%20Roo%20Code%20VS%20Code%20extension%20works%20locally%20in%20your%20IDE",

@@ -28,6 +28,7 @@
 - When wrapper behavior differs from expectations, inspect `bin/agent-launch` and current `--dry-run` output before trusting docs.
 - The installed user-facing binaries may be stale copies in `~/.local/bin`; use `./install.sh` before verifying installed `agl`.
 - Cloudflare custom domain deploys should use `custom_domain = true` in `wrangler.toml`.
+- Matrix updates are not done until deployed and verified. After any change under `docs/tools/agent_matrix/`, `worker/matrix.js`, or `wrangler.toml`, run `npm run deploy:matrix`, then verify `https://compare.ainorthstar.tech/api/deployment-info` reports `git_commit` equal to `git rev-parse HEAD` and smoke-hit the production page plus `/bundle.json`.
 
 ## Verification Note
 Commands above are discovered from repo docs/manifests. They were not run while creating this file.

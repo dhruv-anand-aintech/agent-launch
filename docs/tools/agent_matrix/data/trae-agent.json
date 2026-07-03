@@ -121,6 +121,11 @@
     "source_url": "https://github.com/bytedance/trae-agent#license:~:text=MIT%20License",
     "comment": "Trae Agent is MIT-licensed. Users provide provider API keys or local Ollama models."
   },
+  "first_party_coding_model_plans": {
+    "value": "None; free open-source CLI, BYOK/provider costs",
+    "source_url": "https://github.com/bytedance/trae-agent#license:~:text=MIT%20License",
+    "comment": "No native first-party model subscription is documented for this surface in the current matrix source; model usage is BYOK, local, or provider-billed."
+  },
   "some_free_usage": {
     "support": "full",
     "source_url": "https://github.com/bytedance/trae-agent#features:~:text=Ollama",

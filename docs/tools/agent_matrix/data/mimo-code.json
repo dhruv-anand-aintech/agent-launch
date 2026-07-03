@@ -126,6 +126,11 @@
     "source_url": "https://github.com/XiaomiMiMo/MiMo-Code#license:~:text=Source%20code%20is%20licensed%20under%20the%20MIT%20License",
     "comment": "Source code is MIT-licensed. README says MiMo Auto is free for a limited time and hosted services are subject to Xiaomi MiMo terms."
   },
+  "first_party_coding_model_plans": {
+    "value": "None documented in current matrix source; free open-source CLI, hosted MiMo services optional",
+    "source_url": "https://github.com/XiaomiMiMo/MiMo-Code#license:~:text=Source%20code%20is%20licensed%20under%20the%20MIT%20License",
+    "comment": "No native first-party model subscription is documented for this surface in the current matrix source; model usage is BYOK, local, or provider-billed."
+  },
   "some_free_usage": {
     "support": "full",
     "source_url": "https://github.com/XiaomiMiMo/MiMo-Code#quick-start:~:text=MiMo%20Auto%20%28free%20for%20a%20limited%20time%29",

@@ -126,6 +126,11 @@
     "source_url": "https://www.kimi.com/help/kimi-code/benefits#billing:~:text=included%20in%20your%20subscription%20fee",
     "comment": "Kimi Code platform via membership subscription (credits-based, 7-day refresh cycle) or pay-as-you-go via api.moonshot.cn. Also supports own API key from OpenAI/Anthropic/Gemini."
   },
+  "first_party_coding_model_plans": {
+    "value": "Kimi membership credits or BYOK",
+    "source_url": "https://www.kimi.com/help/kimi-code/benefits#billing:~:text=included%20in%20your%20subscription%20fee",
+    "comment": "Pricing for native first-party coding/model access, using the product pricing source already tracked by this matrix."
+  },
   "hosted_agent": {
     "support": "none",
     "source_url": "https://www.kimi.com/code/docs/en/kimi-code-cli/getting-started.html#what-is-kimi-code-cli:~:text=Kimi%20Code%20CLI%20is%20an%20AI%20agent%20that%20runs%20in%20the%20terminal",

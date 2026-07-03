@@ -178,6 +178,11 @@
     "source_url": "https://aws.amazon.com/q/developer/pricing/#source:~:text=Pro%20tier",
     "comment": "Perpetual Free Tier (Builder ID or IAM) with monthly agentic-request limits; Pro tier is $19/user/month with higher limits and enterprise admin controls. New Free Tier/Pro signups are blocked starting May 15, 2026 as part of the Kiro CLI migration."
   },
+  "first_party_coding_model_plans": {
+    "value": "Free tier; Pro $19/user/mo",
+    "source_url": "https://aws.amazon.com/q/developer/pricing/#source:~:text=Pro%20tier",
+    "comment": "Pricing for native first-party coding/model access, using the product pricing source already tracked by this matrix."
+  },
   "some_free_usage": {
     "support": "full",
     "source_url": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/q-tiers.html#source:~:text=Free%20Tier",

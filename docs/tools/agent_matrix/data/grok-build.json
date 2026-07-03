@@ -126,6 +126,11 @@
     "source_url": "https://x.ai/news/grok-build-cli#introducing-grok-build:~:text=Available%20now%20to%20all%20SuperGrok%20and%20X%20Premium%20Plus%20subscribers",
     "comment": "Early beta access is tied to paid xAI/X subscriptions."
   },
+  "first_party_coding_model_plans": {
+    "value": "Included for SuperGrok and X Premium Plus subscribers during beta",
+    "source_url": "https://x.ai/news/grok-build-cli#introducing-grok-build:~:text=Available%20now%20to%20all%20SuperGrok%20and%20X%20Premium%20Plus%20subscribers",
+    "comment": "Pricing for native first-party coding/model access, using the product pricing source already tracked by this matrix."
+  },
   "notes": "Early beta. Strong documented parity on AGENTS.md, skills, hooks, MCP, headless mode, ACP, and parallel subagents; lower confidence for session management and telemetry because public docs are still sparse.",
   "transcripts": {
     "support": "unknown",

@@ -124,6 +124,11 @@
     "source_url": "https://github.com/earendil-works/pi/blob/main/packages/coding-agent/package.json#license:~:text=license",
     "comment": "Repository is MIT-licensed and distributed as npm package `@earendil-works/pi-coding-agent`; there is no separate paid subscription model documented in public docs."
   },
+  "first_party_coding_model_plans": {
+    "value": "None; free open-source/local/BYOK",
+    "source_url": "https://github.com/earendil-works/pi/blob/main/packages/coding-agent/package.json#license:~:text=license",
+    "comment": "No native first-party model subscription is documented for this surface in the current matrix source; model usage is BYOK, local, or provider-billed."
+  },
   "no_account_required": {
     "support": "full",
     "source_url": "https://github.com/earendil-works/pi/blob/main/packages/coding-agent/docs/models.md#custom-models:~:text=Add%20custom%20providers%20and%20models%20%28Ollama",

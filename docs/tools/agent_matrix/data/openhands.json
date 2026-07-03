@@ -185,6 +185,11 @@
     "source_url": "https://www.openhands.dev/pricing#source:~:text=Free%2C%20local%20OpenHands%20for%20getting%20started",
     "comment": "Self-hosted/local CLI is free and open source (MIT license) other than your own LLM API costs. OpenHands Cloud Individual tier is free to sign up with a cap (10 max daily conversations) and offers at-cost LLM usage with no markup if you don't bring your own key. Enterprise (SaaS or self-hosted VPC) is custom-priced."
   },
+  "first_party_coding_model_plans": {
+    "value": "OpenHands Cloud free tier + at-cost provider usage; Enterprise custom; local free/BYOK",
+    "source_url": "https://www.openhands.dev/pricing#source:~:text=Free%2C%20local%20OpenHands%20for%20getting%20started",
+    "comment": "Pricing for native first-party coding/model access, using the product pricing source already tracked by this matrix."
+  },
   "some_free_usage": {
     "support": "full",
     "source_url": "https://www.openhands.dev/pricing#source:~:text=Bring%20your%20own%20key%20or%20use%20our%20providers%20at-cost",

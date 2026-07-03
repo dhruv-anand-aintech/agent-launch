@@ -130,6 +130,11 @@
     "source_url": "https://www.anthropic.com/pricing#claude-code:~:text=Claude%20Code",
     "comment": "Claude Code is included in all subscription plans (Pro, Max, Team, Enterprise). Also available via API at standard token rates."
   },
+  "first_party_coding_model_plans": {
+    "value": "Claude Pro/Max/Team/Enterprise include Claude Code; API token pricing also applies",
+    "source_url": "https://www.anthropic.com/pricing#claude-code:~:text=Claude%20Code",
+    "comment": "Pricing for native first-party coding/model access, using the product pricing source already tracked by this matrix."
+  },
   "hosted_agent": {
     "support": "partial",
     "source_url": "https://docs.anthropic.com/en/docs/claude-code/overview#use-claude-code:~:text=Claude%20Code",
