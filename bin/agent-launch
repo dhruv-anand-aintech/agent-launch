@@ -5,12 +5,15 @@ from __future__ import annotations
 
 import argparse
 import copy
+import json
 import os
 import random
 import shlex
 import shutil
 import subprocess
 import sys
+import urllib.error
+import urllib.request
 from dataclasses import dataclass
 
 
@@ -83,6 +86,9 @@ DEFAULT_AGENT_ORDER = (
     "amazonq",
 )
 MODES = ("default", "ask", "plan", "auto", "danger")
+OPENCODE_GO_BASE_URL = "https://opencode.ai/zen/go/v1"
+OPENAI_BASE_URL = "https://api.openai.com/v1"
+DEFAULT_CWD_CLASSIFIER_TIMEOUT = 8.0
 
 
 def random_state_path() -> str:
@@ -198,6 +204,11 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
         "--cwd",
         default=os.getcwd(),
         help="Working directory/workspace for the agent. Defaults to current directory.",
+    )
+    parser.add_argument(
+        "--no-auto-cwd",
+        action="store_true",
+        help="Disable LLM working-directory classification for interactive prompts.",
     )
     parser.add_argument(
         "-p",
@@ -370,6 +381,271 @@ def prompt_from(args: argparse.Namespace) -> str | None:
     if args.prompt_parts:
         return " ".join(args.prompt_parts)
     return None
+
+
+def truthy_env_disabled(raw: str | None) -> bool:
+    return raw is not None and raw.strip().lower() in {"0", "false", "no", "off", "disabled"}
+
+
+def dotenv_paths(start_dir: str) -> list[str]:
+    paths: list[str] = []
+    current = os.path.abspath(os.path.expanduser(start_dir))
+    if not os.path.isdir(current):
+        current = os.path.dirname(current)
+    while True:
+        candidate = os.path.join(current, ".env")
+        if os.path.isfile(candidate):
+            paths.append(candidate)
+        parent = os.path.dirname(current)
+        if parent == current:
+            break
+        current = parent
+    return list(reversed(paths))
+
+
+def parse_dotenv_line(line: str) -> tuple[str, str] | None:
+    stripped = line.strip()
+    if not stripped or stripped.startswith("#"):
+        return None
+    if stripped.startswith("export "):
+        stripped = stripped[len("export ") :].strip()
+    if "=" not in stripped:
+        return None
+    key, value = stripped.split("=", 1)
+    key = key.strip()
+    if not key.replace("_", "").isalnum() or not (key[0].isalpha() or key[0] == "_"):
+        return None
+    value = value.strip()
+    if len(value) >= 2 and value[0] == value[-1] and value[0] in {"'", '"'}:
+        value = value[1:-1]
+    return key, value
+
+
+def env_with_dotenv(start_dir: str) -> dict[str, str]:
+    loaded: dict[str, str] = {}
+    for path in dotenv_paths(start_dir):
+        try:
+            with open(path, encoding="utf-8") as handle:
+                for line in handle:
+                    parsed = parse_dotenv_line(line)
+                    if parsed:
+                        key, value = parsed
+                        loaded[key] = value
+        except OSError:
+            continue
+    loaded.update(os.environ)
+    return loaded
+
+
+def markdown_summary(path: str) -> tuple[str | None, str | None]:
+    title: str | None = None
+    description_lines: list[str] = []
+    generic_titles = {"agents.md", "claude.md", "readme.md", "readme", "project-doc"}
+    try:
+        with open(path, encoding="utf-8") as handle:
+            for line in handle:
+                stripped = line.strip()
+                if not stripped or stripped in {"@CLAUDE.md", "@AGENTS.md"}:
+                    continue
+                if stripped.startswith("#"):
+                    heading = stripped.lstrip("#").strip()
+                    if title is None or title.lower() in generic_titles:
+                        if heading.lower() not in generic_titles:
+                            title = heading
+                    continue
+                if stripped.startswith(("-", "*")):
+                    stripped = stripped.lstrip("-*").strip()
+                if stripped.startswith("`") and stripped.endswith("`"):
+                    continue
+                if stripped:
+                    description_lines.append(stripped)
+                if title and len(" ".join(description_lines)) >= 260:
+                    break
+    except OSError:
+        return None, None
+    description = " ".join(description_lines)[:320] if description_lines else None
+    return title, description
+
+
+def project_metadata(path: str) -> dict[str, str]:
+    metadata: dict[str, str] = {}
+    package_path = os.path.join(path, "package.json")
+    try:
+        with open(package_path, encoding="utf-8") as handle:
+            package = json.load(handle)
+        if package.get("name"):
+            metadata["project_name"] = str(package["name"])[:120]
+        if package.get("description"):
+            metadata["description"] = str(package["description"])[:320]
+        if metadata:
+            metadata["metadata_source"] = "package.json"
+    except (OSError, json.JSONDecodeError):
+        pass
+
+    for name in ("CLAUDE.md", "AGENTS.md", "README.md", "README.rst", "README.txt"):
+        title, description = markdown_summary(os.path.join(path, name))
+        if title and "project_name" not in metadata:
+            metadata["project_name"] = title[:120]
+        if description and "description" not in metadata:
+            metadata["description"] = description
+        if title or description:
+            metadata.setdefault("metadata_source", name)
+        if metadata.get("project_name") and metadata.get("description"):
+            break
+    return metadata
+
+
+def cwd_candidates(cwd: str) -> list[dict[str, object]]:
+    root = os.path.abspath(os.path.expanduser(cwd))
+    candidates: list[dict[str, object]] = [{"index": 0, "path": root, "folder_name": os.path.basename(root) or root}]
+    candidates[0].update(project_metadata(root))
+    try:
+        entries = sorted(os.scandir(root), key=lambda entry: entry.name.lower())
+    except OSError:
+        return candidates
+    for entry in entries:
+        try:
+            if not entry.is_dir(follow_symlinks=True):
+                continue
+        except OSError:
+            continue
+        path = os.path.abspath(entry.path)
+        candidate: dict[str, object] = {"index": len(candidates), "path": path, "folder_name": entry.name}
+        candidate.update(project_metadata(path))
+        candidates.append(candidate)
+    return candidates
+
+
+def cwd_classifier_config(env: dict[str, str]) -> tuple[str, str, str, float] | None:
+    provider = env.get("AGENT_LAUNCH_CWD_CLASSIFIER_PROVIDER", "").strip().lower()
+    base_url = (
+        env.get("AGENT_LAUNCH_CWD_CLASSIFIER_BASE_URL")
+        or env.get("OPENAI_BASE_URL")
+        or env.get("OPENAI_API_BASE")
+        or ""
+    ).strip()
+    if not base_url and provider in {"opencode", "opencode-go", "zen", "zen-go"}:
+        base_url = OPENCODE_GO_BASE_URL
+    if not base_url:
+        base_url = OPENAI_BASE_URL
+
+    api_key = (
+        env.get("AGENT_LAUNCH_CWD_CLASSIFIER_API_KEY")
+        or env.get("OPENCODE_GO_API_KEY")
+        or env.get("OPENAI_API_KEY")
+        or ""
+    ).strip()
+    if not api_key:
+        return None
+
+    default_model = "deepseek-v4-flash" if provider in {"opencode", "opencode-go", "zen", "zen-go"} else "gpt-5.4-mini"
+    model = (env.get("AGENT_LAUNCH_CWD_CLASSIFIER_MODEL") or default_model).strip()
+    try:
+        timeout = float(env.get("AGENT_LAUNCH_CWD_CLASSIFIER_TIMEOUT", "") or DEFAULT_CWD_CLASSIFIER_TIMEOUT)
+    except ValueError:
+        timeout = DEFAULT_CWD_CLASSIFIER_TIMEOUT
+    return base_url.rstrip("/"), api_key, model, timeout
+
+
+def extract_json_object(text: str) -> dict[str, object]:
+    try:
+        parsed = json.loads(text)
+        if isinstance(parsed, dict):
+            return parsed
+    except json.JSONDecodeError:
+        pass
+    start = text.find("{")
+    end = text.rfind("}")
+    if start == -1 or end == -1 or end <= start:
+        raise ValueError("classifier did not return JSON")
+    parsed = json.loads(text[start : end + 1])
+    if not isinstance(parsed, dict):
+        raise ValueError("classifier JSON was not an object")
+    return parsed
+
+
+def classify_cwd_with_llm(
+    prompt: str,
+    candidates: list[dict[str, object]],
+    base_url: str,
+    api_key: str,
+    model: str,
+    timeout: float,
+) -> tuple[str, str] | None:
+    user_payload = {
+        "first_message": prompt[:4000],
+        "candidates": candidates,
+    }
+    body = {
+        "model": model,
+        "temperature": 0,
+        "messages": [
+            {
+                "role": "system",
+                "content": (
+                    "Choose the best working directory for launching an interactive coding-agent session. "
+                    "Return only JSON like {\"index\": 0, \"reason\": \"short reason\"}. "
+                    "Choose exactly one candidate index from the provided list. Prefer the current cwd "
+                    "when the message does not clearly target a first-level child directory."
+                ),
+            },
+            {"role": "user", "content": json.dumps(user_payload, ensure_ascii=True)},
+        ],
+    }
+    request = urllib.request.Request(
+        f"{base_url}/chat/completions",
+        data=json.dumps(body).encode("utf-8"),
+        headers={
+            "Authorization": f"Bearer {api_key}",
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+        },
+        method="POST",
+    )
+    with urllib.request.urlopen(request, timeout=timeout) as response:
+        raw = response.read().decode("utf-8")
+    payload = json.loads(raw)
+    content = payload["choices"][0]["message"]["content"]
+    decision = extract_json_object(content)
+    index = int(decision["index"])
+    if index < 0 or index >= len(candidates):
+        raise ValueError(f"classifier returned out-of-range index {index}")
+    reason = str(decision.get("reason") or "").strip()
+    return str(candidates[index]["path"]), reason
+
+
+def maybe_classify_cwd(args: argparse.Namespace) -> None:
+    if args.no_auto_cwd or args.non_interactive:
+        return
+    prompt = prompt_from(args)
+    if not prompt or not prompt.strip():
+        return
+
+    env = env_with_dotenv(args.cwd)
+    if truthy_env_disabled(env.get("AGENT_LAUNCH_AUTO_CWD")) or truthy_env_disabled(
+        env.get("AGENT_LAUNCH_CWD_CLASSIFIER")
+    ):
+        return
+
+    candidates = cwd_candidates(args.cwd)
+    if len(candidates) < 2:
+        return
+    config = cwd_classifier_config(env)
+    if not config:
+        return
+
+    try:
+        selected, reason = classify_cwd_with_llm(prompt, candidates, *config)
+    except (OSError, urllib.error.URLError, urllib.error.HTTPError, ValueError, KeyError, TypeError, json.JSONDecodeError) as exc:
+        if env.get("AGENT_LAUNCH_CWD_CLASSIFIER_DEBUG"):
+            print(f"agent-launch auto-cwd skipped: {exc}", file=sys.stderr, flush=True)
+        return
+
+    original = os.path.abspath(os.path.expanduser(args.cwd))
+    if selected != original:
+        detail = f" ({reason})" if reason else ""
+        print(f"agent-launch auto-cwd: {selected}{detail}", file=sys.stderr, flush=True)
+    args.cwd = selected
 
 
 def mode_flags(agent: str, mode: str, non_interactive: bool) -> list[str]:
@@ -997,6 +1273,7 @@ def main() -> int:
     if args.print_mappings:
         print_mappings()
         return 0
+    maybe_classify_cwd(args)
     if args.agent_order:
         if args.dry_run:
             for agent in args.agent_order:

@@ -118,6 +118,7 @@ agent-launch -a claude -i -m plan -C ~/Code/my-repo 'review this change'
 | `--prompt-file` | Read the initial prompt from a UTF-8 text file |
 | positional text | Prompt text when `--prompt` is omitted |
 | `--cwd` / `-C` | Workspace/working directory |
+| `--no-auto-cwd` | Disable LLM working-directory classification for interactive prompts |
 | `--mode` / `-m` | `default`, `ask`, `plan`, `auto`, or `danger`; defaults to `AGENT_LAUNCH_MODE` or `danger` |
 | `--model-class` | `fast` or `pro` |
 | `--model` | Explicit backend model string; overrides `--model-class` |
@@ -156,6 +157,35 @@ AGENT_LAUNCH_PREFER=claude,codex agent-launch -n -C ~/Code/my-repo -p 'implement
 ```
 
 `--agent-order` and `--prefer` are intentionally non-interactive only. The built-in default order is `codex, claude, cursor, opencode, antigravity, gemini, aider, amp, cline, droid, grok, kilo, kimi, kiro, mimo, pi, qwen, trae, goose, copilot, crush, openhands, amazonq`. With that default, `--prefer cursor,claude` runs `cursor, claude, codex, opencode, antigravity, gemini, aider, amp, cline, droid, grok, kilo, kimi, kiro, mimo, pi, qwen, trae, goose, copilot, crush, openhands, amazonq`.
+
+## Interactive Auto-Cwd
+
+For interactive sessions with an initial prompt (`--prompt`, `--prompt-file`, or positional text), `agent-launch` can ask an OpenAI-compatible LLM to choose the best working directory from:
+
+- the requested `--cwd`
+- every first-level directory directly under that `--cwd`
+
+Each candidate includes the folder name plus a compact project name/description extracted from `package.json`, `CLAUDE.md`, `AGENTS.md`, or `README.*` when present.
+
+This lets you run from a parent folder and still land inside the project implied by the first message:
+
+```sh
+cd ~/Code
+agl -a codex 'fix the tender viewer search filters'
+```
+
+Configuration:
+
+| Environment variable | Meaning |
+| --- | --- |
+| `AGENT_LAUNCH_CWD_CLASSIFIER_API_KEY` | API key for the cwd classifier; falls back to `OPENCODE_GO_API_KEY` or `OPENAI_API_KEY` |
+| `AGENT_LAUNCH_CWD_CLASSIFIER_PROVIDER=opencode-go` | Use OpenCode Go defaults (`https://opencode.ai/zen/go/v1`, `deepseek-v4-flash`) |
+| `AGENT_LAUNCH_CWD_CLASSIFIER_BASE_URL` | OpenAI-compatible base URL; falls back to `OPENAI_BASE_URL`, `OPENAI_API_BASE`, or OpenAI |
+| `AGENT_LAUNCH_CWD_CLASSIFIER_MODEL` | Classifier model; defaults to `gpt-5.4-mini`, or `deepseek-v4-flash` for OpenCode Go |
+| `AGENT_LAUNCH_CWD_CLASSIFIER_TIMEOUT` | Classifier timeout in seconds; defaults to `8` |
+| `AGENT_LAUNCH_AUTO_CWD=0` or `AGENT_LAUNCH_CWD_CLASSIFIER=0` | Disable auto-cwd globally |
+
+If the API key is missing, the API call fails, or the model returns an invalid choice, the launcher keeps the original `--cwd`. Use `--no-auto-cwd` to skip classification for one launch.
 
 ## Feature Matrix
 
