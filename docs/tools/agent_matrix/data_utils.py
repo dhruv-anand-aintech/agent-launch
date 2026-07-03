@@ -270,8 +270,27 @@ def _ensure_sort_date_from_value(row: dict, key: str) -> None:
         field["sort_date"] = parsed
 
 
-def enrich_github_dates(rows: list[dict]) -> None:
+def _rows_by_slug(rows: list[dict]) -> dict[str, dict]:
+    result = {}
+    for row in rows:
+        slug = (row.get("links") or {}).get("slug")
+        if slug:
+            result[slug] = row
+    return result
+
+
+def _restore_previous_date_fields(row: dict, previous_row: dict | None) -> None:
+    if not previous_row:
+        return
+    for key in ("released_in", "latest_major_update"):
+        previous_field = previous_row.get(key)
+        if isinstance(previous_field, dict) and isinstance(row.get(key), dict):
+            row[key] = previous_field.copy()
+
+
+def enrich_github_dates(rows: list[dict], previous_rows: list[dict] | None = None) -> None:
     token = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN")
+    previous_by_slug = _rows_by_slug(previous_rows or [])
     for row in rows:
         name = row.get("name", "?")
         for key in ("released_in", "latest_major_update"):
@@ -294,6 +313,7 @@ def enrich_github_dates(rows: list[dict]) -> None:
             if needs_released_sort and not oldest_release:
                 oldest_release = fetch_repo_created_at(owner, repo_name, token)
         except Exception as exc:
+            _restore_previous_date_fields(row, previous_by_slug.get(links.get("slug", "")))
             print(f"  warn: {name}: GitHub dates skipped ({exc})", file=sys.stderr)
             continue
 
@@ -316,11 +336,18 @@ def bundle(schema_path: str, data_glob: str, output_path: str) -> None:
         for key, spec in properties.items()
         if spec.get("allOf", [{}])[0].get("$ref", "").endswith("featureWithSource")
     ]
+    output = Path(output_path)
+    previous_bundle = output.read_text(encoding="utf-8") if output.exists() else None
+    previous_rows = json.loads(previous_bundle, object_pairs_hook=OrderedDict) if previous_bundle else []
     rows = [_load_json(name) for name in sorted(glob.glob(data_glob))]
-    enrich_github_dates(rows)
-    Path(output_path).write_text(json.dumps(rows, indent=2) + "\n", encoding="utf-8")
+    enrich_github_dates(rows, previous_rows)
+    next_bundle = json.dumps(rows, indent=2) + "\n"
+    output.write_text(next_bundle, encoding="utf-8")
     metadata_path = Path(output_path).with_name("updated.json")
-    metadata = {"updated_at": datetime.utcnow().replace(microsecond=0).isoformat() + "Z"}
+    if previous_bundle == next_bundle and metadata_path.exists():
+        metadata = _load_json(metadata_path)
+    else:
+        metadata = {"updated_at": datetime.utcnow().replace(microsecond=0).isoformat() + "Z"}
     metadata_path.write_text(json.dumps(metadata, indent=2) + "\n", encoding="utf-8")
     _update_readme(rows)
 
