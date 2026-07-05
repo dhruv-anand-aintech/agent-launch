@@ -1,0 +1,155 @@
+{
+  "name": "Conductor",
+  "links": {
+    "docs": "https://docs.conductor.build/",
+    "github": "",
+    "website": "https://www.conductor.build/",
+    "slug": "conductor"
+  },
+  "form_factor": {
+    "values": [
+      "Mac App"
+    ],
+    "source_url": "https://www.conductor.build/docs/concepts/workspaces-and-branches#isolated-workspaces:~:text=Conductor",
+    "comment": "Native macOS (Apple Silicon) desktop app that orchestrates Claude Code, Codex, and Cursor agents in parallel. Per-form-factor links: Mac App: https://www.conductor.build/.",
+    "links": {
+      "Mac App": "https://www.conductor.build/"
+    }
+  },
+  "released_in": {
+    "value": "Jul '25",
+    "source_url": "https://www.conductor.build/changelog#changelog:~:text=Conductor",
+    "comment": "Launched publicly by Melty Labs in July 2025 (Show HN) as a Mac app for running parallel Claude Code agents."
+  },
+  "latest_major_update": {
+    "value": "Jul '26",
+    "source_url": "https://www.conductor.build/changelog#changelog:~:text=0.72.0",
+    "comment": "v0.72.0 (July 3, 2026) improves the workspace experience with better error handling and fixes across scripts, comments, archiving, and notifications."
+  },
+  "pricing": {
+    "value": "Free app; bring your own Claude/Codex/Cursor subscription or API key",
+    "source_url": "https://www.conductor.build/docs/reference/settings#choose-the-right-settings-file:~:text=providers",
+    "comment": "The app itself is free; you supply your own Claude Pro/Max or Codex/Cursor subscription, or an API key, per the harness settings."
+  },
+  "some_free_usage": {
+    "support": "partial",
+    "source_url": "https://www.conductor.build/docs/reference/settings#choose-the-right-settings-file:~:text=providers",
+    "comment": "App is free to download, but real agent work requires a paid Claude/Codex/Cursor subscription or API key."
+  },
+  "no_account_required": {
+    "support": "none",
+    "source_url": "https://www.conductor.build/docs/concepts/agent-modes#supported-controls:~:text=API%20keys",
+    "comment": "Requires signing into an underlying agent (Claude Code, Codex, or Cursor) account or supplying an API key."
+  },
+  "can_use_other_subscriptions": {
+    "support": "full",
+    "source_url": "https://www.conductor.build/docs/concepts/agent-modes#supported-controls:~:text=API%20keys",
+    "comment": "Uses whatever you are already logged into for Claude Code/Codex (Claude Pro/Max or API key), or an API key set in Settings → Harnesses/Environment."
+  },
+  "rules": {
+    "support": "full",
+    "source_url": "https://www.conductor.build/docs/concepts/agent-modes#repository-guidance:~:text=Repository%20guidance",
+    "comment": "Reads repository guidance (CLAUDE.md / AGENTS.md) via the underlying agent, plus repo-scoped Conductor settings."
+  },
+  "skills": {
+    "support": "full",
+    "source_url": "https://www.conductor.build/docs/concepts/agent-modes#skills:~:text=Skills",
+    "comment": "Exposes the underlying agent's Skills within a workspace."
+  },
+  "hooks": {
+    "support": "partial",
+    "source_url": "https://www.conductor.build/docs/reference/settings#quickstart-project-scripts:~:text=scripts",
+    "comment": "Project scripts and checks run around agent execution; underlying Claude Code/Codex lifecycle hooks also apply, but Conductor adds no separate hook system."
+  },
+  "mcp_servers": {
+    "support": "full",
+    "source_url": "https://www.conductor.build/docs/core/mcp#mcp:~:text=Model%20Context%20Protocol",
+    "comment": "Conductor sessions can use MCP servers where the selected agent host supports MCP; Claude Code and Codex load their agent-specific MCP configuration."
+  },
+  "custom_commands": {
+    "support": "partial",
+    "source_url": "https://www.conductor.build/docs/concepts/agent-modes#supported-controls:~:text=Codex%20goals",
+    "comment": "Slash commands of the underlying agent (e.g. Codex /goal) are available inside a Conductor workspace; no separate Conductor command system."
+  },
+  "goal_command": {
+    "support": "partial",
+    "source_url": "https://www.conductor.build/docs/concepts/agent-modes#codex-goals:~:text=goal",
+    "comment": "Codex goals (/goal) are surfaced in Conductor for Codex sessions, keeping objectives active across turns."
+  },
+  "subagents": {
+    "support": "partial",
+    "source_url": "https://www.conductor.build/docs/concepts/agent-modes#run-agents-together:~:text=Run%20agents%20together",
+    "comment": "Orchestrates multiple agents in parallel isolated workspaces rather than nested subagents within one session."
+  },
+  "monitor": {
+    "support": "full",
+    "source_url": "https://docs.conductor.build/faq#faq:~:text=need%20attention",
+    "comment": "Dashboard shows what every agent is doing and where it is stuck; sidebar badges flag workspaces where agents finished or need input."
+  },
+  "model_selection": {
+    "support": "full",
+    "source_url": "https://www.conductor.build/docs/concepts/agent-modes#supported-controls:~:text=model%20picker",
+    "comment": "Model picker lets you choose a Claude Code, Codex, Cursor, or OpenCode model per workspace."
+  },
+  "approval_mode": {
+    "support": "full",
+    "source_url": "https://www.conductor.build/docs/concepts/agent-modes#plan-mode:~:text=Plan%20Mode",
+    "comment": "Plan Mode requires approval before implementation; Fast Mode skips planning for quick edits."
+  },
+  "sandbox_mode": {
+    "support": "partial",
+    "source_url": "https://www.conductor.build/docs/concepts/workspaces-and-branches#what-isolation-gives-you:~:text=isolation",
+    "comment": "Each workspace is an isolated git worktree; process/network sandboxing depends on the underlying agent."
+  },
+  "resume": {
+    "support": "partial",
+    "source_url": "https://www.conductor.build/docs/concepts/workspaces-and-branches#one-workspace-per-branch:~:text=workspace",
+    "comment": "Workspaces persist so you can return to an in-progress agent session; no session-id resume flag exposed."
+  },
+  "non_interactive": {
+    "support": "none",
+    "source_url": "https://www.conductor.build/docs/concepts/workspaces-and-branches#the-core-model:~:text=workspace",
+    "comment": "GUI Mac app; no headless/print run mode."
+  },
+  "transcripts": {
+    "support": "partial",
+    "source_url": "https://www.conductor.build/docs/reference/diff-viewer#diff-viewer:~:text=review",
+    "comment": "Keeps per-workspace conversation and diff history in-app; underlying agent transcripts also persist on disk."
+  },
+  "git_integration": {
+    "support": "full",
+    "source_url": "https://www.conductor.build/docs/reference/diff-viewer#diff-viewer:~:text=diff",
+    "comment": "Deep git integration: worktrees, branch management, inline diff review with comments the agent responds to before pushing."
+  },
+  "hosted_agent": {
+    "support": "none",
+    "source_url": "https://www.conductor.build/docs/concepts/parallel-agents#parallel-agents:~:text=Mac",
+    "comment": "Agents run locally on your Mac; no managed cloud execution platform."
+  },
+  "custom_model_provider": {
+    "support": "partial",
+    "source_url": "https://www.conductor.build/docs/concepts/agent-modes#supported-controls:~:text=model%20picker",
+    "comment": "Limited to the supported harnesses (Claude Code, Codex, Cursor, OpenCode) and their model providers, not arbitrary OpenAI-compatible endpoints."
+  },
+  "git_worktrees": {
+    "support": "full",
+    "source_url": "https://www.conductor.build/docs/concepts/workspaces-and-branches#isolated-workspaces:~:text=Git%20worktrees",
+    "comment": "Core model: Conductor creates each workspace as a separate git worktree (1 workspace = 1 branch = 1 working tree), so parallel agents never conflict."
+  },
+  "chat_forking": {
+    "support": "unknown",
+    "source_url": "https://www.conductor.build/docs/concepts/workspaces-and-branches#one-workspace-per-branch:~:text=workspace",
+    "comment": "One workspace maps to one branch; no documented way to fork a conversation into a new branch/session."
+  },
+  "done_notifications": {
+    "support": "full",
+    "source_url": "https://docs.conductor.build/faq#faq:~:text=need%20attention",
+    "comment": "Sidebar badges tell you which workspaces need attention when their agents finish or need your input."
+  },
+  "byok_prompt_caching": {
+    "support": "full",
+    "source_url": "https://www.conductor.build/docs/core/mcp#mcp:~:text=Claude%20Code",
+    "comment": "Runs the real Claude Code / Codex CLIs on your own subscription or key, so their native Anthropic/OpenAI prompt caching still applies."
+  },
+  "notes": "Mac-only (Apple Silicon) orchestrator for running parallel Claude Code, Codex, and Cursor agents in isolated git worktrees, with inline diff review before pushing."
+}

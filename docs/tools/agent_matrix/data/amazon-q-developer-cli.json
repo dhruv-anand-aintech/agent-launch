@@ -192,5 +192,25 @@
     "support": "none",
     "source_url": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-chat-models.html#source:~:text=Claude%20Sonnet",
     "comment": "Models are served exclusively through AWS's own Amazon Bedrock-backed Q Developer service (Builder ID/IAM Identity Center auth); no option to route usage through a personal Anthropic/OpenAI API key or other vendor subscription."
+  },
+  "git_worktrees": {
+    "support": "partial",
+    "source_url": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-chat.html#chat:~:text=chat",
+    "comment": "Runs as a local process, so it works inside a manually created git worktree for parallel isolation, but ships no built-in worktree manager."
+  },
+  "chat_forking": {
+    "support": "unknown",
+    "source_url": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-chat.html#chat:~:text=chat",
+    "comment": "No public documentation found for forking a conversation into a separate branch/session."
+  },
+  "done_notifications": {
+    "support": "unknown",
+    "source_url": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-chat.html#chat:~:text=chat",
+    "comment": "No public documentation found for built-in completion/attention notifications."
+  },
+  "byok_prompt_caching": {
+    "support": "unknown",
+    "source_url": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-chat.html#chat:~:text=chat",
+    "comment": "Routes through Amazon Q's managed backend; no documented BYOK prompt-caching path."
   }
 }

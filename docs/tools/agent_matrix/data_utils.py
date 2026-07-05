@@ -387,12 +387,12 @@ def generate_llms_txt(bundle_path: str, output_path: str) -> None:
     feature_short = {
         "rules": "Rul", "skills": "Skl", "monitor": "Mon", "hooks": "Hks",
         "mcp_servers": "MCP", "custom_commands": "Cmd", "goal_command": "Gol", "subagents": "Sub",
-        "transcripts": "Trn",
+        "git_worktrees": "Wkt", "done_notifications": "Ntf", "transcripts": "Trn", "chat_forking": "Frk",
         "model_selection": "Mod", "approval_mode": "App", "sandbox_mode": "San",
         "resume": "Res", "continue": "Con", "non_interactive": "Hdl",
         "output_format": "Fmt", "statusline": "Sta", "telemetry": "Tel",
         "some_free_usage": "Fre", "no_account_required": "NoA", "can_use_other_subscriptions": "Oth",
-        "hosted_agent": "Hst", "custom_model_provider": "BYOM",
+        "hosted_agent": "Hst", "custom_model_provider": "BYOM", "byok_prompt_caching": "Cch",
     }
     fkeys = [k for k in feature_keys if k in feature_short]
     glyph = {"full": "Y", "partial": "~", "none": "N", "unknown": "?", "": " "}

@@ -183,5 +183,25 @@
     "support": "unknown",
     "source_url": "https://docs.example.com/#documentation:~:text=ui-customization",
     "comment": "Research needed. Check for UI layout, sidebar, or panel customization."
+  },
+  "git_worktrees": {
+    "support": "partial",
+    "source_url": "https://antigravity.google/docs#agent:~:text=agent",
+    "comment": "Runs as a local process, so it works inside a manually created git worktree for parallel isolation, but ships no built-in worktree manager."
+  },
+  "chat_forking": {
+    "support": "unknown",
+    "source_url": "https://antigravity.google/docs#agent:~:text=agent",
+    "comment": "No public documentation found for forking a conversation into a separate branch/session."
+  },
+  "done_notifications": {
+    "support": "unknown",
+    "source_url": "https://antigravity.google/docs#agent:~:text=agent",
+    "comment": "No public documentation found for built-in completion/attention notifications."
+  },
+  "byok_prompt_caching": {
+    "support": "unknown",
+    "source_url": "https://antigravity.google/docs#agent:~:text=agent",
+    "comment": "No public evidence on whether prompt/KV caching is preserved when using your own API key."
   }
 }

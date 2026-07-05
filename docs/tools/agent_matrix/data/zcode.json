@@ -185,5 +185,25 @@
     "source_url": "https://zcode.z.ai/en/changelog#release-v314:~:text=Interface%20scaling%20supports%20a%20larger%20magnification%20ratio",
     "comment": "Desktop UI supports interface scaling and theme switching; deeper layout customization is not documented."
   },
-  "notes": "Z.ai/Zhipu desktop ADE with in-house ZCode Agent, GLM-5.2 focus, AGENTS.md, skills, commands, MCP, subagents, plugins, goal mode, mobile remote control, bot channels, and remote SSH/Docker development. No local CLI command was found, so no agent-launch backend was added."
+  "notes": "Z.ai/Zhipu desktop ADE with in-house ZCode Agent, GLM-5.2 focus, AGENTS.md, skills, commands, MCP, subagents, plugins, goal mode, mobile remote control, bot channels, and remote SSH/Docker development. No local CLI command was found, so no agent-launch backend was added.",
+  "git_worktrees": {
+    "support": "none",
+    "source_url": "https://zcode.z.ai/en/docs#zcode:~:text=IDE",
+    "comment": "No built-in worktree support; tied to a single workspace/checkout. (IDE/desktop surface)."
+  },
+  "chat_forking": {
+    "support": "unknown",
+    "source_url": "https://zcode.z.ai/en/docs#zcode:~:text=session",
+    "comment": "No public documentation found for forking a conversation into a separate branch/session."
+  },
+  "done_notifications": {
+    "support": "unknown",
+    "source_url": "https://zcode.z.ai/en/docs#zcode:~:text=session",
+    "comment": "No public documentation found for built-in completion/attention notifications."
+  },
+  "byok_prompt_caching": {
+    "support": "unknown",
+    "source_url": "https://zcode.z.ai/en/docs#zcode:~:text=session",
+    "comment": "No public evidence on whether prompt/KV caching is preserved when using your own API key."
+  }
 }

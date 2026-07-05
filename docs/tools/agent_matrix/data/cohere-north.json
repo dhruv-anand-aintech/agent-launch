@@ -178,5 +178,25 @@
     "support": "unknown",
     "source_url": "https://docs.example.com/#documentation:~:text=ui-customization",
     "comment": "Research needed. Check for UI layout, sidebar, or panel customization."
+  },
+  "git_worktrees": {
+    "support": "none",
+    "source_url": "https://cohere.com/north/agent-studio#agent:~:text=agent",
+    "comment": "No built-in worktree support; tied to a single workspace/checkout."
+  },
+  "chat_forking": {
+    "support": "unknown",
+    "source_url": "https://cohere.com/north/agent-studio#agent:~:text=agent",
+    "comment": "No public documentation found for forking a conversation into a separate branch/session."
+  },
+  "done_notifications": {
+    "support": "unknown",
+    "source_url": "https://cohere.com/north/agent-studio#agent:~:text=agent",
+    "comment": "No public documentation found for built-in completion/attention notifications."
+  },
+  "byok_prompt_caching": {
+    "support": "unknown",
+    "source_url": "https://cohere.com/north/agent-studio#agent:~:text=agent",
+    "comment": "No public evidence on whether prompt/KV caching is preserved when using your own API key."
   }
 }

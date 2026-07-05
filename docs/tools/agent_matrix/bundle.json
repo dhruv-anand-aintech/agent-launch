@@ -194,6 +194,26 @@
       "support": "none",
       "source_url": "https://aider.chat/docs/#cli:~:text=customization",
       "comment": "CLI-based; no UI customization."
+    },
+    "git_worktrees": {
+      "support": "partial",
+      "source_url": "https://aider.chat/docs#aider:~:text=worktree",
+      "comment": "Runs as a local process, so it works inside a manually created git worktree for parallel isolation, but ships no built-in worktree manager."
+    },
+    "chat_forking": {
+      "support": "none",
+      "source_url": "https://aider.chat/docs#aider:~:text=clear",
+      "comment": "No conversation forking; only a fresh/cleared session is available."
+    },
+    "done_notifications": {
+      "support": "full",
+      "source_url": "https://aider.chat/docs/usage/notifications.html#notifications:~:text=notifications",
+      "comment": "Built-in --notifications / --notifications-command alerts you when the LLM finishes and is ready for input."
+    },
+    "byok_prompt_caching": {
+      "support": "full",
+      "source_url": "https://aider.chat/docs/usage/caching.html#prompt-caching:~:text=cache-prompts",
+      "comment": "--cache-prompts enables Anthropic prompt caching (system prompt, repo map, read-only files) with your own API key."
     }
   },
   {
@@ -392,6 +412,26 @@
       "support": "none",
       "source_url": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-chat-models.html#source:~:text=Claude%20Sonnet",
       "comment": "Models are served exclusively through AWS's own Amazon Bedrock-backed Q Developer service (Builder ID/IAM Identity Center auth); no option to route usage through a personal Anthropic/OpenAI API key or other vendor subscription."
+    },
+    "git_worktrees": {
+      "support": "partial",
+      "source_url": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-chat.html#chat:~:text=chat",
+      "comment": "Runs as a local process, so it works inside a manually created git worktree for parallel isolation, but ships no built-in worktree manager."
+    },
+    "chat_forking": {
+      "support": "unknown",
+      "source_url": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-chat.html#chat:~:text=chat",
+      "comment": "No public documentation found for forking a conversation into a separate branch/session."
+    },
+    "done_notifications": {
+      "support": "unknown",
+      "source_url": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-chat.html#chat:~:text=chat",
+      "comment": "No public documentation found for built-in completion/attention notifications."
+    },
+    "byok_prompt_caching": {
+      "support": "unknown",
+      "source_url": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-chat.html#chat:~:text=chat",
+      "comment": "Routes through Amazon Q's managed backend; no documented BYOK prompt-caching path."
     }
   },
   {
@@ -587,6 +627,26 @@
       "support": "unknown",
       "source_url": "https://docs.example.com/#documentation:~:text=ui-customization",
       "comment": "Research needed. Check for UI layout, sidebar, or panel customization."
+    },
+    "git_worktrees": {
+      "support": "partial",
+      "source_url": "https://ampcode.com/manual#threads:~:text=thread",
+      "comment": "Runs as a local process, so it works inside a manually created git worktree for parallel isolation, but ships no built-in worktree manager."
+    },
+    "chat_forking": {
+      "support": "full",
+      "source_url": "https://ampcode.com/manual#threads:~:text=fork",
+      "comment": "`amp threads fork <threadId>` branches a thread into a new conversation while leaving the original intact."
+    },
+    "done_notifications": {
+      "support": "unknown",
+      "source_url": "https://ampcode.com/manual#threads:~:text=thread",
+      "comment": "No public documentation found for built-in completion/attention notifications."
+    },
+    "byok_prompt_caching": {
+      "support": "unknown",
+      "source_url": "https://ampcode.com/manual#threads:~:text=thread",
+      "comment": "Amp bills through its own managed inference/credits rather than a general BYOK key, so BYOK caching is not applicable."
     }
   },
   {
@@ -776,6 +836,26 @@
       "support": "unknown",
       "source_url": "https://docs.example.com/#documentation:~:text=ui-customization",
       "comment": "Research needed. Check for UI layout, sidebar, or panel customization."
+    },
+    "git_worktrees": {
+      "support": "partial",
+      "source_url": "https://antigravity.google/docs#agent:~:text=agent",
+      "comment": "Runs as a local process, so it works inside a manually created git worktree for parallel isolation, but ships no built-in worktree manager."
+    },
+    "chat_forking": {
+      "support": "unknown",
+      "source_url": "https://antigravity.google/docs#agent:~:text=agent",
+      "comment": "No public documentation found for forking a conversation into a separate branch/session."
+    },
+    "done_notifications": {
+      "support": "unknown",
+      "source_url": "https://antigravity.google/docs#agent:~:text=agent",
+      "comment": "No public documentation found for built-in completion/attention notifications."
+    },
+    "byok_prompt_caching": {
+      "support": "unknown",
+      "source_url": "https://antigravity.google/docs#agent:~:text=agent",
+      "comment": "No public evidence on whether prompt/KV caching is preserved when using your own API key."
     }
   },
   {
@@ -966,6 +1046,26 @@
       "support": "full",
       "source_url": "https://code.claude.com/docs/en/settings#settings:~:text=ui-layout",
       "comment": "Customizable sidebar, panel arrangement, collapsible sections."
+    },
+    "git_worktrees": {
+      "support": "partial",
+      "source_url": "https://code.claude.com/docs/en/common-workflows#run-parallel-claude-code-sessions-with-git-worktrees:~:text=git%20worktrees",
+      "comment": "Documented parallel workflow using git worktrees; pairs with /branch session isolation, but no built-in worktree manager."
+    },
+    "chat_forking": {
+      "support": "full",
+      "source_url": "https://code.claude.com/docs/en/cli-reference#cli-commands:~:text=fork-session",
+      "comment": "--fork-session and /branch copy the conversation into a new session id, leaving the original untouched."
+    },
+    "done_notifications": {
+      "support": "full",
+      "source_url": "https://code.claude.com/docs/en/settings#settings:~:text=notifications",
+      "comment": "Notification hooks, terminal-bell notifications, and background-agent notifications fire when Claude finishes or needs input."
+    },
+    "byok_prompt_caching": {
+      "support": "full",
+      "source_url": "https://docs.anthropic.com/en/docs/build-with-claude/prompt-caching#how-prompt-caching-works:~:text=prompt%20caching",
+      "comment": "Anthropic prompt caching (cache_control) applies when running Claude Code on your own Anthropic API key."
     }
   },
   {
@@ -1167,6 +1267,26 @@
       "support": "partial",
       "source_url": "https://github.com/cline/cline#configuration:~:text=ui",
       "comment": "VS Code panel customization; Cline-specific UI limited."
+    },
+    "git_worktrees": {
+      "support": "none",
+      "source_url": "https://docs.cline.bot/features/slash-commands/new-task#new-task:~:text=task",
+      "comment": "No built-in worktree support; tied to a single workspace/checkout. (VS Code / JetBrains extension bound to the open workspace)."
+    },
+    "chat_forking": {
+      "support": "partial",
+      "source_url": "https://docs.cline.bot/features/slash-commands/new-task#new-task:~:text=New%20Task",
+      "comment": "/newtask hands off context to a fresh task; there is no tree-style fork that preserves the original branch point."
+    },
+    "done_notifications": {
+      "support": "full",
+      "source_url": "https://docs.cline.bot/features/notifications#notifications:~:text=notification",
+      "comment": "System notifications alert you when a task completes or Cline needs approval."
+    },
+    "byok_prompt_caching": {
+      "support": "full",
+      "source_url": "https://docs.cline.bot/provider-config/anthropic#prompt-caching:~:text=prompt%20caching",
+      "comment": "Supports Anthropic/OpenRouter prompt caching when configured with your own API key."
     }
   },
   {
@@ -1367,6 +1487,26 @@
       "support": "unknown",
       "source_url": "https://docs.example.com/#documentation:~:text=ui-customization",
       "comment": "Research needed. Check for UI layout, sidebar, or panel customization."
+    },
+    "git_worktrees": {
+      "support": "full",
+      "source_url": "https://developers.openai.com/codex/cli/features#worktrees:~:text=worktree",
+      "comment": "Codex isolates each thread in its own git worktree so parallel threads work on separate checkouts of the repo."
+    },
+    "chat_forking": {
+      "support": "full",
+      "source_url": "https://developers.openai.com/codex/cli/features#forking:~:text=fork",
+      "comment": "Conversation forking branches a thread to explore an alternative path while keeping the original."
+    },
+    "done_notifications": {
+      "support": "full",
+      "source_url": "https://developers.openai.com/codex/config-reference#notifications:~:text=notifications",
+      "comment": "The Codex app and TUI send notifications when a task completes or needs approval; configurable in settings/config.toml."
+    },
+    "byok_prompt_caching": {
+      "support": "full",
+      "source_url": "https://developers.openai.com/api/docs/guides/prompt-caching#prompt-caching:~:text=automatically",
+      "comment": "OpenAI prompt caching applies automatically to eligible requests when running Codex on your own API key."
     }
   },
   {
@@ -1551,7 +1691,184 @@
       "support": "unknown",
       "source_url": "https://docs.example.com/#documentation:~:text=ui-customization",
       "comment": "Research needed. Check for UI layout, sidebar, or panel customization."
+    },
+    "git_worktrees": {
+      "support": "none",
+      "source_url": "https://cohere.com/north/agent-studio#agent:~:text=agent",
+      "comment": "No built-in worktree support; tied to a single workspace/checkout."
+    },
+    "chat_forking": {
+      "support": "unknown",
+      "source_url": "https://cohere.com/north/agent-studio#agent:~:text=agent",
+      "comment": "No public documentation found for forking a conversation into a separate branch/session."
+    },
+    "done_notifications": {
+      "support": "unknown",
+      "source_url": "https://cohere.com/north/agent-studio#agent:~:text=agent",
+      "comment": "No public documentation found for built-in completion/attention notifications."
+    },
+    "byok_prompt_caching": {
+      "support": "unknown",
+      "source_url": "https://cohere.com/north/agent-studio#agent:~:text=agent",
+      "comment": "No public evidence on whether prompt/KV caching is preserved when using your own API key."
     }
+  },
+  {
+    "name": "Conductor",
+    "links": {
+      "docs": "https://docs.conductor.build/",
+      "github": "",
+      "website": "https://www.conductor.build/",
+      "slug": "conductor"
+    },
+    "form_factor": {
+      "values": [
+        "Mac App"
+      ],
+      "source_url": "https://www.conductor.build/docs/concepts/workspaces-and-branches#isolated-workspaces:~:text=Conductor",
+      "comment": "Native macOS (Apple Silicon) desktop app that orchestrates Claude Code, Codex, and Cursor agents in parallel. Per-form-factor links: Mac App: https://www.conductor.build/.",
+      "links": {
+        "Mac App": "https://www.conductor.build/"
+      }
+    },
+    "released_in": {
+      "value": "Jul '25",
+      "source_url": "https://www.conductor.build/changelog#changelog:~:text=Conductor",
+      "comment": "Launched publicly by Melty Labs in July 2025 (Show HN) as a Mac app for running parallel Claude Code agents.",
+      "sort_date": "2025-07-01"
+    },
+    "latest_major_update": {
+      "value": "Jul '26",
+      "source_url": "https://www.conductor.build/changelog#changelog:~:text=0.72.0",
+      "comment": "v0.72.0 (July 3, 2026) improves the workspace experience with better error handling and fixes across scripts, comments, archiving, and notifications.",
+      "sort_date": "2026-07-01"
+    },
+    "pricing": {
+      "value": "Free app; bring your own Claude/Codex/Cursor subscription or API key",
+      "source_url": "https://www.conductor.build/docs/reference/settings#choose-the-right-settings-file:~:text=providers",
+      "comment": "The app itself is free; you supply your own Claude Pro/Max or Codex/Cursor subscription, or an API key, per the harness settings."
+    },
+    "some_free_usage": {
+      "support": "partial",
+      "source_url": "https://www.conductor.build/docs/reference/settings#choose-the-right-settings-file:~:text=providers",
+      "comment": "App is free to download, but real agent work requires a paid Claude/Codex/Cursor subscription or API key."
+    },
+    "no_account_required": {
+      "support": "none",
+      "source_url": "https://www.conductor.build/docs/concepts/agent-modes#supported-controls:~:text=API%20keys",
+      "comment": "Requires signing into an underlying agent (Claude Code, Codex, or Cursor) account or supplying an API key."
+    },
+    "can_use_other_subscriptions": {
+      "support": "full",
+      "source_url": "https://www.conductor.build/docs/concepts/agent-modes#supported-controls:~:text=API%20keys",
+      "comment": "Uses whatever you are already logged into for Claude Code/Codex (Claude Pro/Max or API key), or an API key set in Settings \u2192 Harnesses/Environment."
+    },
+    "rules": {
+      "support": "full",
+      "source_url": "https://www.conductor.build/docs/concepts/agent-modes#repository-guidance:~:text=Repository%20guidance",
+      "comment": "Reads repository guidance (CLAUDE.md / AGENTS.md) via the underlying agent, plus repo-scoped Conductor settings."
+    },
+    "skills": {
+      "support": "full",
+      "source_url": "https://www.conductor.build/docs/concepts/agent-modes#skills:~:text=Skills",
+      "comment": "Exposes the underlying agent's Skills within a workspace."
+    },
+    "hooks": {
+      "support": "partial",
+      "source_url": "https://www.conductor.build/docs/reference/settings#quickstart-project-scripts:~:text=scripts",
+      "comment": "Project scripts and checks run around agent execution; underlying Claude Code/Codex lifecycle hooks also apply, but Conductor adds no separate hook system."
+    },
+    "mcp_servers": {
+      "support": "full",
+      "source_url": "https://www.conductor.build/docs/core/mcp#mcp:~:text=Model%20Context%20Protocol",
+      "comment": "Conductor sessions can use MCP servers where the selected agent host supports MCP; Claude Code and Codex load their agent-specific MCP configuration."
+    },
+    "custom_commands": {
+      "support": "partial",
+      "source_url": "https://www.conductor.build/docs/concepts/agent-modes#supported-controls:~:text=Codex%20goals",
+      "comment": "Slash commands of the underlying agent (e.g. Codex /goal) are available inside a Conductor workspace; no separate Conductor command system."
+    },
+    "goal_command": {
+      "support": "partial",
+      "source_url": "https://www.conductor.build/docs/concepts/agent-modes#codex-goals:~:text=goal",
+      "comment": "Codex goals (/goal) are surfaced in Conductor for Codex sessions, keeping objectives active across turns."
+    },
+    "subagents": {
+      "support": "partial",
+      "source_url": "https://www.conductor.build/docs/concepts/agent-modes#run-agents-together:~:text=Run%20agents%20together",
+      "comment": "Orchestrates multiple agents in parallel isolated workspaces rather than nested subagents within one session."
+    },
+    "monitor": {
+      "support": "full",
+      "source_url": "https://docs.conductor.build/faq#faq:~:text=need%20attention",
+      "comment": "Dashboard shows what every agent is doing and where it is stuck; sidebar badges flag workspaces where agents finished or need input."
+    },
+    "model_selection": {
+      "support": "full",
+      "source_url": "https://www.conductor.build/docs/concepts/agent-modes#supported-controls:~:text=model%20picker",
+      "comment": "Model picker lets you choose a Claude Code, Codex, Cursor, or OpenCode model per workspace."
+    },
+    "approval_mode": {
+      "support": "full",
+      "source_url": "https://www.conductor.build/docs/concepts/agent-modes#plan-mode:~:text=Plan%20Mode",
+      "comment": "Plan Mode requires approval before implementation; Fast Mode skips planning for quick edits."
+    },
+    "sandbox_mode": {
+      "support": "partial",
+      "source_url": "https://www.conductor.build/docs/concepts/workspaces-and-branches#what-isolation-gives-you:~:text=isolation",
+      "comment": "Each workspace is an isolated git worktree; process/network sandboxing depends on the underlying agent."
+    },
+    "resume": {
+      "support": "partial",
+      "source_url": "https://www.conductor.build/docs/concepts/workspaces-and-branches#one-workspace-per-branch:~:text=workspace",
+      "comment": "Workspaces persist so you can return to an in-progress agent session; no session-id resume flag exposed."
+    },
+    "non_interactive": {
+      "support": "none",
+      "source_url": "https://www.conductor.build/docs/concepts/workspaces-and-branches#the-core-model:~:text=workspace",
+      "comment": "GUI Mac app; no headless/print run mode."
+    },
+    "transcripts": {
+      "support": "partial",
+      "source_url": "https://www.conductor.build/docs/reference/diff-viewer#diff-viewer:~:text=review",
+      "comment": "Keeps per-workspace conversation and diff history in-app; underlying agent transcripts also persist on disk."
+    },
+    "git_integration": {
+      "support": "full",
+      "source_url": "https://www.conductor.build/docs/reference/diff-viewer#diff-viewer:~:text=diff",
+      "comment": "Deep git integration: worktrees, branch management, inline diff review with comments the agent responds to before pushing."
+    },
+    "hosted_agent": {
+      "support": "none",
+      "source_url": "https://www.conductor.build/docs/concepts/parallel-agents#parallel-agents:~:text=Mac",
+      "comment": "Agents run locally on your Mac; no managed cloud execution platform."
+    },
+    "custom_model_provider": {
+      "support": "partial",
+      "source_url": "https://www.conductor.build/docs/concepts/agent-modes#supported-controls:~:text=model%20picker",
+      "comment": "Limited to the supported harnesses (Claude Code, Codex, Cursor, OpenCode) and their model providers, not arbitrary OpenAI-compatible endpoints."
+    },
+    "git_worktrees": {
+      "support": "full",
+      "source_url": "https://www.conductor.build/docs/concepts/workspaces-and-branches#isolated-workspaces:~:text=Git%20worktrees",
+      "comment": "Core model: Conductor creates each workspace as a separate git worktree (1 workspace = 1 branch = 1 working tree), so parallel agents never conflict."
+    },
+    "chat_forking": {
+      "support": "unknown",
+      "source_url": "https://www.conductor.build/docs/concepts/workspaces-and-branches#one-workspace-per-branch:~:text=workspace",
+      "comment": "One workspace maps to one branch; no documented way to fork a conversation into a new branch/session."
+    },
+    "done_notifications": {
+      "support": "full",
+      "source_url": "https://docs.conductor.build/faq#faq:~:text=need%20attention",
+      "comment": "Sidebar badges tell you which workspaces need attention when their agents finish or need your input."
+    },
+    "byok_prompt_caching": {
+      "support": "full",
+      "source_url": "https://www.conductor.build/docs/core/mcp#mcp:~:text=Claude%20Code",
+      "comment": "Runs the real Claude Code / Codex CLIs on your own subscription or key, so their native Anthropic/OpenAI prompt caching still applies."
+    },
+    "notes": "Mac-only (Apple Silicon) orchestrator for running parallel Claude Code, Codex, and Cursor agents in isolated git worktrees, with inline diff review before pushing."
   },
   {
     "name": "Crush",
@@ -1750,6 +2067,26 @@
       "support": "full",
       "source_url": "https://github.com/charmbracelet/crush#source:~:text=Crush%20supports%20a%20wide%20range%20of%20LLMs",
       "comment": "Routes through the user's own API keys/accounts for any supported provider (Anthropic, OpenAI, etc.) or coding-plan subscriptions (GLM Coding Plan, Kimi Code, MiniMax Coding Plan, Synthetic) rather than a Crush-owned subscription."
+    },
+    "git_worktrees": {
+      "support": "partial",
+      "source_url": "https://github.com/charmbracelet/crush/blob/main/README.md#crush:~:text=session",
+      "comment": "Runs as a local process, so it works inside a manually created git worktree for parallel isolation, but ships no built-in worktree manager."
+    },
+    "chat_forking": {
+      "support": "unknown",
+      "source_url": "https://github.com/charmbracelet/crush/blob/main/README.md#crush:~:text=session",
+      "comment": "No public documentation found for forking a conversation into a separate branch/session."
+    },
+    "done_notifications": {
+      "support": "unknown",
+      "source_url": "https://github.com/charmbracelet/crush/blob/main/README.md#crush:~:text=session",
+      "comment": "No public documentation found for built-in completion/attention notifications."
+    },
+    "byok_prompt_caching": {
+      "support": "partial",
+      "source_url": "https://github.com/charmbracelet/crush/blob/main/README.md#crush:~:text=providers",
+      "comment": "Talks directly to providers with your keys, so provider-side prompt caching can apply; behavior is not separately documented."
     }
   },
   {
@@ -1943,6 +2280,26 @@
       "support": "full",
       "source_url": "https://docs.cursor.com/ui#ui:~:text=customization",
       "comment": "Customizable layout, sidebar, panels (VS Code-based)."
+    },
+    "git_worktrees": {
+      "support": "partial",
+      "source_url": "https://docs.cursor.com/en/agent/parallel-agents#parallel-agents:~:text=worktree",
+      "comment": "Parallel/background agents can run each in an isolated worktree-style workspace; not a general local worktree manager."
+    },
+    "chat_forking": {
+      "support": "unknown",
+      "source_url": "https://docs.cursor.com/en/agent/chat/overview#overview:~:text=chat",
+      "comment": "No public documentation found for forking a conversation into a separate branch/session."
+    },
+    "done_notifications": {
+      "support": "full",
+      "source_url": "https://docs.cursor.com/en/configuration/notifications#notifications:~:text=notification",
+      "comment": "Cursor shows desktop/sound notifications when an agent finishes or needs input."
+    },
+    "byok_prompt_caching": {
+      "support": "none",
+      "source_url": "https://docs.cursor.com/en/account/pricing#api-keys:~:text=API%20key",
+      "comment": "Custom BYOK API keys bypass Cursor's managed backend, which disables Cursor's prompt/KV caching (and blocks Agent/Edit on some plans)."
     }
   },
   {
@@ -2136,6 +2493,26 @@
       "support": "unknown",
       "source_url": "https://docs.example.com/#documentation:~:text=ui-customization",
       "comment": "Research needed. Check for UI layout, sidebar, or panel customization."
+    },
+    "git_worktrees": {
+      "support": "partial",
+      "source_url": "https://docs.devin.ai/product-guides/parallel-devins#parallel-devins:~:text=parallel",
+      "comment": "Each task runs in its own isolated cloud workspace/branch rather than local git worktrees, giving equivalent per-task isolation."
+    },
+    "chat_forking": {
+      "support": "unknown",
+      "source_url": "https://docs.devin.ai/product-guides/parallel-devins#parallel-devins:~:text=session",
+      "comment": "No public documentation found for forking a conversation into a separate branch/session."
+    },
+    "done_notifications": {
+      "support": "partial",
+      "source_url": "https://docs.devin.ai/integrations/slack#slack:~:text=Slack",
+      "comment": "Notifies via Slack/UI when a session finishes or needs input; no local desktop notification setting documented."
+    },
+    "byok_prompt_caching": {
+      "support": "unknown",
+      "source_url": "https://docs.devin.ai/product-guides/parallel-devins#parallel-devins:~:text=session",
+      "comment": "Managed platform; no documented BYOK prompt-caching path."
     }
   },
   {
@@ -2332,6 +2709,26 @@
       "support": "unknown",
       "source_url": "https://docs.example.com/#documentation:~:text=ui-customization",
       "comment": "Research needed. Check for UI layout, sidebar, or panel customization."
+    },
+    "git_worktrees": {
+      "support": "partial",
+      "source_url": "https://docs.factory.ai/cli/byok/overview#overview:~:text=key",
+      "comment": "Runs as a local process, so it works inside a manually created git worktree for parallel isolation, but ships no built-in worktree manager."
+    },
+    "chat_forking": {
+      "support": "unknown",
+      "source_url": "https://docs.factory.ai/cli/byok/overview#overview:~:text=session",
+      "comment": "No public documentation found for forking a conversation into a separate branch/session."
+    },
+    "done_notifications": {
+      "support": "unknown",
+      "source_url": "https://docs.factory.ai/cli/byok/overview#overview:~:text=session",
+      "comment": "No public documentation found for built-in completion/attention notifications."
+    },
+    "byok_prompt_caching": {
+      "support": "partial",
+      "source_url": "https://docs.factory.ai/cli/byok/overview#overview:~:text=Bring%20Your%20Own%20Key",
+      "comment": "Supports BYOK; provider-side caching can apply when routing to Anthropic/OpenAI with your key, but caching behavior is not separately documented."
     }
   },
   {
@@ -2525,6 +2922,26 @@
       "support": "unknown",
       "source_url": "https://docs.example.com/#documentation:~:text=ui-customization",
       "comment": "Research needed. Check for UI layout, sidebar, or panel customization."
+    },
+    "git_worktrees": {
+      "support": "partial",
+      "source_url": "https://geminicli.com/docs/#configuration:~:text=worktree",
+      "comment": "Runs as a local process, so it works inside a manually created git worktree for parallel isolation, but ships no built-in worktree manager."
+    },
+    "chat_forking": {
+      "support": "unknown",
+      "source_url": "https://geminicli.com/docs/cli/commands/#chat:~:text=chat",
+      "comment": "No public documentation found for forking a conversation into a separate branch/session."
+    },
+    "done_notifications": {
+      "support": "partial",
+      "source_url": "https://geminicli.com/docs/cli/notifications/#notifications:~:text=notifications",
+      "comment": "Experimental notifications setting plus community extensions (Chime, gemini-notifier) alert on task completion/permission."
+    },
+    "byok_prompt_caching": {
+      "support": "partial",
+      "source_url": "https://ai.google.dev/gemini-api/docs/caching#context-caching:~:text=caching",
+      "comment": "Gemini implicit context caching applies to eligible requests when running on your own Gemini API key."
     }
   },
   {
@@ -2722,6 +3139,26 @@
       "support": "full",
       "source_url": "https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models#source:~:text=Using%20your%20own%20LLM%20models%20in%20GitHub%20Copilot%20CLI",
       "comment": "BYOK support for Anthropic, OpenAI, Azure OpenAI, AWS Bedrock, Google AI Studio, xAI/Microsoft Foundry, any OpenAI-compatible endpoint, and local models via Ollama, configured with COPILOT_PROVIDER_TYPE / COPILOT_PROVIDER_BASE_URL / COPILOT_PROVIDER_API_KEY / COPILOT_MODEL env vars."
+    },
+    "git_worktrees": {
+      "support": "partial",
+      "source_url": "https://docs.github.com/en/copilot/concepts/agents/about-copilot-cli#about-github-copilot-cli:~:text=CLI",
+      "comment": "Runs as a local process, so it works inside a manually created git worktree for parallel isolation, but ships no built-in worktree manager."
+    },
+    "chat_forking": {
+      "support": "unknown",
+      "source_url": "https://docs.github.com/en/copilot/concepts/agents/about-copilot-cli#about-github-copilot-cli:~:text=session",
+      "comment": "No public documentation found for forking a conversation into a separate branch/session."
+    },
+    "done_notifications": {
+      "support": "unknown",
+      "source_url": "https://docs.github.com/en/copilot/concepts/agents/about-copilot-cli#about-github-copilot-cli:~:text=CLI",
+      "comment": "No public documentation found for built-in completion/attention notifications."
+    },
+    "byok_prompt_caching": {
+      "support": "unknown",
+      "source_url": "https://docs.github.com/en/copilot/concepts/agents/about-copilot-cli#about-github-copilot-cli:~:text=CLI",
+      "comment": "Runs on Copilot's managed model backend; no documented BYOK prompt-caching path."
     }
   },
   {
@@ -2912,6 +3349,26 @@
       "support": "unknown",
       "source_url": "https://docs.example.com/#documentation:~:text=ui-customization",
       "comment": "Research needed. Check for UI layout, sidebar, or panel customization."
+    },
+    "git_worktrees": {
+      "support": "partial",
+      "source_url": "https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent#coding-agent:~:text=environment",
+      "comment": "Runs each task in an isolated ephemeral GitHub Actions environment on its own branch, rather than local git worktrees."
+    },
+    "chat_forking": {
+      "support": "unknown",
+      "source_url": "https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent#coding-agent:~:text=session",
+      "comment": "No public documentation found for forking a conversation into a separate branch/session."
+    },
+    "done_notifications": {
+      "support": "partial",
+      "source_url": "https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent#coding-agent:~:text=pull%20request",
+      "comment": "You receive GitHub notifications (PR opened/updated, review requested) when the agent finishes a task."
+    },
+    "byok_prompt_caching": {
+      "support": "unknown",
+      "source_url": "https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent#coding-agent:~:text=agent",
+      "comment": "Managed backend; no documented BYOK prompt-caching path."
     }
   },
   {
@@ -3111,6 +3568,26 @@
       "support": "full",
       "source_url": "https://github.com/block/goose#source:~:text=15%2B%20LLM%20providers",
       "comment": "Routes agent usage through the user's own provider account/API key (Anthropic, OpenAI, Azure, Bedrock, Databricks, Groq, OpenRouter, etc.) or local inference (Ollama) rather than a Goose-owned subscription."
+    },
+    "git_worktrees": {
+      "support": "partial",
+      "source_url": "https://goose-docs.ai/docs/getting-started/using-goose-free#using-goose-free:~:text=session",
+      "comment": "Runs as a local process, so it works inside a manually created git worktree for parallel isolation, but ships no built-in worktree manager."
+    },
+    "chat_forking": {
+      "support": "unknown",
+      "source_url": "https://goose-docs.ai/docs/getting-started/using-goose-free#using-goose-free:~:text=session",
+      "comment": "No public documentation found for forking a conversation into a separate branch/session."
+    },
+    "done_notifications": {
+      "support": "unknown",
+      "source_url": "https://goose-docs.ai/docs/getting-started/using-goose-free#using-goose-free:~:text=session",
+      "comment": "No public documentation found for built-in completion/attention notifications."
+    },
+    "byok_prompt_caching": {
+      "support": "partial",
+      "source_url": "https://goose-docs.ai/docs/getting-started/providers#providers:~:text=provider",
+      "comment": "Connects directly to providers with your keys, so Anthropic-style prompt caching can apply; not separately documented."
     }
   },
   {
@@ -3293,6 +3770,26 @@
       "support": "unknown",
       "source_url": "https://docs.example.com/#documentation:~:text=ui-customization",
       "comment": "Research needed. Check for UI layout, sidebar, or panel customization."
+    },
+    "git_worktrees": {
+      "support": "partial",
+      "source_url": "https://x.ai/news/grok-build-cli#grok:~:text=CLI",
+      "comment": "Runs as a local process, so it works inside a manually created git worktree for parallel isolation, but ships no built-in worktree manager."
+    },
+    "chat_forking": {
+      "support": "unknown",
+      "source_url": "https://x.ai/news/grok-build-cli#grok:~:text=CLI",
+      "comment": "No public documentation found for forking a conversation into a separate branch/session."
+    },
+    "done_notifications": {
+      "support": "unknown",
+      "source_url": "https://x.ai/news/grok-build-cli#grok:~:text=CLI",
+      "comment": "No public documentation found for built-in completion/attention notifications."
+    },
+    "byok_prompt_caching": {
+      "support": "unknown",
+      "source_url": "https://x.ai/news/grok-build-cli#grok:~:text=CLI",
+      "comment": "No public evidence on whether prompt/KV caching is preserved when using your own API key."
     }
   },
   {
@@ -3475,6 +3972,26 @@
       "support": "unknown",
       "source_url": "https://docs.example.com/#documentation:~:text=ui-customization",
       "comment": "Research needed. Check for UI layout, sidebar, or panel customization."
+    },
+    "git_worktrees": {
+      "support": "partial",
+      "source_url": "https://jules.google/docs#jules:~:text=task",
+      "comment": "Each task runs in its own isolated cloud workspace/branch rather than local git worktrees, giving equivalent per-task isolation."
+    },
+    "chat_forking": {
+      "support": "unknown",
+      "source_url": "https://jules.google/docs#jules:~:text=task",
+      "comment": "No public documentation found for forking a conversation into a separate branch/session."
+    },
+    "done_notifications": {
+      "support": "partial",
+      "source_url": "https://jules.google/docs#jules:~:text=notification",
+      "comment": "Notifies via GitHub/email/UI when a task completes or needs review; no local desktop notification documented."
+    },
+    "byok_prompt_caching": {
+      "support": "unknown",
+      "source_url": "https://jules.google/docs#jules:~:text=task",
+      "comment": "Managed Google-hosted platform; no BYOK prompt-caching path."
     }
   },
   {
@@ -3665,6 +4182,26 @@
       "support": "partial",
       "source_url": "https://junie.jetbrains.com/docs/slash-commands.html#built-in-slash-commands:~:text=%60%2Fsettings%20%60%20Change%20Junie%20settings%2C%20including%20theme%2C%20notifications%2C%20step%20limit%2C%20subagents%20mode%2C%20and%20diff%20view%20mode",
       "comment": "CLI settings include theme, notifications, step limit, subagents mode, and diff view mode; no broad layout customization was found."
+    },
+    "git_worktrees": {
+      "support": "partial",
+      "source_url": "https://junie.jetbrains.com/docs/junie-cli.html#junie:~:text=CLI",
+      "comment": "Runs as a local process, so it works inside a manually created git worktree for parallel isolation, but ships no built-in worktree manager."
+    },
+    "chat_forking": {
+      "support": "unknown",
+      "source_url": "https://junie.jetbrains.com/docs/junie-cli.html#junie:~:text=session",
+      "comment": "No public documentation found for forking a conversation into a separate branch/session."
+    },
+    "done_notifications": {
+      "support": "unknown",
+      "source_url": "https://junie.jetbrains.com/docs/junie-cli.html#junie:~:text=session",
+      "comment": "No public documentation found for built-in completion/attention notifications."
+    },
+    "byok_prompt_caching": {
+      "support": "unknown",
+      "source_url": "https://junie.jetbrains.com/docs/junie-cli.html#junie:~:text=session",
+      "comment": "No public evidence on whether prompt/KV caching is preserved when using your own API key."
     }
   },
   {
@@ -3864,6 +4401,26 @@
       "support": "unknown",
       "source_url": "https://docs.example.com/#documentation:~:text=ui-customization",
       "comment": "Research needed. Check for UI layout, sidebar, or panel customization."
+    },
+    "git_worktrees": {
+      "support": "partial",
+      "source_url": "https://kilo.ai/docs/getting-started#getting-started:~:text=session",
+      "comment": "Runs as a local process, so it works inside a manually created git worktree for parallel isolation, but ships no built-in worktree manager."
+    },
+    "chat_forking": {
+      "support": "partial",
+      "source_url": "https://kilo.ai/docs/getting-started#getting-started:~:text=task",
+      "comment": "New-task handoff carries context to a fresh task (Cline/Roo lineage); no tree-style fork documented."
+    },
+    "done_notifications": {
+      "support": "partial",
+      "source_url": "https://kilo.ai/docs/features/notifications#notifications:~:text=notification",
+      "comment": "System/sound notifications available on task completion (Cline/Roo lineage)."
+    },
+    "byok_prompt_caching": {
+      "support": "partial",
+      "source_url": "https://kilo.ai/docs/providers/anthropic#prompt-caching:~:text=caching",
+      "comment": "Supports provider prompt caching (e.g. Anthropic/OpenRouter) when configured with your own API key."
     }
   },
   {
@@ -4050,6 +4607,26 @@
       "support": "unknown",
       "source_url": "https://docs.example.com/#documentation:~:text=ui-customization",
       "comment": "Research needed. Check for UI layout, sidebar, or panel customization."
+    },
+    "git_worktrees": {
+      "support": "partial",
+      "source_url": "https://www.kimi.com/code/docs/en/kimi-code-cli/getting-started.html#getting-started:~:text=session",
+      "comment": "Runs as a local process, so it works inside a manually created git worktree for parallel isolation, but ships no built-in worktree manager."
+    },
+    "chat_forking": {
+      "support": "unknown",
+      "source_url": "https://www.kimi.com/code/docs/en/kimi-code-cli/getting-started.html#getting-started:~:text=session",
+      "comment": "No public documentation found for forking a conversation into a separate branch/session."
+    },
+    "done_notifications": {
+      "support": "unknown",
+      "source_url": "https://www.kimi.com/code/docs/en/kimi-code-cli/getting-started.html#getting-started:~:text=session",
+      "comment": "No public documentation found for built-in completion/attention notifications."
+    },
+    "byok_prompt_caching": {
+      "support": "partial",
+      "source_url": "https://www.kimi.com/code/docs/en/kimi-code-cli/getting-started.html#getting-started:~:text=API",
+      "comment": "Calls Moonshot / OpenAI-compatible endpoints with your key; provider caching can apply but is not separately documented."
     }
   },
   {
@@ -4241,6 +4818,26 @@
       "support": "unknown",
       "source_url": "https://docs.example.com/#documentation:~:text=ui-customization",
       "comment": "Research needed. Check for UI layout, sidebar, or panel customization."
+    },
+    "git_worktrees": {
+      "support": "none",
+      "source_url": "https://kiro.dev/docs#kiro:~:text=IDE",
+      "comment": "No built-in worktree support; tied to a single workspace/checkout. (agentic IDE)."
+    },
+    "chat_forking": {
+      "support": "unknown",
+      "source_url": "https://kiro.dev/docs#kiro:~:text=session",
+      "comment": "No public documentation found for forking a conversation into a separate branch/session."
+    },
+    "done_notifications": {
+      "support": "unknown",
+      "source_url": "https://kiro.dev/docs#kiro:~:text=session",
+      "comment": "No public documentation found for built-in completion/attention notifications."
+    },
+    "byok_prompt_caching": {
+      "support": "unknown",
+      "source_url": "https://kiro.dev/docs#kiro:~:text=session",
+      "comment": "No public evidence on whether prompt/KV caching is preserved when using your own API key."
     }
   },
   {
@@ -4442,6 +5039,26 @@
       "support": "partial",
       "source_url": "https://mimo.xiaomi.com/mimocode/config-files#config-files:~:text=share%20%60string%60%60%22manual%22%60%20%2F%20%60%22auto%22%60%20%2F%20%60%22disabled%22%60",
       "comment": "Themes and keybindings are customizable, but no documented layout/sidebar/panel customization was found."
+    },
+    "git_worktrees": {
+      "support": "partial",
+      "source_url": "https://mimo.xiaomi.com/mimocode/start#start:~:text=session",
+      "comment": "Runs as a local process, so it works inside a manually created git worktree for parallel isolation, but ships no built-in worktree manager."
+    },
+    "chat_forking": {
+      "support": "unknown",
+      "source_url": "https://mimo.xiaomi.com/mimocode/start#start:~:text=session",
+      "comment": "No public documentation found for forking a conversation into a separate branch/session."
+    },
+    "done_notifications": {
+      "support": "unknown",
+      "source_url": "https://mimo.xiaomi.com/mimocode/start#start:~:text=session",
+      "comment": "No public documentation found for built-in completion/attention notifications."
+    },
+    "byok_prompt_caching": {
+      "support": "unknown",
+      "source_url": "https://mimo.xiaomi.com/mimocode/start#start:~:text=session",
+      "comment": "No public evidence on whether prompt/KV caching is preserved when using your own API key."
     }
   },
   {
@@ -4645,6 +5262,26 @@
       "support": "unknown",
       "source_url": "https://docs.example.com/#documentation:~:text=ui-customization",
       "comment": "Research needed. Check for UI layout, sidebar, or panel customization."
+    },
+    "git_worktrees": {
+      "support": "partial",
+      "source_url": "https://opencode.ai/docs#opencode:~:text=session",
+      "comment": "Runs as a local process, so it works inside a manually created git worktree for parallel isolation, but ships no built-in worktree manager."
+    },
+    "chat_forking": {
+      "support": "unknown",
+      "source_url": "https://opencode.ai/docs#opencode:~:text=session",
+      "comment": "No public documentation found for forking a conversation into a separate branch/session."
+    },
+    "done_notifications": {
+      "support": "unknown",
+      "source_url": "https://opencode.ai/docs#opencode:~:text=session",
+      "comment": "No public documentation found for built-in completion/attention notifications."
+    },
+    "byok_prompt_caching": {
+      "support": "partial",
+      "source_url": "https://opencode.ai/docs/providers#providers:~:text=provider",
+      "comment": "Routes directly to providers with your keys, so provider-side prompt caching can apply; not separately documented."
     }
   },
   {
@@ -4850,6 +5487,26 @@
       "support": "full",
       "source_url": "https://docs.openhands.dev/openhands/usage/cli/command-reference#environment-variables:~:text=LLM_API_KEY",
       "comment": "Connects to any LiteLLM-supported provider (Anthropic, OpenAI, OpenRouter, local Ollama/vLLM/SGLang, etc.) via your own API key, configured through Settings UI, ~/.openhands/agent_settings.json, or LLM_API_KEY/LLM_MODEL/LLM_BASE_URL env vars with --override-with-envs."
+    },
+    "git_worktrees": {
+      "support": "partial",
+      "source_url": "https://docs.openhands.dev/usage/how-to/cli-mode#cli-mode:~:text=workspace",
+      "comment": "Isolates each conversation in its own runtime/workspace (Docker), giving per-task isolation rather than local git worktrees."
+    },
+    "chat_forking": {
+      "support": "unknown",
+      "source_url": "https://docs.openhands.dev/usage/how-to/cli-mode#cli-mode:~:text=session",
+      "comment": "No public documentation found for forking a conversation into a separate branch/session."
+    },
+    "done_notifications": {
+      "support": "unknown",
+      "source_url": "https://docs.openhands.dev/usage/how-to/cli-mode#cli-mode:~:text=session",
+      "comment": "No public documentation found for built-in completion/attention notifications."
+    },
+    "byok_prompt_caching": {
+      "support": "partial",
+      "source_url": "https://docs.openhands.dev/usage/llms/llms#llm:~:text=API%20key",
+      "comment": "Uses your own LLM API keys directly, so provider prompt caching can apply; not separately documented."
     }
   },
   {
@@ -5044,6 +5701,26 @@
       "support": "unknown",
       "source_url": "https://docs.example.com/#documentation:~:text=ui-customization",
       "comment": "Research needed. Check for UI layout, sidebar, or panel customization."
+    },
+    "git_worktrees": {
+      "support": "partial",
+      "source_url": "https://pi.dev/docs/latest#pi:~:text=session",
+      "comment": "Runs as a local process, so it works inside a manually created git worktree for parallel isolation, but ships no built-in worktree manager."
+    },
+    "chat_forking": {
+      "support": "unknown",
+      "source_url": "https://pi.dev/docs/latest#pi:~:text=session",
+      "comment": "No public documentation found for forking a conversation into a separate branch/session."
+    },
+    "done_notifications": {
+      "support": "unknown",
+      "source_url": "https://pi.dev/docs/latest#pi:~:text=session",
+      "comment": "No public documentation found for built-in completion/attention notifications."
+    },
+    "byok_prompt_caching": {
+      "support": "unknown",
+      "source_url": "https://pi.dev/docs/latest#pi:~:text=session",
+      "comment": "No public evidence on whether prompt/KV caching is preserved when using your own API key."
     }
   },
   {
@@ -5232,6 +5909,26 @@
       "support": "unknown",
       "source_url": "https://docs.example.com/#documentation:~:text=ui-customization",
       "comment": "Research needed. Check for UI layout, sidebar, or panel customization."
+    },
+    "git_worktrees": {
+      "support": "partial",
+      "source_url": "https://qwenlm.github.io/qwen-code-docs/en/users/overview#overview:~:text=session",
+      "comment": "Runs as a local process, so it works inside a manually created git worktree for parallel isolation, but ships no built-in worktree manager."
+    },
+    "chat_forking": {
+      "support": "unknown",
+      "source_url": "https://qwenlm.github.io/qwen-code-docs/en/users/overview#overview:~:text=session",
+      "comment": "No public documentation found for forking a conversation into a separate branch/session."
+    },
+    "done_notifications": {
+      "support": "partial",
+      "source_url": "https://qwenlm.github.io/qwen-code-docs/en/users/overview#overview:~:text=notification",
+      "comment": "Gemini-CLI lineage: experimental notifications settings alert on completion/permission."
+    },
+    "byok_prompt_caching": {
+      "support": "partial",
+      "source_url": "https://qwenlm.github.io/qwen-code-docs/en/users/overview#overview:~:text=API",
+      "comment": "Calls OpenAI-compatible / DashScope endpoints with your key; provider caching can apply but is not separately documented."
     }
   },
   {
@@ -5414,6 +6111,26 @@
       "support": "unknown",
       "source_url": "https://docs.example.com/#documentation:~:text=ui-customization",
       "comment": "Research needed. Check for UI layout, sidebar, or panel customization."
+    },
+    "git_worktrees": {
+      "support": "none",
+      "source_url": "https://docs.replit.com/replitai/agent#agent:~:text=cloud",
+      "comment": "Runs in Replit's cloud workspace; no local git worktree model."
+    },
+    "chat_forking": {
+      "support": "unknown",
+      "source_url": "https://docs.replit.com/replitai/agent#agent:~:text=session",
+      "comment": "No public documentation found for forking a conversation into a separate branch/session."
+    },
+    "done_notifications": {
+      "support": "partial",
+      "source_url": "https://docs.replit.com/replitai/agent#agent:~:text=notification",
+      "comment": "Replit mobile/web notifies you when the agent finishes or needs input."
+    },
+    "byok_prompt_caching": {
+      "support": "unknown",
+      "source_url": "https://docs.replit.com/replitai/agent#agent:~:text=agent",
+      "comment": "Managed platform; no documented BYOK prompt-caching path."
     }
   },
   {
@@ -5596,7 +6313,163 @@
       "support": "partial",
       "source_url": "https://github.com/RooVetGit/Roo-Code#configuration:~:text=ui",
       "comment": "VS Code UI customization."
+    },
+    "git_worktrees": {
+      "support": "none",
+      "source_url": "https://docs.roocode.com/features/settings-management#settings-management:~:text=extension",
+      "comment": "No built-in worktree support; tied to a single workspace/checkout. (VS Code extension)."
+    },
+    "chat_forking": {
+      "support": "partial",
+      "source_url": "https://docs.roocode.com/features/boomerang-tasks#boomerang-tasks:~:text=subtask",
+      "comment": "Boomerang/subtask handoff spawns child tasks; no tree-style fork that preserves the original branch point."
+    },
+    "done_notifications": {
+      "support": "partial",
+      "source_url": "https://docs.roocode.com/features/settings-management#notifications:~:text=notification",
+      "comment": "Sound/system notifications available on task completion or approval requests."
+    },
+    "byok_prompt_caching": {
+      "support": "full",
+      "source_url": "https://docs.roocode.com/features/prompt-caching#prompt-caching:~:text=prompt%20caching",
+      "comment": "Supports prompt caching for Anthropic/OpenRouter/Bedrock etc. when configured with your own API key."
     }
+  },
+  {
+    "name": "T3 Code",
+    "links": {
+      "docs": "https://t3.codes",
+      "github": "https://github.com/pingdotgg/t3code",
+      "website": "https://t3.codes",
+      "slug": "t3code"
+    },
+    "form_factor": {
+      "values": [
+        "CLI",
+        "Web",
+        "Desktop App"
+      ],
+      "source_url": "https://github.com/pingdotgg/t3code#t3-code:~:text=minimal%20web%20GUI",
+      "comment": "A minimal GUI for coding agents: launch via CLI (npx t3@latest), a web interface, and desktop apps for macOS/Windows/Linux. Per-form-factor links: CLI: https://github.com/pingdotgg/t3code; Web: https://t3.codes; Desktop App: https://t3.codes.",
+      "links": {
+        "CLI": "https://github.com/pingdotgg/t3code",
+        "Web": "https://t3.codes",
+        "Desktop App": "https://t3.codes"
+      }
+    },
+    "released_in": {
+      "value": "Jun '26",
+      "source_url": "https://github.com/pingdotgg/t3code#t3-code:~:text=early",
+      "comment": "Early-stage open-source project from Theo / the T3 team; still pre-1.0.",
+      "sort_date": "2026-06-01"
+    },
+    "latest_major_update": {
+      "value": "Jun '26",
+      "source_url": "https://github.com/pingdotgg/t3code/releases#releases:~:text=v0.0",
+      "comment": "Actively iterating; v0.0.28 released June 29, 2026.",
+      "sort_date": "2026-06-01"
+    },
+    "pricing": {
+      "value": "Free, open source (MIT); bring your own API keys",
+      "source_url": "https://github.com/pingdotgg/t3code#license:~:text=MIT",
+      "comment": "MIT-licensed and free; you pay only for the model usage your own accounts/keys accrue (BYOK)."
+    },
+    "some_free_usage": {
+      "support": "partial",
+      "source_url": "https://github.com/pingdotgg/t3code#t3-code:~:text=bring%20your%20own",
+      "comment": "The app is free, but real agent work is billed to your own API keys."
+    },
+    "no_account_required": {
+      "support": "none",
+      "source_url": "https://github.com/pingdotgg/t3code#t3-code:~:text=bring%20your%20own",
+      "comment": "Requires credentials for an underlying agent (Codex, Claude Code, Cursor, or OpenCode)."
+    },
+    "can_use_other_subscriptions": {
+      "support": "full",
+      "source_url": "https://github.com/pingdotgg/t3code#t3-code:~:text=bring%20your%20own",
+      "comment": "BYOK: connects to Codex, Claude Code, Cursor, or OpenCode with the credentials you already have."
+    },
+    "rules": {
+      "support": "partial",
+      "source_url": "https://github.com/pingdotgg/t3code#t3-code:~:text=AGENTS.md",
+      "comment": "Repository ships an AGENTS.md; underlying-agent rule files (AGENTS.md / CLAUDE.md) apply through the selected harness."
+    },
+    "skills": {
+      "support": "unknown",
+      "source_url": "https://github.com/pingdotgg/t3code#t3-code:~:text=coding%20agents",
+      "comment": "No public documentation on reusable skills; capabilities come from the selected agent."
+    },
+    "hooks": {
+      "support": "none",
+      "source_url": "https://github.com/pingdotgg/t3code#t3-code:~:text=coding%20agents",
+      "comment": "No user-configurable lifecycle hooks documented."
+    },
+    "mcp_servers": {
+      "support": "unknown",
+      "source_url": "https://github.com/pingdotgg/t3code#t3-code:~:text=coding%20agents",
+      "comment": "No MCP support documented for the GUI itself; depends on the underlying agent."
+    },
+    "monitor": {
+      "support": "partial",
+      "source_url": "https://github.com/pingdotgg/t3code#t3-code:~:text=GUI",
+      "comment": "GUI surfaces the status of agents running across worktrees, but there is no scriptable background monitor/watch primitive."
+    },
+    "model_selection": {
+      "support": "full",
+      "source_url": "https://betterstack.com/community/guides/ai/t3-code/#model-selection:~:text=model%20selector",
+      "comment": "Model selector supports multiple providers from a single interface."
+    },
+    "approval_mode": {
+      "support": "full",
+      "source_url": "https://betterstack.com/community/guides/ai/t3-code/#approval-modes:~:text=Supervised%20mode",
+      "comment": "Full-access mode edits without prompting; supervised mode requires approval for each action."
+    },
+    "sandbox_mode": {
+      "support": "partial",
+      "source_url": "https://betterstack.com/community/guides/ai/t3-code/#git-worktree:~:text=separate%20directory",
+      "comment": "Isolation comes from per-task git worktrees; no dedicated network/process sandbox documented."
+    },
+    "non_interactive": {
+      "support": "none",
+      "source_url": "https://betterstack.com/community/guides/ai/t3-code/#headless:~:text=remote%20server",
+      "comment": "GUI-first; a remote-backend/headless mode is planned but not yet available."
+    },
+    "git_integration": {
+      "support": "full",
+      "source_url": "https://betterstack.com/community/guides/ai/t3-code/#git-worktree:~:text=git%20diff",
+      "comment": "Per-task git worktrees with git diff review and merge-when-confirmed workflow."
+    },
+    "hosted_agent": {
+      "support": "none",
+      "source_url": "https://github.com/pingdotgg/t3code#t3-code:~:text=GUI",
+      "comment": "Runs locally; no managed cloud execution platform."
+    },
+    "custom_model_provider": {
+      "support": "partial",
+      "source_url": "https://betterstack.com/community/guides/ai/t3-code/#model-selection:~:text=multiple%20providers",
+      "comment": "Limited to supported harnesses (Codex, Claude Code, Cursor, OpenCode) and their providers, not arbitrary OpenAI-compatible endpoints."
+    },
+    "git_worktrees": {
+      "support": "full",
+      "source_url": "https://betterstack.com/community/guides/ai/t3-code/#git-worktree:~:text=native%20support%20for%20git%20worktree",
+      "comment": "Native git worktree support: each task runs in its own worktree/directory, reviewed with git diff and merged only when confirmed."
+    },
+    "chat_forking": {
+      "support": "unknown",
+      "source_url": "https://github.com/pingdotgg/t3code#t3-code:~:text=coding%20agents",
+      "comment": "No documented conversation forking/branching feature."
+    },
+    "done_notifications": {
+      "support": "unknown",
+      "source_url": "https://github.com/pingdotgg/t3code#t3-code:~:text=coding%20agents",
+      "comment": "No public documentation on completion/attention notifications."
+    },
+    "byok_prompt_caching": {
+      "support": "full",
+      "source_url": "https://betterstack.com/community/guides/ai/t3-code/#supported-agents:~:text=your%20own%20API%20keys",
+      "comment": "Drives the real Codex / Claude Code harnesses on your own API keys, so their native provider prompt caching still applies."
+    },
+    "notes": "Open-source (MIT) minimal GUI/CLI bridge that runs Codex, Claude Code, Cursor, or OpenCode in native git worktrees using your own API keys (BYOK)."
   },
   {
     "name": "Trae Agent",
@@ -5793,7 +6666,27 @@
       "source_url": "https://github.com/bytedance/trae-agent#usage:~:text=--console-type%20%5Bsimple%7Crich%5D",
       "comment": "CLI supports simple/rich console types; no broader UI customization documented."
     },
-    "notes": "Official ByteDance open-source CLI agent for software engineering research and development. Verified locally from documented `uv sync --all-extras`: `trae-cli --help`, `trae-cli run --help`, and `trae-cli interactive --help` work. Added to agent-launch as `--agent trae` targeting `trae-cli`."
+    "notes": "Official ByteDance open-source CLI agent for software engineering research and development. Verified locally from documented `uv sync --all-extras`: `trae-cli --help`, `trae-cli run --help`, and `trae-cli interactive --help` work. Added to agent-launch as `--agent trae` targeting `trae-cli`.",
+    "git_worktrees": {
+      "support": "partial",
+      "source_url": "https://github.com/bytedance/trae-agent/blob/main/README.md#trae-agent:~:text=trajectory",
+      "comment": "Runs as a local process, so it works inside a manually created git worktree for parallel isolation, but ships no built-in worktree manager."
+    },
+    "chat_forking": {
+      "support": "unknown",
+      "source_url": "https://github.com/bytedance/trae-agent/blob/main/README.md#trae-agent:~:text=session",
+      "comment": "No public documentation found for forking a conversation into a separate branch/session."
+    },
+    "done_notifications": {
+      "support": "unknown",
+      "source_url": "https://github.com/bytedance/trae-agent/blob/main/README.md#trae-agent:~:text=session",
+      "comment": "No public documentation found for built-in completion/attention notifications."
+    },
+    "byok_prompt_caching": {
+      "support": "partial",
+      "source_url": "https://github.com/bytedance/trae-agent/blob/main/README.md#trae-agent:~:text=provider",
+      "comment": "Calls providers directly with your keys, so provider prompt caching can apply; not separately documented."
+    }
   },
   {
     "name": "Windsurf Cascade",
@@ -5979,6 +6872,26 @@
       "support": "unknown",
       "source_url": "https://docs.example.com/#documentation:~:text=ui-customization",
       "comment": "Research needed. Check for UI layout, sidebar, or panel customization."
+    },
+    "git_worktrees": {
+      "support": "partial",
+      "source_url": "https://docs.windsurf.com/windsurf/cascade/cascade#cascade:~:text=terminal",
+      "comment": "Runs as a local process, so it works inside a manually created git worktree for parallel isolation, but ships no built-in worktree manager."
+    },
+    "chat_forking": {
+      "support": "unknown",
+      "source_url": "https://docs.windsurf.com/windsurf/cascade/cascade#cascade:~:text=conversation",
+      "comment": "No public documentation found for forking a conversation into a separate branch/session."
+    },
+    "done_notifications": {
+      "support": "partial",
+      "source_url": "https://docs.windsurf.com/windsurf/cascade/cascade#cascade:~:text=notification",
+      "comment": "Cascade surfaces in-editor notifications when a task completes or needs input."
+    },
+    "byok_prompt_caching": {
+      "support": "unknown",
+      "source_url": "https://docs.windsurf.com/windsurf/cascade/cascade#cascade:~:text=model",
+      "comment": "Primarily uses Windsurf-managed models; BYOK prompt-caching behavior is not documented."
     }
   },
   {
@@ -6170,6 +7083,26 @@
       "source_url": "https://zcode.z.ai/en/changelog#release-v314:~:text=Interface%20scaling%20supports%20a%20larger%20magnification%20ratio",
       "comment": "Desktop UI supports interface scaling and theme switching; deeper layout customization is not documented."
     },
-    "notes": "Z.ai/Zhipu desktop ADE with in-house ZCode Agent, GLM-5.2 focus, AGENTS.md, skills, commands, MCP, subagents, plugins, goal mode, mobile remote control, bot channels, and remote SSH/Docker development. No local CLI command was found, so no agent-launch backend was added."
+    "notes": "Z.ai/Zhipu desktop ADE with in-house ZCode Agent, GLM-5.2 focus, AGENTS.md, skills, commands, MCP, subagents, plugins, goal mode, mobile remote control, bot channels, and remote SSH/Docker development. No local CLI command was found, so no agent-launch backend was added.",
+    "git_worktrees": {
+      "support": "none",
+      "source_url": "https://zcode.z.ai/en/docs#zcode:~:text=IDE",
+      "comment": "No built-in worktree support; tied to a single workspace/checkout. (IDE/desktop surface)."
+    },
+    "chat_forking": {
+      "support": "unknown",
+      "source_url": "https://zcode.z.ai/en/docs#zcode:~:text=session",
+      "comment": "No public documentation found for forking a conversation into a separate branch/session."
+    },
+    "done_notifications": {
+      "support": "unknown",
+      "source_url": "https://zcode.z.ai/en/docs#zcode:~:text=session",
+      "comment": "No public documentation found for built-in completion/attention notifications."
+    },
+    "byok_prompt_caching": {
+      "support": "unknown",
+      "source_url": "https://zcode.z.ai/en/docs#zcode:~:text=session",
+      "comment": "No public evidence on whether prompt/KV caching is preserved when using your own API key."
+    }
   }
 ]

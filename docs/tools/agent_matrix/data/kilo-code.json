@@ -193,5 +193,25 @@
     "support": "unknown",
     "source_url": "https://docs.example.com/#documentation:~:text=ui-customization",
     "comment": "Research needed. Check for UI layout, sidebar, or panel customization."
+  },
+  "git_worktrees": {
+    "support": "partial",
+    "source_url": "https://kilo.ai/docs/getting-started#getting-started:~:text=session",
+    "comment": "Runs as a local process, so it works inside a manually created git worktree for parallel isolation, but ships no built-in worktree manager."
+  },
+  "chat_forking": {
+    "support": "partial",
+    "source_url": "https://kilo.ai/docs/getting-started#getting-started:~:text=task",
+    "comment": "New-task handoff carries context to a fresh task (Cline/Roo lineage); no tree-style fork documented."
+  },
+  "done_notifications": {
+    "support": "partial",
+    "source_url": "https://kilo.ai/docs/features/notifications#notifications:~:text=notification",
+    "comment": "System/sound notifications available on task completion (Cline/Roo lineage)."
+  },
+  "byok_prompt_caching": {
+    "support": "partial",
+    "source_url": "https://kilo.ai/docs/providers/anthropic#prompt-caching:~:text=caching",
+    "comment": "Supports provider prompt caching (e.g. Anthropic/OpenRouter) when configured with your own API key."
   }
 }

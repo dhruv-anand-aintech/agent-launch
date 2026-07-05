@@ -32,7 +32,10 @@
     "goal_command": {"allOf": [{"$ref": "#/$defs/featureWithSource"}], "$comment": "Automation | /goal | Built-in `/goal` slash command for a persistent session objective that auto-continues until a completion condition is met (or pause/clear)."},
     "subagents": {"allOf": [{"$ref": "#/$defs/featureWithSource"}], "$comment": "Automation | Subagents | First-class custom or delegated subagent support."},
     "monitor": {"allOf": [{"$ref": "#/$defs/featureWithSource"}], "$comment": "Automation | Monitor | Background monitor/watch capability that lets the agent wait on, observe, or react to long-running commands, subagents, jobs, logs, WebSockets, or task status changes without blocking normal interaction."},
+    "git_worktrees": {"allOf": [{"$ref": "#/$defs/featureWithSource"}], "$comment": "Automation | Worktrees | First-class git worktree support so parallel agents each run in an isolated checkout of the same repo rather than sharing one working tree."},
+    "done_notifications": {"allOf": [{"$ref": "#/$defs/featureWithSource"}], "$comment": "Automation | Done Notifications | Built-in desktop/terminal/OS notification when the agent finishes a task or needs the user's input or approval."},
     "transcripts": {"allOf": [{"$ref": "#/$defs/featureWithSource"}], "$comment": "Context | Transcripts | Local or exported conversation/session transcript storage."},
+    "chat_forking": {"allOf": [{"$ref": "#/$defs/featureWithSource"}], "$comment": "Context | Chat Forking | Fork or branch a conversation into a new session to explore an alternative path while keeping the original thread intact."},
     "model_selection": {"allOf": [{"$ref": "#/$defs/featureWithSource"}], "$comment": "Settings | Model | Explicit model selection in CLI/settings."},
     "approval_mode": {"allOf": [{"$ref": "#/$defs/featureWithSource"}], "$comment": "Settings | Approvals | Approval or permission-mode controls."},
     "sandbox_mode": {"allOf": [{"$ref": "#/$defs/featureWithSource"}], "$comment": "Settings | Sandbox | Filesystem/network/terminal sandbox controls."},
@@ -53,6 +56,7 @@
     "ui_customization": {"allOf": [{"$ref": "#/$defs/featureWithSource"}], "$comment": "Settings | UI Customization | Sidebar, layout, panel arrangement customization."},
     "hosted_agent": {"allOf": [{"$ref": "#/$defs/featureWithSource"}], "$comment": "Platform | Hosted Agent | Managed cloud/hosted agent platform."},
     "custom_model_provider": {"allOf": [{"$ref": "#/$defs/featureWithSource"}], "$comment": "Models | Arbitrary Models | Ability to plug in arbitrary model providers or OpenAI-compatible endpoints."},
+    "byok_prompt_caching": {"allOf": [{"$ref": "#/$defs/featureWithSource"}], "$comment": "Models | BYOK Caching | Prompt/KV caching still applies when bringing your own API key or model (BYOK), not only on the vendor's managed backend (e.g. Cursor drops caching for custom API keys)."},
     "notes": {"type": "string", "$comment": "About | Notes | Short caveats for interpretation."}
   },
   "$defs": {

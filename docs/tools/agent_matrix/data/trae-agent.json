@@ -191,5 +191,25 @@
     "source_url": "https://github.com/bytedance/trae-agent#usage:~:text=--console-type%20%5Bsimple%7Crich%5D",
     "comment": "CLI supports simple/rich console types; no broader UI customization documented."
   },
-  "notes": "Official ByteDance open-source CLI agent for software engineering research and development. Verified locally from documented `uv sync --all-extras`: `trae-cli --help`, `trae-cli run --help`, and `trae-cli interactive --help` work. Added to agent-launch as `--agent trae` targeting `trae-cli`."
+  "notes": "Official ByteDance open-source CLI agent for software engineering research and development. Verified locally from documented `uv sync --all-extras`: `trae-cli --help`, `trae-cli run --help`, and `trae-cli interactive --help` work. Added to agent-launch as `--agent trae` targeting `trae-cli`.",
+  "git_worktrees": {
+    "support": "partial",
+    "source_url": "https://github.com/bytedance/trae-agent/blob/main/README.md#trae-agent:~:text=trajectory",
+    "comment": "Runs as a local process, so it works inside a manually created git worktree for parallel isolation, but ships no built-in worktree manager."
+  },
+  "chat_forking": {
+    "support": "unknown",
+    "source_url": "https://github.com/bytedance/trae-agent/blob/main/README.md#trae-agent:~:text=session",
+    "comment": "No public documentation found for forking a conversation into a separate branch/session."
+  },
+  "done_notifications": {
+    "support": "unknown",
+    "source_url": "https://github.com/bytedance/trae-agent/blob/main/README.md#trae-agent:~:text=session",
+    "comment": "No public documentation found for built-in completion/attention notifications."
+  },
+  "byok_prompt_caching": {
+    "support": "partial",
+    "source_url": "https://github.com/bytedance/trae-agent/blob/main/README.md#trae-agent:~:text=provider",
+    "comment": "Calls providers directly with your keys, so provider prompt caching can apply; not separately documented."
+  }
 }

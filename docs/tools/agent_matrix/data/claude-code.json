@@ -184,5 +184,25 @@
     "support": "full",
     "source_url": "https://code.claude.com/docs/en/settings#settings:~:text=ui-layout",
     "comment": "Customizable sidebar, panel arrangement, collapsible sections."
+  },
+  "git_worktrees": {
+    "support": "partial",
+    "source_url": "https://code.claude.com/docs/en/common-workflows#run-parallel-claude-code-sessions-with-git-worktrees:~:text=git%20worktrees",
+    "comment": "Documented parallel workflow using git worktrees; pairs with /branch session isolation, but no built-in worktree manager."
+  },
+  "chat_forking": {
+    "support": "full",
+    "source_url": "https://code.claude.com/docs/en/cli-reference#cli-commands:~:text=fork-session",
+    "comment": "--fork-session and /branch copy the conversation into a new session id, leaving the original untouched."
+  },
+  "done_notifications": {
+    "support": "full",
+    "source_url": "https://code.claude.com/docs/en/settings#settings:~:text=notifications",
+    "comment": "Notification hooks, terminal-bell notifications, and background-agent notifications fire when Claude finishes or needs input."
+  },
+  "byok_prompt_caching": {
+    "support": "full",
+    "source_url": "https://docs.anthropic.com/en/docs/build-with-claude/prompt-caching#how-prompt-caching-works:~:text=prompt%20caching",
+    "comment": "Anthropic prompt caching (cache_control) applies when running Claude Code on your own Anthropic API key."
   }
 }

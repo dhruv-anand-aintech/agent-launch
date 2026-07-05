@@ -190,5 +190,25 @@
     "support": "unknown",
     "source_url": "https://docs.example.com/#documentation:~:text=ui-customization",
     "comment": "Research needed. Check for UI layout, sidebar, or panel customization."
+  },
+  "git_worktrees": {
+    "support": "partial",
+    "source_url": "https://docs.factory.ai/cli/byok/overview#overview:~:text=key",
+    "comment": "Runs as a local process, so it works inside a manually created git worktree for parallel isolation, but ships no built-in worktree manager."
+  },
+  "chat_forking": {
+    "support": "unknown",
+    "source_url": "https://docs.factory.ai/cli/byok/overview#overview:~:text=session",
+    "comment": "No public documentation found for forking a conversation into a separate branch/session."
+  },
+  "done_notifications": {
+    "support": "unknown",
+    "source_url": "https://docs.factory.ai/cli/byok/overview#overview:~:text=session",
+    "comment": "No public documentation found for built-in completion/attention notifications."
+  },
+  "byok_prompt_caching": {
+    "support": "partial",
+    "source_url": "https://docs.factory.ai/cli/byok/overview#overview:~:text=Bring%20Your%20Own%20Key",
+    "comment": "Supports BYOK; provider-side caching can apply when routing to Anthropic/OpenAI with your key, but caching behavior is not separately documented."
   }
 }

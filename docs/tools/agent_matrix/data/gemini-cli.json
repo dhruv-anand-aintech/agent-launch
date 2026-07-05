@@ -187,5 +187,25 @@
     "support": "unknown",
     "source_url": "https://docs.example.com/#documentation:~:text=ui-customization",
     "comment": "Research needed. Check for UI layout, sidebar, or panel customization."
+  },
+  "git_worktrees": {
+    "support": "partial",
+    "source_url": "https://geminicli.com/docs/#configuration:~:text=worktree",
+    "comment": "Runs as a local process, so it works inside a manually created git worktree for parallel isolation, but ships no built-in worktree manager."
+  },
+  "chat_forking": {
+    "support": "unknown",
+    "source_url": "https://geminicli.com/docs/cli/commands/#chat:~:text=chat",
+    "comment": "No public documentation found for forking a conversation into a separate branch/session."
+  },
+  "done_notifications": {
+    "support": "partial",
+    "source_url": "https://geminicli.com/docs/cli/notifications/#notifications:~:text=notifications",
+    "comment": "Experimental notifications setting plus community extensions (Chime, gemini-notifier) alert on task completion/permission."
+  },
+  "byok_prompt_caching": {
+    "support": "partial",
+    "source_url": "https://ai.google.dev/gemini-api/docs/caching#context-caching:~:text=caching",
+    "comment": "Gemini implicit context caching applies to eligible requests when running on your own Gemini API key."
   }
 }

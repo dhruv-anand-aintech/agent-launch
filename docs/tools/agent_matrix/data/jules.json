@@ -176,5 +176,25 @@
     "support": "unknown",
     "source_url": "https://docs.example.com/#documentation:~:text=ui-customization",
     "comment": "Research needed. Check for UI layout, sidebar, or panel customization."
+  },
+  "git_worktrees": {
+    "support": "partial",
+    "source_url": "https://jules.google/docs#jules:~:text=task",
+    "comment": "Each task runs in its own isolated cloud workspace/branch rather than local git worktrees, giving equivalent per-task isolation."
+  },
+  "chat_forking": {
+    "support": "unknown",
+    "source_url": "https://jules.google/docs#jules:~:text=task",
+    "comment": "No public documentation found for forking a conversation into a separate branch/session."
+  },
+  "done_notifications": {
+    "support": "partial",
+    "source_url": "https://jules.google/docs#jules:~:text=notification",
+    "comment": "Notifies via GitHub/email/UI when a task completes or needs review; no local desktop notification documented."
+  },
+  "byok_prompt_caching": {
+    "support": "unknown",
+    "source_url": "https://jules.google/docs#jules:~:text=task",
+    "comment": "Managed Google-hosted platform; no BYOK prompt-caching path."
   }
 }

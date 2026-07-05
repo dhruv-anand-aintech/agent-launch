@@ -187,5 +187,25 @@
     "support": "full",
     "source_url": "https://docs.cursor.com/ui#ui:~:text=customization",
     "comment": "Customizable layout, sidebar, panels (VS Code-based)."
+  },
+  "git_worktrees": {
+    "support": "partial",
+    "source_url": "https://docs.cursor.com/en/agent/parallel-agents#parallel-agents:~:text=worktree",
+    "comment": "Parallel/background agents can run each in an isolated worktree-style workspace; not a general local worktree manager."
+  },
+  "chat_forking": {
+    "support": "unknown",
+    "source_url": "https://docs.cursor.com/en/agent/chat/overview#overview:~:text=chat",
+    "comment": "No public documentation found for forking a conversation into a separate branch/session."
+  },
+  "done_notifications": {
+    "support": "full",
+    "source_url": "https://docs.cursor.com/en/configuration/notifications#notifications:~:text=notification",
+    "comment": "Cursor shows desktop/sound notifications when an agent finishes or needs input."
+  },
+  "byok_prompt_caching": {
+    "support": "none",
+    "source_url": "https://docs.cursor.com/en/account/pricing#api-keys:~:text=API%20key",
+    "comment": "Custom BYOK API keys bypass Cursor's managed backend, which disables Cursor's prompt/KV caching (and blocks Agent/Edit on some plans)."
   }
 }

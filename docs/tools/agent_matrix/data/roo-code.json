@@ -176,5 +176,25 @@
     "support": "partial",
     "source_url": "https://github.com/RooVetGit/Roo-Code#configuration:~:text=ui",
     "comment": "VS Code UI customization."
+  },
+  "git_worktrees": {
+    "support": "none",
+    "source_url": "https://docs.roocode.com/features/settings-management#settings-management:~:text=extension",
+    "comment": "No built-in worktree support; tied to a single workspace/checkout. (VS Code extension)."
+  },
+  "chat_forking": {
+    "support": "partial",
+    "source_url": "https://docs.roocode.com/features/boomerang-tasks#boomerang-tasks:~:text=subtask",
+    "comment": "Boomerang/subtask handoff spawns child tasks; no tree-style fork that preserves the original branch point."
+  },
+  "done_notifications": {
+    "support": "partial",
+    "source_url": "https://docs.roocode.com/features/settings-management#notifications:~:text=notification",
+    "comment": "Sound/system notifications available on task completion or approval requests."
+  },
+  "byok_prompt_caching": {
+    "support": "full",
+    "source_url": "https://docs.roocode.com/features/prompt-caching#prompt-caching:~:text=prompt%20caching",
+    "comment": "Supports prompt caching for Anthropic/OpenRouter/Bedrock etc. when configured with your own API key."
   }
 }

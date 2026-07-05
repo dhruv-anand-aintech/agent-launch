@@ -180,5 +180,25 @@
     "support": "unknown",
     "source_url": "https://docs.example.com/#documentation:~:text=ui-customization",
     "comment": "Research needed. Check for UI layout, sidebar, or panel customization."
+  },
+  "git_worktrees": {
+    "support": "partial",
+    "source_url": "https://docs.windsurf.com/windsurf/cascade/cascade#cascade:~:text=terminal",
+    "comment": "Runs as a local process, so it works inside a manually created git worktree for parallel isolation, but ships no built-in worktree manager."
+  },
+  "chat_forking": {
+    "support": "unknown",
+    "source_url": "https://docs.windsurf.com/windsurf/cascade/cascade#cascade:~:text=conversation",
+    "comment": "No public documentation found for forking a conversation into a separate branch/session."
+  },
+  "done_notifications": {
+    "support": "partial",
+    "source_url": "https://docs.windsurf.com/windsurf/cascade/cascade#cascade:~:text=notification",
+    "comment": "Cascade surfaces in-editor notifications when a task completes or needs input."
+  },
+  "byok_prompt_caching": {
+    "support": "unknown",
+    "source_url": "https://docs.windsurf.com/windsurf/cascade/cascade#cascade:~:text=model",
+    "comment": "Primarily uses Windsurf-managed models; BYOK prompt-caching behavior is not documented."
   }
 }

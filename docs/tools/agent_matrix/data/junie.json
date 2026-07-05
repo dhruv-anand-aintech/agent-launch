@@ -184,5 +184,25 @@
     "support": "partial",
     "source_url": "https://junie.jetbrains.com/docs/slash-commands.html#built-in-slash-commands:~:text=%60%2Fsettings%20%60%20Change%20Junie%20settings%2C%20including%20theme%2C%20notifications%2C%20step%20limit%2C%20subagents%20mode%2C%20and%20diff%20view%20mode",
     "comment": "CLI settings include theme, notifications, step limit, subagents mode, and diff view mode; no broad layout customization was found."
+  },
+  "git_worktrees": {
+    "support": "partial",
+    "source_url": "https://junie.jetbrains.com/docs/junie-cli.html#junie:~:text=CLI",
+    "comment": "Runs as a local process, so it works inside a manually created git worktree for parallel isolation, but ships no built-in worktree manager."
+  },
+  "chat_forking": {
+    "support": "unknown",
+    "source_url": "https://junie.jetbrains.com/docs/junie-cli.html#junie:~:text=session",
+    "comment": "No public documentation found for forking a conversation into a separate branch/session."
+  },
+  "done_notifications": {
+    "support": "unknown",
+    "source_url": "https://junie.jetbrains.com/docs/junie-cli.html#junie:~:text=session",
+    "comment": "No public documentation found for built-in completion/attention notifications."
+  },
+  "byok_prompt_caching": {
+    "support": "unknown",
+    "source_url": "https://junie.jetbrains.com/docs/junie-cli.html#junie:~:text=session",
+    "comment": "No public evidence on whether prompt/KV caching is preserved when using your own API key."
   }
 }

@@ -184,5 +184,25 @@
     "support": "unknown",
     "source_url": "https://docs.example.com/#documentation:~:text=ui-customization",
     "comment": "Research needed. Check for UI layout, sidebar, or panel customization."
+  },
+  "git_worktrees": {
+    "support": "partial",
+    "source_url": "https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent#coding-agent:~:text=environment",
+    "comment": "Runs each task in an isolated ephemeral GitHub Actions environment on its own branch, rather than local git worktrees."
+  },
+  "chat_forking": {
+    "support": "unknown",
+    "source_url": "https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent#coding-agent:~:text=session",
+    "comment": "No public documentation found for forking a conversation into a separate branch/session."
+  },
+  "done_notifications": {
+    "support": "partial",
+    "source_url": "https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent#coding-agent:~:text=pull%20request",
+    "comment": "You receive GitHub notifications (PR opened/updated, review requested) when the agent finishes a task."
+  },
+  "byok_prompt_caching": {
+    "support": "unknown",
+    "source_url": "https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent#coding-agent:~:text=agent",
+    "comment": "Managed backend; no documented BYOK prompt-caching path."
   }
 }

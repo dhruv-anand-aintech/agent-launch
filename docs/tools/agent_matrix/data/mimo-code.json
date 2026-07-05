@@ -195,5 +195,25 @@
     "support": "partial",
     "source_url": "https://mimo.xiaomi.com/mimocode/config-files#config-files:~:text=share%20%60string%60%60%22manual%22%60%20%2F%20%60%22auto%22%60%20%2F%20%60%22disabled%22%60",
     "comment": "Themes and keybindings are customizable, but no documented layout/sidebar/panel customization was found."
+  },
+  "git_worktrees": {
+    "support": "partial",
+    "source_url": "https://mimo.xiaomi.com/mimocode/start#start:~:text=session",
+    "comment": "Runs as a local process, so it works inside a manually created git worktree for parallel isolation, but ships no built-in worktree manager."
+  },
+  "chat_forking": {
+    "support": "unknown",
+    "source_url": "https://mimo.xiaomi.com/mimocode/start#start:~:text=session",
+    "comment": "No public documentation found for forking a conversation into a separate branch/session."
+  },
+  "done_notifications": {
+    "support": "unknown",
+    "source_url": "https://mimo.xiaomi.com/mimocode/start#start:~:text=session",
+    "comment": "No public documentation found for built-in completion/attention notifications."
+  },
+  "byok_prompt_caching": {
+    "support": "unknown",
+    "source_url": "https://mimo.xiaomi.com/mimocode/start#start:~:text=session",
+    "comment": "No public evidence on whether prompt/KV caching is preserved when using your own API key."
   }
 }

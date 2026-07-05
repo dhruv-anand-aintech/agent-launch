@@ -1,0 +1,134 @@
+{
+  "name": "T3 Code",
+  "links": {
+    "docs": "https://t3.codes",
+    "github": "https://github.com/pingdotgg/t3code",
+    "website": "https://t3.codes",
+    "slug": "t3code"
+  },
+  "form_factor": {
+    "values": [
+      "CLI",
+      "Web",
+      "Desktop App"
+    ],
+    "source_url": "https://github.com/pingdotgg/t3code#t3-code:~:text=minimal%20web%20GUI",
+    "comment": "A minimal GUI for coding agents: launch via CLI (npx t3@latest), a web interface, and desktop apps for macOS/Windows/Linux. Per-form-factor links: CLI: https://github.com/pingdotgg/t3code; Web: https://t3.codes; Desktop App: https://t3.codes.",
+    "links": {
+      "CLI": "https://github.com/pingdotgg/t3code",
+      "Web": "https://t3.codes",
+      "Desktop App": "https://t3.codes"
+    }
+  },
+  "released_in": {
+    "value": "Jun '26",
+    "source_url": "https://github.com/pingdotgg/t3code#t3-code:~:text=early",
+    "comment": "Early-stage open-source project from Theo / the T3 team; still pre-1.0."
+  },
+  "latest_major_update": {
+    "value": "Jun '26",
+    "source_url": "https://github.com/pingdotgg/t3code/releases#releases:~:text=v0.0",
+    "comment": "Actively iterating; v0.0.28 released June 29, 2026."
+  },
+  "pricing": {
+    "value": "Free, open source (MIT); bring your own API keys",
+    "source_url": "https://github.com/pingdotgg/t3code#license:~:text=MIT",
+    "comment": "MIT-licensed and free; you pay only for the model usage your own accounts/keys accrue (BYOK)."
+  },
+  "some_free_usage": {
+    "support": "partial",
+    "source_url": "https://github.com/pingdotgg/t3code#t3-code:~:text=bring%20your%20own",
+    "comment": "The app is free, but real agent work is billed to your own API keys."
+  },
+  "no_account_required": {
+    "support": "none",
+    "source_url": "https://github.com/pingdotgg/t3code#t3-code:~:text=bring%20your%20own",
+    "comment": "Requires credentials for an underlying agent (Codex, Claude Code, Cursor, or OpenCode)."
+  },
+  "can_use_other_subscriptions": {
+    "support": "full",
+    "source_url": "https://github.com/pingdotgg/t3code#t3-code:~:text=bring%20your%20own",
+    "comment": "BYOK: connects to Codex, Claude Code, Cursor, or OpenCode with the credentials you already have."
+  },
+  "rules": {
+    "support": "partial",
+    "source_url": "https://github.com/pingdotgg/t3code#t3-code:~:text=AGENTS.md",
+    "comment": "Repository ships an AGENTS.md; underlying-agent rule files (AGENTS.md / CLAUDE.md) apply through the selected harness."
+  },
+  "skills": {
+    "support": "unknown",
+    "source_url": "https://github.com/pingdotgg/t3code#t3-code:~:text=coding%20agents",
+    "comment": "No public documentation on reusable skills; capabilities come from the selected agent."
+  },
+  "hooks": {
+    "support": "none",
+    "source_url": "https://github.com/pingdotgg/t3code#t3-code:~:text=coding%20agents",
+    "comment": "No user-configurable lifecycle hooks documented."
+  },
+  "mcp_servers": {
+    "support": "unknown",
+    "source_url": "https://github.com/pingdotgg/t3code#t3-code:~:text=coding%20agents",
+    "comment": "No MCP support documented for the GUI itself; depends on the underlying agent."
+  },
+  "monitor": {
+    "support": "partial",
+    "source_url": "https://github.com/pingdotgg/t3code#t3-code:~:text=GUI",
+    "comment": "GUI surfaces the status of agents running across worktrees, but there is no scriptable background monitor/watch primitive."
+  },
+  "model_selection": {
+    "support": "full",
+    "source_url": "https://betterstack.com/community/guides/ai/t3-code/#model-selection:~:text=model%20selector",
+    "comment": "Model selector supports multiple providers from a single interface."
+  },
+  "approval_mode": {
+    "support": "full",
+    "source_url": "https://betterstack.com/community/guides/ai/t3-code/#approval-modes:~:text=Supervised%20mode",
+    "comment": "Full-access mode edits without prompting; supervised mode requires approval for each action."
+  },
+  "sandbox_mode": {
+    "support": "partial",
+    "source_url": "https://betterstack.com/community/guides/ai/t3-code/#git-worktree:~:text=separate%20directory",
+    "comment": "Isolation comes from per-task git worktrees; no dedicated network/process sandbox documented."
+  },
+  "non_interactive": {
+    "support": "none",
+    "source_url": "https://betterstack.com/community/guides/ai/t3-code/#headless:~:text=remote%20server",
+    "comment": "GUI-first; a remote-backend/headless mode is planned but not yet available."
+  },
+  "git_integration": {
+    "support": "full",
+    "source_url": "https://betterstack.com/community/guides/ai/t3-code/#git-worktree:~:text=git%20diff",
+    "comment": "Per-task git worktrees with git diff review and merge-when-confirmed workflow."
+  },
+  "hosted_agent": {
+    "support": "none",
+    "source_url": "https://github.com/pingdotgg/t3code#t3-code:~:text=GUI",
+    "comment": "Runs locally; no managed cloud execution platform."
+  },
+  "custom_model_provider": {
+    "support": "partial",
+    "source_url": "https://betterstack.com/community/guides/ai/t3-code/#model-selection:~:text=multiple%20providers",
+    "comment": "Limited to supported harnesses (Codex, Claude Code, Cursor, OpenCode) and their providers, not arbitrary OpenAI-compatible endpoints."
+  },
+  "git_worktrees": {
+    "support": "full",
+    "source_url": "https://betterstack.com/community/guides/ai/t3-code/#git-worktree:~:text=native%20support%20for%20git%20worktree",
+    "comment": "Native git worktree support: each task runs in its own worktree/directory, reviewed with git diff and merged only when confirmed."
+  },
+  "chat_forking": {
+    "support": "unknown",
+    "source_url": "https://github.com/pingdotgg/t3code#t3-code:~:text=coding%20agents",
+    "comment": "No documented conversation forking/branching feature."
+  },
+  "done_notifications": {
+    "support": "unknown",
+    "source_url": "https://github.com/pingdotgg/t3code#t3-code:~:text=coding%20agents",
+    "comment": "No public documentation on completion/attention notifications."
+  },
+  "byok_prompt_caching": {
+    "support": "full",
+    "source_url": "https://betterstack.com/community/guides/ai/t3-code/#supported-agents:~:text=your%20own%20API%20keys",
+    "comment": "Drives the real Codex / Claude Code harnesses on your own API keys, so their native provider prompt caching still applies."
+  },
+  "notes": "Open-source (MIT) minimal GUI/CLI bridge that runs Codex, Claude Code, Cursor, or OpenCode in native git worktrees using your own API keys (BYOK)."
+}

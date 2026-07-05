@@ -176,5 +176,25 @@
     "support": "unknown",
     "source_url": "https://docs.example.com/#documentation:~:text=ui-customization",
     "comment": "Research needed. Check for UI layout, sidebar, or panel customization."
+  },
+  "git_worktrees": {
+    "support": "none",
+    "source_url": "https://docs.replit.com/replitai/agent#agent:~:text=cloud",
+    "comment": "Runs in Replit's cloud workspace; no local git worktree model."
+  },
+  "chat_forking": {
+    "support": "unknown",
+    "source_url": "https://docs.replit.com/replitai/agent#agent:~:text=session",
+    "comment": "No public documentation found for forking a conversation into a separate branch/session."
+  },
+  "done_notifications": {
+    "support": "partial",
+    "source_url": "https://docs.replit.com/replitai/agent#agent:~:text=notification",
+    "comment": "Replit mobile/web notifies you when the agent finishes or needs input."
+  },
+  "byok_prompt_caching": {
+    "support": "unknown",
+    "source_url": "https://docs.replit.com/replitai/agent#agent:~:text=agent",
+    "comment": "Managed platform; no documented BYOK prompt-caching path."
   }
 }

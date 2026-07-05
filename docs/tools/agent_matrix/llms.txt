@@ -1,41 +1,43 @@
 # Coding Agent Feature Matrix
-> Compare 32 coding agents, CLIs, and IDEs across features.
-> https://compare.ainorthstar.tech | Updated 2026-07-03
+> Compare 34 coding agents, CLIs, and IDEs across features.
+> https://compare.ainorthstar.tech | Updated 2026-07-05
 
-Agent                   Rel    FF     Fre   NoA   Oth   Rul   Skl   Hks   MCP   Cmd   Gol   Sub   Mon   Trn   Mod   App   San   Res   Con   Hdl   Fmt   Sta   Tel   Hst  BYOM
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Aider                   Jun '2 CLI        Y     Y     Y     ~     ~     ~     N     N     N     ~     N     ~     Y     ~     N     N     ~     Y     N     N     Y     N     Y
-Amazon Q Developer CLI  Mar '2 CLI        Y     N     N     Y     ~     Y     Y     ~     N     N     N     ~     Y     Y     N     Y     Y     Y     N     N     Y     N     N
-Amp                     May '2 CLI/Ext    Y                 Y     Y     Y     Y     N     N     Y     ~     ?     ~     ~     N     Y     Y     Y     Y     N     ?     N     ~
-Antigravity             2025  CLI/IDE    Y                 Y     Y     Y     Y     ~     N     ?     ?     ~     ?     ~     ~     Y     Y     Y     ?     ?     ?     N     ?
-Claude Code             Feb '2 CLI/Ext                      Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     ~     Y     Y     Y     Y     Y     Y     ~     ~
-Cline                   Jul '2 CLI/Ext    Y     Y     Y     Y     Y     Y     Y     Y     N     Y     ~     ?     Y     Y     ~     Y     ~     Y     Y     N     Y     N     Y
-OpenAI Codex CLI        Apr '2 CLI/Ext    Y           Y     Y     Y     Y     Y     ~     Y     Y     ~     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y
-Cohere North            Jan '2 SDK/Web                      ~     ~     Y     Y     N     N     Y     ~     ~     ~     ~     Y     ~     ~     ~     ~     N     ~     Y     N
-Crush                   Jul '2 CLI/TUI    Y     Y     Y     Y     Y     ~     Y     Y     N     Y     ~     Y     Y     Y     N     Y     Y     Y     ~     N     Y     N     Y
-Cursor                  2023  CLI/IDE    Y                 Y     Y     Y     Y     Y     N     Y     ~     Y     Y     Y     Y     Y     Y     Y     ~     ~     Y     Y     Y
-Devin                   Dec '2 CLI/Ext    Y                 Y     Y     Y     Y     Y     N     Y     ~     ~     ?     ~     Y     Y     Y     Y     ~     N     ?     Y     ?
-Factory Droid           2025  CLI/Ext          ~     Y     Y     Y     Y     Y     Y     N     Y     ~     ~     Y     Y     Y     Y     Y     Y     Y     Y     ?     ~     Y
-Gemini CLI              Jun '2 CLI        Y           Y     Y     ~     Y     Y     Y     N     Y     ~     ?     Y     Y     Y     Y     Y     Y     ~     ?     Y     N     ~
-GitHub Copilot CLI      Sep '2 CLI        ~     N     Y     Y     Y     Y     Y     ~     ~     Y     ~     Y     Y     Y     Y     Y     Y     Y     Y     ~     ~     N     Y
-GitHub Copilot          Jun '2 CLI/IDE                      Y     Y     Y     Y     ~     N     Y     ~     ?     Y     ~     ~     Y     Y     Y     ~     N     ~     Y     Y
-Goose                   Jan '2 CLI/Des    Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     ~     Y     Y     Y     Y     Y     ~     Y     Y     N     Y     N     Y
-Grok Build              May '2 CLI                          Y     Y     Y     Y     ~     Y     Y     ?     ?     ~     Y     ~     ?     ?     Y     ?     ?     ?     N     ~
-Google Jules            Aug '2 Web                          ?     N     ~     ~     N     N     ~     ~     ~     ~     Y     Y     ~     ~     ~     ~     N     ?     Y     N
-JetBrains Junie         Jan '2 CLI/IDE                      Y     Y     Y     Y     Y     N     Y     ~     Y     Y     Y     ~     Y     ~     Y     ?     N     ~     ~     Y
-Kilo Code               Feb '2 CLI/Ext    Y     Y     Y     Y     Y     Y     Y     Y     N     Y     ~     ?     Y     Y     ~     Y     Y     Y     Y     N     Y     ~     Y
-Kimi CLI                Oct '2 CLI/Ext                      Y     Y     ~     Y     ~     N     Y     ~     ?     Y     Y     N     Y     Y     Y     Y     Y     ?     N     Y
-Kiro                    Jul '2 CLI/IDE    Y                 Y     Y     Y     Y     Y     N     Y     ~     ~     Y     Y     ~     Y     Y     Y     ~     ?     ?     ~     N
-MiMo Code               Jun '2 CLI/IDE    Y     Y     Y     Y     Y     ~     Y     Y     Y     Y     ~     Y     Y     Y     ~     Y     Y     Y     Y     ?     ?     N     Y
-OpenCode                2025  CLI/Ext    Y     Y     Y     Y     Y     Y     Y     Y     N     Y     ~     Y     Y     Y     ~     Y     Y     Y     Y     ?     Y     N     Y
-OpenHands               Mar '2 CLI/IDE    Y     Y     Y     Y     Y     Y     Y     ~     N     N     N     Y     Y     Y     Y     Y     Y     Y     Y     N     ~     Y     Y
-Pi                      May '2 CLI/SDK          Y     Y     Y     Y     Y     N     Y     N     N     N     Y     Y     N     N     Y     Y     Y     Y     N     ~     N     Y
-Qwen Code               Jun '2 CLI/Ext                      Y     Y     Y     Y     Y     Y     Y     ~     ?     Y     Y     Y     Y     Y     Y     Y     Y     Y     ~     Y
-Replit Agent            Sep '2 Web                          ~     Y     ~     ?     N     N     ~     ~     ~     N     ~     Y     ~     ~     N     N     N     ?     Y     N
-Roo Code                Mid-20 Extensi                      Y     Y     N     Y     Y     N     Y     ~     ?     Y     Y     N     ~     Y     Y     ~     N     Y     N     Y
-Trae Agent              Jun '2 CLI        Y     Y     Y     ~     N     N     ~     N     N     N     N     Y     Y     N     ~     N     N     Y     ~     N     N     N     Y
-Windsurf Cascade        Nov '2 CLI/IDE                      Y     Y     Y     Y     Y     N     Y     ~     ?     Y     Y     ~     Y     Y     ~     ~     ~     ~     Y     ~
-ZCode                   2026  IDE/Des    Y                 Y     Y     ~     Y     Y     Y     Y     ~     ~     Y     Y     ~     ~     ~     N     N     ~     ?     N     Y
+Agent                   Rel    FF     Fre   NoA   Oth   Rul   Skl   Hks   MCP   Cmd   Gol   Sub   Mon   Wkt   Ntf   Trn   Frk   Mod   App   San   Res   Con   Hdl   Fmt   Sta   Tel   Hst  BYOM   Cch
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Aider                   Jun '2 CLI        Y     Y     Y     ~     ~     ~     N     N     N     ~     N     ~     Y     ~     N     Y     ~     N     N     ~     Y     N     N     Y     N     Y     Y
+Amazon Q Developer CLI  Mar '2 CLI        Y     N     N     Y     ~     Y     Y     ~     N     N     N     ~     ?     ~     ?     Y     Y     N     Y     Y     Y     N     N     Y     N     N     ?
+Amp                     May '2 CLI/Ext    Y                 Y     Y     Y     Y     N     N     Y     ~     ~     ?     ?     Y     ~     ~     N     Y     Y     Y     Y     N     ?     N     ~     ?
+Antigravity             2025  CLI/IDE    Y                 Y     Y     Y     Y     ~     N     ?     ?     ~     ?     ~     ?     ?     ~     ~     Y     Y     Y     ?     ?     ?     N     ?     ?
+Claude Code             Feb '2 CLI/Ext                      Y     Y     Y     Y     Y     Y     Y     Y     ~     Y     Y     Y     Y     Y     ~     Y     Y     Y     Y     Y     Y     ~     ~     Y
+Cline                   Jul '2 CLI/Ext    Y     Y     Y     Y     Y     Y     Y     Y     N     Y     ~     N     Y     ?     ~     Y     Y     ~     Y     ~     Y     Y     N     Y     N     Y     Y
+OpenAI Codex CLI        Apr '2 CLI/Ext    Y           Y     Y     Y     Y     Y     ~     Y     Y     ~     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y
+Cohere North            Jan '2 SDK/Web                      ~     ~     Y     Y     N     N     Y     ~     N     ?     ~     ?     ~     ~     Y     ~     ~     ~     ~     N     ~     Y     N     ?
+Conductor               Jul '2 Mac App    ~     N     Y     Y     Y     ~     Y     ~     ~     ~     Y     Y     Y     ~     ?     Y     Y     ~     ~           N                       N     ~     Y
+Crush                   Jul '2 CLI/TUI    Y     Y     Y     Y     Y     ~     Y     Y     N     Y     ~     ~     ?     Y     ?     Y     Y     N     Y     Y     Y     ~     N     Y     N     Y     ~
+Cursor                  2023  CLI/IDE    Y                 Y     Y     Y     Y     Y     N     Y     ~     ~     Y     Y     ?     Y     Y     Y     Y     Y     Y     ~     ~     Y     Y     Y     N
+Devin                   Dec '2 CLI/Ext    Y                 Y     Y     Y     Y     Y     N     Y     ~     ~     ~     ~     ?     ?     ~     Y     Y     Y     Y     ~     N     ?     Y     ?     ?
+Factory Droid           2025  CLI/Ext          ~     Y     Y     Y     Y     Y     Y     N     Y     ~     ~     ?     ~     ?     Y     Y     Y     Y     Y     Y     Y     Y     ?     ~     Y     ~
+Gemini CLI              Jun '2 CLI        Y           Y     Y     ~     Y     Y     Y     N     Y     ~     ~     ~     ?     ?     Y     Y     Y     Y     Y     Y     ~     ?     Y     N     ~     ~
+GitHub Copilot CLI      Sep '2 CLI        ~     N     Y     Y     Y     Y     Y     ~     ~     Y     ~     ~     ?     Y     ?     Y     Y     Y     Y     Y     Y     Y     ~     ~     N     Y     ?
+GitHub Copilot          Jun '2 CLI/IDE                      Y     Y     Y     Y     ~     N     Y     ~     ~     ~     ?     ?     Y     ~     ~     Y     Y     Y     ~     N     ~     Y     Y     ?
+Goose                   Jan '2 CLI/Des    Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     ~     ~     ?     Y     ?     Y     Y     Y     Y     ~     Y     Y     N     Y     N     Y     ~
+Grok Build              May '2 CLI                          Y     Y     Y     Y     ~     Y     Y     ?     ~     ?     ?     ?     ~     Y     ~     ?     ?     Y     ?     ?     ?     N     ~     ?
+Google Jules            Aug '2 Web                          ?     N     ~     ~     N     N     ~     ~     ~     ~     ~     ?     ~     Y     Y     ~     ~     ~     ~     N     ?     Y     N     ?
+JetBrains Junie         Jan '2 CLI/IDE                      Y     Y     Y     Y     Y     N     Y     ~     ~     ?     Y     ?     Y     Y     ~     Y     ~     Y     ?     N     ~     ~     Y     ?
+Kilo Code               Feb '2 CLI/Ext    Y     Y     Y     Y     Y     Y     Y     Y     N     Y     ~     ~     ~     ?     ~     Y     Y     ~     Y     Y     Y     Y     N     Y     ~     Y     ~
+Kimi CLI                Oct '2 CLI/Ext                      Y     Y     ~     Y     ~     N     Y     ~     ~     ?     ?     ?     Y     Y     N     Y     Y     Y     Y     Y     ?     N     Y     ~
+Kiro                    Jul '2 CLI/IDE    Y                 Y     Y     Y     Y     Y     N     Y     ~     N     ?     ~     ?     Y     Y     ~     Y     Y     Y     ~     ?     ?     ~     N     ?
+MiMo Code               Jun '2 CLI/IDE    Y     Y     Y     Y     Y     ~     Y     Y     Y     Y     ~     ~     ?     Y     ?     Y     Y     ~     Y     Y     Y     Y     ?     ?     N     Y     ?
+OpenCode                2025  CLI/Ext    Y     Y     Y     Y     Y     Y     Y     Y     N     Y     ~     ~     ?     Y     ?     Y     Y     ~     Y     Y     Y     Y     ?     Y     N     Y     ~
+OpenHands               Mar '2 CLI/IDE    Y     Y     Y     Y     Y     Y     Y     ~     N     N     N     ~     ?     Y     ?     Y     Y     Y     Y     Y     Y     Y     N     ~     Y     Y     ~
+Pi                      May '2 CLI/SDK          Y     Y     Y     Y     Y     N     Y     N     N     N     ~     ?     Y     ?     Y     N     N     Y     Y     Y     Y     N     ~     N     Y     ?
+Qwen Code               Jun '2 CLI/Ext                      Y     Y     Y     Y     Y     Y     Y     ~     ~     ~     ?     ?     Y     Y     Y     Y     Y     Y     Y     Y     Y     ~     Y     ~
+Replit Agent            Sep '2 Web                          ~     Y     ~     ?     N     N     ~     ~     N     ~     ~     ?     N     ~     Y     ~     ~     N     N     N     ?     Y     N     ?
+Roo Code                Mid-20 Extensi                      Y     Y     N     Y     Y     N     Y     ~     N     ~     ?     ~     Y     Y     N     ~     Y     Y     ~     N     Y     N     Y     Y
+T3 Code                 Jun '2 CLI/Web    ~     N     Y     ~     ?     N     ?                       ~     Y     ?           ?     Y     Y     ~                 N                       N     ~     Y
+Trae Agent              Jun '2 CLI        Y     Y     Y     ~     N     N     ~     N     N     N     N     ~     ?     Y     ?     Y     N     ~     N     N     Y     ~     N     N     N     Y     ~
+Windsurf Cascade        Nov '2 CLI/IDE                      Y     Y     Y     Y     Y     N     Y     ~     ~     ~     ?     ?     Y     Y     ~     Y     Y     ~     ~     ~     ~     Y     ~     ?
+ZCode                   2026  IDE/Des    Y                 Y     Y     ~     Y     Y     Y     Y     ~     N     ?     ~     ?     Y     Y     ~     ~     ~     N     N     ~     ?     N     Y     ?
 
 ## Feature legend
 Code = Y: full | ~: partial | N: none | ?: unknown |  : 
@@ -61,7 +63,10 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Goal Command: none — In-chat `/` commands (e.g. `/add`, `/commit`) are built-in chat commands, not a persisted `/goal` loop with pause/resume until a completion condition.
 - Subagents: partial — Architect/Editor mode uses two models but no general subagent delegation system. No spawning of independent worker agents.
 - Monitor: none — No first-class background monitor/watch primitive found in reviewed docs. Aider has non-interactive one-shot execution and optional commands like --test/--lint, but no Monitor-equivalent for waiting on spawned jobs or event streams.
+- Git Worktrees: partial — Runs as a local process, so it works inside a manually created git worktree for parallel isolation, but ships no built-in worktree manager.
+- Done Notifications: full — Built-in --notifications / --notifications-command alerts you when the LLM finishes and is ready for input.
 - Transcripts: partial — Location: optional chat history/transcript files are configured with Aider history settings such as `.aider.chat.history.md`.
+- Chat Forking: none — No conversation forking; only a fresh/cleared session is available.
 - Model Selection: full — Full model selection via --model, --weak-model, --editor-model. In-chat /model command. Model aliases supported.
 - Approval Mode: partial — Has --yes-always to auto-accept all confirmations. No granular approval mode like Cursor's always/accept-tool/plan-then-act.
 - Sandbox Mode: none — No filesystem or network sandbox. Has --dry-run flag that prevents file modification. Aider edits files directly in the working git repo.
@@ -73,6 +78,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Telemetry: full — Opt-in anonymous analytics via PostHog. Permanently disable with --analytics-disable. Never collects code/chat/keys.
 - Hosted Agent: none — Runs entirely locally via pip. No hosted agent platform.
 - Custom Model Provider: full — Connects to any LLM via litellm. Supports OpenAI, Anthropic, Gemini, DeepSeek, Ollama, OpenRouter, any OpenAI-compatible endpoint, and more.
+- Byok Prompt Caching: full — --cache-prompts enables Anthropic prompt caching (system prompt, repo map, read-only files) with your own API key.
 - Pricing: Free open source; BYOK/provider, local-model, or other LLM costs
 - Notes: Aider is a mature open-source CLI coding agent (45k+ stars) since June 2023. Deep git integration, repo mapping for codebase context, extensive LLM provider support through litellm. No published embed SDK (CLI/scripting only). Notable gaps vs newer agents: no MCP, no user-defined slash commands, no sandbox, no subagent delegation, no resume/continue flags, no structured output. Apache-2.0 licensed.
 
@@ -95,7 +101,10 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Goal Command: none — No built-in `/goal`-style persistent-objective auto-continue loop; sessions proceed turn-by-turn or via `--no-interactive` single-shot prompts.
 - Subagents: none — Custom agents are independent, user-selected configuration profiles (one active per session); there is no delegation/spawning of subagents from within a running session.
 - Monitor: none — No Monitor-equivalent found in reviewed CLI docs. Amazon Q Developer CLI supports lifecycle hooks and custom agent profiles, but not a documented background command/subagent monitor that wakes the session on completion or output.
+- Git Worktrees: partial — Runs as a local process, so it works inside a manually created git worktree for parallel isolation, but ships no built-in worktree manager.
+- Done Notifications: unknown — No public documentation found for built-in completion/attention notifications.
 - Transcripts: partial — Conversation history is auto-saved per working directory to support `--resume`, but there is no documented user-facing export/transcript file format akin to a JSONL log.
+- Chat Forking: unknown — No public documentation found for forking a conversation into a separate branch/session.
 - Model Selection: full — Switch models in-session with `/model`, at launch with `q chat --model <name>`, or set a default via `q settings chat.defaultModel <name>`. Choices are limited to AWS-hosted Claude models (3.5/3.7 Sonnet, Sonnet 4, Sonnet 4.5, and an 'auto' option) served over Bedrock.
 - Approval Mode: full — Per-tool trust model: only `fs_read` is trusted by default; `/tools trust`, `/tools trust-all`, and CLI flags `--trust-all-tools`/`--trust-tools=<list>` control auto-approval, with `/tools reset` to restore defaults.
 - Sandbox Mode: none — No filesystem/network sandbox; security guidance instead recommends running in a dedicated environment and using tool-trust controls (`/tools untrust`) to gate risky actions like `use_aws` or `execute_bash`.
@@ -107,6 +116,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Telemetry: full — Telemetry/data-sharing is user-configurable via `q settings telemetry.enabled true|false`; Free tier content may be used for service improvement, Pro tier content is excluded by policy.
 - Hosted Agent: none — Runs as a local terminal process talking to the AWS-hosted backend for inference; there is no separate hosted/cloud agent execution platform for this CLI surface.
 - Custom Model Provider: none — Model choice is restricted to a fixed list of Claude models served via AWS's own Amazon Bedrock-backed Q Developer service; no support for arbitrary/OpenAI-compatible model endpoints or bring-your-own-API-key providers.
+- Byok Prompt Caching: unknown — Routes through Amazon Q's managed backend; no documented BYOK prompt-caching path.
 - Pricing: Free tier; Pro $19/user/mo; transformation overages $0.003/LOC
 - Notes: Amazon Q Developer CLI (`q chat`) is AWS's Rust-based, Bedrock-backed agentic terminal coding agent, launched as an enhanced agentic experience in March 2025. It requires AWS Builder ID or IAM Identity Center sign-in (no API-key-only or account-free path), supports MCP, lifecycle hooks, and per-project `.amazonq/rules/` markdown rules, but lacks AGENTS.md support, subagent delegation, sandboxing, and structured JSON chat output. As of mid-2026 the open-source repo is no longer actively maintained: AWS is sunsetting Amazon Q Developer in favor of the backward-compatible, closed-source Kiro CLI (same `q`/`q chat` entry points, configs auto-migrated to `~/.kiro/`), with new signups blocked from May 2026 and full IDE/subscription end-of-support by April 2027.
 
@@ -127,7 +137,10 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Goal Command: none — Amp documents CLI and editor workflows but no built-in `/goal` slash command for persistent session objectives.
 - Subagents: full — Full support. Spawned via Task tool. Built-in specialized subagents: Oracle (GPT-5.4), Librarian (code search), Painter (image gen), Review, Search.
 - Monitor: partial — Task/subagent execution and stream-json/headless operation cover some wait-for-result workflows, but no dedicated background command/log/WebSocket monitor primitive was found in the manual.
+- Git Worktrees: partial — Runs as a local process, so it works inside a manually created git worktree for parallel isolation, but ships no built-in worktree manager.
+- Done Notifications: unknown — No public documentation found for built-in completion/attention notifications.
 - Transcripts: unknown — Location: transcript/session disk storage was not found in public docs reviewed.
+- Chat Forking: full — `amp threads fork <threadId>` branches a thread into a new conversation while leaving the original intact.
 - Model Selection: partial — Pre-set modes (smart=Claude Opus 4.7, deep=GPT-5.5 reasoning, rush=GPT-5.5 no-reasoning, free=mixed). You choose the mode, not the exact model.
 - Approval Mode: partial — Default: no approval (dangerously-allow-all is now default). Custom approval policies possible via Plugin API (tool.call event).
 - Sandbox Mode: none — No built-in sandbox. Documentation suggests external isolated dev environments for untrusted code.
@@ -139,6 +152,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Telemetry: unknown — No explicit telemetry settings found in documentation. No on/off telemetry toggle mentioned in manual or settings.
 - Hosted Agent: none — CLI runs locally. Threads shared via web but no managed agent platform.
 - Custom Model Provider: partial — No BYOM for the main agent (picks models per mode from providers). MCP servers can connect to external tools, and Plugin API allows custom tool registration.
+- Byok Prompt Caching: unknown — Amp bills through its own managed inference/credits rather than a general BYOK key, so BYOK caching is not applicable.
 - Pricing: Usage-based LLM billing with free tier
 - Notes: Amp is opinionated and aggressively removes features it considers obsolete (custom commands, slash commands, themes). Focuses on frontier models. Plugin API provides extensive extensibility for those who need it. Closed-source product; some auxiliary tools open source on GitHub.
 
@@ -159,7 +173,10 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Goal Command: none — Antigravity CLI docs cover plugins, sandbox, and slash commands but do not document a Codex-style `/goal` primitive.
 - Subagents: unknown
 - Monitor: unknown — Public Antigravity CLI/plugin docs reviewed here do not establish whether an agent-side background monitor/watch primitive exists.
+- Git Worktrees: partial — Runs as a local process, so it works inside a manually created git worktree for parallel isolation, but ships no built-in worktree manager.
+- Done Notifications: unknown — No public documentation found for built-in completion/attention notifications.
 - Transcripts: partial — Location: Antigravity brain/trajectory summaries are under `~/.gemini/antigravity/brain/<uuid>/*.md`; index data is in `~/Library/Application Support/Antigravity/User/globalStorage/state.vscdb`.
+- Chat Forking: unknown — No public documentation found for forking a conversation into a separate branch/session.
 - Model Selection: unknown — IDE model UI exists; agy --help does not expose a model flag as of this dataset.
 - Approval Mode: partial — CLI supports --dangerously-skip-permissions; IDE approval behavior not fully documented.
 - Sandbox Mode: partial — CLI supports --sandbox for terminal restrictions.
@@ -171,6 +188,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Telemetry: unknown
 - Hosted Agent: none — Local IDE and CLI surfaces.
 - Custom Model Provider: unknown — No arbitrary provider configuration found in public CLI help/docs.
+- Byok Prompt Caching: unknown — No public evidence on whether prompt/KV caching is preserved when using your own API key.
 - Pricing: Free $0/month; Google AI Pro/Ultra credits for overage; Organization via Google Cloud consumption
 - Notes: Google Antigravity spans an agentic IDE and the agy CLI. Distinct from deprecated Gemini CLI. No published programmatic SDK.
 
@@ -192,7 +210,10 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Goal Command: full — Built-in `/goal` sets a completion condition; after each turn a fast evaluator decides whether Claude should continue until the condition holds (Claude Code v2.1.139+).
 - Subagents: full — Supports custom subagents.
 - Monitor: full — Dedicated Monitor tool runs a command in the background or connects to a WebSocket, feeds events back to Claude, and lets the same session continue until output/status changes arrive.
+- Git Worktrees: partial — Documented parallel workflow using git worktrees; pairs with /branch session isolation, but no built-in worktree manager.
+- Done Notifications: full — Notification hooks, terminal-bell notifications, and background-agent notifications fire when Claude finishes or needs input.
 - Transcripts: full — Location: Claude Code CLI transcripts are JSONL under `~/.claude/projects/<proj-path-dashes>/<sessionId>.jsonl`.
+- Chat Forking: full — --fork-session and /branch copy the conversation into a new session id, leaving the original untouched.
 - Model Selection: full — Model can be configured.
 - Approval Mode: full — Permission mode is configurable.
 - Sandbox Mode: partial — Permissions and allowed tools provide sandbox-like controls.
@@ -204,6 +225,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Telemetry: full — Settings include telemetry and privacy controls.
 - Hosted Agent: partial — CLI runs locally; managed/cloud-based session execution is not directly exposed as a distinct platform.
 - Custom Model Provider: partial — Supports Bedrock/Vertex and related integrations, not arbitrary providers in the same way as OpenAI-compatible CLIs.
+- Byok Prompt Caching: full — Anthropic prompt caching (cache_control) applies when running Claude Code on your own Anthropic API key.
 - Pricing: Included with Claude Free/Pro $20/mo/Max $100-200/mo/Team/Enterprise; API token billing also available
 
 ### Cline
@@ -224,7 +246,10 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Goal Command: none — Cline supports custom slash commands via workflow files; no built-in `/goal` for auto-continuing until a completion condition.
 - Subagents: full — Subagents are documented as enabled by default across VS Code, JetBrains, CLI, and other editors, with a Settings -> Features -> Agent toggle to disable the use_subagents tool.
 - Monitor: partial — Cline exposes runtime/session/tool hooks and subagent task workflows, but reviewed docs do not show a dedicated command/log/WebSocket Monitor tool equivalent.
+- Git Worktrees: none — No built-in worktree support; tied to a single workspace/checkout. (VS Code / JetBrains extension bound to the open workspace).
+- Done Notifications: full — System notifications alert you when a task completes or Cline needs approval.
 - Transcripts: unknown — Location: transcript/session disk storage was not found in public docs reviewed.
+- Chat Forking: partial — /newtask hands off context to a fresh task; there is no tree-style fork that preserves the original branch point.
 - Model Selection: full — 30+ documented providers: Anthropic, OpenAI, Google, AWS Bedrock, Azure, GCP Vertex, OpenRouter (200+ models), Ollama, LM Studio, and any OpenAI-compatible endpoint.
 - Approval Mode: full — Granular auto-approve per category: Read, Edit, Execute, Browser, MCP. YOLO mode for everything. --auto-approve flag.
 - Sandbox Mode: partial — Sandbox mode via CLINE_SANDBOX env var and CLINE_SANDBOX_DATA_DIR for isolated session storage. No containerization.
@@ -236,6 +261,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Telemetry: full — Anonymous telemetry with user toggle. Never captures code/file contents. Enterprise: OpenTelemetry integration (OTLP export to Datadog/Grafana/Splunk).
 - Hosted Agent: none — Runs locally as VS Code extension or CLI.
 - Custom Model Provider: full — Any OpenAI-compatible API endpoint supported. 30+ documented providers. BYOK model.
+- Byok Prompt Caching: full — Supports Anthropic/OpenRouter prompt caching when configured with your own API key.
 - Pricing: Free for individuals; pay only for AI inference credits or BYOK; Enterprise custom
 - Notes: Cline has the most comprehensive feature set of any coding agent in this matrix — 17/20 fields at full support. Open source (Apache 2.0), originally 'Claude Dev'. Started as VS Code extension, expanded to CLI and SDK. 8M+ installs.
 
@@ -257,7 +283,10 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Goal Command: full — Built-in `/goal` sets a persistent thread objective with pause, resume, view, and clear; Codex keeps working until the goal is met or you stop it. Enable with `features.goals` in config if missing from the slash menu.
 - Subagents: full — Codex supports sub-agent/delegation workflows in agent contexts.
 - Monitor: partial — Codex documents experimental background terminal status via /ps and subagent orchestration that can wait for results, but current public docs do not list a Claude-style Monitor tool for event-driven command/WebSocket watching.
+- Git Worktrees: full — Codex isolates each thread in its own git worktree so parallel threads work on separate checkouts of the repo.
+- Done Notifications: full — The Codex app and TUI send notifications when a task completes or needs approval; configurable in settings/config.toml.
 - Transcripts: full — Location: Codex session event streams are JSONL under `~/.codex/sessions/YYYY/MM/DD/rollout-<iso>-<id>.jsonl`.
+- Chat Forking: full — Conversation forking branches a thread to explore an alternative path while keeping the original.
 - Model Selection: full — CLI accepts model configuration/flags.
 - Approval Mode: full — Approval policy can be configured.
 - Sandbox Mode: full — Filesystem sandbox modes can be configured.
@@ -269,6 +298,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Telemetry: full — Telemetry settings are documented in the CLI repository.
 - Hosted Agent: full — Can run locally or on platform.openai.com managed infrastructure.
 - Custom Model Provider: full — Supports custom model providers in config.
+- Byok Prompt Caching: full — OpenAI prompt caching applies automatically to eligible requests when running Codex on your own API key.
 - Pricing: Free $0; Go $8/mo; Plus $20/mo; Pro from $100/mo; Business $20/user/mo annual ($25 monthly); Enterprise/Edu custom; API token billing
 
 ### Cohere North
@@ -288,7 +318,10 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Goal Command: none — North is a hosted agent studio with automations/goals in the product sense, not a terminal `/goal` slash command.
 - Subagents: full — Agent-to-agent coordination is listed as an extensibility feature.
 - Monitor: partial — North Agent Studio supports hosted workflow automations and agent-to-agent coordination, but no local coding-agent Monitor-style command/log/WebSocket watcher was found.
+- Git Worktrees: none — No built-in worktree support; tied to a single workspace/checkout.
+- Done Notifications: unknown — No public documentation found for built-in completion/attention notifications.
 - Transcripts: partial — Location: hosted/web/API-managed session history; no local transcript directory documented.
+- Chat Forking: unknown — No public documentation found for forking a conversation into a separate branch/session.
 - Model Selection: partial — Cohere model stack is selected through North/Cohere platform, not arbitrary coding-agent CLI flags.
 - Approval Mode: partial — Enterprise guardrails and human-agent collaboration; no per-shell-command approval model.
 - Sandbox Mode: full — Private deployment options include VPC, on-prem, or Cohere Model Vault.
@@ -300,8 +333,45 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Telemetry: partial — Audit-ready logs and traceability are documented; telemetry opt-out details are not.
 - Hosted Agent: full — North is an enterprise agent platform/workspace.
 - Custom Model Provider: none — Built around Cohere models/platform deployment, not arbitrary model providers.
+- Byok Prompt Caching: unknown — No public evidence on whether prompt/KV caching is preserved when using your own API key.
 - Pricing: Enterprise/demo-based
 - Notes: Included because the request mentioned Cohere. This is an enterprise agent platform with coding-capable Command A+ underneath, not a direct Claude Code/Codex-style coding agent.
+
+### Conductor
+- Docs: https://docs.conductor.build/
+- Website: https://www.conductor.build/
+- Form factor: Mac App
+- Released: Jul '25
+- Latest update: Jul '26
+- Some Free Usage: partial — App is free to download, but real agent work requires a paid Claude/Codex/Cursor subscription or API key.
+- No Account Required: none — Requires signing into an underlying agent (Claude Code, Codex, or Cursor) account or supplying an API key.
+- Can Use Other Subscriptions: full — Uses whatever you are already logged into for Claude Code/Codex (Claude Pro/Max or API key), or an API key set in Settings → Harnesses/Environment.
+- Rules: full — Reads repository guidance (CLAUDE.md / AGENTS.md) via the underlying agent, plus repo-scoped Conductor settings.
+- Skills: full — Exposes the underlying agent's Skills within a workspace.
+- Hooks: partial — Project scripts and checks run around agent execution; underlying Claude Code/Codex lifecycle hooks also apply, but Conductor adds no separate hook system.
+- Mcp Servers: full — Conductor sessions can use MCP servers where the selected agent host supports MCP; Claude Code and Codex load their agent-specific MCP configuration.
+- Custom Commands: partial — Slash commands of the underlying agent (e.g. Codex /goal) are available inside a Conductor workspace; no separate Conductor command system.
+- Goal Command: partial — Codex goals (/goal) are surfaced in Conductor for Codex sessions, keeping objectives active across turns.
+- Subagents: partial — Orchestrates multiple agents in parallel isolated workspaces rather than nested subagents within one session.
+- Monitor: full — Dashboard shows what every agent is doing and where it is stuck; sidebar badges flag workspaces where agents finished or need input.
+- Git Worktrees: full — Core model: Conductor creates each workspace as a separate git worktree (1 workspace = 1 branch = 1 working tree), so parallel agents never conflict.
+- Done Notifications: full — Sidebar badges tell you which workspaces need attention when their agents finish or need your input.
+- Transcripts: partial — Keeps per-workspace conversation and diff history in-app; underlying agent transcripts also persist on disk.
+- Chat Forking: unknown — One workspace maps to one branch; no documented way to fork a conversation into a new branch/session.
+- Model Selection: full — Model picker lets you choose a Claude Code, Codex, Cursor, or OpenCode model per workspace.
+- Approval Mode: full — Plan Mode requires approval before implementation; Fast Mode skips planning for quick edits.
+- Sandbox Mode: partial — Each workspace is an isolated git worktree; process/network sandboxing depends on the underlying agent.
+- Resume: partial — Workspaces persist so you can return to an in-progress agent session; no session-id resume flag exposed.
+- Continue: blank
+- Non Interactive: none — GUI Mac app; no headless/print run mode.
+- Output Format: blank
+- Statusline: blank
+- Telemetry: blank
+- Hosted Agent: none — Agents run locally on your Mac; no managed cloud execution platform.
+- Custom Model Provider: partial — Limited to the supported harnesses (Claude Code, Codex, Cursor, OpenCode) and their model providers, not arbitrary OpenAI-compatible endpoints.
+- Byok Prompt Caching: full — Runs the real Claude Code / Codex CLIs on your own subscription or key, so their native Anthropic/OpenAI prompt caching still applies.
+- Pricing: Free app; bring your own Claude/Codex/Cursor subscription or API key
+- Notes: Mac-only (Apple Silicon) orchestrator for running parallel Claude Code, Codex, and Cursor agents in isolated git worktrees, with inline diff review before pushing.
 
 ### Crush
 - Docs: https://github.com/charmbracelet/crush#readme
@@ -321,7 +391,10 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Goal Command: none — No built-in `/goal` persistent-objective auto-continue loop. Sessions and `crush run --continue` support resuming work, but no dedicated goal-tracking/completion-condition command.
 - Subagents: full — Built-in "Coder" and "Task" agent types; the Coder agent can spawn restricted-permission Task subagents for delegated subtasks via an agent/task tool, with costs rolling up to the parent session. Agents configurable (model, allowed tools/MCP, context paths) via the `agents` config section.
 - Monitor: partial — Crush can delegate to Task subagents and has preliminary hooks, but reviewed docs do not show a dedicated monitor/watch primitive for long-running commands or event streams.
+- Git Worktrees: partial — Runs as a local process, so it works inside a manually created git worktree for parallel isolation, but ships no built-in worktree manager.
+- Done Notifications: unknown — No public documentation found for built-in completion/attention notifications.
 - Transcripts: full — Local SQLite-backed session storage with a dedicated `crush session` CLI subcommand: `list`, `show <id>`, `last`, `delete`, `rename`, each supporting `--json` for machine-readable transcripts including full message parts (text, reasoning, tool calls/results).
+- Chat Forking: unknown — No public documentation found for forking a conversation into a separate branch/session.
 - Model Selection: full — `-m/--model` and `--small-model` flags on `crush run`; in-TUI model switching mid-session while preserving context. Model database from Catwalk (community-supported open registry), auto-updated unless `disable_provider_auto_update`/`CRUSH_DISABLE_PROVIDER_AUTO_UPDATE=1` is set.
 - Approval Mode: full — Default mode prompts for permission before tool calls. `-y/--yolo` flag (or `permissions.yolo`/`SkipPermissionRequests`) auto-accepts all permissions. Granular `permissions.allowed_tools` allowlist for specific tools without prompting.
 - Sandbox Mode: none — No filesystem/network sandbox. Safety relies on permission prompts and the `--yolo` opt-out, plus `.crushignore` to exclude files from agent access.
@@ -333,6 +406,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Telemetry: full — Pseudonymous usage metrics tied to a device-specific hash; prompts/responses are never collected. Opt-out via `CRUSH_DISABLE_METRICS=1`, `disable_metrics: true` in config, or the `DO_NOT_TRACK=1` convention.
 - Hosted Agent: none — Runs locally as a terminal binary (optionally with a local client/server mode via `crush serve` for shared workspaces); no Charm-hosted cloud agent platform.
 - Custom Model Provider: full — Connects to Anthropic, OpenAI, Groq, OpenRouter, Vercel AI Gateway, Google Gemini, Synthetic, Z.ai, MiniMax, Hugging Face, Cerebras, io.net, Alibaba, Avian, Google Cloud Vertex AI, Amazon Bedrock, Azure OpenAI, and local models (Ollama, LM Studio, MLX, LiteLLM) via Catwalk's open model registry plus fully custom OpenAI-/Anthropic-compatible provider configs.
+- Byok Prompt Caching: partial — Talks directly to providers with your keys, so provider-side prompt caching can apply; behavior is not separately documented.
 - Pricing: Free source-available/open-source tool; BYOK/provider or local-model costs
 - Notes: Crush is Charm's open-source (FSL-1.1-MIT), terminal-first AI coding agent, first released July 2025 and under very active daily development (180+ tagged releases by mid-2026, 25k+ GitHub stars). It pairs a polished Bubble Tea TUI with a scriptable `crush run` headless mode, broad MCP/LSP/provider support via the community Catwalk model registry, and an emerging Agent Skills + custom-commands + Task-subagent ecosystem. Notable gaps versus more mature agents: no sandboxing, no user-selectable themes yet (TODO in source), and only preliminary lifecycle hooks.
 
@@ -353,7 +427,10 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Goal Command: none — Cursor Agent CLI documents `/plan`, `/ask`, and `/resume` slash commands but no built-in `/goal` for persistent completion conditions.
 - Subagents: full — Full support in Cursor SDK as of June 2026: agents can nest subagents to any depth. IDE agent tasks remain available.
 - Monitor: partial — Cursor supports hooks, cloud agents, and nested subagents, giving partial task/status monitoring, but reviewed docs do not show a dedicated command/log/WebSocket Monitor tool.
+- Git Worktrees: partial — Parallel/background agents can run each in an isolated worktree-style workspace; not a general local worktree manager.
+- Done Notifications: full — Cursor shows desktop/sound notifications when an agent finishes or needs input.
 - Transcripts: full — Location: Cursor CLI transcripts live under `~/.cursor/projects/<slug>/agent-transcripts/<agentId>/<agentId>.jsonl`; Cursor IDE composer data is in SQLite `~/Library/Application Support/Cursor/User/globalStorage/state.vscdb`.
+- Chat Forking: unknown — No public documentation found for forking a conversation into a separate branch/session.
 - Model Selection: full — Supports model settings in IDE and CLI.
 - Approval Mode: full — Agent modes and CLI yolo/force controls expose approval controls.
 - Sandbox Mode: full — CLI exposes sandbox controls; IDE trust and agent controls provide partial sandboxing.
@@ -365,6 +442,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Telemetry: full — Cursor documents privacy settings.
 - Hosted Agent: full — CLI agent can execute in Cursor's cloud runtime.
 - Custom Model Provider: full — Supports custom API keys/models in IDE and CLI.
+- Byok Prompt Caching: none — Custom BYOK API keys bypass Cursor's managed backend, which disables Cursor's prompt/KV caching (and blocks Agent/Edit on some plans).
 - Pricing: Hobby Free; Pro $20/mo; Pro+ $60/mo; Ultra $200/mo; Teams/Enterprise plans
 - Notes: Cursor is a VS Code-derived AI IDE with a companion CLI (cursor-agent) for headless/CI use and @cursor/sdk for programmatic local/cloud agents.
 
@@ -385,7 +463,10 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Goal Command: none — Devin supports team custom slash commands; no documented `/goal` for persistent thread-level objectives with auto-continuation.
 - Subagents: full — Yes, called 'Managed Devins'. Coordinator spawns child Devin sessions in isolated VMs for parallel work. Auto-triage also spawns sub-devins.
 - Monitor: partial — Devin sessions and Managed Devins are cloud-hosted and inspectable, but reviewed docs do not expose a Monitor-style primitive for an agent to watch arbitrary command output or event streams.
+- Git Worktrees: partial — Each task runs in its own isolated cloud workspace/branch rather than local git worktrees, giving equivalent per-task isolation.
+- Done Notifications: partial — Notifies via Slack/UI when a session finishes or needs input; no local desktop notification setting documented.
 - Transcripts: partial — Location: hosted/web/API-managed session history; no local transcript directory documented.
+- Chat Forking: unknown — No public documentation found for forking a conversation into a separate branch/session.
 - Model Selection: unknown — Not explicitly user-facing. Devin offers 'Fast Mode' (~2x faster at 4x ACU). No documentation about letting users choose the underlying LLM model.
 - Approval Mode: partial — 'Secure Mode' (disables native deployment, restricts outbound access). ACU caps, RBAC, PR review approval. No granular approval per action.
 - Sandbox Mode: full — Full isolation. Every session gets a fresh ephemeral snapshot. Enterprise VPC deployment option. VPN configuration supported.
@@ -397,6 +478,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Telemetry: unknown — No user-configurable telemetry setting found in documentation. Enterprise audit logs available. Privacy controls mentioned but no opt-in/opt-out toggle.
 - Hosted Agent: full — Primarily cloud-hosted at app.devin.ai; Devin CLI bridges to cloud agent.
 - Custom Model Provider: unknown — Cerebras mentioned as enterprise-ready inference provider. No self-serve BYO model option documented.
+- Byok Prompt Caching: unknown — Managed platform; no documented BYOK prompt-caching path.
 - Pricing: Free; Pro $20/mo; Max $200/mo; Teams $80/mo minimum + $40/mo per full dev seat; Enterprise custom
 - Notes: Devin pioneered the autonomous AI software engineer category. Focuses on enterprise: VM isolation, managed sub-agents, automations. Higher-end pricing reflects the hosted, managed approach. Windsurf acquisition announced April 2026.
 
@@ -417,7 +499,10 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Goal Command: none — Factory documents custom slash commands via `/commands`; no built-in `/goal` for persistent objectives.
 - Subagents: full — Custom Droids are documented as subagents.
 - Monitor: partial — Droid has lifecycle hooks, custom Droids, and headless exec flows, but reviewed docs do not show a dedicated background monitor/watch primitive.
+- Git Worktrees: partial — Runs as a local process, so it works inside a manually created git worktree for parallel isolation, but ships no built-in worktree manager.
+- Done Notifications: unknown — No public documentation found for built-in completion/attention notifications.
 - Transcripts: partial — Location: local searchable Droid session data is managed by Factory CLI; exact transcript database path is not documented in the CLI reference.
+- Chat Forking: unknown — No public documentation found for forking a conversation into a separate branch/session.
 - Model Selection: full — Model IDs can be selected with -m/--model and /model.
 - Approval Mode: full — Tiered autonomy levels control action permissions.
 - Sandbox Mode: full — Docs include Sandbox Beta and unsafe mode guidance for disposable containers.
@@ -429,6 +514,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Telemetry: unknown — Analytics/compliance APIs exist, but no user telemetry opt-out setting found.
 - Hosted Agent: partial — Factory App and Droid Computers exist; CLI can register machines and run daemon/server flows.
 - Custom Model Provider: full — Bring Your Own Key/custom model path is documented.
+- Byok Prompt Caching: partial — Supports BYOK; provider-side caching can apply when routing to Anthropic/OpenAI with your key, but caching behavior is not separately documented.
 - Pricing: Pro $20/mo; Plus $100/mo; Max $200/mo; Teams custom; Extra Usage prepaid $10 minimum; Droid Core free
 - Notes: One of the most feature-dense CLI surfaces in this update: autonomy levels, worktrees, custom droids, plugins, MCP, statusline, skills, hooks, and headless exec.
 
@@ -451,7 +537,10 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Goal Command: none — Deprecated Gemini CLI surface; no documented `/goal`. Google points CLI users to Antigravity, which also lacks a `/goal` command in public docs.
 - Subagents: full — Full subagent support in Gemini CLI docs: specialized agents with separate prompts, tools, and context loops; automatic delegation, @ forcing, built-in agents, browser agent, tool isolation, and extension subagents.
 - Monitor: partial — Gemini CLI has hooks and subagents, so tasks can be delegated and observed through lifecycle surfaces, but no dedicated command/log/WebSocket monitor primitive was found.
+- Git Worktrees: partial — Runs as a local process, so it works inside a manually created git worktree for parallel isolation, but ships no built-in worktree manager.
+- Done Notifications: partial — Experimental notifications setting plus community extensions (Chime, gemini-notifier) alert on task completion/permission.
 - Transcripts: unknown — Location: transcript/session disk storage was not found in public docs reviewed.
+- Chat Forking: unknown — No public documentation found for forking a conversation into a separate branch/session.
 - Model Selection: full — Model can be configured.
 - Approval Mode: full — Approval mode is configurable.
 - Sandbox Mode: full — Sandbox settings are documented.
@@ -463,6 +552,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Telemetry: full — Telemetry is documented.
 - Hosted Agent: none — Local CLI tool backed by Google Gemini API.
 - Custom Model Provider: partial — Primarily Gemini/Google-oriented provider configuration.
+- Byok Prompt Caching: partial — Gemini implicit context caching applies to eligible requests when running on your own Gemini API key.
 - Pricing: Free open-source CLI; Gemini API usage billed separately
 - Notes: Deprecated: Google points new CLI work to Antigravity. Kept as an explicit agent-launch option, but excluded from random selection in this repo. Headless/scripting mode only; no published agent embed SDK.
 
@@ -484,7 +574,10 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Goal Command: partial — No `/goal` command, but --autopilot / --mode autopilot (Shift+Tab to cycle modes) auto-continues until the agent decides the task is complete, hits a blocking problem, Ctrl+C, or --max-autopilot-continues is reached. Scoped to a single task/session, not a persistent cross-session objective.
 - Subagents: full — Custom agents defined as Markdown agent-profile files (prompts, tools, MCP servers), invoked via --agent=NAME or in-session. Each spins up a subagent with its own isolated context window. Built-in specialized agents include Explore, Task, and the Rubber Duck critic agent.
 - Monitor: partial — Copilot CLI supports hooks, custom agents, and cloud/headless execution, but reviewed docs do not show a dedicated Monitor-equivalent for waiting on arbitrary background command output or event feeds.
+- Git Worktrees: partial — Runs as a local process, so it works inside a manually created git worktree for parallel isolation, but ships no built-in worktree manager.
+- Done Notifications: unknown — No public documentation found for built-in completion/attention notifications.
 - Transcripts: full — Local session logs under ~/.copilot/logs/ (configurable via --log-dir). Sessions can be exported with --share=PATH (Markdown file) or --share-gist (secret GitHub gist) after a programmatic run.
+- Chat Forking: unknown — No public documentation found for forking a conversation into a separate branch/session.
 - Model Selection: full — --model=MODEL flag or COPILOT_MODEL env var, plus in-session /model picker. Choices include Anthropic Claude, OpenAI GPT, and Google Gemini family models; `auto` lets Copilot pick automatically. BYOK external models also appear in the picker.
 - Approval Mode: full — Per-action approval prompts by default (Yes / Yes-and-approve-for-session / No-and-redirect). Granular flags: --allow-tool, --deny-tool, --allow-all-tools, --allow-all-paths, --allow-all-urls, --allow-url/--deny-url, --add-dir, plus --allow-all/--yolo to bypass everything. Enterprises can disable bypass via permissions.disableBypassPermissionsMode.
 - Sandbox Mode: full — Public preview (as of mid-2026): local sandbox via /sandbox enable restricts filesystem/network/system access (built on Microsoft MXC, included in standard seat); cloud sandbox via `copilot --cloud` runs a fully isolated, ephemeral GitHub-hosted Linux environment (Azure Container Apps Sandboxes) resumable from any device.
@@ -496,6 +589,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Telemetry: partial — Enterprise/org-level audit logging and data-retention controls inherited from GitHub Copilot governance; --secret-env-vars redacts env vars from logs/MCP servers. No granular end-user telemetry opt-out UI documented specifically for the CLI.
 - Hosted Agent: none — Copilot CLI itself is a local terminal client. Cloud sandbox (`copilot --cloud`) runs the same CLI session in a GitHub-hosted ephemeral environment but is still user-initiated/interactive, not the autonomous GitHub Actions cloud agent (see separate github-copilot-coding-agent entry, hosted_agent=full).
 - Custom Model Provider: full — BYOK env vars (COPILOT_PROVIDER_TYPE, COPILOT_PROVIDER_BASE_URL, COPILOT_PROVIDER_API_KEY, COPILOT_MODEL) connect Anthropic, OpenAI-compatible endpoints, Azure OpenAI, AWS Bedrock, Google AI Studio, xAI/Microsoft Foundry, and local Ollama models.
+- Byok Prompt Caching: unknown — Runs on Copilot's managed model backend; no documented BYOK prompt-caching path.
 - Pricing: Included with Copilot Free/Pro $10/mo/Pro+ $39/mo/Max $100/mo/Business $19/user/mo/Enterprise $39/user/mo; AI Credits billing
 - Notes: GitHub Copilot CLI is the standalone, local terminal coding agent (`copilot`, npm package @github/copilot, repo github/copilot-cli) — distinct from the asynchronous GitHub Actions-based Copilot cloud coding agent. Public preview Sep 2025, GA Feb 2026, runs on an existing Copilot subscription with no separate CLI fee. Strong open-standard support (AGENTS.md, Agent Skills, MCP, hooks, custom agents/subagents) and BYOK for external model providers, plus newer cloud/local sandboxing, autopilot mode, and an experimental redesigned terminal UI.
 
@@ -517,7 +611,10 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Goal Command: none — GitHub Copilot CLI has slash commands and agent modes but no `/goal` for persistent completion conditions across turns.
 - Subagents: full — Subagents in VS Code and JetBrains IDE agent mode. Isolated context window. Invocation: automatic, direct, or via #runSubagent. Cannot create sub-subagents.
 - Monitor: partial — Copilot coding agent runs hosted jobs and exposes session/progress surfaces, but no Monitor-style command/log/WebSocket watcher for arbitrary agent-side events was found.
+- Git Worktrees: partial — Runs each task in an isolated ephemeral GitHub Actions environment on its own branch, rather than local git worktrees.
+- Done Notifications: partial — You receive GitHub notifications (PR opened/updated, review requested) when the agent finishes a task.
 - Transcripts: unknown — Location: transcript/session disk storage was not found in public docs reviewed.
+- Chat Forking: unknown — No public documentation found for forking a conversation into a separate branch/session.
 - Model Selection: full — Models from Anthropic, Google, OpenAI, xAI, Microsoft, and GitHub-tuned models. Auto model selection is available; current billing uses token-based AI Credits by model, with legacy premium-request multipliers only for qualifying annual Pro/Pro+ subscribers.
 - Approval Mode: partial — Desktop app has Interactive, Plan, and Autopilot modes. preToolUse hook can approve/deny. No universal 'always ask before X' toggle.
 - Sandbox Mode: partial — Cloud agent runs in ephemeral GitHub Actions environment (natural sandbox). CLI has tool permission controls. No explicit sandbox toggle.
@@ -529,6 +626,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Telemetry: partial — Enterprise audit logging, agent session monitoring. Data retention: prompts retained 28 days. Users can opt out of training data. No granular telemetry UI.
 - Hosted Agent: full — Copilot Cloud Agent runs autonomously in GitHub Actions-powered ephemeral environment.
 - Custom Model Provider: full — BYOK in CLI: env vars for provider type, base URL, API key. OpenAI-compatible endpoints, Azure OpenAI, Anthropic, local models via Ollama.
+- Byok Prompt Caching: unknown — Managed backend; no documented BYOK prompt-caching path.
 - Pricing: Copilot Free; Pro $10/mo; Pro+ $39/mo; Max $100/mo; Business $19/user/mo; Enterprise $39/user/mo; AI Credits plus Actions minutes
 - Notes: GitHub Copilot's agent capabilities span IDE, cloud, and CLI. The cloud agent is unique: runs in ephemeral GitHub Actions environment. Desktop app (preview) adds parallel agent sessions. Ecosystem is rapidly evolving with weekly feature drops.
 
@@ -550,7 +648,10 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Goal Command: full — Goose v1.40.0 adds a built-in `/goal` command for agent self-evaluation before finishing.
 - Subagents: full — First-class subagent delegation: temporary AI instances spun up via natural language in a prompt for one-off tasks, running in isolation from the main session. Distinct from sub-recipes (pre-written reusable YAML workflows). Up to 10 concurrent parallel workers total across subagents/sub-recipes. Location: invoked ad hoc; sub-recipes configured via --sub-recipe / recipe YAML.
 - Monitor: partial — Goose can delegate to subagents and run hooks around lifecycle/tool events, but reviewed docs do not show a dedicated background command/log monitor primitive.
+- Git Worktrees: partial — Runs as a local process, so it works inside a manually created git worktree for parallel isolation, but ships no built-in worktree manager.
+- Done Notifications: unknown — No public documentation found for built-in completion/attention notifications.
 - Transcripts: full — Sessions stored in SQLite (v1.10.0+) at ~/.local/share/goose/sessions/sessions.db (Unix) or %APPDATA%\Block\goose\data\sessions\sessions.db (Windows); pre-v1.10.0 used per-session .jsonl files under ~/.local/share/goose/sessions/. `session export` can output markdown/json/yaml; `session list`/`session diagnostics` also available.
+- Chat Forking: unknown — No public documentation found for forking a conversation into a separate branch/session.
 - Model Selection: full — Full model/provider selection via `goose configure`, `--provider`/`--model` flags on `goose run`, or GOOSE_PROVIDER/GOOSE_MODEL env vars (e.g. export GOOSE_MODEL=claude-sonnet-4-5-20250929).
 - Approval Mode: full — Four permission modes: auto (full automation), approve (ask every tool unless allow/deny-listed), chat (no tool access), smart_approve (LLM-based PermissionJudge auto-approves safe calls, asks for risky ones). Set via `goose config set-mode <mode>`, the GOOSE_MODE env var, or in-session `/mode <name>`. No dedicated `--mode` CLI flag on `goose run`/`goose session`.
 - Sandbox Mode: full — `--container <id>` flag (on `goose session` and `goose run`) runs extensions inside a specified Docker container; goose CLI must be installed inside the container for built-in extensions to work.
@@ -562,6 +663,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Telemetry: full — Anonymous usage data is opt-in/opt-out configurable interactively via `goose configure` or via GOOSE_TELEMETRY_ENABLED=false/true env var. No central control plane or phone-home by default per project description.
 - Hosted Agent: none — Runs locally as CLI/Desktop/API with no central control plane; no Goose-hosted cloud agent platform. `goose acp` exposes it as an Agent Client Protocol server for editor integration, not a hosted service.
 - Custom Model Provider: full — Supports 15+ LLM providers (Anthropic, OpenAI, Google, Azure, Bedrock, Databricks, Groq, OpenRouter, local Ollama, and more) including OpenAI-compatible custom endpoints, configured via `goose configure` or GOOSE_PROVIDER/GOOSE_MODEL plus provider API key env vars.
+- Byok Prompt Caching: partial — Connects directly to providers with your keys, so Anthropic-style prompt caching can apply; not separately documented.
 - Pricing: Free open-source; BYOK/provider or local-model costs
 - Notes: Goose is an open-source (Apache-2.0), Rust-based agentic CLI and Desktop app originally built by Block and now stewarded by the Linux Foundation's Agentic AI Foundation (AAIF). It was the first open-source agent to support MCP and ships 70+ first-party MCP extensions, recipes/sub-recipes for reusable workflows, real subagent delegation, four-tier permission modes (auto/approve/chat/smart_approve via GOOSE_MODE), Docker-based execution sandboxing, and a recently added lifecycle-hooks plugin system. No paid tier; cost is purely BYOK LLM usage, with a fully free/no-account path via local Ollama models.
 
@@ -582,7 +684,10 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Goal Command: full — Built-in `/goal` mode for long-running autonomous task execution with progress checklist and steering commands.
 - Subagents: full — Delegates larger tasks to specialized parallel subagents, with worktree integration.
 - Monitor: unknown — Public Grok Build docs reviewed here mention hooks/subagents but do not establish whether a Monitor-style background watch primitive exists.
+- Git Worktrees: partial — Runs as a local process, so it works inside a manually created git worktree for parallel isolation, but ships no built-in worktree manager.
+- Done Notifications: unknown — No public documentation found for built-in completion/attention notifications.
 - Transcripts: unknown — Location: transcript/session disk storage is not documented in the public beta launch page.
+- Chat Forking: unknown — No public documentation found for forking a conversation into a separate branch/session.
 - Model Selection: partial — Launch screenshot references config.toml for models and API keys; model catalog details are not yet public.
 - Approval Mode: full — Plan mode lets users approve, comment on, or rewrite a plan before execution.
 - Sandbox Mode: partial — Worktree isolation is documented for subagents; broader filesystem/network sandbox controls are not yet documented.
@@ -594,6 +699,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Telemetry: unknown — No user-visible telemetry opt-out setting found in public launch docs.
 - Hosted Agent: none — Documented as a terminal CLI, not a managed hosted worker.
 - Custom Model Provider: partial — Config references models and API keys, but arbitrary OpenAI-compatible provider support is not documented.
+- Byok Prompt Caching: unknown — No public evidence on whether prompt/KV caching is preserved when using your own API key.
 - Pricing: Included for SuperGrok and X Premium Plus subscribers during beta; broader Grok plans include Free/SuperGrok/Business/Enterprise
 - Notes: Early beta. Strong documented parity on AGENTS.md, skills, hooks, MCP, headless mode, ACP, and parallel subagents; lower confidence for session management and telemetry because public docs are still sparse.
 
@@ -614,7 +720,10 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Goal Command: none — Jules is a hosted async agent for GitHub issues/PRs; no interactive `/goal` slash command in public docs.
 - Subagents: partial — Plan tiers advertise multi-agent development and high concurrent task counts.
 - Monitor: partial — Jules is an async hosted agent with task status/completion UX, but reviewed docs do not show a local Monitor-style command/log/WebSocket watcher.
+- Git Worktrees: partial — Each task runs in its own isolated cloud workspace/branch rather than local git worktrees, giving equivalent per-task isolation.
+- Done Notifications: partial — Notifies via GitHub/email/UI when a task completes or needs review; no local desktop notification documented.
 - Transcripts: partial — Location: hosted/web/API-managed session history; no local transcript directory documented.
+- Chat Forking: unknown — No public documentation found for forking a conversation into a separate branch/session.
 - Model Selection: partial — Tier-dependent model access; not arbitrary model selection.
 - Approval Mode: full — User reviews plan/diff and approves changes/PR.
 - Sandbox Mode: full — Work happens in a Cloud VM clone.
@@ -626,6 +735,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Telemetry: unknown — No product-specific telemetry toggle found.
 - Hosted Agent: full — Hosted async agent running in Google-managed Cloud VMs.
 - Custom Model Provider: none — Uses Gemini models; BYO provider not documented.
+- Byok Prompt Caching: unknown — Managed Google-hosted platform; no BYOK prompt-caching path.
 - Pricing: Free 15 tasks/day; Google AI Pro 100 tasks/day; Google AI Ultra 300 tasks/day
 - Notes: Best categorized as an async hosted coding worker rather than a terminal pair-programmer. Strong on GitHub PR flow, approvals, Cloud VM isolation, and concurrency.
 
@@ -646,7 +756,10 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Goal Command: none — Junie runs as an IDE agent with tasks and modes; no built-in `/goal` slash command documented.
 - Subagents: full — Full custom subagent support. Subagents define tailored prompts, tool restrictions, model usage, and skills; Junie delegates automatically and stores custom agents in configured agent locations.
 - Monitor: partial — Junie supports subagents, headless CI, and lifecycle hooks, but reviewed docs do not show a dedicated monitor/watch primitive for arbitrary long-running commands or event streams.
+- Git Worktrees: partial — Runs as a local process, so it works inside a manually created git worktree for parallel isolation, but ships no built-in worktree manager.
+- Done Notifications: unknown — No public documentation found for built-in completion/attention notifications.
 - Transcripts: full — Interactive CLI exposes the full current-session transcript with Ctrl+T and session history with `/history`; public docs do not specify the disk storage path.
+- Chat Forking: unknown — No public documentation found for forking a conversation into a separate branch/session.
 - Model Selection: full — Full model selection through `/model` and config. Junie CLI can select the main LLM and reasoning effort; the home page advertises 10+ models via BYOK.
 - Approval Mode: full — Full approval control through brave mode levels (Off, Auto, On), action allowlist, and settings/config.
 - Sandbox Mode: partial — Runs inside JetBrains IDE context; no explicit standalone sandbox controls found.
@@ -658,6 +771,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Telemetry: partial — Feedback flow attaches current session logs; no broader telemetry-disable setting was found in docs reviewed.
 - Hosted Agent: partial — Junie can run from GitHub Action and GitLab CI/CD on issues, PRs, or MRs; this is CI-hosted automation rather than a managed always-on cloud worker.
 - Custom Model Provider: full — Full custom model/BYOK support through custom JSON model profiles, local providers such as Ollama, enterprise proxies, and supported API-compatible endpoints.
+- Byok Prompt Caching: unknown — No public evidence on whether prompt/KV caching is preserved when using your own API key.
 - Pricing: Bundled with JetBrains AI tiers/free credits; paid JetBrains AI plans apply
 - Notes: Strong fit for JetBrains users, debugger-aware workflows, CLI/headless CI, and JetBrains IDE integration. June 2026 docs now expose extensibility details for guidelines, extensions, MCP, subagents, commands, hooks, BYOK/custom models, and CI/CD.
 
@@ -679,7 +793,10 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Goal Command: none — Kilo Code uses custom workflows/slash commands; no first-party `/goal` for persistent session objectives.
 - Subagents: full — Full custom subagent support. Kilo Code CLI supports subagents via config or Markdown agent files, invocable by agents or users with @ mentions, with isolated sessions, prompts, model/tool/permission settings, and built-in general/explore subagents.
 - Monitor: partial — Kilo Code has plugin event hooks, workflows, and subagents, but reviewed docs do not show a dedicated Monitor-equivalent for arbitrary background command output or WebSocket events.
+- Git Worktrees: partial — Runs as a local process, so it works inside a manually created git worktree for parallel isolation, but ships no built-in worktree manager.
+- Done Notifications: partial — System/sound notifications available on task completion (Cline/Roo lineage).
 - Transcripts: unknown — Location: transcript/session disk storage was not found in public docs reviewed.
+- Chat Forking: partial — New-task handoff carries context to a fresh task (Cline/Roo lineage); no tree-style fork documented.
 - Model Selection: full — 500+ models via 15+ providers. Switch mid-session with /models. Per-agent model pinning. CLI flags: -m, --model. Auto model routing.
 - Approval Mode: full — Three-tier: allow (auto-approve), ask (prompt), deny (block). Glob patterns. --auto flag for autonomous mode. Per-agent permission overrides.
 - Sandbox Mode: partial — No dedicated Docker/sandbox isolation. External_directory permissions control reads/writes outside workspace. Permission system with allow/deny/ask.
@@ -691,6 +808,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Telemetry: full — Enabled by default. Disable via experimental.openTelemetry: false. OpenTelemetry export when OTEL_EXPORTER_OTLP_ENDPOINT is set.
 - Hosted Agent: partial — Cloud Agents feature allows web-based sessions; primary use is local via extension/CLI.
 - Custom Model Provider: full — BYOK for 15+ providers. Plugin system for entirely custom providers. Local models supported. 500+ models via Kilo Gateway at zero markup.
+- Byok Prompt Caching: partial — Supports provider prompt caching (e.g. Anthropic/OpenRouter) when configured with your own API key.
 - Pricing: Kilo Code free; Teams $15/user/mo; Kilo Gateway exact provider rates; Kilo Pass $19/$49/$199/mo credit subscriptions; KiloClaw $55/mo
 - Notes: Kilo Code is a rapidly evolving open-source coding agent (MIT, 19k+ stars). Originally forked from Continue, now independent. Notable for extensive plugin system, 500+ model support through Kilo Gateway, and cross-surface session sync.
 
@@ -712,7 +830,10 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Goal Command: none — Kimi Code CLI docs cover core operations and plugins but not a `/goal` command.
 - Subagents: full — Full subagent support. Built-in types: coder, explore, plan. YAML agent files with inheritance. Agent tool with subagent_type, model, resume, run_in_background params.
 - Monitor: partial — Kimi CLI has beta hooks and subagents, but reviewed docs do not show a dedicated monitor/watch primitive for arbitrary long-running commands or event streams.
+- Git Worktrees: partial — Runs as a local process, so it works inside a manually created git worktree for parallel isolation, but ships no built-in worktree manager.
+- Done Notifications: unknown — No public documentation found for built-in completion/attention notifications.
 - Transcripts: unknown — Location: transcript/session disk storage was not found in public docs reviewed.
+- Chat Forking: unknown — No public documentation found for forking a conversation into a separate branch/session.
 - Model Selection: full — Full model selection. Provider types: kimi, openai_legacy, openai_responses, anthropic, gemini, vertexai. /model interactive picker. CLI flags: --model, --thinking.
 - Approval Mode: full — Full system: Normal (approval with diff preview), YOLO mode (--yolo, auto-approves all), AFK mode (--afk, auto-approves and dismisses questions). Status bar badges.
 - Sandbox Mode: none — No dedicated sandbox/mode. Has workspace scope boundaries, file operation approval, sensitive file protection (.env, SSH keys). No containerized isolation.
@@ -724,6 +845,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Telemetry: unknown — No explicit telemetry documentation found. Has automatic update checks (disable via KIMI_CLI_NO_AUTO_UPDATE), but no stated telemetry/analytics collection policy.
 - Hosted Agent: none — Local CLI tool backed by Moonshot API.
 - Custom Model Provider: full — Full custom provider support. providers table in config.toml with type, base_url, api_key, custom_headers. Six provider types including OpenAI-compatible, Anthropic, Gemini.
+- Byok Prompt Caching: partial — Calls Moonshot / OpenAI-compatible endpoints with your key; provider caching can apply but is not separately documented.
 - Pricing: Kimi Code usage included in Kimi subscription credits; credit amounts vary by plan; API/token billing and BYOK also available
 - Notes: Kimi CLI by Moonshot AI (Beijing) is an Apache-2.0 open-source coding agent with rapid development pace (97 releases in 7 months). Strong AGENTS.md, skills, MCP, subagent, and YOLO/AFK approval mode support. Notable for status bar with badges and comprehensive JSON streaming output.
 
@@ -744,7 +866,10 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Goal Command: none — Kiro CLI documents slash-style commands but no built-in `/goal` for persistent objectives.
 - Subagents: full — Built-in subagents for context gathering and parallel general-purpose tasks.
 - Monitor: partial — Kiro has smart hooks and subagents, but reviewed docs do not show a dedicated Monitor-style background command/log/WebSocket watcher.
+- Git Worktrees: none — No built-in worktree support; tied to a single workspace/checkout. (agentic IDE).
+- Done Notifications: unknown — No public documentation found for built-in completion/attention notifications.
 - Transcripts: partial — Location: Kiro CLI uses directory-based conversation persistence; exact transcript directory is not specified in the public docs reviewed.
+- Chat Forking: unknown — No public documentation found for forking a conversation into a separate branch/session.
 - Model Selection: full — CLI /model displays and selects available models.
 - Approval Mode: full — Custom agents can use predefined tool permissions and approved plans.
 - Sandbox Mode: partial — Permissioning is documented; explicit local filesystem/network sandbox modes are not clear.
@@ -756,6 +881,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Telemetry: unknown — No telemetry control found in the docs reviewed.
 - Hosted Agent: partial — Kiro Web exists, but the public CLI docs emphasize local terminal operation.
 - Custom Model Provider: none — Docs describe Kiro's model set/Auto agent, not arbitrary model providers.
+- Byok Prompt Caching: unknown — No public evidence on whether prompt/KV caching is preserved when using your own API key.
 - Pricing: Kiro Free; Pro $20/mo; Pro+ $40/mo; Power $200/mo; overages $0.04/credit on paid tiers
 - Notes: Spec/steering-first agentic IDE plus CLI. Particularly strong on steering, hooks, custom agents, ACP-compatible IDEs, and CI automation.
 
@@ -777,7 +903,10 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Goal Command: full — README documents `/goal` with an independent judge model evaluating whether the stop condition is satisfied.
 - Subagents: full — README documents on-demand subagents with shared context, parallel work, lifecycle tracking, cancellation, and background execution.
 - Monitor: partial — MiMo Code documents background subagents with lifecycle tracking and cancellation, but reviewed docs do not show a dedicated arbitrary command/log/WebSocket monitor primitive.
+- Git Worktrees: partial — Runs as a local process, so it works inside a manually created git worktree for parallel isolation, but ships no built-in worktree manager.
+- Done Notifications: unknown — No public documentation found for built-in completion/attention notifications.
 - Transcripts: full — MiMo persists every conversation as a session, with session data saved under MIMOCODE_HOME/data.
+- Chat Forking: unknown — No public documentation found for forking a conversation into a separate branch/session.
 - Model Selection: full — CLI supports `--model/-m`; config and auth docs also route through Models.dev/provider configuration.
 - Approval Mode: full — Permission rules resolve to allow, ask, or deny; run mode also exposes `--dangerously-skip-permissions`.
 - Sandbox Mode: partial — Permission config can constrain external directories and tools, but no separate container/filesystem sandbox mode was found.
@@ -789,6 +918,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Telemetry: unknown — Environment variable docs include diagnostics/internal categories, but no explicit telemetry opt-in/out policy was found in docs reviewed.
 - Hosted Agent: none — Public README describes a terminal-native assistant; no managed cloud-hosted agent workspace was found.
 - Custom Model Provider: full — README documents custom OpenAI-compatible providers in the TUI; auth docs support configuring API keys for providers from Models.dev.
+- Byok Prompt Caching: unknown — No public evidence on whether prompt/KV caching is preserved when using your own API key.
 - Pricing: MiMo Code free/open-source; MiMo Token Plan Lite $6/mo, Standard $16/mo, Pro $50/mo, Max $100/mo; API pay-as-you-go also available
 - Notes: MiMo Code is a Xiaomi MiMo open-source terminal coding agent forked from OpenCode, adding cross-session memory, checkpoints, subagent orchestration, goal-driven loops, compose workflows, and dream/distill self-improvement.
 
@@ -810,7 +940,10 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Goal Command: none — Built-in TUI commands are `/init`, `/undo`, `/redo`, `/share`, and `/help` only; no first-party `/goal` for persistent session objectives yet.
 - Subagents: full — Supports custom agents.
 - Monitor: partial — OpenCode supports custom agents and run mode; reviewed docs do not show a dedicated Monitor-equivalent for arbitrary background command output or event streams.
+- Git Worktrees: partial — Runs as a local process, so it works inside a manually created git worktree for parallel isolation, but ships no built-in worktree manager.
+- Done Notifications: unknown — No public documentation found for built-in completion/attention notifications.
 - Transcripts: full — Location: OpenCode stores sessions/messages in SQLite `~/.local/share/opencode/opencode.db`; legacy storage uses `~/.local/share/opencode/storage/session|message|part/`.
+- Chat Forking: unknown — No public documentation found for forking a conversation into a separate branch/session.
 - Model Selection: full — Supports provider/model selection.
 - Approval Mode: full — Permission controls are configurable.
 - Sandbox Mode: partial — Permission model controls tool access.
@@ -822,6 +955,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Telemetry: full — Config includes telemetry-related settings.
 - Hosted Agent: none — Runs entirely locally.
 - Custom Model Provider: full — Supports many providers and custom provider configuration.
+- Byok Prompt Caching: partial — Routes directly to providers with your keys, so provider-side prompt caching can apply; not separately documented.
 - Pricing: Free MIT/BYOK; OpenCode Go $5 first month then $10/mo; Zen pay-as-you-go with $20 balance/top-up; Enterprise/per-seat paths
 
 ### OpenHands
@@ -842,7 +976,10 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Goal Command: none — No built-in `/goal` command for a persistent auto-continuing session objective; `/condense` manages context but does not implement a goal-loop.
 - Subagents: none — No documented first-class delegated/spawned subagent system for the CLI (contrast with Devin's 'Managed Devins'); OpenHands runs a single agent loop per conversation.
 - Monitor: none — No first-class delegated subagent or Monitor-style background watch primitive found in reviewed CLI docs; headless mode runs a task rather than monitoring arbitrary background jobs.
+- Git Worktrees: partial — Isolates each conversation in its own runtime/workspace (Docker), giving per-task isolation rather than local git worktrees.
+- Done Notifications: unknown — No public documentation found for built-in completion/attention notifications.
 - Transcripts: full — Conversation history automatically saved locally. Location: `~/.openhands/conversations/`. `--resume` lists and reopens prior conversations.
+- Chat Forking: unknown — No public documentation found for forking a conversation into a separate branch/session.
 - Model Selection: full — Set via Settings UI (Ctrl+P > Settings), persisted in `~/.openhands/agent_settings.json` (`llm.model` field), or temporarily overridden with `LLM_MODEL`/`LLM_API_KEY`/`LLM_BASE_URL` env vars plus the `--override-with-envs` flag.
 - Approval Mode: full — Confirmation enabled by default with LLM Risk Analyzer (auto-confirms low/medium risk, prompts on high risk). CLI flags `--always-approve` (auto-approve everything) and `--llm-approve` (force LLM-based analyzer) override behavior; `/confirm` adjusts in-session.
 - Sandbox Mode: full — Three sandbox providers: Docker (isolated container, default/recommended for `openhands serve`), Process (no isolation, runs directly as a local process — this is what the plain `openhands` CLI uses by default), and Remote (managed/hosted). Selected via legacy `RUNTIME` env var (docker/process/remote).
@@ -854,6 +991,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Telemetry: partial — `/feedback` sends anonymous feedback about the CLI; no documented granular opt-in/opt-out telemetry settings page found beyond this and general OSS analytics conventions.
 - Hosted Agent: full — OpenHands Cloud (app.all-hands.dev) is a fully managed hosted agent platform; `openhands login`/`openhands cloud -t "task"` create and run cloud-hosted conversations from the local CLI.
 - Custom Model Provider: full — LLM_BASE_URL plus LiteLLM backend allow pointing at any OpenAI-compatible endpoint, including local model servers (Ollama, vLLM, SGLang) and proxies.
+- Byok Prompt Caching: partial — Uses your own LLM API keys directly, so provider prompt caching can apply; not separately documented.
 - Pricing: Free MIT self-hosted/local; OpenHands Cloud free tier + at-cost usage; Enterprise custom
 - Notes: OpenHands launched in March 2024 as 'OpenDevin' (an open clone of Cognition's Devin), renamed OpenHands mid-2024, and had its GitHub org renamed All-Hands-AI -> OpenHands on 2025-10-20. The 1.0.0 release (Dec 2025) was a ground-up rewrite onto a new 'software-agent-sdk', changing config from TOML to JSON and rebranding 'microagents' to the AgentSkills-standard 'Skills' system. It has a genuine local CLI (`openhands`, installable via `uv tool install openhands` or `pip install openhands`, MIT licensed) that runs as a plain local process by default — Docker is only required for the separate `openhands serve` full-GUI mode, not the terminal CLI/headless mode.
 
@@ -875,7 +1013,10 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Goal Command: none — No `/goal` concept is documented; README is explicit about what is *not* built in (including plan mode and no-permission prompts).
 - Subagents: none — README says "No sub-agents." suggests using spawned pi instances/context tools instead of native subagent orchestration.
 - Monitor: none — Pi docs explicitly say there are no native subagents, and reviewed docs do not show a Monitor-style background watch primitive.
+- Git Worktrees: partial — Runs as a local process, so it works inside a manually created git worktree for parallel isolation, but ships no built-in worktree manager.
+- Done Notifications: unknown — No public documentation found for built-in completion/attention notifications.
 - Transcripts: full — Sessions are saved automatically to `~/.pi/agent/sessions/` with session IDs and `/session` command showing file and metadata.
+- Chat Forking: unknown — No public documentation found for forking a conversation into a separate branch/session.
 - Model Selection: full — Model/provider selection is fully exposed with `/model` in interactive mode and `--provider`, `--model`, `--models` CLI options.
 - Approval Mode: none — Philosophy page says there are no permission popups by default and no approval mode is documented as a first-class control.
 - Sandbox Mode: none — No sandbox mode setting is documented; README points users to tmux/container-like patterns instead of built-in sandbox controls.
@@ -887,6 +1028,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Telemetry: partial — Telemetry is configurable via `enableInstallTelemetry` and can be disabled; `PI_SKIP_VERSION_CHECK` and offline modes control network checks.
 - Hosted Agent: none — CLI is local-first; no dedicated hosted runtime platform is documented.
 - Custom Model Provider: full — Supports custom provider/API integration through `~/.pi/agent/models.json` and custom provider registration hooks for OpenAI-compatible, Anthropic, Google, and custom flows.
+- Byok Prompt Caching: unknown — No public evidence on whether prompt/KV caching is preserved when using your own API key.
 - Pricing: Free MIT/local tool; BYOK/provider or local-model costs
 - Notes: Pi is a minimal terminal coding harness with extensibility-first defaults (extensions, skills, prompt templates, themes, packages), plus SDK and RPC/event-stream integrations.
 
@@ -908,7 +1050,10 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Goal Command: full — Built-in `/goal` sets a goal and keeps working until the condition is met; supports `/goal <condition>` and `/goal clear`.
 - Subagents: full — Full subagent system: named subagents with YAML frontmatter, fork subagents (context-inheriting), per-agent model/permission/tool config, extension subagents.
 - Monitor: partial — Qwen Code has subagents, hooks, headless mode, and status surfaces, but reviewed docs do not show a dedicated Monitor-style arbitrary command/log/WebSocket watcher.
+- Git Worktrees: partial — Runs as a local process, so it works inside a manually created git worktree for parallel isolation, but ships no built-in worktree manager.
+- Done Notifications: partial — Gemini-CLI lineage: experimental notifications settings alert on completion/permission.
 - Transcripts: unknown — Location: transcript/session disk storage was not found in public docs reviewed.
+- Chat Forking: unknown — No public documentation found for forking a conversation into a separate branch/session.
 - Model Selection: full — Full model switching via /model. Supports OpenAI-compatible, Anthropic, Gemini protocols. Local models via Ollama/vLLM. Per-model reasoning config.
 - Approval Mode: full — Four modes: Plan (read-only), Default (manual approval), Auto-Edit (auto file edits, manual shell), YOLO (auto all). Shift+Tab to cycle.
 - Sandbox Mode: full — Full sandboxing: macOS Seatbelt (sandbox-exec with 6 profiles) and Docker/Podman containers (full isolation, custom images, network proxying, UID/GID mapping).
@@ -920,6 +1065,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Telemetry: full — OpenTelemetry-based: traces, logs, metrics. Export to local file, OTLP collector, Alibaba Cloud Managed Service. Privacy opt-out via privacy.usageStatisticsEnabled.
 - Hosted Agent: partial — Can use Alibaba Cloud Coding Plan for hosted model access; agent runs locally.
 - Custom Model Provider: full — modelProviders config with openai/anthropic/gemini auth types. Local models via any OpenAI-compatible endpoint (Ollama, vLLM, LM Studio). OpenRouter, Fireworks AI.
+- Byok Prompt Caching: partial — Calls OpenAI-compatible / DashScope endpoints with your key; provider caching can apply but is not separately documented.
 - Pricing: Free open-source CLI; Alibaba Cloud auth supports Token Plan (Team), Coding Plan fixed monthly, or pay-as-you-go; Qwen Cloud free quota/API pricing also available
 - Notes: Qwen Code by Alibaba (QwenLM) is the most feature-complete open-source coding agent in this matrix -- 20/20 fields at full (tied with Cline). Standout features: macOS Seatbelt + Docker sandbox, OpenTelemetry telemetry, custom status line, three output formats. Apache-2.0, 24.6k stars.
 
@@ -940,7 +1086,10 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Goal Command: none — Replit Agent is a hosted web agent; no terminal `/goal` slash command.
 - Subagents: partial — Agent 3 can build agents and run background tasks, but no first-class custom subagent framework found.
 - Monitor: partial — Replit Agent runs hosted autonomous/background work and reports task state, but reviewed docs do not show a Monitor-style primitive for arbitrary command output or event streams.
+- Git Worktrees: none — Runs in Replit's cloud workspace; no local git worktree model.
+- Done Notifications: partial — Replit mobile/web notifies you when the agent finishes or needs input.
 - Transcripts: partial — Location: hosted/web/API-managed session history; no local transcript directory documented.
+- Chat Forking: unknown — No public documentation found for forking a conversation into a separate branch/session.
 - Model Selection: none — No user model selection for Replit Agent found.
 - Approval Mode: partial — User reviews generated work in Replit; granular command approval controls are not documented.
 - Sandbox Mode: full — Runs inside Replit-hosted workspaces.
@@ -952,6 +1101,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Telemetry: unknown — No Agent-specific telemetry toggle found.
 - Hosted Agent: full — Hosted app-building agent in Replit.
 - Custom Model Provider: none — No BYO model/provider support found.
+- Byok Prompt Caching: unknown — Managed platform; no documented BYOK prompt-caching path.
 - Pricing: Included in Replit plan/usage model; Agent limits vary by plan
 - Notes: Best for hosted app prototyping/build-deploy workflows, not for local repo terminal automation.
 
@@ -973,7 +1123,10 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Goal Command: none — Roo Code supports custom slash commands; no built-in `/goal` for persistent session objectives.
 - Subagents: full — Full orchestration via Orchestrator Mode (Boomerang Mode). new_task tool delegates to specialized modes. Isolated context with explicit context transfer.
 - Monitor: partial — Roo Code can delegate work through Orchestrator/Boomerang mode, but reviewed docs do not show a dedicated background command/log/WebSocket monitor primitive.
+- Git Worktrees: none — No built-in worktree support; tied to a single workspace/checkout. (VS Code extension).
+- Done Notifications: partial — Sound/system notifications available on task completion or approval requests.
 - Transcripts: unknown — Location: transcript/session disk storage was not found in public docs reviewed.
+- Chat Forking: partial — Boomerang/subtask handoff spawns child tasks; no tree-style fork that preserves the original branch point.
 - Model Selection: full — 22+ documented providers: Anthropic, OpenAI, AWS Bedrock, DeepSeek, Google Gemini, LM Studio, Ollama, OpenRouter, and more. Sticky models per mode.
 - Approval Mode: full — Granular auto-approval: read/write operations, approved commands (allowlist/denylist), MCP tools (dual permission), mode switching, subtasks, follow-up questions.
 - Sandbox Mode: none — No explicit sandbox mode. Checkpoints provide git-based recovery. .rooignore for access control. No isolated/sandboxed execution environment.
@@ -985,8 +1138,46 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Telemetry: full — PostHog-powered. Anonymous feature usage, VS Code machine ID, error reports. No PII/code/prompts. Opt-out available. API error telemetry per provider.
 - Hosted Agent: none — Runs locally as VS Code extension or CLI. Project is now archived.
 - Custom Model Provider: full — OpenAI Compatible provider for arbitrary API endpoints. LiteLLM routing. 22+ built-in providers. Debug proxy support. Model-agnostic.
+- Byok Prompt Caching: full — Supports prompt caching for Anthropic/OpenRouter/Bedrock etc. when configured with your own API key.
 - Pricing: Free open-source extension; BYOK/provider costs
 - Notes: Roo Code was a popular Cline fork (24k stars, 574k VS Code installs) that was shut down on May 15, 2026. The repository is now archived and read-only. VS Code extension-host API only; no standalone npm agent SDK. Community forks include ZooCode and Cline.
+
+### T3 Code
+- Docs: https://t3.codes
+- GitHub: https://github.com/pingdotgg/t3code
+- Website: https://t3.codes
+- Form factor: CLI, Web, Desktop App
+- Released: Jun '26
+- Latest update: Jun '26
+- Some Free Usage: partial — The app is free, but real agent work is billed to your own API keys.
+- No Account Required: none — Requires credentials for an underlying agent (Codex, Claude Code, Cursor, or OpenCode).
+- Can Use Other Subscriptions: full — BYOK: connects to Codex, Claude Code, Cursor, or OpenCode with the credentials you already have.
+- Rules: partial — Repository ships an AGENTS.md; underlying-agent rule files (AGENTS.md / CLAUDE.md) apply through the selected harness.
+- Skills: unknown — No public documentation on reusable skills; capabilities come from the selected agent.
+- Hooks: none — No user-configurable lifecycle hooks documented.
+- Mcp Servers: unknown — No MCP support documented for the GUI itself; depends on the underlying agent.
+- Custom Commands: blank
+- Goal Command: blank
+- Subagents: blank
+- Monitor: partial — GUI surfaces the status of agents running across worktrees, but there is no scriptable background monitor/watch primitive.
+- Git Worktrees: full — Native git worktree support: each task runs in its own worktree/directory, reviewed with git diff and merged only when confirmed.
+- Done Notifications: unknown — No public documentation on completion/attention notifications.
+- Transcripts: blank
+- Chat Forking: unknown — No documented conversation forking/branching feature.
+- Model Selection: full — Model selector supports multiple providers from a single interface.
+- Approval Mode: full — Full-access mode edits without prompting; supervised mode requires approval for each action.
+- Sandbox Mode: partial — Isolation comes from per-task git worktrees; no dedicated network/process sandbox documented.
+- Resume: blank
+- Continue: blank
+- Non Interactive: none — GUI-first; a remote-backend/headless mode is planned but not yet available.
+- Output Format: blank
+- Statusline: blank
+- Telemetry: blank
+- Hosted Agent: none — Runs locally; no managed cloud execution platform.
+- Custom Model Provider: partial — Limited to supported harnesses (Codex, Claude Code, Cursor, OpenCode) and their providers, not arbitrary OpenAI-compatible endpoints.
+- Byok Prompt Caching: full — Drives the real Codex / Claude Code harnesses on your own API keys, so their native provider prompt caching still applies.
+- Pricing: Free, open source (MIT); bring your own API keys
+- Notes: Open-source (MIT) minimal GUI/CLI bridge that runs Codex, Claude Code, Cursor, or OpenCode in native git worktrees using your own API keys (BYOK).
 
 ### Trae Agent
 - Docs: https://github.com/bytedance/trae-agent
@@ -1006,7 +1197,10 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Goal Command: none — No persistent `/goal` or auto-continue-until-complete command documented.
 - Subagents: none — Multi-agent support is listed on the roadmap, not documented as current functionality.
 - Monitor: none — Multi-agent support is still roadmap-only and reviewed CLI docs do not show a Monitor-style background watch primitive.
+- Git Worktrees: partial — Runs as a local process, so it works inside a manually created git worktree for parallel isolation, but ships no built-in worktree manager.
+- Done Notifications: unknown — No public documentation found for built-in completion/attention notifications.
 - Transcripts: full — Trajectory recording is first-class, with auto-generated or custom trajectory JSON files.
+- Chat Forking: unknown — No public documentation found for forking a conversation into a separate branch/session.
 - Model Selection: full — Supports `--provider`, `--model`, `--model-base-url`, and config-file model providers.
 - Approval Mode: none — No tool approval/autonomy mode flags documented.
 - Sandbox Mode: partial — `trae-cli run` supports Docker image/container/Dockerfile flags, but no default local sandbox mode.
@@ -1018,6 +1212,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Telemetry: none — No product telemetry collection documented; trajectory recording is local/debug oriented.
 - Hosted Agent: none — Local CLI agent; no hosted/cloud agent platform documented.
 - Custom Model Provider: full — Supports OpenAI, Anthropic, Doubao, Azure, OpenRouter, Ollama, Google Gemini, custom base URLs, and config-file providers.
+- Byok Prompt Caching: partial — Calls providers directly with your keys, so provider prompt caching can apply; not separately documented.
 - Pricing: Free MIT open-source CLI; BYOK/provider costs
 - Notes: Official ByteDance open-source CLI agent for software engineering research and development. Verified locally from documented `uv sync --all-extras`: `trae-cli --help`, `trae-cli run --help`, and `trae-cli interactive --help` work. Added to agent-launch as `--agent trae` targeting `trae-cli`.
 
@@ -1038,7 +1233,10 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Goal Command: none — Windsurf Cascade has workflows and hooks but no documented `/goal` slash command for persistent objectives.
 - Subagents: full — Devin Cloud (autonomous agent on own VM), Devin Local Agent, Fast Context (specialized 20x faster retrieval), Agent Command Center manages all agents in Kanban view.
 - Monitor: partial — Windsurf/Devin surfaces support cloud/local agent status, hooks, and agent command workflows, but reviewed docs do not show a dedicated arbitrary command/log/WebSocket monitor primitive.
+- Git Worktrees: partial — Runs as a local process, so it works inside a manually created git worktree for parallel isolation, but ships no built-in worktree manager.
+- Done Notifications: partial — Cascade surfaces in-editor notifications when a task completes or needs input.
 - Transcripts: unknown — Location: transcript/session disk storage was not found in public docs reviewed.
+- Chat Forking: unknown — No public documentation found for forking a conversation into a separate branch/session.
 - Model Selection: full — Full selection: SWE-1.6/1.5, Claude Opus/Sonnet, GPT-5.x series, Gemini, DeepSeek V4, Kimi, Grok, and more. Adaptive (intelligent router) and Arena Mode (side-by-side).
 - Approval Mode: full — 4 terminal levels: Disabled (require approval), Allowlist Only, Auto (Cascade judges), Turbo (all auto-executed). Allow/deny lists. Cascade Code/Chat/Ask mode distinctions.
 - Sandbox Mode: partial — Devin cloud agent runs on isolated VM. Git worktrees isolate parallel sessions. Dev Containers support. No standalone sandbox toggle for the IDE.
@@ -1050,6 +1248,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Telemetry: partial — Telemetry settings mentioned in troubleshooting docs. Enterprise analytics API. No documented granular telemetry opt-out beyond standard VS Code settings.
 - Hosted Agent: full — Devin cloud agent integration provides managed agent platform.
 - Custom Model Provider: partial — BYOK for Anthropic models (Claude Sonnet 4, Opus 4) for Free/Pro users. No generic custom OpenAI-compatible endpoint configuration documented.
+- Byok Prompt Caching: unknown — Primarily uses Windsurf-managed models; BYOK prompt-caching behavior is not documented.
 - Pricing: Free $0; Pro $20/mo; Max $200/mo; Teams $40/user/mo; Enterprise custom
 - Notes: Windsurf by Codeium (acquired by Cognition AI in April 2026) is a standalone VS Code fork IDE with integrated coding agent (Cascade). Enterprise analytics API only; no agent embed SDK. Competes directly with Cursor IDE.
 
@@ -1070,7 +1269,10 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Goal Command: full — Built-in `/goal` supports set, replace, pause, resume, and clear; the agent automatically verifies each round and continues until the goal is complete.
 - Subagents: full — Built-in general-purpose and Explore subagents plus beta user-level custom subagents under `~/.zcode/agents/<name>.md`, with custom model/tool permissions/instructions.
 - Monitor: partial — ZCode has built-in/custom subagents and workspace task surfaces, but reviewed docs do not show a dedicated command/log/WebSocket Monitor-equivalent.
+- Git Worktrees: none — No built-in worktree support; tied to a single workspace/checkout. (IDE/desktop surface).
+- Done Notifications: unknown — No public documentation found for built-in completion/attention notifications.
 - Transcripts: partial — Task list/conversation history is first-class in the desktop UI, but public docs do not expose disk transcript paths.
+- Chat Forking: unknown — No public documentation found for forking a conversation into a separate branch/session.
 - Model Selection: full — Model selector and model settings support Z.ai, BigModel, GLM Coding Plan, and API-key providers.
 - Approval Mode: full — Execution modes include Default, Confirm Before Changes, and Auto Edit; safety confirmation pauses risky actions for approval.
 - Sandbox Mode: partial — Remote development can run workspaces in SSH hosts or local Docker containers; no standalone local sandbox flag is documented.
@@ -1082,5 +1284,6 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Telemetry: unknown — Usage Stats exists; no telemetry opt-out/control docs found.
 - Hosted Agent: none — Runtime remains the desktop workspace or remote SSH/Docker target; mobile remote only controls the open desktop workspace.
 - Custom Model Provider: full — Supports third-party compatible model services through Anthropic/OpenAI protocols and API key mode.
+- Byok Prompt Caching: unknown — No public evidence on whether prompt/KV caching is preserved when using your own API key.
 - Pricing: 5-day/free daily trial quota; GLM Coding Lite $16.20/mo ($18 list), Pro $64.80/mo ($72 list), Max $144/mo ($160 list); API/resource package billing also available
 - Notes: Z.ai/Zhipu desktop ADE with in-house ZCode Agent, GLM-5.2 focus, AGENTS.md, skills, commands, MCP, subagents, plugins, goal mode, mobile remote control, bot channels, and remote SSH/Docker development. No local CLI command was found, so no agent-launch backend was added.

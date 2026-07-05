@@ -191,5 +191,25 @@
     "support": "none",
     "source_url": "https://aider.chat/docs/#cli:~:text=customization",
     "comment": "CLI-based; no UI customization."
+  },
+  "git_worktrees": {
+    "support": "partial",
+    "source_url": "https://aider.chat/docs#aider:~:text=worktree",
+    "comment": "Runs as a local process, so it works inside a manually created git worktree for parallel isolation, but ships no built-in worktree manager."
+  },
+  "chat_forking": {
+    "support": "none",
+    "source_url": "https://aider.chat/docs#aider:~:text=clear",
+    "comment": "No conversation forking; only a fresh/cleared session is available."
+  },
+  "done_notifications": {
+    "support": "full",
+    "source_url": "https://aider.chat/docs/usage/notifications.html#notifications:~:text=notifications",
+    "comment": "Built-in --notifications / --notifications-command alerts you when the LLM finishes and is ready for input."
+  },
+  "byok_prompt_caching": {
+    "support": "full",
+    "source_url": "https://aider.chat/docs/usage/caching.html#prompt-caching:~:text=cache-prompts",
+    "comment": "--cache-prompts enables Anthropic prompt caching (system prompt, repo map, read-only files) with your own API key."
   }
 }

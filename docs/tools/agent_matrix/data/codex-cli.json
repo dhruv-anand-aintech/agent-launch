@@ -194,5 +194,25 @@
     "support": "unknown",
     "source_url": "https://docs.example.com/#documentation:~:text=ui-customization",
     "comment": "Research needed. Check for UI layout, sidebar, or panel customization."
+  },
+  "git_worktrees": {
+    "support": "full",
+    "source_url": "https://developers.openai.com/codex/cli/features#worktrees:~:text=worktree",
+    "comment": "Codex isolates each thread in its own git worktree so parallel threads work on separate checkouts of the repo."
+  },
+  "chat_forking": {
+    "support": "full",
+    "source_url": "https://developers.openai.com/codex/cli/features#forking:~:text=fork",
+    "comment": "Conversation forking branches a thread to explore an alternative path while keeping the original."
+  },
+  "done_notifications": {
+    "support": "full",
+    "source_url": "https://developers.openai.com/codex/config-reference#notifications:~:text=notifications",
+    "comment": "The Codex app and TUI send notifications when a task completes or needs approval; configurable in settings/config.toml."
+  },
+  "byok_prompt_caching": {
+    "support": "full",
+    "source_url": "https://developers.openai.com/api/docs/guides/prompt-caching#prompt-caching:~:text=automatically",
+    "comment": "OpenAI prompt caching applies automatically to eligible requests when running Codex on your own API key."
   }
 }

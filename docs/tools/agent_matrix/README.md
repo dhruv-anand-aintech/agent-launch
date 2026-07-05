@@ -33,6 +33,7 @@ Form factor values are deliberately strict: each value should have a concrete pe
 | Claude Code | CLI, Extension, SDK, Web, Mac App | Feb '25 | Jul '26 |  |  |  | full | full | full | full | full | full | partial | partial |
 | Cline | CLI, Extension, SDK | Jul '24 | Jul '26 | full | full | full | full | full | partial | unknown | full | full | none | full |
 | Cohere North | SDK, Web | Jan '25 | Jun '26 |  |  |  | partial | partial | partial | partial | full | full | full | none |
+| Conductor | Mac App | Jul '25 | Jul '26 | partial | none | full | full | full | full | partial | partial | full | none | partial |
 | Crush | CLI, TUI | Jul '25 | Jul '26 | full | full | full | full | full | partial | full | partial | full | none | full |
 | Cursor | CLI, IDE, SDK, Mobile | 2023 | Jun '26 | full |  |  | full | full | partial | full | full | full | full | full |
 | Devin | CLI, Extension, SDK, Web | Dec '24 | Jul '26 | full |  |  | full | full | partial | partial | full | full | full | unknown |
@@ -55,6 +56,7 @@ Form factor values are deliberately strict: each value should have a concrete pe
 | Qwen Code | CLI, Extension, SDK, Desktop App | Jun '25 | Jul '26 |  |  |  | full | full | partial | unknown | full | full | partial | full |
 | Replit Agent | Web | Sep '24 | Jun '26 |  |  |  | partial | full | partial | partial | partial | unknown | full | none |
 | Roo Code | Extension | Mid-2025 | May '26 |  |  |  | full | full | partial | unknown | none | full | none | full |
+| T3 Code | CLI, Web, Desktop App | Jun '26 | Jun '26 | partial | none | full | partial | unknown | partial |  | none | unknown | none | partial |
 | Trae Agent | CLI | Jun '25 | Feb '26 | full | full | full | partial | none | none | full | none | partial | none | full |
 | Windsurf Cascade | CLI, IDE, Extension | Nov '24 | Jun '26 |  |  |  | full | full | partial | unknown | full | full | full | partial |
 | ZCode | IDE, Desktop App, Mobile | 2026 | Jul '26 | full |  |  | full | full | partial | partial | partial | full | none | full |

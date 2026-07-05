@@ -193,5 +193,25 @@
     "support": "full",
     "source_url": "https://github.com/block/goose#source:~:text=15%2B%20LLM%20providers",
     "comment": "Routes agent usage through the user's own provider account/API key (Anthropic, OpenAI, Azure, Bedrock, Databricks, Groq, OpenRouter, etc.) or local inference (Ollama) rather than a Goose-owned subscription."
+  },
+  "git_worktrees": {
+    "support": "partial",
+    "source_url": "https://goose-docs.ai/docs/getting-started/using-goose-free#using-goose-free:~:text=session",
+    "comment": "Runs as a local process, so it works inside a manually created git worktree for parallel isolation, but ships no built-in worktree manager."
+  },
+  "chat_forking": {
+    "support": "unknown",
+    "source_url": "https://goose-docs.ai/docs/getting-started/using-goose-free#using-goose-free:~:text=session",
+    "comment": "No public documentation found for forking a conversation into a separate branch/session."
+  },
+  "done_notifications": {
+    "support": "unknown",
+    "source_url": "https://goose-docs.ai/docs/getting-started/using-goose-free#using-goose-free:~:text=session",
+    "comment": "No public documentation found for built-in completion/attention notifications."
+  },
+  "byok_prompt_caching": {
+    "support": "partial",
+    "source_url": "https://goose-docs.ai/docs/getting-started/providers#providers:~:text=provider",
+    "comment": "Connects directly to providers with your keys, so Anthropic-style prompt caching can apply; not separately documented."
   }
 }

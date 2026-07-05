@@ -195,5 +195,25 @@
     "support": "full",
     "source_url": "https://github.com/charmbracelet/crush#source:~:text=Crush%20supports%20a%20wide%20range%20of%20LLMs",
     "comment": "Routes through the user's own API keys/accounts for any supported provider (Anthropic, OpenAI, etc.) or coding-plan subscriptions (GLM Coding Plan, Kimi Code, MiniMax Coding Plan, Synthetic) rather than a Crush-owned subscription."
+  },
+  "git_worktrees": {
+    "support": "partial",
+    "source_url": "https://github.com/charmbracelet/crush/blob/main/README.md#crush:~:text=session",
+    "comment": "Runs as a local process, so it works inside a manually created git worktree for parallel isolation, but ships no built-in worktree manager."
+  },
+  "chat_forking": {
+    "support": "unknown",
+    "source_url": "https://github.com/charmbracelet/crush/blob/main/README.md#crush:~:text=session",
+    "comment": "No public documentation found for forking a conversation into a separate branch/session."
+  },
+  "done_notifications": {
+    "support": "unknown",
+    "source_url": "https://github.com/charmbracelet/crush/blob/main/README.md#crush:~:text=session",
+    "comment": "No public documentation found for built-in completion/attention notifications."
+  },
+  "byok_prompt_caching": {
+    "support": "partial",
+    "source_url": "https://github.com/charmbracelet/crush/blob/main/README.md#crush:~:text=providers",
+    "comment": "Talks directly to providers with your keys, so provider-side prompt caching can apply; behavior is not separately documented."
   }
 }

@@ -187,5 +187,25 @@
     "support": "unknown",
     "source_url": "https://docs.example.com/#documentation:~:text=ui-customization",
     "comment": "Research needed. Check for UI layout, sidebar, or panel customization."
+  },
+  "git_worktrees": {
+    "support": "partial",
+    "source_url": "https://docs.devin.ai/product-guides/parallel-devins#parallel-devins:~:text=parallel",
+    "comment": "Each task runs in its own isolated cloud workspace/branch rather than local git worktrees, giving equivalent per-task isolation."
+  },
+  "chat_forking": {
+    "support": "unknown",
+    "source_url": "https://docs.devin.ai/product-guides/parallel-devins#parallel-devins:~:text=session",
+    "comment": "No public documentation found for forking a conversation into a separate branch/session."
+  },
+  "done_notifications": {
+    "support": "partial",
+    "source_url": "https://docs.devin.ai/integrations/slack#slack:~:text=Slack",
+    "comment": "Notifies via Slack/UI when a session finishes or needs input; no local desktop notification setting documented."
+  },
+  "byok_prompt_caching": {
+    "support": "unknown",
+    "source_url": "https://docs.devin.ai/product-guides/parallel-devins#parallel-devins:~:text=session",
+    "comment": "Managed platform; no documented BYOK prompt-caching path."
   }
 }

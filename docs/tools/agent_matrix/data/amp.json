@@ -189,5 +189,25 @@
     "support": "unknown",
     "source_url": "https://docs.example.com/#documentation:~:text=ui-customization",
     "comment": "Research needed. Check for UI layout, sidebar, or panel customization."
+  },
+  "git_worktrees": {
+    "support": "partial",
+    "source_url": "https://ampcode.com/manual#threads:~:text=thread",
+    "comment": "Runs as a local process, so it works inside a manually created git worktree for parallel isolation, but ships no built-in worktree manager."
+  },
+  "chat_forking": {
+    "support": "full",
+    "source_url": "https://ampcode.com/manual#threads:~:text=fork",
+    "comment": "`amp threads fork <threadId>` branches a thread into a new conversation while leaving the original intact."
+  },
+  "done_notifications": {
+    "support": "unknown",
+    "source_url": "https://ampcode.com/manual#threads:~:text=thread",
+    "comment": "No public documentation found for built-in completion/attention notifications."
+  },
+  "byok_prompt_caching": {
+    "support": "unknown",
+    "source_url": "https://ampcode.com/manual#threads:~:text=thread",
+    "comment": "Amp bills through its own managed inference/credits rather than a general BYOK key, so BYOK caching is not applicable."
   }
 }

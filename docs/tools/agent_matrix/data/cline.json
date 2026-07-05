@@ -120,7 +120,7 @@
     "source_url": "https://github.com/cline/cline#works-with-every-model:~:text=Any%20OpenAI-compatible%20API%20Self-hosted%20or%20third-party%20endpoints",
     "comment": "Any OpenAI-compatible API endpoint supported. 30+ documented providers. BYOK model."
   },
-  "notes": "Cline has the most comprehensive feature set of any coding agent in this matrix \u2014 17/20 fields at full support. Open source (Apache 2.0), originally 'Claude Dev'. Started as VS Code extension, expanded to CLI and SDK. 8M+ installs.",
+  "notes": "Cline has the most comprehensive feature set of any coding agent in this matrix — 17/20 fields at full support. Open source (Apache 2.0), originally 'Claude Dev'. Started as VS Code extension, expanded to CLI and SDK. 8M+ installs.",
   "pricing": {
     "value": "Free for individuals; pay only for AI inference credits or BYOK; Enterprise custom",
     "source_url": "https://cline.bot/pricing#simple-transparent-pricing:~:text=Cline%20is%20free%20for%20individual%20developers",
@@ -195,5 +195,25 @@
     "support": "partial",
     "source_url": "https://github.com/cline/cline#configuration:~:text=ui",
     "comment": "VS Code panel customization; Cline-specific UI limited."
+  },
+  "git_worktrees": {
+    "support": "none",
+    "source_url": "https://docs.cline.bot/features/slash-commands/new-task#new-task:~:text=task",
+    "comment": "No built-in worktree support; tied to a single workspace/checkout. (VS Code / JetBrains extension bound to the open workspace)."
+  },
+  "chat_forking": {
+    "support": "partial",
+    "source_url": "https://docs.cline.bot/features/slash-commands/new-task#new-task:~:text=New%20Task",
+    "comment": "/newtask hands off context to a fresh task; there is no tree-style fork that preserves the original branch point."
+  },
+  "done_notifications": {
+    "support": "full",
+    "source_url": "https://docs.cline.bot/features/notifications#notifications:~:text=notification",
+    "comment": "System notifications alert you when a task completes or Cline needs approval."
+  },
+  "byok_prompt_caching": {
+    "support": "full",
+    "source_url": "https://docs.cline.bot/provider-config/anthropic#prompt-caching:~:text=prompt%20caching",
+    "comment": "Supports Anthropic/OpenRouter prompt caching when configured with your own API key."
   }
 }
