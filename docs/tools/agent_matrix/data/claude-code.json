@@ -31,8 +31,8 @@
   },
   "latest_major_update": {
     "value": "Jul '26",
-    "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.198#source:~:text=Claude%20in%20Chrome%20is%20now%20generally%20available",
-    "comment": "Latest release v2.1.198 (July 1, 2026) makes Claude in Chrome generally available, adds background-agent notifications, adds a /dataviz skill, improves background-agent PR handoff, lets Explore inherit the main session model, and fixes background-agent, plan-mode, network-retry, AWS gateway, rules, and UI issues."
+    "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.205#source:~:text=Added%20an%20auto%20mode%20rule%20that%20blocks%20tampering%20with%20session%20transcript%20files",
+    "comment": "Latest release v2.1.205 (July 8, 2026) adds an auto-mode rule blocking transcript tampering, improves background-agent/task state, expands /doctor setup checks, streams auto-update downloads to disk, and fixes JSON schema, Windows worktree, MCP import, LSP, watcher, PR-linking, and remote-control issues."
   },
   "rules": {
     "support": "full",

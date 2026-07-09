@@ -1,0 +1,199 @@
+{
+  "name": "Command Code",
+  "links": {
+    "docs": "https://commandcode.ai/docs",
+    "github": "",
+    "website": "https://commandcode.ai/",
+    "slug": "command-code"
+  },
+  "form_factor": {
+    "values": [
+      "CLI",
+      "Extension",
+      "Web"
+    ],
+    "source_url": "https://commandcode.ai/docs/quickstart#install-command-code:~:text=Command%20Code%20is%20available%20globally%20as%20%60command-code%60%20or%20the%20shorter%20alias%20%60cmd%60",
+    "comment": "Terminal coding agent exposed as `cmd`/`command-code`, with IDE integration and Studio/account surfaces. Per-form-factor links: CLI: https://commandcode.ai/docs/quickstart; Extension: https://commandcode.ai/docs/ide-integration; Web: https://commandcode.ai/docs/studio.",
+    "links": {
+      "CLI": "https://commandcode.ai/docs/quickstart",
+      "Extension": "https://commandcode.ai/docs/ide-integration",
+      "Web": "https://commandcode.ai/docs/studio"
+    }
+  },
+  "released_in": {
+    "value": "Jul '26",
+    "source_url": "https://commandcode.ai/launch#introducing-command-code:~:text=We%27re%20launching%20Command%20Code%2C%20a%20coding%20agent%20with%20taste",
+    "comment": "Launch announcement presents Command Code as a newly launched coding agent CLI with taste learning."
+  },
+  "latest_major_update": {
+    "value": "Jul '26",
+    "source_url": "https://commandcode.ai/changelog#july:~:text=%2F%2Fv%200.43.1",
+    "comment": "Latest public changelog entry v0.43.1 (July 8, 2026) fixes the auto-updater script after v0.43.0 removed a dead bin/run.mjs fallback; v0.42.0 added memory management and sliding session windowing."
+  },
+  "pricing": {
+    "value": "Go $1/mo, Pro $15/mo, Max 10x $100/mo, Max 20x $200/mo; monthly credits and top-ups; BYOK/provider options documented",
+    "source_url": "https://commandcode.ai/pricing#every-plan-side-by-side:~:text=Go%241%2Fmo",
+    "comment": "Pricing page lists Go, Pro, Max 10x, and Max 20x tiers with monthly credits, model access, 1M context, and top-up behavior."
+  },
+  "some_free_usage": {
+    "support": "partial",
+    "source_url": "https://commandcode.ai/docs/#models-all-of-them:~:text=Tencent%2FHY3%20Free%20until%20July%2021%2C%202026",
+    "comment": "Docs advertise temporary free model deals, but ordinary agent use requires signing in and a paid/credit-backed plan."
+  },
+  "no_account_required": {
+    "support": "none",
+    "source_url": "https://commandcode.ai/docs/quickstart#log-in:~:text=Run%20the%20following%20command%20to%20log%20in%20to%20the%20CLI",
+    "comment": "Quickstart requires `cmd login` before normal coding use."
+  },
+  "can_use_other_subscriptions": {
+    "support": "full",
+    "source_url": "https://commandcode.ai/docs/reference/cli#cli-slash-commands:~:text=%2Fprovider%20Select%20AI%20provider",
+    "comment": "CLI exposes `/provider` and pricing/docs describe provider/API-key surfaces, so usage can route through non-default providers where configured."
+  },
+  "rules": {
+    "support": "full",
+    "source_url": "https://commandcode.ai/docs/reference/cli#cli-slash-commands:~:text=%2Finit%20Initialize%20AGENTS.md%20for%20this%20project",
+    "comment": "CLI has `/init` for AGENTS.md and Taste/memory features for persistent project guidance."
+  },
+  "skills": {
+    "support": "full",
+    "source_url": "https://commandcode.ai/docs/skills#create-skills:~:text=User-level%20skills%20are%20available%20across%20all%20your%20projects",
+    "comment": "Supports user-level `~/.commandcode/skills/<skill>/SKILL.md` and project-level `.commandcode/skills/<skill>/SKILL.md` skills plus `cmd skills` management."
+  },
+  "hooks": {
+    "support": "full",
+    "source_url": "https://commandcode.ai/docs/#get-started:~:text=Hooks",
+    "comment": "Docs expose a dedicated Hooks section and changelog includes SessionStart hook support."
+  },
+  "mcp_servers": {
+    "support": "full",
+    "source_url": "https://commandcode.ai/docs/reference/cli#cli-subcommands:~:text=cmd%20mcp%20Manage%20MCP%20(Model%20Context%20Protocol)%20servers",
+    "comment": "`cmd mcp` manages MCP servers; `/mcp` is available in sessions."
+  },
+  "custom_commands": {
+    "support": "full",
+    "source_url": "https://commandcode.ai/docs/reference/cli#cli-slash-commands:~:text=CLI%20Slash%20Commands",
+    "comment": "Docs list slash commands and a dedicated custom slash commands section."
+  },
+  "goal_command": {
+    "support": "full",
+    "source_url": "https://commandcode.ai/docs/reference/cli#cli-slash-commands:~:text=%2Fgoal%20Set%20an%20objective%20for%20the%20agent%20to%20work%20toward%20autonomously",
+    "comment": "Built-in `/goal` sets an autonomous objective with clear/status behavior."
+  },
+  "subagents": {
+    "support": "full",
+    "source_url": "https://commandcode.ai/docs/reference/cli#cli-slash-commands:~:text=%2Fagents%20Manage%20agent%20configurations",
+    "comment": "`/agents` manages agent configurations; docs include a Custom Agents section."
+  },
+  "monitor": {
+    "support": "partial",
+    "source_url": "https://commandcode.ai/changelog#july:~:text=Memory%20management%20and%20sliding%20session%20windowing",
+    "comment": "Session memory/windowing, traces, status, and checkpoints are documented, but no separate background monitor/watch primitive was confirmed."
+  },
+  "transcripts": {
+    "support": "full",
+    "source_url": "https://commandcode.ai/docs/reference/cli#cli-slash-commands:~:text=%2Fsession-file%20Show%20the%20current%20session%20id%20and%20path%20to%20the%20on-disk%20session%20file",
+    "comment": "`/session-file` reveals the current session id and on-disk session path."
+  },
+  "model_selection": {
+    "support": "full",
+    "source_url": "https://commandcode.ai/docs/reference/cli#cli-flags:~:text=-m%60%2C%20%60--model%20%3Cmodel%3E%60",
+    "comment": "Supports `--model`, `/model`, and `--list-models`."
+  },
+  "approval_mode": {
+    "support": "full",
+    "source_url": "https://commandcode.ai/docs/reference/cli#cli-flags:~:text=--permission-mode%20%3Cmode%3E",
+    "comment": "Supports plan, standard, auto-accept, and yolo/dangerous skip permission modes."
+  },
+  "sandbox_mode": {
+    "support": "partial",
+    "source_url": "https://commandcode.ai/docs/reference/cli#cli-flags:~:text=--yolo%20Bypass%20all%20permission%20prompts",
+    "comment": "Permission modes and yolo are documented; no separate filesystem/network sandbox selector was found."
+  },
+  "resume": {
+    "support": "full",
+    "source_url": "https://commandcode.ai/docs/reference/cli#cli-flags:~:text=-r%60%2C%20%60--resume%20%60Resume%20a%20conversation",
+    "comment": "Supports `--resume` with optional conversation id/name."
+  },
+  "continue": {
+    "support": "full",
+    "source_url": "https://commandcode.ai/docs/reference/cli#cli-flags:~:text=-c%60%2C%20%60--continue%20%60Continue%20the%20last%20conversation",
+    "comment": "Supports `--continue` for the last conversation."
+  },
+  "non_interactive": {
+    "support": "full",
+    "source_url": "https://commandcode.ai/docs/reference/cli#cli-flags:~:text=-p%60%2C%20%60--print%20%5Bquery%5D%60Run%20in%20non-interactive%20mode",
+    "comment": "Supports `--print [query]` to run non-interactively and exit."
+  },
+  "output_format": {
+    "support": "partial",
+    "source_url": "https://commandcode.ai/docs/reference/cli#subcommand-options:~:text=cmd%20status%20--json%20Emit%20status%20as%20a%20single%20JSON%20line%20for%20automation",
+    "comment": "`cmd status --json` exists; no full JSON event stream for `--print` was confirmed."
+  },
+  "statusline": {
+    "support": "full",
+    "source_url": "https://commandcode.ai/changelog#february:~:text=PR%20indicator%20in%20status%20bar",
+    "comment": "Changelog documents status-bar indicators and CLI status UI features."
+  },
+  "telemetry": {
+    "support": "full",
+    "source_url": "https://commandcode.ai/changelog#february:~:text=DO_NOT_TRACK%20env%20var%20support%20to%20opt%20out%20of%20telemetry",
+    "comment": "Changelog documents OpenTelemetry integration and DO_NOT_TRACK opt-out; later changelog notes CLI telemetry."
+  },
+  "custom_model_provider": {
+    "support": "full",
+    "source_url": "https://commandcode.ai/docs/reference/cli#cli-slash-commands:~:text=%2Fprovider%20Select%20AI%20provider",
+    "comment": "Provider selection and many model families are documented."
+  },
+  "keyboard_shortcuts": {
+    "support": "full",
+    "source_url": "https://commandcode.ai/docs/quickstart#useful-shortcuts:~:text=Press%20%60%3F%60%20to%20find%20keyboard%20shortcuts",
+    "comment": "Quickstart points users to `?` for all keyboard shortcuts."
+  },
+  "theme_customization": {
+    "support": "unknown",
+    "source_url": "https://docs.example.com/#documentation:~:text=unknown",
+    "comment": "Research needed. Public docs did not expose enough detail in this run."
+  },
+  "auto_save": {
+    "support": "partial",
+    "source_url": "https://commandcode.ai/docs/reference/cli#cli-slash-commands:~:text=%2Frewind%20Restore%20to%20a%20previous%20checkpoint",
+    "comment": "Checkpoints and rewind imply session/file state is saved, but no explicit auto-save setting was confirmed."
+  },
+  "debugging_output": {
+    "support": "full",
+    "source_url": "https://commandcode.ai/docs/reference/cli#cli-slash-commands:~:text=%2Ftrace%20Copy%20the%20current%20trace%20id",
+    "comment": "Trace id, status, info, and verbose/text info modes are documented for support debugging."
+  },
+  "context_window": {
+    "support": "full",
+    "source_url": "https://commandcode.ai/pricing#every-plan-side-by-side:~:text=Context%20window",
+    "comment": "Pricing page lists context windows up to 1M tokens and changelog includes sliding session windowing."
+  },
+  "code_formatting": {
+    "support": "partial",
+    "source_url": "https://commandcode.ai/launch#introducing-command-code:~:text=continuously%20improves%20your%20coding%20taste%20and%20applies%20it%20automatically",
+    "comment": "Taste learning can enforce style preferences, but a built-in formatter/linter integration was not confirmed."
+  },
+  "git_integration": {
+    "support": "full",
+    "source_url": "https://commandcode.ai/docs/reference/cli#cli-slash-commands:~:text=%2Freview%20Review%20a%20pull%20request",
+    "comment": "Supports PR review and PR-comment workflows, and launch/docs describe commits and PRs as built in."
+  },
+  "performance_mode": {
+    "support": "partial",
+    "source_url": "https://commandcode.ai/docs/reference/cli#cli-flags:~:text=--max-turns%20%3Cnumber%3E",
+    "comment": "Supports max-turn limits, model switching, and memory windowing; no named performance mode was confirmed."
+  },
+  "ui_customization": {
+    "support": "unknown",
+    "source_url": "https://docs.example.com/#documentation:~:text=unknown",
+    "comment": "Research needed. Public docs did not expose enough detail in this run."
+  },
+  "hosted_agent": {
+    "support": "none",
+    "source_url": "https://commandcode.ai/docs/quickstart#run-the-command-code-cli:~:text=Navigate%20to%20a%20project%20directory%20and%20run",
+    "comment": "Primary surface is a local CLI; no managed hosted coding-agent runtime was confirmed."
+  },
+  "notes": "Command Code is an npm-installed CLI coding agent (`cmd`) centered on continuously learned coding taste, with skills, MCP, hooks, custom agents, goal mode, checkpoints, non-interactive print mode, model/provider selection, and account-backed pricing."
+}

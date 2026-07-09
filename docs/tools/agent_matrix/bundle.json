@@ -812,9 +812,9 @@
     },
     "latest_major_update": {
       "value": "Jul '26",
-      "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.198#source:~:text=Claude%20in%20Chrome%20is%20now%20generally%20available",
-      "comment": "Latest release v2.1.198 (July 1, 2026) makes Claude in Chrome generally available, adds background-agent notifications, adds a /dataviz skill, improves background-agent PR handoff, lets Explore inherit the main session model, and fixes background-agent, plan-mode, network-retry, AWS gateway, rules, and UI issues.",
-      "sort_date": "2026-07-03"
+      "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.205#source:~:text=Added%20an%20auto%20mode%20rule%20that%20blocks%20tampering%20with%20session%20transcript%20files",
+      "comment": "Latest release v2.1.205 (July 8, 2026) adds an auto-mode rule blocking transcript tampering, improves background-agent/task state, expands /doctor setup checks, streams auto-update downloads to disk, and fixes JSON schema, Windows worktree, MCP import, LSP, watcher, PR-linking, and remote-control issues.",
+      "sort_date": "2026-07-08"
     },
     "rules": {
       "support": "full",
@@ -998,9 +998,9 @@
     },
     "latest_major_update": {
       "value": "Jul '26",
-      "source_url": "https://github.com/cline/cline/releases/tag/v4.0.5#source:~:text=Add%20support%20for%20Claude%20Sonnet%205",
-      "comment": "Latest release v4.0.5 (June 30, 2026) adds Claude Sonnet 5 support across Anthropic, Bedrock, Vertex, Claude Code, SAP AI Core, OpenRouter, and Vercel AI Gateway providers, including model-picker and recommended-model updates.",
-      "sort_date": "2026-07-03"
+      "source_url": "https://github.com/cline/cline/releases/tag/cli-v3.0.39#source:~:text=You%20can%20now%20select%20Cline%20free%20models%20on%20the%20ClinePass%20provider%20in%20the%20model%20picker",
+      "comment": "Latest public Cline release cli-v3.0.39 (July 9, 2026) adds Cline free models to the ClinePass picker, removes retired GLM 5.1 metadata, fixes Codex model metadata, reports more accurate str_replace diffs, preserves canonical history during compaction, and updates telemetry/client identity behavior.",
+      "sort_date": "2026-07-09"
     },
     "rules": {
       "support": "full",
@@ -1092,7 +1092,7 @@
       "source_url": "https://github.com/cline/cline#works-with-every-model:~:text=Any%20OpenAI-compatible%20API%20Self-hosted%20or%20third-party%20endpoints",
       "comment": "Any OpenAI-compatible API endpoint supported. 30+ documented providers. BYOK model."
     },
-    "notes": "Cline has the most comprehensive feature set of any coding agent in this matrix \u2014 17/20 fields at full support. Open source (Apache 2.0), originally 'Claude Dev'. Started as VS Code extension, expanded to CLI and SDK. 8M+ installs.",
+    "notes": "Cline has the most comprehensive feature set of any coding agent in this matrix: 17/20 fields at full support. Open source (Apache 2.0), originally 'Claude Dev'. Started as VS Code extension, expanded to CLI and SDK. 8M+ installs.",
     "pricing": {
       "value": "Free for individuals; pay only for AI inference credits or BYOK; Enterprise custom",
       "source_url": "https://cline.bot/pricing#simple-transparent-pricing:~:text=Cline%20is%20free%20for%20individual%20developers",
@@ -1203,9 +1203,9 @@
     },
     "latest_major_update": {
       "value": "Jul '26",
-      "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.142.5#source:~:text=Prevented%20full%20Responses%20WebSocket%20request%20payloads%20from%20being%20written%20to%20trace%20logs",
-      "comment": "Latest stable Codex CLI release rust-v0.142.5 (July 1, 2026) is a security/privacy maintenance patch preventing full Responses WebSocket request payloads from being written to trace logs.",
-      "sort_date": "2026-07-03"
+      "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.143.0#source:~:text=Remote%20plugins%20are%20now%20enabled%20by%20default",
+      "comment": "Latest stable Codex CLI release rust-v0.143.0 (July 8, 2026) enables remote plugins by default, adds system-proxy routing, manual remote-control pairing, Bedrock GPT-5.6 model entries, MCP tool-search/auth updates, app-server environment/thread/fork APIs, and multiple Windows, sandbox, recovery, trace, and dependency fixes.",
+      "sort_date": "2026-07-09"
     },
     "rules": {
       "support": "full",
@@ -1554,6 +1554,207 @@
     }
   },
   {
+    "name": "Command Code",
+    "links": {
+      "docs": "https://commandcode.ai/docs",
+      "github": "",
+      "website": "https://commandcode.ai/",
+      "slug": "command-code"
+    },
+    "form_factor": {
+      "values": [
+        "CLI",
+        "Extension",
+        "Web"
+      ],
+      "source_url": "https://commandcode.ai/docs/quickstart#install-command-code:~:text=Command%20Code%20is%20available%20globally%20as%20%60command-code%60%20or%20the%20shorter%20alias%20%60cmd%60",
+      "comment": "Terminal coding agent exposed as `cmd`/`command-code`, with IDE integration and Studio/account surfaces. Per-form-factor links: CLI: https://commandcode.ai/docs/quickstart; Extension: https://commandcode.ai/docs/ide-integration; Web: https://commandcode.ai/docs/studio.",
+      "links": {
+        "CLI": "https://commandcode.ai/docs/quickstart",
+        "Extension": "https://commandcode.ai/docs/ide-integration",
+        "Web": "https://commandcode.ai/docs/studio"
+      }
+    },
+    "released_in": {
+      "value": "Jul '26",
+      "source_url": "https://commandcode.ai/launch#introducing-command-code:~:text=We%27re%20launching%20Command%20Code%2C%20a%20coding%20agent%20with%20taste",
+      "comment": "Launch announcement presents Command Code as a newly launched coding agent CLI with taste learning.",
+      "sort_date": "2026-07-01"
+    },
+    "latest_major_update": {
+      "value": "Jul '26",
+      "source_url": "https://commandcode.ai/changelog#july:~:text=%2F%2Fv%200.43.1",
+      "comment": "Latest public changelog entry v0.43.1 (July 8, 2026) fixes the auto-updater script after v0.43.0 removed a dead bin/run.mjs fallback; v0.42.0 added memory management and sliding session windowing.",
+      "sort_date": "2026-07-01"
+    },
+    "pricing": {
+      "value": "Go $1/mo, Pro $15/mo, Max 10x $100/mo, Max 20x $200/mo; monthly credits and top-ups; BYOK/provider options documented",
+      "source_url": "https://commandcode.ai/pricing#every-plan-side-by-side:~:text=Go%241%2Fmo",
+      "comment": "Pricing page lists Go, Pro, Max 10x, and Max 20x tiers with monthly credits, model access, 1M context, and top-up behavior."
+    },
+    "some_free_usage": {
+      "support": "partial",
+      "source_url": "https://commandcode.ai/docs/#models-all-of-them:~:text=Tencent%2FHY3%20Free%20until%20July%2021%2C%202026",
+      "comment": "Docs advertise temporary free model deals, but ordinary agent use requires signing in and a paid/credit-backed plan."
+    },
+    "no_account_required": {
+      "support": "none",
+      "source_url": "https://commandcode.ai/docs/quickstart#log-in:~:text=Run%20the%20following%20command%20to%20log%20in%20to%20the%20CLI",
+      "comment": "Quickstart requires `cmd login` before normal coding use."
+    },
+    "can_use_other_subscriptions": {
+      "support": "full",
+      "source_url": "https://commandcode.ai/docs/reference/cli#cli-slash-commands:~:text=%2Fprovider%20Select%20AI%20provider",
+      "comment": "CLI exposes `/provider` and pricing/docs describe provider/API-key surfaces, so usage can route through non-default providers where configured."
+    },
+    "rules": {
+      "support": "full",
+      "source_url": "https://commandcode.ai/docs/reference/cli#cli-slash-commands:~:text=%2Finit%20Initialize%20AGENTS.md%20for%20this%20project",
+      "comment": "CLI has `/init` for AGENTS.md and Taste/memory features for persistent project guidance."
+    },
+    "skills": {
+      "support": "full",
+      "source_url": "https://commandcode.ai/docs/skills#create-skills:~:text=User-level%20skills%20are%20available%20across%20all%20your%20projects",
+      "comment": "Supports user-level `~/.commandcode/skills/<skill>/SKILL.md` and project-level `.commandcode/skills/<skill>/SKILL.md` skills plus `cmd skills` management."
+    },
+    "hooks": {
+      "support": "full",
+      "source_url": "https://commandcode.ai/docs/#get-started:~:text=Hooks",
+      "comment": "Docs expose a dedicated Hooks section and changelog includes SessionStart hook support."
+    },
+    "mcp_servers": {
+      "support": "full",
+      "source_url": "https://commandcode.ai/docs/reference/cli#cli-subcommands:~:text=cmd%20mcp%20Manage%20MCP%20(Model%20Context%20Protocol)%20servers",
+      "comment": "`cmd mcp` manages MCP servers; `/mcp` is available in sessions."
+    },
+    "custom_commands": {
+      "support": "full",
+      "source_url": "https://commandcode.ai/docs/reference/cli#cli-slash-commands:~:text=CLI%20Slash%20Commands",
+      "comment": "Docs list slash commands and a dedicated custom slash commands section."
+    },
+    "goal_command": {
+      "support": "full",
+      "source_url": "https://commandcode.ai/docs/reference/cli#cli-slash-commands:~:text=%2Fgoal%20Set%20an%20objective%20for%20the%20agent%20to%20work%20toward%20autonomously",
+      "comment": "Built-in `/goal` sets an autonomous objective with clear/status behavior."
+    },
+    "subagents": {
+      "support": "full",
+      "source_url": "https://commandcode.ai/docs/reference/cli#cli-slash-commands:~:text=%2Fagents%20Manage%20agent%20configurations",
+      "comment": "`/agents` manages agent configurations; docs include a Custom Agents section."
+    },
+    "monitor": {
+      "support": "partial",
+      "source_url": "https://commandcode.ai/changelog#july:~:text=Memory%20management%20and%20sliding%20session%20windowing",
+      "comment": "Session memory/windowing, traces, status, and checkpoints are documented, but no separate background monitor/watch primitive was confirmed."
+    },
+    "transcripts": {
+      "support": "full",
+      "source_url": "https://commandcode.ai/docs/reference/cli#cli-slash-commands:~:text=%2Fsession-file%20Show%20the%20current%20session%20id%20and%20path%20to%20the%20on-disk%20session%20file",
+      "comment": "`/session-file` reveals the current session id and on-disk session path."
+    },
+    "model_selection": {
+      "support": "full",
+      "source_url": "https://commandcode.ai/docs/reference/cli#cli-flags:~:text=-m%60%2C%20%60--model%20%3Cmodel%3E%60",
+      "comment": "Supports `--model`, `/model`, and `--list-models`."
+    },
+    "approval_mode": {
+      "support": "full",
+      "source_url": "https://commandcode.ai/docs/reference/cli#cli-flags:~:text=--permission-mode%20%3Cmode%3E",
+      "comment": "Supports plan, standard, auto-accept, and yolo/dangerous skip permission modes."
+    },
+    "sandbox_mode": {
+      "support": "partial",
+      "source_url": "https://commandcode.ai/docs/reference/cli#cli-flags:~:text=--yolo%20Bypass%20all%20permission%20prompts",
+      "comment": "Permission modes and yolo are documented; no separate filesystem/network sandbox selector was found."
+    },
+    "resume": {
+      "support": "full",
+      "source_url": "https://commandcode.ai/docs/reference/cli#cli-flags:~:text=-r%60%2C%20%60--resume%20%60Resume%20a%20conversation",
+      "comment": "Supports `--resume` with optional conversation id/name."
+    },
+    "continue": {
+      "support": "full",
+      "source_url": "https://commandcode.ai/docs/reference/cli#cli-flags:~:text=-c%60%2C%20%60--continue%20%60Continue%20the%20last%20conversation",
+      "comment": "Supports `--continue` for the last conversation."
+    },
+    "non_interactive": {
+      "support": "full",
+      "source_url": "https://commandcode.ai/docs/reference/cli#cli-flags:~:text=-p%60%2C%20%60--print%20%5Bquery%5D%60Run%20in%20non-interactive%20mode",
+      "comment": "Supports `--print [query]` to run non-interactively and exit."
+    },
+    "output_format": {
+      "support": "partial",
+      "source_url": "https://commandcode.ai/docs/reference/cli#subcommand-options:~:text=cmd%20status%20--json%20Emit%20status%20as%20a%20single%20JSON%20line%20for%20automation",
+      "comment": "`cmd status --json` exists; no full JSON event stream for `--print` was confirmed."
+    },
+    "statusline": {
+      "support": "full",
+      "source_url": "https://commandcode.ai/changelog#february:~:text=PR%20indicator%20in%20status%20bar",
+      "comment": "Changelog documents status-bar indicators and CLI status UI features."
+    },
+    "telemetry": {
+      "support": "full",
+      "source_url": "https://commandcode.ai/changelog#february:~:text=DO_NOT_TRACK%20env%20var%20support%20to%20opt%20out%20of%20telemetry",
+      "comment": "Changelog documents OpenTelemetry integration and DO_NOT_TRACK opt-out; later changelog notes CLI telemetry."
+    },
+    "custom_model_provider": {
+      "support": "full",
+      "source_url": "https://commandcode.ai/docs/reference/cli#cli-slash-commands:~:text=%2Fprovider%20Select%20AI%20provider",
+      "comment": "Provider selection and many model families are documented."
+    },
+    "keyboard_shortcuts": {
+      "support": "full",
+      "source_url": "https://commandcode.ai/docs/quickstart#useful-shortcuts:~:text=Press%20%60%3F%60%20to%20find%20keyboard%20shortcuts",
+      "comment": "Quickstart points users to `?` for all keyboard shortcuts."
+    },
+    "theme_customization": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=unknown",
+      "comment": "Research needed. Public docs did not expose enough detail in this run."
+    },
+    "auto_save": {
+      "support": "partial",
+      "source_url": "https://commandcode.ai/docs/reference/cli#cli-slash-commands:~:text=%2Frewind%20Restore%20to%20a%20previous%20checkpoint",
+      "comment": "Checkpoints and rewind imply session/file state is saved, but no explicit auto-save setting was confirmed."
+    },
+    "debugging_output": {
+      "support": "full",
+      "source_url": "https://commandcode.ai/docs/reference/cli#cli-slash-commands:~:text=%2Ftrace%20Copy%20the%20current%20trace%20id",
+      "comment": "Trace id, status, info, and verbose/text info modes are documented for support debugging."
+    },
+    "context_window": {
+      "support": "full",
+      "source_url": "https://commandcode.ai/pricing#every-plan-side-by-side:~:text=Context%20window",
+      "comment": "Pricing page lists context windows up to 1M tokens and changelog includes sliding session windowing."
+    },
+    "code_formatting": {
+      "support": "partial",
+      "source_url": "https://commandcode.ai/launch#introducing-command-code:~:text=continuously%20improves%20your%20coding%20taste%20and%20applies%20it%20automatically",
+      "comment": "Taste learning can enforce style preferences, but a built-in formatter/linter integration was not confirmed."
+    },
+    "git_integration": {
+      "support": "full",
+      "source_url": "https://commandcode.ai/docs/reference/cli#cli-slash-commands:~:text=%2Freview%20Review%20a%20pull%20request",
+      "comment": "Supports PR review and PR-comment workflows, and launch/docs describe commits and PRs as built in."
+    },
+    "performance_mode": {
+      "support": "partial",
+      "source_url": "https://commandcode.ai/docs/reference/cli#cli-flags:~:text=--max-turns%20%3Cnumber%3E",
+      "comment": "Supports max-turn limits, model switching, and memory windowing; no named performance mode was confirmed."
+    },
+    "ui_customization": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=unknown",
+      "comment": "Research needed. Public docs did not expose enough detail in this run."
+    },
+    "hosted_agent": {
+      "support": "none",
+      "source_url": "https://commandcode.ai/docs/quickstart#run-the-command-code-cli:~:text=Navigate%20to%20a%20project%20directory%20and%20run",
+      "comment": "Primary surface is a local CLI; no managed hosted coding-agent runtime was confirmed."
+    },
+    "notes": "Command Code is an npm-installed CLI coding agent (`cmd`) centered on continuously learned coding taste, with skills, MCP, hooks, custom agents, goal mode, checkpoints, non-interactive print mode, model/provider selection, and account-backed pricing."
+  },
+  {
     "name": "Crush",
     "links": {
       "docs": "https://github.com/charmbracelet/crush#readme",
@@ -1581,9 +1782,9 @@
     },
     "latest_major_update": {
       "value": "Jul '26",
-      "source_url": "https://github.com/charmbracelet/crush/releases/tag/v0.81.0#source:~:text=Chat%20scrollbar",
-      "comment": "Latest tagged release v0.81.0 (2026-06-29) is a UX-focused release adding a chat scrollbar and other interface/session improvements.",
-      "sort_date": "2026-07-03"
+      "source_url": "https://github.com/charmbracelet/crush/releases/tag/v0.83.0#source:~:text=Prep%20for%20GPT-5.6",
+      "comment": "Latest tagged release v0.83.0 (July 8, 2026) prepares Crush for GPT-5.6 and fixes bang-mode history navigation so previous Bash-command prompts do not gain an extra exclamation mark.",
+      "sort_date": "2026-07-09"
     },
     "rules": {
       "support": "full",
@@ -2360,10 +2561,10 @@
       "sort_date": "2025-06-01"
     },
     "latest_major_update": {
-      "value": "Jun '26",
-      "source_url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.49.0#source:~:text=Release%20v0.49.0",
-      "comment": "Latest Gemini CLI release v0.49.0 (June 25, 2026) includes zero-quota fail-fast behavior, path-traversal hardening during skill install, pending-tool/trust-override fixes, GDC air-gapped service identity support, tmux background-detection fixes, coreTools-to-tools.core migration, and eval inventory commands/reporting.",
-      "sort_date": "2026-06-01"
+      "value": "Jul '26",
+      "source_url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.50.0#source:~:text=Feat%2Ftool%20registry%20discovery",
+      "comment": "Latest Gemini CLI release v0.50.0 (July 8, 2026) adds tool-registry discovery and release-verification safeguards that prevent workspace binary shadowing, bad npm releases, and promote-job crashes.",
+      "sort_date": "2026-07-01"
     },
     "rules": {
       "support": "full",
@@ -2555,7 +2756,7 @@
       "value": "Jul '26",
       "source_url": "https://github.blog/changelog/2026-02-25-github-copilot-cli-is-now-generally-available/#source:~:text=is%20now%20generally%20available",
       "comment": "Reached general availability for all Copilot subscribers on Feb 25, 2026, adding autopilot mode, /diff and /review commands, cross-session repo memory, and auto-compaction. Later 2026 updates added cloud/local sandboxes (--cloud, /sandbox enable), a unified /settings command, rubber duck critic agent, voice input, and prompt scheduling.",
-      "sort_date": "2026-07-01"
+      "sort_date": "2026-07-07"
     },
     "rules": {
       "support": "full",
@@ -2942,9 +3143,9 @@
     },
     "latest_major_update": {
       "value": "Jul '26",
-      "source_url": "https://github.com/aaif-goose/goose/releases/tag/v1.40.0#source:~:text=%2Fgoal%20command%20for%20agent%20self-evaluation%20before%20finishing",
-      "comment": "Latest AAIF Goose release v1.40.0 (July 2, 2026) adds desktop localization, CLI /status, /model and /goal commands, local goose review, async-task peek mode, delegate context/working_dir overrides, GLM-5.2 and many declarative providers, MLX local inference, streamable HTTP deeplink support, global ~/.agents/AGENTS.md hints, and unified thinking effort.",
-      "sort_date": "2026-07-03"
+      "source_url": "https://github.com/aaif-goose/goose/releases/tag/v1.41.0#source:~:text=Summon%20peek%20mode%20for%20async%20background%20tasks",
+      "comment": "Latest AAIF Goose release v1.41.0 (July 3, 2026) adds /status, edit-before-fork, summon peek/context/working_dir enhancements for async delegated tasks, structured summon metadata, GLM-5.2, MLX local inference, many declarative providers, extra desktop locales, streamable HTTP deeplinks, and global ~/.agents/AGENTS.md hints.",
+      "sort_date": "2026-07-09"
     },
     "rules": {
       "support": "full",
@@ -3695,9 +3896,9 @@
     },
     "latest_major_update": {
       "value": "Jul '26",
-      "source_url": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.3.54#source:~:text=No%20notable%20changes",
-      "comment": "Latest release checked: v7.3.54 (June 23, 2026). Release notes say no notable changes.",
-      "sort_date": "2026-07-03"
+      "source_url": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.4.5#source:~:text=No%20notable%20changes",
+      "comment": "Latest release checked: v7.4.5 (July 9, 2026). Release notes say no notable changes.",
+      "sort_date": "2026-07-09"
     },
     "rules": {
       "support": "full",
@@ -4273,9 +4474,9 @@
     },
     "latest_major_update": {
       "value": "Jul '26",
-      "source_url": "https://github.com/XiaomiMiMo/MiMo-Code/releases/tag/v0.1.4#v014:~:text=MiMoCode%20v0.1.4",
-      "comment": "Latest public release captured for this row is v0.1.4 on 2026-06-29.",
-      "sort_date": "2026-07-03"
+      "source_url": "https://github.com/XiaomiMiMo/MiMo-Code/releases/tag/v0.1.5#source:~:text=builtin%20skills%20system",
+      "comment": "Latest public release v0.1.5 (July 7, 2026) ships 14 built-in skills, deep-research and fact-check workflows, a Windows native installer, vision-aware image paste, exact-match edits by default, safer deletion prompts, and experimental orchestrator plus cron/loop scheduling modes.",
+      "sort_date": "2026-07-09"
     },
     "rules": {
       "support": "full",
@@ -4476,9 +4677,9 @@
     },
     "latest_major_update": {
       "value": "Jul '26",
-      "source_url": "https://github.com/anomalyco/opencode/releases/tag/v1.17.13#source:~:text=Force%20reasoning%20mode%20for%20OpenAI-compatible%20reasoning%20models",
-      "comment": "Latest release v1.17.13 (July 1, 2026) forces reasoning mode for OpenAI-compatible reasoning models, avoids stale GitHub Copilot response item IDs, and improves desktop question prompts, state cleanup, session tab scoping, v2 model picker, WSL setup, tab previews, and session-page failure isolation.",
-      "sort_date": "2026-07-03"
+      "source_url": "https://github.com/anomalyco/opencode/releases/tag/v1.17.17#source:~:text=Added%20a%20dismissible%20tabs%20intro%20popup",
+      "comment": "Latest release v1.17.17 (July 9, 2026) improves Meta reasoning-model handling and desktop v2 sessions with a dismissible tabs intro, refreshed help entry point, updated sub-agent task rows, clearer revert dock, a v2 free-model selector, and model-selector text rendering fixes.",
+      "sort_date": "2026-07-09"
     },
     "rules": {
       "support": "full",
@@ -4681,9 +4882,9 @@
     },
     "latest_major_update": {
       "value": "Jul '26",
-      "source_url": "https://github.com/OpenHands/OpenHands/releases/tag/cloud-1.40.0#source:~:text=Add%20full%20Git%20history%20user%20setting",
-      "comment": "Latest public OpenHands release is cloud-1.40.0 (June 26, 2026), adding a full Git history user setting plus follow-up cloud fixes. The local/self-hosted 1.8.0 release remains the latest non-cloud semver release.",
-      "sort_date": "2026-07-03"
+      "source_url": "https://github.com/OpenHands/OpenHands/releases/tag/cloud-1.44.0#source:~:text=pass%20repository%20metadata%20to%20observability%20traces",
+      "comment": "Latest public OpenHands release is cloud-1.44.0 (July 9, 2026), adding repository metadata to observability traces and bumping SDK packages to v1.34.0. The local/self-hosted 1.8.0 release remains the latest non-cloud semver release.",
+      "sort_date": "2026-07-09"
     },
     "rules": {
       "support": "full",
@@ -4743,7 +4944,7 @@
     "sandbox_mode": {
       "support": "full",
       "source_url": "https://github.com/OpenHands/docs/blob/main/openhands/usage/sandboxes/overview.mdx#sandbox-providers:~:text=Docker%20sandbox%20(recommended)",
-      "comment": "Three sandbox providers: Docker (isolated container, default/recommended for `openhands serve`), Process (no isolation, runs directly as a local process \u2014 this is what the plain `openhands` CLI uses by default), and Remote (managed/hosted). Selected via legacy `RUNTIME` env var (docker/process/remote)."
+      "comment": "Three sandbox providers: Docker (isolated container, default/recommended for `openhands serve`), Process (no isolation, runs directly as a local process; this is what the plain `openhands` CLI uses by default), and Remote (managed/hosted). Selected via legacy `RUNTIME` env var (docker/process/remote)."
     },
     "resume": {
       "support": "full",
@@ -4830,7 +5031,7 @@
       "source_url": "https://docs.openhands.dev/openhands/usage/cli/command-reference#environment-variables:~:text=LLM_BASE_URL",
       "comment": "LLM_BASE_URL plus LiteLLM backend allow pointing at any OpenAI-compatible endpoint, including local model servers (Ollama, vLLM, SGLang) and proxies."
     },
-    "notes": "OpenHands launched in March 2024 as 'OpenDevin' (an open clone of Cognition's Devin), renamed OpenHands mid-2024, and had its GitHub org renamed All-Hands-AI -> OpenHands on 2025-10-20. The 1.0.0 release (Dec 2025) was a ground-up rewrite onto a new 'software-agent-sdk', changing config from TOML to JSON and rebranding 'microagents' to the AgentSkills-standard 'Skills' system. It has a genuine local CLI (`openhands`, installable via `uv tool install openhands` or `pip install openhands`, MIT licensed) that runs as a plain local process by default \u2014 Docker is only required for the separate `openhands serve` full-GUI mode, not the terminal CLI/headless mode.",
+    "notes": "OpenHands launched in March 2024 as 'OpenDevin' (an open clone of Cognition's Devin), renamed OpenHands mid-2024, and had its GitHub org renamed All-Hands-AI -> OpenHands on 2025-10-20. The 1.0.0 release (Dec 2025) was a ground-up rewrite onto a new 'software-agent-sdk', changing config from TOML to JSON and rebranding 'microagents' to the AgentSkills-standard 'Skills' system. It has a genuine local CLI (`openhands`, installable via `uv tool install openhands` or `pip install openhands`, MIT licensed) that runs as a plain local process by default; Docker is only required for the separate `openhands serve` full-GUI mode, not the terminal CLI/headless mode.",
     "pricing": {
       "value": "Free MIT self-hosted/local; OpenHands Cloud free tier + at-cost usage; Enterprise custom",
       "source_url": "https://www.openhands.dev/pricing#source:~:text=Free%2C%20local%20OpenHands%20for%20getting%20started",
@@ -4882,7 +5083,7 @@
       "value": "Jul '26",
       "source_url": "https://github.com/earendil-works/pi/releases/tag/v0.80.3#source:~:text=Anthropic%20Claude%20Sonnet%205%20support",
       "comment": "Latest release v0.80.3 (June 30, 2026) adds Anthropic Claude Sonnet 5 support through inherited Anthropic-compatible and Bedrock provider catalogs with adaptive thinking enabled.",
-      "sort_date": "2026-07-03"
+      "sort_date": "2026-07-09"
     },
     "rules": {
       "support": "full",
@@ -5047,6 +5248,203 @@
     }
   },
   {
+    "name": "Pier Code",
+    "links": {
+      "docs": "https://www.piercode.com/",
+      "github": "",
+      "website": "https://www.piercode.com/",
+      "slug": "pier-code"
+    },
+    "form_factor": {
+      "values": [
+        "CLI"
+      ],
+      "source_url": "https://www.piercode.com/#source:~:text=Pier%20reads%20your%20repository%2C%20plans%20across%20files%2C%20runs%20commands%2C%20and%20ships",
+      "comment": "Terminal-native coding agent installed as a standalone `pier` binary for macOS, Linux, and Windows. Per-form-factor links: CLI: https://www.piercode.com/.",
+      "links": {
+        "CLI": "https://www.piercode.com/"
+      }
+    },
+    "released_in": {
+      "value": "Jun '26",
+      "source_url": "https://www.piercode.com/changelog#source:~:text=First%20public%20release%20of%20Pier",
+      "comment": "Pier changelog lists v0.1.0 stable on June 17, 2026 as the first public release.",
+      "sort_date": "2026-06-01"
+    },
+    "latest_major_update": {
+      "value": "Jul '26",
+      "source_url": "https://www.piercode.com/changelog#source:~:text=Plan%20mode%20now%20saves%20your%20plan%20to%20a%20file",
+      "comment": "Latest public release v0.4.1 (July 7, 2026) saves plan-mode output to a file while the agent writes it and lets approved plans jump straight into Auto mode.",
+      "sort_date": "2026-07-01"
+    },
+    "pricing": {
+      "value": "Pro $5/mo; Max $20/mo; $5 usage top-ups; Max enables frontier models including OpenAI, Anthropic, Kimi and more",
+      "source_url": "https://www.piercode.com/pricing#source:~:text=Pier%20Pro%20is%20%245%20a%20month",
+      "comment": "Pricing page lists Pro at $5/month, Max at $20/month with 4x credits and frontier providers, plus $5 usage packs."
+    },
+    "some_free_usage": {
+      "support": "none",
+      "source_url": "https://www.piercode.com/pricing#source:~:text=Pier%20Pro%20is%20%245%20a%20month",
+      "comment": "No documented free tier found; current plans are paid early-access plans."
+    },
+    "no_account_required": {
+      "support": "partial",
+      "source_url": "https://www.piercode.com/privacy#source:~:text=The%20Pier%20CLI%20is%20local-first",
+      "comment": "Pier is local-first and has OSS/local-provider flags, but normal product use is tied to Pier plan/login access."
+    },
+    "can_use_other_subscriptions": {
+      "support": "full",
+      "source_url": "https://www.piercode.com/pricing#source:~:text=Frontier%20models%3A%20OpenAI%2C%20Anthropic%2C%20Kimi%2C%20and%20more",
+      "comment": "Max plan and CLI model/provider flags support frontier providers including OpenAI, Anthropic, Kimi, and local/open-source provider modes."
+    },
+    "rules": {
+      "support": "full",
+      "source_url": "https://www.piercode.com/changelog#source:~:text=Gateway%20planning%20mode",
+      "comment": "CLI help exposes `--ignore-rules`, confirming user/project execpolicy rule files are normally loaded."
+    },
+    "skills": {
+      "support": "partial",
+      "source_url": "https://www.piercode.com/#source:~:text=Designed%20for%20breadth%20and%20depth",
+      "comment": "Plugin support is first-class, but public docs reviewed here do not describe a SKILL.md-style skill folder."
+    },
+    "hooks": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=unknown",
+      "comment": "Research needed. Public docs did not expose enough detail in this run."
+    },
+    "mcp_servers": {
+      "support": "full",
+      "source_url": "https://www.piercode.com/#source:~:text=One%20agent%2C%20every%20stack",
+      "comment": "Local CLI help verifies `pier mcp`, `pier mcp-server`, and MCP management commands."
+    },
+    "custom_commands": {
+      "support": "partial",
+      "source_url": "https://www.piercode.com/#source:~:text=Run%20%2Freview%20on%20my%20current%20changes",
+      "comment": "Product page and CLI help show built-in slash workflows such as `/review`; no user-defined slash-command system was confirmed."
+    },
+    "goal_command": {
+      "support": "none",
+      "source_url": "https://www.piercode.com/changelog#source:~:text=Plan%20mode%20now%20saves%20your%20plan%20to%20a%20file",
+      "comment": "No `/goal` command or persistent goal objective was found in current public docs/help."
+    },
+    "subagents": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=unknown",
+      "comment": "Research needed. Public docs did not expose enough detail in this run."
+    },
+    "monitor": {
+      "support": "partial",
+      "source_url": "https://www.piercode.com/changelog#source:~:text=list%20and%20stop%20the%20background%20terminals%20the%20agent%20has%20open",
+      "comment": "v0.4.0 adds listing/stopping background terminals, but no full Monitor-equivalent background watch primitive was confirmed."
+    },
+    "transcripts": {
+      "support": "full",
+      "source_url": "https://www.piercode.com/#source:~:text=Built%20for%20long%20coding%20sessions",
+      "comment": "Local CLI help verifies persisted sessions plus `resume`, `archive`, `delete`, `unarchive`, `fork`, and non-interactive `--ephemeral`."
+    },
+    "model_selection": {
+      "support": "full",
+      "source_url": "https://www.piercode.com/pricing#source:~:text=Sarvam%20105B%2C%2030B%2C%20and%20Pier%20Hybrid%20included",
+      "comment": "Supports `--model`; public pricing lists Sarvam 105B/30B/Pier Hybrid plus Max frontier models."
+    },
+    "approval_mode": {
+      "support": "full",
+      "source_url": "https://www.piercode.com/#source:~:text=You%20approved%20Pier%20to%20run",
+      "comment": "CLI help verifies `--ask-for-approval` values untrusted, on-request, on-failure, and never."
+    },
+    "sandbox_mode": {
+      "support": "full",
+      "source_url": "https://www.piercode.com/#source:~:text=No%20IDE%20lock-in%2C%20no%20context%20switching",
+      "comment": "CLI help verifies sandbox modes read-only, workspace-write, and danger-full-access plus bypass flag."
+    },
+    "resume": {
+      "support": "full",
+      "source_url": "https://www.piercode.com/#source:~:text=Built%20for%20long%20coding%20sessions",
+      "comment": "CLI help verifies `pier resume` and `pier exec resume` with `--last`."
+    },
+    "continue": {
+      "support": "full",
+      "source_url": "https://www.piercode.com/#source:~:text=Built%20for%20long%20coding%20sessions",
+      "comment": "`pier resume --last` continues the most recent session."
+    },
+    "non_interactive": {
+      "support": "full",
+      "source_url": "https://www.piercode.com/#source:~:text=Pier%20reads%20your%20repository%2C%20plans%20across%20files%2C%20runs%20commands%2C%20and%20ships",
+      "comment": "Local CLI help verifies `pier exec` and `pier review` non-interactive commands."
+    },
+    "output_format": {
+      "support": "full",
+      "source_url": "https://www.piercode.com/#source:~:text=Pier%20reads%20your%20repository",
+      "comment": "`pier exec --json` prints JSONL events and `--output-last-message` writes the final message to a file."
+    },
+    "statusline": {
+      "support": "partial",
+      "source_url": "https://www.piercode.com/#source:~:text=pier-hybrid%20default%20%C2%B7%20medium",
+      "comment": "Terminal UI shows model/mode/cwd/status, but no custom statusline API was confirmed."
+    },
+    "telemetry": {
+      "support": "partial",
+      "source_url": "https://www.piercode.com/#source:~:text=no%20telemetry%20you%20didn%27t%20ask%20for",
+      "comment": "Homepage says no telemetry you did not ask for; no detailed opt-out settings were found."
+    },
+    "custom_model_provider": {
+      "support": "full",
+      "source_url": "https://www.piercode.com/pricing#source:~:text=Frontier%20models%3A%20OpenAI%2C%20Anthropic%2C%20Kimi%2C%20and%20more",
+      "comment": "CLI help verifies `--oss` and `--local-provider` for lmstudio/ollama plus explicit `--model`."
+    },
+    "keyboard_shortcuts": {
+      "support": "full",
+      "source_url": "https://www.piercode.com/#source:~:text=alt%20%2B%20t%20to%20hide%20tasks",
+      "comment": "Product screenshots document terminal shortcuts such as Alt+T to hide tasks."
+    },
+    "theme_customization": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=unknown",
+      "comment": "Research needed. Public docs did not expose enough detail in this run."
+    },
+    "auto_save": {
+      "support": "full",
+      "source_url": "https://www.piercode.com/changelog#source:~:text=Plan%20mode%20now%20saves%20your%20plan%20to%20a%20file",
+      "comment": "v0.4.1 saves plan-mode output to a file as the agent writes it."
+    },
+    "debugging_output": {
+      "support": "full",
+      "source_url": "https://www.piercode.com/#source:~:text=what%20the%20latest%20agent%20can%20do",
+      "comment": "CLI help verifies `doctor`, `debug`, `features`, and JSONL event output."
+    },
+    "context_window": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=unknown",
+      "comment": "Research needed. Public docs did not expose enough detail in this run."
+    },
+    "code_formatting": {
+      "support": "unknown",
+      "source_url": "https://docs.example.com/#documentation:~:text=unknown",
+      "comment": "Research needed. Public docs did not expose enough detail in this run."
+    },
+    "git_integration": {
+      "support": "full",
+      "source_url": "https://www.piercode.com/#source:~:text=Every%20change%20is%20diffed%2C%20explained%2C%20and%20gated",
+      "comment": "Product page emphasizes diffed/gated changes; CLI help includes `apply` for latest agent diff and `review`."
+    },
+    "performance_mode": {
+      "support": "partial",
+      "source_url": "https://www.piercode.com/#source:~:text=Pier%20Hybrid%20is%20the%20flagship%20harness",
+      "comment": "Model choices include Pier Hybrid and Sarvam 30B/105B, but no named performance mode beyond model/mode selection was confirmed."
+    },
+    "ui_customization": {
+      "support": "partial",
+      "source_url": "https://www.piercode.com/#source:~:text=alt%20%2B%20t%20to%20hide%20tasks",
+      "comment": "Terminal UI includes toggles such as hiding tasks, but broader UI customization was not confirmed."
+    },
+    "hosted_agent": {
+      "support": "partial",
+      "source_url": "https://www.piercode.com/changelog#source:~:text=Introduced%20remote%20execution",
+      "comment": "v0.3.2 introduced remote execution in the cloud, but the primary CLI remains local and remote execution is presented as a feature rather than a separate managed platform."
+    },
+    "notes": "Pier Code is a terminal-native paid coding agent by PierCode, installed from dl.piercode.com as `pier`. Local help verified version 0.4.1 with exec/review/resume/fork/cloud/remote-control/MCP/plugin/sandbox/approval/model/JSONL surfaces."
+  },
+  {
     "name": "Qwen Code",
     "links": {
       "docs": "https://qwenlm.github.io/qwen-code-docs/en/users/overview",
@@ -5078,9 +5476,9 @@
     },
     "latest_major_update": {
       "value": "Jul '26",
-      "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.19.4#source:~:text=feat(core%2Ccli%2Csdk)%3A%20resume%20an%20interrupted%20turn%20without%20a%20synthetic%20%22continue%22%20message",
-      "comment": "Latest release v0.19.4 (July 1, 2026) adds configurable auto-compact threshold and Stop-hook context usage, resumes interrupted turns without synthetic continue messages, adds desktop voice dictation, revives the Chrome extension through daemon-direct architecture, improves loop task injection, starts channel-agent bridge work, and fixes CLI/core/web-shell/standalone issues.",
-      "sort_date": "2026-07-03"
+      "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.19.8#source:~:text=review%20auto-generated%20skills%20with%20an%20inline%20preview",
+      "comment": "Latest release v0.19.8 (July 8, 2026) adds serve environment isolation, auto-generated skill review with inline preview/editor handoff/off switch, permission-mode footer badges, bounded replay history, restored web-shell composer, Stop/SubagentStop hook background-task and cron status payloads, and multiple CLI/core/web-shell/channel fixes.",
+      "sort_date": "2026-07-09"
     },
     "rules": {
       "support": "full",

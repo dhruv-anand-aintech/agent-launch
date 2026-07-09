@@ -26,9 +26,9 @@
     "comment": "Initial release was v1.0.4 on July 28, 2024 (originally named 'Claude Dev' by Saoud Rizwan). 8M+ installs by May 2026."
   },
   "latest_major_update": {
-    "value": "Jun '26",
-    "source_url": "https://github.com/cline/cline/releases/tag/v4.0.5#source:~:text=Add%20support%20for%20Claude%20Sonnet%205",
-    "comment": "Latest release v4.0.5 (June 30, 2026) adds Claude Sonnet 5 support across Anthropic, Bedrock, Vertex, Claude Code, SAP AI Core, OpenRouter, and Vercel AI Gateway providers, including model-picker and recommended-model updates."
+    "value": "Jul '26",
+    "source_url": "https://github.com/cline/cline/releases/tag/cli-v3.0.39#source:~:text=You%20can%20now%20select%20Cline%20free%20models%20on%20the%20ClinePass%20provider%20in%20the%20model%20picker",
+    "comment": "Latest public Cline release cli-v3.0.39 (July 9, 2026) adds Cline free models to the ClinePass picker, removes retired GLM 5.1 metadata, fixes Codex model metadata, reports more accurate str_replace diffs, preserves canonical history during compaction, and updates telemetry/client identity behavior."
   },
   "rules": {
     "support": "full",
@@ -120,7 +120,7 @@
     "source_url": "https://github.com/cline/cline#works-with-every-model:~:text=Any%20OpenAI-compatible%20API%20Self-hosted%20or%20third-party%20endpoints",
     "comment": "Any OpenAI-compatible API endpoint supported. 30+ documented providers. BYOK model."
   },
-  "notes": "Cline has the most comprehensive feature set of any coding agent in this matrix \u2014 17/20 fields at full support. Open source (Apache 2.0), originally 'Claude Dev'. Started as VS Code extension, expanded to CLI and SDK. 8M+ installs.",
+  "notes": "Cline has the most comprehensive feature set of any coding agent in this matrix: 17/20 fields at full support. Open source (Apache 2.0), originally 'Claude Dev'. Started as VS Code extension, expanded to CLI and SDK. 8M+ installs.",
   "pricing": {
     "value": "Free for individuals; pay only for AI inference credits or BYOK; Enterprise custom",
     "source_url": "https://cline.bot/pricing#simple-transparent-pricing:~:text=Cline%20is%20free%20for%20individual%20developers",
