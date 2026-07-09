@@ -24,9 +24,9 @@
     "comment": "Repository created 2025-03-10. First stable public release effectively Feb 2026 (v1.0.25). v7 rewrite announced May 2026."
   },
   "latest_major_update": {
-    "value": "Jun '26",
-    "source_url": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.3.54#source:~:text=No%20notable%20changes",
-    "comment": "Latest release checked: v7.3.54 (June 23, 2026). Release notes say no notable changes."
+    "value": "Jul '26",
+    "source_url": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.4.5#source:~:text=No%20notable%20changes",
+    "comment": "Latest release checked: v7.4.5 (July 9, 2026). Release notes say no notable changes."
   },
   "rules": {
     "support": "full",

@@ -30,9 +30,9 @@
     "comment": "Launched March 12, 2024 as 'OpenDevin' (replicating Devin). First tagged GitHub release v0.6.1 on 2024-06-04 (earlier 0.1-0.5 history predates the public releases page). Renamed to OpenHands in mid-2024, and the GitHub org All-Hands-AI was renamed to OpenHands on 2025-10-20."
   },
   "latest_major_update": {
-    "value": "Jun '26",
-    "source_url": "https://github.com/OpenHands/OpenHands/releases/tag/cloud-1.40.0#source:~:text=Add%20full%20Git%20history%20user%20setting",
-    "comment": "Latest public OpenHands release is cloud-1.40.0 (June 26, 2026), adding a full Git history user setting plus follow-up cloud fixes. The local/self-hosted 1.8.0 release remains the latest non-cloud semver release."
+    "value": "Jul '26",
+    "source_url": "https://github.com/OpenHands/OpenHands/releases/tag/cloud-1.44.0#source:~:text=pass%20repository%20metadata%20to%20observability%20traces",
+    "comment": "Latest public OpenHands release is cloud-1.44.0 (July 9, 2026), adding repository metadata to observability traces and bumping SDK packages to v1.34.0. The local/self-hosted 1.8.0 release remains the latest non-cloud semver release."
   },
   "rules": {
     "support": "full",
@@ -92,7 +92,7 @@
   "sandbox_mode": {
     "support": "full",
     "source_url": "https://github.com/OpenHands/docs/blob/main/openhands/usage/sandboxes/overview.mdx#sandbox-providers:~:text=Docker%20sandbox%20(recommended)",
-    "comment": "Three sandbox providers: Docker (isolated container, default/recommended for `openhands serve`), Process (no isolation, runs directly as a local process \u2014 this is what the plain `openhands` CLI uses by default), and Remote (managed/hosted). Selected via legacy `RUNTIME` env var (docker/process/remote)."
+    "comment": "Three sandbox providers: Docker (isolated container, default/recommended for `openhands serve`), Process (no isolation, runs directly as a local process; this is what the plain `openhands` CLI uses by default), and Remote (managed/hosted). Selected via legacy `RUNTIME` env var (docker/process/remote)."
   },
   "resume": {
     "support": "full",
@@ -179,7 +179,7 @@
     "source_url": "https://docs.openhands.dev/openhands/usage/cli/command-reference#environment-variables:~:text=LLM_BASE_URL",
     "comment": "LLM_BASE_URL plus LiteLLM backend allow pointing at any OpenAI-compatible endpoint, including local model servers (Ollama, vLLM, SGLang) and proxies."
   },
-  "notes": "OpenHands launched in March 2024 as 'OpenDevin' (an open clone of Cognition's Devin), renamed OpenHands mid-2024, and had its GitHub org renamed All-Hands-AI -> OpenHands on 2025-10-20. The 1.0.0 release (Dec 2025) was a ground-up rewrite onto a new 'software-agent-sdk', changing config from TOML to JSON and rebranding 'microagents' to the AgentSkills-standard 'Skills' system. It has a genuine local CLI (`openhands`, installable via `uv tool install openhands` or `pip install openhands`, MIT licensed) that runs as a plain local process by default \u2014 Docker is only required for the separate `openhands serve` full-GUI mode, not the terminal CLI/headless mode.",
+  "notes": "OpenHands launched in March 2024 as 'OpenDevin' (an open clone of Cognition's Devin), renamed OpenHands mid-2024, and had its GitHub org renamed All-Hands-AI -> OpenHands on 2025-10-20. The 1.0.0 release (Dec 2025) was a ground-up rewrite onto a new 'software-agent-sdk', changing config from TOML to JSON and rebranding 'microagents' to the AgentSkills-standard 'Skills' system. It has a genuine local CLI (`openhands`, installable via `uv tool install openhands` or `pip install openhands`, MIT licensed) that runs as a plain local process by default; Docker is only required for the separate `openhands serve` full-GUI mode, not the terminal CLI/headless mode.",
   "pricing": {
     "value": "Free MIT self-hosted/local; OpenHands Cloud free tier + at-cost usage; Enterprise custom",
     "source_url": "https://www.openhands.dev/pricing#source:~:text=Free%2C%20local%20OpenHands%20for%20getting%20started",

@@ -31,8 +31,8 @@
   },
   "latest_major_update": {
     "value": "Jul '26",
-    "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.142.5#source:~:text=Prevented%20full%20Responses%20WebSocket%20request%20payloads%20from%20being%20written%20to%20trace%20logs",
-    "comment": "Latest stable Codex CLI release rust-v0.142.5 (July 1, 2026) is a security/privacy maintenance patch preventing full Responses WebSocket request payloads from being written to trace logs."
+    "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.143.0#source:~:text=Remote%20plugins%20are%20now%20enabled%20by%20default",
+    "comment": "Latest stable Codex CLI release rust-v0.143.0 (July 8, 2026) enables remote plugins by default, adds system-proxy routing, manual remote-control pairing, Bedrock GPT-5.6 model entries, MCP tool-search/auth updates, app-server environment/thread/fork APIs, and multiple Windows, sandbox, recovery, trace, and dependency fixes."
   },
   "rules": {
     "support": "full",

@@ -29,8 +29,8 @@
   },
   "latest_major_update": {
     "value": "Jul '26",
-    "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.19.4#source:~:text=feat(core%2Ccli%2Csdk)%3A%20resume%20an%20interrupted%20turn%20without%20a%20synthetic%20%22continue%22%20message",
-    "comment": "Latest release v0.19.4 (July 1, 2026) adds configurable auto-compact threshold and Stop-hook context usage, resumes interrupted turns without synthetic continue messages, adds desktop voice dictation, revives the Chrome extension through daemon-direct architecture, improves loop task injection, starts channel-agent bridge work, and fixes CLI/core/web-shell/standalone issues."
+    "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.19.8#source:~:text=review%20auto-generated%20skills%20with%20an%20inline%20preview",
+    "comment": "Latest release v0.19.8 (July 8, 2026) adds serve environment isolation, auto-generated skill review with inline preview/editor handoff/off switch, permission-mode footer badges, bounded replay history, restored web-shell composer, Stop/SubagentStop hook background-task and cron status payloads, and multiple CLI/core/web-shell/channel fixes."
   },
   "rules": {
     "support": "full",

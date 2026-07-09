@@ -25,10 +25,10 @@
     "sort_date": "2025-07-29"
   },
   "latest_major_update": {
-    "value": "Jun '26",
-    "source_url": "https://github.com/charmbracelet/crush/releases/tag/v0.81.0#source:~:text=Chat%20scrollbar",
-    "comment": "Latest tagged release v0.81.0 (2026-06-29) is a UX-focused release adding a chat scrollbar and other interface/session improvements.",
-    "sort_date": "2026-06-29"
+    "value": "Jul '26",
+    "source_url": "https://github.com/charmbracelet/crush/releases/tag/v0.83.0#source:~:text=Prep%20for%20GPT-5.6",
+    "comment": "Latest tagged release v0.83.0 (July 8, 2026) prepares Crush for GPT-5.6 and fixes bang-mode history navigation so previous Bash-command prompts do not gain an extra exclamation mark.",
+    "sort_date": "2026-07-08"
   },
   "rules": {
     "support": "full",

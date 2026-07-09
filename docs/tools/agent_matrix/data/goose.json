@@ -25,8 +25,8 @@
   },
   "latest_major_update": {
     "value": "Jul '26",
-    "source_url": "https://github.com/aaif-goose/goose/releases/tag/v1.40.0#source:~:text=%2Fgoal%20command%20for%20agent%20self-evaluation%20before%20finishing",
-    "comment": "Latest AAIF Goose release v1.40.0 (July 2, 2026) adds desktop localization, CLI /status, /model and /goal commands, local goose review, async-task peek mode, delegate context/working_dir overrides, GLM-5.2 and many declarative providers, MLX local inference, streamable HTTP deeplink support, global ~/.agents/AGENTS.md hints, and unified thinking effort."
+    "source_url": "https://github.com/aaif-goose/goose/releases/tag/v1.41.0#source:~:text=Summon%20peek%20mode%20for%20async%20background%20tasks",
+    "comment": "Latest AAIF Goose release v1.41.0 (July 3, 2026) adds /status, edit-before-fork, summon peek/context/working_dir enhancements for async delegated tasks, structured summon metadata, GLM-5.2, MLX local inference, many declarative providers, extra desktop locales, streamable HTTP deeplinks, and global ~/.agents/AGENTS.md hints."
   },
   "rules": {
     "support": "full",

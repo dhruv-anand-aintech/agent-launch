@@ -33,6 +33,7 @@ AGENTS: dict[str, AgentSpec] = {
     "codex": AgentSpec("codex", "gpt-5.4-mini", "gpt-5.5", "pro"),
     "claude": AgentSpec("claude", "haiku", "sonnet", "pro"),
     "cline": AgentSpec("cline", "", "", "pro"),
+    "command": AgentSpec("cmd", "", "", "pro"),
     "copilot": AgentSpec("copilot", "", "", "pro"),
     "crush": AgentSpec("crush", "", "", "pro"),
     "droid": AgentSpec("droid", "claude-opus-4-8-fast", "claude-opus-4-8", "pro"),
@@ -46,6 +47,7 @@ AGENTS: dict[str, AgentSpec] = {
     "opencode": AgentSpec("opencode", "opencode-go/deepseek-v4-flash", "opencode-go/kimi-k2.6", "pro"),
     "openhands": AgentSpec("openhands", "", "", "pro"),
     "pi": AgentSpec("pi", "opencode-go/deepseek-v4-flash", "opencode-go/kimi-k2.6", "pro"),
+    "pier": AgentSpec("pier", "sarvam-30b", "pier-hybrid", "pro"),
     "qwen": AgentSpec("qwen", "", "", "pro"),
     "trae": AgentSpec("trae-cli", "", "", "pro"),
     "cursor": AgentSpec("agent", "composer-2.5-fast", "composer-2.5-fast", "fast"),
@@ -58,6 +60,7 @@ RANDOM_AGENTS = (
     "codex",
     "cursor",
     "opencode",
+    "pier",
     "pi",
 )
 DEFAULT_AGENT_ORDER = (
@@ -65,6 +68,8 @@ DEFAULT_AGENT_ORDER = (
     "claude",
     "cursor",
     "opencode",
+    "pier",
+    "command",
     "antigravity",
     "gemini",
     "aider",
@@ -144,6 +149,7 @@ MODEL_FLAG_AGENTS = {
     "cline",
     "codex",
     "claude",
+    "command",
     "copilot",
     "crush",
     "droid",
@@ -156,6 +162,7 @@ MODEL_FLAG_AGENTS = {
     "mimo",
     "opencode",
     "pi",
+    "pier",
     "qwen",
     "trae",
     "cursor",
@@ -689,6 +696,12 @@ def mode_flags(agent: str, mode: str, non_interactive: bool) -> list[str]:
             "auto": ["--auto-approve", "true"],
             "danger": ["--auto-approve", "true"],
         },
+        "command": {
+            "ask": ["--permission-mode", "standard"],
+            "plan": ["--plan"],
+            "auto": ["--auto-accept"],
+            "danger": ["--yolo"],
+        },
         "droid": {
             "ask": [],
             "plan": [],
@@ -742,6 +755,12 @@ def mode_flags(agent: str, mode: str, non_interactive: bool) -> list[str]:
             "plan": [],
             "auto": [],
             "danger": [],
+        },
+        "pier": {
+            "ask": ["-s", "read-only", "-a", "untrusted"],
+            "plan": ["-s", "read-only", "-a", "on-request"],
+            "auto": ["-s", "workspace-write", "-a", "on-request"],
+            "danger": ["--dangerously-bypass-approvals-and-sandbox"],
         },
         "qwen": {
             "ask": ["--approval-mode", "default"],
@@ -901,6 +920,21 @@ def build_command(args: argparse.Namespace) -> list[str]:
             pass
         if non_interactive:
             cmd += ["--json"]
+        if prompt:
+            cmd.append(prompt)
+
+    elif agent == "command":
+        cmd += mode_flags(agent, args.mode, non_interactive)
+        append_model(cmd, agent, model)
+        append_passthrough(cmd, args)
+        if resume_id:
+            cmd += ["--resume", resume_id]
+        elif resume_requested:
+            cmd += ["--resume"]
+        elif continue_session:
+            cmd += ["--continue"]
+        if non_interactive:
+            cmd += ["--print", "--trust", "--skip-onboarding"]
         if prompt:
             cmd.append(prompt)
 
@@ -1064,6 +1098,22 @@ def build_command(args: argparse.Namespace) -> list[str]:
             cmd += ["--continue"]
         if non_interactive:
             cmd += ["--print"]
+        if prompt:
+            cmd.append(prompt)
+
+    elif agent == "pier":
+        cmd += ["-C", args.cwd]
+        cmd += mode_flags(agent, args.mode, non_interactive)
+        append_model(cmd, agent, model)
+        if non_interactive:
+            cmd += ["exec", "--skip-git-repo-check"]
+        elif resume_id:
+            cmd += ["resume", resume_id]
+        elif continue_session:
+            cmd += ["resume", "--last"]
+        elif resume_requested:
+            cmd += ["resume"]
+        append_passthrough(cmd, args)
         if prompt:
             cmd.append(prompt)
 

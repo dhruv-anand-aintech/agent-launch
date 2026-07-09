@@ -23,9 +23,9 @@
     "comment": "Public open-source Gemini CLI launch."
   },
   "latest_major_update": {
-    "value": "Jun '26",
-    "source_url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.49.0#source:~:text=Release%20v0.49.0",
-    "comment": "Latest Gemini CLI release v0.49.0 (June 25, 2026) includes zero-quota fail-fast behavior, path-traversal hardening during skill install, pending-tool/trust-override fixes, GDC air-gapped service identity support, tmux background-detection fixes, coreTools-to-tools.core migration, and eval inventory commands/reporting."
+    "value": "Jul '26",
+    "source_url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.50.0#source:~:text=Feat%2Ftool%20registry%20discovery",
+    "comment": "Latest Gemini CLI release v0.50.0 (July 8, 2026) adds tool-registry discovery and release-verification safeguards that prevent workspace binary shadowing, bad npm releases, and promote-job crashes."
   },
   "rules": {
     "support": "full",

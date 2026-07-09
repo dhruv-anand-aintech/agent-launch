@@ -29,8 +29,8 @@
   },
   "latest_major_update": {
     "value": "Jul '26",
-    "source_url": "https://github.com/anomalyco/opencode/releases/tag/v1.17.13#source:~:text=Force%20reasoning%20mode%20for%20OpenAI-compatible%20reasoning%20models",
-    "comment": "Latest release v1.17.13 (July 1, 2026) forces reasoning mode for OpenAI-compatible reasoning models, avoids stale GitHub Copilot response item IDs, and improves desktop question prompts, state cleanup, session tab scoping, v2 model picker, WSL setup, tab previews, and session-page failure isolation."
+    "source_url": "https://github.com/anomalyco/opencode/releases/tag/v1.17.17#source:~:text=Added%20a%20dismissible%20tabs%20intro%20popup",
+    "comment": "Latest release v1.17.17 (July 9, 2026) improves Meta reasoning-model handling and desktop v2 sessions with a dismissible tabs intro, refreshed help entry point, updated sub-agent task rows, clearer revert dock, a v2 free-model selector, and model-selector text rendering fixes."
   },
   "rules": {
     "support": "full",

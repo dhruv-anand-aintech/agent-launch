@@ -26,9 +26,9 @@
     "comment": "GitHub shows v0.1.0 as the first public release on 2026-06-10."
   },
   "latest_major_update": {
-    "value": "Jun '26",
-    "source_url": "https://github.com/XiaomiMiMo/MiMo-Code/releases/tag/v0.1.4#v014:~:text=MiMoCode%20v0.1.4",
-    "comment": "Latest public release captured for this row is v0.1.4 on 2026-06-29."
+    "value": "Jul '26",
+    "source_url": "https://github.com/XiaomiMiMo/MiMo-Code/releases/tag/v0.1.5#source:~:text=builtin%20skills%20system",
+    "comment": "Latest public release v0.1.5 (July 7, 2026) ships 14 built-in skills, deep-research and fact-check workflows, a Windows native installer, vision-aware image paste, exact-match edits by default, safer deletion prompts, and experimental orchestrator plus cron/loop scheduling modes."
   },
   "rules": {
     "support": "full",
