@@ -33,12 +33,11 @@ Form factor values are deliberately strict: each value should have a concrete pe
 | Claude Code | CLI, Extension, SDK, Web, Mac App | Feb '25 | Jul '26 |  |  |  | full | full | full | full | full | full | partial | partial |
 | Cline | CLI, Extension, SDK | Jul '24 | Jul '26 | full | full | full | full | full | partial | unknown | full | full | none | full |
 | Cohere North | SDK, Web | Jan '25 | Jun '26 |  |  |  | partial | partial | partial | partial | full | full | full | none |
-| Command Code | CLI, Extension, Web | Jul '26 | Jul '26 | partial | none | full | full | full | partial | full | full | full | none | full |
 | Crush | CLI, TUI | Jul '25 | Jul '26 | full | full | full | full | full | partial | full | partial | full | none | full |
 | Cursor | CLI, IDE, SDK, Mobile | 2023 | Jun '26 | full |  |  | full | full | partial | full | full | full | full | full |
 | Devin | CLI, Extension, SDK, Web | Dec '24 | Jul '26 | full |  |  | full | full | partial | partial | full | full | full | unknown |
 | Factory Droid | CLI, Extension, Web | 2025 | Jun '26 |  | partial | full | full | full | partial | partial | full | full | partial | full |
-| Gemini CLI | CLI | Jun '25 | Jul '26 | full |  | full | full | partial | partial | unknown | full | full | none | partial |
+| Gemini CLI | CLI | Jun '25 | Jun '26 | full |  | full | full | partial | partial | unknown | full | full | none | partial |
 | GitHub Copilot | CLI, IDE, Extension, SDK, Web | Jun '25 | May '26 |  |  |  | full | full | partial | unknown | full | full | full | full |
 | GitHub Copilot CLI | CLI | Sep '25 | Jul '26 | partial | none | full | full | full | partial | full | full | full | none | full |
 | Google Jules | Web | Aug '25 | Mar '26 |  |  |  | unknown | none | partial | partial | partial | partial | full | none |
@@ -53,7 +52,7 @@ Form factor values are deliberately strict: each value should have a concrete pe
 | OpenCode | CLI, Extension, SDK, Mac App | 2025 | Jul '26 | full | full | full | full | full | partial | full | full | full | none | full |
 | OpenHands | CLI, IDE, Web, Docker, Hosted Agent | Mar '24 | Jul '26 | full | full | full | full | full | none | full | full | full | full | full |
 | Pi | CLI, SDK | May '26 | Jul '26 |  | full | full | full | full | none | full | full | none | none | full |
-| Pier Code | CLI | Jun '26 | Jul '26 | none | partial | full | full | partial | partial | full | unknown | full | partial | full |
+| Pier Code | CLI | Jun '26 | Jul '26 | none | partial | none | full | partial | partial | full | partial | full | full | partial |
 | Qwen Code | CLI, Extension, SDK, Desktop App | Jun '25 | Jul '26 |  |  |  | full | full | partial | unknown | full | full | partial | full |
 | Replit Agent | Web | Sep '24 | Jun '26 |  |  |  | partial | full | partial | partial | partial | unknown | full | none |
 | Roo Code | Extension | Mid-2025 | May '26 |  |  |  | full | full | partial | unknown | none | full | none | full |

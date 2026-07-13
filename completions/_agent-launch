@@ -1,6 +1,6 @@
 #compdef agent-launch agl
 
-local -a agents modes model_classes common_models
+local -a agents modes model_classes thinking_levels common_models
 
 agents=(
   'aider:Aider'
@@ -39,6 +39,13 @@ model_classes=(
   'pro:Stronger model'
 )
 
+thinking_levels=(
+  'auto:Backend default thinking effort'
+  'low:Low thinking effort'
+  'medium:Medium thinking effort'
+  'high:High thinking effort'
+)
+
 common_models=(
   'gpt-5.4-mini:Codex fast default'
   'gpt-5.5:Codex pro default'
@@ -48,6 +55,8 @@ common_models=(
   'gemini-2.5-pro:Gemini pro default'
   'opencode-go/deepseek-v4-flash:OpenCode fast default'
   'opencode-go/kimi-k2.6:OpenCode pro default'
+  'sarvam-30b:Pier fast default'
+  'pier-hybrid:Pier pro default'
   'composer-2.5-fast:Cursor fast/pro default'
 )
 
@@ -65,6 +74,8 @@ _arguments -s -S \
   '(-m --mode)'{-m,--mode}'[normalized permission/interaction mode]:mode:->modes' \
   '--model-class[normalized model class]:model class:->model_classes' \
   '--model[explicit backend model string]:model:->models' \
+  '--effort[normalized reasoning/thinking effort]:thinking level:->thinking_levels' \
+  '--thinking-level[normalized reasoning/thinking effort]:thinking level:->thinking_levels' \
   '--no-model[do not pass any model flag]' \
   '--resume[resume a prior session]:session id:' \
   '--continue[continue the latest/current session]' \
@@ -83,6 +94,9 @@ case "$state" in
     ;;
   model_classes)
     _describe -t model-classes 'model class' model_classes
+    ;;
+  thinking_levels)
+    _describe -t thinking-levels 'thinking level' thinking_levels
     ;;
   models)
     _describe -t models 'model' common_models

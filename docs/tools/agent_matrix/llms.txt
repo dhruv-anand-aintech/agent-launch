@@ -1,6 +1,6 @@
 # Coding Agent Feature Matrix
-> Compare 34 coding agents, CLIs, and IDEs across features.
-> https://compare.ainorthstar.tech | Updated 2026-07-09
+> Compare 33 coding agents, CLIs, and IDEs across features.
+> https://compare.ainorthstar.tech | Updated 2026-07-08
 
 Agent                   Rel    FF     Fre   NoA   Oth   Rul   Skl   Hks   MCP   Cmd   Gol   Sub   Mon   Trn   Mod   App   San   Res   Con   Hdl   Fmt   Sta   Tel   Hst  BYOM
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -12,7 +12,6 @@ Claude Code             Feb '2 CLI/Ext                      Y     Y     Y     Y 
 Cline                   Jul '2 CLI/Ext    Y     Y     Y     Y     Y     Y     Y     Y     N     Y     ~     ?     Y     Y     ~     Y     ~     Y     Y     N     Y     N     Y
 OpenAI Codex CLI        Apr '2 CLI/Ext    Y           Y     Y     Y     Y     Y     ~     Y     Y     ~     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y
 Cohere North            Jan '2 SDK/Web                      ~     ~     Y     Y     N     N     Y     ~     ~     ~     ~     Y     ~     ~     ~     ~     N     ~     Y     N
-Command Code            Jul '2 CLI/Ext    ~     N     Y     Y     Y     Y     Y     Y     Y     Y     ~     Y     Y     Y     ~     Y     Y     Y     ~     Y     Y     N     Y
 Crush                   Jul '2 CLI/TUI    Y     Y     Y     Y     Y     ~     Y     Y     N     Y     ~     Y     Y     Y     N     Y     Y     Y     ~     N     Y     N     Y
 Cursor                  2023  CLI/IDE    Y                 Y     Y     Y     Y     Y     N     Y     ~     Y     Y     Y     Y     Y     Y     Y     ~     ~     Y     Y     Y
 Devin                   Dec '2 CLI/Ext    Y                 Y     Y     Y     Y     Y     N     Y     ~     ~     ?     ~     Y     Y     Y     Y     ~     N     ?     Y     ?
@@ -31,7 +30,7 @@ MiMo Code               Jun '2 CLI/IDE    Y     Y     Y     Y     Y     ~     Y 
 OpenCode                2025  CLI/Ext    Y     Y     Y     Y     Y     Y     Y     Y     N     Y     ~     Y     Y     Y     ~     Y     Y     Y     Y     ?     Y     N     Y
 OpenHands               Mar '2 CLI/IDE    Y     Y     Y     Y     Y     Y     Y     ~     N     N     N     Y     Y     Y     Y     Y     Y     Y     Y     N     ~     Y     Y
 Pi                      May '2 CLI/SDK          Y     Y     Y     Y     Y     N     Y     N     N     N     Y     Y     N     N     Y     Y     Y     Y     N     ~     N     Y
-Pier Code               Jun '2 CLI        N     ~     Y     Y     ~     ?     Y     ~     N     ?     ~     Y     Y     Y     Y     Y     Y     Y     Y     ~     ~     ~     Y
+Pier Code               Jun '2 CLI        N     ~     N     Y     ~     ~     Y     ?     Y     Y     ~     Y     Y     Y     Y     Y     Y     Y     Y     ?     Y     Y     ~
 Qwen Code               Jun '2 CLI/Ext                      Y     Y     Y     Y     Y     Y     Y     ~     ?     Y     Y     Y     Y     Y     Y     Y     Y     Y     ~     Y
 Replit Agent            Sep '2 Web                          ~     Y     ~     ?     N     N     ~     ~     ~     N     ~     Y     ~     ~     N     N     N     ?     Y     N
 Roo Code                Mid-20 Extensi                      Y     Y     N     Y     Y     N     Y     ~     ?     Y     Y     N     ~     Y     Y     ~     N     Y     N     Y
@@ -239,7 +238,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Hosted Agent: none — Runs locally as VS Code extension or CLI.
 - Custom Model Provider: full — Any OpenAI-compatible API endpoint supported. 30+ documented providers. BYOK model.
 - Pricing: Free for individuals; pay only for AI inference credits or BYOK; Enterprise custom
-- Notes: Cline has the most comprehensive feature set of any coding agent in this matrix: 17/20 fields at full support. Open source (Apache 2.0), originally 'Claude Dev'. Started as VS Code extension, expanded to CLI and SDK. 8M+ installs.
+- Notes: Cline has the most comprehensive feature set of any coding agent in this matrix — 17/20 fields at full support. Open source (Apache 2.0), originally 'Claude Dev'. Started as VS Code extension, expanded to CLI and SDK. 8M+ installs.
 
 ### OpenAI Codex CLI
 - Docs: https://developers.openai.com/codex/
@@ -304,38 +303,6 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Custom Model Provider: none — Built around Cohere models/platform deployment, not arbitrary model providers.
 - Pricing: Enterprise/demo-based
 - Notes: Included because the request mentioned Cohere. This is an enterprise agent platform with coding-capable Command A+ underneath, not a direct Claude Code/Codex-style coding agent.
-
-### Command Code
-- Docs: https://commandcode.ai/docs
-- Website: https://commandcode.ai/
-- Form factor: CLI, Extension, Web
-- Released: Jul '26
-- Latest update: Jul '26
-- Some Free Usage: partial — Docs advertise temporary free model deals, but ordinary agent use requires signing in and a paid/credit-backed plan.
-- No Account Required: none — Quickstart requires `cmd login` before normal coding use.
-- Can Use Other Subscriptions: full — CLI exposes `/provider` and pricing/docs describe provider/API-key surfaces, so usage can route through non-default providers where configured.
-- Rules: full — CLI has `/init` for AGENTS.md and Taste/memory features for persistent project guidance.
-- Skills: full — Supports user-level `~/.commandcode/skills/<skill>/SKILL.md` and project-level `.commandcode/skills/<skill>/SKILL.md` skills plus `cmd skills` management.
-- Hooks: full — Docs expose a dedicated Hooks section and changelog includes SessionStart hook support.
-- Mcp Servers: full — `cmd mcp` manages MCP servers; `/mcp` is available in sessions.
-- Custom Commands: full — Docs list slash commands and a dedicated custom slash commands section.
-- Goal Command: full — Built-in `/goal` sets an autonomous objective with clear/status behavior.
-- Subagents: full — `/agents` manages agent configurations; docs include a Custom Agents section.
-- Monitor: partial — Session memory/windowing, traces, status, and checkpoints are documented, but no separate background monitor/watch primitive was confirmed.
-- Transcripts: full — `/session-file` reveals the current session id and on-disk session path.
-- Model Selection: full — Supports `--model`, `/model`, and `--list-models`.
-- Approval Mode: full — Supports plan, standard, auto-accept, and yolo/dangerous skip permission modes.
-- Sandbox Mode: partial — Permission modes and yolo are documented; no separate filesystem/network sandbox selector was found.
-- Resume: full — Supports `--resume` with optional conversation id/name.
-- Continue: full — Supports `--continue` for the last conversation.
-- Non Interactive: full — Supports `--print [query]` to run non-interactively and exit.
-- Output Format: partial — `cmd status --json` exists; no full JSON event stream for `--print` was confirmed.
-- Statusline: full — Changelog documents status-bar indicators and CLI status UI features.
-- Telemetry: full — Changelog documents OpenTelemetry integration and DO_NOT_TRACK opt-out; later changelog notes CLI telemetry.
-- Hosted Agent: none — Primary surface is a local CLI; no managed hosted coding-agent runtime was confirmed.
-- Custom Model Provider: full — Provider selection and many model families are documented.
-- Pricing: Go $1/mo, Pro $15/mo, Max 10x $100/mo, Max 20x $200/mo; monthly credits and top-ups; BYOK/provider options documented
-- Notes: Command Code is an npm-installed CLI coding agent (`cmd`) centered on continuously learned coding taste, with skills, MCP, hooks, custom agents, goal mode, checkpoints, non-interactive print mode, model/provider selection, and account-backed pricing.
 
 ### Crush
 - Docs: https://github.com/charmbracelet/crush#readme
@@ -473,7 +440,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Form factor: CLI
 - Status: Deprecated
 - Released: Jun '25
-- Latest update: Jul '26
+- Latest update: Jun '26
 - Some Free Usage: full — Gemini CLI documents a free tier when signing in with a Google account.
 - No Account Required: blank
 - Can Use Other Subscriptions: full — Gemini CLI can use quotas from Gemini Code Assist editions, and also supports API-key pay-as-you-go.
@@ -879,7 +846,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Transcripts: full — Conversation history automatically saved locally. Location: `~/.openhands/conversations/`. `--resume` lists and reopens prior conversations.
 - Model Selection: full — Set via Settings UI (Ctrl+P > Settings), persisted in `~/.openhands/agent_settings.json` (`llm.model` field), or temporarily overridden with `LLM_MODEL`/`LLM_API_KEY`/`LLM_BASE_URL` env vars plus the `--override-with-envs` flag.
 - Approval Mode: full — Confirmation enabled by default with LLM Risk Analyzer (auto-confirms low/medium risk, prompts on high risk). CLI flags `--always-approve` (auto-approve everything) and `--llm-approve` (force LLM-based analyzer) override behavior; `/confirm` adjusts in-session.
-- Sandbox Mode: full — Three sandbox providers: Docker (isolated container, default/recommended for `openhands serve`), Process (no isolation, runs directly as a local process; this is what the plain `openhands` CLI uses by default), and Remote (managed/hosted). Selected via legacy `RUNTIME` env var (docker/process/remote).
+- Sandbox Mode: full — Three sandbox providers: Docker (isolated container, default/recommended for `openhands serve`), Process (no isolation, runs directly as a local process — this is what the plain `openhands` CLI uses by default), and Remote (managed/hosted). Selected via legacy `RUNTIME` env var (docker/process/remote).
 - Resume: full — `--resume [ID]` resumes a specific conversation by ID, or lists recent conversations to pick from if no ID given.
 - Continue: full — `--resume --last` resumes the most recent conversation without needing to specify an ID.
 - Non Interactive: full — `openhands --headless -t "task"` (or `-f file`) runs with no UI for CI/CD and scripting. Always runs in always-approve mode in headless (cannot use --llm-approve here).
@@ -889,7 +856,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Hosted Agent: full — OpenHands Cloud (app.all-hands.dev) is a fully managed hosted agent platform; `openhands login`/`openhands cloud -t "task"` create and run cloud-hosted conversations from the local CLI.
 - Custom Model Provider: full — LLM_BASE_URL plus LiteLLM backend allow pointing at any OpenAI-compatible endpoint, including local model servers (Ollama, vLLM, SGLang) and proxies.
 - Pricing: Free MIT self-hosted/local; OpenHands Cloud free tier + at-cost usage; Enterprise custom
-- Notes: OpenHands launched in March 2024 as 'OpenDevin' (an open clone of Cognition's Devin), renamed OpenHands mid-2024, and had its GitHub org renamed All-Hands-AI -> OpenHands on 2025-10-20. The 1.0.0 release (Dec 2025) was a ground-up rewrite onto a new 'software-agent-sdk', changing config from TOML to JSON and rebranding 'microagents' to the AgentSkills-standard 'Skills' system. It has a genuine local CLI (`openhands`, installable via `uv tool install openhands` or `pip install openhands`, MIT licensed) that runs as a plain local process by default; Docker is only required for the separate `openhands serve` full-GUI mode, not the terminal CLI/headless mode.
+- Notes: OpenHands launched in March 2024 as 'OpenDevin' (an open clone of Cognition's Devin), renamed OpenHands mid-2024, and had its GitHub org renamed All-Hands-AI -> OpenHands on 2025-10-20. The 1.0.0 release (Dec 2025) was a ground-up rewrite onto a new 'software-agent-sdk', changing config from TOML to JSON and rebranding 'microagents' to the AgentSkills-standard 'Skills' system. It has a genuine local CLI (`openhands`, installable via `uv tool install openhands` or `pip install openhands`, MIT licensed) that runs as a plain local process by default — Docker is only required for the separate `openhands serve` full-GUI mode, not the terminal CLI/headless mode.
 
 ### Pi
 - Docs: https://pi.dev/docs/latest
@@ -925,36 +892,36 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Notes: Pi is a minimal terminal coding harness with extensibility-first defaults (extensions, skills, prompt templates, themes, packages), plus SDK and RPC/event-stream integrations.
 
 ### Pier Code
-- Docs: https://www.piercode.com/
+- Docs: https://www.piercode.com/faq
 - Website: https://www.piercode.com/
 - Form factor: CLI
 - Released: Jun '26
 - Latest update: Jul '26
-- Some Free Usage: none — No documented free tier found; current plans are paid early-access plans.
-- No Account Required: partial — Pier is local-first and has OSS/local-provider flags, but normal product use is tied to Pier plan/login access.
-- Can Use Other Subscriptions: full — Max plan and CLI model/provider flags support frontier providers including OpenAI, Anthropic, Kimi, and local/open-source provider modes.
-- Rules: full — CLI help exposes `--ignore-rules`, confirming user/project execpolicy rule files are normally loaded.
-- Skills: partial — Plugin support is first-class, but public docs reviewed here do not describe a SKILL.md-style skill folder.
-- Hooks: unknown — Research needed. Public docs did not expose enough detail in this run.
-- Mcp Servers: full — Local CLI help verifies `pier mcp`, `pier mcp-server`, and MCP management commands.
-- Custom Commands: partial — Product page and CLI help show built-in slash workflows such as `/review`; no user-defined slash-command system was confirmed.
-- Goal Command: none — No `/goal` command or persistent goal objective was found in current public docs/help.
-- Subagents: unknown — Research needed. Public docs did not expose enough detail in this run.
-- Monitor: partial — v0.4.0 adds listing/stopping background terminals, but no full Monitor-equivalent background watch primitive was confirmed.
-- Transcripts: full — Local CLI help verifies persisted sessions plus `resume`, `archive`, `delete`, `unarchive`, `fork`, and non-interactive `--ephemeral`.
-- Model Selection: full — Supports `--model`; public pricing lists Sarvam 105B/30B/Pier Hybrid plus Max frontier models.
-- Approval Mode: full — CLI help verifies `--ask-for-approval` values untrusted, on-request, on-failure, and never.
-- Sandbox Mode: full — CLI help verifies sandbox modes read-only, workspace-write, and danger-full-access plus bypass flag.
-- Resume: full — CLI help verifies `pier resume` and `pier exec resume` with `--last`.
-- Continue: full — `pier resume --last` continues the most recent session.
-- Non Interactive: full — Local CLI help verifies `pier exec` and `pier review` non-interactive commands.
-- Output Format: full — `pier exec --json` prints JSONL events and `--output-last-message` writes the final message to a file.
-- Statusline: partial — Terminal UI shows model/mode/cwd/status, but no custom statusline API was confirmed.
-- Telemetry: partial — Homepage says no telemetry you did not ask for; no detailed opt-out settings were found.
-- Hosted Agent: partial — v0.3.2 introduced remote execution in the cloud, but the primary CLI remains local and remote execution is presented as a feature rather than a separate managed platform.
-- Custom Model Provider: full — CLI help verifies `--oss` and `--local-provider` for lmstudio/ollama plus explicit `--model`.
-- Pricing: Pro $5/mo; Max $20/mo; $5 usage top-ups; Max enables frontier models including OpenAI, Anthropic, Kimi and more
-- Notes: Pier Code is a terminal-native paid coding agent by PierCode, installed from dl.piercode.com as `pier`. Local help verified version 0.4.1 with exec/review/resume/fork/cloud/remote-control/MCP/plugin/sandbox/approval/model/JSONL surfaces.
+- Some Free Usage: none — No free tier was listed on the public pricing page reviewed in this run.
+- No Account Required: partial — The CLI is local-first and local-only mode exists, but paid/cloud features require account access. Local pier 0.4.1 also exposes OSS local-provider flags.
+- Can Use Other Subscriptions: none — Pier Max unlocks frontier providers through Pier billing; public docs reviewed did not show BYOK or routing through a user's external provider subscription.
+- Rules: full — Pier inspects repository context. Verified locally in pier 0.4.1 model catalog and binary strings: it looks for AGENTS.md, CLAUDE.md, .cursorrules, and related contributor instruction files.
+- Skills: partial — Local pier 0.4.1 exposes plugin management and stable plugin features, with bundled skill support visible in the binary, but public docs do not yet describe a user-facing SKILL.md system.
+- Hooks: partial — Local pier 0.4.1 feature list reports hooks as stable and the CLI exposes hook-trust bypass controls. Public Pier docs do not yet document the hook file format.
+- Mcp Servers: full — Verified locally: `pier mcp` manages external MCP servers with list/get/add/remove/login/logout subcommands.
+- Custom Commands: unknown — Public docs and local top-level help show built-in commands, but no documented custom command directory or slash-command authoring format was found.
+- Goal Command: full — Local pier 0.4.1 feature list reports goals as stable. Public docs do not yet spell out the slash-command surface.
+- Subagents: full — Local pier 0.4.1 feature list reports multi_agent as stable and the binary exposes subagent events. Public docs are still sparse.
+- Monitor: partial — Changelog documents listing/stopping background terminals. This covers background command visibility, but public docs do not describe a general event-driven monitor primitive.
+- Transcripts: full — Verified locally: Pier persists sessions for resume/archive/delete/fork flows under its local Pier state.
+- Model Selection: full — Verified locally: `pier` and `pier exec` accept `-m/--model`; model catalog includes pier-hybrid, sarvam-105b, sarvam-30b, and Max-plan frontier models.
+- Approval Mode: full — Verified locally: `pier` supports `-a/--ask-for-approval` values untrusted, on-failure, on-request, and never, plus the explicit dangerous bypass flag.
+- Sandbox Mode: full — Verified locally: `pier` supports `-s/--sandbox` values read-only, workspace-write, and danger-full-access, plus a `pier sandbox` command.
+- Resume: full — Verified locally: `pier resume` resumes a previous interactive session by id/name or via picker/--last; `pier exec resume` supports non-interactive resume.
+- Continue: full — Verified locally: `pier resume --last` and `pier exec resume --last` continue the most recent recorded session.
+- Non Interactive: full — Verified locally: `pier exec` runs tasks non-interactively, and `pier review` runs code review non-interactively.
+- Output Format: full — Verified locally: `pier exec --json` prints events as JSONL and `--output-last-message` writes the final assistant message to a file.
+- Statusline: unknown — No public Pier documentation for configurable statusline customization was found in this run.
+- Telemetry: full — Security page says telemetry is user-controlled and defaults favor privacy.
+- Hosted Agent: full — Changelog documents remote execution where Pier runs the agent in the cloud, clones the repo, works on it, and pushes a branch.
+- Custom Model Provider: partial — Max plan exposes frontier providers and local pier 0.4.1 supports `--oss` plus lmstudio/ollama local providers. Public docs do not yet document arbitrary OpenAI-compatible provider configuration.
+- Pricing: Pro $5/mo; Max $20/mo; $5 usage top-ups
+- Notes: Pier Code is a terminal coding agent from Alphabench LLP. Added to agent-launch as `--agent pier` targeting the `pier` binary; installer verified on this machine with pier 0.4.1 under `~/.pier/bin/pier`.
 
 ### Qwen Code
 - Docs: https://qwenlm.github.io/qwen-code-docs/en/users/overview

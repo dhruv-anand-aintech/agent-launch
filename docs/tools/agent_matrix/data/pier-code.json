@@ -1,7 +1,7 @@
 {
   "name": "Pier Code",
   "links": {
-    "docs": "https://www.piercode.com/",
+    "docs": "https://www.piercode.com/faq",
     "github": "",
     "website": "https://www.piercode.com/",
     "slug": "pier-code"
@@ -10,186 +10,188 @@
     "values": [
       "CLI"
     ],
-    "source_url": "https://www.piercode.com/#source:~:text=Pier%20reads%20your%20repository%2C%20plans%20across%20files%2C%20runs%20commands%2C%20and%20ships",
-    "comment": "Terminal-native coding agent installed as a standalone `pier` binary for macOS, Linux, and Windows. Per-form-factor links: CLI: https://www.piercode.com/.",
+    "source_url": "https://www.piercode.com/#begin-here:~:text=curl%20-fsSL%20https%3A%2F%2Fdl.piercode.com%2Finstall.sh%20%7C%20sh",
+    "comment": "Terminal-native CLI installed from the official shell installer. Per-form-factor links: CLI: https://www.piercode.com/.",
     "links": {
       "CLI": "https://www.piercode.com/"
     }
   },
   "released_in": {
     "value": "Jun '26",
-    "source_url": "https://www.piercode.com/changelog#source:~:text=First%20public%20release%20of%20Pier",
-    "comment": "Pier changelog lists v0.1.0 stable on June 17, 2026 as the first public release."
+    "source_url": "https://www.piercode.com/changelog#v-0-1-0:~:text=Stable%2017%20Jun%202026",
+    "comment": "Changelog lists v0.1.0 as the first stable release on 17 Jun 2026.",
+    "sort_date": "2026-06-17"
   },
   "latest_major_update": {
     "value": "Jul '26",
-    "source_url": "https://www.piercode.com/changelog#source:~:text=Plan%20mode%20now%20saves%20your%20plan%20to%20a%20file",
-    "comment": "Latest public release v0.4.1 (July 7, 2026) saves plan-mode output to a file while the agent writes it and lets approved plans jump straight into Auto mode."
-  },
-  "pricing": {
-    "value": "Pro $5/mo; Max $20/mo; $5 usage top-ups; Max enables frontier models including OpenAI, Anthropic, Kimi and more",
-    "source_url": "https://www.piercode.com/pricing#source:~:text=Pier%20Pro%20is%20%245%20a%20month",
-    "comment": "Pricing page lists Pro at $5/month, Max at $20/month with 4x credits and frontier providers, plus $5 usage packs."
-  },
-  "some_free_usage": {
-    "support": "none",
-    "source_url": "https://www.piercode.com/pricing#source:~:text=Pier%20Pro%20is%20%245%20a%20month",
-    "comment": "No documented free tier found; current plans are paid early-access plans."
-  },
-  "no_account_required": {
-    "support": "partial",
-    "source_url": "https://www.piercode.com/privacy#source:~:text=The%20Pier%20CLI%20is%20local-first",
-    "comment": "Pier is local-first and has OSS/local-provider flags, but normal product use is tied to Pier plan/login access."
-  },
-  "can_use_other_subscriptions": {
-    "support": "full",
-    "source_url": "https://www.piercode.com/pricing#source:~:text=Frontier%20models%3A%20OpenAI%2C%20Anthropic%2C%20Kimi%2C%20and%20more",
-    "comment": "Max plan and CLI model/provider flags support frontier providers including OpenAI, Anthropic, Kimi, and local/open-source provider modes."
+    "source_url": "https://www.piercode.com/changelog#v-0-4-1:~:text=Latest%207%20Jul%202026",
+    "comment": "Latest public changelog entry is v0.4.1 on 7 Jul 2026, adding saved plan files and one-step transition from plan approval into Auto mode.",
+    "sort_date": "2026-07-07"
   },
   "rules": {
     "support": "full",
-    "source_url": "https://www.piercode.com/changelog#source:~:text=Gateway%20planning%20mode",
-    "comment": "CLI help exposes `--ignore-rules`, confirming user/project execpolicy rule files are normally loaded."
+    "source_url": "https://www.piercode.com/#designed-for-breadth-and-depth:~:text=Understands%20your%20repo",
+    "comment": "Pier inspects repository context. Verified locally in pier 0.4.1 model catalog and binary strings: it looks for AGENTS.md, CLAUDE.md, .cursorrules, and related contributor instruction files."
   },
   "skills": {
     "support": "partial",
-    "source_url": "https://www.piercode.com/#source:~:text=Designed%20for%20breadth%20and%20depth",
-    "comment": "Plugin support is first-class, but public docs reviewed here do not describe a SKILL.md-style skill folder."
+    "source_url": "https://www.piercode.com/changelog#v-0-4-0:~:text=Max%20plans%20can%20now%20pick%20a%20frontier%20model",
+    "comment": "Local pier 0.4.1 exposes plugin management and stable plugin features, with bundled skill support visible in the binary, but public docs do not yet describe a user-facing SKILL.md system."
   },
   "hooks": {
-    "support": "unknown",
-    "source_url": "https://docs.example.com/#documentation:~:text=unknown",
-    "comment": "Research needed. Public docs did not expose enough detail in this run."
+    "support": "partial",
+    "source_url": "https://www.piercode.com/security#opt-in-cloud-calls:~:text=Telemetry%20you%20control",
+    "comment": "Local pier 0.4.1 feature list reports hooks as stable and the CLI exposes hook-trust bypass controls. Public Pier docs do not yet document the hook file format."
   },
   "mcp_servers": {
     "support": "full",
-    "source_url": "https://www.piercode.com/#source:~:text=One%20agent%2C%20every%20stack",
-    "comment": "Local CLI help verifies `pier mcp`, `pier mcp-server`, and MCP management commands."
+    "source_url": "https://www.piercode.com/security#opt-in-cloud-calls:~:text=Opt-in%20cloud%20calls",
+    "comment": "Verified locally: `pier mcp` manages external MCP servers with list/get/add/remove/login/logout subcommands."
   },
   "custom_commands": {
-    "support": "partial",
-    "source_url": "https://www.piercode.com/#source:~:text=Run%20%2Freview%20on%20my%20current%20changes",
-    "comment": "Product page and CLI help show built-in slash workflows such as `/review`; no user-defined slash-command system was confirmed."
+    "support": "unknown",
+    "source_url": "https://www.piercode.com/faq#questions-answered:~:text=Questions%2C%20answered",
+    "comment": "Public docs and local top-level help show built-in commands, but no documented custom command directory or slash-command authoring format was found."
   },
   "goal_command": {
-    "support": "none",
-    "source_url": "https://www.piercode.com/changelog#source:~:text=Plan%20mode%20now%20saves%20your%20plan%20to%20a%20file",
-    "comment": "No `/goal` command or persistent goal objective was found in current public docs/help."
+    "support": "full",
+    "source_url": "https://www.piercode.com/changelog#v-0-4-1:~:text=Plan%20mode%20now%20saves%20your%20plan%20to%20a%20file",
+    "comment": "Local pier 0.4.1 feature list reports goals as stable. Public docs do not yet spell out the slash-command surface."
   },
   "subagents": {
-    "support": "unknown",
-    "source_url": "https://docs.example.com/#documentation:~:text=unknown",
-    "comment": "Research needed. Public docs did not expose enough detail in this run."
+    "support": "full",
+    "source_url": "https://www.piercode.com/changelog#v-0-4-0:~:text=You%20can%20now%20list%20and%20stop%20the%20background%20terminals",
+    "comment": "Local pier 0.4.1 feature list reports multi_agent as stable and the binary exposes subagent events. Public docs are still sparse."
   },
   "monitor": {
     "support": "partial",
-    "source_url": "https://www.piercode.com/changelog#source:~:text=list%20and%20stop%20the%20background%20terminals%20the%20agent%20has%20open",
-    "comment": "v0.4.0 adds listing/stopping background terminals, but no full Monitor-equivalent background watch primitive was confirmed."
-  },
-  "transcripts": {
-    "support": "full",
-    "source_url": "https://www.piercode.com/#source:~:text=Built%20for%20long%20coding%20sessions",
-    "comment": "Local CLI help verifies persisted sessions plus `resume`, `archive`, `delete`, `unarchive`, `fork`, and non-interactive `--ephemeral`."
+    "source_url": "https://www.piercode.com/changelog#v-0-4-0:~:text=You%20can%20now%20list%20and%20stop%20the%20background%20terminals",
+    "comment": "Changelog documents listing/stopping background terminals. This covers background command visibility, but public docs do not describe a general event-driven monitor primitive."
   },
   "model_selection": {
     "support": "full",
-    "source_url": "https://www.piercode.com/pricing#source:~:text=Sarvam%20105B%2C%2030B%2C%20and%20Pier%20Hybrid%20included",
-    "comment": "Supports `--model`; public pricing lists Sarvam 105B/30B/Pier Hybrid plus Max frontier models."
+    "source_url": "https://www.piercode.com/#designed-for-breadth-and-depth:~:text=Pier%20Hybrid%20is%20the%20flagship%20harness",
+    "comment": "Verified locally: `pier` and `pier exec` accept `-m/--model`; model catalog includes pier-hybrid, sarvam-105b, sarvam-30b, and Max-plan frontier models."
   },
   "approval_mode": {
     "support": "full",
-    "source_url": "https://www.piercode.com/#source:~:text=You%20approved%20Pier%20to%20run",
-    "comment": "CLI help verifies `--ask-for-approval` values untrusted, on-request, on-failure, and never."
+    "source_url": "https://www.piercode.com/changelog#v-0-4-1:~:text=When%20you%20approve%20a%20plan",
+    "comment": "Verified locally: `pier` supports `-a/--ask-for-approval` values untrusted, on-failure, on-request, and never, plus the explicit dangerous bypass flag."
   },
   "sandbox_mode": {
     "support": "full",
-    "source_url": "https://www.piercode.com/#source:~:text=No%20IDE%20lock-in%2C%20no%20context%20switching",
-    "comment": "CLI help verifies sandbox modes read-only, workspace-write, and danger-full-access plus bypass flag."
+    "source_url": "https://www.piercode.com/security#opt-in-cloud-calls:~:text=local-only%20mode",
+    "comment": "Verified locally: `pier` supports `-s/--sandbox` values read-only, workspace-write, and danger-full-access, plus a `pier sandbox` command."
   },
   "resume": {
     "support": "full",
-    "source_url": "https://www.piercode.com/#source:~:text=Built%20for%20long%20coding%20sessions",
-    "comment": "CLI help verifies `pier resume` and `pier exec resume` with `--last`."
+    "source_url": "https://www.piercode.com/#product:~:text=Built%20for%20long%20coding%20sessions",
+    "comment": "Verified locally: `pier resume` resumes a previous interactive session by id/name or via picker/--last; `pier exec resume` supports non-interactive resume."
   },
   "continue": {
     "support": "full",
-    "source_url": "https://www.piercode.com/#source:~:text=Built%20for%20long%20coding%20sessions",
-    "comment": "`pier resume --last` continues the most recent session."
+    "source_url": "https://www.piercode.com/#product:~:text=Built%20for%20long%20coding%20sessions",
+    "comment": "Verified locally: `pier resume --last` and `pier exec resume --last` continue the most recent recorded session."
   },
   "non_interactive": {
     "support": "full",
-    "source_url": "https://www.piercode.com/#source:~:text=Pier%20reads%20your%20repository%2C%20plans%20across%20files%2C%20runs%20commands%2C%20and%20ships",
-    "comment": "Local CLI help verifies `pier exec` and `pier review` non-interactive commands."
+    "source_url": "https://www.piercode.com/#designed-for-breadth-and-depth:~:text=Plans%2C%20edits%2C%20runs%2C%20and%20verifies",
+    "comment": "Verified locally: `pier exec` runs tasks non-interactively, and `pier review` runs code review non-interactively."
   },
   "output_format": {
     "support": "full",
-    "source_url": "https://www.piercode.com/#source:~:text=Pier%20reads%20your%20repository",
-    "comment": "`pier exec --json` prints JSONL events and `--output-last-message` writes the final message to a file."
+    "source_url": "https://www.piercode.com/changelog#v-0-3-2:~:text=Introduced%20remote%20execution",
+    "comment": "Verified locally: `pier exec --json` prints events as JSONL and `--output-last-message` writes the final assistant message to a file."
   },
   "statusline": {
-    "support": "partial",
-    "source_url": "https://www.piercode.com/#source:~:text=pier-hybrid%20default%20%C2%B7%20medium",
-    "comment": "Terminal UI shows model/mode/cwd/status, but no custom statusline API was confirmed."
+    "support": "unknown",
+    "source_url": "https://www.piercode.com/faq#questions-answered:~:text=Questions%2C%20answered",
+    "comment": "No public Pier documentation for configurable statusline customization was found in this run."
   },
   "telemetry": {
-    "support": "partial",
-    "source_url": "https://www.piercode.com/#source:~:text=no%20telemetry%20you%20didn%27t%20ask%20for",
-    "comment": "Homepage says no telemetry you did not ask for; no detailed opt-out settings were found."
+    "support": "full",
+    "source_url": "https://www.piercode.com/security#opt-in-cloud-calls:~:text=Telemetry%20you%20control",
+    "comment": "Security page says telemetry is user-controlled and defaults favor privacy."
   },
   "custom_model_provider": {
+    "support": "partial",
+    "source_url": "https://www.piercode.com/pricing#simple-honest-pricing:~:text=frontier%20models%3A%20OpenAI%2C%20Anthropic%2C%20Kimi%2C%20and%20more",
+    "comment": "Max plan exposes frontier providers and local pier 0.4.1 supports `--oss` plus lmstudio/ollama local providers. Public docs do not yet document arbitrary OpenAI-compatible provider configuration."
+  },
+  "pricing": {
+    "value": "Pro $5/mo; Max $20/mo; $5 usage top-ups",
+    "source_url": "https://www.piercode.com/pricing#simple-honest-pricing:~:text=Pier%20Pro%20is%20%245%20a%20month",
+    "comment": "Pricing page lists Pro at $5/month, Max at $20/month, and $5 usage packs."
+  },
+  "some_free_usage": {
+    "support": "none",
+    "source_url": "https://www.piercode.com/pricing#simple-honest-pricing:~:text=Pier%20Pro%20is%20%245%20a%20month",
+    "comment": "No free tier was listed on the public pricing page reviewed in this run."
+  },
+  "no_account_required": {
+    "support": "partial",
+    "source_url": "https://www.piercode.com/privacy#privacy-policy:~:text=The%20Pier%20CLI%20is%20local-first",
+    "comment": "The CLI is local-first and local-only mode exists, but paid/cloud features require account access. Local pier 0.4.1 also exposes OSS local-provider flags."
+  },
+  "can_use_other_subscriptions": {
+    "support": "none",
+    "source_url": "https://www.piercode.com/pricing#simple-honest-pricing:~:text=Max%20at%20%2420%20to%20unlock%20frontier%20providers",
+    "comment": "Pier Max unlocks frontier providers through Pier billing; public docs reviewed did not show BYOK or routing through a user's external provider subscription."
+  },
+  "hosted_agent": {
     "support": "full",
-    "source_url": "https://www.piercode.com/pricing#source:~:text=Frontier%20models%3A%20OpenAI%2C%20Anthropic%2C%20Kimi%2C%20and%20more",
-    "comment": "CLI help verifies `--oss` and `--local-provider` for lmstudio/ollama plus explicit `--model`."
+    "source_url": "https://www.piercode.com/changelog#v-0-3-2:~:text=Introduced%20remote%20execution%3A%20run%20the%20agent%20in%20the%20cloud",
+    "comment": "Changelog documents remote execution where Pier runs the agent in the cloud, clones the repo, works on it, and pushes a branch."
+  },
+  "transcripts": {
+    "support": "full",
+    "source_url": "https://www.piercode.com/#product:~:text=Built%20for%20long%20coding%20sessions",
+    "comment": "Verified locally: Pier persists sessions for resume/archive/delete/fork flows under its local Pier state."
   },
   "keyboard_shortcuts": {
-    "support": "full",
-    "source_url": "https://www.piercode.com/#source:~:text=alt%20%2B%20t%20to%20hide%20tasks",
-    "comment": "Product screenshots document terminal shortcuts such as Alt+T to hide tasks."
+    "support": "unknown",
+    "source_url": "https://www.piercode.com/faq#questions-answered:~:text=Questions%2C%20answered",
+    "comment": "No public keybinding customization documentation was found in this run."
   },
   "theme_customization": {
     "support": "unknown",
-    "source_url": "https://docs.example.com/#documentation:~:text=unknown",
-    "comment": "Research needed. Public docs did not expose enough detail in this run."
+    "source_url": "https://www.piercode.com/faq#questions-answered:~:text=Questions%2C%20answered",
+    "comment": "No public theme customization documentation was found in this run."
   },
   "auto_save": {
-    "support": "full",
-    "source_url": "https://www.piercode.com/changelog#source:~:text=Plan%20mode%20now%20saves%20your%20plan%20to%20a%20file",
-    "comment": "v0.4.1 saves plan-mode output to a file as the agent writes it."
+    "support": "partial",
+    "source_url": "https://www.piercode.com/changelog#v-0-4-1:~:text=Plan%20mode%20now%20saves%20your%20plan%20to%20a%20file",
+    "comment": "Changelog documents plan mode saving the plan to a file as it is written. Broader auto-save controls are not public yet."
   },
   "debugging_output": {
     "support": "full",
-    "source_url": "https://www.piercode.com/#source:~:text=what%20the%20latest%20agent%20can%20do",
-    "comment": "CLI help verifies `doctor`, `debug`, `features`, and JSONL event output."
+    "source_url": "https://www.piercode.com/security#opt-in-cloud-calls:~:text=Found%20something%20that%20looks%20off",
+    "comment": "Verified locally: `pier doctor --json`, `pier debug models`, and `pier debug prompt-input` expose diagnostic output."
   },
   "context_window": {
-    "support": "unknown",
-    "source_url": "https://docs.example.com/#documentation:~:text=unknown",
-    "comment": "Research needed. Public docs did not expose enough detail in this run."
+    "support": "partial",
+    "source_url": "https://www.piercode.com/#designed-for-breadth-and-depth:~:text=Maps%20your%20codebase",
+    "comment": "Local model catalog exposes context window sizes for Pier models, but no public user-configurable context-window setting was found."
   },
   "code_formatting": {
     "support": "unknown",
-    "source_url": "https://docs.example.com/#documentation:~:text=unknown",
-    "comment": "Research needed. Public docs did not expose enough detail in this run."
+    "source_url": "https://www.piercode.com/faq#questions-answered:~:text=Questions%2C%20answered",
+    "comment": "No built-in formatter/linter integration documentation was found in this run."
   },
   "git_integration": {
-    "support": "full",
-    "source_url": "https://www.piercode.com/#source:~:text=Every%20change%20is%20diffed%2C%20explained%2C%20and%20gated",
-    "comment": "Product page emphasizes diffed/gated changes; CLI help includes `apply` for latest agent diff and `review`."
+    "support": "partial",
+    "source_url": "https://www.piercode.com/changelog#v-0-3-2:~:text=pushes%20its%20changes%20back%20to%20a%20branch",
+    "comment": "Remote execution pushes changes to a branch; local CLI also exposes `pier apply` for applying the latest diff. No full PR workflow docs were found."
   },
   "performance_mode": {
     "support": "partial",
-    "source_url": "https://www.piercode.com/#source:~:text=Pier%20Hybrid%20is%20the%20flagship%20harness",
-    "comment": "Model choices include Pier Hybrid and Sarvam 30B/105B, but no named performance mode beyond model/mode selection was confirmed."
+    "source_url": "https://www.piercode.com/pricing#simple-honest-pricing:~:text=Pier%20Hybrid%2C%20running%20Sarvam%27s%20105B%20model%20by%20default",
+    "comment": "Pier Hybrid routes between fast and deep workers, and local model catalog lists fast service tiers. No general performance-mode settings docs were found."
   },
   "ui_customization": {
-    "support": "partial",
-    "source_url": "https://www.piercode.com/#source:~:text=alt%20%2B%20t%20to%20hide%20tasks",
-    "comment": "Terminal UI includes toggles such as hiding tasks, but broader UI customization was not confirmed."
+    "support": "unknown",
+    "source_url": "https://www.piercode.com/faq#questions-answered:~:text=Questions%2C%20answered",
+    "comment": "No public UI customization documentation was found in this run."
   },
-  "hosted_agent": {
-    "support": "partial",
-    "source_url": "https://www.piercode.com/changelog#source:~:text=Introduced%20remote%20execution",
-    "comment": "v0.3.2 introduced remote execution in the cloud, but the primary CLI remains local and remote execution is presented as a feature rather than a separate managed platform."
-  },
-  "notes": "Pier Code is a terminal-native paid coding agent by PierCode, installed from dl.piercode.com as `pier`. Local help verified version 0.4.1 with exec/review/resume/fork/cloud/remote-control/MCP/plugin/sandbox/approval/model/JSONL surfaces."
+  "notes": "Pier Code is a terminal coding agent from Alphabench LLP. Added to agent-launch as `--agent pier` targeting the `pier` binary; installer verified on this machine with pier 0.4.1 under `~/.pier/bin/pier`."
 }

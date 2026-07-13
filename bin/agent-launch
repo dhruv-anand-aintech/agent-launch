@@ -30,10 +30,9 @@ AGENTS: dict[str, AgentSpec] = {
     "amazonq": AgentSpec("q", "", "", "pro"),
     "amp": AgentSpec("amp", "", "", "pro"),
     "antigravity": AgentSpec("agy", "", "", "pro"),
-    "codex": AgentSpec("codex", "gpt-5.4-mini", "gpt-5.5", "pro"),
+    "codex": AgentSpec("codex", "gpt-5.4-mini", "gpt-5.6-sol", "pro"),
     "claude": AgentSpec("claude", "haiku", "sonnet", "pro"),
     "cline": AgentSpec("cline", "", "", "pro"),
-    "command": AgentSpec("cmd", "", "", "pro"),
     "copilot": AgentSpec("copilot", "", "", "pro"),
     "crush": AgentSpec("crush", "", "", "pro"),
     "droid": AgentSpec("droid", "claude-opus-4-8-fast", "claude-opus-4-8", "pro"),
@@ -60,8 +59,8 @@ RANDOM_AGENTS = (
     "codex",
     "cursor",
     "opencode",
-    "pier",
     "pi",
+    "pier",
 )
 DEFAULT_AGENT_ORDER = (
     "codex",
@@ -69,7 +68,6 @@ DEFAULT_AGENT_ORDER = (
     "cursor",
     "opencode",
     "pier",
-    "command",
     "antigravity",
     "gemini",
     "aider",
@@ -143,13 +141,13 @@ def choose_random_agent(persist: bool = True) -> str:
 
 
 MODEL_CLASSES = ("fast", "pro")
+THINKING_LEVELS = ("auto", "low", "medium", "high")
 MODEL_FLAG_AGENTS = {
     "aider",
     "amazonq",
     "cline",
     "codex",
     "claude",
-    "command",
     "copilot",
     "crush",
     "droid",
@@ -265,6 +263,14 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
         help="Explicit backend model string. Overrides --model-class.",
     )
     parser.add_argument(
+        "--thinking-level",
+        "--effort",
+        dest="thinking_level",
+        choices=THINKING_LEVELS,
+        default=None,
+        help="Normalized reasoning/thinking effort for supporting backends. Defaults to AGENT_LAUNCH_THINKING_LEVEL or auto.",
+    )
+    parser.add_argument(
         "--no-model",
         action="store_true",
         help="Do not pass any model flag to the backend.",
@@ -377,6 +383,13 @@ def resolve_model(agent: str, args: argparse.Namespace) -> str | None:
     spec = AGENTS[agent]
     model_class = resolve_model_class(agent, args)
     return os.environ.get(env_key(agent, model_class)) or getattr(spec, f"{model_class}_model")
+
+
+def resolve_thinking_level(args: argparse.Namespace) -> str:
+    level = args.thinking_level or os.environ.get("AGENT_LAUNCH_THINKING_LEVEL") or "auto"
+    if level not in THINKING_LEVELS:
+        raise SystemExit(f"Unknown thinking level {level!r}; expected one of: {', '.join(THINKING_LEVELS)}")
+    return level
 
 
 def prompt_from(args: argparse.Namespace) -> str | None:
@@ -696,12 +709,6 @@ def mode_flags(agent: str, mode: str, non_interactive: bool) -> list[str]:
             "auto": ["--auto-approve", "true"],
             "danger": ["--auto-approve", "true"],
         },
-        "command": {
-            "ask": ["--permission-mode", "standard"],
-            "plan": ["--plan"],
-            "auto": ["--auto-accept"],
-            "danger": ["--yolo"],
-        },
         "droid": {
             "ask": [],
             "plan": [],
@@ -757,7 +764,7 @@ def mode_flags(agent: str, mode: str, non_interactive: bool) -> list[str]:
             "danger": [],
         },
         "pier": {
-            "ask": ["-s", "read-only", "-a", "untrusted"],
+            "ask": ["-s", "read-only", "-a", "on-request"],
             "plan": ["-s", "read-only", "-a", "on-request"],
             "auto": ["-s", "workspace-write", "-a", "on-request"],
             "danger": ["--dangerously-bypass-approvals-and-sandbox"],
@@ -815,9 +822,18 @@ def append_model(cmd: list[str], agent: str, model: str | None) -> None:
         cmd += ["--model", model]
 
 
-def append_reasoning_effort(cmd: list[str], agent: str, model_class: str, model: str | None) -> None:
-    if agent == "codex" and model_class == "pro" and model == "gpt-5.5":
-        cmd += ["-c", "model_reasoning_effort=high"]
+def append_thinking_level(cmd: list[str], agent: str, args: argparse.Namespace, model_class: str, model: str | None) -> None:
+    level = resolve_thinking_level(args)
+    if agent == "codex":
+        if level == "auto":
+            if model_class == "pro" and model == "gpt-5.6-sol":
+                cmd += ["-c", "model_reasoning_effort=medium"]
+            return
+        cmd += ["-c", f"model_reasoning_effort={level}"]
+    elif agent == "claude":
+        cmd += ["--effort", "medium" if level == "auto" else level]
+    elif agent == "copilot" and level != "auto":
+        cmd += [f"--effort={level}"]
 
 
 def append_passthrough(cmd: list[str], args: argparse.Namespace) -> None:
@@ -871,7 +887,7 @@ def build_command(args: argparse.Namespace) -> list[str]:
                 cmd += ["-C", args.cwd]
             cmd += mode_flags(agent, args.mode, non_interactive)
             append_model(cmd, agent, model)
-            append_reasoning_effort(cmd, agent, model_class, model)
+            append_thinking_level(cmd, agent, args, model_class, model)
             append_passthrough(cmd, args)
             if resume_id:
                 cmd.append(resume_id)
@@ -884,7 +900,7 @@ def build_command(args: argparse.Namespace) -> list[str]:
                 cmd += ["-C", args.cwd]
             cmd += mode_flags(agent, args.mode, non_interactive)
             append_model(cmd, agent, model)
-            append_reasoning_effort(cmd, agent, model_class, model)
+            append_thinking_level(cmd, agent, args, model_class, model)
             append_passthrough(cmd, args)
             if prompt:
                 cmd.append(prompt)
@@ -895,7 +911,7 @@ def build_command(args: argparse.Namespace) -> list[str]:
         cmd += ["--add-dir", args.cwd]
         cmd += mode_flags(agent, args.mode, non_interactive)
         append_model(cmd, agent, model)
-        cmd += ["--effort", "medium"]
+        append_thinking_level(cmd, agent, args, model_class, model)
         append_passthrough(cmd, args)
         if resume_id:
             cmd += ["--resume", resume_id]
@@ -920,21 +936,6 @@ def build_command(args: argparse.Namespace) -> list[str]:
             pass
         if non_interactive:
             cmd += ["--json"]
-        if prompt:
-            cmd.append(prompt)
-
-    elif agent == "command":
-        cmd += mode_flags(agent, args.mode, non_interactive)
-        append_model(cmd, agent, model)
-        append_passthrough(cmd, args)
-        if resume_id:
-            cmd += ["--resume", resume_id]
-        elif resume_requested:
-            cmd += ["--resume"]
-        elif continue_session:
-            cmd += ["--continue"]
-        if non_interactive:
-            cmd += ["--print", "--trust", "--skip-onboarding"]
         if prompt:
             cmd.append(prompt)
 
@@ -1105,17 +1106,24 @@ def build_command(args: argparse.Namespace) -> list[str]:
         cmd += ["-C", args.cwd]
         cmd += mode_flags(agent, args.mode, non_interactive)
         append_model(cmd, agent, model)
-        if non_interactive:
-            cmd += ["exec", "--skip-git-repo-check"]
-        elif resume_id:
-            cmd += ["resume", resume_id]
-        elif continue_session:
-            cmd += ["resume", "--last"]
-        elif resume_requested:
-            cmd += ["resume"]
-        append_passthrough(cmd, args)
-        if prompt:
-            cmd.append(prompt)
+        if resume_requested or continue_session:
+            if non_interactive:
+                cmd += ["exec", "resume", "--skip-git-repo-check"]
+            else:
+                cmd += ["resume"]
+            append_passthrough(cmd, args)
+            if resume_id:
+                cmd.append(resume_id)
+            else:
+                cmd.append("--last")
+            if prompt:
+                cmd.append(prompt)
+        else:
+            if non_interactive:
+                cmd += ["exec", "--skip-git-repo-check"]
+            append_passthrough(cmd, args)
+            if prompt:
+                cmd.append(prompt)
 
     elif agent == "qwen":
         cmd += mode_flags(agent, args.mode, non_interactive)
@@ -1159,6 +1167,7 @@ def build_command(args: argparse.Namespace) -> list[str]:
         cmd += ["-C", args.cwd]
         cmd += mode_flags(agent, args.mode, non_interactive)
         append_model(cmd, agent, model)
+        append_thinking_level(cmd, agent, args, model_class, model)
         append_passthrough(cmd, args)
         if resume_id:
             cmd += ["--resume", resume_id]
@@ -1267,7 +1276,10 @@ def print_mappings() -> None:
         "(never the same as the previous random pick when another installed option exists)"
     )
     print(f"  default order: {', '.join(DEFAULT_AGENT_ORDER)}")
-    print("  codex pro: adds -c model_reasoning_effort=high when using gpt-5.5")
+    print("  thinking levels: auto, low, medium, high")
+    print("  codex: --thinking-level maps to -c model_reasoning_effort=<level>; auto keeps gpt-5.6-sol pro at medium")
+    print("  claude: --thinking-level maps to --effort <level>; auto uses medium")
+    print("  copilot: --thinking-level maps to --effort=<level> when explicitly set")
     print("\nModes:")
     for mode in MODES:
         print(f"  {mode}")
