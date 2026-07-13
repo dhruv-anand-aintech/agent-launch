@@ -60,7 +60,6 @@ RANDOM_AGENTS = (
     "cursor",
     "opencode",
     "pi",
-    "pier",
 )
 DEFAULT_AGENT_ORDER = (
     "codex",
