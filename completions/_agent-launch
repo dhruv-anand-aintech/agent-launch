@@ -66,7 +66,7 @@ _arguments -s -S \
   '--agent-order[non-interactive failover order]:agent order:' \
   '--prefer[move preferred agents to the front of the default failover order]:preferred agents:' \
   '(-C --cwd)'{-C,--cwd}'[working directory/workspace]:directory:_files -/' \
-  '--no-auto-cwd[disable LLM working-directory classification for interactive prompts]' \
+  '--no-auto-cwd[disable Codex working-directory routing for interactive prompts]' \
   '(-p --prompt)'{-p,--prompt}'[initial prompt]:prompt:' \
   '--prompt-file[read initial prompt from file]:prompt file:_files' \
   '(-i --interactive -n --non-interactive)'{-i,--interactive}'[start interactive mode]' \

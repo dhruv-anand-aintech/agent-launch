@@ -1227,7 +1227,7 @@ def call_command(cmd: list[str], timeout: float = 0) -> int:
 
 
 def run_command(args: argparse.Namespace, cmd: list[str]) -> int:
-    print(f"agent-launch executing: {shlex.join(cmd)}", file=sys.stderr, flush=True)
+    print(f"agent-launch executing: cd {shlex.quote(args.cwd)} && {shlex.join(cmd)}", file=sys.stderr, flush=True)
     os.chdir(args.cwd)
     if args.non_interactive:
         return call_command(cmd, args.attempt_timeout)
@@ -1244,7 +1244,7 @@ def run_agent_order(args: argparse.Namespace) -> int:
         agent_args = args_for_agent(args, agent)
         cmd = build_command(agent_args)
         print(
-            f"agent-launch attempt {index}/{len(args.agent_order)} [{agent}]: {shlex.join(cmd)}",
+            f"agent-launch attempt {index}/{len(args.agent_order)} [{agent}]: cd {shlex.quote(args.cwd)} && {shlex.join(cmd)}",
             file=sys.stderr,
             flush=True,
         )
