@@ -554,8 +554,6 @@ def route_cwd_with_codex(prompt: str, cwd: str, model: str, timeout: float) -> s
         completed = subprocess.run(
             cmd,
             stdin=subprocess.DEVNULL,
-            stdout=subprocess.DEVNULL,
-            stderr=subprocess.PIPE,
             text=True,
             timeout=timeout if timeout > 0 else None,
             check=False,
@@ -584,11 +582,11 @@ def maybe_route_cwd(args: argparse.Namespace) -> None:
     if not os.path.isdir(os.path.expanduser(args.cwd)) or not shutil.which("codex"):
         return
     model, timeout = cwd_router_config()
+    print("agent-launch: auto-detecting best working directory...", file=sys.stderr, flush=True)
     try:
         selected = route_cwd_with_codex(prompt, args.cwd, model, timeout)
     except (OSError, RuntimeError, ValueError, subprocess.TimeoutExpired) as exc:
-        if os.environ.get("AGENT_LAUNCH_CWD_ROUTER_DEBUG"):
-            print(f"agent-launch auto-cwd skipped: {exc}", file=sys.stderr, flush=True)
+        print(f"agent-launch auto-cwd: detection failed ({exc}), using current directory", file=sys.stderr, flush=True)
         return
 
     original = os.path.abspath(os.path.expanduser(args.cwd))

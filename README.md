@@ -163,7 +163,7 @@ AGENT_LAUNCH_PREFER=claude,codex agent-launch -n -C ~/Code/my-repo -p 'implement
 
 ## Interactive Auto-Cwd
 
-For interactive sessions with an initial prompt (`--prompt`, `--prompt-file`, or positional text), `agent-launch` runs a short, ephemeral, read-only `codex exec` using GPT-5.6 Luna. Codex explores the requested `--cwd` and relevant nested directories, then returns the most relevant existing repo or subfolder.
+For interactive sessions with an initial prompt (`--prompt`, `--prompt-file`, or positional text), `agent-launch` runs a short, ephemeral, read-only `codex exec` using GPT-5.6 Luna. Codex explores the requested `--cwd` and relevant nested directories, streaming its progress in the current terminal, then returns the most relevant existing repo or subfolder.
 
 This lets you run from a parent folder and still land inside the project implied by the first message:
 
@@ -178,7 +178,6 @@ Configuration:
 | --- | --- |
 | `AGENT_LAUNCH_CWD_ROUTER_MODEL` | Codex routing model; defaults to `gpt-5.6-luna` |
 | `AGENT_LAUNCH_CWD_ROUTER_TIMEOUT` | Codex routing timeout in seconds; defaults to `45` |
-| `AGENT_LAUNCH_CWD_ROUTER_DEBUG=1` | Print routing failures before falling back to the requested cwd |
 | `AGENT_LAUNCH_AUTO_CWD=0` | Disable auto-cwd globally |
 
 If Codex is unavailable, times out, fails, or returns a path outside the requested cwd, the launcher keeps the original `--cwd`. Use `--no-auto-cwd` to skip routing for one launch.
