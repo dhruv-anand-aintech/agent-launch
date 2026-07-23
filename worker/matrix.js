@@ -2,6 +2,7 @@ import matrix from "../docs/tools/agent_matrix/bundle.json";
 import llmsTxt from "../docs/tools/agent_matrix/llms.txt";
 import schema from "../docs/tools/agent_matrix/schema.json";
 import updatedMeta from "../docs/tools/agent_matrix/updated.json";
+import changelog from "../docs/tools/agent_matrix/changelog.json";
 
 const PWA = {
   name: "Agent Launch Compare",
@@ -105,6 +106,24 @@ function formatUpdatedLabel(iso) {
   return `Updated ${new Intl.DateTimeFormat("en-US", { month: "long", day: "numeric", year: "numeric" }).format(new Date(then))}`;
 }
 
+function renderChangelog() {
+  const byDate = new Map();
+  for (const entry of changelog.entries || []) {
+    if (!byDate.has(entry.date)) byDate.set(entry.date, []);
+    byDate.get(entry.date).push(...entry.items);
+  }
+  return [...byDate].map(([date, items]) => `
+    <section class="change-group">
+      <h2>${htmlEscape(new Intl.DateTimeFormat("en-US", {
+        year: "numeric", month: "long", day: "numeric", timeZone: "UTC",
+      }).format(new Date(`${date}T12:00:00Z`)))}</h2>
+      <ul>${items.map(item => `
+        <li><a class="changelog-cell-link" href="#${htmlEscape(item.target)}" data-target-id="${htmlEscape(item.target)}">${htmlEscape(item.summary)}</a></li>
+      `).join("")}</ul>
+    </section>
+  `).join("");
+}
+
 function render() {
   const payload = JSON.stringify({ matrix, columns, groups, faviconOverrides: FAVICON_OVERRIDES }).replaceAll("</", "<\\/");
   const updatedAt = updatedMeta.updated_at || new Date().toISOString();
@@ -137,6 +156,14 @@ a { color: inherit; text-decoration: none; }
 .brand { display: flex; gap: 6px; align-items: center; font-weight: 700; font-size: 13px; }
 .mark { width: 20px; height: 20px; border: 1px solid var(--ink); display: grid; place-items: center; font-size: 10px; }
 .topnav { display: flex; gap: 8px; align-items: center; }
+.view-tabs { display: flex; align-items: center; border: 1px solid var(--line); background: #fff; }
+.tab-button {
+  appearance: none; border: 0; border-right: 1px solid var(--line); background: transparent;
+  color: var(--muted); padding: 4px 9px; font: inherit; font-size: 11px; cursor: pointer;
+}
+.tab-button:last-child { border-right: 0; }
+.tab-button:hover { background: #f0eeeb; color: var(--ink); }
+.tab-button[aria-selected="true"] { background: var(--ink); color: var(--panel); }
 .agl-promo {
   display: inline-flex; align-items: center; gap: 8px; border: 1px solid #153f36;
   background: #173f36; color: #fffaf0; padding: 4px 5px 4px 9px; font-size: 12px;
@@ -163,6 +190,23 @@ a { color: inherit; text-decoration: none; }
 .hero p { margin: 0; color: var(--muted); font-size: 12px; }
 .meta-row { margin-top: 6px; display: flex; gap: 6px; flex-wrap: wrap; }
 .pill { border: 1px solid var(--line); padding: 3px 7px; background: #fff; font-size: 11px; color: var(--muted); }
+.view-panel[hidden] { display: none !important; }
+.matrix-view { flex: 1 1 auto; min-height: 0; display: flex; flex-direction: column; }
+.changelog-view { flex: 1 1 auto; min-height: 0; overflow: auto; background: var(--bg); }
+.changelog-shell { width: min(860px, calc(100% - 28px)); margin: 0 auto; padding: 28px 0 52px; }
+.changelog-head {
+  display: flex; align-items: baseline; justify-content: space-between; gap: 16px;
+  padding-bottom: 12px; border-bottom: 2px solid var(--ink);
+}
+.changelog-head h1 { margin: 0; font-size: clamp(24px, 4vw, 42px); letter-spacing: -.04em; }
+.changelog-head span { color: var(--muted); font-size: 11px; white-space: nowrap; }
+.change-group { display: grid; grid-template-columns: 150px 1fr; gap: 24px; padding: 19px 0; border-bottom: 1px solid var(--line); }
+.change-group h2 { margin: 2px 0 0; color: var(--muted); font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; }
+.change-group ul { margin: 0; padding-left: 18px; }
+.change-group li { margin: 0 0 7px; padding-left: 3px; font-size: 13px; line-height: 1.4; }
+.change-group li:last-child { margin-bottom: 0; }
+.changelog-cell-link { text-decoration: underline; text-decoration-color: var(--line-strong); text-underline-offset: 3px; }
+.changelog-cell-link:hover { color: var(--accent); text-decoration-color: var(--accent); }
 .table-wrap {
   flex: 1 1 auto; overflow: auto; min-height: 0; position: relative;
 }
@@ -306,12 +350,19 @@ td.value .cell-value {
   opacity: .35;
 }
 .cell-wrap:hover .source-mark { opacity: 1; }
+.cell-anchor-flash { animation: cell-anchor-flash 1.8s ease-out; }
+@keyframes cell-anchor-flash {
+  0%, 28% { outline: 3px solid var(--accent); outline-offset: -3px; background: #dff2ec; }
+  100% { outline-color: transparent; }
+}
 .hidden { display: none; }
 @media (max-width: 760px) {
   .topbar { height: auto; min-height: 100px; align-items: flex-start; flex-wrap: wrap; gap: 6px; padding: 8px 10px; }
   .brand { flex: 1 1 100%; line-height: 1.1; }
   .topnav { width: 100%; flex-wrap: wrap; justify-content: flex-start; gap: 6px; }
   .agl-promo { order: -1; width: 100%; justify-content: space-between; font-size: 11px; }
+  .change-group { grid-template-columns: 1fr; gap: 8px; }
+  .changelog-shell { padding-top: 20px; }
 }
 </style>
 </head>
@@ -319,6 +370,10 @@ td.value .cell-value {
 <header class="topbar">
   <a class="brand" href="/"><span class="mark">AL</span><span>Coding Agent Feature Matrix</span></a>
   <nav class="topnav">
+    <div class="view-tabs" role="tablist" aria-label="Matrix views">
+      <button type="button" class="tab-button" id="compareTab" role="tab" aria-controls="matrixView" aria-selected="true" onclick="showView('matrix')">Compare</button>
+      <button type="button" class="tab-button" id="changelogTab" role="tab" aria-controls="changelogView" aria-selected="false" onclick="showView('changelog')">Changelog</button>
+    </div>
     <a href="https://github.com/dhruv-anand-aintech/agent-launch" class="agl-promo" target="_blank" rel="noreferrer" aria-label="Use these agents from the agl command line interface on GitHub">
       <span><strong>Use these agents from your terminal</strong> with <code>agl</code></span>
       <span class="agl-promo-action">Get CLI</span>
@@ -330,6 +385,7 @@ td.value .cell-value {
     </a>
   </nav>
 </header>
+<main id="matrixView" class="view-panel matrix-view">
 <section class="hero">
   <p>Compare ${htmlEscape(matrix.length)} AI coding agents across ${htmlEscape(featureCount)} features. <strong>Name or icon</strong> opens the product site; <strong>⊙</strong> hides or shows a column; drag headers to reorder; use the <strong>API docs</strong> row for official references.</p>
   <div class="meta-row">
@@ -343,6 +399,16 @@ td.value .cell-value {
 <tbody id="tbody"></tbody>
 </table>
 </div>
+</main>
+<main id="changelogView" class="view-panel changelog-view" hidden>
+  <div class="changelog-shell">
+    <header class="changelog-head">
+      <h1>Changelog</h1>
+      <span>${htmlEscape(changelog.entry_count)} tracked changes</span>
+    </header>
+    ${renderChangelog()}
+  </div>
+</main>
 <script type="application/json" id="payload">${payload}</script>
 <script>
 function agentDomain(agent) {
@@ -565,6 +631,11 @@ function syncUrlState() {
   } catch(e) {}
 }
 function esc(v) { return String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+function slugify(v) { return String(v||'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,''); }
+function cellId(agent, key) {
+  var agentSlug = (agent.links && agent.links.slug) || agent.name;
+  return 'cell-' + slugify(agentSlug) + '-' + slugify(key);
+}
 function rowLabelCell(label, extraClass, extraAttrs) {
   return '<td class="row-label'+extraClass+'"'+extraAttrs+'><span class="row-label-tip">'+esc(label)+'</span>'+esc(label)+'</td>';
 }
@@ -605,7 +676,8 @@ function favimg(agent, idx) {
 }
 function cell(agent, col) {
   var v = agent[col.key];
-  if (!v) return '<td>&mdash;</td>';
+  var idAttr = ' id="'+cellId(agent, col.key)+'"';
+  if (!v) return '<td'+idAttr+'>&mdash;</td>';
   if (col.key==='form_factor') {
     var tags = sortFormFactors((v.values||[v.value]).filter(Boolean));
     var links = v.links || {};
@@ -616,7 +688,7 @@ function cell(agent, col) {
       return '<span class="form-tag">'+esc(x)+'</span>';
     }).join('');
     if (agent.deprecated) tagHtml += '<span class="form-tag deprecated-tag">deprecated</span>';
-    return '<td class="cell-wrap"><div class="form-tags">'+tagHtml+'</div>'+tip+'</td>';
+    return '<td'+idAttr+' class="cell-wrap"><div class="form-tags">'+tagHtml+'</div>'+tip+'</td>';
   }
   var tip = cellTipHtml(v.comment, v.source_url);
   var hasSrc = !!v.source_url;
@@ -625,10 +697,10 @@ function cell(agent, col) {
   var wrapCls = 'cell-wrap'+(hasSrc?' has-source':'');
   if (featureCols.some(function(c){ return c.key===col.key; })) {
     var g = {full:'&#10003;',partial:'&#9678;',none:'&#10005;',unknown:'?','':'—'};
-    return '<td class="'+wrapCls+'">'+link+'<span class="support '+(v.support||'')+'"><span class="dot">'+(g[v.support||'']||'?')+'</span></span>'+mark+tip+'</td>';
+    return '<td'+idAttr+' class="'+wrapCls+'">'+link+'<span class="support '+(v.support||'')+'"><span class="dot">'+(g[v.support||'']||'?')+'</span></span>'+mark+tip+'</td>';
   }
-  if (v.value!==undefined) return '<td class="'+wrapCls+' value"><span class="cell-value">'+esc(v.value)+'</span>'+link+mark+tip+'</td>';
-  return '<td>'+esc(v)+'</td>';
+  if (v.value!==undefined) return '<td'+idAttr+' class="'+wrapCls+' value"><span class="cell-value">'+esc(v.value)+'</span>'+link+mark+tip+'</td>';
+  return '<td'+idAttr+'>'+esc(v)+'</td>';
 }
 function updateColWidths() {
   var wrap = document.querySelector('.table-wrap');
@@ -823,9 +895,62 @@ function setupCellTips() {
     tip.addEventListener('click', function(e){ e.stopPropagation(); });
   });
 }
+function showView(view, updateHash) {
+  var isChangelog = view === 'changelog';
+  var matrixView = document.getElementById('matrixView');
+  var changelogView = document.getElementById('changelogView');
+  var compareTab = document.getElementById('compareTab');
+  var changelogTab = document.getElementById('changelogTab');
+  if (!matrixView || !changelogView) return;
+  matrixView.hidden = isChangelog;
+  changelogView.hidden = !isChangelog;
+  if (compareTab) compareTab.setAttribute('aria-selected', String(!isChangelog));
+  if (changelogTab) changelogTab.setAttribute('aria-selected', String(isChangelog));
+  if (updateHash !== false && window.history && window.location) {
+    var next = isChangelog ? '#changelog' : window.location.pathname + window.location.search;
+    window.history.pushState(null, '', next);
+  }
+}
+function revealCell(targetId) {
+  var matrixIndex = -1;
+  for (var i=0; i<matrix.length; i++) {
+    for (var j=0; j<columns.length; j++) {
+      if (cellId(matrix[i], columns[j].key) === targetId) { matrixIndex = i; break; }
+    }
+    if (matrixIndex !== -1) break;
+  }
+  if (matrixIndex !== -1 && hidden.has(matrixIndex)) {
+    hidden.delete(matrixIndex);
+    saveState();
+    renderHeader();
+    renderBody();
+    updateColWidths();
+  }
+  showView('matrix', false);
+  var target = document.getElementById(targetId);
+  if (!target) return;
+  document.querySelectorAll('.cell-anchor-flash').forEach(function(el){el.classList.remove('cell-anchor-flash')});
+  target.scrollIntoView({behavior:'smooth', block:'center', inline:'center'});
+  target.classList.add('cell-anchor-flash');
+  if (window.history) window.history.replaceState(null, '', '#'+targetId);
+}
+function setupChangelogLinks() {
+  document.querySelectorAll('.changelog-cell-link').forEach(function(link){
+    link.addEventListener('click', function(event){
+      event.preventDefault();
+      revealCell(link.dataset.targetId);
+    });
+  });
+}
 var state = loadState(); colOrder = state.cols; rowOrder = state.rows; hidden = new Set(state.hidden || []); rowSort = state.sort || [];
 renderHeader(); renderBody();
+setupChangelogLinks();
 syncUrlState();
+if (window.location && window.location.hash === '#changelog') showView('changelog', false);
+else showView('matrix', false);
+if (window.location && window.location.hash.indexOf('#cell-') === 0) {
+  setTimeout(function(){ revealCell(window.location.hash.slice(1)); }, 0);
+}
 window.addEventListener('resize', function(){ updateColWidths(); scheduleFitAgentHeaderNames(); });
 </script>
 ${pwaScript()}
