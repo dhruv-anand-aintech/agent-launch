@@ -49,6 +49,7 @@ if [[ -z "${GITHUB_TOKEN:-}" ]]; then
 fi
 
 git -C "$REPO_DIR" fetch origin main
+BASE_MAIN="$(git -C "$REPO_DIR" rev-parse origin/main)"
 
 if [[ -d "$WORKTREE_DIR/.git" || -f "$WORKTREE_DIR/.git" ]]; then
   git -C "$REPO_DIR" worktree remove --force "$WORKTREE_DIR" || true
@@ -107,7 +108,7 @@ Required final steps:
 - Push the current branch. The wrapper already created the branch from `origin/main`; get its name with `git branch --show-current`.
 - Create a GitHub PR with `gh pr create --base main --head <current-branch> --title "Scheduled coding agent matrix update"` and a body that includes summary, changed agents/attributes, newly discovered harnesses considered, local install/help/dry-run validation for added harnesses, blocked sources/installers, and the validation commands.
 - Merge that PR with `gh pr merge <PR_URL> --merge --delete-branch`.
-- Do not deploy.
+- Do not deploy. The wrapper will deploy and verify the merged `origin/main` revision after you finish.
 - In your final response, include changed agents/attributes, blocked sources, validation commands, PR URL, and merge result.
 PROMPT
 
@@ -117,6 +118,43 @@ PROMPT
   --cwd "$WORKTREE_DIR" \
   --mode danger \
   --prompt-file "$PROMPT_FILE" | tee "$LAST_MESSAGE"
+
+git -C "$REPO_DIR" fetch origin main
+UPDATED_MAIN="$(git -C "$REPO_DIR" rev-parse origin/main)"
+
+if [[ "$UPDATED_MAIN" == "$BASE_MAIN" ]]; then
+  echo "$(date -u +%FT%TZ) no merged matrix update; skipping deployment"
+else
+  if [[ -n "$(git -C "$WORKTREE_DIR" status --porcelain)" ]]; then
+    echo "scheduled agent left the disposable worktree dirty; refusing to deploy"
+    exit 1
+  fi
+
+  git -C "$WORKTREE_DIR" switch --detach origin/main
+
+  (
+    cd "$WORKTREE_DIR"
+    npm ci
+    npm run matrix:validate
+    npm run matrix:bundle
+    npm run matrix:llms-txt
+    npm run matrix:changelog
+    git diff --exit-code -- docs/tools/agent_matrix/changelog.json
+    npx wrangler deploy --config wrangler.toml --tag "$UPDATED_MAIN"
+  )
+
+  DEPLOYED_MAIN="$(
+    curl -fsS https://compare.ainorthstar.tech/api/deployment-info |
+      python3 -c 'import json, sys; print(json.load(sys.stdin)["git_commit"])'
+  )"
+  if [[ "$DEPLOYED_MAIN" != "$UPDATED_MAIN" ]]; then
+    echo "production revision mismatch: expected $UPDATED_MAIN, got $DEPLOYED_MAIN"
+    exit 1
+  fi
+  curl -fsS https://compare.ainorthstar.tech/ >/dev/null
+  curl -fsS https://compare.ainorthstar.tech/llms.txt >/dev/null
+  echo "$(date -u +%FT%TZ) deployed and verified $UPDATED_MAIN"
+fi
 
 echo "$(date -u +%FT%TZ) scheduled matrix update completed"
 
