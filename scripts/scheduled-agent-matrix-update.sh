@@ -95,12 +95,15 @@ Required final steps:
 - Run `npm run matrix:validate`.
 - Run `npm run matrix:bundle`.
 - Run `npm run matrix:llms-txt`.
+- Run `npm run matrix:changelog` after all matrix data and generated artifacts are final.
 - If no matrix changes remain after generation, do not create a commit or PR; say there were no updates.
 - If changes exist, stage only matrix/site artifacts:
-  `docs/tools/agent_matrix/README.md`, `bundle.json`, `updated.json`, `llms.txt`, `schema.json`, `data_utils.py`, `docs/tools/agent_matrix/data/*.json`, and `worker/matrix.js`.
+  `docs/tools/agent_matrix/README.md`, `bundle.json`, `updated.json`, `llms.txt`, `changelog.json`, `schema.json`, `data_utils.py`, `docs/tools/agent_matrix/data/*.json`, and `worker/matrix.js`.
 - If a newly added harness required launcher support, also stage only the relevant wrapper artifacts:
   `bin/agent-launch`, `completions/_agent-launch`, `completions/agent-launch.zsh`, root `README.md`, `package.json`, and `package-lock.json`.
 - Commit the staged changes with message `Scheduled coding agent matrix update`.
+- Run `npm run matrix:changelog` again after that commit so the newest entry records the real commit instead of `Unreleased matrix update`.
+- If `changelog.json` changed, stage only that file and commit it with message `Finalize scheduled matrix changelog`.
 - Push the current branch. The wrapper already created the branch from `origin/main`; get its name with `git branch --show-current`.
 - Create a GitHub PR with `gh pr create --base main --head <current-branch> --title "Scheduled coding agent matrix update"` and a body that includes summary, changed agents/attributes, newly discovered harnesses considered, local install/help/dry-run validation for added harnesses, blocked sources/installers, and the validation commands.
 - Merge that PR with `gh pr merge <PR_URL> --merge --delete-branch`.

@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - "docs/tools/agent_matrix/**"
+      - "scripts/generate_matrix_changelog.py"
       - "worker/matrix.js"
       - "wrangler.toml"
       - "package.json"
@@ -35,6 +36,9 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - run: npm run matrix:llms-txt
+      - run: npm run matrix:changelog
+      - name: Verify committed changelog is current
+        run: git diff --exit-code -- docs/tools/agent_matrix/changelog.json
 
       - name: Deploy to Cloudflare Workers
         uses: cloudflare/wrangler-action@v3
