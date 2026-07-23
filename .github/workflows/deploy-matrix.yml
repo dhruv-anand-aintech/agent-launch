@@ -4,6 +4,7 @@ on:
   push:
     branches: [main]
     paths:
+      - ".github/workflows/deploy-matrix.yml"
       - "docs/tools/agent_matrix/**"
       - "scripts/generate_matrix_changelog.py"
       - "worker/matrix.js"
