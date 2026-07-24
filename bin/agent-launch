@@ -806,6 +806,8 @@ def build_command(args: argparse.Namespace) -> list[str]:
                 cmd.append(prompt)
 
     elif agent == "codex":
+        if non_interactive:
+            cmd += ["-c", "mcp_servers.work-voice-tts.enabled=false"]
         if resume_requested or continue_session:
             cmd += ["exec" if non_interactive else "resume"]
             if non_interactive:
