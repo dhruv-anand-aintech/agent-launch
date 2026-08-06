@@ -36,6 +36,8 @@ It normalizes the common controls that usually differ across these tools:
 - latest-session continue
 - non-interactive agent failover order
 
+The repository also includes an optional provider-neutral MCP server for owner-scoped interactive session control across Cursor, OpenCode, Codex, and Claude. See [`mcp/README.md`](mcp/README.md) for official SDK/API setup, capability limits, and mocked tests.
+
 By default, `agent-launch` starts agents in `auto` mode unless `AGENT_LAUNCH_MODE` or `--mode` overrides it.
 
 ## Demo

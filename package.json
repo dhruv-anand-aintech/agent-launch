@@ -15,11 +15,19 @@
     "LICENSE"
   ],
   "scripts": {
+    "mcp:start": "node mcp/src/main.mjs",
+    "mcp:test": "node --test mcp/test/*.test.mjs",
     "matrix:validate": "python3 docs/tools/agent_matrix/data_utils.py validate",
     "matrix:bundle": "python3 docs/tools/agent_matrix/data_utils.py bundle",
     "matrix:llms-txt": "python3 docs/tools/agent_matrix/data_utils.py llms-txt",
     "matrix:changelog": "python3 scripts/generate_matrix_changelog.py --matrix-dir docs/tools/agent_matrix",
     "deploy:matrix": "npm run matrix:validate && npm run matrix:bundle && npm run matrix:llms-txt && npm run matrix:changelog && wrangler deploy --config wrangler.toml --tag $(git rev-parse HEAD)"
+  },
+  "dependencies": {
+    "@anthropic-ai/claude-agent-sdk": "^0.3.223",
+    "@cursor/sdk": "^1.0.26",
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "@opencode-ai/sdk": "^1.18.14"
   },
   "devDependencies": {
     "wrangler": "^4.98.0"
