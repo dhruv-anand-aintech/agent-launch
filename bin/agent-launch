@@ -43,6 +43,7 @@ AGENTS: dict[str, AgentSpec] = {
     "kimi": AgentSpec("kimi", "", "", "pro"),
     "kiro": AgentSpec("kiro-cli", "", "", "pro"),
     "mimo": AgentSpec("mimo", "", "", "pro"),
+    "muse": AgentSpec("muse", "muse-spark-1.2", "muse-spark-1.2", "pro"),
     "opencode": AgentSpec("opencode", "opencode-go/deepseek-v4-flash", "opencode-go/kimi-k2.6", "pro"),
     "openhands": AgentSpec("openhands", "", "", "pro"),
     "pi": AgentSpec("pi", "opencode-go/deepseek-v4-flash", "opencode-go/kimi-k2.6", "pro"),
@@ -59,6 +60,7 @@ RANDOM_AGENTS = (
     "codex",
     "cursor",
     "opencode",
+    "muse",
     "pi",
     "pier",
 )
@@ -67,6 +69,7 @@ DEFAULT_AGENT_ORDER = (
     "claude",
     "cursor",
     "opencode",
+    "muse",
     "pier",
     "antigravity",
     "gemini",
@@ -199,6 +202,7 @@ MODEL_FLAG_AGENTS = {
     "kimi",
     "kiro",
     "mimo",
+    "muse",
     "opencode",
     "pi",
     "pier",
@@ -678,6 +682,12 @@ def mode_flags(agent: str, mode: str, non_interactive: bool) -> list[str]:
             "auto": ["--agent", "build"],
             "danger": ["--dangerously-skip-permissions"] if non_interactive else [],
         },
+        "muse": {
+            "ask": ["--approval-mode", "untrusted"],
+            "plan": ["--approval-mode", "on-request"],
+            "auto": ["--approval-mode", "never"],
+            "danger": ["--yolo"],
+        },
         "opencode": {
             "ask": ["--agent", "ask"],
             "plan": ["--agent", "plan"],
@@ -761,6 +771,8 @@ def append_thinking_level(cmd: list[str], agent: str, args: argparse.Namespace, 
         cmd += ["--effort", "medium" if level == "auto" else level]
     elif agent == "copilot" and level != "auto":
         cmd += [f"--effort={level}"]
+    elif agent == "muse" and level != "auto":
+        cmd += ["--reasoning-effort", level]
 
 
 def append_passthrough(cmd: list[str], args: argparse.Namespace) -> None:
@@ -998,6 +1010,41 @@ def build_command(args: argparse.Namespace) -> list[str]:
                 cmd.append(prompt)
             else:
                 cmd += ["--prompt", prompt]
+
+    elif agent == "muse":
+        resuming = resume_requested or continue_session
+        if non_interactive:
+            cmd += ["exec"]
+            cmd += ["--workspace", args.cwd]
+            # Muse's headless subcommand accepts safety flags directly, but
+            # does not accept the interactive --approval-mode option.
+            if args.mode == "plan":
+                cmd += ["--disable-write"]
+            elif args.mode == "auto":
+                cmd += ["--disable-approval"]
+            elif args.mode == "danger":
+                cmd += ["--yolo"]
+            append_model(cmd, agent, model)
+            append_thinking_level(cmd, agent, args, model_class, model)
+        elif resuming:
+            cmd += ["--workspace", args.cwd]
+            cmd += mode_flags(agent, args.mode, non_interactive)
+            append_model(cmd, agent, model)
+            append_thinking_level(cmd, agent, args, model_class, model)
+            cmd += ["resume"]
+        else:
+            cmd += ["--workspace", args.cwd]
+            cmd += mode_flags(agent, args.mode, non_interactive)
+            append_model(cmd, agent, model)
+            append_thinking_level(cmd, agent, args, model_class, model)
+        append_passthrough(cmd, args)
+        if resuming:
+            if resume_id:
+                cmd.append(resume_id)
+            else:
+                cmd.append("--last")
+        elif prompt:
+            cmd.append(prompt)
 
     elif agent == "opencode":
         if non_interactive:

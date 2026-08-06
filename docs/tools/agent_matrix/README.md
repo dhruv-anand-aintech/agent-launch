@@ -49,6 +49,7 @@ Form factor values are deliberately strict: each value should have a concrete pe
 | Kimi CLI | CLI, Extension, SDK | Oct '25 | Jul '26 |  |  |  | full | full | partial | unknown | partial | full | none | full |
 | Kiro | CLI, IDE, Web | Jul '25 | Jun '26 | full |  |  | full | full | partial | partial | full | full | partial | none |
 | MiMo Code | CLI, IDE, Extension | Jun '26 | Jul '26 | full | full | full | full | full | partial | full | partial | full | none | full |
+| Muse Code | CLI | Aug '26 | Aug '26 | unknown | none | none | full | full | partial | full | unknown | unknown | none | partial |
 | OpenAI Codex CLI | CLI, Extension, SDK, Web, Mac App | Apr '25 | Jul '26 | full |  | full | full | full | partial | full | full | full | full | full |
 | OpenCode | CLI, Extension, SDK, Mac App | 2025 | Jul '26 | full | full | full | full | full | partial | full | full | full | none | full |
 | OpenHands | CLI, IDE, Web, Docker, Hosted Agent | Mar '24 | Jul '26 | full | full | full | full | full | none | full | full | full | full | full |

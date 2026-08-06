@@ -63,6 +63,7 @@
         "docs": {"type": "string"},
         "github": {"type": "string"},
         "website": {"type": "string"},
+        "company_website": {"type": "string", "$comment": "Optional company/publisher site used by the separate Company logo row."},
         "slug": {"type": "string"}
       }
     },

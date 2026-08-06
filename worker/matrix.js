@@ -35,10 +35,49 @@ const FAVICON_OVERRIDES = {
   amp: "/amp.svg",
 };
 
-function faviconSrc(agent) {
+const COMPANY_LOGO_OVERRIDES = {
+  aider: { website: "https://aider.chat/", name: "Aider" },
+  "amazon-q-developer-cli": { website: "https://aws.amazon.com/", name: "AWS" },
+  amp: { website: "https://sourcegraph.com/", name: "Sourcegraph" },
+  antigravity: { website: "https://google.com/", name: "Google" },
+  "claude-code": { website: "https://anthropic.com/", name: "Anthropic" },
+  "codex-cli": { website: "https://openai.com/", name: "OpenAI" },
+  cline: { website: "https://cline.bot/", name: "Cline" },
+  "cohere-north": { website: "https://cohere.com/", name: "Cohere" },
+  "command-code": { website: "https://commandcode.ai/", name: "Command Code" },
+  crush: { website: "https://charm.land/", name: "Charm" },
+  cursor: { website: "https://cursor.com/", name: "Anysphere" },
+  devin: { website: "https://cognition.ai/", name: "Cognition" },
+  "factory-droid": { website: "https://factory.ai/", name: "Factory" },
+  "gemini-cli": { website: "https://google.com/", name: "Google" },
+  "github-copilot-cli": { website: "https://github.com/", name: "GitHub" },
+  "github-copilot-coding-agent": { website: "https://github.com/", name: "GitHub" },
+  goose: { website: "https://block.xyz/", name: "Block" },
+  "grok-build": { website: "https://x.ai/", name: "xAI" },
+  jules: { website: "https://google.com/", name: "Google" },
+  junie: { website: "https://jetbrains.com/", name: "JetBrains" },
+  "kilo-code": { website: "https://kilo.ai/", name: "Kilo" },
+  "kimi-cli": { website: "https://moonshot.cn/", name: "Moonshot AI" },
+  kiro: { website: "https://aws.amazon.com/", name: "AWS" },
+  "mimo-code": { website: "https://xiaomi.com/", name: "Xiaomi" },
+  "muse-code": { website: "https://about.meta.com/", name: "Meta" },
+  opencode: { website: "https://github.com/anomalyco/", name: "Anomaly" },
+  openhands: { website: "https://www.all-hands.dev/", name: "OpenHands" },
+  pi: { website: "https://pi.dev/", name: "Pi" },
+  "pier-code": { website: "https://piercode.com/", name: "Pier" },
+  "qwen-code": { website: "https://alibabacloud.com/", name: "Alibaba" },
+  "replit-agent": { website: "https://replit.com/", name: "Replit" },
+  "roo-code": { website: "https://roocode.com/", name: "Roo Code" },
+  "trae-agent": { website: "https://bytedance.com/", name: "ByteDance" },
+  windsurf: { website: "https://codeium.com/", name: "Codeium" },
+  zcode: { website: "https://z.ai/", name: "Z.ai" },
+};
+
+function faviconSrc(agent, kind = "agent") {
   const slug = agent.links?.slug;
-  if (slug && FAVICON_OVERRIDES[slug]) return FAVICON_OVERRIDES[slug];
-  const d = agentDomain(agent);
+  if (kind === "agent" && slug && FAVICON_OVERRIDES[slug]) return FAVICON_OVERRIDES[slug];
+  const company = COMPANY_LOGO_OVERRIDES[slug] || {};
+  const d = kind === "company" ? company.website : agentDomain(agent);
   return d ? `https://www.google.com/s2/favicons?domain=${encodeURIComponent(d)}&sz=64` : "";
 }
 
@@ -125,7 +164,7 @@ function renderChangelog() {
 }
 
 function render() {
-  const payload = JSON.stringify({ matrix, columns, groups, faviconOverrides: FAVICON_OVERRIDES }).replaceAll("</", "<\\/");
+  const payload = JSON.stringify({ matrix, columns, groups, faviconOverrides: FAVICON_OVERRIDES, companyLogoOverrides: COMPANY_LOGO_OVERRIDES }).replaceAll("</", "<\\/");
   const updatedAt = updatedMeta.updated_at || new Date().toISOString();
   return `<!doctype html>
 <html lang="en">
@@ -256,6 +295,11 @@ a.docs-link:hover { text-decoration: none; }
 .row-label.drag-over { outline: 2px dashed var(--accent); outline-offset: -2px; }
 .fav-box { display: inline-block; background: #fff; border-radius: 6px; line-height: 0; box-shadow: inset 0 0 0 1px var(--line); }
 th.agent-col .fav { width: 32px; height: 32px; vertical-align: middle; border-radius: 6px; }
+.logo-cell { height: 40px; background: #fffdf8; }
+.logo-cell .fav { width: 32px; height: 32px; vertical-align: middle; border-radius: 6px; }
+.logo-link { display: inline-flex; line-height: 0; border-radius: 6px; }
+.logo-link:hover { outline: 2px solid var(--accent); outline-offset: 1px; }
+.logo-row .row-label { background: #faf7ef; }
 th.agent-col.deprecated-col { opacity: .42; }
 th.agent-col.deprecated-col .agent-name::after { content: " (deprecated)"; font-weight: 400; font-size: 8px; }
 th.agent-col .eye {
@@ -387,7 +431,7 @@ td.value .cell-value {
 </header>
 <main id="matrixView" class="view-panel matrix-view">
 <section class="hero">
-  <p>Compare ${htmlEscape(matrix.length)} AI coding agents across ${htmlEscape(featureCount)} features. <strong>Name or icon</strong> opens the product site; <strong>⊙</strong> hides or shows a column; drag headers to reorder; use the <strong>API docs</strong> row for official references.</p>
+  <p>Compare ${htmlEscape(matrix.length)} AI coding agents across ${htmlEscape(featureCount)} features. <strong>Agent logo</strong> opens the product site and <strong>Company logo</strong> opens its publisher; <strong>⊙</strong> hides or shows a column; drag headers to reorder; use the <strong>API docs</strong> row for official references.</p>
   <div class="meta-row">
     <span class="pill">${htmlEscape(matrix.length)} agents</span>
     <span class="pill" id="updatedPill" data-updated-at="${htmlEscape(updatedAt)}">${htmlEscape(formatUpdatedLabel(updatedAt))}</span>
@@ -421,7 +465,7 @@ function agentBrandUrl(agent) {
 }
 function agentBrandHeadHtml(agent, idx) {
   var url = agentBrandUrl(agent);
-  var inner = favimg(agent, idx) + '<span class="agent-name">'+esc(agent.name)+'</span>';
+  var inner = '<span class="agent-name">'+esc(agent.name)+'</span>';
   if (!url) return '<div class="agent-head">'+inner+'</div>';
   var host = agentDomain(agent);
   var title = host ? ('Open ' + host) : 'Open product site';
@@ -435,7 +479,7 @@ function providerDocsCell(agent) {
 function hiddenBodyCell() {
   return '<td class="hidden-col-cell" aria-hidden="true"></td>';
 }
-const { matrix, columns, groups, faviconOverrides } = JSON.parse(document.getElementById('payload').textContent);
+const { matrix, columns, groups, faviconOverrides, companyLogoOverrides } = JSON.parse(document.getElementById('payload').textContent);
 function formatUpdatedLabelClient(iso) {
   var then = Date.parse(iso);
   if (!then) return 'Updated recently';
@@ -663,16 +707,33 @@ function avatarSvg(ini, c, size) {
   var s = size||32, r = Math.round(s/5), fs = Math.round(s*0.44);
   return '<svg width="'+s+'" height="'+s+'" viewBox="0 0 '+s+' '+s+'" xmlns="http://www.w3.org/2000/svg"><rect width="'+s+'" height="'+s+'" rx="'+r+'" fill="'+c+'"/><text x="'+s/2+'" y="'+s/2+'" text-anchor="middle" dominant-baseline="central" fill="white" font-size="'+fs+'" font-weight="700" font-family="Inter,sans-serif">'+ini+'</text></svg>';
 }
-function favimg(agent, idx) {
-  var ini = agentInitials(agent.name), c = COLORS[idx%COLORS.length];
-  var fallback = avatarSvg(ini, c, 32);
+function favimg(agent, idx, kind) {
+  kind = kind || 'agent';
   var slug = (agent.links && agent.links.slug) || '';
-  var src = faviconOverrides[slug] || (function(){
-    var d = agentDomain(agent);
+  var company = companyLogoOverrides[slug] || {};
+  var displayName = kind === 'company' ? (company.name || agent.name) : agent.name;
+  var ini = agentInitials(displayName), c = COLORS[idx%COLORS.length];
+  var fallback = avatarSvg(ini, c, 32);
+  var src = (function(){
+    if (kind === 'agent' && faviconOverrides[slug]) return faviconOverrides[slug];
+    var d = kind === 'company' ? company.website : agentDomain(agent);
+    try { d = new URL(d).hostname.replace(/^www\\./, ''); } catch(e) { d = ''; }
     return d ? 'https://www.google.com/s2/favicons?domain='+esc(encodeURIComponent(d))+'&sz=64' : '';
   })();
   if (!src) return '<span class="fav-box">'+fallback+'</span>';
   return '<span class="fav-box" style="position:relative"><img class="fav" src="'+esc(src)+'" alt="" width="32" height="32" loading="lazy" onerror="var p=this.parentElement;this.style.display=\\x27none\\x27;var s=p.querySelector(\\x27.fav-av\\x27);if(s)s.style.display=\\x27inline\\x27"><span class="fav-av" style="display:none">'+fallback+'</span></span>';
+}
+function logoCell(agent, idx, kind) {
+  var slug = (agent.links && agent.links.slug) || '';
+  var company = companyLogoOverrides[slug] || {};
+  var url = kind === 'company' ? (agent.links && agent.links.company_website) || company.website : agentBrandUrl(agent);
+  var title = kind === 'company' ? 'Open company site' : 'Open product site';
+  var content = favimg(agent, idx, kind);
+  var id = cellId(agent, kind + '_logo');
+  return '<td id="'+id+'" class="logo-cell">'+(url ? '<a class="logo-link" href="'+esc(url)+'" target="_blank" rel="noopener noreferrer" title="'+title+'">'+content+'</a>' : content)+'</td>';
+}
+function logoRow(label, kind, cols) {
+  return '<tr class="logo-row">'+rowLabelCell(label,'','')+cols.map(function(i){return hidden.has(i) ? hiddenBodyCell() : logoCell(matrix[i], i, kind);}).join('')+'</tr>';
 }
 function cell(agent, col) {
   var v = agent[col.key];
@@ -780,6 +841,8 @@ function renderBody() {
   var cols = bodyColOrder();
   var rows = [];
   rows.push('<tr class="group-head">'+rowLabelCell('About',' group-row-label','')+cols.map(function(i){return hidden.has(i) ? hiddenBodyCell() : '<td class="group-spacer"></td>';}).join('')+'</tr>');
+  rows.push(logoRow('Agent logo', 'agent', cols));
+  rows.push(logoRow('Company logo', 'company', cols));
   rows.push('<tr>'+rowLabelCell('API docs','',' title="Official documentation for this product"')+cols.map(function(i){
     if (hidden.has(i)) return hiddenBodyCell();
     return providerDocsCell(matrix[i]);

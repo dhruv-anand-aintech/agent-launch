@@ -1,0 +1,197 @@
+{
+  "name": "Muse Code",
+  "links": {
+    "docs": "https://developer.meta.com/ai/products/muse-code",
+    "github": "",
+    "website": "https://dev.meta.ai/",
+    "company_website": "https://about.meta.com/",
+    "slug": "muse-code"
+  },
+  "form_factor": {
+    "values": ["CLI"],
+    "source_url": "https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2#availability:~:text=Install%20Muse%20Code",
+    "comment": "Terminal-native coding agent for macOS and Linux. Install with the official dev.meta.ai shell installer.",
+    "links": {
+      "CLI": "https://dev.meta.ai/install.sh"
+    }
+  },
+  "released_in": {
+    "value": "Aug '26",
+    "source_url": "https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2#title:~:text=Introducing%20Muse%20Code",
+    "comment": "Public beta announcement dated August 5, 2026.",
+    "sort_date": "2026-08-05"
+  },
+  "latest_major_update": {
+    "value": "Aug '26",
+    "source_url": "https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2#availability:~:text=Muse%20Spark%201.2",
+    "comment": "Muse Spark 1.2 became available in Muse Code and the Meta Model API.",
+    "sort_date": "2026-08-05"
+  },
+  "pricing": {
+    "value": "Meta Model API usage billing; API key required",
+    "source_url": "https://developer.meta.com/ai/#api-keys:~:text=API%20keys",
+    "comment": "Muse Code authenticates against Meta's developer API with a Meta API key.",
+    "sort_date": "2026-08-05"
+  },
+  "some_free_usage": {
+    "support": "unknown",
+    "source_url": "https://developer.meta.com/ai/#api-keys:~:text=API%20keys",
+    "comment": "Free included usage was not established from the public documentation reviewed."
+  },
+  "no_account_required": {
+    "support": "none",
+    "source_url": "https://developer.meta.com/ai/#api-keys:~:text=API%20keys",
+    "comment": "A Meta developer credential is required for the Meta provider."
+  },
+  "can_use_other_subscriptions": {
+    "support": "none",
+    "source_url": "https://developer.meta.com/ai/#api-keys:~:text=API%20keys",
+    "comment": "The native CLI uses Meta credentials rather than another vendor subscription."
+  },
+  "rules": {
+    "support": "full",
+    "source_url": "https://developer.meta.com/ai/products/muse-code#workspace:~:text=workspace",
+    "comment": "The CLI loads workspace and personal rules when the workspace is trusted; local verification showed AGENTS.md compatibility."
+  },
+  "skills": {
+    "support": "full",
+    "source_url": "https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2#skills:~:text=default%20skills",
+    "comment": "Ships with default skills including /plan and /grill, and exposes skill management commands."
+  },
+  "hooks": {
+    "support": "unknown",
+    "source_url": "https://developer.meta.com/ai/products/muse-code#workspace:~:text=workspace",
+    "comment": "No public lifecycle-hook contract was established from the documentation reviewed."
+  },
+  "mcp_servers": {
+    "support": "unknown",
+    "source_url": "https://developer.meta.com/ai/products/muse-code#tools:~:text=tools",
+    "comment": "MCP server configuration was not established from the public documentation reviewed."
+  },
+  "custom_commands": {
+    "support": "partial",
+    "source_url": "https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2#skills:~:text=%2Fplan",
+    "comment": "Built-in slash skills are documented; a user-defined command directory was not established."
+  },
+  "goal_command": {
+    "support": "none",
+    "source_url": "https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2#skills:~:text=default%20skills",
+    "comment": "No /goal command is documented."
+  },
+  "subagents": {
+    "support": "full",
+    "source_url": "https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2#background-agents:~:text=persistent%20background%20agents",
+    "comment": "Persistent background agents and parallel repository-scale work are core Muse Code capabilities."
+  },
+  "monitor": {
+    "support": "partial",
+    "source_url": "https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2#background-agents:~:text=persistent%20background%20agents",
+    "comment": "Background agents remain active during long-running work, but a separate generic monitor/watch command was not established."
+  },
+  "transcripts": {
+    "support": "full",
+    "source_url": "https://developer.meta.com/ai/products/muse-code#sessions:~:text=sessions",
+    "comment": "Sessions and event logs are persisted locally by default; --no-session-log disables persistence for a run."
+  },
+  "model_selection": {
+    "support": "full",
+    "source_url": "https://developer.meta.com/ai/products/muse-code#model:~:text=model",
+    "comment": "The CLI accepts --model; Muse Spark 1.2 is the current default tested locally."
+  },
+  "approval_mode": {
+    "support": "full",
+    "source_url": "https://developer.meta.com/ai/products/muse-code#approval:~:text=approval",
+    "comment": "The CLI exposes untrusted, on-request, never, and --yolo approval controls."
+  },
+  "sandbox_mode": {
+    "support": "full",
+    "source_url": "https://developer.meta.com/ai/products/muse-code#sandbox:~:text=sandbox",
+    "comment": "The CLI has sandbox controls and a --yolo escape hatch for trusted local work."
+  },
+  "resume": {
+    "support": "full",
+    "source_url": "https://developer.meta.com/ai/products/muse-code#sessions:~:text=Resume",
+    "comment": "muse resume supports the workspace picker, --last, or an explicit session UUID."
+  },
+  "continue": {
+    "support": "full",
+    "source_url": "https://developer.meta.com/ai/products/muse-code#sessions:~:text=Resume",
+    "comment": "muse resume --last continues the most recent workspace session without an ID."
+  },
+  "non_interactive": {
+    "support": "full",
+    "source_url": "https://developer.meta.com/ai/products/muse-code#headless:~:text=headless",
+    "comment": "muse exec runs one prompt non-interactively."
+  },
+  "output_format": {
+    "support": "full",
+    "source_url": "https://developer.meta.com/ai/products/muse-code#json:~:text=JSONL",
+    "comment": "muse exec --json emits machine-readable JSONL events."
+  },
+  "statusline": {
+    "support": "unknown",
+    "source_url": "https://developer.meta.com/ai/products/muse-code#terminal:~:text=terminal",
+    "comment": "A user-configurable status line was not established from the public documentation reviewed."
+  },
+  "telemetry": {
+    "support": "unknown",
+    "source_url": "https://developer.meta.com/ai/products/muse-code#privacy:~:text=privacy",
+    "comment": "User-configurable telemetry controls were not established from the public documentation reviewed."
+  },
+  "keyboard_shortcuts": {
+    "support": "unknown",
+    "source_url": "https://developer.meta.com/ai/products/muse-code#terminal:~:text=terminal",
+    "comment": "Custom keybindings were not established from the public documentation reviewed."
+  },
+  "theme_customization": {
+    "support": "unknown",
+    "source_url": "https://developer.meta.com/ai/products/muse-code#terminal:~:text=terminal",
+    "comment": "Theme customization was not established from the public documentation reviewed."
+  },
+  "auto_save": {
+    "support": "partial",
+    "source_url": "https://developer.meta.com/ai/products/muse-code#sessions:~:text=sessions",
+    "comment": "Session event logs are append-only and restart-safe, but a separate file auto-save setting was not established."
+  },
+  "debugging_output": {
+    "support": "full",
+    "source_url": "https://developer.meta.com/ai/products/muse-code#traces:~:text=trace",
+    "comment": "The CLI exposes trace and local event-log inspection commands."
+  },
+  "context_window": {
+    "support": "full",
+    "source_url": "https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2#model:~:text=Muse%20Spark%201.2",
+    "comment": "Muse Spark 1.2 is the coding-focused model used by Muse Code; context details are model/API dependent."
+  },
+  "code_formatting": {
+    "support": "unknown",
+    "source_url": "https://developer.meta.com/ai/products/muse-code#tools:~:text=tools",
+    "comment": "Built-in formatter integration was not established from the public documentation reviewed."
+  },
+  "git_integration": {
+    "support": "full",
+    "source_url": "https://developer.meta.com/ai/products/muse-code#worktrees:~:text=worktree",
+    "comment": "The CLI supports Git worktree session modes and isolated subagent worktrees."
+  },
+  "performance_mode": {
+    "support": "full",
+    "source_url": "https://developer.meta.com/ai/products/muse-code#reasoning:~:text=reasoning",
+    "comment": "Reasoning effort is configurable from minimal through ultra."
+  },
+  "ui_customization": {
+    "support": "unknown",
+    "source_url": "https://developer.meta.com/ai/products/muse-code#terminal:~:text=terminal",
+    "comment": "TUI layout customization was not established from the public documentation reviewed."
+  },
+  "hosted_agent": {
+    "support": "none",
+    "source_url": "https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2#installation:~:text=Install%20Muse%20Code",
+    "comment": "Muse Code is a local terminal agent; the model API is hosted separately."
+  },
+  "custom_model_provider": {
+    "support": "partial",
+    "source_url": "https://developer.meta.com/ai/products/muse-code#base-url:~:text=base%20URL",
+    "comment": "The CLI is Meta-provider-first but exposes a base URL override for compatible gateways."
+  },
+  "notes": "Muse Code is Meta's terminal coding agent powered by Muse Spark 1.2. Local verification on this Mac used Muse Code 0.1.0-R708.1 and returned a successful headless response."
+}

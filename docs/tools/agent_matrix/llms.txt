@@ -1,6 +1,6 @@
 # Coding Agent Feature Matrix
-> Compare 34 coding agents, CLIs, and IDEs across features.
-> https://compare.ainorthstar.tech | Updated 2026-07-23
+> Compare 35 coding agents, CLIs, and IDEs across features.
+> https://compare.ainorthstar.tech | Updated 2026-08-06
 
 Agent                   Rel    FF     Fre   NoA   Oth   Rul   Skl   Hks   MCP   Cmd   Gol   Sub   Mon   Trn   Mod   App   San   Res   Con   Hdl   Fmt   Sta   Tel   Hst  BYOM
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -28,6 +28,7 @@ Kilo Code               Feb '2 CLI/Ext    Y     Y     Y     Y     Y     Y     Y 
 Kimi CLI                Oct '2 CLI/Ext                      Y     Y     ~     Y     ~     N     Y     ~     ?     Y     Y     N     Y     Y     Y     Y     Y     ?     N     Y
 Kiro                    Jul '2 CLI/IDE    Y                 Y     Y     Y     Y     Y     N     Y     ~     ~     Y     Y     ~     Y     Y     Y     ~     ?     ?     ~     N
 MiMo Code               Jun '2 CLI/IDE    Y     Y     Y     Y     Y     ~     Y     Y     Y     Y     ~     Y     Y     Y     ~     Y     Y     Y     Y     ?     ?     N     Y
+Muse Code               Aug '2 CLI        ?     N     N     Y     Y     ?     ?     ~     N     Y     ~     Y     Y     Y     Y     Y     Y     Y     Y     ?     ?     N     ~
 OpenCode                2025  CLI/Ext    Y     Y     Y     Y     Y     Y     Y     Y     N     Y     ~     Y     Y     Y     ~     Y     Y     Y     Y     ?     Y     N     Y
 OpenHands               Mar '2 CLI/IDE    Y     Y     Y     Y     Y     Y     Y     ~     N     N     N     Y     Y     Y     Y     Y     Y     Y     Y     N     ~     Y     Y
 Pi                      May '2 CLI/SDK          Y     Y     Y     Y     Y     N     Y     N     N     N     Y     Y     N     N     Y     Y     Y     Y     N     ~     N     Y
@@ -825,6 +826,38 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Custom Model Provider: full — README documents custom OpenAI-compatible providers in the TUI; auth docs support configuring API keys for providers from Models.dev.
 - Pricing: MiMo Code free/open-source; MiMo Token Plan Lite $6/mo, Standard $16/mo, Pro $50/mo, Max $100/mo; API pay-as-you-go also available
 - Notes: MiMo Code is a Xiaomi MiMo open-source terminal coding agent forked from OpenCode, adding cross-session memory, checkpoints, subagent orchestration, goal-driven loops, compose workflows, and dream/distill self-improvement.
+
+### Muse Code
+- Docs: https://developer.meta.com/ai/products/muse-code
+- Website: https://dev.meta.ai/
+- Form factor: CLI
+- Released: Aug '26
+- Latest update: Aug '26
+- Some Free Usage: unknown — Free included usage was not established from the public documentation reviewed.
+- No Account Required: none — A Meta developer credential is required for the Meta provider.
+- Can Use Other Subscriptions: none — The native CLI uses Meta credentials rather than another vendor subscription.
+- Rules: full — The CLI loads workspace and personal rules when the workspace is trusted; local verification showed AGENTS.md compatibility.
+- Skills: full — Ships with default skills including /plan and /grill, and exposes skill management commands.
+- Hooks: unknown — No public lifecycle-hook contract was established from the documentation reviewed.
+- Mcp Servers: unknown — MCP server configuration was not established from the public documentation reviewed.
+- Custom Commands: partial — Built-in slash skills are documented; a user-defined command directory was not established.
+- Goal Command: none — No /goal command is documented.
+- Subagents: full — Persistent background agents and parallel repository-scale work are core Muse Code capabilities.
+- Monitor: partial — Background agents remain active during long-running work, but a separate generic monitor/watch command was not established.
+- Transcripts: full — Sessions and event logs are persisted locally by default; --no-session-log disables persistence for a run.
+- Model Selection: full — The CLI accepts --model; Muse Spark 1.2 is the current default tested locally.
+- Approval Mode: full — The CLI exposes untrusted, on-request, never, and --yolo approval controls.
+- Sandbox Mode: full — The CLI has sandbox controls and a --yolo escape hatch for trusted local work.
+- Resume: full — muse resume supports the workspace picker, --last, or an explicit session UUID.
+- Continue: full — muse resume --last continues the most recent workspace session without an ID.
+- Non Interactive: full — muse exec runs one prompt non-interactively.
+- Output Format: full — muse exec --json emits machine-readable JSONL events.
+- Statusline: unknown — A user-configurable status line was not established from the public documentation reviewed.
+- Telemetry: unknown — User-configurable telemetry controls were not established from the public documentation reviewed.
+- Hosted Agent: none — Muse Code is a local terminal agent; the model API is hosted separately.
+- Custom Model Provider: partial — The CLI is Meta-provider-first but exposes a base URL override for compatible gateways.
+- Pricing: Meta Model API usage billing; API key required
+- Notes: Muse Code is Meta's terminal coding agent powered by Muse Spark 1.2. Local verification on this Mac used Muse Code 0.1.0-R708.1 and returned a successful headless response.
 
 ### OpenCode
 - Docs: https://opencode.ai/docs/

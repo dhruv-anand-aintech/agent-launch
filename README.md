@@ -16,6 +16,7 @@ One command for launching the local coding-agent CLIs installed on this machine:
 - Kilo Code (`kilo`)
 - Kimi Code (`kimi`)
 - Kiro CLI (`kiro-cli`, exposed as `--agent kiro`)
+- Muse Code (`muse`)
 - OpenCode (`opencode`)
 - Pi Coding Agent (`pi`)
 - Pier Code (`pier`)
@@ -111,7 +112,7 @@ agent-launch -a claude -i -m plan -C ~/Code/my-repo 'review this change'
 
 | Option | Meaning |
 | --- | --- |
-| `--agent` / `-a` | Any built-in agent key, including `aider`, `amp`, `antigravity`, `amazonq`, `claude`, `cline`, `codex`, `copilot`, `crush`, `cursor`, `droid`, `gemini`, `goose`, `grok`, `kilo`, `kimi`, `kiro`, `mimo`, `opencode`, `openhands`, `pi`, `pier`, `qwen`, `trae`, or `random`; defaults to `random` |
+| `--agent` / `-a` | Any built-in agent key, including `aider`, `amp`, `antigravity`, `amazonq`, `claude`, `cline`, `codex`, `copilot`, `crush`, `cursor`, `droid`, `gemini`, `goose`, `grok`, `kilo`, `kimi`, `kiro`, `mimo`, `muse`, `opencode`, `openhands`, `pi`, `pier`, `qwen`, `trae`, or `random`; defaults to `random` |
 | `--agent-order` | Non-interactive failover order. Pass comma-separated agents, use without a value for the built-in default, or set `AGENT_LAUNCH_AGENT_ORDER` |
 | `--prefer` | Non-interactive preferred agents. Moves the comma-separated agents to the front of the default failover order, or set `AGENT_LAUNCH_PREFER` |
 | `--interactive` / `-i` | Start an interactive TUI/session |
@@ -159,7 +160,7 @@ AGENT_LAUNCH_AGENT_ORDER=claude,codex,cursor agent-launch -n -C ~/Code/my-repo -
 AGENT_LAUNCH_PREFER=claude,codex agent-launch -n -C ~/Code/my-repo -p 'implement the task'
 ```
 
-`--agent-order` and `--prefer` are intentionally non-interactive only. The built-in default order is `codex, claude, cursor, opencode, pier, antigravity, gemini, aider, amp, cline, droid, grok, kilo, kimi, kiro, mimo, pi, qwen, trae, goose, copilot, crush, openhands, amazonq`. With that default, `--prefer cursor,claude` runs `cursor, claude, codex, opencode, pier, antigravity, gemini, aider, amp, cline, droid, grok, kilo, kimi, kiro, mimo, pi, qwen, trae, goose, copilot, crush, openhands, amazonq`.
+`--agent-order` and `--prefer` are intentionally non-interactive only. The built-in default order is `codex, claude, cursor, opencode, muse, pier, antigravity, gemini, aider, amp, cline, droid, grok, kilo, kimi, kiro, mimo, pi, qwen, trae, goose, copilot, crush, openhands, amazonq`. With that default, `--prefer cursor,claude` runs `cursor, claude, codex, opencode, muse, pier, antigravity, gemini, aider, amp, cline, droid, grok, kilo, kimi, kiro, mimo, pi, qwen, trae, goose, copilot, crush, openhands, amazonq`.
 
 ## Interactive Auto-Cwd
 
@@ -257,6 +258,7 @@ Backend flag mapping:
 | Claude Code | `--permission-mode default` | `--permission-mode plan` | `--permission-mode auto` | `--dangerously-skip-permissions` |
 | Gemini CLI | `--approval-mode default` | `--approval-mode plan` | `--approval-mode auto_edit` | `--yolo` |
 | OpenCode | `--agent ask` | `--agent plan` | backend default | `--dangerously-skip-permissions` in non-interactive mode |
+| Muse Code | `--approval-mode untrusted` | `--approval-mode on-request` | `--approval-mode never` | `--yolo` |
 | Pier Code | `-s read-only -a on-request` | `-s read-only -a on-request` | `-s workspace-write -a on-request` | `--dangerously-bypass-approvals-and-sandbox` |
 | Cursor Agent | `--mode ask` | `--mode plan` | `--force` | `--yolo --sandbox disabled` |
 
@@ -282,13 +284,14 @@ Built-in defaults:
 | Claude Code | `sonnet` | `opus` | `pro` |
 | Gemini CLI | `gemini-2.5-flash` | `gemini-2.5-pro` | `pro` |
 | OpenCode | `opencode-go/deepseek-v4-flash` | `opencode-go/kimi-k2.6` | `pro` |
+| Muse Code | `muse-spark-1.2` | `muse-spark-1.2` | `pro` |
 | Pi Coding Agent | `opencode-go/deepseek-v4-flash` | `opencode-go/kimi-k2.6` | `pro` |
 | Pier Code | `sarvam-30b` | `pier-hybrid` | `pro` |
 | Cursor Agent | `composer-2.5-fast` | `composer-2.5-fast` | `fast` |
 
 Antigravity CLI does not expose a launch-time model flag in `agy --help`; set its default model interactively with `/model`, which persists across sessions.
 
-`--agent random` chooses one concrete backend uniformly at runtime from the installed subset of `claude`, `codex`, `cursor`, `opencode`, `pi`, and `pier` (each backend's CLI must be on `PATH`), then uses that backend's normal fast/pro mapping where supported. Consecutive random launches never repeat the immediately previous pick when another installed option exists (state is stored under `$XDG_STATE_HOME/agent-launch/last-random-agent`, defaulting to `~/.local/state`). Gemini CLI remains available explicitly via `--agent gemini`, but is not in the random pool.
+`--agent random` chooses one concrete backend uniformly at runtime from the installed subset of `claude`, `codex`, `cursor`, `opencode`, `muse`, `pi`, and `pier` (each backend's CLI must be on `PATH`), then uses that backend's normal fast/pro mapping where supported. Consecutive random launches never repeat the immediately previous pick when another installed option exists (state is stored under `$XDG_STATE_HOME/agent-launch/last-random-agent`, defaulting to `~/.local/state`). Gemini CLI remains available explicitly via `--agent gemini`, but is not in the random pool.
 
 You can override these without editing the script:
 
