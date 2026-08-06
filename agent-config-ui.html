@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agent Launch Configuration</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container { max-width: 1400px; margin: 0 auto; }
+        header { text-align: center; color: white; margin-bottom: 30px; }
+        h1 { font-size: 2.5em; margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.2); }
+        .subtitle { font-size: 1.1em; opacity: 0.9; }
+
+        .controls-bar {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        .controls-bar label { font-weight: 600; color: #333; }
+        .controls-bar select, .controls-bar input {
+            padding: 8px 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+        .button {
+            padding: 10px 20px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .button:hover { background: #5568d3; }
+        .button.secondary { background: #48bb78; }
+        .button.secondary:hover { background: #38a169; }
+
+        .agents-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        .agent-card {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .agent-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        .agent-name { font-size: 1.5em; font-weight: 700; color: #333; }
+        .agent-executable {
+            font-size: 0.85em;
+            color: #666;
+            background: #f7f7f7;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+        .config-section { margin-bottom: 15px; }
+        .config-label {
+            display: block;
+            font-weight: 600;
+            color: #555;
+            margin-bottom: 6px;
+            font-size: 0.9em;
+        }
+        .config-input {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #e0e0e0;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+        .config-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+        .default-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            background: #667eea;
+            color: white;
+            border-radius: 4px;
+            font-size: 0.75em;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+        .model-tier {
+            padding: 12px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        .model-tier h4 {
+            margin-bottom: 8px;
+            color: #444;
+            font-size: 0.95em;
+        }
+
+        .export-section {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .export-section h2 { margin-bottom: 15px; color: #333; }
+        .export-code {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 20px;
+            border-radius: 8px;
+            font-family: monospace;
+            font-size: 13px;
+            line-height: 1.6;
+            overflow-x: auto;
+            white-space: pre;
+            margin-bottom: 15px;
+        }
+        .export-actions { display: flex; gap: 10px; }
+
+        .info-box {
+            background: #e7f3ff;
+            border-left: 4px solid #2196F3;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+        }
+        .info-box h3 { margin-bottom: 8px; color: #1976D2; }
+        .info-box p { color: #555; line-height: 1.6; }
+        .info-box code { background: #fff; padding: 2px 6px; border-radius: 3px; }
+
+        @media (max-width: 768px) {
+            .agents-grid { grid-template-columns: 1fr; }
+            .config-row { grid-template-columns: 1fr; }
+            .controls-bar { flex-direction: column; align-items: stretch; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚀 Agent Launch Configuration</h1>
+            <p class="subtitle">Configure model and effort level defaults for all agents</p>
+        </header>
+
+        <div class="info-box">
+            <h3>How it works</h3>
+            <p>
+                This UI helps you configure environment variables for <code>agent-launch</code> (agl).
+                Each agent can have its own model class (fast/pro), specific model name, and effort level.
+                Changes are exported as shell commands you can run or add to your shell profile.
+            </p>
+        </div>
+
+        <div class="controls-bar">
+            <label>Global Effort Level:</label>
+            <select id="globalEffort" onchange="updateAllEffortLevels()">
+                <option value="">Keep Individual</option>
+                <option value="auto">Auto</option>
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+
+            <label>Global Model Class:</label>
+            <select id="globalModelClass" onchange="updateAllModelClasses()">
+                <option value="">Keep Individual</option>
+                <option value="fast">Fast</option>
+                <option value="pro">Pro</option>
+            </select>
+
+            <button class="button" onclick="resetToDefaults()">Reset to Defaults</button>
+            <button class="button secondary" onclick="exportConfig()">Export Configuration</button>
+        </div>
+
+        <div class="agents-grid" id="agentsGrid"></div>
+
+        <div class="export-section" id="exportSection" style="display: none;">
+            <h2>Export Configuration</h2>
+            <p style="margin-bottom: 15px; color: #666;">
+                Copy these commands and run them in your terminal, or add them to your <code>~/.bashrc</code> or <code>~/.zshrc</code> file.
+            </p>
+            <div class="export-code" id="exportCode"></div>
+            <div class="export-actions">
+                <button class="button" onclick="copyExport()">Copy to Clipboard</button>
+                <button class="button secondary" onclick="downloadExport()">Download as .env</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Agent definitions with ACTUAL model strings from CLI outputs
+        const AGENTS = {
+            "codex": {
+                executable: "codex",
+                default_model_class: "pro",
+                fast_models: [
+                    "gpt-5.4-mini",
+                    "gpt-5.3-codex-spark",
+                    "gpt-5.6-sol-fast",
+                    "gpt-5.6-terra-fast",
+                    "gpt-5.6-luna-fast",
+                    "gpt-5.5-fast",
+                    "gpt-5.4-fast"
+                ],
+                pro_models: [
+                    "gpt-5.6-sol",
+                    "gpt-5.6-terra",
+                    "gpt-5.6-luna",
+                    "gpt-5.5",
+                    "gpt-5.4"
+                ],
+                default_fast_model: "gpt-5.4-mini",
+                default_pro_model: "gpt-5.6-sol",
+                effort_levels: ["auto", "low", "medium", "high", "xhigh", "max", "ultra"],
+                default_effort: "auto"
+            },
+            "claude": {
+                executable: "claude",
+                default_model_class: "pro",
+                fast_models: ["haiku", "haiku[1m]"],
+                pro_models: ["sonnet", "opus", "fable", "best", "sonnet[1m]", "opus[1m]", "fable[1m]", "opusplan", "default"],
+                default_fast_model: "haiku",
+                default_pro_model: "sonnet",
+                effort_levels: ["auto", "low", "medium", "high", "xhigh", "max"],
+                default_effort: "auto"
+            },
+            "cursor": {
+                executable: "agent",
+                default_model_class: "fast",
+                fast_models: [
+                    "auto",
+                    "composer-2.5-fast",
+                    "cursor-grok-4.5-low-fast",
+                    "cursor-grok-4.5-medium-fast",
+                    "cursor-grok-4.5-high-fast",
+                    "claude-opus-4-8-low-fast",
+                    "claude-opus-4-8-medium-fast",
+                    "claude-opus-4-8-high-fast",
+                    "claude-opus-4-8-xhigh-fast",
+                    "claude-opus-4-8-max-fast",
+                    "claude-opus-4-8-thinking-low-fast",
+                    "claude-opus-4-8-thinking-medium-fast",
+                    "claude-opus-4-8-thinking-high-fast",
+                    "claude-opus-4-8-thinking-xhigh-fast",
+                    "claude-opus-4-8-thinking-max-fast",
+                    "gpt-5.6-sol-none-fast",
+                    "gpt-5.6-sol-low-fast",
+                    "gpt-5.6-sol-medium-fast",
+                    "gpt-5.6-sol-high-fast",
+                    "gpt-5.6-sol-xhigh-fast",
+                    "gpt-5.6-sol-max-fast",
+                    "gpt-5.5-none-fast",
+                    "gpt-5.5-low-fast",
+                    "gpt-5.5-medium-fast",
+                    "gpt-5.5-high-fast",
+                    "gpt-5.5-extra-high-fast",
+                    "gpt-5.6-terra-none-fast",
+                    "gpt-5.6-terra-low-fast",
+                    "gpt-5.6-terra-medium-fast",
+                    "gpt-5.6-terra-high-fast",
+                    "gpt-5.6-terra-xhigh-fast",
+                    "gpt-5.6-terra-max-fast",
+                    "claude-opus-4-7-low-fast",
+                    "claude-opus-4-7-medium-fast",
+                    "claude-opus-4-7-high-fast",
+                    "claude-opus-4-7-xhigh-fast",
+                    "claude-opus-4-7-max-fast",
+                    "claude-opus-4-7-thinking-low-fast",
+                    "claude-opus-4-7-thinking-medium-fast",
+                    "claude-opus-4-7-thinking-high-fast",
+                    "claude-opus-4-7-thinking-xhigh-fast",
+                    "claude-opus-4-7-thinking-max-fast",
+                    "gpt-5.4-medium-fast",
+                    "gpt-5.4-high-fast",
+                    "gpt-5.4-xhigh-fast",
+                    "gpt-5.2-low-fast",
+                    "gpt-5.2-fast",
+                    "gpt-5.2-high-fast",
+                    "gpt-5.2-xhigh-fast",
+                    "gpt-5.6-luna-none-fast",
+                    "gpt-5.6-luna-low-fast",
+                    "gpt-5.6-luna-medium-fast",
+                    "gpt-5.6-luna-high-fast",
+                    "gpt-5.6-luna-xhigh-fast",
+                    "gpt-5.6-luna-max-fast",
+                    "gpt-5.3-codex-low-fast",
+                    "gpt-5.3-codex-fast",
+                    "gpt-5.3-codex-high-fast",
+                    "gpt-5.3-codex-xhigh-fast",
+                    "gpt-5.2-codex-low-fast",
+                    "gpt-5.2-codex-fast",
+                    "gpt-5.2-codex-high-fast",
+                    "gpt-5.2-codex-xhigh-fast",
+                    "gpt-5.1-codex-max-low-fast",
+                    "gpt-5.1-codex-max-medium-fast",
+                    "gpt-5.1-codex-max-high-fast",
+                    "gpt-5.1-codex-max-xhigh-fast"
+                ],
+                pro_models: [
+                    "composer-2.5",
+                    "cursor-grok-4.5-low",
+                    "cursor-grok-4.5-medium",
+                    "cursor-grok-4.5-high",
+                    "claude-opus-4-8-low",
+                    "claude-opus-4-8-medium",
+                    "claude-opus-4-8-high",
+                    "claude-opus-4-8-xhigh",
+                    "claude-opus-4-8-max",
+                    "claude-opus-4-8-thinking-low",
+                    "claude-opus-4-8-thinking-medium",
+                    "claude-opus-4-8-thinking-high",
+                    "claude-opus-4-8-thinking-xhigh",
+                    "claude-opus-4-8-thinking-max",
+                    "gpt-5.6-sol-none",
+                    "gpt-5.6-sol-low",
+                    "gpt-5.6-sol-medium",
+                    "gpt-5.6-sol-high",
+                    "gpt-5.6-sol-xhigh",
+                    "gpt-5.6-sol-max",
+                    "gpt-5.5-none",
+                    "gpt-5.5-low",
+                    "gpt-5.5-medium",
+                    "gpt-5.5-high",
+                    "gpt-5.5-extra-high",
+                    "claude-fable-5-low",
+                    "claude-fable-5-medium",
+                    "claude-fable-5-high",
+                    "claude-fable-5-xhigh",
+                    "claude-fable-5-max",
+                    "claude-fable-5-thinking-low",
+                    "claude-fable-5-thinking-medium",
+                    "claude-fable-5-thinking-high",
+                    "claude-fable-5-thinking-xhigh",
+                    "claude-fable-5-thinking-max",
+                    "claude-sonnet-5-low",
+                    "claude-sonnet-5-medium",
+                    "claude-sonnet-5-high",
+                    "claude-sonnet-5-xhigh",
+                    "claude-sonnet-5-max",
+                    "claude-sonnet-5-thinking-low",
+                    "claude-sonnet-5-thinking-medium",
+                    "claude-sonnet-5-thinking-high",
+                    "claude-sonnet-5-thinking-xhigh",
+                    "claude-sonnet-5-thinking-max",
+                    "gpt-5.6-terra-none",
+                    "gpt-5.6-terra-low",
+                    "gpt-5.6-terra-medium",
+                    "gpt-5.6-terra-high",
+                    "gpt-5.6-terra-xhigh",
+                    "gpt-5.6-terra-max",
+                    "claude-4.6-sonnet-medium",
+                    "claude-4.6-sonnet-medium-thinking",
+                    "claude-opus-4-7-low",
+                    "claude-opus-4-7-medium",
+                    "claude-opus-4-7-high",
+                    "claude-opus-4-7-xhigh",
+                    "claude-opus-4-7-max",
+                    "claude-opus-4-7-thinking-low",
+                    "claude-opus-4-7-thinking-medium",
+                    "claude-opus-4-7-thinking-high",
+                    "claude-opus-4-7-thinking-xhigh",
+                    "claude-opus-4-7-thinking-max",
+                    "gpt-5.4-low",
+                    "gpt-5.4-medium",
+                    "gpt-5.4-high",
+                    "gpt-5.4-xhigh",
+                    "claude-4.6-opus-high",
+                    "claude-4.6-opus-max",
+                    "claude-4.6-opus-high-thinking",
+                    "claude-4.6-opus-max-thinking",
+                    "claude-4.5-opus-high",
+                    "claude-4.5-opus-high-thinking",
+                    "gpt-5.2-low",
+                    "gpt-5.2",
+                    "gpt-5.2-high",
+                    "gpt-5.2-xhigh",
+                    "gpt-5.6-luna-none",
+                    "gpt-5.6-luna-low",
+                    "gpt-5.6-luna-medium",
+                    "gpt-5.6-luna-high",
+                    "gpt-5.6-luna-xhigh",
+                    "gpt-5.6-luna-max",
+                    "gemini-3.1-pro",
+                    "gpt-5.4-mini-none",
+                    "gpt-5.4-mini-low",
+                    "gpt-5.4-mini-medium",
+                    "gpt-5.4-mini-high",
+                    "gpt-5.4-mini-xhigh",
+                    "gpt-5.4-nano-none",
+                    "gpt-5.4-nano-low",
+                    "gpt-5.4-nano-medium",
+                    "gpt-5.4-nano-high",
+                    "gpt-5.4-nano-xhigh",
+                    "claude-4.5-sonnet",
+                    "claude-4.5-sonnet-thinking",
+                    "gpt-5.1-low",
+                    "gpt-5.1",
+                    "gpt-5.1-high",
+                    "gemini-3-flash",
+                    "gemini-3.5-flash",
+                    "gpt-5.3-codex-low",
+                    "gpt-5.3-codex",
+                    "gpt-5.3-codex-high",
+                    "gpt-5.3-codex-xhigh",
+                    "gpt-5.2-codex-low",
+                    "gpt-5.2-codex",
+                    "gpt-5.2-codex-high",
+                    "gpt-5.2-codex-xhigh",
+                    "gpt-5.1-codex-max-low",
+                    "gpt-5.1-codex-max-medium",
+                    "gpt-5.1-codex-max-high",
+                    "gpt-5.1-codex-max-xhigh",
+                    "gpt-5.1-codex-mini-low",
+                    "gpt-5.1-codex-mini",
+                    "gpt-5.1-codex-mini-high",
+                    "claude-4-sonnet",
+                    "claude-4-sonnet-thinking",
+                    "gpt-5-mini",
+                    "kimi-k2.7-code",
+                    "glm-5.2-high",
+                    "glm-5.2-max"
+                ],
+                default_fast_model: "composer-2.5-fast",
+                default_pro_model: "composer-2.5",
+                effort_levels: ["auto", "low", "medium", "high", "xhigh", "max"],
+                default_effort: "auto"
+            },
+            "gemini": {
+                executable: "gemini",
+                default_model_class: "pro",
+                fast_models: ["gemini-2.5-flash", "gemini-3-flash", "gemini-3.5-flash"],
+                pro_models: ["gemini-2.5-pro", "gemini-3.1-pro", "gemini-3.1-pro-preview"],
+                default_fast_model: "gemini-2.5-flash",
+                default_pro_model: "gemini-2.5-pro",
+                effort_levels: ["auto", "low", "medium", "high"],
+                default_effort: "auto"
+            },
+            "droid": {
+                executable: "droid",
+                default_model_class: "pro",
+                fast_models: ["claude-opus-4-8-fast", "claude-opus-4-7-fast"],
+                pro_models: ["claude-opus-4-8", "claude-opus-4-7"],
+                default_fast_model: "claude-opus-4-8-fast",
+                default_pro_model: "claude-opus-4-8",
+                effort_levels: ["auto", "low", "medium", "high", "xhigh"],
+                default_effort: "auto"
+            },
+            "opencode": {
+                executable: "opencode",
+                default_model_class: "pro",
+                fast_models: [
+                    "opencode-go/deepseek-v4-flash",
+                    "opencode-go/glm-5.1",
+                    "opencode-go/mimo-v2.5",
+                    "google/gemini-2.5-flash",
+                    "google/gemini-3-flash",
+                    "google/gemini-3.5-flash",
+                    "mistral/mistral-small-latest",
+                    "mistral/ministral-8b-latest"
+                ],
+                pro_models: [
+                    "opencode-go/kimi-k2.6",
+                    "opencode-go/kimi-k2.7-code",
+                    "opencode-go/kimi-k3",
+                    "opencode-go/grok-4.5",
+                    "opencode-go/qwen3.7-max",
+                    "opencode/claude-opus-4-8",
+                    "opencode/claude-sonnet-5",
+                    "opencode/gpt-5.6-sol",
+                    "opencode/gpt-5.6-terra",
+                    "opencode/gpt-5.6-luna",
+                    "opencode/gpt-5.5",
+                    "google/gemini-2.5-pro",
+                    "google/gemini-3.1-pro",
+                    "mistral/mistral-large-latest"
+                ],
+                default_fast_model: "opencode-go/deepseek-v4-flash",
+                default_pro_model: "opencode-go/kimi-k2.6",
+                effort_levels: ["auto", "low", "medium", "high"],
+                default_effort: "auto"
+            },
+            "pi": {
+                executable: "pi",
+                default_model_class: "pro",
+                fast_models: [
+                    "opencode-go/deepseek-v4-flash",
+                    "opencode-go/glm-5.1",
+                    "opencode-go/mimo-v2.5"
+                ],
+                pro_models: [
+                    "opencode-go/kimi-k2.6",
+                    "opencode-go/kimi-k2.7-code",
+                    "opencode-go/kimi-k3",
+                    "opencode-go/grok-4.5",
+                    "opencode-go/qwen3.7-max"
+                ],
+                default_fast_model: "opencode-go/deepseek-v4-flash",
+                default_pro_model: "opencode-go/kimi-k2.6",
+                effort_levels: ["auto", "low", "medium", "high"],
+                default_effort: "auto"
+            },
+            "pier": {
+                executable: "pier",
+                default_model_class: "pro",
+                fast_models: ["sarvam-30b"],
+                pro_models: ["pier-hybrid"],
+                default_fast_model: "sarvam-30b",
+                default_pro_model: "pier-hybrid",
+                effort_levels: ["auto", "low", "medium", "high"],
+                default_effort: "auto"
+            },
+            "antigravity": {
+                executable: "agy",
+                default_model_class: "pro",
+                fast_models: ["gemini-3.5-flash", "gpt-oss-120b"],
+                pro_models: ["gemini-3.1-pro", "claude-sonnet-4.6-thinking", "claude-opus-4.6-thinking"],
+                default_fast_model: "gemini-3.5-flash",
+                default_pro_model: "gemini-3.1-pro",
+                effort_levels: ["auto", "low", "medium", "high"],
+                default_effort: "auto"
+            },
+            "grok": {
+                executable: "grok",
+                default_model_class: "pro",
+                fast_models: ["grok-2-mini", "grok-build-fast"],
+                pro_models: ["grok-build", "grok-4.5", "grok-4", "grok-3", "grok-2"],
+                default_fast_model: "grok-build-fast",
+                default_pro_model: "grok-build",
+                effort_levels: ["auto", "low", "medium", "high"],
+                default_effort: "auto"
+            },
+            "aider": {
+                executable: "aider",
+                default_model_class: "pro",
+                fast_models: ["gpt-4o-mini", "claude-3-haiku", "gemini-1.5-flash", "deepseek-chat"],
+                pro_models: ["gpt-4o", "gpt-4-turbo", "claude-3-opus", "claude-3-sonnet", "gemini-1.5-pro", "deepseek-coder"],
+                default_fast_model: "gpt-4o-mini",
+                default_pro_model: "gpt-4o",
+                effort_levels: ["auto", "low", "medium", "high"],
+                default_effort: "auto"
+            },
+            "amp": {
+                executable: "amp",
+                default_model_class: "pro",
+                fast_models: ["smart", "rush"],
+                pro_models: ["deep"],
+                default_fast_model: "smart",
+                default_pro_model: "deep",
+                effort_levels: ["auto", "low", "medium", "high"],
+                default_effort: "auto"
+            },
+            "cline": {
+                executable: "cline",
+                default_model_class: "pro",
+                fast_models: ["claude-3-haiku", "gpt-4o-mini"],
+                pro_models: ["claude-3-opus", "claude-3-sonnet", "gpt-4o", "gpt-4-turbo"],
+                default_fast_model: "claude-3-haiku",
+                default_pro_model: "claude-3-opus",
+                effort_levels: ["auto", "low", "medium", "high"],
+                default_effort: "auto"
+            },
+            "copilot": {
+                executable: "copilot",
+                default_model_class: "pro",
+                fast_models: ["gpt-4o-mini"],
+                pro_models: ["gpt-4o", "gpt-4-turbo", "claude-3.5-sonnet"],
+                default_fast_model: "gpt-4o-mini",
+                default_pro_model: "gpt-4o",
+                effort_levels: ["auto", "low", "medium", "high"],
+                default_effort: "auto"
+            },
+            "crush": {
+                executable: "crush",
+                default_model_class: "pro",
+                fast_models: [
+                    "aihubmix/DeepSeek-V3-Fast",
+                    "aihubmix/coding-minimax-m2-free",
+                    "aihubmix/gpt-4o-mini"
+                ],
+                pro_models: [
+                    "aihubmix/claude-opus-4-8",
+                    "aihubmix/claude-sonnet-5",
+                    "aihubmix/gpt-5.6-sol",
+                    "aihubmix/DeepSeek-V3",
+                    "aihubmix/coding-kimi-k3"
+                ],
+                default_fast_model: "aihubmix/DeepSeek-V3-Fast",
+                default_pro_model: "aihubmix/claude-opus-4-8",
+                effort_levels: ["auto", "low", "medium", "high"],
+                default_effort: "auto"
+            },
+            "goose": {
+                executable: "goose",
+                default_model_class: "pro",
+                fast_models: ["gpt-4o-mini", "claude-3-haiku", "gemini-1.5-flash"],
+                pro_models: ["gpt-4o", "claude-3-opus", "gemini-1.5-pro"],
+                default_fast_model: "gpt-4o-mini",
+                default_pro_model: "gpt-4o",
+                effort_levels: ["auto", "low", "medium", "high"],
+                default_effort: "auto"
+            },
+            "kilo": {
+                executable: "kilo",
+                default_model_class: "pro",
+                fast_models: [
+                    "kilo/~anthropic/claude-haiku-latest",
+                    "kilo/~google/gemini-flash-latest",
+                    "kilo/~openai/gpt-mini-latest",
+                    "kilo/anthropic/claude-haiku-4.5"
+                ],
+                pro_models: [
+                    "kilo/~anthropic/claude-opus-latest",
+                    "kilo/~anthropic/claude-sonnet-latest",
+                    "kilo/~google/gemini-pro-latest",
+                    "kilo/~openai/gpt-latest",
+                    "kilo/~x-ai/grok-latest",
+                    "kilo/anthropic/claude-opus-4.8",
+                    "kilo/anthropic/claude-opus-4.7",
+                    "kilo/anthropic/claude-sonnet-5",
+                    "kilo/anthropic/claude-fable-5"
+                ],
+                default_fast_model: "kilo/~anthropic/claude-haiku-latest",
+                default_pro_model: "kilo/~anthropic/claude-opus-latest",
+                effort_levels: ["auto", "low", "medium", "high"],
+                default_effort: "auto"
+            },
+            "kimi": {
+                executable: "kimi",
+                default_model_class: "pro",
+                fast_models: ["kimi-k2-fast", "kimi-k2.5-fast"],
+                pro_models: ["kimi-k2", "kimi-k2.5", "kimi-k3"],
+                default_fast_model: "kimi-k2-fast",
+                default_pro_model: "kimi-k2",
+                effort_levels: ["auto", "low", "medium", "high"],
+                default_effort: "auto"
+            },
+            "kiro": {
+                executable: "kiro-cli",
+                default_model_class: "pro",
+                fast_models: ["claude-3-haiku", "gpt-4o-mini"],
+                pro_models: ["claude-3-opus", "claude-3-sonnet", "gpt-4o"],
+                default_fast_model: "claude-3-haiku",
+                default_pro_model: "claude-3-opus",
+                effort_levels: ["auto", "low", "medium", "high"],
+                default_effort: "auto"
+            },
+            "mimo": {
+                executable: "mimo",
+                default_model_class: "pro",
+                fast_models: ["mimo/mimo-auto", "mistral/mistral-small-latest", "mistral/ministral-8b-latest"],
+                pro_models: ["mimo/mimo-auto", "mistral/mistral-large-latest", "mistral/mistral-medium-latest"],
+                default_fast_model: "mimo/mimo-auto",
+                default_pro_model: "mimo/mimo-auto",
+                effort_levels: ["auto", "low", "medium", "high"],
+                default_effort: "auto"
+            },
+            "openhands": {
+                executable: "openhands",
+                default_model_class: "pro",
+                fast_models: ["gpt-4o-mini", "claude-3-haiku"],
+                pro_models: ["gpt-4o", "claude-3-opus", "claude-3-sonnet"],
+                default_fast_model: "gpt-4o-mini",
+                default_pro_model: "gpt-4o",
+                effort_levels: ["auto", "low", "medium", "high"],
+                default_effort: "auto"
+            },
+            "qwen": {
+                executable: "qwen",
+                default_model_class: "pro",
+                fast_models: ["qwen-turbo", "qwen-plus", "qwen2.5-coder-32b"],
+                pro_models: ["qwen-max", "qwen2.5-coder-72b", "qwen-vl-max"],
+                default_fast_model: "qwen-plus",
+                default_pro_model: "qwen-max",
+                effort_levels: ["auto", "low", "medium", "high"],
+                default_effort: "auto"
+            },
+            "trae": {
+                executable: "trae-cli",
+                default_model_class: "pro",
+                fast_models: ["gpt-4o-mini", "claude-3-haiku", "gemini-1.5-flash"],
+                pro_models: ["gpt-4o", "claude-3-opus", "gemini-1.5-pro"],
+                default_fast_model: "gpt-4o-mini",
+                default_pro_model: "gpt-4o",
+                effort_levels: ["auto", "low", "medium", "high"],
+                default_effort: "auto"
+            },
+            "amazonq": {
+                executable: "q",
+                default_model_class: "pro",
+                fast_models: ["claude-3-haiku"],
+                pro_models: ["claude-3-opus", "claude-3-sonnet"],
+                default_fast_model: "claude-3-haiku",
+                default_pro_model: "claude-3-opus",
+                effort_levels: ["auto", "low", "medium", "high"],
+                default_effort: "auto"
+            }
+        };
+
+        // Current configuration state
+        let config = {};
+
+        function initializeConfig() {
+            config = {};
+            for (const [agentName, agentSpec] of Object.entries(AGENTS)) {
+                config[agentName] = {
+                    model_class: agentSpec.default_model_class,
+                    fast_model: agentSpec.default_fast_model,
+                    pro_model: agentSpec.default_pro_model,
+                    effort_level: agentSpec.default_effort
+                };
+            }
+        }
+
+        function renderAgents() {
+            const grid = document.getElementById('agentsGrid');
+            grid.innerHTML = '';
+
+            const sortedAgents = Object.keys(AGENTS).sort();
+
+            for (const agentName of sortedAgents) {
+                const agentSpec = AGENTS[agentName];
+                const agentConfig = config[agentName];
+
+                const card = document.createElement('div');
+                card.className = 'agent-card';
+
+                card.innerHTML = `
+                    <div class="agent-header">
+                        <div class="agent-name">${agentName}</div>
+                        <div class="agent-executable">${agentSpec.executable}</div>
+                    </div>
+
+                    <div class="config-section">
+                        <label class="config-label">Default Model Class</label>
+                        <select class="config-input" onchange="updateConfig('${agentName}', 'model_class', this.value)">
+                            <option value="fast" ${agentConfig.model_class === 'fast' ? 'selected' : ''}>Fast</option>
+                            <option value="pro" ${agentConfig.model_class === 'pro' ? 'selected' : ''}>Pro${agentSpec.default_model_class === 'pro' ? ' (default)' : ''}</option>
+                        </select>
+                    </div>
+
+                    <div class="model-tier">
+                        <h4>⚡ Fast Tier</h4>
+                        <div class="config-section">
+                            <label class="config-label">Fast Model</label>
+                            <select class="config-input" onchange="updateConfig('${agentName}', 'fast_model', this.value)">
+                                ${agentSpec.fast_models.map(m =>
+                                    `<option value="${m}" ${agentConfig.fast_model === m ? 'selected' : ''}>${m}</option>`
+                                ).join('')}
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="model-tier">
+                        <h4>🚀 Pro Tier</h4>
+                        <div class="config-section">
+                            <label class="config-label">Pro Model</label>
+                            <select class="config-input" onchange="updateConfig('${agentName}', 'pro_model', this.value)">
+                                ${agentSpec.pro_models.map(m =>
+                                    `<option value="${m}" ${agentConfig.pro_model === m ? 'selected' : ''}>${m}</option>`
+                                ).join('')}
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="config-section">
+                        <label class="config-label">Effort Level</label>
+                        <select class="config-input" onchange="updateConfig('${agentName}', 'effort_level', this.value)">
+                            ${agentSpec.effort_levels.map(level =>
+                                `<option value="${level}" ${agentConfig.effort_level === level ? 'selected' : ''}>${level.charAt(0).toUpperCase() + level.slice(1)}</option>`
+                            ).join('')}
+                        </select>
+                    </div>
+                `;
+
+                grid.appendChild(card);
+            }
+        }
+
+        function updateConfig(agentName, field, value) {
+            config[agentName][field] = value;
+        }
+
+        function updateAllEffortLevels() {
+            const globalEffort = document.getElementById('globalEffort').value;
+            if (globalEffort) {
+                for (const agentName in config) {
+                    if (AGENTS[agentName].effort_levels.includes(globalEffort)) {
+                        config[agentName].effort_level = globalEffort;
+                    }
+                }
+                renderAgents();
+            }
+        }
+
+        function updateAllModelClasses() {
+            const globalModelClass = document.getElementById('globalModelClass').value;
+            if (globalModelClass) {
+                for (const agentName in config) {
+                    config[agentName].model_class = globalModelClass;
+                }
+                renderAgents();
+            }
+        }
+
+        function resetToDefaults() {
+            if (confirm('Reset all configurations to defaults?')) {
+                initializeConfig();
+                document.getElementById('globalEffort').value = '';
+                document.getElementById('globalModelClass').value = '';
+                renderAgents();
+                document.getElementById('exportSection').style.display = 'none';
+            }
+        }
+
+        function exportConfig() {
+            const exportLines = [];
+
+            // Check if all agents have the same effort level
+            const effortLevels = [...new Set(Object.values(config).map(c => c.effort_level))];
+            const useGlobalEffort = effortLevels.length === 1 && effortLevels[0] !== 'auto';
+
+            if (useGlobalEffort) {
+                exportLines.push(`export AGENT_LAUNCH_THINKING_LEVEL="${effortLevels[0]}"`);
+            }
+
+            for (const [agentName, agentConfig] of Object.entries(config)) {
+                const agentSpec = AGENTS[agentName];
+
+                // Export model class if different from default
+                if (agentConfig.model_class !== agentSpec.default_model_class) {
+                    exportLines.push(`export AGENT_LAUNCH_${agentName.toUpperCase()}_MODEL_CLASS="${agentConfig.model_class}"`);
+                }
+
+                // Export fast model if different from default
+                if (agentConfig.fast_model !== agentSpec.default_fast_model) {
+                    exportLines.push(`export AGENT_LAUNCH_${agentName.toUpperCase()}_FAST_MODEL="${agentConfig.fast_model}"`);
+                }
+
+                // Export pro model if different from default
+                if (agentConfig.pro_model !== agentSpec.default_pro_model) {
+                    exportLines.push(`export AGENT_LAUNCH_${agentName.toUpperCase()}_PRO_MODEL="${agentConfig.pro_model}"`);
+                }
+
+                // Export effort level if not using global and different from default
+                if (!useGlobalEffort && agentConfig.effort_level !== agentSpec.default_effort) {
+                    exportLines.push(`# Note: agent-launch doesn't support per-agent effort via env vars`);
+                    exportLines.push(`# ${agentName} effort: ${agentConfig.effort_level}`);
+                }
+            }
+
+            if (exportLines.length === 0) {
+                alert('No changes from defaults to export!');
+                return;
+            }
+
+            const exportCode = exportLines.join('\n');
+            document.getElementById('exportCode').textContent = exportCode;
+            document.getElementById('exportSection').style.display = 'block';
+            document.getElementById('exportSection').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function copyExport() {
+            const code = document.getElementById('exportCode').textContent;
+            navigator.clipboard.writeText(code).then(() => {
+                alert('Configuration copied to clipboard!');
+            }).catch(() => {
+                alert('Failed to copy. Please select and copy manually.');
+            });
+        }
+
+        function downloadExport() {
+            const code = document.getElementById('exportCode').textContent;
+            const blob = new Blob([code], { type: 'text/plain' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'agent-launch-config.env';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+
+        // Initialize
+        initializeConfig();
+        renderAgents();
+    </script>
+</body>
+</html>
