@@ -13,6 +13,7 @@ if [[ ${words[2]} == export ]]; then
     '--no-upload[create the ZIP without uploading]' \
     '--keep-local[keep ZIP after successful upload]' \
     '--yes[confirm non-interactively]' \
+    '--no-tui[use the simple confirmation prompt]' \
     '--list-sources[show supported sources]'
   return
 fi

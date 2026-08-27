@@ -44,6 +44,8 @@ By default, `agent-launch` starts agents in `auto` mode unless `AGENT_LAUNCH_MOD
 
 `agl export` detects supported local transcript stores and creates a ZIP for evaluating coding-agent proficiency. It keeps redacted user messages, short redacted assistant snippets, tool call names/counts, and day-level timestamps. It excludes raw transcripts, system/developer prompts, reasoning, tool arguments/results, working directories, account identifiers, and original session IDs.
 
+Run `agl export` with no flags to open the interactive terminal wizard. Use Up/Down to move, Space to select transcript sources, Left/Right to change options, `d` to restore the clearly marked default profile, and Enter on Export to continue. The default selects every detected transcript store, uses a 30-day lookback, caps each source at 100 sessions, keeps 240 characters per assistant snippet, uploads to private R2, and removes the local ZIP after a successful upload.
+
 ```sh
 agl export --list-sources
 agl export --days 30 --no-upload

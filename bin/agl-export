@@ -25,6 +25,16 @@ from typing import Any
 FORMAT_VERSION = 1
 ZIP_MIME = "application/zip"
 DEFAULT_UPLOAD_URL = "https://agl-exports.ainorthstar.tech/v1/exports"
+DEFAULT_DAYS = 30
+DEFAULT_MAX_SESSIONS = 100
+DEFAULT_ASSISTANT_CHARS = 240
+DEFAULT_USER_CHARS = 12000
+TUI_PRESETS = {
+    "days": (7, 30, 90, 365),
+    "max_sessions_per_agent": (25, 100, 250, 1000),
+    "assistant_chars": (0, 120, 240, 500),
+    "max_user_chars": (2000, 12000, 30000),
+}
 SECRET_PATTERNS = (
     (re.compile(r"-----BEGIN [^-]+-----.*?-----END [^-]+-----", re.S), "[REDACTED_PRIVATE_KEY]"),
     (re.compile(r"(?i)\b(authorization\s*:\s*(?:bearer|basic)\s+)\S+"), r"\1[REDACTED]"),
@@ -381,12 +391,176 @@ def read_upload_token(explicit: str | None) -> str:
         return ""
 
 
+def detected_source_defaults(detected: list[dict[str, Any]]) -> set[str]:
+    found = {item["source"] for item in detected if item["transcript_store_found"]}
+    return found or set(SOURCES)
+
+
+def tui_initial_state(args: argparse.Namespace, detected: list[dict[str, Any]]) -> dict[str, Any]:
+    selected = detected_source_defaults(detected) if args.agents == "all" else {part.strip() for part in args.agents.split(",") if part.strip()}
+    return {
+        "selected": selected,
+        "default_selected": detected_source_defaults(detected),
+        "days": args.days,
+        "max_sessions_per_agent": args.max_sessions_per_agent,
+        "assistant_chars": args.assistant_chars,
+        "max_user_chars": args.max_user_chars,
+        "upload": not args.no_upload,
+        "keep_local": args.keep_local,
+    }
+
+
+def cycle_tui_value(key: str, current: int, direction: int) -> int:
+    values = sorted(set((*TUI_PRESETS[key], current)))
+    return values[(values.index(current) + direction) % len(values)]
+
+
+def run_export_tui(args: argparse.Namespace, detected: list[dict[str, Any]]) -> dict[str, Any] | None:
+    try:
+        import curses
+    except ImportError as error:
+        raise SystemExit("Interactive export requires curses. Use --yes for scripted export.") from error
+
+    initial = tui_initial_state(args, detected)
+    sources_by_name = {item["source"]: item for item in detected}
+    settings = (
+        ("days", "Lookback", "days"),
+        ("max_sessions_per_agent", "Session cap", "per agent"),
+        ("assistant_chars", "Assistant snippet", "chars"),
+        ("max_user_chars", "User message cap", "chars"),
+        ("upload", "Upload", "private R2"),
+        ("keep_local", "Keep local ZIP", "after upload"),
+    )
+    total_rows = len(SOURCES) + len(settings) + 2
+
+    def application(screen: Any) -> dict[str, Any] | None:
+        state = {**initial, "selected": set(initial["selected"]), "default_selected": set(initial["default_selected"])}
+        cursor = 0
+        message = ""
+        try:
+            curses.curs_set(0)
+        except curses.error:
+            pass
+        screen.keypad(True)
+        if curses.has_colors():
+            curses.start_color()
+            curses.use_default_colors()
+            curses.init_pair(1, curses.COLOR_CYAN, -1)
+            curses.init_pair(2, curses.COLOR_GREEN, -1)
+            curses.init_pair(3, curses.COLOR_YELLOW, -1)
+
+        def color(pair: int) -> int:
+            return curses.color_pair(pair) if curses.has_colors() else 0
+
+        def draw() -> None:
+            screen.erase()
+            height, width = screen.getmaxyx()
+
+            def put(y: int, x: int, text: str, style: int = 0) -> None:
+                if 0 <= y < height and x < width:
+                    try:
+                        screen.addnstr(y, x, text, max(0, width - x - 1), style)
+                    except curses.error:
+                        pass
+
+            if height < 24 or width < 72:
+                put(1, 2, "Terminal is too small for agl export.", curses.A_BOLD)
+                put(3, 2, "Resize to at least 72 x 24. Press q to cancel.")
+                screen.refresh()
+                return
+
+            put(0, 3, "AGL TRANSCRIPT EXPORT", curses.A_BOLD | color(1))
+            put(1, 3, "Choose what leaves this machine. Raw transcripts never leave.")
+            put(3, 3, "DEFAULT PROFILE", curses.A_BOLD | color(2))
+            put(3, 20, "detected sources | 30 days | 100 sessions | 240-char snippets | private upload")
+            put(5, 3, "TRANSCRIPT SOURCES", curses.A_BOLD)
+            for index, source in enumerate(SOURCES):
+                item = sources_by_name[source]
+                active = cursor == index
+                checked = "x" if source in state["selected"] else " "
+                status = "transcripts found" if item["transcript_store_found"] else "no store found"
+                default = "  DEFAULT" if source in state["default_selected"] else ""
+                style = curses.A_REVERSE if active else (color(2) if source in state["selected"] else 0)
+                put(6 + index, 5, f"[{checked}] {source:<12} {status:<18}{default}", style)
+
+            settings_y = 6 + len(SOURCES)
+            put(settings_y, 3, "OPTIONS", curses.A_BOLD)
+            defaults = {
+                "days": DEFAULT_DAYS,
+                "max_sessions_per_agent": DEFAULT_MAX_SESSIONS,
+                "assistant_chars": DEFAULT_ASSISTANT_CHARS,
+                "max_user_chars": DEFAULT_USER_CHARS,
+                "upload": True,
+                "keep_local": False,
+            }
+            for offset, (key, label, suffix) in enumerate(settings):
+                index = len(SOURCES) + offset
+                active = cursor == index
+                value = state[key]
+                rendered = ("ON" if value else "OFF") if isinstance(value, bool) else str(value)
+                marker = "  DEFAULT" if value == defaults[key] else ""
+                style = curses.A_REVERSE if active else (color(2) if marker else 0)
+                put(settings_y + 1 + offset, 5, f"{label:<22} < {rendered:^8} >  {suffix}{marker}", style)
+
+            actions_y = settings_y + len(settings) + 2
+            export_index = len(SOURCES) + len(settings)
+            cancel_index = export_index + 1
+            can_export = bool(state["selected"])
+            export_style = curses.A_REVERSE if cursor == export_index else (curses.A_BOLD | color(2) if can_export else color(3))
+            cancel_style = curses.A_REVERSE if cursor == cancel_index else 0
+            put(actions_y, 5, "[ Export selected transcripts ]", export_style)
+            put(actions_y, 38, "[ Cancel ]", cancel_style)
+            put(height - 2, 3, "Space toggle  Up/Down move  Left/Right change  Enter confirm  d defaults  q cancel")
+            put(height - 1, 3, message, color(3))
+            screen.refresh()
+
+        while True:
+            draw()
+            key = screen.getch()
+            message = ""
+            if key in (ord("q"), 27):
+                return None
+            if key == ord("d"):
+                state = {**initial, "selected": set(initial["default_selected"]), "default_selected": set(initial["default_selected"]), "days": DEFAULT_DAYS, "max_sessions_per_agent": DEFAULT_MAX_SESSIONS, "assistant_chars": DEFAULT_ASSISTANT_CHARS, "max_user_chars": DEFAULT_USER_CHARS, "upload": True, "keep_local": False}
+                continue
+            if key in (curses.KEY_UP, ord("k")):
+                cursor = (cursor - 1) % total_rows
+                continue
+            if key in (curses.KEY_DOWN, ord("j"), 9):
+                cursor = (cursor + 1) % total_rows
+                continue
+            if cursor < len(SOURCES) and key in (ord(" "), 10, 13):
+                source = SOURCES[cursor]
+                state["selected"].symmetric_difference_update({source})
+                continue
+            if len(SOURCES) <= cursor < len(SOURCES) + len(settings):
+                setting = settings[cursor - len(SOURCES)][0]
+                if isinstance(state[setting], bool) and key in (ord(" "), curses.KEY_LEFT, curses.KEY_RIGHT, 10, 13):
+                    state[setting] = not state[setting]
+                elif not isinstance(state[setting], bool) and key in (curses.KEY_LEFT, ord("h"), curses.KEY_RIGHT, ord("l"), ord(" "), 10, 13):
+                    direction = -1 if key in (curses.KEY_LEFT, ord("h")) else 1
+                    state[setting] = cycle_tui_value(setting, state[setting], direction)
+                continue
+            if cursor == len(SOURCES) + len(settings) and key in (ord(" "), 10, 13):
+                if not state["selected"]:
+                    message = "Select at least one transcript source."
+                    continue
+                return state
+            if cursor == total_rows - 1 and key in (ord(" "), 10, 13):
+                return None
+
+    try:
+        return curses.wrapper(application)
+    except curses.error as error:
+        raise SystemExit(f"Could not open interactive export TUI: {error}. Use --yes for scripted export.") from error
+
+
 def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(prog="agl export", description="Create a privacy-reduced coding-agent transcript archive for candidate review.")
-    parser.add_argument("--days", type=int, default=30)
-    parser.add_argument("--max-sessions-per-agent", type=int, default=100)
-    parser.add_argument("--assistant-chars", type=int, default=240)
-    parser.add_argument("--max-user-chars", type=int, default=12000)
+    parser.add_argument("--days", type=int, default=DEFAULT_DAYS)
+    parser.add_argument("--max-sessions-per-agent", type=int, default=DEFAULT_MAX_SESSIONS)
+    parser.add_argument("--assistant-chars", type=int, default=DEFAULT_ASSISTANT_CHARS)
+    parser.add_argument("--max-user-chars", type=int, default=DEFAULT_USER_CHARS)
     parser.add_argument("--agents", default="all", help="Comma-separated sources or all.")
     parser.add_argument("--output", type=Path)
     parser.add_argument("--upload-url", help=f"Upload destination. Defaults to {DEFAULT_UPLOAD_URL}.")
@@ -394,6 +568,7 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--no-upload", action="store_true")
     parser.add_argument("--keep-local", action="store_true")
     parser.add_argument("--yes", action="store_true", help="Confirm collection and upload non-interactively.")
+    parser.add_argument("--no-tui", action="store_true", help="Use the simple confirmation prompt instead of the interactive TUI.")
     parser.add_argument("--list-sources", action="store_true")
     args = parser.parse_args(argv)
     if args.days < 1 or args.max_sessions_per_agent < 1 or args.assistant_chars < 0 or args.max_user_chars < 1:
@@ -409,6 +584,20 @@ def main(argv: list[str] | None = None) -> int:
         for item in detected:
             print(f"{item['source']}: cli={'yes' if item['cli_installed'] else 'no'}, transcripts={'yes' if item['transcript_store_found'] else 'no'}, supported=yes")
         return 0
+    tui_confirmed = False
+    if not args.yes and not args.no_tui and sys.stdin.isatty() and sys.stdout.isatty():
+        selection = run_export_tui(args, detected)
+        if selection is None:
+            print("Export cancelled.")
+            return 2
+        args.agents = ",".join(sorted(selection["selected"]))
+        args.days = selection["days"]
+        args.max_sessions_per_agent = selection["max_sessions_per_agent"]
+        args.assistant_chars = selection["assistant_chars"]
+        args.max_user_chars = selection["max_user_chars"]
+        args.no_upload = not selection["upload"]
+        args.keep_local = selection["keep_local"]
+        tui_confirmed = True
     requested = set(SOURCES) if args.agents == "all" else {part.strip() for part in args.agents.split(",") if part.strip()}
     if requested - set(SOURCES):
         raise SystemExit(f"Unsupported transcript source(s): {', '.join(sorted(requested - set(SOURCES)))}. Use --list-sources.")
@@ -418,7 +607,7 @@ def main(argv: list[str] | None = None) -> int:
     upload_token = read_upload_token(args.upload_token) if upload_mode == "ingest" else ""
     if upload_mode == "ingest" and not upload_token:
         raise SystemExit(f"Production upload token is not configured. Set AGL_EXPORT_UPLOAD_TOKEN or write it to {upload_token_path()} with mode 0600.")
-    if not args.yes:
+    if not args.yes and not tui_confirmed:
         if not sys.stdin.isatty():
             raise SystemExit("Refusing non-interactive transcript collection without --yes.")
         answer = input(f"This will {'create and upload' if will_upload else 'create'} a redacted transcript archive for the last {args.days} days. Continue? [y/N] ")

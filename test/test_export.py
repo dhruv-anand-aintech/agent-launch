@@ -16,6 +16,26 @@ LOADER.exec_module(EXPORT)
 
 
 class ExportTests(unittest.TestCase):
+    def test_tui_defaults_select_detected_sources_and_mark_profile(self):
+        args = EXPORT.parse_args([])
+        detected = [
+            {"source": "codex", "transcript_store_found": True},
+            {"source": "claude", "transcript_store_found": False},
+        ]
+        state = EXPORT.tui_initial_state(args, detected)
+        self.assertEqual(state["selected"], {"codex"})
+        self.assertEqual(state["default_selected"], {"codex"})
+        self.assertEqual(state["days"], EXPORT.DEFAULT_DAYS)
+        self.assertEqual(state["max_sessions_per_agent"], EXPORT.DEFAULT_MAX_SESSIONS)
+        self.assertEqual(state["assistant_chars"], EXPORT.DEFAULT_ASSISTANT_CHARS)
+        self.assertTrue(state["upload"])
+        self.assertFalse(state["keep_local"])
+
+    def test_tui_option_presets_cycle_both_directions(self):
+        self.assertEqual(EXPORT.cycle_tui_value("days", 30, 1), 90)
+        self.assertEqual(EXPORT.cycle_tui_value("days", 30, -1), 7)
+        self.assertEqual(EXPORT.cycle_tui_value("days", 45, 1), 90)
+
     def test_redacts_secrets_identity_and_local_paths(self):
         text = "Authorization: Bearer abcdef email d@example.com path /Users/d/private/x API_KEY=supersecret id 123e4567-e89b-12d3-a456-426614174000 phone +91 98765 43210"
         redacted = EXPORT.redact_text(text)
