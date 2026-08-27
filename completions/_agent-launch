@@ -1,5 +1,22 @@
 #compdef agent-launch agl
 
+if [[ ${words[2]} == export ]]; then
+  _arguments -s -S \
+    '--days[lookback in days]:days:' \
+    '--max-sessions-per-agent[session cap per source]:count:' \
+    '--assistant-chars[assistant snippet character cap]:characters:' \
+    '--max-user-chars[user message character cap]:characters:' \
+    '--agents[comma-separated transcript sources]:sources:' \
+    '--output[local ZIP path]:file:_files' \
+    '--upload-url[presigned R2 PUT URL]:url:' \
+    '--upload-token[production ingestion token]:token:' \
+    '--no-upload[create the ZIP without uploading]' \
+    '--keep-local[keep ZIP after successful upload]' \
+    '--yes[confirm non-interactively]' \
+    '--list-sources[show supported sources]'
+  return
+fi
+
 local -a agents modes model_classes thinking_levels common_models
 
 agents=(
@@ -85,6 +102,7 @@ _arguments -s -S \
   '--attempt-timeout[timeout seconds for each non-interactive backend attempt]:seconds:' \
   '--extra[append raw backend arguments]:backend args:' \
   '--print-mappings[show built-in agent/model mappings]' \
+  '1:command or prompt:(export)' \
   '*:prompt text:'
 
 case "$state" in

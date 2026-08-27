@@ -40,6 +40,24 @@ The repository also includes an optional provider-neutral MCP server for owner-s
 
 By default, `agent-launch` starts agents in `auto` mode unless `AGENT_LAUNCH_MODE` or `--mode` overrides it.
 
+## Privacy-reduced transcript export
+
+`agl export` detects supported local transcript stores and creates a ZIP for evaluating coding-agent proficiency. It keeps redacted user messages, short redacted assistant snippets, tool call names/counts, and day-level timestamps. It excludes raw transcripts, system/developer prompts, reasoning, tool arguments/results, working directories, account identifiers, and original session IDs.
+
+```sh
+agl export --list-sources
+agl export --days 30 --no-upload
+agl export --days 30 --yes
+```
+
+For candidate machines, the installer can run the export in one pass:
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/dhruv-anand-aintech/agent-launch/main/install.sh | AGL_EXPORT_UPLOAD_TOKEN='candidate-upload-token' bash -s -- export --days 30 --yes
+```
+
+Production uploads go to the authenticated, write-only endpoint at `https://agl-exports.ainorthstar.tech/v1/exports`, backed by a private R2 bucket. Put the bearer token in `AGL_EXPORT_UPLOAD_TOKEN` or `~/.config/agent-launch/export-upload-token` with mode `0600`. The endpoint does not expose object reads or bucket listings. `--no-upload` retains a mode-`0600` local ZIP for inspection. After a successful upload the local ZIP is deleted unless `--keep-local` is passed. Redaction is intentionally conservative but still best-effort.
+
 ## Demo
 
 <video src="https://raw.githubusercontent.com/dhruv-anand-aintech/agent-launch/main/docs/assets/agent-launch-demo.mp4" controls width="720" poster="docs/assets/agent-launch-demo-thumb.jpg"></video>

@@ -17,6 +17,13 @@ import tempfile
 from dataclasses import dataclass
 
 
+if len(sys.argv) > 1 and sys.argv[1] == "export":
+    exporter = os.path.join(os.path.dirname(os.path.realpath(__file__)), "agl-export")
+    if not os.path.isfile(exporter):
+        raise SystemExit(f"agl export helper is missing: {exporter}. Reinstall agent-launch.")
+    os.execv(sys.executable, [sys.executable, exporter, *sys.argv[2:]])
+
+
 @dataclass(frozen=True)
 class AgentSpec:
     executable: str

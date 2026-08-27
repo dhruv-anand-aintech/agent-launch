@@ -1,0 +1,450 @@
+#!/usr/bin/env python3
+"""Create a privacy-reduced coding-agent transcript archive and optionally upload it."""
+
+from __future__ import annotations
+
+import argparse
+import collections
+import datetime as dt
+import glob
+import hashlib
+import json
+import os
+import re
+import shutil
+import sqlite3
+import sys
+import tempfile
+import urllib.error
+import urllib.parse
+import urllib.request
+import zipfile
+from pathlib import Path
+from typing import Any
+
+FORMAT_VERSION = 1
+ZIP_MIME = "application/zip"
+DEFAULT_UPLOAD_URL = "https://agl-exports.ainorthstar.tech/v1/exports"
+SECRET_PATTERNS = (
+    (re.compile(r"-----BEGIN [^-]+-----.*?-----END [^-]+-----", re.S), "[REDACTED_PRIVATE_KEY]"),
+    (re.compile(r"(?i)\b(authorization\s*:\s*(?:bearer|basic)\s+)\S+"), r"\1[REDACTED]"),
+    (re.compile(r"(?i)\b((?:api[_-]?key|access[_-]?token|auth[_-]?token|client[_-]?secret|password|passwd)\s*[:=]\s*)[^\s,;]+"), r"\1[REDACTED]"),
+    (re.compile(r"\b(?:sk|rk|pk|ghp|github_pat|glpat|xox[baprs]|AKIA|ASIA)[-_A-Za-z0-9]{12,}\b"), "[REDACTED_TOKEN]"),
+    (re.compile(r"\beyJ[A-Za-z0-9_-]{8,}\.[A-Za-z0-9_-]{8,}\.[A-Za-z0-9_-]{8,}\b"), "[REDACTED_JWT]"),
+    (re.compile(r"\b[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}\b"), "[REDACTED_UUID]"),
+    (re.compile(r"\b(?=[A-Za-z0-9_-]{32,}\b)(?=[A-Za-z0-9_-]*[A-Za-z])(?=[A-Za-z0-9_-]*\d)[A-Za-z0-9_-]+\b"), "[REDACTED_HIGH_ENTROPY_VALUE]"),
+    (re.compile(r"(?i)(https?://[^\s?#]+)\?[^\s#]+"), r"\1?[REDACTED_QUERY]"),
+    (re.compile(r"(?<![\w.+-])[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}(?![\w.-])"), "[REDACTED_EMAIL]"),
+    (re.compile(r"(?<![\w])(?:\d{1,3}\.){3}\d{1,3}(?![\w])"), "[REDACTED_IP]"),
+    (re.compile(r"(?<![\w])/(?:Users|home)/[^\s'\"`]+"), "[REDACTED_LOCAL_PATH]"),
+    (re.compile(r"(?<![\w:])/(?:private|tmp|var|Volumes)/[^\s'\"`]+"), "[REDACTED_LOCAL_PATH]"),
+    (re.compile(r"(?i)\b[A-Z]:\\Users\\[^\s'\"`]+"), "[REDACTED_LOCAL_PATH]"),
+    (re.compile(r"(?<!\d)(?:\+?\d[\s().-]*){10,15}(?!\d)"), "[REDACTED_PHONE]"),
+)
+
+
+def redact_text(value: Any) -> str:
+    if not isinstance(value, str):
+        return ""
+    text = value.replace("\x00", "")
+    for pattern, replacement in SECRET_PATTERNS:
+        text = pattern.sub(replacement, text)
+    return text.strip()
+
+
+def clipped(text: str, limit: int) -> tuple[str, bool]:
+    if len(text) <= limit:
+        return text, False
+    return text[:limit].rstrip() + " [TRUNCATED]", True
+
+
+def content_text(content: Any, allowed_types: set[str] | None = None) -> str:
+    if isinstance(content, str):
+        return content
+    chunks = []
+    for block in content if isinstance(content, list) else []:
+        if isinstance(block, str):
+            chunks.append(block)
+        elif isinstance(block, dict) and (allowed_types is None or block.get("type") in allowed_types) and isinstance(block.get("text"), str):
+            chunks.append(block["text"])
+    return "\n".join(chunks)
+
+
+def safe_timestamp(value: Any, fallback: float) -> str:
+    if isinstance(value, (int, float)):
+        seconds = value / 1000 if value > 10_000_000_000 else value
+        try:
+            return dt.datetime.fromtimestamp(seconds, dt.timezone.utc).isoformat().replace("+00:00", "Z")
+        except (ValueError, OSError, OverflowError):
+            pass
+    if isinstance(value, str):
+        try:
+            return dt.datetime.fromisoformat(value.replace("Z", "+00:00")).astimezone(dt.timezone.utc).isoformat().replace("+00:00", "Z")
+        except ValueError:
+            pass
+    return dt.datetime.fromtimestamp(fallback, dt.timezone.utc).isoformat().replace("+00:00", "Z")
+
+
+def empty_session(source: str, raw_id: str, timestamp: Any) -> dict[str, Any]:
+    return {"source": source, "raw_id": raw_id, "started_at": timestamp, "user_messages": [], "assistant_snippets": [], "tool_calls": collections.Counter(), "redaction": {"user_messages_truncated": 0, "assistant_messages_truncated": 0}}
+
+
+def add_message(session: dict[str, Any], role: str, text: Any, user_limit: int, assistant_limit: int) -> None:
+    clean = redact_text(text)
+    if not clean:
+        return
+    if role == "user":
+        clean, truncated = clipped(clean, user_limit)
+        session["user_messages"].append(clean)
+        session["redaction"]["user_messages_truncated"] += int(truncated)
+    elif role == "assistant" and assistant_limit:
+        clean, truncated = clipped(clean, assistant_limit)
+        session["assistant_snippets"].append(clean)
+        session["redaction"]["assistant_messages_truncated"] += int(truncated)
+
+
+def add_tool(session: dict[str, Any], name: Any) -> None:
+    clean = re.sub(r"[^A-Za-z0-9_.:/-]", "_", redact_text(str(name or "unknown")))[:120]
+    session["tool_calls"][clean or "unknown"] += 1
+
+
+def finalize_session(session: dict[str, Any], salt: bytes, fallback: float) -> dict[str, Any] | None:
+    if not session["user_messages"] and not session["assistant_snippets"] and not session["tool_calls"]:
+        return None
+    raw_id = session.pop("raw_id")
+    source = session["source"]
+    session["session"] = hashlib.sha256(salt + b"\0" + source.encode() + b"\0" + raw_id.encode()).hexdigest()[:16]
+    session["tool_calls"] = dict(sorted(session["tool_calls"].items()))
+    session["counts"] = {"user_messages": len(session["user_messages"]), "assistant_snippets": len(session["assistant_snippets"]), "tool_calls": sum(session["tool_calls"].values())}
+    session["started_on"] = safe_timestamp(session.pop("started_at"), fallback)[:10]
+    return session
+
+
+def recent_files(pattern: str, cutoff: float, limit: int) -> list[str]:
+    paths = [path for path in glob.iglob(pattern, recursive=True) if os.path.isfile(path) and os.path.getmtime(path) >= cutoff]
+    return sorted(paths, key=os.path.getmtime, reverse=True)[:limit]
+
+
+def collect_jsonl(source: str, paths: list[str], salt: bytes, user_limit: int, assistant_limit: int) -> list[dict[str, Any]]:
+    sessions = []
+    for path in paths:
+        mtime = os.path.getmtime(path)
+        session = empty_session(source, path, None)
+        try:
+            with open(path, encoding="utf-8", errors="replace") as handle:
+                for line in handle:
+                    try:
+                        record = json.loads(line)
+                    except json.JSONDecodeError:
+                        continue
+                    if source == "codex":
+                        payload = record.get("payload") if isinstance(record.get("payload"), dict) else {}
+                        if record.get("type") == "session_meta":
+                            session["started_at"] = payload.get("timestamp") or record.get("timestamp")
+                        if record.get("type") != "response_item":
+                            continue
+                        kind, role = payload.get("type"), payload.get("role")
+                        if kind == "message" and role in {"user", "assistant"}:
+                            allowed = {"input_text", "text"} if role == "user" else {"output_text", "text"}
+                            add_message(session, role, content_text(payload.get("content"), allowed), user_limit, assistant_limit)
+                        elif kind in {"function_call", "custom_tool_call", "local_shell_call", "web_search_call"}:
+                            add_tool(session, payload.get("name") or kind)
+                    else:
+                        role = record.get("type") if source == "claude" else record.get("role")
+                        message = record.get("message") if isinstance(record.get("message"), dict) else {}
+                        if role in {"user", "assistant"}:
+                            add_message(session, role, content_text(message.get("content"), {"text", "input_text", "output_text"}), user_limit, assistant_limit)
+                            session["started_at"] = session["started_at"] or record.get("timestamp")
+                        for block in message.get("content", []) if isinstance(message.get("content"), list) else []:
+                            if isinstance(block, dict) and block.get("type") == "tool_use":
+                                add_tool(session, block.get("name"))
+        except OSError:
+            continue
+        item = finalize_session(session, salt, mtime)
+        if item:
+            sessions.append(item)
+    return sessions
+
+
+def open_readonly(path: Path) -> sqlite3.Connection:
+    return sqlite3.connect(f"file:{path}?mode=ro", uri=True)
+
+
+def collect_opencode(home: Path, cutoff: float, limit: int, salt: bytes, user_limit: int, assistant_limit: int) -> list[dict[str, Any]]:
+    path = home / ".local/share/opencode/opencode.db"
+    if not path.exists():
+        return []
+    sessions = []
+    try:
+        db = open_readonly(path)
+        rows = db.execute("SELECT id, time_created FROM session WHERE time_updated >= ? ORDER BY time_updated DESC LIMIT ?", (int(cutoff * 1000), limit)).fetchall()
+        for raw_id, created in rows:
+            session = empty_session("opencode", str(raw_id), created)
+            for message_id, raw in db.execute("SELECT id, data FROM message WHERE session_id = ? ORDER BY time_created", (raw_id,)):
+                try:
+                    role = json.loads(raw).get("role")
+                except (TypeError, json.JSONDecodeError):
+                    continue
+                chunks = []
+                for (part_raw,) in db.execute("SELECT data FROM part WHERE message_id = ? ORDER BY time_created", (message_id,)):
+                    try:
+                        part = json.loads(part_raw)
+                    except (TypeError, json.JSONDecodeError):
+                        continue
+                    if part.get("type") == "text" and isinstance(part.get("text"), str):
+                        chunks.append(part["text"])
+                    elif part.get("type") == "tool":
+                        add_tool(session, part.get("tool"))
+                add_message(session, role, "\n".join(chunks), user_limit, assistant_limit)
+            item = finalize_session(session, salt, path.stat().st_mtime)
+            if item:
+                sessions.append(item)
+        db.close()
+    except (OSError, sqlite3.Error):
+        return []
+    return sessions
+
+
+def collect_hermes(home: Path, cutoff: float, limit: int, salt: bytes, user_limit: int, assistant_limit: int) -> list[dict[str, Any]]:
+    path = home / ".hermes/state.db"
+    if not path.exists():
+        return []
+    sessions = []
+    try:
+        db = open_readonly(path)
+        rows = db.execute("SELECT id, started_at FROM sessions WHERE COALESCE(last_activity_at, started_at) >= ? ORDER BY COALESCE(last_activity_at, started_at) DESC LIMIT ?", (cutoff, limit)).fetchall()
+        for raw_id, started in rows:
+            session = empty_session("hermes", str(raw_id), started)
+            for role, text, tool_name, tool_calls in db.execute("SELECT role, content, tool_name, tool_calls FROM messages WHERE session_id = ? AND active = 1 ORDER BY id", (raw_id,)):
+                add_message(session, role, text, user_limit, assistant_limit)
+                if tool_name:
+                    add_tool(session, tool_name)
+                try:
+                    calls = json.loads(tool_calls) if tool_calls else []
+                except (TypeError, json.JSONDecodeError):
+                    calls = []
+                for call in [calls] if isinstance(calls, dict) else calls if isinstance(calls, list) else []:
+                    if isinstance(call, dict):
+                        function = call.get("function") if isinstance(call.get("function"), dict) else {}
+                        add_tool(session, call.get("name") or function.get("name"))
+            item = finalize_session(session, salt, path.stat().st_mtime)
+            if item:
+                sessions.append(item)
+        db.close()
+    except (OSError, sqlite3.Error):
+        return []
+    return sessions
+
+
+def collect_cursor_ide(home: Path, cutoff: float, limit: int, salt: bytes, user_limit: int, assistant_limit: int) -> list[dict[str, Any]]:
+    path = home / "Library/Application Support/Cursor/User/globalStorage/state.vscdb"
+    if not path.exists():
+        return []
+    grouped: dict[str, dict[str, Any]] = {}
+    try:
+        db = open_readonly(path)
+        for key, raw in db.execute("SELECT key, value FROM cursorDiskKV WHERE key LIKE 'bubbleId:%'"):
+            parts = str(key).split(":", 2)
+            if len(parts) != 3:
+                continue
+            try:
+                bubble = json.loads(raw)
+            except (TypeError, json.JSONDecodeError):
+                continue
+            created = bubble.get("createdAt")
+            seconds = created / 1000 if isinstance(created, (int, float)) and created > 10_000_000_000 else created
+            if isinstance(seconds, (int, float)) and seconds < cutoff:
+                continue
+            session = grouped.setdefault(parts[1], empty_session("cursor-ide", parts[1], created))
+            role = "user" if bubble.get("type") == 1 else "assistant" if bubble.get("type") == 2 else ""
+            add_message(session, role, bubble.get("text"), user_limit, assistant_limit)
+            tool_data = bubble.get("toolFormerData")
+            for tool in [tool_data] if isinstance(tool_data, dict) else tool_data if isinstance(tool_data, list) else []:
+                if isinstance(tool, dict) and (tool.get("name") or tool.get("tool")):
+                    name = tool.get("name")
+                    if isinstance(name, (int, float)) or (isinstance(name, str) and name.isdigit()):
+                        name = tool.get("tool")
+                    add_tool(session, name or tool.get("tool"))
+        db.close()
+    except (OSError, sqlite3.Error):
+        return []
+    ordered = sorted(grouped.values(), key=lambda item: str(item["started_at"]), reverse=True)[:limit]
+    return [item for session in ordered if (item := finalize_session(session, salt, path.stat().st_mtime))]
+
+
+def collect_source(source: str, home: Path, cutoff: float, limit: int, salt: bytes, user_limit: int, assistant_limit: int) -> list[dict[str, Any]]:
+    if source == "codex":
+        return collect_jsonl(source, recent_files(str(home / ".codex/sessions/*/*/*/*.jsonl"), cutoff, limit), salt, user_limit, assistant_limit)
+    if source == "claude":
+        return collect_jsonl(source, recent_files(str(home / ".claude/projects/*/*.jsonl"), cutoff, limit), salt, user_limit, assistant_limit)
+    if source == "cursor-cli":
+        return collect_jsonl(source, recent_files(str(home / ".cursor/projects/*/agent-transcripts/*/*.jsonl"), cutoff, limit), salt, user_limit, assistant_limit)
+    return {"opencode": collect_opencode, "cursor-ide": collect_cursor_ide, "hermes": collect_hermes}[source](home, cutoff, limit, salt, user_limit, assistant_limit)
+
+
+SOURCES = ("claude", "codex", "cursor-cli", "cursor-ide", "hermes", "opencode")
+PROBES = {
+    "codex": ("codex", ".codex/sessions"), "claude": ("claude", ".claude/projects"),
+    "cursor-cli": ("agent", ".cursor/projects"), "cursor-ide": (None, "Library/Application Support/Cursor/User/globalStorage/state.vscdb"),
+    "opencode": ("opencode", ".local/share/opencode/opencode.db"), "hermes": ("hermes", ".hermes/state.db"),
+}
+
+
+def detect_sources(home: Path) -> list[dict[str, Any]]:
+    return [{"source": source, "cli_installed": bool(executable and shutil.which(executable)), "transcript_store_found": (home / relative).exists(), "supported": True} for source, (executable, relative) in PROBES.items()]
+
+
+def write_archive(output: Path, sessions: list[dict[str, Any]], detected: list[dict[str, Any]], days: int) -> dict[str, Any]:
+    output.parent.mkdir(parents=True, exist_ok=True)
+    summary = {}
+    for source in sorted({item["source"] for item in sessions}):
+        selected = [item for item in sessions if item["source"] == source]
+        tools = collections.Counter()
+        for item in selected:
+            tools.update(item["tool_calls"])
+        summary[source] = {"sessions": len(selected), "user_messages": sum(item["counts"]["user_messages"] for item in selected), "assistant_snippets": sum(item["counts"]["assistant_snippets"] for item in selected), "tool_calls": sum(tools.values()), "tool_types": dict(sorted(tools.items()))}
+    manifest = {
+        "format": "agl-recruitment-export", "format_version": FORMAT_VERSION,
+        "created_at": dt.datetime.now(dt.timezone.utc).isoformat().replace("+00:00", "Z"), "lookback_days": days,
+        "privacy": {"included": ["redacted user messages", "short redacted assistant snippets", "tool call names and counts", "coarse timestamps", "per-export pseudonymous session IDs"], "excluded": ["raw transcripts", "system/developer messages", "reasoning", "tool inputs", "tool outputs", "working directories", "original session IDs", "account identifiers", "model credentials"]},
+        "detected_sources": detected, "summary": summary,
+    }
+    with tempfile.TemporaryDirectory(prefix="agl-export-") as temp_dir:
+        root = Path(temp_dir) / "agl-recruitment-export"
+        root.mkdir()
+        (root / "manifest.json").write_text(json.dumps(manifest, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+        for source in sorted(summary):
+            directory = root / "agents" / source / "sessions"
+            directory.mkdir(parents=True)
+            for index, session in enumerate((item for item in sessions if item["source"] == source), 1):
+                (directory / f"{index:04d}-{session['session']}.json").write_text(json.dumps(session, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+        with zipfile.ZipFile(output, "x", compression=zipfile.ZIP_DEFLATED, compresslevel=9) as archive:
+            for path in sorted(root.rglob("*")):
+                if path.is_file():
+                    archive.write(path, path.relative_to(root.parent))
+    output.chmod(0o600)
+    return manifest
+
+
+def upload_presigned(path: Path, url: str) -> str:
+    data = path.read_bytes()
+    request = urllib.request.Request(url, data=data, method="PUT", headers={"Content-Type": ZIP_MIME, "Content-Length": str(len(data)), "User-Agent": "agl-export/1"})
+    try:
+        with urllib.request.urlopen(request, timeout=120) as response:
+            if not 200 <= response.status < 300:
+                raise RuntimeError(f"upload failed with HTTP {response.status}")
+            return response.headers.get("ETag", "").strip('"')
+    except urllib.error.HTTPError as error:
+        raise RuntimeError(f"upload failed with HTTP {error.code}") from None
+
+
+def upload_ingest(path: Path, url: str, token: str) -> str:
+    data = path.read_bytes()
+    digest = hashlib.sha256(data).hexdigest()
+    request = urllib.request.Request(url, data=data, method="POST", headers={"Authorization": f"Bearer {token}", "Content-Type": ZIP_MIME, "Content-Length": str(len(data)), "User-Agent": "agl-export/1", "X-Content-SHA256": digest})
+    try:
+        with urllib.request.urlopen(request, timeout=120) as response:
+            if not 200 <= response.status < 300:
+                raise RuntimeError(f"upload failed with HTTP {response.status}")
+            payload = json.loads(response.read().decode("utf-8"))
+            return str(payload.get("object") or "")
+    except urllib.error.HTTPError as error:
+        raise RuntimeError(f"upload failed with HTTP {error.code}") from None
+
+
+def validate_upload_url(url: str) -> str:
+    parsed = urllib.parse.urlsplit(url)
+    query = urllib.parse.parse_qs(parsed.query)
+    if parsed.scheme == "https" and (parsed.hostname or "").endswith(".r2.cloudflarestorage.com"):
+        if "X-Amz-Signature" not in query or "X-Amz-Algorithm" not in query:
+            raise SystemExit("Upload URL is missing its R2 presigned-request signature.")
+        return "presigned"
+    if url.rstrip("/") == DEFAULT_UPLOAD_URL:
+        return "ingest"
+    raise SystemExit(f"Upload URL must be a signed R2 URL or {DEFAULT_UPLOAD_URL}.")
+
+
+def upload_token_path() -> Path:
+    config_home = Path(os.environ.get("XDG_CONFIG_HOME") or Path.home() / ".config")
+    return config_home / "agent-launch/export-upload-token"
+
+
+def read_upload_token(explicit: str | None) -> str:
+    if explicit:
+        return explicit.strip()
+    env_token = os.environ.get("AGL_EXPORT_UPLOAD_TOKEN", "").strip()
+    if env_token:
+        return env_token
+    try:
+        return upload_token_path().read_text(encoding="utf-8").strip()
+    except OSError:
+        return ""
+
+
+def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
+    parser = argparse.ArgumentParser(prog="agl export", description="Create a privacy-reduced coding-agent transcript archive for candidate review.")
+    parser.add_argument("--days", type=int, default=30)
+    parser.add_argument("--max-sessions-per-agent", type=int, default=100)
+    parser.add_argument("--assistant-chars", type=int, default=240)
+    parser.add_argument("--max-user-chars", type=int, default=12000)
+    parser.add_argument("--agents", default="all", help="Comma-separated sources or all.")
+    parser.add_argument("--output", type=Path)
+    parser.add_argument("--upload-url", help=f"Upload destination. Defaults to {DEFAULT_UPLOAD_URL}.")
+    parser.add_argument("--upload-token", help="Ingestion token. Prefer AGL_EXPORT_UPLOAD_TOKEN or the private config file.")
+    parser.add_argument("--no-upload", action="store_true")
+    parser.add_argument("--keep-local", action="store_true")
+    parser.add_argument("--yes", action="store_true", help="Confirm collection and upload non-interactively.")
+    parser.add_argument("--list-sources", action="store_true")
+    args = parser.parse_args(argv)
+    if args.days < 1 or args.max_sessions_per_agent < 1 or args.assistant_chars < 0 or args.max_user_chars < 1:
+        parser.error("days, session limit, and user limit must be positive; assistant chars may be zero")
+    return args
+
+
+def main(argv: list[str] | None = None) -> int:
+    args = parse_args(argv)
+    home = Path(os.environ.get("AGL_EXPORT_HOME", str(Path.home()))).expanduser()
+    detected = detect_sources(home)
+    if args.list_sources:
+        for item in detected:
+            print(f"{item['source']}: cli={'yes' if item['cli_installed'] else 'no'}, transcripts={'yes' if item['transcript_store_found'] else 'no'}, supported=yes")
+        return 0
+    requested = set(SOURCES) if args.agents == "all" else {part.strip() for part in args.agents.split(",") if part.strip()}
+    if requested - set(SOURCES):
+        raise SystemExit(f"Unsupported transcript source(s): {', '.join(sorted(requested - set(SOURCES)))}. Use --list-sources.")
+    upload_url = args.upload_url or os.environ.get("AGL_EXPORT_UPLOAD_URL") or DEFAULT_UPLOAD_URL
+    will_upload = not args.no_upload
+    upload_mode = validate_upload_url(upload_url) if will_upload else "none"
+    upload_token = read_upload_token(args.upload_token) if upload_mode == "ingest" else ""
+    if upload_mode == "ingest" and not upload_token:
+        raise SystemExit(f"Production upload token is not configured. Set AGL_EXPORT_UPLOAD_TOKEN or write it to {upload_token_path()} with mode 0600.")
+    if not args.yes:
+        if not sys.stdin.isatty():
+            raise SystemExit("Refusing non-interactive transcript collection without --yes.")
+        answer = input(f"This will {'create and upload' if will_upload else 'create'} a redacted transcript archive for the last {args.days} days. Continue? [y/N] ")
+        if answer.strip().lower() not in {"y", "yes"}:
+            return 2
+    else:
+        print("Consent acknowledged: collecting only the privacy-reduced fields described by agl export.", file=sys.stderr)
+    now = dt.datetime.now(dt.timezone.utc)
+    cutoff, salt = now.timestamp() - args.days * 86400, os.urandom(32)
+    sessions = []
+    for source in sorted(requested):
+        print(f"Scanning {source} transcripts...", file=sys.stderr, flush=True)
+        sessions.extend(collect_source(source, home, cutoff, args.max_sessions_per_agent, salt, args.max_user_chars, args.assistant_chars))
+    output = (args.output or Path.cwd() / f"agl-recruitment-export-{now.strftime('%Y%m%dT%H%M%SZ')}.zip").expanduser().resolve()
+    manifest = write_archive(output, sessions, detected, args.days)
+    digest = hashlib.sha256(output.read_bytes()).hexdigest()
+    print(f"Created {output} ({output.stat().st_size} bytes, sha256 {digest})")
+    print("Collected " + ", ".join(f"{name}={stats['sessions']}" for name, stats in manifest["summary"].items()) if manifest["summary"] else "Collected no eligible sessions")
+    if will_upload:
+        object_name = upload_presigned(output, upload_url) if upload_mode == "presigned" else upload_ingest(output, upload_url, upload_token)
+        print(f"Uploaded private R2 object successfully{f' ({object_name})' if object_name else ''}")
+        if not args.keep_local:
+            output.unlink()
+            print("Removed local ZIP after successful upload")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

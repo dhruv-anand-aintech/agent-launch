@@ -9,6 +9,7 @@
   },
   "files": [
     "bin/agent-launch",
+    "bin/agl-export",
     "completions",
     "install.sh",
     "README.md",
@@ -17,6 +18,8 @@
   "scripts": {
     "mcp:start": "node mcp/src/main.mjs",
     "mcp:test": "node --test mcp/test/*.test.mjs",
+    "export:test": "python3 -m unittest discover -s test -p 'test_export.py' -v && node --test test/export-ingest.test.mjs",
+    "deploy:export": "./scripts/deploy-export-ingest.sh",
     "matrix:validate": "python3 docs/tools/agent_matrix/data_utils.py validate",
     "matrix:bundle": "python3 docs/tools/agent_matrix/data_utils.py bundle",
     "matrix:llms-txt": "python3 docs/tools/agent_matrix/data_utils.py llms-txt",
