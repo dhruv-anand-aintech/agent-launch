@@ -9,16 +9,14 @@
   "form_factor": {
     "values": [
       "CLI",
-      "Extension",
       "SDK",
       "Web",
       "Mobile"
     ],
     "source_url": "https://ampcode.com/news/agents-everywhere#agents-everywhere:~:text=watching%20and%20driving%20all%20of%20your%20Amp%20agents%2C%20on%20web%2C%20mobile%2C%20and%20CLI",
-    "comment": "CLI TUI + IDE extensions (VS Code, JetBrains, Neovim, Zed) + @ampcode/sdk (TypeScript) and amp-sdk (Python). June 2026 UI adds web and mobile surfaces for watching/driving agents. Per-form-factor links: CLI: https://ampcode.com/manual#getting-started; Extension: https://ampcode.com/manual/vscode; SDK: https://ampcode.com/manual/sdk; Web: https://ampcode.com/news/agents-everywhere; Mobile: https://ampcode.com/news/agents-everywhere.",
+    "comment": "CLI TUI plus @ampcode/sdk (TypeScript) and amp-sdk (Python), with web and mobile surfaces for watching and driving agents. Amp ended its legacy IDE extensions in March 2026. Per-form-factor links: CLI: https://ampcode.com/manual#getting-started; SDK: https://ampcode.com/manual/sdk; Web: https://ampcode.com/news/agents-everywhere; Mobile: https://ampcode.com/news/agents-everywhere.",
     "links": {
       "CLI": "https://ampcode.com/manual#getting-started",
-      "Extension": "https://ampcode.com/manual/vscode",
       "SDK": "https://ampcode.com/manual/sdk",
       "Web": "https://ampcode.com/news/agents-everywhere",
       "Mobile": "https://ampcode.com/news/agents-everywhere"
@@ -30,9 +28,9 @@
     "comment": "Publicly launched May 15, 2025 (no waitlist). Originally built inside Sourcegraph, spun off as Amp Frontier Corporation."
   },
   "latest_major_update": {
-    "value": "Jun '26",
-    "source_url": "https://ampcode.com/news/custom-agents#custom-agents:~:text=You%20can%20now%20create%20custom%20agents%20in%20Amp%20with%20plugins",
-    "comment": "June 19, 2026 - Amp added custom agents via plugins, usable as the main agent, as subagents, in amp -x tool pipelines, or as many parallel worker agents."
+    "value": "Aug '26",
+    "source_url": "https://ampcode.com/news/multi-repo-projects#multi-repo-projects:~:text=multi-repository%20projects",
+    "comment": "August 27, 2026 - Amp added multi-repository projects with persistent workspace configuration and shared agent context across repositories."
   },
   "rules": {
     "support": "full",
@@ -136,9 +134,9 @@
     "comment": "Amp documents a free mode for interactive editor/CLI use, with limits and availability caveats."
   },
   "hosted_agent": {
-    "support": "none",
-    "source_url": "https://ampcode.com/manual#source:~:text=Amp%20is%20the%20frontier%20coding%20agent%20for%20your%20terminal%20and%20editor",
-    "comment": "CLI runs locally. Threads shared via web but no managed agent platform."
+    "support": "full",
+    "source_url": "https://ampcode.com/news/agents-everywhere#agents-everywhere:~:text=web%2C%20mobile%2C%20and%20CLI",
+    "comment": "Amp provides hosted orbs with durable execution and web/mobile control of running agents, in addition to local CLI execution."
   },
   "transcripts": {
     "support": "unknown",

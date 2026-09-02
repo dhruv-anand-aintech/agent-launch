@@ -28,39 +28,40 @@ Form factor values are deliberately strict: each value should have a concrete pe
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | Aider | CLI | Jun '23 | May '26 | full | full | full | partial | partial | none | partial | partial | none | none | full |
 | Amazon Q Developer CLI | CLI | Mar '25 | Nov '25 | full | none | none | full | partial | none | partial | full | full | none | none |
-| Amp | CLI, Extension, SDK, Web, Mobile | May '25 | Jun '26 | full |  |  | full | full | partial | unknown | full | full | none | partial |
-| Antigravity | CLI, IDE | 2025 | May '26 | full |  |  | full | full | unknown | partial | full | full | none | unknown |
-| Claude Code | CLI, Extension, SDK, Web, Mac App | Feb '25 | Jul '26 |  |  |  | full | full | full | full | full | full | partial | partial |
-| Cline | CLI, Extension, SDK | Jul '24 | Jul '26 | full | full | full | full | full | partial | unknown | full | full | none | full |
+| Amp | CLI, SDK, Web, Mobile | May '25 | Aug '26 | full |  |  | full | full | partial | unknown | full | full | full | partial |
+| Antigravity | CLI, IDE, Web | 2025 | Aug '26 | full |  |  | full | full | unknown | partial | full | full | none | unknown |
+| Claude Code | CLI, Extension, SDK, Web, Mac App | Feb '25 | Sep '26 |  |  |  | full | full | full | full | full | full | partial | partial |
+| Cline | CLI, Extension, SDK, Desktop App | Jul '24 | Sep '26 | full | full | full | full | full | partial | unknown | full | full | none | full |
 | Cohere North | SDK, Web | Jan '25 | Jun '26 |  |  |  | partial | partial | partial | partial | full | full | full | none |
-| Command Code | CLI, Extension, Web | Jul '26 | Jul '26 | partial | none | full | full | full | partial | full | full | full | none | full |
-| Crush | CLI, TUI | Jul '25 | Jul '26 | full | full | full | full | full | partial | full | partial | full | none | full |
-| Cursor | CLI, IDE, SDK, Mobile | 2023 | Jun '26 | full |  |  | full | full | partial | full | full | full | full | full |
-| Devin | CLI, Extension, SDK, Web | Dec '24 | Jul '26 | full |  |  | full | full | partial | partial | full | full | full | unknown |
-| Factory Droid | CLI, Extension, Web | 2025 | Jun '26 |  | partial | full | full | full | partial | partial | full | full | partial | full |
-| Gemini CLI | CLI | Jun '25 | Jul '26 | full |  | full | full | partial | partial | unknown | full | full | none | partial |
-| GitHub Copilot | CLI, IDE, Extension, SDK, Web | Jun '25 | May '26 |  |  |  | full | full | partial | unknown | full | full | full | full |
-| GitHub Copilot CLI | CLI | Sep '25 | Jul '26 | partial | none | full | full | full | partial | full | full | full | none | full |
+| Command Code | CLI, Extension, Web, Desktop App | Jul '26 | Aug '26 | partial | none | full | full | full | partial | full | full | full | none | full |
+| Crush | CLI, TUI | Jul '25 | Sep '26 | full | full | full | full | full | partial | full | partial | full | none | full |
+| Cursor | CLI, IDE, SDK, Web, Mobile | 2023 | Aug '26 | full |  |  | full | full | partial | full | full | full | full | full |
+| Devin | CLI, Extension, SDK, Web | Dec '24 | Aug '26 | full |  |  | full | full | partial | partial | full | full | full | unknown |
+| Factory Droid | CLI, Extension, SDK, Web, Desktop App | 2025 | Sep '26 |  | partial | full | full | full | partial | partial | full | full | full | full |
+| Gemini CLI | CLI | Jun '25 | Sep '26 | full |  | full | full | partial | partial | unknown | full | full | none | partial |
+| GitHub Copilot | CLI, IDE, Extension, SDK, Web | Jun '25 | Aug '26 |  |  |  | full | full | partial | unknown | full | full | full | full |
+| GitHub Copilot CLI | CLI | Sep '25 | Aug '26 | partial | none | full | full | full | partial | full | full | full | none | full |
 | Google Jules | Web | Aug '25 | Mar '26 |  |  |  | unknown | none | partial | partial | partial | partial | full | none |
-| Goose | CLI, Desktop App | Jan '25 | Jul '26 | full | full | full | full | full | partial | full | full | full | none | full |
-| Grok Build | CLI | May '26 | Jun '26 |  |  |  | full | full | unknown | unknown | full | full | none | partial |
-| JetBrains Junie | CLI, IDE, Web, GitHub Action, GitLab CI/CD | Jan '25 | Jun '26 |  |  |  | full | full | partial | full | full | full | partial | full |
-| Kilo Code | CLI, Extension | Feb '26 | Jul '26 | full | full | full | full | full | partial | unknown | full | full | partial | full |
-| Kimi CLI | CLI, Extension, SDK | Oct '25 | Jul '26 |  |  |  | full | full | partial | unknown | partial | full | none | full |
-| Kiro | CLI, IDE, Web | Jul '25 | Jun '26 | full |  |  | full | full | partial | partial | full | full | partial | none |
-| MiMo Code | CLI, IDE, Extension | Jun '26 | Jul '26 | full | full | full | full | full | partial | full | partial | full | none | full |
+| Goose | CLI, Desktop App | Jan '25 | Sep '26 | full | full | full | full | full | partial | full | full | full | none | full |
+| Grok Build | CLI, Web, Mobile | May '26 | Aug '26 |  |  |  | full | full | unknown | unknown | full | full | full | partial |
+| JetBrains Junie | CLI, IDE, Web, GitHub Action, GitLab CI/CD | Jan '25 | Aug '26 |  |  |  | full | full | partial | full | full | full | partial | full |
+| Kilo Code | CLI, Extension | Feb '26 | Sep '26 | full | full | full | full | full | partial | unknown | full | full | partial | full |
+| Kimi Code CLI | CLI, Extension | May '26 | Sep '26 |  |  |  | full | full | partial | unknown | partial | full | none | full |
+| Kiro | CLI, IDE, Web | Jul '25 | Aug '26 | full |  |  | full | full | partial | partial | full | full | full | none |
+| Kiro Crew | CLI, Web, Desktop App, Mobile | Aug '26 | Sep '26 | full | none | none | full | full | full | full | full | full | none | none |
+| MiMo Code | CLI, IDE, Extension | Jun '26 | Sep '26 | full | full | full | full | full | partial | full | partial | full | none | full |
 | Muse Code | CLI | Aug '26 | Aug '26 | unknown | none | none | full | full | partial | full | unknown | unknown | none | partial |
-| OpenAI Codex CLI | CLI, Extension, SDK, Web, Mac App | Apr '25 | Jul '26 | full |  | full | full | full | partial | full | full | full | full | full |
-| OpenCode | CLI, Extension, SDK, Mac App | 2025 | Jul '26 | full | full | full | full | full | partial | full | full | full | none | full |
-| OpenHands | CLI, IDE, Web, Docker, Hosted Agent | Mar '24 | Jul '26 | full | full | full | full | full | none | full | full | full | full | full |
-| Pi | CLI, SDK | May '26 | Jul '26 |  | full | full | full | full | none | full | full | none | none | full |
+| OpenAI Codex CLI | CLI, Extension, SDK, Web, Mac App | Apr '25 | Sep '26 | full |  | full | full | full | partial | full | full | full | full | full |
+| OpenCode | CLI, Extension, SDK, Mac App | 2025 | Sep '26 | full | full | full | full | full | partial | full | full | full | none | full |
+| OpenHands | CLI, IDE, Web, Docker, Hosted Agent | Mar '24 | Sep '26 | full | full | full | full | full | none | full | full | full | full | full |
+| Pi | CLI, SDK | May '26 | Sep '26 |  | full | full | full | full | none | full | full | none | none | full |
 | Pier Code | CLI | Jun '26 | Jul '26 | none | partial | none | full | partial | partial | full | partial | full | full | partial |
-| Qwen Code | CLI, Extension, SDK, Desktop App | Jun '25 | Jul '26 |  |  |  | full | full | partial | unknown | full | full | partial | full |
-| Replit Agent | Web | Sep '24 | Jun '26 |  |  |  | partial | full | partial | partial | partial | unknown | full | none |
+| Qwen Code | CLI, Extension, SDK, Desktop App | Jun '25 | Sep '26 |  |  |  | full | full | partial | unknown | full | full | partial | full |
+| Replit Agent | Web | Sep '24 | Aug '26 |  |  |  | partial | full | partial | partial | partial | unknown | full | none |
 | Roo Code | Extension | Mid-2025 | May '26 |  |  |  | full | full | partial | unknown | none | full | none | full |
 | Trae Agent | CLI | Jun '25 | Feb '26 | full | full | full | partial | none | none | full | none | partial | none | full |
-| Windsurf Cascade | CLI, IDE, Extension | Nov '24 | Jun '26 |  |  |  | full | full | partial | unknown | full | full | full | partial |
-| ZCode | IDE, Desktop App, Mobile | 2026 | Jul '26 | full |  |  | full | full | partial | partial | partial | full | none | full |
+| Windsurf Cascade | CLI, IDE, Extension | Nov '24 | Aug '26 |  |  |  | full | full | partial | unknown | full | full | full | partial |
+| ZCode | IDE, Desktop App, Mobile | 2026 | Aug '26 | full |  |  | full | full | partial | partial | partial | full | none | full |
 
 ## Suggested Next Columns
 

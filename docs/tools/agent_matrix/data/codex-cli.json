@@ -30,9 +30,9 @@
     "comment": "Open-source CLI public release."
   },
   "latest_major_update": {
-    "value": "Jul '26",
-    "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.143.0#source:~:text=Remote%20plugins%20are%20now%20enabled%20by%20default",
-    "comment": "Latest stable Codex CLI release rust-v0.143.0 (July 8, 2026) enables remote plugins by default, adds system-proxy routing, manual remote-control pairing, Bedrock GPT-5.6 model entries, MCP tool-search/auth updates, app-server environment/thread/fork APIs, and multiple Windows, sandbox, recovery, trace, and dependency fixes."
+    "value": "Sep '26",
+    "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.152.1#source:~:text=Guardian%20approval%20review%20now%20honors%20Node%20REPL%20policies",
+    "comment": "Latest stable Codex CLI release rust-v0.152.1 (September 1, 2026) fixes Guardian approval handling for Node REPL policies. v0.152.0 added Vim draft search, rate-limit actions, credential-refresh progress, broader MCP server naming, and multiple sandbox and reliability improvements."
   },
   "rules": {
     "support": "full",

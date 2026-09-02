@@ -49,6 +49,7 @@ AGENTS: dict[str, AgentSpec] = {
     "kilo": AgentSpec("kilo", "", "", "pro"),
     "kimi": AgentSpec("kimi", "", "", "pro"),
     "kiro": AgentSpec("kiro-cli", "", "", "pro"),
+    "kirocrew": AgentSpec("kirocrew", "", "", "pro"),
     "mimo": AgentSpec("mimo", "", "", "pro"),
     "muse": AgentSpec("muse", "muse-spark-1.2", "muse-spark-1.2", "pro"),
     "opencode": AgentSpec("opencode", "opencode-go/deepseek-v4-flash", "opencode-go/qwen3.7-max", "pro"),
@@ -88,6 +89,7 @@ DEFAULT_AGENT_ORDER = (
     "kilo",
     "kimi",
     "kiro",
+    "kirocrew",
     "mimo",
     "pi",
     "qwen",
@@ -208,6 +210,7 @@ MODEL_FLAG_AGENTS = {
     "kilo",
     "kimi",
     "kiro",
+    "kirocrew",
     "mimo",
     "muse",
     "opencode",
@@ -683,6 +686,12 @@ def mode_flags(agent: str, mode: str, non_interactive: bool) -> list[str]:
             "auto": [],
             "danger": ["--trust-all-tools"],
         },
+        "kirocrew": {
+            "ask": [],
+            "plan": [],
+            "auto": [],
+            "danger": [],
+        },
         "mimo": {
             "ask": ["--agent", "plan"],
             "plan": ["--agent", "plan"],
@@ -1007,6 +1016,14 @@ def build_command(args: argparse.Namespace) -> list[str]:
             cmd += ["--no-interactive"]
         if prompt:
             cmd.append(prompt)
+
+    elif agent == "kirocrew":
+        cmd += ["chat"]
+        cmd += mode_flags(agent, args.mode, non_interactive)
+        append_model(cmd, agent, model)
+        append_passthrough(cmd, args)
+        if prompt:
+            cmd += ["--message", prompt]
 
     elif agent == "mimo":
         if non_interactive:

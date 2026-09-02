@@ -26,9 +26,9 @@
     "comment": "Kiro entered public preview in 2025; CLI docs are now first-class."
   },
   "latest_major_update": {
-    "value": "Jun '26",
-    "source_url": "https://kiro.dev/docs/cli/reference/cli-commands/#source:~:text=Agent%20name%20is%20now%20a%20positional%20argument",
-    "comment": "June 2026 Kiro CLI docs refresh adds v1.26.0 custom-agent command changes, expanded model guidance, updated built-in tools, Kiro/Q Developer migration details, and refreshed powers/knowledge-management pages."
+    "value": "Aug '26",
+    "source_url": "https://kiro.dev/changelog/#kiro-web:~:text=branch%20selection",
+    "comment": "Kiro Web added branch selection on August 31, 2026; current IDE and CLI releases also shipped in late August."
   },
   "rules": {
     "support": "full",
@@ -116,9 +116,9 @@
     "comment": "No telemetry control found in the docs reviewed."
   },
   "hosted_agent": {
-    "support": "partial",
-    "source_url": "https://kiro.dev/cli/#get-started-with-kiro-cli:~:text=Kiro%20IDE%2C%20Kiro%20CLI%2C%20Kiro%20Web",
-    "comment": "Kiro Web exists, but the public CLI docs emphasize local terminal operation."
+    "support": "full",
+    "source_url": "https://kiro.dev/docs/cli/cloud-sessions/#cloud-sessions:~:text=cloud%20session",
+    "comment": "Kiro provides managed cloud sessions alongside local IDE and CLI execution."
   },
   "custom_model_provider": {
     "support": "none",
@@ -126,9 +126,9 @@
     "comment": "Docs describe Kiro's model set/Auto agent, not arbitrary model providers."
   },
   "pricing": {
-    "value": "Kiro Free; Pro $20/mo; Pro+ $40/mo; Power $200/mo; overages $0.04/credit on paid tiers",
-    "source_url": "https://kiro.dev/blog/new-pricing-plans-and-auto/#pricing-plans:~:text=Pro%20(%2420%2Fmonth)%2C%20Pro%2B%20(%2440%2Fmonth)%2C%20to%20Power%20(%24200%2Fmonth)",
-    "comment": "Kiro docs describe Free/Pro/Pro+/Pro Max/Power tiers; Kiro pricing blog gives Pro, Pro+, Power prices and overage pricing."
+    "value": "Free $0; Pro $20/mo; Pro+ $40/mo; Pro Max $100/mo; Power $200/mo; add-on credits $0.04",
+    "source_url": "https://kiro.dev/pricing/#pricing:~:text=Pro%20Max",
+    "comment": "Current Kiro pricing lists Free, Pro, Pro+, Pro Max, and Power tiers plus paid add-on credits."
   },
   "some_free_usage": {
     "support": "full",

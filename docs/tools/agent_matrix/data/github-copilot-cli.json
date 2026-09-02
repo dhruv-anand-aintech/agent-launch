@@ -22,9 +22,9 @@
     "comment": "Public preview announced September 25, 2025, authenticated with existing GitHub account, usable with existing Copilot Pro/Pro+/Business/Enterprise plans."
   },
   "latest_major_update": {
-    "value": "Feb '26",
-    "source_url": "https://github.blog/changelog/2026-02-25-github-copilot-cli-is-now-generally-available/#source:~:text=is%20now%20generally%20available",
-    "comment": "Reached general availability for all Copilot subscribers on Feb 25, 2026, adding autopilot mode, /diff and /review commands, cross-session repo memory, and auto-compaction. Later 2026 updates added cloud/local sandboxes (--cloud, /sandbox enable), a unified /settings command, rubber duck critic agent, voice input, and prompt scheduling."
+    "value": "Aug '26",
+    "source_url": "https://github.com/github/copilot-cli/releases/tag/v1.0.82#v1082:~:text=v1.0.82",
+    "comment": "Latest stable GitHub Copilot CLI release is v1.0.82 on August 29, 2026."
   },
   "rules": {
     "support": "full",
@@ -179,7 +179,7 @@
   },
   "some_free_usage": {
     "support": "partial",
-    "source_url": "https://pecollective.com/tools/github-copilot-pricing/#source:~:text=Free",
+    "source_url": "https://github.com/features/copilot/plans#pricing:~:text=Copilot%20Free",
     "comment": "GitHub Copilot Free plan includes limited chat/agent requests (e.g. 50 chat requests/mo) usable via the CLI, but no unlimited free local-model path is documented for Copilot CLI itself."
   },
   "no_account_required": {

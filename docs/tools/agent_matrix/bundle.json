@@ -405,16 +405,14 @@
     "form_factor": {
       "values": [
         "CLI",
-        "Extension",
         "SDK",
         "Web",
         "Mobile"
       ],
       "source_url": "https://ampcode.com/news/agents-everywhere#agents-everywhere:~:text=watching%20and%20driving%20all%20of%20your%20Amp%20agents%2C%20on%20web%2C%20mobile%2C%20and%20CLI",
-      "comment": "CLI TUI + IDE extensions (VS Code, JetBrains, Neovim, Zed) + @ampcode/sdk (TypeScript) and amp-sdk (Python). June 2026 UI adds web and mobile surfaces for watching/driving agents. Per-form-factor links: CLI: https://ampcode.com/manual#getting-started; Extension: https://ampcode.com/manual/vscode; SDK: https://ampcode.com/manual/sdk; Web: https://ampcode.com/news/agents-everywhere; Mobile: https://ampcode.com/news/agents-everywhere.",
+      "comment": "CLI TUI plus @ampcode/sdk (TypeScript) and amp-sdk (Python), with web and mobile surfaces for watching and driving agents. Amp ended its legacy IDE extensions in March 2026. Per-form-factor links: CLI: https://ampcode.com/manual#getting-started; SDK: https://ampcode.com/manual/sdk; Web: https://ampcode.com/news/agents-everywhere; Mobile: https://ampcode.com/news/agents-everywhere.",
       "links": {
         "CLI": "https://ampcode.com/manual#getting-started",
-        "Extension": "https://ampcode.com/manual/vscode",
         "SDK": "https://ampcode.com/manual/sdk",
         "Web": "https://ampcode.com/news/agents-everywhere",
         "Mobile": "https://ampcode.com/news/agents-everywhere"
@@ -427,10 +425,10 @@
       "sort_date": "2025-05-01"
     },
     "latest_major_update": {
-      "value": "Jun '26",
-      "source_url": "https://ampcode.com/news/custom-agents#custom-agents:~:text=You%20can%20now%20create%20custom%20agents%20in%20Amp%20with%20plugins",
-      "comment": "June 19, 2026 - Amp added custom agents via plugins, usable as the main agent, as subagents, in amp -x tool pipelines, or as many parallel worker agents.",
-      "sort_date": "2026-06-01"
+      "value": "Aug '26",
+      "source_url": "https://ampcode.com/news/multi-repo-projects#multi-repo-projects:~:text=multi-repository%20projects",
+      "comment": "August 27, 2026 - Amp added multi-repository projects with persistent workspace configuration and shared agent context across repositories.",
+      "sort_date": "2026-08-01"
     },
     "rules": {
       "support": "full",
@@ -534,9 +532,9 @@
       "comment": "Amp documents a free mode for interactive editor/CLI use, with limits and availability caveats."
     },
     "hosted_agent": {
-      "support": "none",
-      "source_url": "https://ampcode.com/manual#source:~:text=Amp%20is%20the%20frontier%20coding%20agent%20for%20your%20terminal%20and%20editor",
-      "comment": "CLI runs locally. Threads shared via web but no managed agent platform."
+      "support": "full",
+      "source_url": "https://ampcode.com/news/agents-everywhere#agents-everywhere:~:text=web%2C%20mobile%2C%20and%20CLI",
+      "comment": "Amp provides hosted orbs with durable execution and web/mobile control of running agents, in addition to local CLI execution."
     },
     "transcripts": {
       "support": "unknown",
@@ -600,13 +598,15 @@
     "form_factor": {
       "values": [
         "CLI",
-        "IDE"
+        "IDE",
+        "Web"
       ],
       "source_url": "https://antigravity.google/docs/getting-started#clip0_6001_463:~:text=CLI",
-      "comment": "Google Antigravity IDE plus standalone agy CLI (plugin layout, rules, skills, hooks, MCP). Per-form-factor links: CLI: https://antigravity.google/docs/cli-getting-started; IDE: https://antigravity.google/download.",
+      "comment": "Google Antigravity IDE plus standalone agy CLI and Remote Control in a browser. Remote Control connects back to the user's running desktop agent. Per-form-factor links: CLI: https://antigravity.google/docs/cli-getting-started; IDE: https://antigravity.google/download; Web: https://antigravity.google/docs/remote-control.",
       "links": {
         "CLI": "https://antigravity.google/docs/cli-getting-started",
-        "IDE": "https://antigravity.google/download"
+        "IDE": "https://antigravity.google/download",
+        "Web": "https://antigravity.google/docs/remote-control"
       }
     },
     "released_in": {
@@ -616,10 +616,10 @@
       "sort_date": "2025-01-01"
     },
     "latest_major_update": {
-      "value": "May '26",
-      "source_url": "https://antigravity.google/docs/cli-features#source:~:text=plugins",
-      "comment": "CLI plugin system and IDE agent surfaces updated together in current docs.",
-      "sort_date": "2026-05-01"
+      "value": "Aug '26",
+      "source_url": "https://antigravity.google/changelog#august-2026:~:text=1.1.21",
+      "comment": "Antigravity CLI 1.1.21 shipped August 26, 2026, following IDE 2.10.0 and the August Remote Control launch.",
+      "sort_date": "2026-08-01"
     },
     "rules": {
       "support": "full",
@@ -811,10 +811,10 @@
       "sort_date": "2025-02-01"
     },
     "latest_major_update": {
-      "value": "Jul '26",
-      "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.205#source:~:text=Added%20an%20auto%20mode%20rule%20that%20blocks%20tampering%20with%20session%20transcript%20files",
-      "comment": "Latest release v2.1.205 (July 8, 2026) adds an auto-mode rule blocking transcript tampering, improves background-agent/task state, expands /doctor setup checks, streams auto-update downloads to disk, and fixes JSON schema, Windows worktree, MCP import, LSP, watcher, PR-linking, and remote-control issues.",
-      "sort_date": "2026-07-22"
+      "value": "Sep '26",
+      "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.258#source:~:text=Fixed%20Claude%20Code%20failing%20to%20launch%20on%20macOS%2012",
+      "comment": "Latest stable release v2.1.258 (September 1, 2026) fixes a macOS 12 launch regression and remote or scheduled sessions failing after reconnect. Recent releases also added Claude Fable 5.1, time-zone settings, model-switch hooks, and restricted mode.",
+      "sort_date": "2026-09-01"
     },
     "rules": {
       "support": "full",
@@ -980,14 +980,16 @@
       "values": [
         "Extension",
         "CLI",
-        "SDK"
+        "SDK",
+        "Desktop App"
       ],
       "source_url": "https://marketplace.visualstudio.com/items?itemName=saoudrizwan.claude-dev#add-a-tool-that:~:text=Extension",
-      "comment": "VS Code extension, JetBrains plugin, CLI, and @cline/sdk for embedding the agent runtime in apps and CI. Per-form-factor links: Extension: https://marketplace.visualstudio.com/items?itemName=saoudrizwan.claude-dev; CLI: https://docs.cline.bot/cli/overview; SDK: https://docs.cline.bot/sdk/overview.",
+      "comment": "VS Code extension, JetBrains plugin, CLI, desktop app, and @cline/sdk for embedding the agent runtime in apps and CI. Per-form-factor links: Extension: https://marketplace.visualstudio.com/items?itemName=saoudrizwan.claude-dev; CLI: https://docs.cline.bot/cli/overview; SDK: https://docs.cline.bot/sdk/overview; Desktop App: https://github.com/cline/cline/releases/tag/desktop-v0.0.22.",
       "links": {
         "Extension": "https://marketplace.visualstudio.com/items?itemName=saoudrizwan.claude-dev",
         "CLI": "https://docs.cline.bot/cli/overview",
-        "SDK": "https://docs.cline.bot/sdk/overview"
+        "SDK": "https://docs.cline.bot/sdk/overview",
+        "Desktop App": "https://github.com/cline/cline/releases/tag/desktop-v0.0.22"
       }
     },
     "released_in": {
@@ -997,10 +999,10 @@
       "sort_date": "2024-07-01"
     },
     "latest_major_update": {
-      "value": "Jul '26",
-      "source_url": "https://github.com/cline/cline/releases/tag/cli-v3.0.39#source:~:text=You%20can%20now%20select%20Cline%20free%20models%20on%20the%20ClinePass%20provider%20in%20the%20model%20picker",
-      "comment": "Latest public Cline release cli-v3.0.39 (July 9, 2026) adds Cline free models to the ClinePass picker, removes retired GLM 5.1 metadata, fixes Codex model metadata, reports more accurate str_replace diffs, preserves canonical history during compaction, and updates telemetry/client identity behavior.",
-      "sort_date": "2026-07-23"
+      "value": "Sep '26",
+      "source_url": "https://github.com/cline/cline/releases/tag/v4.1.17#v4117:~:text=v4.1.17",
+      "comment": "Latest main Cline release is v4.1.17 on September 2, 2026; the current CLI release is v3.0.61 and desktop release is v0.0.22.",
+      "sort_date": "2026-09-02"
     },
     "rules": {
       "support": "full",
@@ -1202,10 +1204,10 @@
       "sort_date": "2025-04-01"
     },
     "latest_major_update": {
-      "value": "Jul '26",
-      "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.143.0#source:~:text=Remote%20plugins%20are%20now%20enabled%20by%20default",
-      "comment": "Latest stable Codex CLI release rust-v0.143.0 (July 8, 2026) enables remote plugins by default, adds system-proxy routing, manual remote-control pairing, Bedrock GPT-5.6 model entries, MCP tool-search/auth updates, app-server environment/thread/fork APIs, and multiple Windows, sandbox, recovery, trace, and dependency fixes.",
-      "sort_date": "2026-07-23"
+      "value": "Sep '26",
+      "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.152.1#source:~:text=Guardian%20approval%20review%20now%20honors%20Node%20REPL%20policies",
+      "comment": "Latest stable Codex CLI release rust-v0.152.1 (September 1, 2026) fixes Guardian approval handling for Node REPL policies. v0.152.0 added Vim draft search, rate-limit actions, credential-refresh progress, broader MCP server naming, and multiple sandbox and reliability improvements.",
+      "sort_date": "2026-09-02"
     },
     "rules": {
       "support": "full",
@@ -1565,14 +1567,16 @@
       "values": [
         "CLI",
         "Extension",
-        "Web"
+        "Web",
+        "Desktop App"
       ],
       "source_url": "https://commandcode.ai/docs/quickstart#install-command-code:~:text=Command%20Code%20is%20available%20globally%20as%20%60command-code%60%20or%20the%20shorter%20alias%20%60cmd%60",
-      "comment": "Terminal coding agent exposed as `cmd`/`command-code`, with IDE integration and Studio/account surfaces. Per-form-factor links: CLI: https://commandcode.ai/docs/quickstart; Extension: https://commandcode.ai/docs/ide-integration; Web: https://commandcode.ai/docs/studio.",
+      "comment": "Terminal coding agent exposed as `cmd`/`command-code`, with IDE integration, Studio/account surfaces, and a desktop app. Per-form-factor links: CLI: https://commandcode.ai/docs/quickstart; Extension: https://commandcode.ai/docs/ide-integration; Web: https://commandcode.ai/docs/studio; Desktop App: https://commandcode.ai/changelog.",
       "links": {
         "CLI": "https://commandcode.ai/docs/quickstart",
         "Extension": "https://commandcode.ai/docs/ide-integration",
-        "Web": "https://commandcode.ai/docs/studio"
+        "Web": "https://commandcode.ai/docs/studio",
+        "Desktop App": "https://commandcode.ai/changelog"
       }
     },
     "released_in": {
@@ -1582,10 +1586,10 @@
       "sort_date": "2026-07-01"
     },
     "latest_major_update": {
-      "value": "Jul '26",
-      "source_url": "https://commandcode.ai/changelog#july:~:text=%2F%2Fv%200.43.1",
-      "comment": "Latest public changelog entry v0.43.1 (July 8, 2026) fixes the auto-updater script after v0.43.0 removed a dead bin/run.mjs fallback; v0.42.0 added memory management and sliding session windowing.",
-      "sort_date": "2026-07-01"
+      "value": "Aug '26",
+      "source_url": "https://commandcode.ai/changelog#august:~:text=v%201.38.0",
+      "comment": "The August 2026 changelog lists CLI v1.38.0 and desktop v0.1.19 as the latest public builds.",
+      "sort_date": "2026-08-01"
     },
     "pricing": {
       "value": "Go $1/mo, Pro $15/mo, Max 10x $100/mo, Max 20x $200/mo; monthly credits and top-ups; BYOK/provider options documented",
@@ -1781,10 +1785,10 @@
       "sort_date": "2025-07-29"
     },
     "latest_major_update": {
-      "value": "Jul '26",
-      "source_url": "https://github.com/charmbracelet/crush/releases/tag/v0.83.0#source:~:text=Prep%20for%20GPT-5.6",
-      "comment": "Latest tagged release v0.83.0 (July 8, 2026) prepares Crush for GPT-5.6 and fixes bang-mode history navigation so previous Bash-command prompts do not gain an extra exclamation mark.",
-      "sort_date": "2026-07-23"
+      "value": "Sep '26",
+      "source_url": "https://github.com/charmbracelet/crush/releases/tag/v0.92.0#source:~:text=Compact%20Exit%20Banner",
+      "comment": "Latest stable release v0.92.0 (August 31, 2026) adds compact exit-banner configuration and related UI fixes. Recent releases also added text selection, improved mouse support, MCP OAuth fixes, LSP tools, and .crushrc configuration.",
+      "sort_date": "2026-09-01"
     },
     "rules": {
       "support": "full",
@@ -1966,15 +1970,17 @@
         "IDE",
         "CLI",
         "SDK",
-        "Mobile"
+        "Mobile",
+        "Web"
       ],
       "source_url": "https://cursor.com/changelog#cursor-mobile-app-for-ios:~:text=Cursor%20for%20iOS%20is%20now%20available%20in%20public%20beta%20on%20all%20paid%20plans",
-      "comment": "VS Code-derived AI IDE with standalone CLI (cursor-agent), @cursor/sdk (TypeScript/Python), and iOS mobile app for launching/managing cloud agents. Per-form-factor links: IDE: https://cursor.com/downloads; CLI: https://docs.cursor.com/en/cli/installation; SDK: https://cursor.com/docs/sdk/typescript; Mobile: https://cursor.com/changelog#cursor-mobile-app-for-ios.",
+      "comment": "VS Code-derived AI IDE with standalone CLI (cursor-agent), @cursor/sdk (TypeScript/Python), iOS mobile app, and browser access for launching and managing cloud agents. Per-form-factor links: IDE: https://cursor.com/downloads; CLI: https://docs.cursor.com/en/cli/installation; SDK: https://cursor.com/docs/sdk/typescript; Mobile: https://cursor.com/changelog#cursor-mobile-app-for-ios; Web: https://cursor.com/agents.",
       "links": {
         "IDE": "https://cursor.com/downloads",
         "CLI": "https://docs.cursor.com/en/cli/installation",
         "SDK": "https://cursor.com/docs/sdk/typescript",
-        "Mobile": "https://cursor.com/changelog#cursor-mobile-app-for-ios"
+        "Mobile": "https://cursor.com/changelog#cursor-mobile-app-for-ios",
+        "Web": "https://cursor.com/agents"
       }
     },
     "released_in": {
@@ -1984,10 +1990,10 @@
       "sort_date": "2023-01-01"
     },
     "latest_major_update": {
-      "value": "Jun '26",
-      "source_url": "https://cursor.com/changelog#mcps-and-organizations-in-team-marketplaces:~:text=Admins%20can%20now%20configure%20Team%20MCP%20servers%20once%20and%20distribute%20them%20across%20cloud%20agents%2C%20the%20agents%20window%2C%20IDE%2C%20and%20CLI",
-      "comment": "June 30, 2026 changelog expands Team Marketplaces with Team MCP servers distributed across cloud agents, the agents window, IDE, and CLI, plus organization-group marketplace access. June 29 also added the Cursor iOS public beta for launching and managing cloud agents from mobile.",
-      "sort_date": "2026-06-01"
+      "value": "Aug '26",
+      "source_url": "https://cursor.com/changelog#start-from-scratch-without-a-repo:~:text=Start%20from%20scratch",
+      "comment": "August 27, 2026 added the ability to start new cloud-agent work without an existing repository; August updates also added cloud-agent subscriptions, goals, and scheduled tasks.",
+      "sort_date": "2026-08-01"
     },
     "rules": {
       "support": "full",
@@ -2177,10 +2183,10 @@
       "sort_date": "2024-12-01"
     },
     "latest_major_update": {
-      "value": "Jul '26",
-      "source_url": "https://docs.devin.ai/release-notes/2026#july-1-2026:~:text=Network%20Access%20Requests%20In%20network-restricted%20sessions%2C%20Devin%20can%20now%20request%20access%20to%20specific%20domains",
-      "comment": "July 1, 2026 release notes add network access requests for restricted sessions, PR-link preferences, persisted default model selection, Slack bidirectional thread sync and bang-command improvements, MCP read-only mode, webhook setup improvements, skills analytics, ACU audit trails, redesigned environments, cross-platform repository cloning, and numerous review/analytics/UI fixes.",
-      "sort_date": "2026-07-01"
+      "value": "Aug '26",
+      "source_url": "https://docs.devin.ai/release-notes/2026#august-28-2026:~:text=August%2028%2C%202026",
+      "comment": "The latest official Devin release notes were updated August 28, 2026 with current agent, review, integration, and platform improvements.",
+      "sort_date": "2026-08-01"
     },
     "rules": {
       "support": "full",
@@ -2351,14 +2357,18 @@
       "values": [
         "CLI",
         "Extension",
-        "Web"
+        "Web",
+        "Desktop App",
+        "SDK"
       ],
       "source_url": "https://docs.factory.ai/reference/cli-reference#page-title:~:text=CLI",
-      "comment": "Droid CLI plus Factory App, IDE integrations, and Droid Computers. Per-form-factor links: CLI: https://docs.factory.ai/reference/cli-reference; Extension: https://docs.factory.ai/integrations/ide-integrations; Web: https://app.factory.ai/.",
+      "comment": "Droid CLI plus Factory web and desktop apps, IDE integrations, SDK, and Droid Computers. Per-form-factor links: CLI: https://docs.factory.ai/reference/cli-reference; Extension: https://docs.factory.ai/integrations/ide-integrations; Web: https://app.factory.ai/; Desktop App: https://factory.ai/download; SDK: https://docs.factory.ai/sdk/overview.",
       "links": {
         "CLI": "https://docs.factory.ai/reference/cli-reference",
         "Extension": "https://docs.factory.ai/integrations/ide-integrations",
-        "Web": "https://app.factory.ai/"
+        "Web": "https://app.factory.ai/",
+        "Desktop App": "https://factory.ai/download",
+        "SDK": "https://docs.factory.ai/sdk/overview"
       }
     },
     "released_in": {
@@ -2368,10 +2378,10 @@
       "sort_date": "2025-01-01"
     },
     "latest_major_update": {
-      "value": "Jun '26",
-      "source_url": "https://docs.factory.ai/models#source:~:text=As%20of%20June%2012%2C%202026",
-      "comment": "June 2026 Factory model/docs refresh: available-models guidance updated with new managed and Droid Core coding models, reasoning effort options, multipliers, and current CLI defaults.",
-      "sort_date": "2026-06-01"
+      "value": "Sep '26",
+      "source_url": "https://factory.ai/changelog#september-2026:~:text=0.209.0",
+      "comment": "Factory's September 1, 2026 changelog lists Droid CLI v0.209.0 and desktop v0.166.0.",
+      "sort_date": "2026-09-01"
     },
     "rules": {
       "support": "full",
@@ -2459,9 +2469,9 @@
       "comment": "Analytics/compliance APIs exist, but no user telemetry opt-out setting found."
     },
     "hosted_agent": {
-      "support": "partial",
-      "source_url": "https://docs.factory.ai/reference/cli-reference#platform:~:text=Factory%20App",
-      "comment": "Factory App and Droid Computers exist; CLI can register machines and run daemon/server flows."
+      "support": "full",
+      "source_url": "https://factory.ai/pricing#plans:~:text=Cloud%20and%20local%20background%20agents",
+      "comment": "Factory includes cloud and local background agents, Factory App, and managed Droid Computers."
     },
     "custom_model_provider": {
       "support": "full",
@@ -2469,9 +2479,9 @@
       "comment": "Bring Your Own Key/custom model path is documented."
     },
     "pricing": {
-      "value": "Pro $20/mo; Plus $100/mo; Max $200/mo; Teams custom; Extra Usage prepaid $10 minimum; Droid Core free",
-      "source_url": "https://docs.factory.ai/pricing#plans:~:text=Pro%20%E2%80%94%20%2420%2Fmo",
-      "comment": "Factory docs list Pro, Plus, Max, Teams, Droid Core, and prepaid Extra Usage; Droid CLI/App/SDK are included in the paid Factory plans."
+      "value": "Pro $20/mo; Plus $100/mo; Max $200/mo; Teams $60 base plus $40/seat/mo; Extra Usage prepaid; Droid Core free",
+      "source_url": "https://factory.ai/pricing#plans:~:text=Pro%20%2420",
+      "comment": "Factory pricing lists Pro, Plus, Max, and Teams plans, with Droid CLI, desktop, web, and SDK access plus a free Droid Core model."
     },
     "no_account_required": {
       "support": "partial",
@@ -2561,10 +2571,10 @@
       "sort_date": "2025-06-01"
     },
     "latest_major_update": {
-      "value": "Jul '26",
-      "source_url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.50.0#source:~:text=Feat%2Ftool%20registry%20discovery",
-      "comment": "Latest Gemini CLI release v0.50.0 (July 8, 2026) adds tool-registry discovery and release-verification safeguards that prevent workspace binary shadowing, bad npm releases, and promote-job crashes.",
-      "sort_date": "2026-07-01"
+      "value": "Sep '26",
+      "source_url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.58.0#source:~:text=ensure%20consistent%20symlink%20evaluation",
+      "comment": "Latest stable Gemini CLI release v0.58.0 (September 1, 2026) tightens symlink evaluation and isolates Docker or container runtime sockets in sandboxed execution, alongside release and reliability fixes. Nightly and preview tags are excluded.",
+      "sort_date": "2026-09-01"
     },
     "rules": {
       "support": "full",
@@ -2753,10 +2763,10 @@
       "sort_date": "2025-09-01"
     },
     "latest_major_update": {
-      "value": "Jul '26",
-      "source_url": "https://github.blog/changelog/2026-02-25-github-copilot-cli-is-now-generally-available/#source:~:text=is%20now%20generally%20available",
-      "comment": "Reached general availability for all Copilot subscribers on Feb 25, 2026, adding autopilot mode, /diff and /review commands, cross-session repo memory, and auto-compaction. Later 2026 updates added cloud/local sandboxes (--cloud, /sandbox enable), a unified /settings command, rubber duck critic agent, voice input, and prompt scheduling.",
-      "sort_date": "2026-07-21"
+      "value": "Aug '26",
+      "source_url": "https://github.com/github/copilot-cli/releases/tag/v1.0.82#v1082:~:text=v1.0.82",
+      "comment": "Latest stable GitHub Copilot CLI release is v1.0.82 on August 29, 2026.",
+      "sort_date": "2026-08-29"
     },
     "rules": {
       "support": "full",
@@ -2911,7 +2921,7 @@
     },
     "some_free_usage": {
       "support": "partial",
-      "source_url": "https://pecollective.com/tools/github-copilot-pricing/#source:~:text=Free",
+      "source_url": "https://github.com/features/copilot/plans#pricing:~:text=Copilot%20Free",
       "comment": "GitHub Copilot Free plan includes limited chat/agent requests (e.g. 50 chat requests/mo) usable via the CLI, but no unlimited free local-model path is documented for Copilot CLI itself."
     },
     "no_account_required": {
@@ -2958,10 +2968,10 @@
       "sort_date": "2025-06-01"
     },
     "latest_major_update": {
-      "value": "May '26",
-      "source_url": "https://docs.github.com/en/copilot/how-tos/github-copilot-app#source:~:text=A%20desktop%20application%20for%20agent-driven%20development%20that%20brings%20parallel%20workstreams%2C%20GitHub%20integration%2C%20and%20PR%20lifecycle%20management%20into%20one%20place.",
-      "comment": "Copilot desktop app (technical preview): parallel agent sessions, PR lifecycle, scheduled workflows. Third-party agent support added. Usage-based billing announced.",
-      "sort_date": "2026-05-01"
+      "value": "Aug '26",
+      "source_url": "https://github.blog/changelog/2026-08-31-github-copilot-in-vs-code-august-release-v1-108/#github-copilot-in-vs-code-august-release-v1108:~:text=August%20release",
+      "comment": "GitHub's August 31, 2026 Copilot release added the latest agent and IDE capabilities; August also brought the coding-agent harness to JetBrains generally and expanded Slack and Teams integrations.",
+      "sort_date": "2026-08-01"
     },
     "rules": {
       "support": "full",
@@ -3142,10 +3152,10 @@
       "sort_date": "2025-01-01"
     },
     "latest_major_update": {
-      "value": "Jul '26",
-      "source_url": "https://github.com/aaif-goose/goose/releases/tag/v1.41.0#source:~:text=Summon%20peek%20mode%20for%20async%20background%20tasks",
-      "comment": "Latest AAIF Goose release v1.41.0 (July 3, 2026) adds /status, edit-before-fork, summon peek/context/working_dir enhancements for async delegated tasks, structured summon metadata, GLM-5.2, MLX local inference, many declarative providers, extra desktop locales, streamable HTTP deeplinks, and global ~/.agents/AGENTS.md hints.",
-      "sort_date": "2026-07-23"
+      "value": "Sep '26",
+      "source_url": "https://github.com/aaif-goose/goose/releases/tag/v1.48.0#source:~:text=TrustedRouter%20declarative%20provider",
+      "comment": "Latest AAIF Goose release v1.48.0 (August 27, 2026) adds TrustedRouter and OpenCode Zen declarative providers plus further provider, extension, and reliability updates. Recent releases also added an unrolled agent loop and improved streamable HTTP OAuth support.",
+      "sort_date": "2026-09-02"
     },
     "rules": {
       "support": "full",
@@ -3324,12 +3334,16 @@
     },
     "form_factor": {
       "values": [
-        "CLI"
+        "CLI",
+        "Web",
+        "Mobile"
       ],
       "source_url": "https://x.ai/news/grok-build-cli#source:~:text=CLI",
-      "comment": "Terminal-native coding agent and CLI in early beta. Per-form-factor links: CLI: https://x.ai/news/grok-build-cli.",
+      "comment": "Grok Build is available as a terminal-native CLI and through Grok on web and mobile. Per-form-factor links: CLI: https://x.ai/news/grok-build-cli; Web: https://grok.com/; Mobile: https://x.ai/news/grok-build-everywhere.",
       "links": {
-        "CLI": "https://x.ai/news/grok-build-cli"
+        "CLI": "https://x.ai/news/grok-build-cli",
+        "Web": "https://grok.com/",
+        "Mobile": "https://x.ai/news/grok-build-everywhere"
       }
     },
     "released_in": {
@@ -3339,10 +3353,10 @@
       "sort_date": "2026-05-01"
     },
     "latest_major_update": {
-      "value": "Jun '26",
-      "source_url": "https://x.ai/news/introducing-goal#introducing-goal:~:text=Use%20%2Fgoal%20for%20long-running%20autonomous%20task%20execution%20in%20Grok%20Build",
-      "comment": "June 2026 updates added `/goal` for long-running autonomous execution, a plugin marketplace, an agent dashboard for parallel sessions, and Composer 2.5 model access in Grok Build.",
-      "sort_date": "2026-06-01"
+      "value": "Aug '26",
+      "source_url": "https://x.ai/news/grok-build-everywhere#grok-build-everywhere:~:text=web%20and%20mobile",
+      "comment": "On August 19, 2026, xAI expanded Grok Build to web and mobile and made it available across Grok plans; CLI v1.0.3 shipped August 12.",
+      "sort_date": "2026-08-01"
     },
     "rules": {
       "support": "full",
@@ -3430,9 +3444,9 @@
       "comment": "No user-visible telemetry opt-out setting found in public launch docs."
     },
     "hosted_agent": {
-      "support": "none",
-      "source_url": "https://x.ai/news/grok-build-cli#introducing-grok-build:~:text=runs%20right%20from%20your%20terminal",
-      "comment": "Documented as a terminal CLI, not a managed hosted worker."
+      "support": "full",
+      "source_url": "https://x.ai/news/grok-build-everywhere#grok-build-everywhere:~:text=August%2019%2C%202026",
+      "comment": "Grok Build now runs as a hosted builder on Grok web and mobile in addition to the local CLI."
     },
     "custom_model_provider": {
       "support": "partial",
@@ -3440,9 +3454,9 @@
       "comment": "Config references models and API keys, but arbitrary OpenAI-compatible provider support is not documented."
     },
     "pricing": {
-      "value": "Included for SuperGrok and X Premium Plus subscribers during beta; broader Grok plans include Free/SuperGrok/Business/Enterprise",
-      "source_url": "https://x.ai/news/grok-build-cli#introducing-grok-build:~:text=Available%20now%20to%20all%20SuperGrok%20and%20X%20Premium%20Plus%20subscribers",
-      "comment": "The Grok Build launch says beta access is for SuperGrok and X Premium Plus subscribers; xAI also publishes broader Grok Free, SuperGrok, Business, and Enterprise plans."
+      "value": "Included across Grok plans, including Free; higher usage on paid SuperGrok, X Premium Plus, Business, and Enterprise plans",
+      "source_url": "https://x.ai/news/grok-build-everywhere#grok-build-everywhere:~:text=every%20Grok%20plan",
+      "comment": "xAI says Grok Build is available on every Grok plan, with plan-based limits."
     },
     "notes": "Early beta. Strong documented parity on AGENTS.md, skills, hooks, MCP, headless mode, ACP, and parallel subagents; lower confidence for session management and telemetry because public docs are still sparse.",
     "transcripts": {
@@ -3711,10 +3725,10 @@
       "sort_date": "2025-01-01"
     },
     "latest_major_update": {
-      "value": "Jun '26",
-      "source_url": "https://junie.jetbrains.com/docs/junie-cli-extensions.html#add-and-configure-extensions:~:text=Extensions%20are%20reusable%20bundles%20that%20extend%20Junie%20CLI%20with%20project-specific%20or%20domain-specific%20capabilities",
-      "comment": "June 26, 2026 Junie CLI docs refresh documents extensions, AGENTS.md guidelines, custom slash commands, MCP configuration, custom subagents, hooks, BYOK/custom models, headless CI/CD, GitHub Action, GitLab CI/CD, and Remote Mode.",
-      "sort_date": "2026-06-01"
+      "value": "Aug '26",
+      "source_url": "https://blog.jetbrains.com/junie/2026/08/24/introducing-junie-local/#introducing-junie-local:~:text=Junie%20Local",
+      "comment": "JetBrains introduced Junie Local on August 24, 2026, a free fully local coding-agent mode for Mac.",
+      "sort_date": "2026-08-01"
     },
     "rules": {
       "support": "full",
@@ -3895,10 +3909,10 @@
       "sort_date": "2026-02-01"
     },
     "latest_major_update": {
-      "value": "Jul '26",
-      "source_url": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.4.5#source:~:text=No%20notable%20changes",
-      "comment": "Latest release checked: v7.4.5 (July 9, 2026). Release notes say no notable changes.",
-      "sort_date": "2026-07-23"
+      "value": "Sep '26",
+      "source_url": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.5.6#source:~:text=Reference%20other%20Agent%20Manager%20worktrees",
+      "comment": "Latest stable main-product release v7.5.6 (August 28, 2026) adds searchable references to other Agent Manager worktrees, including paths, branches, and session IDs. Component-only JetBrains tags are not treated as the main release.",
+      "sort_date": "2026-09-01"
     },
     "rules": {
       "support": "full",
@@ -4068,38 +4082,36 @@
     }
   },
   {
-    "name": "Kimi CLI",
+    "name": "Kimi Code CLI",
     "links": {
-      "docs": "https://www.kimi.com/code/docs/en/kimi-code-cli/getting-started.html",
-      "github": "https://github.com/MoonshotAI/kimi-cli",
-      "website": "https://kimi.moonshot.cn/",
+      "docs": "https://moonshotai.github.io/kimi-code/en/",
+      "github": "https://github.com/MoonshotAI/kimi-code",
+      "website": "https://code.kimi.com/",
       "slug": "kimi-cli"
     },
     "form_factor": {
       "values": [
         "CLI",
-        "Extension",
-        "SDK"
+        "Extension"
       ],
-      "source_url": "https://github.com/MoonshotAI/kimi-cli#moonshotaikimi-cli:~:text=CLI",
-      "comment": "CLI + VS Code + Zed + JetBrains via ACP, plus @moonshot-ai/kimi-agent-sdk (Node/Go/Python). Per-form-factor links: CLI: https://github.com/MoonshotAI/kimi-cli; Extension: https://www.kimi.com/help/kimi-code/vscode-getting-started; SDK: https://github.com/MoonshotAI/kimi-agent-sdk.",
+      "source_url": "https://github.com/MoonshotAI/kimi-code#what-is-kimi-code-cli:~:text=AI%20coding%20agent%20that%20runs%20in%20your%20terminal",
+      "comment": "The successor Kimi Code CLI runs in the terminal and integrates with ACP-compatible editors and IDEs such as Zed and JetBrains. Per-form-factor links: CLI: https://moonshotai.github.io/kimi-code/en/guides/getting-started; Extension: https://moonshotai.github.io/kimi-code/en/guides/ides.",
       "links": {
-        "CLI": "https://github.com/MoonshotAI/kimi-cli",
-        "Extension": "https://www.kimi.com/help/kimi-code/vscode-getting-started",
-        "SDK": "https://github.com/MoonshotAI/kimi-agent-sdk"
+        "CLI": "https://moonshotai.github.io/kimi-code/en/guides/getting-started",
+        "Extension": "https://moonshotai.github.io/kimi-code/en/guides/ides"
       }
     },
     "released_in": {
-      "value": "Oct '25",
-      "source_url": "https://github.com/MoonshotAI/kimi-cli/releases/tag/1.48.0#source:~:text=1.48.0",
-      "comment": "First public release v0.34 on 2025-10-21. Reached v1.0 on 2026-01-27. Current latest release: v1.48.0 (2026-06-22).",
-      "sort_date": "2025-10-01"
+      "value": "May '26",
+      "source_url": "https://github.com/MoonshotAI/kimi-code#kimi-code-cli:~:text=Kimi%20Code%20CLI",
+      "comment": "Moonshot AI created the public Kimi Code successor repository in May 2026.",
+      "sort_date": "2026-05-01"
     },
     "latest_major_update": {
-      "value": "Jul '26",
-      "source_url": "https://github.com/MoonshotAI/kimi-cli/releases/tag/1.48.0#source:~:text=round-trip%20empty%20reasoning%20content",
-      "comment": "Latest release v1.48.0 (June 22, 2026) fixes empty reasoning-content round trips, escalates repeated-tool-call reminders, force-stops dead-end streaks, and bumps kosong to 0.54.0.",
-      "sort_date": "2026-07-16"
+      "value": "Sep '26",
+      "source_url": "https://github.com/MoonshotAI/kimi-code/releases/tag/%40moonshot-ai%2Fkimi-code%400.40.0#moonshot-aikimi-code0400:~:text=0.40.0",
+      "comment": "Kimi Code 0.40.0 shipped September 2, 2026 with default secondary-model subagents, a web plugin panel, session and compaction fixes, dangerous-command guards, and faster session forks.",
+      "sort_date": "2026-09-02"
     },
     "rules": {
       "support": "full",
@@ -4191,7 +4203,7 @@
       "source_url": "https://www.kimi.com/code/docs/en/kimi-code-cli/configuration/providers-and-models.html#provider-types:~:text=Provider%20Types",
       "comment": "Full custom provider support. providers table in config.toml with type, base_url, api_key, custom_headers. Six provider types including OpenAI-compatible, Anthropic, Gemini."
     },
-    "notes": "Kimi CLI by Moonshot AI (Beijing) is an Apache-2.0 open-source coding agent with rapid development pace (97 releases in 7 months). Strong AGENTS.md, skills, MCP, subagent, and YOLO/AFK approval mode support. Notable for status bar with badges and comprehensive JSON streaming output.",
+    "notes": "Kimi Code CLI is Moonshot AI's MIT-licensed successor to the archived Kimi CLI repository. It provides a single-binary terminal agent with AGENTS.md, skills, plugins, MCP, subagents, hooks, ACP editor integration, and configurable compatible model providers.",
     "pricing": {
       "value": "Kimi Code usage included in Kimi subscription credits; credit amounts vary by plan; API/token billing and BYOK also available",
       "source_url": "https://www.kimi.com/help/kimi-code/benefits#billing:~:text=Kimi%20Code%20usage%20is%20included%20in%20your%20subscription%20fee",
@@ -4199,7 +4211,7 @@
     },
     "hosted_agent": {
       "support": "none",
-      "source_url": "https://www.kimi.com/code/docs/en/kimi-code-cli/getting-started.html#what-is-kimi-code-cli:~:text=Kimi%20Code%20CLI%20is%20an%20AI%20agent%20that%20runs%20in%20the%20terminal",
+      "source_url": "https://github.com/MoonshotAI/kimi-code#what-is-kimi-code-cli:~:text=runs%20in%20your%20terminal",
       "comment": "Local CLI tool backed by Moonshot API."
     },
     "transcripts": {
@@ -4254,6 +4266,209 @@
     }
   },
   {
+    "name": "Kiro Crew",
+    "links": {
+      "docs": "https://kiro.dev/docs/crew/",
+      "github": "https://github.com/kirodotdev/KiroCrew",
+      "website": "https://kiro.dev/crew/",
+      "slug": "kiro-crew"
+    },
+    "form_factor": {
+      "values": [
+        "CLI",
+        "Desktop App",
+        "Web",
+        "Mobile"
+      ],
+      "source_url": "https://github.com/kirodotdev/KiroCrew#quick-start:~:text=desktop%20app%2C%20web%20dashboard%2C%20and%20CLI",
+      "comment": "Kiro Crew provides a local CLI, desktop app, responsive web dashboard, and mobile access through the dashboard and messaging integrations. Per-form-factor links: CLI: https://kiro.dev/docs/crew/; Desktop App: https://github.com/kirodotdev/KiroCrew/releases; Web: https://kiro.dev/crew/; Mobile: https://kiro.dev/crew/.",
+      "links": {
+        "CLI": "https://kiro.dev/docs/crew/",
+        "Desktop App": "https://github.com/kirodotdev/KiroCrew/releases",
+        "Web": "https://kiro.dev/crew/",
+        "Mobile": "https://kiro.dev/crew/"
+      }
+    },
+    "released_in": {
+      "value": "Aug '26",
+      "source_url": "https://kiro.dev/blog/introducing-kiro-crew/#introducing-kiro-crew:~:text=persistent%20development%20workspace",
+      "comment": "AWS and Kiro introduced Kiro Crew as an open-source persistent development workspace in August 2026.",
+      "sort_date": "2026-08-01"
+    },
+    "latest_major_update": {
+      "value": "Sep '26",
+      "source_url": "https://kiro.dev/changelog/crew/#kiro-crew:~:text=0.4.0",
+      "comment": "The official Kiro Crew changelog lists stable 0.4.0 on August 25, 2026; the official installer supplied 0.4.1rc1 during local validation on September 2.",
+      "sort_date": "2026-09-02"
+    },
+    "rules": {
+      "support": "full",
+      "source_url": "https://kiro.dev/blog/introducing-kiro-crew/#introducing-kiro-crew:~:text=Kiro%20Crew",
+      "comment": "Kiro Crew uses the underlying Kiro CLI and carries project steering and agent configuration into persistent workspaces."
+    },
+    "skills": {
+      "support": "full",
+      "source_url": "https://github.com/kirodotdev/KiroCrew#what-kiro-crew-does:~:text=skills%2C%20schedules%2C%20integrations",
+      "comment": "Crew Apps and persistent workspaces can combine agents, skills, schedules, integrations, and backend services."
+    },
+    "hooks": {
+      "support": "full",
+      "source_url": "https://kiro.dev/blog/introducing-kiro-crew/#introducing-kiro-crew:~:text=schedules",
+      "comment": "Kiro Crew inherits Kiro CLI hook support and adds scheduled and event-driven workspace automation."
+    },
+    "mcp_servers": {
+      "support": "full",
+      "source_url": "https://kiro.dev/changelog/crew/#kiro-crew:~:text=MCP",
+      "comment": "The launch changelog documents MCP-backed integrations in Crew workspaces."
+    },
+    "custom_commands": {
+      "support": "partial",
+      "source_url": "https://kiro.dev/docs/cli/reference/cli-commands/#cli-commands:~:text=chat",
+      "comment": "The CLI exposes built-in chat, run, spawn, cron, service, and gateway commands; arbitrary user-defined command registration is inherited from Kiro rather than Crew-specific."
+    },
+    "goal_command": {
+      "support": "full",
+      "source_url": "https://github.com/kirodotdev/KiroCrew#what-kiro-crew-does:~:text=unattended",
+      "comment": "Checkpointed run tasks continue autonomously across multiple steps and sessions."
+    },
+    "subagents": {
+      "support": "full",
+      "source_url": "https://github.com/kirodotdev/KiroCrew#what-kiro-crew-does:~:text=parallel",
+      "comment": "The spawn command and dashboard support parallel agents and isolated workstreams."
+    },
+    "monitor": {
+      "support": "full",
+      "source_url": "https://github.com/kirodotdev/KiroCrew#what-kiro-crew-does:~:text=heartbeats%20monitor",
+      "comment": "Heartbeats monitor systems until attention is needed, and the dashboard shows persistent task activity."
+    },
+    "model_selection": {
+      "support": "full",
+      "source_url": "https://kiro.dev/docs/cli/reference/cli-commands/#cli-commands:~:text=model",
+      "comment": "`kirocrew chat --model MODEL` selects the Kiro model for a session."
+    },
+    "approval_mode": {
+      "support": "full",
+      "source_url": "https://github.com/kirodotdev/KiroCrew#security-and-control:~:text=approval",
+      "comment": "Kiro Crew exposes workspace security and approval controls through Kiro CLI and its gateway."
+    },
+    "sandbox_mode": {
+      "support": "full",
+      "source_url": "https://github.com/kirodotdev/KiroCrew#security-and-control:~:text=sandbox",
+      "comment": "Local jail and container security modes are documented; `--no-jail` explicitly disables the default jail where supported."
+    },
+    "resume": {
+      "support": "full",
+      "source_url": "https://github.com/kirodotdev/KiroCrew#why-kiro-crew:~:text=persistent",
+      "comment": "Workspaces and checkpoints persist across sessions and restarts."
+    },
+    "continue": {
+      "support": "full",
+      "source_url": "https://github.com/kirodotdev/KiroCrew#why-kiro-crew:~:text=continues%20beyond%20one%20session",
+      "comment": "Kiro Crew is designed to continue development work beyond one session."
+    },
+    "non_interactive": {
+      "support": "full",
+      "source_url": "https://kiro.dev/docs/cli/reference/cli-commands/#cli-commands:~:text=message",
+      "comment": "`kirocrew chat --message MESSAGE` runs a one-message task, while `kirocrew run TASK.md` runs checkpointed autonomous work."
+    },
+    "output_format": {
+      "support": "partial",
+      "source_url": "https://kiro.dev/docs/cli/reference/cli-commands/#cli-commands:~:text=run",
+      "comment": "CLI output is pipe-friendly, but no dedicated JSON or NDJSON output flag was found in the verified help."
+    },
+    "statusline": {
+      "support": "none",
+      "source_url": "https://github.com/kirodotdev/KiroCrew#install-configure-and-operate:~:text=CLI",
+      "comment": "No user-configurable terminal statusline is documented."
+    },
+    "telemetry": {
+      "support": "full",
+      "source_url": "https://github.com/kirodotdev/KiroCrew#anonymous-usage-telemetry:~:text=telemetry",
+      "comment": "Anonymous usage telemetry is documented with controls for disabling it."
+    },
+    "custom_model_provider": {
+      "support": "none",
+      "source_url": "https://github.com/kirodotdev/KiroCrew#quick-start:~:text=Kiro%20device-code%20sign-in",
+      "comment": "Current Kiro Crew runs on Kiro CLI and Kiro device-code authentication; arbitrary provider backends are not documented."
+    },
+    "pricing": {
+      "value": "Open-source Apache-2.0 workspace; uses Kiro Free or paid Kiro plans",
+      "source_url": "https://kiro.dev/pricing/#pricing:~:text=Free",
+      "comment": "Kiro Crew itself is open source and runs on the user's hardware; model usage follows the current Kiro plan."
+    },
+    "some_free_usage": {
+      "support": "full",
+      "source_url": "https://kiro.dev/pricing/#pricing:~:text=Free",
+      "comment": "Kiro offers a perpetual Free tier that can be used with the open-source Kiro Crew workspace."
+    },
+    "no_account_required": {
+      "support": "none",
+      "source_url": "https://github.com/kirodotdev/KiroCrew#quick-start:~:text=device-code%20sign-in",
+      "comment": "First launch guides Kiro device-code sign-in."
+    },
+    "can_use_other_subscriptions": {
+      "support": "none",
+      "source_url": "https://github.com/kirodotdev/KiroCrew#quick-start:~:text=kiro-cli",
+      "comment": "Current setup uses Kiro authentication rather than other model-provider subscriptions."
+    },
+    "hosted_agent": {
+      "support": "none",
+      "source_url": "https://github.com/kirodotdev/KiroCrew#quick-start:~:text=runs%20locally%20or%20remotely%20on%20your%20hardware",
+      "comment": "Kiro Crew runs locally, on the user's remote hardware, or in the user's container. It is not a managed hosted agent service."
+    },
+    "transcripts": {
+      "support": "full",
+      "source_url": "https://github.com/kirodotdev/KiroCrew#why-kiro-crew:~:text=remembers%20across%20sessions",
+      "comment": "Persistent workspace history and checkpoints are core Crew features and are stored under the Crew data home."
+    },
+    "keyboard_shortcuts": {
+      "support": "partial",
+      "source_url": "https://github.com/kirodotdev/KiroCrew#quick-start:~:text=system-wide%20hotkey",
+      "comment": "The desktop app provides a system-wide hotkey; broader custom shortcut mapping is not documented."
+    },
+    "theme_customization": {
+      "support": "full",
+      "source_url": "https://github.com/kirodotdev/KiroCrew#quick-start:~:text=desktop%20app",
+      "comment": "The desktop and dashboard interfaces include selectable themes."
+    },
+    "auto_save": {
+      "support": "full",
+      "source_url": "https://github.com/kirodotdev/KiroCrew#why-kiro-crew:~:text=checkpoints",
+      "comment": "Persistent workspace state and checkpoints are saved automatically."
+    },
+    "debugging_output": {
+      "support": "full",
+      "source_url": "https://kiro.dev/docs/cli/reference/cli-commands/#cli-commands:~:text=verbose",
+      "comment": "Global verbose output and doctor/service diagnostics are available."
+    },
+    "context_window": {
+      "support": "partial",
+      "source_url": "https://github.com/kirodotdev/KiroCrew#why-kiro-crew:~:text=self-learning",
+      "comment": "Crew preserves learned workspace context across sessions, while model context limits remain managed by Kiro CLI."
+    },
+    "code_formatting": {
+      "support": "unknown",
+      "source_url": "https://github.com/kirodotdev/KiroCrew#what-kiro-crew-does:~:text=development%20workspace",
+      "comment": "No Crew-specific formatter control was found in the official sources reviewed."
+    },
+    "git_integration": {
+      "support": "full",
+      "source_url": "https://kiro.dev/blog/introducing-kiro-crew/#introducing-kiro-crew:~:text=repository",
+      "comment": "Crew development workspaces operate on repositories and support parallel isolated workstreams and change review."
+    },
+    "performance_mode": {
+      "support": "unknown",
+      "source_url": "https://github.com/kirodotdev/KiroCrew#quick-start:~:text=performance",
+      "comment": "No user-facing performance mode was found in the official sources reviewed."
+    },
+    "ui_customization": {
+      "support": "full",
+      "source_url": "https://github.com/kirodotdev/KiroCrew#what-kiro-crew-does:~:text=desktop%20app%2C%20web%20dashboard%2C%20and%20CLI",
+      "comment": "Desktop, responsive dashboard, Crew Apps, integrations, and configurable workspace surfaces are first-class."
+    },
+    "notes": "Kiro Crew is a distinct open-source persistent development workspace built on Kiro CLI. It adds unattended checkpointed runs, parallel spawning, schedules, heartbeats, desktop and responsive dashboard surfaces, and messaging integrations while executing on user-controlled hardware."
+  },
+  {
     "name": "Kiro",
     "links": {
       "docs": "https://kiro.dev/docs/",
@@ -4282,10 +4497,10 @@
       "sort_date": "2025-07-01"
     },
     "latest_major_update": {
-      "value": "Jun '26",
-      "source_url": "https://kiro.dev/docs/cli/reference/cli-commands/#source:~:text=Agent%20name%20is%20now%20a%20positional%20argument",
-      "comment": "June 2026 Kiro CLI docs refresh adds v1.26.0 custom-agent command changes, expanded model guidance, updated built-in tools, Kiro/Q Developer migration details, and refreshed powers/knowledge-management pages.",
-      "sort_date": "2026-06-01"
+      "value": "Aug '26",
+      "source_url": "https://kiro.dev/changelog/#kiro-web:~:text=branch%20selection",
+      "comment": "Kiro Web added branch selection on August 31, 2026; current IDE and CLI releases also shipped in late August.",
+      "sort_date": "2026-08-01"
     },
     "rules": {
       "support": "full",
@@ -4373,9 +4588,9 @@
       "comment": "No telemetry control found in the docs reviewed."
     },
     "hosted_agent": {
-      "support": "partial",
-      "source_url": "https://kiro.dev/cli/#get-started-with-kiro-cli:~:text=Kiro%20IDE%2C%20Kiro%20CLI%2C%20Kiro%20Web",
-      "comment": "Kiro Web exists, but the public CLI docs emphasize local terminal operation."
+      "support": "full",
+      "source_url": "https://kiro.dev/docs/cli/cloud-sessions/#cloud-sessions:~:text=cloud%20session",
+      "comment": "Kiro provides managed cloud sessions alongside local IDE and CLI execution."
     },
     "custom_model_provider": {
       "support": "none",
@@ -4383,9 +4598,9 @@
       "comment": "Docs describe Kiro's model set/Auto agent, not arbitrary model providers."
     },
     "pricing": {
-      "value": "Kiro Free; Pro $20/mo; Pro+ $40/mo; Power $200/mo; overages $0.04/credit on paid tiers",
-      "source_url": "https://kiro.dev/blog/new-pricing-plans-and-auto/#pricing-plans:~:text=Pro%20(%2420%2Fmonth)%2C%20Pro%2B%20(%2440%2Fmonth)%2C%20to%20Power%20(%24200%2Fmonth)",
-      "comment": "Kiro docs describe Free/Pro/Pro+/Pro Max/Power tiers; Kiro pricing blog gives Pro, Pro+, Power prices and overage pricing."
+      "value": "Free $0; Pro $20/mo; Pro+ $40/mo; Pro Max $100/mo; Power $200/mo; add-on credits $0.04",
+      "source_url": "https://kiro.dev/pricing/#pricing:~:text=Pro%20Max",
+      "comment": "Current Kiro pricing lists Free, Pro, Pro+, Pro Max, and Power tiers plus paid add-on credits."
     },
     "some_free_usage": {
       "support": "full",
@@ -4473,10 +4688,10 @@
       "sort_date": "2026-06-01"
     },
     "latest_major_update": {
-      "value": "Jul '26",
-      "source_url": "https://github.com/XiaomiMiMo/MiMo-Code/releases/tag/v0.1.5#source:~:text=builtin%20skills%20system",
-      "comment": "Latest public release v0.1.5 (July 7, 2026) ships 14 built-in skills, deep-research and fact-check workflows, a Windows native installer, vision-aware image paste, exact-match edits by default, safer deletion prompts, and experimental orchestrator plus cron/loop scheduling modes.",
-      "sort_date": "2026-07-23"
+      "value": "Sep '26",
+      "source_url": "https://github.com/XiaomiMiMo/MiMo-Code/releases/tag/v0.1.13#source:~:text=use%20Node%20APIs%20for%20hashing%20and%20FTS%20queries",
+      "comment": "Latest release v0.1.13 (August 19, 2026) fixes runtime hashing and full-text-search behavior and simplifies the release path. Recent releases added memory-write controls, orchestrator and multi-session reliability, and programmatic tool orchestration.",
+      "sort_date": "2026-09-01"
     },
     "rules": {
       "support": "full",
@@ -4875,10 +5090,10 @@
       "sort_date": "2025-01-01"
     },
     "latest_major_update": {
-      "value": "Jul '26",
-      "source_url": "https://github.com/anomalyco/opencode/releases/tag/v1.17.17#source:~:text=Added%20a%20dismissible%20tabs%20intro%20popup",
-      "comment": "Latest release v1.17.17 (July 9, 2026) improves Meta reasoning-model handling and desktop v2 sessions with a dismissible tabs intro, refreshed help entry point, updated sub-agent task rows, clearer revert dock, a v2 free-model selector, and model-selector text rendering fixes.",
-      "sort_date": "2026-07-23"
+      "value": "Sep '26",
+      "source_url": "https://github.com/anomalyco/opencode/releases/tag/v1.18.26#source:~:text=Claude%205%20sessions%20now%20tolerate%20stale%20thinking%20blocks",
+      "comment": "Latest release v1.18.26 (September 1, 2026) improves Claude 5 thinking-block recovery and Bedrock GPT-5.6 reasoning compatibility. Recent releases added Azure CLI authentication, Cloudflare AI Gateway fixes, retryable subagent tasks, and provider reliability improvements.",
+      "sort_date": "2026-09-02"
     },
     "rules": {
       "support": "full",
@@ -4972,9 +5187,9 @@
     },
     "notes": "",
     "pricing": {
-      "value": "Free MIT/BYOK; OpenCode Go $5 first month then $10/mo; Zen pay-as-you-go with $20 balance/top-up; Enterprise/per-seat paths",
-      "source_url": "https://opencode.ai/docs/go/#go:~:text=%245%20for%20your%20first%20month%2C%20then%20%2410%2Fmonth",
-      "comment": "OpenCode Go is the fixed subscription for open coding models; Zen is the pay-as-you-go model gateway and BYOK remains free."
+      "value": "Free MIT/BYOK; OpenCode Go $10/mo; Zen pay-as-you-go with balance/top-ups; Enterprise/per-seat paths",
+      "source_url": "https://opencode.ai/docs/go/#go:~:text=OpenCode%20Go%20is%20a%20low%20cost%20%2410%2Fmonth%20subscription",
+      "comment": "OpenCode Go is a $10/month fixed subscription for open coding models; the introductory first-month discount has ended. Zen is the pay-as-you-go model gateway and BYOK remains free."
     },
     "some_free_usage": {
       "support": "full",
@@ -5080,10 +5295,10 @@
       "sort_date": "2024-03-01"
     },
     "latest_major_update": {
-      "value": "Jul '26",
-      "source_url": "https://github.com/OpenHands/OpenHands/releases/tag/cloud-1.44.0#source:~:text=pass%20repository%20metadata%20to%20observability%20traces",
-      "comment": "Latest public OpenHands release is cloud-1.44.0 (July 9, 2026), adding repository metadata to observability traces and bumping SDK packages to v1.34.0. The local/self-hosted 1.8.0 release remains the latest non-cloud semver release.",
-      "sort_date": "2026-07-22"
+      "value": "Sep '26",
+      "source_url": "https://github.com/OpenHands/OpenHands/releases/tag/v1.16.0#source:~:text=select%20supported%20LLM%20providers",
+      "comment": "Latest stable OpenHands release v1.16.0 (August 27, 2026) adds selection of supported LLM providers and related platform improvements. The project now publishes unified semver releases rather than relying on a cloud-only tag for the newest row.",
+      "sort_date": "2026-09-02"
     },
     "rules": {
       "support": "full",
@@ -5279,10 +5494,10 @@
       "sort_date": "2026-05-01"
     },
     "latest_major_update": {
-      "value": "Jul '26",
-      "source_url": "https://github.com/earendil-works/pi/releases/tag/v0.80.3#source:~:text=Anthropic%20Claude%20Sonnet%205%20support",
-      "comment": "Latest release v0.80.3 (June 30, 2026) adds Anthropic Claude Sonnet 5 support through inherited Anthropic-compatible and Bedrock provider catalogs with adaptive thinking enabled.",
-      "sort_date": "2026-07-23"
+      "value": "Sep '26",
+      "source_url": "https://github.com/earendil-works/pi/releases/tag/v0.84.4#source:~:text=Terminal%20capability%20overrides",
+      "comment": "Latest release v0.84.4 (August 28, 2026) adds terminal capability overrides for hyperlinks, images, and truecolor. Recent releases added fullscreen TUI and transcript search, native PowerShell execution, and Qwen Token Plan support.",
+      "sort_date": "2026-09-02"
     },
     "rules": {
       "support": "full",
@@ -5472,9 +5687,9 @@
     },
     "latest_major_update": {
       "value": "Jul '26",
-      "source_url": "https://www.piercode.com/changelog#v-0-4-1:~:text=Latest%207%20Jul%202026",
-      "comment": "Latest public changelog entry is v0.4.1 on 7 Jul 2026, adding saved plan files and one-step transition from plan approval into Auto mode.",
-      "sort_date": "2026-07-07"
+      "source_url": "https://www.piercode.com/changelog#v-1-5-0:~:text=v1.5.0",
+      "comment": "Latest public changelog entry is v1.5.0 on July 12, 2026.",
+      "sort_date": "2026-07-12"
     },
     "rules": {
       "support": "full",
@@ -5674,10 +5889,10 @@
       "sort_date": "2025-06-01"
     },
     "latest_major_update": {
-      "value": "Jul '26",
-      "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.19.8#source:~:text=review%20auto-generated%20skills%20with%20an%20inline%20preview",
-      "comment": "Latest release v0.19.8 (July 8, 2026) adds serve environment isolation, auto-generated skill review with inline preview/editor handoff/off switch, permission-mode footer badges, bounded replay history, restored web-shell composer, Stop/SubagentStop hook background-task and cron status payloads, and multiple CLI/core/web-shell/channel fixes.",
-      "sort_date": "2026-07-23"
+      "value": "Sep '26",
+      "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.22.3#source:~:text=owner-scoped%20named%20sessions%20in%20Channels",
+      "comment": "Latest stable Qwen Code release v0.22.3 (August 28, 2026) adds owner-scoped named channel sessions, local-path daemon extension installs, and pull-request state indicators in Web Shell. Nightly and component-only CUA driver tags are excluded.",
+      "sort_date": "2026-09-02"
     },
     "rules": {
       "support": "full",
@@ -5856,10 +6071,10 @@
       "sort_date": "2024-09-01"
     },
     "latest_major_update": {
-      "value": "Jun '26",
-      "source_url": "https://replit.com/blog/live-from-hq-agent4-launch-pt2#source:~:text=Customize%20Replit%20Agent%20with%20Skills%20%26%20Custom%20Instructions",
-      "comment": "Agent 4 shipped in March 2026 with Infinite Canvas, parallel tasks, multi-artifact builds, and team collaboration; June 2026 updates added Agent Customization with Custom Instructions and Skills.",
-      "sort_date": "2026-06-01"
+      "value": "Aug '26",
+      "source_url": "https://replit.com/blog/free-mode#free-mode:~:text=Free%20Mode",
+      "comment": "Replit introduced Agent Free Mode on August 18, 2026, powered by GPT-5.6 Luna and designed to extend included monthly usage.",
+      "sort_date": "2026-08-01"
     },
     "rules": {
       "support": "partial",
@@ -6421,10 +6636,10 @@
       "sort_date": "2024-11-01"
     },
     "latest_major_update": {
-      "value": "Jun '26",
-      "source_url": "https://docs.devin.ai/desktop/changelog#v3318:~:text=v3.3.18%20June%2023%2C%202026",
-      "comment": "Devin Desktop/Windsurf v3.3.18 (June 23, 2026) shows Devin ACU usage in-client, fixes settings/extensions migration for Windows system-wide installs, resolves Windows bash to Git Bash, adds default subagent models, warms the MCP registry cache, fixes ACP agent-message merging, and adds an attribution config option.",
-      "sort_date": "2026-06-01"
+      "value": "Aug '26",
+      "source_url": "https://docs.devin.ai/desktop/changelog#v3820:~:text=August%2021%2C%202026",
+      "comment": "Devin Desktop/Windsurf v3.8.20 (August 21, 2026) adds multi-window Agent Command Center behavior, faster Agent/Editor switching, improved workspace trust, split plan review, individually stoppable subagents, worktree setup hooks, and stronger cloud-session filtering and terminal streaming.",
+      "sort_date": "2026-08-01"
     },
     "rules": {
       "support": "full",
@@ -6607,10 +6822,10 @@
       "sort_date": "2026-01-01"
     },
     "latest_major_update": {
-      "value": "Jul '26",
-      "source_url": "https://zcode.z.ai/en/changelog#release-v322:~:text=Release%20v3.2.2",
-      "comment": "Latest public ZCode release v3.2.2 (July 1, 2026) adds built-in plugin update/uninstall management, file-rewind safety summaries, improved prompt command trigger suggestions, more accurate subagent/tool usage counts, clearer external-tool errors, stopped-goal status visibility, spacing/text fixes, and stronger sensitive-data redaction in log export.",
-      "sort_date": "2026-07-01"
+      "value": "Aug '26",
+      "source_url": "https://zcode.z.ai/en/changelog#release-v3102:~:text=3.10.2%20Released%20Aug%2031%2C%202026",
+      "comment": "Latest public ZCode release v3.10.2 (August 31, 2026) fixes subagent model-group refresh. v3.10.1 added one-click plugin installs from prompt templates, a skills shortcut, thinking-trace search, configurable MCP protocol versions, execution summaries, and reliability fixes.",
+      "sort_date": "2026-08-01"
     },
     "rules": {
       "support": "full",

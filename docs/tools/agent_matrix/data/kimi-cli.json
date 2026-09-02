@@ -1,34 +1,32 @@
 {
-  "name": "Kimi CLI",
+  "name": "Kimi Code CLI",
   "links": {
-    "docs": "https://www.kimi.com/code/docs/en/kimi-code-cli/getting-started.html",
-    "github": "https://github.com/MoonshotAI/kimi-cli",
-    "website": "https://kimi.moonshot.cn/",
+    "docs": "https://moonshotai.github.io/kimi-code/en/",
+    "github": "https://github.com/MoonshotAI/kimi-code",
+    "website": "https://code.kimi.com/",
     "slug": "kimi-cli"
   },
   "form_factor": {
     "values": [
       "CLI",
-      "Extension",
-      "SDK"
+      "Extension"
     ],
-    "source_url": "https://github.com/MoonshotAI/kimi-cli#moonshotaikimi-cli:~:text=CLI",
-    "comment": "CLI + VS Code + Zed + JetBrains via ACP, plus @moonshot-ai/kimi-agent-sdk (Node/Go/Python). Per-form-factor links: CLI: https://github.com/MoonshotAI/kimi-cli; Extension: https://www.kimi.com/help/kimi-code/vscode-getting-started; SDK: https://github.com/MoonshotAI/kimi-agent-sdk.",
+    "source_url": "https://github.com/MoonshotAI/kimi-code#what-is-kimi-code-cli:~:text=AI%20coding%20agent%20that%20runs%20in%20your%20terminal",
+    "comment": "The successor Kimi Code CLI runs in the terminal and integrates with ACP-compatible editors and IDEs such as Zed and JetBrains. Per-form-factor links: CLI: https://moonshotai.github.io/kimi-code/en/guides/getting-started; Extension: https://moonshotai.github.io/kimi-code/en/guides/ides.",
     "links": {
-      "CLI": "https://github.com/MoonshotAI/kimi-cli",
-      "Extension": "https://www.kimi.com/help/kimi-code/vscode-getting-started",
-      "SDK": "https://github.com/MoonshotAI/kimi-agent-sdk"
+      "CLI": "https://moonshotai.github.io/kimi-code/en/guides/getting-started",
+      "Extension": "https://moonshotai.github.io/kimi-code/en/guides/ides"
     }
   },
   "released_in": {
-    "value": "Oct '25",
-    "source_url": "https://github.com/MoonshotAI/kimi-cli/releases/tag/1.48.0#source:~:text=1.48.0",
-    "comment": "First public release v0.34 on 2025-10-21. Reached v1.0 on 2026-01-27. Current latest release: v1.48.0 (2026-06-22)."
+    "value": "May '26",
+    "source_url": "https://github.com/MoonshotAI/kimi-code#kimi-code-cli:~:text=Kimi%20Code%20CLI",
+    "comment": "Moonshot AI created the public Kimi Code successor repository in May 2026."
   },
   "latest_major_update": {
-    "value": "Jun '26",
-    "source_url": "https://github.com/MoonshotAI/kimi-cli/releases/tag/1.48.0#source:~:text=round-trip%20empty%20reasoning%20content",
-    "comment": "Latest release v1.48.0 (June 22, 2026) fixes empty reasoning-content round trips, escalates repeated-tool-call reminders, force-stops dead-end streaks, and bumps kosong to 0.54.0."
+    "value": "Sep '26",
+    "source_url": "https://github.com/MoonshotAI/kimi-code/releases/tag/%40moonshot-ai%2Fkimi-code%400.40.0#moonshot-aikimi-code0400:~:text=0.40.0",
+    "comment": "Kimi Code 0.40.0 shipped September 2, 2026 with default secondary-model subagents, a web plugin panel, session and compaction fixes, dangerous-command guards, and faster session forks."
   },
   "rules": {
     "support": "full",
@@ -120,7 +118,7 @@
     "source_url": "https://www.kimi.com/code/docs/en/kimi-code-cli/configuration/providers-and-models.html#provider-types:~:text=Provider%20Types",
     "comment": "Full custom provider support. providers table in config.toml with type, base_url, api_key, custom_headers. Six provider types including OpenAI-compatible, Anthropic, Gemini."
   },
-  "notes": "Kimi CLI by Moonshot AI (Beijing) is an Apache-2.0 open-source coding agent with rapid development pace (97 releases in 7 months). Strong AGENTS.md, skills, MCP, subagent, and YOLO/AFK approval mode support. Notable for status bar with badges and comprehensive JSON streaming output.",
+  "notes": "Kimi Code CLI is Moonshot AI's MIT-licensed successor to the archived Kimi CLI repository. It provides a single-binary terminal agent with AGENTS.md, skills, plugins, MCP, subagents, hooks, ACP editor integration, and configurable compatible model providers.",
   "pricing": {
     "value": "Kimi Code usage included in Kimi subscription credits; credit amounts vary by plan; API/token billing and BYOK also available",
     "source_url": "https://www.kimi.com/help/kimi-code/benefits#billing:~:text=Kimi%20Code%20usage%20is%20included%20in%20your%20subscription%20fee",
@@ -128,7 +126,7 @@
   },
   "hosted_agent": {
     "support": "none",
-    "source_url": "https://www.kimi.com/code/docs/en/kimi-code-cli/getting-started.html#what-is-kimi-code-cli:~:text=Kimi%20Code%20CLI%20is%20an%20AI%20agent%20that%20runs%20in%20the%20terminal",
+    "source_url": "https://github.com/MoonshotAI/kimi-code#what-is-kimi-code-cli:~:text=runs%20in%20your%20terminal",
     "comment": "Local CLI tool backed by Moonshot API."
   },
   "transcripts": {

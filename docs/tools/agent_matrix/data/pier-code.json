@@ -24,9 +24,9 @@
   },
   "latest_major_update": {
     "value": "Jul '26",
-    "source_url": "https://www.piercode.com/changelog#v-0-4-1:~:text=Latest%207%20Jul%202026",
-    "comment": "Latest public changelog entry is v0.4.1 on 7 Jul 2026, adding saved plan files and one-step transition from plan approval into Auto mode.",
-    "sort_date": "2026-07-07"
+    "source_url": "https://www.piercode.com/changelog#v-1-5-0:~:text=v1.5.0",
+    "comment": "Latest public changelog entry is v1.5.0 on July 12, 2026.",
+    "sort_date": "2026-07-12"
   },
   "rules": {
     "support": "full",

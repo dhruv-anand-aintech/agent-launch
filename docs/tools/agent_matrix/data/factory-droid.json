@@ -10,14 +10,18 @@
     "values": [
       "CLI",
       "Extension",
-      "Web"
+      "Web",
+      "Desktop App",
+      "SDK"
     ],
     "source_url": "https://docs.factory.ai/reference/cli-reference#page-title:~:text=CLI",
-    "comment": "Droid CLI plus Factory App, IDE integrations, and Droid Computers. Per-form-factor links: CLI: https://docs.factory.ai/reference/cli-reference; Extension: https://docs.factory.ai/integrations/ide-integrations; Web: https://app.factory.ai/.",
+    "comment": "Droid CLI plus Factory web and desktop apps, IDE integrations, SDK, and Droid Computers. Per-form-factor links: CLI: https://docs.factory.ai/reference/cli-reference; Extension: https://docs.factory.ai/integrations/ide-integrations; Web: https://app.factory.ai/; Desktop App: https://factory.ai/download; SDK: https://docs.factory.ai/sdk/overview.",
     "links": {
       "CLI": "https://docs.factory.ai/reference/cli-reference",
       "Extension": "https://docs.factory.ai/integrations/ide-integrations",
-      "Web": "https://app.factory.ai/"
+      "Web": "https://app.factory.ai/",
+      "Desktop App": "https://factory.ai/download",
+      "SDK": "https://docs.factory.ai/sdk/overview"
     }
   },
   "released_in": {
@@ -26,9 +30,9 @@
     "comment": "Public docs cover current Droid CLI and Factory platform surfaces."
   },
   "latest_major_update": {
-    "value": "Jun '26",
-    "source_url": "https://docs.factory.ai/models#source:~:text=As%20of%20June%2012%2C%202026",
-    "comment": "June 2026 Factory model/docs refresh: available-models guidance updated with new managed and Droid Core coding models, reasoning effort options, multipliers, and current CLI defaults."
+    "value": "Sep '26",
+    "source_url": "https://factory.ai/changelog#september-2026:~:text=0.209.0",
+    "comment": "Factory's September 1, 2026 changelog lists Droid CLI v0.209.0 and desktop v0.166.0."
   },
   "rules": {
     "support": "full",
@@ -116,9 +120,9 @@
     "comment": "Analytics/compliance APIs exist, but no user telemetry opt-out setting found."
   },
   "hosted_agent": {
-    "support": "partial",
-    "source_url": "https://docs.factory.ai/reference/cli-reference#platform:~:text=Factory%20App",
-    "comment": "Factory App and Droid Computers exist; CLI can register machines and run daemon/server flows."
+    "support": "full",
+    "source_url": "https://factory.ai/pricing#plans:~:text=Cloud%20and%20local%20background%20agents",
+    "comment": "Factory includes cloud and local background agents, Factory App, and managed Droid Computers."
   },
   "custom_model_provider": {
     "support": "full",
@@ -126,9 +130,9 @@
     "comment": "Bring Your Own Key/custom model path is documented."
   },
   "pricing": {
-    "value": "Pro $20/mo; Plus $100/mo; Max $200/mo; Teams custom; Extra Usage prepaid $10 minimum; Droid Core free",
-    "source_url": "https://docs.factory.ai/pricing#plans:~:text=Pro%20%E2%80%94%20%2420%2Fmo",
-    "comment": "Factory docs list Pro, Plus, Max, Teams, Droid Core, and prepaid Extra Usage; Droid CLI/App/SDK are included in the paid Factory plans."
+    "value": "Pro $20/mo; Plus $100/mo; Max $200/mo; Teams $60 base plus $40/seat/mo; Extra Usage prepaid; Droid Core free",
+    "source_url": "https://factory.ai/pricing#plans:~:text=Pro%20%2420",
+    "comment": "Factory pricing lists Pro, Plus, Max, and Teams plans, with Droid CLI, desktop, web, and SDK access plus a free Droid Core model."
   },
   "no_account_required": {
     "support": "partial",

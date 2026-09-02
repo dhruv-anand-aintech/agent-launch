@@ -30,9 +30,9 @@
     "comment": "Introduced by JetBrains as a coding agent in early 2025."
   },
   "latest_major_update": {
-    "value": "Jun '26",
-    "source_url": "https://junie.jetbrains.com/docs/junie-cli-extensions.html#add-and-configure-extensions:~:text=Extensions%20are%20reusable%20bundles%20that%20extend%20Junie%20CLI%20with%20project-specific%20or%20domain-specific%20capabilities",
-    "comment": "June 26, 2026 Junie CLI docs refresh documents extensions, AGENTS.md guidelines, custom slash commands, MCP configuration, custom subagents, hooks, BYOK/custom models, headless CI/CD, GitHub Action, GitLab CI/CD, and Remote Mode."
+    "value": "Aug '26",
+    "source_url": "https://blog.jetbrains.com/junie/2026/08/24/introducing-junie-local/#introducing-junie-local:~:text=Junie%20Local",
+    "comment": "JetBrains introduced Junie Local on August 24, 2026, a free fully local coding-agent mode for Mac."
   },
   "rules": {
     "support": "full",

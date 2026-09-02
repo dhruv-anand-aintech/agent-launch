@@ -26,9 +26,9 @@
     "comment": "Public ZCode docs and desktop downloads are live in 2026; exact public launch date not confirmed in accessible docs."
   },
   "latest_major_update": {
-    "value": "Jul '26",
-    "source_url": "https://zcode.z.ai/en/changelog#release-v322:~:text=Release%20v3.2.2",
-    "comment": "Latest public ZCode release v3.2.2 (July 1, 2026) adds built-in plugin update/uninstall management, file-rewind safety summaries, improved prompt command trigger suggestions, more accurate subagent/tool usage counts, clearer external-tool errors, stopped-goal status visibility, spacing/text fixes, and stronger sensitive-data redaction in log export."
+    "value": "Aug '26",
+    "source_url": "https://zcode.z.ai/en/changelog#release-v3102:~:text=3.10.2%20Released%20Aug%2031%2C%202026",
+    "comment": "Latest public ZCode release v3.10.2 (August 31, 2026) fixes subagent model-group refresh. v3.10.1 added one-click plugin installs from prompt templates, a skills shortcut, thinking-trace search, configurable MCP protocol versions, execution summaries, and reliability fixes."
   },
   "rules": {
     "support": "full",

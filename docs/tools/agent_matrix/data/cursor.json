@@ -11,15 +11,17 @@
       "IDE",
       "CLI",
       "SDK",
-      "Mobile"
+      "Mobile",
+      "Web"
     ],
     "source_url": "https://cursor.com/changelog#cursor-mobile-app-for-ios:~:text=Cursor%20for%20iOS%20is%20now%20available%20in%20public%20beta%20on%20all%20paid%20plans",
-    "comment": "VS Code-derived AI IDE with standalone CLI (cursor-agent), @cursor/sdk (TypeScript/Python), and iOS mobile app for launching/managing cloud agents. Per-form-factor links: IDE: https://cursor.com/downloads; CLI: https://docs.cursor.com/en/cli/installation; SDK: https://cursor.com/docs/sdk/typescript; Mobile: https://cursor.com/changelog#cursor-mobile-app-for-ios.",
+    "comment": "VS Code-derived AI IDE with standalone CLI (cursor-agent), @cursor/sdk (TypeScript/Python), iOS mobile app, and browser access for launching and managing cloud agents. Per-form-factor links: IDE: https://cursor.com/downloads; CLI: https://docs.cursor.com/en/cli/installation; SDK: https://cursor.com/docs/sdk/typescript; Mobile: https://cursor.com/changelog#cursor-mobile-app-for-ios; Web: https://cursor.com/agents.",
     "links": {
       "IDE": "https://cursor.com/downloads",
       "CLI": "https://docs.cursor.com/en/cli/installation",
       "SDK": "https://cursor.com/docs/sdk/typescript",
-      "Mobile": "https://cursor.com/changelog#cursor-mobile-app-for-ios"
+      "Mobile": "https://cursor.com/changelog#cursor-mobile-app-for-ios",
+      "Web": "https://cursor.com/agents"
     }
   },
   "released_in": {
@@ -28,9 +30,9 @@
     "comment": "IDE launched ~2023; CLI surface added later (2025)."
   },
   "latest_major_update": {
-    "value": "Jun '26",
-    "source_url": "https://cursor.com/changelog#mcps-and-organizations-in-team-marketplaces:~:text=Admins%20can%20now%20configure%20Team%20MCP%20servers%20once%20and%20distribute%20them%20across%20cloud%20agents%2C%20the%20agents%20window%2C%20IDE%2C%20and%20CLI",
-    "comment": "June 30, 2026 changelog expands Team Marketplaces with Team MCP servers distributed across cloud agents, the agents window, IDE, and CLI, plus organization-group marketplace access. June 29 also added the Cursor iOS public beta for launching and managing cloud agents from mobile."
+    "value": "Aug '26",
+    "source_url": "https://cursor.com/changelog#start-from-scratch-without-a-repo:~:text=Start%20from%20scratch",
+    "comment": "August 27, 2026 added the ability to start new cloud-agent work without an existing repository; August updates also added cloud-agent subscriptions, goals, and scheduled tasks."
   },
   "rules": {
     "support": "full",
