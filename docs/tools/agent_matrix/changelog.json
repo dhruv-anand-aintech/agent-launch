@@ -1,10 +1,10 @@
 {
-  "entry_count": 1769,
+  "entry_count": 1770,
   "entries": [
     {
       "date": "2026-09-02",
-      "commit": "",
-      "title": "Unreleased matrix update",
+      "commit": "b3b7655",
+      "title": "Scheduled coding agent matrix update",
       "items": [
         {
           "summary": "Amp: Form Factor updated to CLI, SDK, Web, Mobile",
@@ -141,6 +141,10 @@
         {
           "summary": "Kimi Code CLI: Released updated to May '26",
           "target": "cell-kimi-cli-released-in"
+        },
+        {
+          "summary": "Kiro Crew added to the comparison",
+          "target": "cell-kiro-crew-form-factor"
         },
         {
           "summary": "Kiro: Hosted Agent now supported",
