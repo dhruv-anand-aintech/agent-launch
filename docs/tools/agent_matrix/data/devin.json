@@ -28,9 +28,9 @@
     "comment": "First publicly demoed March 2024. Made Generally Available (GA) on December 10, 2024."
   },
   "latest_major_update": {
-    "value": "Jul '26",
-    "source_url": "https://docs.devin.ai/release-notes/2026#july-1-2026:~:text=Network%20Access%20Requests%20In%20network-restricted%20sessions%2C%20Devin%20can%20now%20request%20access%20to%20specific%20domains",
-    "comment": "July 1, 2026 release notes add network access requests for restricted sessions, PR-link preferences, persisted default model selection, Slack bidirectional thread sync and bang-command improvements, MCP read-only mode, webhook setup improvements, skills analytics, ACU audit trails, redesigned environments, cross-platform repository cloning, and numerous review/analytics/UI fixes."
+    "value": "Aug '26",
+    "source_url": "https://docs.devin.ai/release-notes/2026#august-28-2026:~:text=August%2028%2C%202026",
+    "comment": "The latest official Devin release notes were updated August 28, 2026 with current agent, review, integration, and platform improvements."
   },
   "rules": {
     "support": "full",

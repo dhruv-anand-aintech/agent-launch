@@ -28,9 +28,9 @@
     "comment": "Exact public launch month not confirmed in public docs captured for this dataset."
   },
   "latest_major_update": {
-    "value": "Jul '26",
-    "source_url": "https://github.com/anomalyco/opencode/releases/tag/v1.17.17#source:~:text=Added%20a%20dismissible%20tabs%20intro%20popup",
-    "comment": "Latest release v1.17.17 (July 9, 2026) improves Meta reasoning-model handling and desktop v2 sessions with a dismissible tabs intro, refreshed help entry point, updated sub-agent task rows, clearer revert dock, a v2 free-model selector, and model-selector text rendering fixes."
+    "value": "Sep '26",
+    "source_url": "https://github.com/anomalyco/opencode/releases/tag/v1.18.26#source:~:text=Claude%205%20sessions%20now%20tolerate%20stale%20thinking%20blocks",
+    "comment": "Latest release v1.18.26 (September 1, 2026) improves Claude 5 thinking-block recovery and Bedrock GPT-5.6 reasoning compatibility. Recent releases added Azure CLI authentication, Cloudflare AI Gateway fixes, retryable subagent tasks, and provider reliability improvements."
   },
   "rules": {
     "support": "full",
@@ -124,9 +124,9 @@
   },
   "notes": "",
   "pricing": {
-    "value": "Free MIT/BYOK; OpenCode Go $5 first month then $10/mo; Zen pay-as-you-go with $20 balance/top-up; Enterprise/per-seat paths",
-    "source_url": "https://opencode.ai/docs/go/#go:~:text=%245%20for%20your%20first%20month%2C%20then%20%2410%2Fmonth",
-    "comment": "OpenCode Go is the fixed subscription for open coding models; Zen is the pay-as-you-go model gateway and BYOK remains free."
+    "value": "Free MIT/BYOK; OpenCode Go $10/mo; Zen pay-as-you-go with balance/top-ups; Enterprise/per-seat paths",
+    "source_url": "https://opencode.ai/docs/go/#go:~:text=OpenCode%20Go%20is%20a%20low%20cost%20%2410%2Fmonth%20subscription",
+    "comment": "OpenCode Go is a $10/month fixed subscription for open coding models; the introductory first-month discount has ended. Zen is the pay-as-you-go model gateway and BYOK remains free."
   },
   "some_free_usage": {
     "support": "full",

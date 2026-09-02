@@ -30,9 +30,9 @@
     "comment": "Announced at GitHub Universe (Oct/Nov 2024) in preview. GA billing launch: June 18, 2025 when premium request billing began."
   },
   "latest_major_update": {
-    "value": "May '26",
-    "source_url": "https://docs.github.com/en/copilot/how-tos/github-copilot-app#source:~:text=A%20desktop%20application%20for%20agent-driven%20development%20that%20brings%20parallel%20workstreams%2C%20GitHub%20integration%2C%20and%20PR%20lifecycle%20management%20into%20one%20place.",
-    "comment": "Copilot desktop app (technical preview): parallel agent sessions, PR lifecycle, scheduled workflows. Third-party agent support added. Usage-based billing announced."
+    "value": "Aug '26",
+    "source_url": "https://github.blog/changelog/2026-08-31-github-copilot-in-vs-code-august-release-v1-108/#github-copilot-in-vs-code-august-release-v1108:~:text=August%20release",
+    "comment": "GitHub's August 31, 2026 Copilot release added the latest agent and IDE capabilities; August also brought the coding-agent harness to JetBrains generally and expanded Slack and Teams integrations."
   },
   "rules": {
     "support": "full",

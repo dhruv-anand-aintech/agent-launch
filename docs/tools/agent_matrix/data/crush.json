@@ -25,10 +25,10 @@
     "sort_date": "2025-07-29"
   },
   "latest_major_update": {
-    "value": "Jul '26",
-    "source_url": "https://github.com/charmbracelet/crush/releases/tag/v0.83.0#source:~:text=Prep%20for%20GPT-5.6",
-    "comment": "Latest tagged release v0.83.0 (July 8, 2026) prepares Crush for GPT-5.6 and fixes bang-mode history navigation so previous Bash-command prompts do not gain an extra exclamation mark.",
-    "sort_date": "2026-07-08"
+    "value": "Aug '26",
+    "source_url": "https://github.com/charmbracelet/crush/releases/tag/v0.92.0#source:~:text=Compact%20Exit%20Banner",
+    "comment": "Latest stable release v0.92.0 (August 31, 2026) adds compact exit-banner configuration and related UI fixes. Recent releases also added text selection, improved mouse support, MCP OAuth fixes, LSP tools, and .crushrc configuration.",
+    "sort_date": "2026-08-31"
   },
   "rules": {
     "support": "full",

@@ -30,9 +30,9 @@
     "comment": "Claude Code was introduced as a limited research preview."
   },
   "latest_major_update": {
-    "value": "Jul '26",
-    "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.205#source:~:text=Added%20an%20auto%20mode%20rule%20that%20blocks%20tampering%20with%20session%20transcript%20files",
-    "comment": "Latest release v2.1.205 (July 8, 2026) adds an auto-mode rule blocking transcript tampering, improves background-agent/task state, expands /doctor setup checks, streams auto-update downloads to disk, and fixes JSON schema, Windows worktree, MCP import, LSP, watcher, PR-linking, and remote-control issues."
+    "value": "Sep '26",
+    "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.258#source:~:text=Fixed%20Claude%20Code%20failing%20to%20launch%20on%20macOS%2012",
+    "comment": "Latest stable release v2.1.258 (September 1, 2026) fixes a macOS 12 launch regression and remote or scheduled sessions failing after reconnect. Recent releases also added Claude Fable 5.1, time-zone settings, model-switch hooks, and restricted mode."
   },
   "rules": {
     "support": "full",

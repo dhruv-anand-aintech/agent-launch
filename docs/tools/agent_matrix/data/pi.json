@@ -24,9 +24,9 @@
     "comment": "Pi changelog shows first listed public release as 0.74.0 dated 2026-05-07."
   },
   "latest_major_update": {
-    "value": "Jun '26",
-    "source_url": "https://github.com/earendil-works/pi/releases/tag/v0.80.3#source:~:text=Anthropic%20Claude%20Sonnet%205%20support",
-    "comment": "Latest release v0.80.3 (June 30, 2026) adds Anthropic Claude Sonnet 5 support through inherited Anthropic-compatible and Bedrock provider catalogs with adaptive thinking enabled."
+    "value": "Aug '26",
+    "source_url": "https://github.com/earendil-works/pi/releases/tag/v0.84.4#source:~:text=Terminal%20capability%20overrides",
+    "comment": "Latest release v0.84.4 (August 28, 2026) adds terminal capability overrides for hyperlinks, images, and truecolor. Recent releases added fullscreen TUI and transcript search, native PowerShell execution, and Qwen Token Plan support."
   },
   "rules": {
     "support": "full",

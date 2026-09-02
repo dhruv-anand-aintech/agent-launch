@@ -1,0 +1,196 @@
+{
+  "name": "Kiro Crew",
+  "links": {
+    "docs": "https://kiro.dev/docs/crew/",
+    "github": "https://github.com/kirodotdev/KiroCrew",
+    "website": "https://kiro.dev/crew/",
+    "slug": "kiro-crew"
+  },
+  "form_factor": {
+    "values": ["CLI", "Desktop App", "Web", "Mobile"],
+    "source_url": "https://github.com/kirodotdev/KiroCrew#quick-start:~:text=desktop%20app%2C%20web%20dashboard%2C%20and%20CLI",
+    "comment": "Kiro Crew provides a local CLI, desktop app, responsive web dashboard, and mobile access through the dashboard and messaging integrations. Per-form-factor links: CLI: https://kiro.dev/docs/crew/; Desktop App: https://github.com/kirodotdev/KiroCrew/releases; Web: https://kiro.dev/crew/; Mobile: https://kiro.dev/crew/.",
+    "links": {
+      "CLI": "https://kiro.dev/docs/crew/",
+      "Desktop App": "https://github.com/kirodotdev/KiroCrew/releases",
+      "Web": "https://kiro.dev/crew/",
+      "Mobile": "https://kiro.dev/crew/"
+    }
+  },
+  "released_in": {
+    "value": "Aug '26",
+    "source_url": "https://kiro.dev/blog/introducing-kiro-crew/#introducing-kiro-crew:~:text=persistent%20development%20workspace",
+    "comment": "AWS and Kiro introduced Kiro Crew as an open-source persistent development workspace in August 2026."
+  },
+  "latest_major_update": {
+    "value": "Aug '26",
+    "source_url": "https://kiro.dev/changelog/crew/#kiro-crew:~:text=0.4.0",
+    "comment": "The official Kiro Crew changelog lists stable 0.4.0 on August 25, 2026; the official installer supplied 0.4.1rc1 during local validation on September 2."
+  },
+  "rules": {
+    "support": "full",
+    "source_url": "https://kiro.dev/blog/introducing-kiro-crew/#introducing-kiro-crew:~:text=Kiro%20Crew",
+    "comment": "Kiro Crew uses the underlying Kiro CLI and carries project steering and agent configuration into persistent workspaces."
+  },
+  "skills": {
+    "support": "full",
+    "source_url": "https://github.com/kirodotdev/KiroCrew#what-kiro-crew-does:~:text=skills%2C%20schedules%2C%20integrations",
+    "comment": "Crew Apps and persistent workspaces can combine agents, skills, schedules, integrations, and backend services."
+  },
+  "hooks": {
+    "support": "full",
+    "source_url": "https://kiro.dev/blog/introducing-kiro-crew/#introducing-kiro-crew:~:text=schedules",
+    "comment": "Kiro Crew inherits Kiro CLI hook support and adds scheduled and event-driven workspace automation."
+  },
+  "mcp_servers": {
+    "support": "full",
+    "source_url": "https://kiro.dev/changelog/crew/#kiro-crew:~:text=MCP",
+    "comment": "The launch changelog documents MCP-backed integrations in Crew workspaces."
+  },
+  "custom_commands": {
+    "support": "partial",
+    "source_url": "https://kiro.dev/docs/cli/reference/cli-commands/#cli-commands:~:text=chat",
+    "comment": "The CLI exposes built-in chat, run, spawn, cron, service, and gateway commands; arbitrary user-defined command registration is inherited from Kiro rather than Crew-specific."
+  },
+  "goal_command": {
+    "support": "full",
+    "source_url": "https://github.com/kirodotdev/KiroCrew#what-kiro-crew-does:~:text=unattended",
+    "comment": "Checkpointed run tasks continue autonomously across multiple steps and sessions."
+  },
+  "subagents": {
+    "support": "full",
+    "source_url": "https://github.com/kirodotdev/KiroCrew#what-kiro-crew-does:~:text=parallel",
+    "comment": "The spawn command and dashboard support parallel agents and isolated workstreams."
+  },
+  "monitor": {
+    "support": "full",
+    "source_url": "https://github.com/kirodotdev/KiroCrew#what-kiro-crew-does:~:text=heartbeats%20monitor",
+    "comment": "Heartbeats monitor systems until attention is needed, and the dashboard shows persistent task activity."
+  },
+  "model_selection": {
+    "support": "full",
+    "source_url": "https://kiro.dev/docs/cli/reference/cli-commands/#cli-commands:~:text=model",
+    "comment": "`kirocrew chat --model MODEL` selects the Kiro model for a session."
+  },
+  "approval_mode": {
+    "support": "full",
+    "source_url": "https://github.com/kirodotdev/KiroCrew#security-and-control:~:text=approval",
+    "comment": "Kiro Crew exposes workspace security and approval controls through Kiro CLI and its gateway."
+  },
+  "sandbox_mode": {
+    "support": "full",
+    "source_url": "https://github.com/kirodotdev/KiroCrew#security-and-control:~:text=sandbox",
+    "comment": "Local jail and container security modes are documented; `--no-jail` explicitly disables the default jail where supported."
+  },
+  "resume": {
+    "support": "full",
+    "source_url": "https://github.com/kirodotdev/KiroCrew#why-kiro-crew:~:text=persistent",
+    "comment": "Workspaces and checkpoints persist across sessions and restarts."
+  },
+  "continue": {
+    "support": "full",
+    "source_url": "https://github.com/kirodotdev/KiroCrew#why-kiro-crew:~:text=continues%20beyond%20one%20session",
+    "comment": "Kiro Crew is designed to continue development work beyond one session."
+  },
+  "non_interactive": {
+    "support": "full",
+    "source_url": "https://kiro.dev/docs/cli/reference/cli-commands/#cli-commands:~:text=message",
+    "comment": "`kirocrew chat --message MESSAGE` runs a one-message task, while `kirocrew run TASK.md` runs checkpointed autonomous work."
+  },
+  "output_format": {
+    "support": "partial",
+    "source_url": "https://kiro.dev/docs/cli/reference/cli-commands/#cli-commands:~:text=run",
+    "comment": "CLI output is pipe-friendly, but no dedicated JSON or NDJSON output flag was found in the verified help."
+  },
+  "statusline": {
+    "support": "none",
+    "source_url": "https://github.com/kirodotdev/KiroCrew#install-configure-and-operate:~:text=CLI",
+    "comment": "No user-configurable terminal statusline is documented."
+  },
+  "telemetry": {
+    "support": "full",
+    "source_url": "https://github.com/kirodotdev/KiroCrew#anonymous-usage-telemetry:~:text=telemetry",
+    "comment": "Anonymous usage telemetry is documented with controls for disabling it."
+  },
+  "custom_model_provider": {
+    "support": "none",
+    "source_url": "https://github.com/kirodotdev/KiroCrew#quick-start:~:text=Kiro%20device-code%20sign-in",
+    "comment": "Current Kiro Crew runs on Kiro CLI and Kiro device-code authentication; arbitrary provider backends are not documented."
+  },
+  "pricing": {
+    "value": "Open-source Apache-2.0 workspace; uses Kiro Free or paid Kiro plans",
+    "source_url": "https://kiro.dev/pricing/#pricing:~:text=Free",
+    "comment": "Kiro Crew itself is open source and runs on the user's hardware; model usage follows the current Kiro plan."
+  },
+  "some_free_usage": {
+    "support": "full",
+    "source_url": "https://kiro.dev/pricing/#pricing:~:text=Free",
+    "comment": "Kiro offers a perpetual Free tier that can be used with the open-source Kiro Crew workspace."
+  },
+  "no_account_required": {
+    "support": "none",
+    "source_url": "https://github.com/kirodotdev/KiroCrew#quick-start:~:text=device-code%20sign-in",
+    "comment": "First launch guides Kiro device-code sign-in."
+  },
+  "can_use_other_subscriptions": {
+    "support": "none",
+    "source_url": "https://github.com/kirodotdev/KiroCrew#quick-start:~:text=kiro-cli",
+    "comment": "Current setup uses Kiro authentication rather than other model-provider subscriptions."
+  },
+  "hosted_agent": {
+    "support": "none",
+    "source_url": "https://github.com/kirodotdev/KiroCrew#quick-start:~:text=runs%20locally%20or%20remotely%20on%20your%20hardware",
+    "comment": "Kiro Crew runs locally, on the user's remote hardware, or in the user's container. It is not a managed hosted agent service."
+  },
+  "transcripts": {
+    "support": "full",
+    "source_url": "https://github.com/kirodotdev/KiroCrew#why-kiro-crew:~:text=remembers%20across%20sessions",
+    "comment": "Persistent workspace history and checkpoints are core Crew features and are stored under the Crew data home."
+  },
+  "keyboard_shortcuts": {
+    "support": "partial",
+    "source_url": "https://github.com/kirodotdev/KiroCrew#quick-start:~:text=system-wide%20hotkey",
+    "comment": "The desktop app provides a system-wide hotkey; broader custom shortcut mapping is not documented."
+  },
+  "theme_customization": {
+    "support": "full",
+    "source_url": "https://github.com/kirodotdev/KiroCrew#quick-start:~:text=desktop%20app",
+    "comment": "The desktop and dashboard interfaces include selectable themes."
+  },
+  "auto_save": {
+    "support": "full",
+    "source_url": "https://github.com/kirodotdev/KiroCrew#why-kiro-crew:~:text=checkpoints",
+    "comment": "Persistent workspace state and checkpoints are saved automatically."
+  },
+  "debugging_output": {
+    "support": "full",
+    "source_url": "https://kiro.dev/docs/cli/reference/cli-commands/#cli-commands:~:text=verbose",
+    "comment": "Global verbose output and doctor/service diagnostics are available."
+  },
+  "context_window": {
+    "support": "partial",
+    "source_url": "https://github.com/kirodotdev/KiroCrew#why-kiro-crew:~:text=self-learning",
+    "comment": "Crew preserves learned workspace context across sessions, while model context limits remain managed by Kiro CLI."
+  },
+  "code_formatting": {
+    "support": "unknown",
+    "source_url": "https://github.com/kirodotdev/KiroCrew#what-kiro-crew-does:~:text=development%20workspace",
+    "comment": "No Crew-specific formatter control was found in the official sources reviewed."
+  },
+  "git_integration": {
+    "support": "full",
+    "source_url": "https://kiro.dev/blog/introducing-kiro-crew/#introducing-kiro-crew:~:text=repository",
+    "comment": "Crew development workspaces operate on repositories and support parallel isolated workstreams and change review."
+  },
+  "performance_mode": {
+    "support": "unknown",
+    "source_url": "https://github.com/kirodotdev/KiroCrew#quick-start:~:text=performance",
+    "comment": "No user-facing performance mode was found in the official sources reviewed."
+  },
+  "ui_customization": {
+    "support": "full",
+    "source_url": "https://github.com/kirodotdev/KiroCrew#what-kiro-crew-does:~:text=desktop%20app%2C%20web%20dashboard%2C%20and%20CLI",
+    "comment": "Desktop, responsive dashboard, Crew Apps, integrations, and configurable workspace surfaces are first-class."
+  },
+  "notes": "Kiro Crew is a distinct open-source persistent development workspace built on Kiro CLI. It adds unattended checkpointed runs, parallel spawning, schedules, heartbeats, desktop and responsive dashboard surfaces, and messaging integrations while executing on user-controlled hardware."
+}

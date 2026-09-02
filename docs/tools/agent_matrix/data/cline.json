@@ -10,14 +10,16 @@
     "values": [
       "Extension",
       "CLI",
-      "SDK"
+      "SDK",
+      "Desktop App"
     ],
     "source_url": "https://marketplace.visualstudio.com/items?itemName=saoudrizwan.claude-dev#add-a-tool-that:~:text=Extension",
-    "comment": "VS Code extension, JetBrains plugin, CLI, and @cline/sdk for embedding the agent runtime in apps and CI. Per-form-factor links: Extension: https://marketplace.visualstudio.com/items?itemName=saoudrizwan.claude-dev; CLI: https://docs.cline.bot/cli/overview; SDK: https://docs.cline.bot/sdk/overview.",
+    "comment": "VS Code extension, JetBrains plugin, CLI, desktop app, and @cline/sdk for embedding the agent runtime in apps and CI. Per-form-factor links: Extension: https://marketplace.visualstudio.com/items?itemName=saoudrizwan.claude-dev; CLI: https://docs.cline.bot/cli/overview; SDK: https://docs.cline.bot/sdk/overview; Desktop App: https://github.com/cline/cline/releases/tag/desktop-v0.0.22.",
     "links": {
       "Extension": "https://marketplace.visualstudio.com/items?itemName=saoudrizwan.claude-dev",
       "CLI": "https://docs.cline.bot/cli/overview",
-      "SDK": "https://docs.cline.bot/sdk/overview"
+      "SDK": "https://docs.cline.bot/sdk/overview",
+      "Desktop App": "https://github.com/cline/cline/releases/tag/desktop-v0.0.22"
     }
   },
   "released_in": {
@@ -26,9 +28,9 @@
     "comment": "Initial release was v1.0.4 on July 28, 2024 (originally named 'Claude Dev' by Saoud Rizwan). 8M+ installs by May 2026."
   },
   "latest_major_update": {
-    "value": "Jul '26",
-    "source_url": "https://github.com/cline/cline/releases/tag/cli-v3.0.39#source:~:text=You%20can%20now%20select%20Cline%20free%20models%20on%20the%20ClinePass%20provider%20in%20the%20model%20picker",
-    "comment": "Latest public Cline release cli-v3.0.39 (July 9, 2026) adds Cline free models to the ClinePass picker, removes retired GLM 5.1 metadata, fixes Codex model metadata, reports more accurate str_replace diffs, preserves canonical history during compaction, and updates telemetry/client identity behavior."
+    "value": "Sep '26",
+    "source_url": "https://github.com/cline/cline/releases/tag/v4.1.17#v4117:~:text=v4.1.17",
+    "comment": "Latest main Cline release is v4.1.17 on September 2, 2026; the current CLI release is v3.0.61 and desktop release is v0.0.22."
   },
   "rules": {
     "support": "full",

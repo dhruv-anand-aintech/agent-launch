@@ -16,6 +16,7 @@ One command for launching the local coding-agent CLIs installed on this machine:
 - Kilo Code (`kilo`)
 - Kimi Code (`kimi`)
 - Kiro CLI (`kiro-cli`, exposed as `--agent kiro`)
+- Kiro Crew (`kirocrew`, exposed as `--agent kirocrew`)
 - Muse Code (`muse`)
 - OpenCode (`opencode`)
 - Pi Coding Agent (`pi`)
@@ -118,6 +119,7 @@ agent-launch --agent antigravity --dry-run --mode danger -C ~/Code/my-repo --pro
 agent-launch --agent gemini --dry-run --mode auto --model-class pro -C ~/Code/my-repo --prompt 'implement the task'
 agent-launch --agent pier --dry-run --mode auto --model-class pro -C ~/Code/my-repo --prompt 'implement the task'
 agent-launch --agent trae --dry-run --mode auto -C ~/Code/my-repo --prompt 'implement the task'
+agent-launch --agent kirocrew --dry-run --mode auto -C ~/Code/my-repo --prompt 'implement the task'
 agent-launch --agent random --interactive -C ~/Code/my-repo --prompt 'inspect this repo'
 agent-launch --non-interactive --agent-order codex,claude,cursor -C ~/Code/my-repo --prompt 'implement the task'
 agent-launch --non-interactive --prefer claude,codex -C ~/Code/my-repo --prompt 'implement the task'
@@ -134,7 +136,7 @@ agent-launch -a claude -i -m plan -C ~/Code/my-repo 'review this change'
 
 | Option | Meaning |
 | --- | --- |
-| `--agent` / `-a` | Any built-in agent key, including `aider`, `amp`, `antigravity`, `amazonq`, `claude`, `cline`, `codex`, `copilot`, `crush`, `cursor`, `droid`, `gemini`, `goose`, `grok`, `kilo`, `kimi`, `kiro`, `mimo`, `muse`, `opencode`, `openhands`, `pi`, `pier`, `qwen`, `trae`, or `random`; defaults to `random` |
+| `--agent` / `-a` | Any built-in agent key, including `aider`, `amp`, `antigravity`, `amazonq`, `claude`, `cline`, `codex`, `copilot`, `crush`, `cursor`, `droid`, `gemini`, `goose`, `grok`, `kilo`, `kimi`, `kiro`, `kirocrew`, `mimo`, `muse`, `opencode`, `openhands`, `pi`, `pier`, `qwen`, `trae`, or `random`; defaults to `random` |
 | `--agent-order` | Non-interactive failover order. Pass comma-separated agents, use without a value for the built-in default, or set `AGENT_LAUNCH_AGENT_ORDER` |
 | `--prefer` | Non-interactive preferred agents. Moves the comma-separated agents to the front of the default failover order, or set `AGENT_LAUNCH_PREFER` |
 | `--interactive` / `-i` | Start an interactive TUI/session |
@@ -182,7 +184,7 @@ AGENT_LAUNCH_AGENT_ORDER=claude,codex,cursor agent-launch -n -C ~/Code/my-repo -
 AGENT_LAUNCH_PREFER=claude,codex agent-launch -n -C ~/Code/my-repo -p 'implement the task'
 ```
 
-`--agent-order` and `--prefer` are intentionally non-interactive only. The built-in default order is `codex, claude, cursor, opencode, muse, pier, antigravity, gemini, aider, amp, cline, droid, grok, kilo, kimi, kiro, mimo, pi, qwen, trae, goose, copilot, crush, openhands, amazonq`. With that default, `--prefer cursor,claude` runs `cursor, claude, codex, opencode, muse, pier, antigravity, gemini, aider, amp, cline, droid, grok, kilo, kimi, kiro, mimo, pi, qwen, trae, goose, copilot, crush, openhands, amazonq`.
+`--agent-order` and `--prefer` are intentionally non-interactive only. The built-in default order is `codex, claude, cursor, opencode, muse, pier, antigravity, gemini, aider, amp, cline, droid, grok, kilo, kimi, kiro, kirocrew, mimo, pi, qwen, trae, goose, copilot, crush, openhands, amazonq`. With that default, `--prefer cursor,claude` runs `cursor, claude, codex, opencode, muse, pier, antigravity, gemini, aider, amp, cline, droid, grok, kilo, kimi, kiro, kirocrew, mimo, pi, qwen, trae, goose, copilot, crush, openhands, amazonq`.
 
 ## Interactive Auto-Cwd
 

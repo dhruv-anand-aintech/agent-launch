@@ -1,6 +1,216 @@
 {
-  "entry_count": 1721,
+  "entry_count": 1770,
   "entries": [
+    {
+      "date": "2026-09-02",
+      "commit": "b3b7655",
+      "title": "Scheduled coding agent matrix update",
+      "items": [
+        {
+          "summary": "Amp: Form Factor updated to CLI, SDK, Web, Mobile",
+          "target": "cell-amp-form-factor"
+        },
+        {
+          "summary": "Amp: Hosted Agent now supported",
+          "target": "cell-amp-hosted-agent"
+        },
+        {
+          "summary": "Amp: Latest Major Update updated to Aug '26",
+          "target": "cell-amp-latest-major-update"
+        },
+        {
+          "summary": "Antigravity: Form Factor updated to CLI, IDE, Web",
+          "target": "cell-antigravity-form-factor"
+        },
+        {
+          "summary": "Antigravity: Latest Major Update updated to Aug '26",
+          "target": "cell-antigravity-latest-major-update"
+        },
+        {
+          "summary": "Claude Code: Latest Major Update updated to Sep '26",
+          "target": "cell-claude-code-latest-major-update"
+        },
+        {
+          "summary": "Cline: Form Factor updated to Extension, CLI, SDK, Desktop App",
+          "target": "cell-cline-form-factor"
+        },
+        {
+          "summary": "Cline: Latest Major Update updated to Sep '26",
+          "target": "cell-cline-latest-major-update"
+        },
+        {
+          "summary": "OpenAI Codex CLI: Latest Major Update updated to Sep '26",
+          "target": "cell-codex-cli-latest-major-update"
+        },
+        {
+          "summary": "Command Code: Form Factor updated to CLI, Extension, Web, Desktop App",
+          "target": "cell-command-code-form-factor"
+        },
+        {
+          "summary": "Command Code: Latest Major Update updated to Aug '26",
+          "target": "cell-command-code-latest-major-update"
+        },
+        {
+          "summary": "Crush: Latest Major Update updated to Aug '26",
+          "target": "cell-crush-latest-major-update"
+        },
+        {
+          "summary": "Cursor: Form Factor updated to IDE, CLI, SDK, Mobile, Web",
+          "target": "cell-cursor-form-factor"
+        },
+        {
+          "summary": "Cursor: Latest Major Update updated to Aug '26",
+          "target": "cell-cursor-latest-major-update"
+        },
+        {
+          "summary": "Devin: Latest Major Update updated to Aug '26",
+          "target": "cell-devin-latest-major-update"
+        },
+        {
+          "summary": "Factory Droid: Form Factor updated to CLI, Extension, Web, Desktop App, SDK",
+          "target": "cell-factory-droid-form-factor"
+        },
+        {
+          "summary": "Factory Droid: Hosted Agent now supported",
+          "target": "cell-factory-droid-hosted-agent"
+        },
+        {
+          "summary": "Factory Droid: Latest Major Update updated to Sep '26",
+          "target": "cell-factory-droid-latest-major-update"
+        },
+        {
+          "summary": "Factory Droid: Pricing updated to Pro $20/mo; Plus $100/mo; Max $200/mo; Teams $60 base plus $40/seat/mo;…",
+          "target": "cell-factory-droid-pricing"
+        },
+        {
+          "summary": "Gemini CLI: Latest Major Update updated to Sep '26",
+          "target": "cell-gemini-cli-latest-major-update"
+        },
+        {
+          "summary": "GitHub Copilot CLI: Latest Major Update updated to Aug '26",
+          "target": "cell-github-copilot-cli-latest-major-update"
+        },
+        {
+          "summary": "GitHub Copilot CLI: Some Free Usage evidence refreshed",
+          "target": "cell-github-copilot-cli-some-free-usage"
+        },
+        {
+          "summary": "GitHub Copilot: Latest Major Update updated to Aug '26",
+          "target": "cell-github-copilot-coding-agent-latest-major-update"
+        },
+        {
+          "summary": "Goose: Latest Major Update updated to Aug '26",
+          "target": "cell-goose-latest-major-update"
+        },
+        {
+          "summary": "Grok Build: Form Factor updated to CLI, Web, Mobile",
+          "target": "cell-grok-build-form-factor"
+        },
+        {
+          "summary": "Grok Build: Hosted Agent now supported",
+          "target": "cell-grok-build-hosted-agent"
+        },
+        {
+          "summary": "Grok Build: Latest Major Update updated to Aug '26",
+          "target": "cell-grok-build-latest-major-update"
+        },
+        {
+          "summary": "Grok Build: Pricing updated to Included across Grok plans, including Free; higher usage on paid SuperG…",
+          "target": "cell-grok-build-pricing"
+        },
+        {
+          "summary": "JetBrains Junie: Latest Major Update updated to Aug '26",
+          "target": "cell-junie-latest-major-update"
+        },
+        {
+          "summary": "Kilo Code: Latest Major Update updated to Aug '26",
+          "target": "cell-kilo-code-latest-major-update"
+        },
+        {
+          "summary": "Kimi Code CLI: Form Factor updated to CLI, Extension",
+          "target": "cell-kimi-cli-form-factor"
+        },
+        {
+          "summary": "Kimi Code CLI: Hosted Agent evidence refreshed",
+          "target": "cell-kimi-cli-hosted-agent"
+        },
+        {
+          "summary": "Kimi Code CLI: Latest Major Update updated to Sep '26",
+          "target": "cell-kimi-cli-latest-major-update"
+        },
+        {
+          "summary": "Kimi Code CLI: Released updated to May '26",
+          "target": "cell-kimi-cli-released-in"
+        },
+        {
+          "summary": "Kiro Crew added to the comparison",
+          "target": "cell-kiro-crew-form-factor"
+        },
+        {
+          "summary": "Kiro: Hosted Agent now supported",
+          "target": "cell-kiro-hosted-agent"
+        },
+        {
+          "summary": "Kiro: Latest Major Update updated to Aug '26",
+          "target": "cell-kiro-latest-major-update"
+        },
+        {
+          "summary": "Kiro: Pricing updated to Free $0; Pro $20/mo; Pro+ $40/mo; Pro Max $100/mo; Power $200/mo; add-o…",
+          "target": "cell-kiro-pricing"
+        },
+        {
+          "summary": "MiMo Code: Latest Major Update updated to Aug '26",
+          "target": "cell-mimo-code-latest-major-update"
+        },
+        {
+          "summary": "OpenCode: Latest Major Update updated to Sep '26",
+          "target": "cell-opencode-latest-major-update"
+        },
+        {
+          "summary": "OpenCode: Pricing updated to Free MIT/BYOK; OpenCode Go $10/mo; Zen pay-as-you-go with balance/top-u…",
+          "target": "cell-opencode-pricing"
+        },
+        {
+          "summary": "OpenHands: Latest Major Update updated to Aug '26",
+          "target": "cell-openhands-latest-major-update"
+        },
+        {
+          "summary": "Pi: Latest Major Update updated to Aug '26",
+          "target": "cell-pi-latest-major-update"
+        },
+        {
+          "summary": "Pier Code: Latest Major Update evidence refreshed",
+          "target": "cell-pier-code-latest-major-update"
+        },
+        {
+          "summary": "Qwen Code: Latest Major Update updated to Aug '26",
+          "target": "cell-qwen-code-latest-major-update"
+        },
+        {
+          "summary": "Replit Agent: Latest Major Update updated to Aug '26",
+          "target": "cell-replit-agent-latest-major-update"
+        },
+        {
+          "summary": "Windsurf Cascade: Latest Major Update updated to Aug '26",
+          "target": "cell-windsurf-latest-major-update"
+        },
+        {
+          "summary": "ZCode: Latest Major Update updated to Aug '26",
+          "target": "cell-zcode-latest-major-update"
+        }
+      ]
+    },
+    {
+      "date": "2026-08-06",
+      "commit": "e5fde94",
+      "title": "feat: add Muse Code to agent launch and matrix",
+      "items": [
+        {
+          "summary": "Muse Code added to the comparison",
+          "target": "cell-muse-code-form-factor"
+        }
+      ]
+    },
     {
       "date": "2026-07-13",
       "commit": "bd70a3b",

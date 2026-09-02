@@ -9,13 +9,15 @@
   "form_factor": {
     "values": [
       "CLI",
-      "IDE"
+      "IDE",
+      "Web"
     ],
     "source_url": "https://antigravity.google/docs/getting-started#clip0_6001_463:~:text=CLI",
-    "comment": "Google Antigravity IDE plus standalone agy CLI (plugin layout, rules, skills, hooks, MCP). Per-form-factor links: CLI: https://antigravity.google/docs/cli-getting-started; IDE: https://antigravity.google/download.",
+    "comment": "Google Antigravity IDE plus standalone agy CLI and Remote Control in a browser. Remote Control connects back to the user's running desktop agent. Per-form-factor links: CLI: https://antigravity.google/docs/cli-getting-started; IDE: https://antigravity.google/download; Web: https://antigravity.google/docs/remote-control.",
     "links": {
       "CLI": "https://antigravity.google/docs/cli-getting-started",
-      "IDE": "https://antigravity.google/download"
+      "IDE": "https://antigravity.google/download",
+      "Web": "https://antigravity.google/docs/remote-control"
     }
   },
   "released_in": {
@@ -24,9 +26,9 @@
     "comment": "IDE public release in 2025; standalone agy CLI documented May 2026."
   },
   "latest_major_update": {
-    "value": "May '26",
-    "source_url": "https://antigravity.google/docs/cli-features#source:~:text=plugins",
-    "comment": "CLI plugin system and IDE agent surfaces updated together in current docs."
+    "value": "Aug '26",
+    "source_url": "https://antigravity.google/changelog#august-2026:~:text=1.1.21",
+    "comment": "Antigravity CLI 1.1.21 shipped August 26, 2026, following IDE 2.10.0 and the August Remote Control launch."
   },
   "rules": {
     "support": "full",

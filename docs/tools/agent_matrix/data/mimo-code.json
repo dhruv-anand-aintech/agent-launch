@@ -26,9 +26,9 @@
     "comment": "GitHub shows v0.1.0 as the first public release on 2026-06-10."
   },
   "latest_major_update": {
-    "value": "Jul '26",
-    "source_url": "https://github.com/XiaomiMiMo/MiMo-Code/releases/tag/v0.1.5#source:~:text=builtin%20skills%20system",
-    "comment": "Latest public release v0.1.5 (July 7, 2026) ships 14 built-in skills, deep-research and fact-check workflows, a Windows native installer, vision-aware image paste, exact-match edits by default, safer deletion prompts, and experimental orchestrator plus cron/loop scheduling modes."
+    "value": "Aug '26",
+    "source_url": "https://github.com/XiaomiMiMo/MiMo-Code/releases/tag/v0.1.13#source:~:text=use%20Node%20APIs%20for%20hashing%20and%20FTS%20queries",
+    "comment": "Latest release v0.1.13 (August 19, 2026) fixes runtime hashing and full-text-search behavior and simplifies the release path. Recent releases added memory-write controls, orchestrator and multi-session reliability, and programmatic tool orchestration."
   },
   "rules": {
     "support": "full",

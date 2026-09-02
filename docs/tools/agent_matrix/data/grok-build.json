@@ -8,12 +8,16 @@
   },
   "form_factor": {
     "values": [
-      "CLI"
+      "CLI",
+      "Web",
+      "Mobile"
     ],
     "source_url": "https://x.ai/news/grok-build-cli#source:~:text=CLI",
-    "comment": "Terminal-native coding agent and CLI in early beta. Per-form-factor links: CLI: https://x.ai/news/grok-build-cli.",
+    "comment": "Grok Build is available as a terminal-native CLI and through Grok on web and mobile. Per-form-factor links: CLI: https://x.ai/news/grok-build-cli; Web: https://grok.com/; Mobile: https://x.ai/news/grok-build-everywhere.",
     "links": {
-      "CLI": "https://x.ai/news/grok-build-cli"
+      "CLI": "https://x.ai/news/grok-build-cli",
+      "Web": "https://grok.com/",
+      "Mobile": "https://x.ai/news/grok-build-everywhere"
     }
   },
   "released_in": {
@@ -22,9 +26,9 @@
     "comment": "xAI launch announcement for the early beta."
   },
   "latest_major_update": {
-    "value": "Jun '26",
-    "source_url": "https://x.ai/news/introducing-goal#introducing-goal:~:text=Use%20%2Fgoal%20for%20long-running%20autonomous%20task%20execution%20in%20Grok%20Build",
-    "comment": "June 2026 updates added `/goal` for long-running autonomous execution, a plugin marketplace, an agent dashboard for parallel sessions, and Composer 2.5 model access in Grok Build."
+    "value": "Aug '26",
+    "source_url": "https://x.ai/news/grok-build-everywhere#grok-build-everywhere:~:text=web%20and%20mobile",
+    "comment": "On August 19, 2026, xAI expanded Grok Build to web and mobile and made it available across Grok plans; CLI v1.0.3 shipped August 12."
   },
   "rules": {
     "support": "full",
@@ -112,9 +116,9 @@
     "comment": "No user-visible telemetry opt-out setting found in public launch docs."
   },
   "hosted_agent": {
-    "support": "none",
-    "source_url": "https://x.ai/news/grok-build-cli#introducing-grok-build:~:text=runs%20right%20from%20your%20terminal",
-    "comment": "Documented as a terminal CLI, not a managed hosted worker."
+    "support": "full",
+    "source_url": "https://x.ai/news/grok-build-everywhere#grok-build-everywhere:~:text=August%2019%2C%202026",
+    "comment": "Grok Build now runs as a hosted builder on Grok web and mobile in addition to the local CLI."
   },
   "custom_model_provider": {
     "support": "partial",
@@ -122,9 +126,9 @@
     "comment": "Config references models and API keys, but arbitrary OpenAI-compatible provider support is not documented."
   },
   "pricing": {
-    "value": "Included for SuperGrok and X Premium Plus subscribers during beta; broader Grok plans include Free/SuperGrok/Business/Enterprise",
-    "source_url": "https://x.ai/news/grok-build-cli#introducing-grok-build:~:text=Available%20now%20to%20all%20SuperGrok%20and%20X%20Premium%20Plus%20subscribers",
-    "comment": "The Grok Build launch says beta access is for SuperGrok and X Premium Plus subscribers; xAI also publishes broader Grok Free, SuperGrok, Business, and Enterprise plans."
+    "value": "Included across Grok plans, including Free; higher usage on paid SuperGrok, X Premium Plus, Business, and Enterprise plans",
+    "source_url": "https://x.ai/news/grok-build-everywhere#grok-build-everywhere:~:text=every%20Grok%20plan",
+    "comment": "xAI says Grok Build is available on every Grok plan, with plan-based limits."
   },
   "notes": "Early beta. Strong documented parity on AGENTS.md, skills, hooks, MCP, headless mode, ACP, and parallel subagents; lower confidence for session management and telemetry because public docs are still sparse.",
   "transcripts": {

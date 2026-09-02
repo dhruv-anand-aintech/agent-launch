@@ -30,9 +30,9 @@
     "comment": "Launched March 12, 2024 as 'OpenDevin' (replicating Devin). First tagged GitHub release v0.6.1 on 2024-06-04 (earlier 0.1-0.5 history predates the public releases page). Renamed to OpenHands in mid-2024, and the GitHub org All-Hands-AI was renamed to OpenHands on 2025-10-20."
   },
   "latest_major_update": {
-    "value": "Jul '26",
-    "source_url": "https://github.com/OpenHands/OpenHands/releases/tag/cloud-1.44.0#source:~:text=pass%20repository%20metadata%20to%20observability%20traces",
-    "comment": "Latest public OpenHands release is cloud-1.44.0 (July 9, 2026), adding repository metadata to observability traces and bumping SDK packages to v1.34.0. The local/self-hosted 1.8.0 release remains the latest non-cloud semver release."
+    "value": "Aug '26",
+    "source_url": "https://github.com/OpenHands/OpenHands/releases/tag/v1.16.0#source:~:text=select%20supported%20LLM%20providers",
+    "comment": "Latest stable OpenHands release v1.16.0 (August 27, 2026) adds selection of supported LLM providers and related platform improvements. The project now publishes unified semver releases rather than relying on a cloud-only tag for the newest row."
   },
   "rules": {
     "support": "full",

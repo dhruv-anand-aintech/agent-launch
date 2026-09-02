@@ -35,6 +35,7 @@ agents=(
   'kilo:Kilo Code'
   'kimi:Kimi Code'
   'kiro:Kiro CLI'
+  'kirocrew:Kiro Crew'
   'mimo:MiMo Code'
   'muse:Muse Code'
   'opencode:OpenCode'

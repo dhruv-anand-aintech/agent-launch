@@ -24,9 +24,9 @@
     "comment": "Block's Open Source Program Office publicly announced \"codename goose\" on January 28, 2025, after ~9 months of internal development."
   },
   "latest_major_update": {
-    "value": "Jul '26",
-    "source_url": "https://github.com/aaif-goose/goose/releases/tag/v1.41.0#source:~:text=Summon%20peek%20mode%20for%20async%20background%20tasks",
-    "comment": "Latest AAIF Goose release v1.41.0 (July 3, 2026) adds /status, edit-before-fork, summon peek/context/working_dir enhancements for async delegated tasks, structured summon metadata, GLM-5.2, MLX local inference, many declarative providers, extra desktop locales, streamable HTTP deeplinks, and global ~/.agents/AGENTS.md hints."
+    "value": "Aug '26",
+    "source_url": "https://github.com/aaif-goose/goose/releases/tag/v1.48.0#source:~:text=TrustedRouter%20declarative%20provider",
+    "comment": "Latest AAIF Goose release v1.48.0 (August 27, 2026) adds TrustedRouter and OpenCode Zen declarative providers plus further provider, extension, and reliability updates. Recent releases also added an unrolled agent loop and improved streamable HTTP OAuth support."
   },
   "rules": {
     "support": "full",
