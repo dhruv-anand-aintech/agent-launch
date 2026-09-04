@@ -293,6 +293,8 @@ def enrich_github_dates(rows: list[dict], previous_rows: list[dict] | None = Non
     previous_by_slug = _rows_by_slug(previous_rows or [])
     for row in rows:
         name = row.get("name", "?")
+        updated = row.get("latest_major_update")
+        has_explicit_updated_sort_date = isinstance(updated, dict) and bool(updated.get("sort_date"))
         for key in ("released_in", "latest_major_update"):
             _ensure_sort_date_from_value(row, key)
 
@@ -321,7 +323,7 @@ def enrich_github_dates(rows: list[dict], previous_rows: list[dict] | None = Non
             _set_sort_date(released, oldest_release)
 
         updated = row.get("latest_major_update")
-        if isinstance(updated, dict) and latest_commit:
+        if isinstance(updated, dict) and latest_commit and not has_explicit_updated_sort_date:
             _set_sort_date(updated, latest_commit)
             updated["value"] = format_short_date(latest_commit)
 

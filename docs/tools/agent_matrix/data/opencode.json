@@ -29,8 +29,8 @@
   },
   "latest_major_update": {
     "value": "Sep '26",
-    "source_url": "https://github.com/anomalyco/opencode/releases/tag/v1.18.26#source:~:text=Claude%205%20sessions%20now%20tolerate%20stale%20thinking%20blocks",
-    "comment": "Latest release v1.18.26 (September 1, 2026) improves Claude 5 thinking-block recovery and Bedrock GPT-5.6 reasoning compatibility. Recent releases added Azure CLI authentication, Cloudflare AI Gateway fixes, retryable subagent tasks, and provider reliability improvements."
+    "source_url": "https://github.com/anomalyco/opencode/releases/tag/v1.18.27#source:~:text=Default%20provider%20header%20timeouts%20to%20five%20minutes",
+    "comment": "Latest release v1.18.27 (September 2, 2026) lengthens provider and streamed-chunk timeouts, makes Anthropic thinking-block binding configurable and version-aware, and fixes cancellation errors for timed-out SSE reads."
   },
   "rules": {
     "support": "full",

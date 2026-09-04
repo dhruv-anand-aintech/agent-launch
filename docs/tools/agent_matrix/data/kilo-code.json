@@ -24,9 +24,9 @@
     "comment": "Repository created 2025-03-10. First stable public release effectively Feb 2026 (v1.0.25). v7 rewrite announced May 2026."
   },
   "latest_major_update": {
-    "value": "Aug '26",
-    "source_url": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.5.6#source:~:text=Reference%20other%20Agent%20Manager%20worktrees",
-    "comment": "Latest stable main-product release v7.5.6 (August 28, 2026) adds searchable references to other Agent Manager worktrees, including paths, branches, and session IDs. Component-only JetBrains tags are not treated as the main release."
+    "value": "Sep '26",
+    "source_url": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.5.9#source:~:text=Preview%20local%20applications%20in%20Agent%20Manager",
+    "comment": "Latest stable main-product release v7.5.9 (September 2, 2026) adds Agent Manager app previews and CLI activity indicators, experimental per-subagent model/provider/reasoning selection, editable queued messages, and faster independent session forks."
   },
   "rules": {
     "support": "full",

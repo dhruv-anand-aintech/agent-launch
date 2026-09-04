@@ -26,9 +26,9 @@
     "comment": "IDE public release in 2025; standalone agy CLI documented May 2026."
   },
   "latest_major_update": {
-    "value": "Aug '26",
-    "source_url": "https://antigravity.google/changelog#august-2026:~:text=1.1.21",
-    "comment": "Antigravity CLI 1.1.21 shipped August 26, 2026, following IDE 2.10.0 and the August Remote Control launch."
+    "value": "Sep '26",
+    "source_url": "https://antigravity.google/changelog#version:~:text=2.12.2,September%203%2C%202026",
+    "comment": "Antigravity 2.12.2 shipped September 3, 2026 with enterprise Gemini 3.8 Flash access through ADC. Version 2.12.0 added response quoting, /boost multi-agent reasoning, and settings and reliability improvements."
   },
   "rules": {
     "support": "full",
