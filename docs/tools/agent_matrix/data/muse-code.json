@@ -22,10 +22,10 @@
     "sort_date": "2026-08-05"
   },
   "latest_major_update": {
-    "value": "Aug '26",
-    "source_url": "https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2#availability:~:text=Muse%20Spark%201.2",
-    "comment": "Muse Spark 1.2 became available in Muse Code and the Meta Model API.",
-    "sort_date": "2026-08-05"
+    "value": "Sep '26",
+    "source_url": "https://developer.meta.com/ai/#meet-muse-spark-13:~:text=Now%20with%20enhanced%20coding%20capabilities",
+    "comment": "Muse Spark 1.3 reached Muse Code in September 2026 with stronger long-horizon coding, better context and prior-result tracking, fewer unnecessary turns, and cleaner output.",
+    "sort_date": "2026-09-02"
   },
   "pricing": {
     "value": "Meta Model API usage billing; API key required",

@@ -26,9 +26,9 @@
     "comment": "GitHub shows v0.1.0 as the first public release on 2026-06-10."
   },
   "latest_major_update": {
-    "value": "Aug '26",
-    "source_url": "https://github.com/XiaomiMiMo/MiMo-Code/releases/tag/v0.1.13#source:~:text=use%20Node%20APIs%20for%20hashing%20and%20FTS%20queries",
-    "comment": "Latest release v0.1.13 (August 19, 2026) fixes runtime hashing and full-text-search behavior and simplifies the release path. Recent releases added memory-write controls, orchestrator and multi-session reliability, and programmatic tool orchestration."
+    "value": "Sep '26",
+    "source_url": "https://github.com/XiaomiMiMo/MiMo-Code/releases/tag/v0.1.14#source:~:text=Interrupted%20or%20errored%20turns%20stay%20recoverable",
+    "comment": "Latest release v0.1.14 (September 2, 2026) adds append-only /recover for interrupted turns, title generation APIs, tool-driven TUI voice input, revised compaction, replayable nested tool calls, inherited subagent permissions, and optional auto-worktree guidance."
   },
   "rules": {
     "support": "full",

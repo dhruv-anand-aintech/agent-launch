@@ -28,9 +28,9 @@
     "comment": "Publicly launched May 15, 2025 (no waitlist). Originally built inside Sourcegraph, spun off as Amp Frontier Corporation."
   },
   "latest_major_update": {
-    "value": "Aug '26",
-    "source_url": "https://ampcode.com/news/multi-repo-projects#multi-repo-projects:~:text=multi-repository%20projects",
-    "comment": "August 27, 2026 - Amp added multi-repository projects with persistent workspace configuration and shared agent context across repositories."
+    "value": "Sep '26",
+    "source_url": "https://ampcode.com/news/desktop#desktop:~:text=See%20and%20control%20the%20desktop%20in%20your%20orb",
+    "comment": "September 4, 2026 - Amp added the ability to see and control the remote desktop inside an orb. September updates also added Fable 5.1 ultra mode and intelligently ordered diffs."
   },
   "rules": {
     "support": "full",

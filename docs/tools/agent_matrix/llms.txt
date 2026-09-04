@@ -1,6 +1,6 @@
 # Coding Agent Feature Matrix
 > Compare 36 coding agents, CLIs, and IDEs across features.
-> https://compare.ainorthstar.tech | Updated 2026-09-02
+> https://compare.ainorthstar.tech | Updated 2026-09-04
 
 Agent                   Rel    FF     Fre   NoA   Oth   Rul   Skl   Hks   MCP   Cmd   Gol   Sub   Mon   Trn   Mod   App   San   Res   Con   Hdl   Fmt   Sta   Tel   Hst  BYOM
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -119,7 +119,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Website: https://ampcode.app/
 - Form factor: CLI, SDK, Web, Mobile
 - Released: May '25
-- Latest update: Aug '26
+- Latest update: Sep '26
 - Some Free Usage: full — Amp documents a free mode for interactive editor/CLI use, with limits and availability caveats.
 - No Account Required: blank
 - Can Use Other Subscriptions: blank
@@ -151,7 +151,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Website: https://antigravity.google/
 - Form factor: CLI, IDE, Web
 - Released: 2025
-- Latest update: Aug '26
+- Latest update: Sep '26
 - Some Free Usage: full — Google announced Antigravity public preview availability at no charge with rate limits.
 - No Account Required: blank
 - Can Use Other Subscriptions: blank
@@ -312,7 +312,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Website: https://commandcode.ai/
 - Form factor: CLI, Extension, Web, Desktop App
 - Released: Jul '26
-- Latest update: Aug '26
+- Latest update: Sep '26
 - Some Free Usage: partial — Docs advertise temporary free model deals, but ordinary agent use requires signing in and a paid/credit-backed plan.
 - No Account Required: none — Quickstart requires `cmd login` before normal coding use.
 - Can Use Other Subscriptions: full — CLI exposes `/provider` and pricing/docs describe provider/API-key surfaces, so usage can route through non-default providers where configured.
@@ -345,7 +345,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Website: https://charm.land/crush
 - Form factor: CLI, TUI
 - Released: Jul '25
-- Latest update: Sep '26
+- Latest update: Aug '26
 - Some Free Usage: full — Local model backends (Ollama, LM Studio, MLX, LiteLLM) and some free-tier provider plans allow free agent usage without paying for hosted inference.
 - No Account Required: full — Can run entirely against local Ollama/LM Studio/MLX models without any Crush account or vendor sign-in; the CLI itself requires no account to install or run.
 - Can Use Other Subscriptions: full — Routes through the user's own API keys/accounts for any supported provider (Anthropic, OpenAI, etc.) or coding-plan subscriptions (GLM Coding Plan, Kimi Code, MiniMax Coding Plan, Synthetic) rather than a Crush-owned subscription.
@@ -377,7 +377,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Website: https://cursor.com/
 - Form factor: CLI, IDE, SDK, Web, Mobile
 - Released: 2023
-- Latest update: Aug '26
+- Latest update: Sep '26
 - Some Free Usage: full — Cursor pricing documents a Hobby Free plan with limited Agent requests and Tab completions.
 - No Account Required: blank
 - Can Use Other Subscriptions: blank
@@ -409,7 +409,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Website: https://devin.ai/
 - Form factor: CLI, Extension, SDK, Web
 - Released: Dec '24
-- Latest update: Aug '26
+- Latest update: Sep '26
 - Some Free Usage: full — Cognition announced a Free self-serve Devin plan with limited access.
 - No Account Required: blank
 - Can Use Other Subscriptions: blank
@@ -508,7 +508,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Website: https://github.com/features/copilot/cli
 - Form factor: CLI
 - Released: Sep '25
-- Latest update: Aug '26
+- Latest update: Sep '26
 - Some Free Usage: partial — GitHub Copilot Free plan includes limited chat/agent requests (e.g. 50 chat requests/mo) usable via the CLI, but no unlimited free local-model path is documented for Copilot CLI itself.
 - No Account Required: none — Requires sign-in with a GitHub account holding an active Copilot subscription/seat; `/login` flow inside the CLI.
 - Can Use Other Subscriptions: full — BYOK support for Anthropic, OpenAI, Azure OpenAI, AWS Bedrock, Google AI Studio, xAI/Microsoft Foundry, any OpenAI-compatible endpoint, and local models via Ollama, configured with COPILOT_PROVIDER_TYPE / COPILOT_PROVIDER_BASE_URL / COPILOT_PROVIDER_API_KEY / COPILOT_MODEL env vars.
@@ -541,7 +541,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Website: https://github.com/features/copilot
 - Form factor: CLI, IDE, Extension, SDK, Web
 - Released: Jun '25
-- Latest update: Aug '26
+- Latest update: Sep '26
 - Some Free Usage: blank
 - No Account Required: blank
 - Can Use Other Subscriptions: blank
@@ -801,7 +801,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Website: https://kiro.dev/
 - Form factor: CLI, IDE, Web
 - Released: Jul '25
-- Latest update: Aug '26
+- Latest update: Sep '26
 - Some Free Usage: full — Kiro billing docs say new users start on the perpetual Kiro Free tier.
 - No Account Required: blank
 - Can Use Other Subscriptions: blank
@@ -866,7 +866,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Website: https://dev.meta.ai/
 - Form factor: CLI
 - Released: Aug '26
-- Latest update: Aug '26
+- Latest update: Sep '26
 - Some Free Usage: unknown — Free included usage was not established from the public documentation reviewed.
 - No Account Required: none — A Meta developer credential is required for the Meta provider.
 - Can Use Other Subscriptions: none — The native CLI uses Meta credentials rather than another vendor subscription.

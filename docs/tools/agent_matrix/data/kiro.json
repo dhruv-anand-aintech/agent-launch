@@ -26,9 +26,9 @@
     "comment": "Kiro entered public preview in 2025; CLI docs are now first-class."
   },
   "latest_major_update": {
-    "value": "Aug '26",
-    "source_url": "https://kiro.dev/changelog/#kiro-web:~:text=branch%20selection",
-    "comment": "Kiro Web added branch selection on August 31, 2026; current IDE and CLI releases also shipped in late August."
+    "value": "Sep '26",
+    "source_url": "https://kiro.dev/changelog/#kiro-web-is-now-generally-available:~:text=Kiro%20Web%20Is%20Now%20Generally%20Available",
+    "comment": "Kiro Web became generally available September 1, 2026. The same update wave added cloud-configuration sync across Web, IDE, and CLI plus a CLI session dashboard and consolidated configuration panel."
   },
   "rules": {
     "support": "full",

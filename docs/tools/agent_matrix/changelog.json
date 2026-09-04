@@ -1,6 +1,93 @@
 {
-  "entry_count": 1770,
+  "entry_count": 1790,
   "entries": [
+    {
+      "date": "2026-09-04",
+      "commit": "",
+      "title": "Unreleased matrix update",
+      "items": [
+        {
+          "summary": "Amp: Latest Major Update updated to Sep '26",
+          "target": "cell-amp-latest-major-update"
+        },
+        {
+          "summary": "Antigravity: Latest Major Update updated to Sep '26",
+          "target": "cell-antigravity-latest-major-update"
+        },
+        {
+          "summary": "Claude Code: Latest Major Update evidence refreshed",
+          "target": "cell-claude-code-latest-major-update"
+        },
+        {
+          "summary": "Cline: Form Factor evidence refreshed",
+          "target": "cell-cline-form-factor"
+        },
+        {
+          "summary": "Cline: Latest Major Update evidence refreshed",
+          "target": "cell-cline-latest-major-update"
+        },
+        {
+          "summary": "OpenAI Codex CLI: Latest Major Update evidence refreshed",
+          "target": "cell-codex-cli-latest-major-update"
+        },
+        {
+          "summary": "Command Code: Latest Major Update updated to Sep '26",
+          "target": "cell-command-code-latest-major-update"
+        },
+        {
+          "summary": "Cursor: Latest Major Update updated to Sep '26",
+          "target": "cell-cursor-latest-major-update"
+        },
+        {
+          "summary": "Devin: Latest Major Update updated to Sep '26",
+          "target": "cell-devin-latest-major-update"
+        },
+        {
+          "summary": "GitHub Copilot CLI: Latest Major Update updated to Sep '26",
+          "target": "cell-github-copilot-cli-latest-major-update"
+        },
+        {
+          "summary": "GitHub Copilot: Latest Major Update updated to Sep '26",
+          "target": "cell-github-copilot-coding-agent-latest-major-update"
+        },
+        {
+          "summary": "Goose: Latest Major Update updated to Sep '26",
+          "target": "cell-goose-latest-major-update"
+        },
+        {
+          "summary": "Kilo Code: Latest Major Update updated to Sep '26",
+          "target": "cell-kilo-code-latest-major-update"
+        },
+        {
+          "summary": "Kimi Code CLI: Latest Major Update evidence refreshed",
+          "target": "cell-kimi-cli-latest-major-update"
+        },
+        {
+          "summary": "Kiro: Latest Major Update updated to Sep '26",
+          "target": "cell-kiro-latest-major-update"
+        },
+        {
+          "summary": "MiMo Code: Latest Major Update updated to Sep '26",
+          "target": "cell-mimo-code-latest-major-update"
+        },
+        {
+          "summary": "Muse Code: Latest Major Update updated to Sep '26",
+          "target": "cell-muse-code-latest-major-update"
+        },
+        {
+          "summary": "OpenCode: Latest Major Update evidence refreshed",
+          "target": "cell-opencode-latest-major-update"
+        },
+        {
+          "summary": "Qwen Code: Latest Major Update updated to Sep '26",
+          "target": "cell-qwen-code-latest-major-update"
+        },
+        {
+          "summary": "Qwen Code: Released evidence refreshed",
+          "target": "cell-qwen-code-released-in"
+        }
+      ]
+    },
     {
       "date": "2026-09-02",
       "commit": "b3b7655",

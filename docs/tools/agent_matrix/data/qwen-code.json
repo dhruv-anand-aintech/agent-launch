@@ -25,12 +25,12 @@
   "released_in": {
     "value": "Jun '25",
     "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.19.2#source:~:text=Release%20v0.19.2",
-    "comment": "GitHub repo created 2025-06-26. Earliest releases (v0.0.5+) shortly after. Current latest release: v0.19.2 (2026-06-24)."
+    "comment": "GitHub repo created June 26, 2025, with the earliest public releases following shortly afterward."
   },
   "latest_major_update": {
-    "value": "Aug '26",
-    "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.22.3#source:~:text=owner-scoped%20named%20sessions%20in%20Channels",
-    "comment": "Latest stable Qwen Code release v0.22.3 (August 28, 2026) adds owner-scoped named channel sessions, local-path daemon extension installs, and pull-request state indicators in Web Shell. Nightly and component-only CUA driver tags are excluded."
+    "value": "Sep '26",
+    "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.23.0#source:~:text=The%20branch%20picker%20now%20displays%20git%20state%20hints",
+    "comment": "Latest stable Qwen Code release v0.23.0 (September 3, 2026) adds Git-state hints, a deterministic parallel review workflow emitter, scoped workspace-memory tasks, Local Control pairing, scheduled Web Shell sessions, and named cross-session messaging."
   },
   "rules": {
     "support": "full",

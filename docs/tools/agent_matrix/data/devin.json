@@ -28,9 +28,9 @@
     "comment": "First publicly demoed March 2024. Made Generally Available (GA) on December 10, 2024."
   },
   "latest_major_update": {
-    "value": "Aug '26",
-    "source_url": "https://docs.devin.ai/release-notes/2026#august-28-2026:~:text=August%2028%2C%202026",
-    "comment": "The latest official Devin release notes were updated August 28, 2026 with current agent, review, integration, and platform improvements."
+    "value": "Sep '26",
+    "source_url": "https://docs.devin.ai/release-notes/2026#september-2-2026:~:text=September%202%2C%202026",
+    "comment": "September 2, 2026 updates added session grouping and filters, cleanup code scans, the /scan composer command, scheduled scan automations, a redesigned findings tab, and richer automation trigger details."
   },
   "rules": {
     "support": "full",

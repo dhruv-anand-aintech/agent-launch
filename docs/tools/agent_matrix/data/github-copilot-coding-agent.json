@@ -30,9 +30,9 @@
     "comment": "Announced at GitHub Universe (Oct/Nov 2024) in preview. GA billing launch: June 18, 2025 when premium request billing began."
   },
   "latest_major_update": {
-    "value": "Aug '26",
-    "source_url": "https://github.blog/changelog/2026-08-31-github-copilot-in-vs-code-august-release-v1-108/#github-copilot-in-vs-code-august-release-v1108:~:text=August%20release",
-    "comment": "GitHub's August 31, 2026 Copilot release added the latest agent and IDE capabilities; August also brought the coding-agent harness to JetBrains generally and expanded Slack and Teams integrations."
+    "value": "Sep '26",
+    "source_url": "https://code.visualstudio.com/updates/v1_136#_agents:~:text=This%20release%20helps%20you%20finish%20pull%20requests%20with%20agents",
+    "comment": "VS Code 1.136 shipped September 2, 2026 with Agent Merge, multi-root Copilot and Claude sessions, hierarchical related chats, a redesigned agent-session input, and agent-host improvements."
   },
   "rules": {
     "support": "full",

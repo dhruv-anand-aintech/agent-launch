@@ -14,12 +14,12 @@
       "Desktop App"
     ],
     "source_url": "https://marketplace.visualstudio.com/items?itemName=saoudrizwan.claude-dev#add-a-tool-that:~:text=Extension",
-    "comment": "VS Code extension, JetBrains plugin, CLI, desktop app, and @cline/sdk for embedding the agent runtime in apps and CI. Per-form-factor links: Extension: https://marketplace.visualstudio.com/items?itemName=saoudrizwan.claude-dev; CLI: https://docs.cline.bot/cli/overview; SDK: https://docs.cline.bot/sdk/overview; Desktop App: https://github.com/cline/cline/releases/tag/desktop-v0.0.22.",
+    "comment": "VS Code extension, JetBrains plugin, CLI, desktop app, and @cline/sdk for embedding the agent runtime in apps and CI. Per-form-factor links: Extension: https://marketplace.visualstudio.com/items?itemName=saoudrizwan.claude-dev; CLI: https://docs.cline.bot/cli/overview; SDK: https://docs.cline.bot/sdk/overview; Desktop App: https://github.com/cline/cline/releases/tag/desktop-v0.0.23.",
     "links": {
       "Extension": "https://marketplace.visualstudio.com/items?itemName=saoudrizwan.claude-dev",
       "CLI": "https://docs.cline.bot/cli/overview",
       "SDK": "https://docs.cline.bot/sdk/overview",
-      "Desktop App": "https://github.com/cline/cline/releases/tag/desktop-v0.0.22"
+      "Desktop App": "https://github.com/cline/cline/releases/tag/desktop-v0.0.23"
     }
   },
   "released_in": {
@@ -29,8 +29,8 @@
   },
   "latest_major_update": {
     "value": "Sep '26",
-    "source_url": "https://github.com/cline/cline/releases/tag/v4.1.17#v4117:~:text=v4.1.17",
-    "comment": "Latest main Cline release is v4.1.17 on September 2, 2026; the current CLI release is v3.0.61 and desktop release is v0.0.22."
+    "source_url": "https://github.com/cline/cline/releases/tag/desktop-v0.0.23#source:~:text=Agent%20Plugins%20are%20now%20discovered%20and%20run%20by%20the%20shared%20Hub",
+    "comment": "Latest desktop release v0.0.23 shipped September 3, 2026 with shared-Hub discovery for Agent Plugins, including their skills and MCP servers, plus Hub update, sign-in, scheduled-task, and MCP shutdown fixes."
   },
   "rules": {
     "support": "full",

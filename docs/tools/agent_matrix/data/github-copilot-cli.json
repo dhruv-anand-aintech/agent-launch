@@ -22,9 +22,10 @@
     "comment": "Public preview announced September 25, 2025, authenticated with existing GitHub account, usable with existing Copilot Pro/Pro+/Business/Enterprise plans."
   },
   "latest_major_update": {
-    "value": "Aug '26",
-    "source_url": "https://github.com/github/copilot-cli/releases/tag/v1.0.82#v1082:~:text=v1.0.82",
-    "comment": "Latest stable GitHub Copilot CLI release is v1.0.82 on August 29, 2026."
+    "value": "Sep '26",
+    "source_url": "https://github.blog/changelog/2026-09-02-content-exclusions-generally-available-in-copilot-app-and-cli/#content-exclusions-generally-available-in-copilot-app-and-cli:~:text=Copilot%20CLI%20now%20respect%20content%20exclusion%20policies",
+    "comment": "On September 2, 2026, Copilot CLI gained generally available enforcement of enterprise, organization, and repository content-exclusion policies for Business and Enterprise customers.",
+    "sort_date": "2026-09-02"
   },
   "rules": {
     "support": "full",

@@ -28,9 +28,9 @@
     "comment": "Launch announcement presents Command Code as a newly launched coding agent CLI with taste learning."
   },
   "latest_major_update": {
-    "value": "Aug '26",
-    "source_url": "https://commandcode.ai/changelog#august:~:text=v%201.38.0",
-    "comment": "The August 2026 changelog lists CLI v1.38.0 and desktop v0.1.19 as the latest public builds."
+    "value": "Sep '26",
+    "source_url": "https://commandcode.ai/changelog#september:~:text=v1.47.0",
+    "comment": "The September 2026 changelog lists CLI v1.47.0, which adds windowed document reading for Word, PowerPoint, Excel, OpenDocument, RTF, EPUB, and PDF files and marks Grok 4.6 as vision-capable."
   },
   "pricing": {
     "value": "Go $1/mo, Pro $15/mo, Max 10x $100/mo, Max 20x $200/mo; monthly credits and top-ups; BYOK/provider options documented",
