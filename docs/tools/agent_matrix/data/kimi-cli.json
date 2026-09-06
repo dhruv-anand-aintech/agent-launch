@@ -25,8 +25,8 @@
   },
   "latest_major_update": {
     "value": "Sep '26",
-    "source_url": "https://github.com/MoonshotAI/kimi-code/releases/tag/%40moonshot-ai%2Fkimi-code%400.40.1#source:~:text=Fix%20the%20condition%20for%20showing%20the%20kimi-cli%20migration%20prompt",
-    "comment": "Kimi Code 0.40.1 shipped September 2, 2026 with a fix for the legacy kimi-cli migration prompt. Version 0.40.0 added default secondary-model subagents, a web plugin panel, session and compaction fixes, dangerous-command guards, and faster session forks."
+    "source_url": "https://github.com/MoonshotAI/kimi-code/releases/tag/%40moonshot-ai%2Fkimi-code%400.41.0#source:~:text=Remind%20the%20model%20of%20its%20context%20budget",
+    "comment": "Kimi Code 0.41.0 shipped September 4, 2026 with context-budget reminders around automatic compaction, always-on turn-level file history, experimental Tower multi-agent collaboration in the web UI, cross-process subagent resume, background-question fixes, and permission-mode and review-interface improvements."
   },
   "rules": {
     "support": "full",

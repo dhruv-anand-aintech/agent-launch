@@ -29,8 +29,8 @@
   },
   "latest_major_update": {
     "value": "Sep '26",
-    "source_url": "https://github.com/anomalyco/opencode/releases/tag/v1.18.27#source:~:text=Default%20provider%20header%20timeouts%20to%20five%20minutes",
-    "comment": "Latest release v1.18.27 (September 2, 2026) lengthens provider and streamed-chunk timeouts, makes Anthropic thinking-block binding configurable and version-aware, and fixes cancellation errors for timed-out SSE reads."
+    "source_url": "https://github.com/anomalyco/opencode/releases/tag/v1.18.29#source:~:text=Allow%20Codex%20OAuth%20model%20filtering%20to%20recognize%20integer%20GPT%20versions",
+    "comment": "Latest release v1.18.29 (September 4, 2026) fixes Codex OAuth model filtering for integer GPT versions and restores GPT-6 Astra visibility for OpenAI subscription users."
   },
   "rules": {
     "support": "full",

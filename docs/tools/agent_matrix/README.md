@@ -39,7 +39,7 @@ Form factor values are deliberately strict: each value should have a concrete pe
 | Devin | CLI, Extension, SDK, Web | Dec '24 | Sep '26 | full |  |  | full | full | partial | partial | full | full | full | unknown |
 | Factory Droid | CLI, Extension, SDK, Web, Desktop App | 2025 | Sep '26 |  | partial | full | full | full | partial | partial | full | full | full | full |
 | Gemini CLI | CLI | Jun '25 | Sep '26 | full |  | full | full | partial | partial | unknown | full | full | none | partial |
-| GitHub Copilot | CLI, IDE, Extension, SDK, Web | Jun '25 | Sep '26 |  |  |  | full | full | partial | unknown | full | full | full | full |
+| GitHub Copilot | CLI, IDE, Extension, SDK, Web, Desktop App | Jun '25 | Sep '26 |  |  |  | full | full | partial | unknown | full | full | full | full |
 | GitHub Copilot CLI | CLI | Sep '25 | Sep '26 | partial | none | full | full | full | partial | full | full | full | none | full |
 | Google Jules | Web | Aug '25 | Mar '26 |  |  |  | unknown | none | partial | partial | partial | partial | full | none |
 | Goose | CLI, Desktop App | Jan '25 | Sep '26 | full | full | full | full | full | partial | full | full | full | none | full |
@@ -56,12 +56,13 @@ Form factor values are deliberately strict: each value should have a concrete pe
 | OpenHands | CLI, IDE, Web, Docker, Hosted Agent | Mar '24 | Sep '26 | full | full | full | full | full | none | full | full | full | full | full |
 | Pi | CLI, SDK | May '26 | Sep '26 |  | full | full | full | full | none | full | full | none | none | full |
 | Pier Code | CLI | Jun '26 | Jul '26 | none | partial | none | full | partial | partial | full | partial | full | full | partial |
+| Qoder | CLI, IDE, Extension, SDK, Web, Desktop App, Mobile | Oct '25 | Sep '26 |  |  |  | full | full | partial | full | full | full | full | full |
 | Qwen Code | CLI, Extension, SDK, Desktop App | Jun '25 | Sep '26 |  |  |  | full | full | partial | unknown | full | full | partial | full |
 | Replit Agent | Web | Sep '24 | Aug '26 |  |  |  | partial | full | partial | partial | partial | unknown | full | none |
 | Roo Code | Extension | Mid-2025 | May '26 |  |  |  | full | full | partial | unknown | none | full | none | full |
 | Trae Agent | CLI | Jun '25 | Feb '26 | full | full | full | partial | none | none | full | none | partial | none | full |
 | Windsurf Cascade | CLI, IDE, Extension | Nov '24 | Aug '26 |  |  |  | full | full | partial | unknown | full | full | full | partial |
-| ZCode | IDE, Desktop App, Mobile | 2026 | Aug '26 | full |  |  | full | full | partial | partial | partial | full | none | full |
+| ZCode | IDE, Desktop App, Mobile | 2026 | Sep '26 | full |  |  | full | full | partial | partial | partial | full | none | full |
 
 ## Suggested Next Columns
 

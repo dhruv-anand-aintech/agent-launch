@@ -1,6 +1,61 @@
 {
-  "entry_count": 1790,
+  "entry_count": 1802,
   "entries": [
+    {
+      "date": "2026-09-06",
+      "commit": "",
+      "title": "Unreleased matrix update",
+      "items": [
+        {
+          "summary": "Claude Code: Latest Major Update evidence refreshed",
+          "target": "cell-claude-code-latest-major-update"
+        },
+        {
+          "summary": "OpenAI Codex CLI: Latest Major Update evidence refreshed",
+          "target": "cell-codex-cli-latest-major-update"
+        },
+        {
+          "summary": "Command Code: Latest Major Update evidence refreshed",
+          "target": "cell-command-code-latest-major-update"
+        },
+        {
+          "summary": "GitHub Copilot CLI: Latest Major Update evidence refreshed",
+          "target": "cell-github-copilot-cli-latest-major-update"
+        },
+        {
+          "summary": "GitHub Copilot: Form Factor updated to IDE, Extension, CLI, SDK, Web, Desktop App",
+          "target": "cell-github-copilot-coding-agent-form-factor"
+        },
+        {
+          "summary": "Kilo Code: Latest Major Update evidence refreshed",
+          "target": "cell-kilo-code-latest-major-update"
+        },
+        {
+          "summary": "Kimi Code CLI: Latest Major Update evidence refreshed",
+          "target": "cell-kimi-cli-latest-major-update"
+        },
+        {
+          "summary": "Kiro Crew: Latest Major Update updated to Sep '26",
+          "target": "cell-kiro-crew-latest-major-update"
+        },
+        {
+          "summary": "OpenCode: Latest Major Update evidence refreshed",
+          "target": "cell-opencode-latest-major-update"
+        },
+        {
+          "summary": "Pi: Latest Major Update updated to Sep '26",
+          "target": "cell-pi-latest-major-update"
+        },
+        {
+          "summary": "ZCode: Latest Major Update updated to Sep '26",
+          "target": "cell-zcode-latest-major-update"
+        },
+        {
+          "summary": "ZCode: Pricing updated to 5-day free trial quota; GLM Coding Lite $12.60/mo ($18 list), Pro $56/m…",
+          "target": "cell-zcode-pricing"
+        }
+      ]
+    },
     {
       "date": "2026-09-04",
       "commit": "e40db4d",

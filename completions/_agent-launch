@@ -41,6 +41,7 @@ agents=(
   'opencode:OpenCode'
   'pi:Pi Coding Agent'
   'pier:Pier Code'
+  'qoder:Qoder CLI'
   'qwen:Qwen Code'
   'trae:Trae Agent'
   'random:Uniform random installed agent'
