@@ -56,6 +56,7 @@ AGENTS: dict[str, AgentSpec] = {
     "openhands": AgentSpec("openhands", "", "", "pro"),
     "pi": AgentSpec("pi", "opencode-go/deepseek-v4-flash", "opencode-go/qwen3.7-max", "pro"),
     "pier": AgentSpec("pier", "sarvam-30b", "pier-hybrid", "pro"),
+    "qoder": AgentSpec("qoder", "lite", "performance", "pro"),
     "qwen": AgentSpec("qwen", "", "", "pro"),
     "trae": AgentSpec("trae-cli", "", "", "pro"),
     "cursor": AgentSpec("agent", "composer-2.5-fast", "cursor-grok-4.5-high", "fast"),
@@ -92,6 +93,7 @@ DEFAULT_AGENT_ORDER = (
     "kirocrew",
     "mimo",
     "pi",
+    "qoder",
     "qwen",
     "trae",
     "goose",
@@ -216,6 +218,7 @@ MODEL_FLAG_AGENTS = {
     "opencode",
     "pi",
     "pier",
+    "qoder",
     "qwen",
     "trae",
     "cursor",
@@ -722,6 +725,12 @@ def mode_flags(agent: str, mode: str, non_interactive: bool) -> list[str]:
             "auto": ["-s", "workspace-write", "-a", "on-request"],
             "danger": ["--dangerously-bypass-approvals-and-sandbox"],
         },
+        "qoder": {
+            "ask": ["--permission-mode", "default"],
+            "plan": ["--permission-mode", "default", "--tools=Read,Grep,Glob"],
+            "auto": ["--permission-mode", "auto"],
+            "danger": ["--dangerously-skip-permissions"],
+        },
         "qwen": {
             "ask": ["--approval-mode", "default"],
             "plan": ["--approval-mode", "plan"],
@@ -1132,6 +1141,24 @@ def build_command(args: argparse.Namespace) -> list[str]:
             append_passthrough(cmd, args)
             if prompt:
                 cmd.append(prompt)
+
+    elif agent == "qoder":
+        cmd += ["--cwd", args.cwd]
+        cmd += mode_flags(agent, args.mode, non_interactive)
+        append_model(cmd, agent, model)
+        append_passthrough(cmd, args)
+        if resume_id:
+            cmd += ["--resume", resume_id]
+        elif continue_session:
+            cmd += ["--continue"]
+        elif resume_requested:
+            cmd += ["--resume"]
+        if non_interactive:
+            cmd += ["--print"]
+            if prompt:
+                cmd.append(prompt)
+        elif prompt:
+            cmd += ["--prompt-interactive", prompt]
 
     elif agent == "qwen":
         cmd += mode_flags(agent, args.mode, non_interactive)

@@ -31,8 +31,8 @@
   },
   "latest_major_update": {
     "value": "Sep '26",
-    "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.260#source:~:text=Added%20a%20diff%20panel%20that%20opens%20beside%20the%20conversation",
-    "comment": "Latest stable release v2.1.260 (September 3, 2026) adds a fullscreen /diff panel, headless /reload-plugins, text /advisor support across desktop, Remote Control, and headless sessions, and permission, sandbox, authentication, and model fixes."
+    "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.263#source:~:text=Bug%20fixes%20and%20reliability%20improvements",
+    "comment": "Latest stable release v2.1.263 (September 6, 2026) contains bug fixes and reliability improvements. Version 2.1.261 added organization-policy diagnostics, configurable inline command-output limits, file-based subagent system prompts, /skill-doctor, and extensive reliability and security fixes."
   },
   "rules": {
     "support": "full",

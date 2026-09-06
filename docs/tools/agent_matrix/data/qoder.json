@@ -1,0 +1,193 @@
+{
+  "name": "Qoder",
+  "links": {
+    "docs": "https://docs.qoder.com/product-series/what-is-qoder",
+    "github": "https://github.com/QoderAI",
+    "website": "https://qoder.com/",
+    "slug": "qoder"
+  },
+  "form_factor": {
+    "values": [
+      "IDE",
+      "Extension",
+      "CLI",
+      "SDK",
+      "Web",
+      "Desktop App",
+      "Mobile"
+    ],
+    "source_url": "https://qoder.com/#build-your-way:~:text=The%20Qoder%20product%20family%20supports%20every%20way%20of%20building",
+    "comment": "Qoder provides an agentic IDE, a JetBrains plugin, Qoder CLI, TypeScript and Python Agent SDKs, managed Cloud Agents, a desktop agentic-coding app, and mobile agent control. QoderWork is a broader work assistant and is not treated as a separate coding harness here. Per-form-factor links: IDE: https://docs.qoder.com/desktop/overview; Extension: https://docs.qoder.com/plugins/introduction; CLI: https://docs.qoder.com/cli/installation; SDK: https://docs.qoder.com/cli/sdk/overview; Web: https://docs.qoder.com/cloud-agents/overview; Desktop App: https://qoder.com/; Mobile: https://docs.qoder.com/mobile/app/download.",
+    "links": {
+      "IDE": "https://docs.qoder.com/desktop/overview",
+      "Extension": "https://docs.qoder.com/plugins/introduction",
+      "CLI": "https://docs.qoder.com/cli/installation",
+      "SDK": "https://docs.qoder.com/cli/sdk/overview",
+      "Web": "https://docs.qoder.com/cloud-agents/overview",
+      "Desktop App": "https://qoder.com/",
+      "Mobile": "https://docs.qoder.com/mobile/app/download"
+    }
+  },
+  "released_in": {
+    "value": "Oct '25",
+    "source_url": "https://qoder.com/blog/qoder-cli#qoder-cli-is-now-available:~:text=October%2015%2C%202025",
+    "comment": "Qoder announced its standalone terminal coding agent on October 15, 2025."
+  },
+  "latest_major_update": {
+    "value": "Sep '26",
+    "source_url": "https://docs.qoder.com/release-notes/qoder-cli#september-3-2026:~:text=CLI%201.1.42",
+    "comment": "Qoder CLI 1.1.42 shipped September 3, 2026 with lower CPU usage and faster large-session resume and streaming, bounded transcript loading, scheduled-task reliability fixes, a 100-turn default /goal limit, and one-level default subagent nesting.",
+    "sort_date": "2026-09-03"
+  },
+  "rules": {
+    "support": "full",
+    "source_url": "https://docs.qoder.com/cli/run-tasks#memory:~:text=Qoder%20CLI%20retains%20context%20across%20sessions%20using%20%60AGENTS.md%60%20files",
+    "comment": "Hierarchical user, project, and local AGENTS.md instructions plus .qoder/rules files and optional Auto-Memory."
+  },
+  "skills": {
+    "support": "full",
+    "source_url": "https://docs.qoder.com/cli/Skills#where-skills-live:~:text=User-level,~%2F.qoder%2Fskills",
+    "comment": "Agent Skills use SKILL.md packages at user and project scope, can be invoked manually or selected by the model, and can be bundled by plugins."
+  },
+  "hooks": {
+    "support": "full",
+    "source_url": "https://docs.qoder.com/cli/hooks#tool-calls:~:text=PreToolUse",
+    "comment": "Hook system covers prompt, tool, permission, session, subagent, compaction, and notification events with command, prompt, and agent handlers."
+  },
+  "mcp_servers": {
+    "support": "full",
+    "source_url": "https://docs.qoder.com/cli/tools#mcp-tools:~:text=Qoder%20CLI%20can%20connect%20to%20Model%20Context%20Protocol",
+    "comment": "MCP servers integrate external tools and data, use the normal permission system, and can be managed by CLI subcommands or supplied with --mcp-config."
+  },
+  "custom_commands": {
+    "support": "full",
+    "source_url": "https://docs.qoder.com/cli/commands#command-types:~:text=Prompt%20Type",
+    "comment": "User-defined prompt commands work in the TUI and headless mode and are loaded from scoped command configuration."
+  },
+  "goal_command": {
+    "support": "full",
+    "source_url": "https://docs.qoder.com/cli/tools#delegate-and-automate:~:text=Goals",
+    "comment": "Built-in /goal support tracks and executes longer-running objectives; current releases allow up to 100 interactions by default."
+  },
+  "subagents": {
+    "support": "full",
+    "source_url": "https://docs.qoder.com/cli/subagent#what-a-subagent-is:~:text=A%20Subagent%20is%20a%20specialized%20agent",
+    "comment": "Built-in and custom subagents support independent tool, model, permission, runtime, skill, hook, memory, background, and worktree-isolation configuration."
+  },
+  "monitor": {
+    "support": "partial",
+    "source_url": "https://docs.qoder.com/cli/tools#delegate-and-automate:~:text=Scheduled%20work",
+    "comment": "Qoder has background subagents, scheduled tasks, loops, goals, and session status, but reviewed docs do not establish a general arbitrary command, log, or WebSocket monitor surface."
+  },
+  "model_selection": {
+    "support": "full",
+    "source_url": "https://docs.qoder.com/cli/cli-reference#models-and-reasoning:~:text=--model",
+    "comment": "Launch-time --model selection, in-session model controls, reasoning effort, list-models, named Qoder tiers, and BYOK model identifiers."
+  },
+  "approval_mode": {
+    "support": "full",
+    "source_url": "https://docs.qoder.com/cli/cli-reference#permission-control:~:text=--permission-mode",
+    "comment": "Default, plan, auto, bypass, accept-edits, and do-not-ask permission modes plus allow, ask, and deny rules and per-tool controls."
+  },
+  "sandbox_mode": {
+    "support": "full",
+    "source_url": "https://docs.qoder.com/cli/cli-reference#sandbox:~:text=--sandbox",
+    "comment": "The --sandbox switch enables an environment-selected sandbox backend, configured by QODER_SANDBOX or tools.sandbox."
+  },
+  "resume": {
+    "support": "full",
+    "source_url": "https://docs.qoder.com/cli/cli-reference#session-management:~:text=--resume",
+    "comment": "Use --resume or -r with a session identifier, or omit the identifier to open the selector."
+  },
+  "continue": {
+    "support": "full",
+    "source_url": "https://docs.qoder.com/cli/cli-reference#session-management:~:text=--continue",
+    "comment": "Use --continue or -c to resume the most recent session."
+  },
+  "non_interactive": {
+    "support": "full",
+    "source_url": "https://docs.qoder.com/cli/run-in-scripts#headless-mode:~:text=Headless%20(non-interactive)%20mode",
+    "comment": "Passing a prompt or -p/--print runs headlessly, prints the result, and exits for scripts and CI workflows."
+  },
+  "output_format": {
+    "support": "full",
+    "source_url": "https://docs.qoder.com/cli/cli-reference#output-and-script-mode:~:text=--output-format",
+    "comment": "The CLI supports selectable output and input formats plus a maximum output-token limit for scripted execution."
+  },
+  "statusline": {
+    "support": "full",
+    "source_url": "https://docs.qoder.com/cli/builtins-reference#built-in-subagents:~:text=statusline-setup",
+    "comment": "A built-in statusline-setup agent helps configure the interactive status bar."
+  },
+  "telemetry": {
+    "support": "unknown",
+    "source_url": "https://docs.qoder.com/cli/settings-reference#configuration-item-reference:~:text=Configuration%20Item%20Reference",
+    "comment": "Current public settings documentation reviewed did not establish an end-user OpenTelemetry export or equivalent telemetry pipeline."
+  },
+  "custom_model_provider": {
+    "support": "full",
+    "source_url": "https://docs.qoder.com/account/pricing#individual-plans:~:text=Bring%20Your%20Own%20Key",
+    "comment": "Qoder supports BYOK custom models in addition to its hosted model tiers."
+  },
+  "notes": "Qoder is Alibaba's agentic coding platform. This row combines its coding-focused IDE, JetBrains plugin, CLI, SDK, cloud, desktop, and mobile control surfaces. QoderWork is broader desktop work automation, so it is noted but not added as another coding-agent row.",
+  "pricing": {
+    "value": "Free; Pro $20/mo; Pro+ $60/mo; Ultra $200/mo; Teams and Enterprise plans; BYOK; 14-day Pro trial for eligible new client users",
+    "source_url": "https://docs.qoder.com/account/pricing#individual-plans:~:text=Price,Free,20%20USD%2Fmo,60%20USD%2Fmo,200%20USD%2Fmo",
+    "comment": "Qoder lists Free, Pro, Pro+, Ultra, Teams, and Enterprise plans, with monthly credits for hosted models and BYOK on the Free plan."
+  },
+  "hosted_agent": {
+    "support": "full",
+    "source_url": "https://docs.qoder.com/product-series/what-is-qoder#one-product-family-several-ways-to-work:~:text=Cloud%20Agents",
+    "comment": "Qoder Cloud Agents run managed sessions through APIs with configurable agents and environments, while --remote creates cloud sessions from the CLI."
+  },
+  "transcripts": {
+    "support": "full",
+    "source_url": "https://docs.qoder.com/cli/cli-reference#session-management:~:text=--list-sessions",
+    "comment": "Sessions persist by default and can be listed, resumed, continued, deleted, or disabled for a one-shot run with --no-session-persistence."
+  },
+  "keyboard_shortcuts": {
+    "support": "unknown",
+    "source_url": "https://docs.qoder.com/cli/interface#keyboard-shortcuts:~:text=Run%20%60%2Fshortcuts%60%20in%20the%20interactive%20interface",
+    "comment": "The TUI documents keyboard interactions, but customizable keybindings were not established in the reviewed official sources."
+  },
+  "theme_customization": {
+    "support": "full",
+    "source_url": "https://docs.qoder.com/cli/interface#custom-theme:~:text=You%20can%20define%20your%20own%20Color%20Scheme",
+    "comment": "The CLI includes multiple built-in themes, automatic light and dark switching, and user-defined color schemes through ui.customThemes."
+  },
+  "auto_save": {
+    "support": "unknown",
+    "source_url": "https://docs.qoder.com/desktop/overview#key-capabilities:~:text=Intelligent%20editing",
+    "comment": "Session persistence is documented, but a distinct automatic file-save control was not established."
+  },
+  "debugging_output": {
+    "support": "full",
+    "source_url": "https://docs.qoder.com/cli/cli-reference#general-flags:~:text=--debug",
+    "comment": "The -d/--debug flag enables debug log output."
+  },
+  "context_window": {
+    "support": "full",
+    "source_url": "https://docs.qoder.com/cli/cli-reference#models-and-reasoning:~:text=--context-window",
+    "comment": "The --context-window flag overrides the context-window size for supported models, and the runtime compacts long sessions."
+  },
+  "code_formatting": {
+    "support": "unknown",
+    "source_url": "https://docs.qoder.com/cli/tools#bash-and-shell:~:text=Bash",
+    "comment": "The agent can run project formatters through Bash, but a first-party automatic formatting control was not established."
+  },
+  "git_integration": {
+    "support": "full",
+    "source_url": "https://docs.qoder.com/cli/cli-reference#general-flags:~:text=--worktree",
+    "comment": "Built-in worktree isolation, commit-message generation and commits, rollback, Git-aware session workflows, and cloud task handoff."
+  },
+  "performance_mode": {
+    "support": "partial",
+    "source_url": "https://docs.qoder.com/cli/cli-reference#models-and-reasoning:~:text=performance",
+    "comment": "Qoder exposes lite, efficient, performance, and other model tiers plus reasoning controls, but not a separate local runtime performance switch."
+  },
+  "ui_customization": {
+    "support": "full",
+    "source_url": "https://docs.qoder.com/cli/interface#other-ui-options:~:text=The%20%60ui%60%20group%20contains%20many%20other%20adjustable%20options",
+    "comment": "The TUI can hide its banner and footer, show line numbers, compact tool output, adjust loading phrases, configure the status bar, and set accessibility behavior."
+  }
+}

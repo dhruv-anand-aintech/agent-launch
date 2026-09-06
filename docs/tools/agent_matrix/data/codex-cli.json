@@ -31,8 +31,8 @@
   },
   "latest_major_update": {
     "value": "Sep '26",
-    "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.153.2#source:~:text=Corrected%20the%20GPT-6-Astra%20Fast%20tier%20description",
-    "comment": "Latest stable Codex CLI release rust-v0.153.2 (September 3, 2026) corrects the displayed GPT-6-Astra Fast tier description to 2x speed and increased usage; the change is presentation-only."
+    "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.153.4#source:~:text=Fixed%20Astra%E2%80%99s%20visibility%20in%20the%20bundled%20model%20picker",
+    "comment": "Latest stable Codex CLI release rust-v0.153.4 (September 4, 2026) restores Astra visibility in the bundled model picker, makes Astra the bundled default when no model is configured, and limits asynchronous-question guidance to sessions where that tool is available."
   },
   "rules": {
     "support": "full",

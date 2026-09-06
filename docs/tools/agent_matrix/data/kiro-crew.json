@@ -23,9 +23,9 @@
     "comment": "AWS and Kiro introduced Kiro Crew as an open-source persistent development workspace in August 2026."
   },
   "latest_major_update": {
-    "value": "Aug '26",
-    "source_url": "https://kiro.dev/changelog/crew/#kiro-crew:~:text=0.4.0",
-    "comment": "The official Kiro Crew changelog lists stable 0.4.0 on August 25, 2026; the official installer supplied 0.4.1rc1 during local validation on September 2."
+    "value": "Sep '26",
+    "source_url": "https://github.com/kirodotdev/KiroCrew/releases/tag/v0.5.0#source:~:text=Your%20AWS%20account%20gets%20a%20control%20room",
+    "comment": "Kiro Crew 0.5.0 shipped September 5, 2026 with AWS Control, centrally published fleet security policies, no-install local dictation, session tabs, bulk and per-call approval controls, peer-session steering and conductor workflows, atomic self-update, improved mobile access, paginated transcripts, and extensive security and performance fixes."
   },
   "rules": {
     "support": "full",

@@ -812,9 +812,9 @@
     },
     "latest_major_update": {
       "value": "Sep '26",
-      "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.260#source:~:text=Added%20a%20diff%20panel%20that%20opens%20beside%20the%20conversation",
-      "comment": "Latest stable release v2.1.260 (September 3, 2026) adds a fullscreen /diff panel, headless /reload-plugins, text /advisor support across desktop, Remote Control, and headless sessions, and permission, sandbox, authentication, and model fixes.",
-      "sort_date": "2026-09-03"
+      "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.263#source:~:text=Bug%20fixes%20and%20reliability%20improvements",
+      "comment": "Latest stable release v2.1.263 (September 6, 2026) contains bug fixes and reliability improvements. Version 2.1.261 added organization-policy diagnostics, configurable inline command-output limits, file-based subagent system prompts, /skill-doctor, and extensive reliability and security fixes.",
+      "sort_date": "2026-09-06"
     },
     "rules": {
       "support": "full",
@@ -1002,7 +1002,7 @@
       "value": "Sep '26",
       "source_url": "https://github.com/cline/cline/releases/tag/desktop-v0.0.23#source:~:text=Agent%20Plugins%20are%20now%20discovered%20and%20run%20by%20the%20shared%20Hub",
       "comment": "Latest desktop release v0.0.23 shipped September 3, 2026 with shared-Hub discovery for Agent Plugins, including their skills and MCP servers, plus Hub update, sign-in, scheduled-task, and MCP shutdown fixes.",
-      "sort_date": "2026-09-03"
+      "sort_date": "2026-09-04"
     },
     "rules": {
       "support": "full",
@@ -1205,9 +1205,9 @@
     },
     "latest_major_update": {
       "value": "Sep '26",
-      "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.153.2#source:~:text=Corrected%20the%20GPT-6-Astra%20Fast%20tier%20description",
-      "comment": "Latest stable Codex CLI release rust-v0.153.2 (September 3, 2026) corrects the displayed GPT-6-Astra Fast tier description to 2x speed and increased usage; the change is presentation-only.",
-      "sort_date": "2026-09-04"
+      "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.153.4#source:~:text=Fixed%20Astra%E2%80%99s%20visibility%20in%20the%20bundled%20model%20picker",
+      "comment": "Latest stable Codex CLI release rust-v0.153.4 (September 4, 2026) restores Astra visibility in the bundled model picker, makes Astra the bundled default when no model is configured, and limits asynchronous-question guidance to sessions where that tool is available.",
+      "sort_date": "2026-09-06"
     },
     "rules": {
       "support": "full",
@@ -1587,8 +1587,8 @@
     },
     "latest_major_update": {
       "value": "Sep '26",
-      "source_url": "https://commandcode.ai/changelog#september:~:text=v1.47.0",
-      "comment": "The September 2026 changelog lists CLI v1.47.0, which adds windowed document reading for Word, PowerPoint, Excel, OpenDocument, RTF, EPUB, and PDF files and marks Grok 4.6 as vision-capable.",
+      "source_url": "https://commandcode.ai/changelog#september:~:text=v1.49.0",
+      "comment": "The September 2026 changelog lists CLI v1.49.0, which adds GPT-6 Astra. Version 1.48.0 added the max effort tier for Standard Muse Spark 1.3, and v1.47.1 improved provider and model configuration handling.",
       "sort_date": "2026-09-01"
     },
     "pricing": {
@@ -2764,9 +2764,9 @@
     },
     "latest_major_update": {
       "value": "Sep '26",
-      "source_url": "https://github.blog/changelog/2026-09-02-content-exclusions-generally-available-in-copilot-app-and-cli/#content-exclusions-generally-available-in-copilot-app-and-cli:~:text=Copilot%20CLI%20now%20respect%20content%20exclusion%20policies",
-      "comment": "On September 2, 2026, Copilot CLI gained generally available enforcement of enterprise, organization, and repository content-exclusion policies for Business and Enterprise customers.",
-      "sort_date": "2026-09-02"
+      "source_url": "https://github.com/github/copilot-cli/releases/tag/v1.0.83#source:~:text=Show%20running%20Copilot%20sessions%20in%20the%20Windows%2011%20taskbar",
+      "comment": "Copilot CLI v1.0.83 shipped September 4, 2026 with Windows taskbar session status, MCP OAuth CIMD support, custom-agent model fallback lists and required policies, Fable 5.1, saved session sorting, enterprise login controls, proxy mTLS, and broad sandbox, resume, MCP, and reliability fixes.",
+      "sort_date": "2026-09-04"
     },
     "rules": {
       "support": "full",
@@ -2949,16 +2949,18 @@
         "Extension",
         "CLI",
         "SDK",
-        "Web"
+        "Web",
+        "Desktop App"
       ],
       "source_url": "https://docs.github.com/en/copilot/get-started/features#inline-suggestions:~:text=Autocomplete-style%20suggestions%20from%20Copilot%20in%20supported%20IDEs",
-      "comment": "IDE agent mode (VS Code, JetBrains, Xcode, Neovim, Eclipse) + CLI + hosted cloud agent + @github/copilot-sdk (public preview). On GitHub CLI installs, Copilot is launched as `gh copilot`, which downloads/runs the Copilot CLI payload. Per-form-factor links: IDE: https://docs.github.com/en/copilot/get-started/features; Extension: https://marketplace.visualstudio.com/items?itemName=GitHub.copilot; CLI: https://docs.github.com/en/copilot/how-tos/copilot-cli/use-copilot-cli/overview; SDK: https://docs.github.com/en/copilot/how-tos/copilot-sdk; Web: https://github.com/features/copilot.",
+      "comment": "IDE agent mode (VS Code, JetBrains, Xcode, Neovim, Eclipse) + CLI + hosted cloud agent + @github/copilot-sdk (public preview) + the native GitHub Copilot app for macOS, Linux, and Windows. On GitHub CLI installs, Copilot is launched as `gh copilot`, which downloads/runs the Copilot CLI payload. Per-form-factor links: IDE: https://docs.github.com/en/copilot/get-started/features; Extension: https://marketplace.visualstudio.com/items?itemName=GitHub.copilot; CLI: https://docs.github.com/en/copilot/how-tos/copilot-cli/use-copilot-cli/overview; SDK: https://docs.github.com/en/copilot/how-tos/copilot-sdk; Web: https://github.com/features/copilot; Desktop App: https://docs.github.com/en/copilot/concepts/agents/github-copilot-app.",
       "links": {
         "IDE": "https://docs.github.com/en/copilot/get-started/features",
         "Extension": "https://marketplace.visualstudio.com/items?itemName=GitHub.copilot",
         "CLI": "https://docs.github.com/en/copilot/how-tos/copilot-cli/use-copilot-cli/overview",
         "SDK": "https://docs.github.com/en/copilot/how-tos/copilot-sdk",
-        "Web": "https://github.com/features/copilot"
+        "Web": "https://github.com/features/copilot",
+        "Desktop App": "https://docs.github.com/en/copilot/concepts/agents/github-copilot-app"
       }
     },
     "released_in": {
@@ -3155,7 +3157,7 @@
       "value": "Sep '26",
       "source_url": "https://github.com/aaif-goose/goose/releases/tag/v1.49.0#source:~:text=Auto-updater%20for%20desktop%20application",
       "comment": "Latest release v1.49.0 (September 3, 2026) adds desktop auto-updates and Linux ARM64 packages, background extension loading, built-in web-search and browser-use skills, PreToolUse hook improvements, scheduled-session UI, and new providers.",
-      "sort_date": "2026-09-03"
+      "sort_date": "2026-09-05"
     },
     "rules": {
       "support": "full",
@@ -3910,9 +3912,9 @@
     },
     "latest_major_update": {
       "value": "Sep '26",
-      "source_url": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.5.9#source:~:text=Preview%20local%20applications%20in%20Agent%20Manager",
-      "comment": "Latest stable main-product release v7.5.9 (September 2, 2026) adds Agent Manager app previews and CLI activity indicators, experimental per-subagent model/provider/reasoning selection, editable queued messages, and faster independent session forks.",
-      "sort_date": "2026-09-04"
+      "source_url": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.5.15#source:~:text=No%20notable%20changes",
+      "comment": "Latest stable main-product release v7.5.15 (September 6, 2026) reports no notable changes. Version 7.5.11 added Kilo Swarm, richer Agent Manager pull-request workflows, /update-from-base, unified @ search, and agent-defined default answers to questions; later patches improved hidden-panel polling and workspace indexing.",
+      "sort_date": "2026-09-06"
     },
     "rules": {
       "support": "full",
@@ -4109,9 +4111,9 @@
     },
     "latest_major_update": {
       "value": "Sep '26",
-      "source_url": "https://github.com/MoonshotAI/kimi-code/releases/tag/%40moonshot-ai%2Fkimi-code%400.40.1#source:~:text=Fix%20the%20condition%20for%20showing%20the%20kimi-cli%20migration%20prompt",
-      "comment": "Kimi Code 0.40.1 shipped September 2, 2026 with a fix for the legacy kimi-cli migration prompt. Version 0.40.0 added default secondary-model subagents, a web plugin panel, session and compaction fixes, dangerous-command guards, and faster session forks.",
-      "sort_date": "2026-09-04"
+      "source_url": "https://github.com/MoonshotAI/kimi-code/releases/tag/%40moonshot-ai%2Fkimi-code%400.41.0#source:~:text=Remind%20the%20model%20of%20its%20context%20budget",
+      "comment": "Kimi Code 0.41.0 shipped September 4, 2026 with context-budget reminders around automatic compaction, always-on turn-level file history, experimental Tower multi-agent collaboration in the web UI, cross-process subagent resume, background-question fixes, and permission-mode and review-interface improvements.",
+      "sort_date": "2026-09-06"
     },
     "rules": {
       "support": "full",
@@ -4297,9 +4299,9 @@
     },
     "latest_major_update": {
       "value": "Sep '26",
-      "source_url": "https://kiro.dev/changelog/crew/#kiro-crew:~:text=0.4.0",
-      "comment": "The official Kiro Crew changelog lists stable 0.4.0 on August 25, 2026; the official installer supplied 0.4.1rc1 during local validation on September 2.",
-      "sort_date": "2026-09-04"
+      "source_url": "https://github.com/kirodotdev/KiroCrew/releases/tag/v0.5.0#source:~:text=Your%20AWS%20account%20gets%20a%20control%20room",
+      "comment": "Kiro Crew 0.5.0 shipped September 5, 2026 with AWS Control, centrally published fleet security policies, no-install local dictation, session tabs, bulk and per-call approval controls, peer-session steering and conductor workflows, atomic self-update, improved mobile access, paginated transcripts, and extensive security and performance fixes.",
+      "sort_date": "2026-09-06"
     },
     "rules": {
       "support": "full",
@@ -4691,7 +4693,7 @@
       "value": "Sep '26",
       "source_url": "https://github.com/XiaomiMiMo/MiMo-Code/releases/tag/v0.1.14#source:~:text=Interrupted%20or%20errored%20turns%20stay%20recoverable",
       "comment": "Latest release v0.1.14 (September 2, 2026) adds append-only /recover for interrupted turns, title generation APIs, tool-driven TUI voice input, revised compaction, replayable nested tool calls, inherited subagent permissions, and optional auto-worktree guidance.",
-      "sort_date": "2026-09-04"
+      "sort_date": "2026-09-05"
     },
     "rules": {
       "support": "full",
@@ -5091,9 +5093,9 @@
     },
     "latest_major_update": {
       "value": "Sep '26",
-      "source_url": "https://github.com/anomalyco/opencode/releases/tag/v1.18.27#source:~:text=Default%20provider%20header%20timeouts%20to%20five%20minutes",
-      "comment": "Latest release v1.18.27 (September 2, 2026) lengthens provider and streamed-chunk timeouts, makes Anthropic thinking-block binding configurable and version-aware, and fixes cancellation errors for timed-out SSE reads.",
-      "sort_date": "2026-09-04"
+      "source_url": "https://github.com/anomalyco/opencode/releases/tag/v1.18.29#source:~:text=Allow%20Codex%20OAuth%20model%20filtering%20to%20recognize%20integer%20GPT%20versions",
+      "comment": "Latest release v1.18.29 (September 4, 2026) fixes Codex OAuth model filtering for integer GPT versions and restores GPT-6 Astra visibility for OpenAI subscription users.",
+      "sort_date": "2026-09-06"
     },
     "rules": {
       "support": "full",
@@ -5298,7 +5300,7 @@
       "value": "Sep '26",
       "source_url": "https://github.com/OpenHands/OpenHands/releases/tag/v1.16.0#source:~:text=select%20supported%20LLM%20providers",
       "comment": "Latest stable OpenHands release v1.16.0 (August 27, 2026) adds selection of supported LLM providers and related platform improvements. The project now publishes unified semver releases rather than relying on a cloud-only tag for the newest row.",
-      "sort_date": "2026-09-03"
+      "sort_date": "2026-09-05"
     },
     "rules": {
       "support": "full",
@@ -5495,9 +5497,9 @@
     },
     "latest_major_update": {
       "value": "Sep '26",
-      "source_url": "https://github.com/earendil-works/pi/releases/tag/v0.84.4#source:~:text=Terminal%20capability%20overrides",
-      "comment": "Latest release v0.84.4 (August 28, 2026) adds terminal capability overrides for hyperlinks, images, and truecolor. Recent releases added fullscreen TUI and transcript search, native PowerShell execution, and Qwen Token Plan support.",
-      "sort_date": "2026-09-04"
+      "source_url": "https://github.com/earendil-works/pi/releases/tag/v0.85.1#source:~:text=GPT-6%20Astra",
+      "comment": "Latest release v0.85.1 (September 5, 2026) adds GPT-6 Astra through OpenAI API keys and Codex subscriptions, faster fullscreen scrolling, and fixes for selector keybindings, SDK packaging, prompt caching, and mouse selection.",
+      "sort_date": "2026-09-05"
     },
     "rules": {
       "support": "full",
@@ -5859,6 +5861,200 @@
     "notes": "Pier Code is a terminal coding agent from Alphabench LLP. Added to agent-launch as `--agent pier` targeting the `pier` binary; installer verified on this machine with pier 0.4.1 under `~/.pier/bin/pier`."
   },
   {
+    "name": "Qoder",
+    "links": {
+      "docs": "https://docs.qoder.com/product-series/what-is-qoder",
+      "github": "https://github.com/QoderAI",
+      "website": "https://qoder.com/",
+      "slug": "qoder"
+    },
+    "form_factor": {
+      "values": [
+        "IDE",
+        "Extension",
+        "CLI",
+        "SDK",
+        "Web",
+        "Desktop App",
+        "Mobile"
+      ],
+      "source_url": "https://qoder.com/#build-your-way:~:text=The%20Qoder%20product%20family%20supports%20every%20way%20of%20building",
+      "comment": "Qoder provides an agentic IDE, a JetBrains plugin, Qoder CLI, TypeScript and Python Agent SDKs, managed Cloud Agents, a desktop agentic-coding app, and mobile agent control. QoderWork is a broader work assistant and is not treated as a separate coding harness here. Per-form-factor links: IDE: https://docs.qoder.com/desktop/overview; Extension: https://docs.qoder.com/plugins/introduction; CLI: https://docs.qoder.com/cli/installation; SDK: https://docs.qoder.com/cli/sdk/overview; Web: https://docs.qoder.com/cloud-agents/overview; Desktop App: https://qoder.com/; Mobile: https://docs.qoder.com/mobile/app/download.",
+      "links": {
+        "IDE": "https://docs.qoder.com/desktop/overview",
+        "Extension": "https://docs.qoder.com/plugins/introduction",
+        "CLI": "https://docs.qoder.com/cli/installation",
+        "SDK": "https://docs.qoder.com/cli/sdk/overview",
+        "Web": "https://docs.qoder.com/cloud-agents/overview",
+        "Desktop App": "https://qoder.com/",
+        "Mobile": "https://docs.qoder.com/mobile/app/download"
+      }
+    },
+    "released_in": {
+      "value": "Oct '25",
+      "source_url": "https://qoder.com/blog/qoder-cli#qoder-cli-is-now-available:~:text=October%2015%2C%202025",
+      "comment": "Qoder announced its standalone terminal coding agent on October 15, 2025.",
+      "sort_date": "2025-10-01"
+    },
+    "latest_major_update": {
+      "value": "Sep '26",
+      "source_url": "https://docs.qoder.com/release-notes/qoder-cli#september-3-2026:~:text=CLI%201.1.42",
+      "comment": "Qoder CLI 1.1.42 shipped September 3, 2026 with lower CPU usage and faster large-session resume and streaming, bounded transcript loading, scheduled-task reliability fixes, a 100-turn default /goal limit, and one-level default subagent nesting.",
+      "sort_date": "2026-09-03"
+    },
+    "rules": {
+      "support": "full",
+      "source_url": "https://docs.qoder.com/cli/run-tasks#memory:~:text=Qoder%20CLI%20retains%20context%20across%20sessions%20using%20%60AGENTS.md%60%20files",
+      "comment": "Hierarchical user, project, and local AGENTS.md instructions plus .qoder/rules files and optional Auto-Memory."
+    },
+    "skills": {
+      "support": "full",
+      "source_url": "https://docs.qoder.com/cli/Skills#where-skills-live:~:text=User-level,~%2F.qoder%2Fskills",
+      "comment": "Agent Skills use SKILL.md packages at user and project scope, can be invoked manually or selected by the model, and can be bundled by plugins."
+    },
+    "hooks": {
+      "support": "full",
+      "source_url": "https://docs.qoder.com/cli/hooks#tool-calls:~:text=PreToolUse",
+      "comment": "Hook system covers prompt, tool, permission, session, subagent, compaction, and notification events with command, prompt, and agent handlers."
+    },
+    "mcp_servers": {
+      "support": "full",
+      "source_url": "https://docs.qoder.com/cli/tools#mcp-tools:~:text=Qoder%20CLI%20can%20connect%20to%20Model%20Context%20Protocol",
+      "comment": "MCP servers integrate external tools and data, use the normal permission system, and can be managed by CLI subcommands or supplied with --mcp-config."
+    },
+    "custom_commands": {
+      "support": "full",
+      "source_url": "https://docs.qoder.com/cli/commands#command-types:~:text=Prompt%20Type",
+      "comment": "User-defined prompt commands work in the TUI and headless mode and are loaded from scoped command configuration."
+    },
+    "goal_command": {
+      "support": "full",
+      "source_url": "https://docs.qoder.com/cli/tools#delegate-and-automate:~:text=Goals",
+      "comment": "Built-in /goal support tracks and executes longer-running objectives; current releases allow up to 100 interactions by default."
+    },
+    "subagents": {
+      "support": "full",
+      "source_url": "https://docs.qoder.com/cli/subagent#what-a-subagent-is:~:text=A%20Subagent%20is%20a%20specialized%20agent",
+      "comment": "Built-in and custom subagents support independent tool, model, permission, runtime, skill, hook, memory, background, and worktree-isolation configuration."
+    },
+    "monitor": {
+      "support": "partial",
+      "source_url": "https://docs.qoder.com/cli/tools#delegate-and-automate:~:text=Scheduled%20work",
+      "comment": "Qoder has background subagents, scheduled tasks, loops, goals, and session status, but reviewed docs do not establish a general arbitrary command, log, or WebSocket monitor surface."
+    },
+    "model_selection": {
+      "support": "full",
+      "source_url": "https://docs.qoder.com/cli/cli-reference#models-and-reasoning:~:text=--model",
+      "comment": "Launch-time --model selection, in-session model controls, reasoning effort, list-models, named Qoder tiers, and BYOK model identifiers."
+    },
+    "approval_mode": {
+      "support": "full",
+      "source_url": "https://docs.qoder.com/cli/cli-reference#permission-control:~:text=--permission-mode",
+      "comment": "Default, plan, auto, bypass, accept-edits, and do-not-ask permission modes plus allow, ask, and deny rules and per-tool controls."
+    },
+    "sandbox_mode": {
+      "support": "full",
+      "source_url": "https://docs.qoder.com/cli/cli-reference#sandbox:~:text=--sandbox",
+      "comment": "The --sandbox switch enables an environment-selected sandbox backend, configured by QODER_SANDBOX or tools.sandbox."
+    },
+    "resume": {
+      "support": "full",
+      "source_url": "https://docs.qoder.com/cli/cli-reference#session-management:~:text=--resume",
+      "comment": "Use --resume or -r with a session identifier, or omit the identifier to open the selector."
+    },
+    "continue": {
+      "support": "full",
+      "source_url": "https://docs.qoder.com/cli/cli-reference#session-management:~:text=--continue",
+      "comment": "Use --continue or -c to resume the most recent session."
+    },
+    "non_interactive": {
+      "support": "full",
+      "source_url": "https://docs.qoder.com/cli/run-in-scripts#headless-mode:~:text=Headless%20(non-interactive)%20mode",
+      "comment": "Passing a prompt or -p/--print runs headlessly, prints the result, and exits for scripts and CI workflows."
+    },
+    "output_format": {
+      "support": "full",
+      "source_url": "https://docs.qoder.com/cli/cli-reference#output-and-script-mode:~:text=--output-format",
+      "comment": "The CLI supports selectable output and input formats plus a maximum output-token limit for scripted execution."
+    },
+    "statusline": {
+      "support": "full",
+      "source_url": "https://docs.qoder.com/cli/builtins-reference#built-in-subagents:~:text=statusline-setup",
+      "comment": "A built-in statusline-setup agent helps configure the interactive status bar."
+    },
+    "telemetry": {
+      "support": "unknown",
+      "source_url": "https://docs.qoder.com/cli/settings-reference#configuration-item-reference:~:text=Configuration%20Item%20Reference",
+      "comment": "Current public settings documentation reviewed did not establish an end-user OpenTelemetry export or equivalent telemetry pipeline."
+    },
+    "custom_model_provider": {
+      "support": "full",
+      "source_url": "https://docs.qoder.com/account/pricing#individual-plans:~:text=Bring%20Your%20Own%20Key",
+      "comment": "Qoder supports BYOK custom models in addition to its hosted model tiers."
+    },
+    "notes": "Qoder is Alibaba's agentic coding platform. This row combines its coding-focused IDE, JetBrains plugin, CLI, SDK, cloud, desktop, and mobile control surfaces. QoderWork is broader desktop work automation, so it is noted but not added as another coding-agent row.",
+    "pricing": {
+      "value": "Free; Pro $20/mo; Pro+ $60/mo; Ultra $200/mo; Teams and Enterprise plans; BYOK; 14-day Pro trial for eligible new client users",
+      "source_url": "https://docs.qoder.com/account/pricing#individual-plans:~:text=Price,Free,20%20USD%2Fmo,60%20USD%2Fmo,200%20USD%2Fmo",
+      "comment": "Qoder lists Free, Pro, Pro+, Ultra, Teams, and Enterprise plans, with monthly credits for hosted models and BYOK on the Free plan."
+    },
+    "hosted_agent": {
+      "support": "full",
+      "source_url": "https://docs.qoder.com/product-series/what-is-qoder#one-product-family-several-ways-to-work:~:text=Cloud%20Agents",
+      "comment": "Qoder Cloud Agents run managed sessions through APIs with configurable agents and environments, while --remote creates cloud sessions from the CLI."
+    },
+    "transcripts": {
+      "support": "full",
+      "source_url": "https://docs.qoder.com/cli/cli-reference#session-management:~:text=--list-sessions",
+      "comment": "Sessions persist by default and can be listed, resumed, continued, deleted, or disabled for a one-shot run with --no-session-persistence."
+    },
+    "keyboard_shortcuts": {
+      "support": "unknown",
+      "source_url": "https://docs.qoder.com/cli/interface#keyboard-shortcuts:~:text=Run%20%60%2Fshortcuts%60%20in%20the%20interactive%20interface",
+      "comment": "The TUI documents keyboard interactions, but customizable keybindings were not established in the reviewed official sources."
+    },
+    "theme_customization": {
+      "support": "full",
+      "source_url": "https://docs.qoder.com/cli/interface#custom-theme:~:text=You%20can%20define%20your%20own%20Color%20Scheme",
+      "comment": "The CLI includes multiple built-in themes, automatic light and dark switching, and user-defined color schemes through ui.customThemes."
+    },
+    "auto_save": {
+      "support": "unknown",
+      "source_url": "https://docs.qoder.com/desktop/overview#key-capabilities:~:text=Intelligent%20editing",
+      "comment": "Session persistence is documented, but a distinct automatic file-save control was not established."
+    },
+    "debugging_output": {
+      "support": "full",
+      "source_url": "https://docs.qoder.com/cli/cli-reference#general-flags:~:text=--debug",
+      "comment": "The -d/--debug flag enables debug log output."
+    },
+    "context_window": {
+      "support": "full",
+      "source_url": "https://docs.qoder.com/cli/cli-reference#models-and-reasoning:~:text=--context-window",
+      "comment": "The --context-window flag overrides the context-window size for supported models, and the runtime compacts long sessions."
+    },
+    "code_formatting": {
+      "support": "unknown",
+      "source_url": "https://docs.qoder.com/cli/tools#bash-and-shell:~:text=Bash",
+      "comment": "The agent can run project formatters through Bash, but a first-party automatic formatting control was not established."
+    },
+    "git_integration": {
+      "support": "full",
+      "source_url": "https://docs.qoder.com/cli/cli-reference#general-flags:~:text=--worktree",
+      "comment": "Built-in worktree isolation, commit-message generation and commits, rollback, Git-aware session workflows, and cloud task handoff."
+    },
+    "performance_mode": {
+      "support": "partial",
+      "source_url": "https://docs.qoder.com/cli/cli-reference#models-and-reasoning:~:text=performance",
+      "comment": "Qoder exposes lite, efficient, performance, and other model tiers plus reasoning controls, but not a separate local runtime performance switch."
+    },
+    "ui_customization": {
+      "support": "full",
+      "source_url": "https://docs.qoder.com/cli/interface#other-ui-options:~:text=The%20%60ui%60%20group%20contains%20many%20other%20adjustable%20options",
+      "comment": "The TUI can hide its banner and footer, show line numbers, compact tool output, adjust loading phrases, configure the status bar, and set accessibility behavior."
+    }
+  },
+  {
     "name": "Qwen Code",
     "links": {
       "docs": "https://qwenlm.github.io/qwen-code-docs/en/users/overview",
@@ -5892,7 +6088,7 @@
       "value": "Sep '26",
       "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.23.0#source:~:text=The%20branch%20picker%20now%20displays%20git%20state%20hints",
       "comment": "Latest stable Qwen Code release v0.23.0 (September 3, 2026) adds Git-state hints, a deterministic parallel review workflow emitter, scoped workspace-memory tasks, Local Control pairing, scheduled Web Shell sessions, and named cross-session messaging.",
-      "sort_date": "2026-09-04"
+      "sort_date": "2026-09-06"
     },
     "rules": {
       "support": "full",
@@ -6822,10 +7018,10 @@
       "sort_date": "2026-01-01"
     },
     "latest_major_update": {
-      "value": "Aug '26",
-      "source_url": "https://zcode.z.ai/en/changelog#release-v3102:~:text=3.10.2%20Released%20Aug%2031%2C%202026",
-      "comment": "Latest public ZCode release v3.10.2 (August 31, 2026) fixes subagent model-group refresh. v3.10.1 added one-click plugin installs from prompt templates, a skills shortcut, thinking-trace search, configurable MCP protocol versions, execution summaries, and reliability fixes.",
-      "sort_date": "2026-08-01"
+      "value": "Sep '26",
+      "source_url": "https://zcode.z.ai/en/changelog#release-v3112:~:text=3.11.2%20Released%20Sep%204%2C%202026",
+      "comment": "ZCode 3.11.2 shipped September 4, 2026 with PDF upload, reading, and preview; media previews; workspace-scoped plugins and update notifications; clearer action-block reasons; draft-task sidebar access; browser improvements; and broad context, remote-workspace, SSH, Linux, and reliability fixes.",
+      "sort_date": "2026-09-01"
     },
     "rules": {
       "support": "full",
@@ -6918,9 +7114,9 @@
       "comment": "Supports third-party compatible model services through Anthropic/OpenAI protocols and API key mode."
     },
     "pricing": {
-      "value": "5-day/free daily trial quota; GLM Coding Lite $16.20/mo ($18 list), Pro $64.80/mo ($72 list), Max $144/mo ($160 list); API/resource package billing also available",
-      "source_url": "https://zcode.z.ai/en#code-with-glm-coding-plan:~:text=Lite%20For%20lightweight%20workloads",
-      "comment": "ZCode and Z.ai docs list GLM Coding Plan tiers and explain that ZCode can route either Coding Plan quota or API/resource-package billing."
+      "value": "5-day free trial quota; GLM Coding Lite $12.60/mo ($18 list), Pro $56/mo ($80 list), Max $117.60/mo ($168 list); weekly credit limits; API/resource package billing also available",
+      "source_url": "https://zcode.z.ai/en#code-with-glm-coding-plan:~:text=%2412.6%2F%20month%2418",
+      "comment": "ZCode lists current GLM Coding Plan promotional and list prices, weekly credit allowances, and plan multipliers. ZCode docs also document a five-day new-user trial and API or resource-package billing paths."
     },
     "some_free_usage": {
       "support": "full",

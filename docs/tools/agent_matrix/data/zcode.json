@@ -26,9 +26,9 @@
     "comment": "Public ZCode docs and desktop downloads are live in 2026; exact public launch date not confirmed in accessible docs."
   },
   "latest_major_update": {
-    "value": "Aug '26",
-    "source_url": "https://zcode.z.ai/en/changelog#release-v3102:~:text=3.10.2%20Released%20Aug%2031%2C%202026",
-    "comment": "Latest public ZCode release v3.10.2 (August 31, 2026) fixes subagent model-group refresh. v3.10.1 added one-click plugin installs from prompt templates, a skills shortcut, thinking-trace search, configurable MCP protocol versions, execution summaries, and reliability fixes."
+    "value": "Sep '26",
+    "source_url": "https://zcode.z.ai/en/changelog#release-v3112:~:text=3.11.2%20Released%20Sep%204%2C%202026",
+    "comment": "ZCode 3.11.2 shipped September 4, 2026 with PDF upload, reading, and preview; media previews; workspace-scoped plugins and update notifications; clearer action-block reasons; draft-task sidebar access; browser improvements; and broad context, remote-workspace, SSH, Linux, and reliability fixes."
   },
   "rules": {
     "support": "full",
@@ -121,9 +121,9 @@
     "comment": "Supports third-party compatible model services through Anthropic/OpenAI protocols and API key mode."
   },
   "pricing": {
-    "value": "5-day/free daily trial quota; GLM Coding Lite $16.20/mo ($18 list), Pro $64.80/mo ($72 list), Max $144/mo ($160 list); API/resource package billing also available",
-    "source_url": "https://zcode.z.ai/en#code-with-glm-coding-plan:~:text=Lite%20For%20lightweight%20workloads",
-    "comment": "ZCode and Z.ai docs list GLM Coding Plan tiers and explain that ZCode can route either Coding Plan quota or API/resource-package billing."
+    "value": "5-day free trial quota; GLM Coding Lite $12.60/mo ($18 list), Pro $56/mo ($80 list), Max $117.60/mo ($168 list); weekly credit limits; API/resource package billing also available",
+    "source_url": "https://zcode.z.ai/en#code-with-glm-coding-plan:~:text=%2412.6%2F%20month%2418",
+    "comment": "ZCode lists current GLM Coding Plan promotional and list prices, weekly credit allowances, and plan multipliers. ZCode docs also document a five-day new-user trial and API or resource-package billing paths."
   },
   "some_free_usage": {
     "support": "full",

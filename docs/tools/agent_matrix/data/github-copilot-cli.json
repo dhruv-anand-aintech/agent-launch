@@ -23,9 +23,9 @@
   },
   "latest_major_update": {
     "value": "Sep '26",
-    "source_url": "https://github.blog/changelog/2026-09-02-content-exclusions-generally-available-in-copilot-app-and-cli/#content-exclusions-generally-available-in-copilot-app-and-cli:~:text=Copilot%20CLI%20now%20respect%20content%20exclusion%20policies",
-    "comment": "On September 2, 2026, Copilot CLI gained generally available enforcement of enterprise, organization, and repository content-exclusion policies for Business and Enterprise customers.",
-    "sort_date": "2026-09-02"
+    "source_url": "https://github.com/github/copilot-cli/releases/tag/v1.0.83#source:~:text=Show%20running%20Copilot%20sessions%20in%20the%20Windows%2011%20taskbar",
+    "comment": "Copilot CLI v1.0.83 shipped September 4, 2026 with Windows taskbar session status, MCP OAuth CIMD support, custom-agent model fallback lists and required policies, Fable 5.1, saved session sorting, enterprise login controls, proxy mTLS, and broad sandbox, resume, MCP, and reliability fixes.",
+    "sort_date": "2026-09-04"
   },
   "rules": {
     "support": "full",

@@ -1,6 +1,6 @@
 # Coding Agent Feature Matrix
-> Compare 36 coding agents, CLIs, and IDEs across features.
-> https://compare.ainorthstar.tech | Updated 2026-09-04
+> Compare 37 coding agents, CLIs, and IDEs across features.
+> https://compare.ainorthstar.tech | Updated 2026-09-06
 
 Agent                   Rel    FF     Fre   NoA   Oth   Rul   Skl   Hks   MCP   Cmd   Gol   Sub   Mon   Trn   Mod   App   San   Res   Con   Hdl   Fmt   Sta   Tel   Hst  BYOM
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -34,6 +34,7 @@ OpenCode                2025  CLI/Ext    Y     Y     Y     Y     Y     Y     Y  
 OpenHands               Mar '2 CLI/IDE    Y     Y     Y     Y     Y     Y     Y     ~     N     N     N     Y     Y     Y     Y     Y     Y     Y     Y     N     ~     Y     Y
 Pi                      May '2 CLI/SDK          Y     Y     Y     Y     Y     N     Y     N     N     N     Y     Y     N     N     Y     Y     Y     Y     N     ~     N     Y
 Pier Code               Jun '2 CLI        N     ~     N     Y     ~     ~     Y     ?     Y     Y     ~     Y     Y     Y     Y     Y     Y     Y     Y     ?     Y     Y     ~
+Qoder                   Oct '2 CLI/IDE                      Y     Y     Y     Y     Y     Y     Y     ~     Y     Y     Y     Y     Y     Y     Y     Y     Y     ?     Y     Y
 Qwen Code               Jun '2 CLI/Ext                      Y     Y     Y     Y     Y     Y     Y     ~     ?     Y     Y     Y     Y     Y     Y     Y     Y     Y     ~     Y
 Replit Agent            Sep '2 Web                          ~     Y     ~     ?     N     N     ~     ~     ~     N     ~     Y     ~     ~     N     N     N     ?     Y     N
 Roo Code                Mid-20 Extensi                      Y     Y     N     Y     Y     N     Y     ~     ?     Y     Y     N     ~     Y     Y     ~     N     Y     N     Y
@@ -539,7 +540,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Docs: https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent
 - GitHub: https://github.com/features/copilot
 - Website: https://github.com/features/copilot
-- Form factor: CLI, IDE, Extension, SDK, Web
+- Form factor: CLI, IDE, Extension, SDK, Web, Desktop App
 - Released: Jun '25
 - Latest update: Sep '26
 - Some Free Usage: blank
@@ -1023,6 +1024,39 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Pricing: Pro $5/mo; Max $20/mo; $5 usage top-ups
 - Notes: Pier Code is a terminal coding agent from Alphabench LLP. Added to agent-launch as `--agent pier` targeting the `pier` binary; installer verified on this machine with pier 0.4.1 under `~/.pier/bin/pier`.
 
+### Qoder
+- Docs: https://docs.qoder.com/product-series/what-is-qoder
+- GitHub: https://github.com/QoderAI
+- Website: https://qoder.com/
+- Form factor: CLI, IDE, Extension, SDK, Web, Desktop App, Mobile
+- Released: Oct '25
+- Latest update: Sep '26
+- Some Free Usage: blank
+- No Account Required: blank
+- Can Use Other Subscriptions: blank
+- Rules: full — Hierarchical user, project, and local AGENTS.md instructions plus .qoder/rules files and optional Auto-Memory.
+- Skills: full — Agent Skills use SKILL.md packages at user and project scope, can be invoked manually or selected by the model, and can be bundled by plugins.
+- Hooks: full — Hook system covers prompt, tool, permission, session, subagent, compaction, and notification events with command, prompt, and agent handlers.
+- Mcp Servers: full — MCP servers integrate external tools and data, use the normal permission system, and can be managed by CLI subcommands or supplied with --mcp-config.
+- Custom Commands: full — User-defined prompt commands work in the TUI and headless mode and are loaded from scoped command configuration.
+- Goal Command: full — Built-in /goal support tracks and executes longer-running objectives; current releases allow up to 100 interactions by default.
+- Subagents: full — Built-in and custom subagents support independent tool, model, permission, runtime, skill, hook, memory, background, and worktree-isolation configuration.
+- Monitor: partial — Qoder has background subagents, scheduled tasks, loops, goals, and session status, but reviewed docs do not establish a general arbitrary command, log, or WebSocket monitor surface.
+- Transcripts: full — Sessions persist by default and can be listed, resumed, continued, deleted, or disabled for a one-shot run with --no-session-persistence.
+- Model Selection: full — Launch-time --model selection, in-session model controls, reasoning effort, list-models, named Qoder tiers, and BYOK model identifiers.
+- Approval Mode: full — Default, plan, auto, bypass, accept-edits, and do-not-ask permission modes plus allow, ask, and deny rules and per-tool controls.
+- Sandbox Mode: full — The --sandbox switch enables an environment-selected sandbox backend, configured by QODER_SANDBOX or tools.sandbox.
+- Resume: full — Use --resume or -r with a session identifier, or omit the identifier to open the selector.
+- Continue: full — Use --continue or -c to resume the most recent session.
+- Non Interactive: full — Passing a prompt or -p/--print runs headlessly, prints the result, and exits for scripts and CI workflows.
+- Output Format: full — The CLI supports selectable output and input formats plus a maximum output-token limit for scripted execution.
+- Statusline: full — A built-in statusline-setup agent helps configure the interactive status bar.
+- Telemetry: unknown — Current public settings documentation reviewed did not establish an end-user OpenTelemetry export or equivalent telemetry pipeline.
+- Hosted Agent: full — Qoder Cloud Agents run managed sessions through APIs with configurable agents and environments, while --remote creates cloud sessions from the CLI.
+- Custom Model Provider: full — Qoder supports BYOK custom models in addition to its hosted model tiers.
+- Pricing: Free; Pro $20/mo; Pro+ $60/mo; Ultra $200/mo; Teams and Enterprise plans; BYOK; 14-day Pro trial for eligible new client users
+- Notes: Qoder is Alibaba's agentic coding platform. This row combines its coding-focused IDE, JetBrains plugin, CLI, SDK, cloud, desktop, and mobile control surfaces. QoderWork is broader desktop work automation, so it is noted but not added as another coding-agent row.
+
 ### Qwen Code
 - Docs: https://qwenlm.github.io/qwen-code-docs/en/users/overview
 - GitHub: https://github.com/QwenLM/qwen-code
@@ -1191,7 +1225,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Website: https://zcode.z.ai/en
 - Form factor: IDE, Desktop App, Mobile
 - Released: 2026
-- Latest update: Aug '26
+- Latest update: Sep '26
 - Some Free Usage: full — First-time ZCode users receive a 5-day free trial with daily GLM-5.2/GLM-5-Turbo token benefits.
 - No Account Required: blank
 - Can Use Other Subscriptions: blank
@@ -1215,5 +1249,5 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Telemetry: unknown — Usage Stats exists; no telemetry opt-out/control docs found.
 - Hosted Agent: none — Runtime remains the desktop workspace or remote SSH/Docker target; mobile remote only controls the open desktop workspace.
 - Custom Model Provider: full — Supports third-party compatible model services through Anthropic/OpenAI protocols and API key mode.
-- Pricing: 5-day/free daily trial quota; GLM Coding Lite $16.20/mo ($18 list), Pro $64.80/mo ($72 list), Max $144/mo ($160 list); API/resource package billing also available
+- Pricing: 5-day free trial quota; GLM Coding Lite $12.60/mo ($18 list), Pro $56/mo ($80 list), Max $117.60/mo ($168 list); weekly credit limits; API/resource package billing also available
 - Notes: Z.ai/Zhipu desktop ADE with in-house ZCode Agent, GLM-5.2 focus, AGENTS.md, skills, commands, MCP, subagents, plugins, goal mode, mobile remote control, bot channels, and remote SSH/Docker development. No local CLI command was found, so no agent-launch backend was added.
