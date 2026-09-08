@@ -1,6 +1,6 @@
 # Coding Agent Feature Matrix
 > Compare 37 coding agents, CLIs, and IDEs across features.
-> https://compare.ainorthstar.tech | Updated 2026-09-06
+> https://compare.ainorthstar.tech | Updated 2026-09-08
 
 Agent                   Rel    FF     Fre   NoA   Oth   Rul   Skl   Hks   MCP   Cmd   Gol   Sub   Mon   Trn   Mod   App   San   Res   Con   Hdl   Fmt   Sta   Tel   Hst  BYOM
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -1053,7 +1053,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Statusline: full — A built-in statusline-setup agent helps configure the interactive status bar.
 - Telemetry: unknown — Current public settings documentation reviewed did not establish an end-user OpenTelemetry export or equivalent telemetry pipeline.
 - Hosted Agent: full — Qoder Cloud Agents run managed sessions through APIs with configurable agents and environments, while --remote creates cloud sessions from the CLI.
-- Custom Model Provider: full — Qoder supports BYOK custom models in addition to its hosted model tiers.
+- Custom Model Provider: full — Personal-plan BYOK supports custom Base URLs for OpenAI- and Anthropic-compatible model services, in addition to Qoder's hosted model tiers.
 - Pricing: Free; Pro $20/mo; Pro+ $60/mo; Ultra $200/mo; Teams and Enterprise plans; BYOK; 14-day Pro trial for eligible new client users
 - Notes: Qoder is Alibaba's agentic coding platform. This row combines its coding-focused IDE, JetBrains plugin, CLI, SDK, cloud, desktop, and mobile control surfaces. QoderWork is broader desktop work automation, so it is noted but not added as another coding-agent row.
 

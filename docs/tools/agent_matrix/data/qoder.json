@@ -35,9 +35,9 @@
   },
   "latest_major_update": {
     "value": "Sep '26",
-    "source_url": "https://docs.qoder.com/release-notes/qoder-cli#september-3-2026:~:text=CLI%201.1.42",
-    "comment": "Qoder CLI 1.1.42 shipped September 3, 2026 with lower CPU usage and faster large-session resume and streaming, bounded transcript loading, scheduled-task reliability fixes, a 100-turn default /goal limit, and one-level default subagent nesting.",
-    "sort_date": "2026-09-03"
+    "source_url": "https://docs.qoder.com/release-notes/qoder#september-7-2026:~:text=Qoder%200.2.1",
+    "comment": "Qoder 0.2.1 shipped September 7, 2026 with synchronized mobile remote control for desktop tasks, drag-and-drop session references, lower multitasking memory and messaging overhead, expanded conversation output, and session-continuation and rendering fixes.",
+    "sort_date": "2026-09-07"
   },
   "rules": {
     "support": "full",
@@ -126,8 +126,8 @@
   },
   "custom_model_provider": {
     "support": "full",
-    "source_url": "https://docs.qoder.com/account/pricing#individual-plans:~:text=Bring%20Your%20Own%20Key",
-    "comment": "Qoder supports BYOK custom models in addition to its hosted model tiers."
+    "source_url": "https://docs.qoder.com/release-notes/qoder#custom-base-urls-for-byok:~:text=Personal%20plan%20BYOK%20now%20supports%20custom%20Base%20URLs",
+    "comment": "Personal-plan BYOK supports custom Base URLs for OpenAI- and Anthropic-compatible model services, in addition to Qoder's hosted model tiers."
   },
   "notes": "Qoder is Alibaba's agentic coding platform. This row combines its coding-focused IDE, JetBrains plugin, CLI, SDK, cloud, desktop, and mobile control surfaces. QoderWork is broader desktop work automation, so it is noted but not added as another coding-agent row.",
   "pricing": {

@@ -31,7 +31,7 @@
   },
   "latest_major_update": {
     "value": "Sep '26",
-    "source_url": "https://factory.ai/changelog#september-2026:~:text=0.209.0",
+    "source_url": "https://docs.factory.ai/changelog/release-notes#september-2026:~:text=CLI%20v0.209.0",
     "comment": "Factory's September 1, 2026 changelog lists Droid CLI v0.209.0 and desktop v0.166.0."
   },
   "rules": {
