@@ -1,6 +1,33 @@
 {
-  "entry_count": 1803,
+  "entry_count": 1808,
   "entries": [
+    {
+      "date": "2026-09-08",
+      "commit": "",
+      "title": "Unreleased matrix update",
+      "items": [
+        {
+          "summary": "Factory Droid: Latest Major Update evidence refreshed",
+          "target": "cell-factory-droid-latest-major-update"
+        },
+        {
+          "summary": "JetBrains Junie: Latest Major Update evidence refreshed",
+          "target": "cell-junie-latest-major-update"
+        },
+        {
+          "summary": "Qoder: Arbitrary Models evidence refreshed",
+          "target": "cell-qoder-custom-model-provider"
+        },
+        {
+          "summary": "Qoder: Latest Major Update evidence refreshed",
+          "target": "cell-qoder-latest-major-update"
+        },
+        {
+          "summary": "Replit Agent: Latest Major Update evidence refreshed",
+          "target": "cell-replit-agent-latest-major-update"
+        }
+      ]
+    },
     {
       "date": "2026-09-06",
       "commit": "2f51429",
