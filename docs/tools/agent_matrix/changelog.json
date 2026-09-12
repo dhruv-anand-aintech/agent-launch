@@ -1,10 +1,10 @@
 {
-  "entry_count": 1835,
+  "entry_count": 1836,
   "entries": [
     {
       "date": "2026-09-12",
-      "commit": "",
-      "title": "Unreleased matrix update",
+      "commit": "c3698be",
+      "title": "Scheduled coding agent matrix update",
       "items": [
         {
           "summary": "Amp: Can Use Other Subscriptions now supported",
@@ -93,6 +93,10 @@
         {
           "summary": "Kiro: Latest Major Update evidence refreshed",
           "target": "cell-kiro-latest-major-update"
+        },
+        {
+          "summary": "OpenAI Agents API added to the comparison",
+          "target": "cell-openai-agents-api-form-factor"
         },
         {
           "summary": "OpenCode: Latest Major Update evidence refreshed",
