@@ -25,8 +25,8 @@
   },
   "latest_major_update": {
     "value": "Sep '26",
-    "source_url": "https://github.com/MoonshotAI/kimi-code/releases/tag/%40moonshot-ai%2Fkimi-code%400.41.0#source:~:text=Remind%20the%20model%20of%20its%20context%20budget",
-    "comment": "Kimi Code 0.41.0 shipped September 4, 2026 with context-budget reminders around automatic compaction, always-on turn-level file history, experimental Tower multi-agent collaboration in the web UI, cross-process subagent resume, background-question fixes, and permission-mode and review-interface improvements."
+    "source_url": "https://github.com/MoonshotAI/kimi-code/releases/tag/%40moonshot-ai%2Fkimi-code%400.42.0#source:~:text=Add%20read-only%20tools%20to%20the%20%2Fbtw%20side%20agent",
+    "comment": "Kimi Code 0.42.0 shipped September 9, 2026 with read-only tools for the /btw side agent, an experimental progress panel for main and subagents, always-on secondary-model pools and Remote Control, live skill-catalog refresh, richer media support, and long-session performance, compaction, and task-status fixes."
   },
   "rules": {
     "support": "full",

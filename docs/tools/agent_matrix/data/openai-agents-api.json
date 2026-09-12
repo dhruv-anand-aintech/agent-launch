@@ -1,0 +1,198 @@
+{
+  "name": "OpenAI Agents API",
+  "links": {
+    "docs": "https://developers.openai.com/api/docs/guides/agents-api/overview",
+    "github": "https://github.com/openai/codex",
+    "website": "https://openai.com/index/introducing-the-agents-api/",
+    "slug": "openai-agents-api"
+  },
+  "form_factor": {
+    "values": [
+      "SDK",
+      "Hosted Agent"
+    ],
+    "source_url": "https://openai.com/index/introducing-the-agents-api/#build-cloud-agents-with-the-same-harness-that-powers-codex:~:text=Agents%20API",
+    "comment": "Managed coding-agent API accessed through official SDKs and hosted OpenAI environments. Per-form-factor links: SDK: https://developers.openai.com/api/docs/guides/agents-api/overview; Hosted Agent: https://developers.openai.com/api/docs/guides/agents-api/environments/openai-hosted.",
+    "links": {
+      "SDK": "https://developers.openai.com/api/docs/guides/agents-api/overview",
+      "Hosted Agent": "https://developers.openai.com/api/docs/guides/agents-api/environments/openai-hosted"
+    }
+  },
+  "released_in": {
+    "value": "Sep '26",
+    "source_url": "https://openai.com/index/introducing-the-agents-api/#build-cloud-agents-with-the-same-harness-that-powers-codex:~:text=public%20beta",
+    "comment": "OpenAI launched the Agents API in public beta on September 10, 2026."
+  },
+  "latest_major_update": {
+    "value": "Sep '26",
+    "source_url": "https://openai.com/index/introducing-the-agents-api/#build-cloud-agents-with-the-same-harness-that-powers-codex:~:text=Build%20cloud%20agents",
+    "comment": "The September 10, 2026 public beta introduced persistent sessions, versioned agent configurations, built-in tools, skills, MCP, subagents, hosted or self-hosted execution, live observability, and webhooks.",
+    "sort_date": "2026-09-10"
+  },
+  "rules": {
+    "support": "partial",
+    "source_url": "https://developers.openai.com/api/docs/guides/agents-api/configuration#behavior:~:text=instructions",
+    "comment": "Saved agent configurations support reusable instructions and behavior, but the API docs do not define a repository instruction-file convention."
+  },
+  "skills": {
+    "support": "full",
+    "source_url": "https://developers.openai.com/api/docs/guides/agents-api/tools/plugins#plugins:~:text=skills",
+    "comment": "Plugins can package discoverable skill directories and supporting resources for the Codex harness."
+  },
+  "hooks": {
+    "support": "full",
+    "source_url": "https://developers.openai.com/api/docs/guides/agents-api/sessions/webhooks#webhooks:~:text=webhook",
+    "comment": "Session lifecycle events can be delivered to application webhook endpoints."
+  },
+  "mcp_servers": {
+    "support": "full",
+    "source_url": "https://developers.openai.com/api/docs/guides/agents-api/tools/mcp#model-context-protocol-mcp:~:text=MCP",
+    "comment": "Agent configurations can connect the harness to remote MCP servers."
+  },
+  "custom_commands": {
+    "support": "none",
+    "source_url": "https://developers.openai.com/api/docs/guides/agents-api/overview#overview:~:text=API",
+    "comment": "The hosted API has no documented slash-command or command-file interface."
+  },
+  "goal_command": {
+    "support": "none",
+    "source_url": "https://developers.openai.com/api/docs/guides/agents-api/sessions#sessions:~:text=session",
+    "comment": "Sessions accept tasks and follow-up input, but no persistent `/goal` command is documented."
+  },
+  "subagents": {
+    "support": "full",
+    "source_url": "https://developers.openai.com/api/docs/guides/agents-api/multi-agent#multi-agent:~:text=subagent",
+    "comment": "The Codex harness can delegate work to specialized subagents within an agent run."
+  },
+  "monitor": {
+    "support": "full",
+    "source_url": "https://developers.openai.com/api/docs/guides/agents-api/observability#observability:~:text=live",
+    "comment": "Applications can stream run events live, inspect traces, and subscribe to lifecycle webhooks."
+  },
+  "model_selection": {
+    "support": "full",
+    "source_url": "https://developers.openai.com/api/docs/guides/agents-api/configuration#model:~:text=model",
+    "comment": "Saved agent configurations specify an OpenAI model and reasoning settings."
+  },
+  "approval_mode": {
+    "support": "partial",
+    "source_url": "https://developers.openai.com/api/docs/guides/agents-api/environments/self-hosted#permissions:~:text=permission",
+    "comment": "Applications control tool and environment permissions, but the public API docs do not describe a built-in interactive per-action approval UI."
+  },
+  "sandbox_mode": {
+    "support": "full",
+    "source_url": "https://developers.openai.com/api/docs/guides/agents-api/environments/openai-hosted#openai-hosted-environments:~:text=isolated",
+    "comment": "Runs can use isolated OpenAI-hosted containers with network policy or application-managed self-hosted environments."
+  },
+  "resume": {
+    "support": "full",
+    "source_url": "https://developers.openai.com/api/docs/guides/agents-api/sessions#continue-a-session:~:text=session",
+    "comment": "Persistent session IDs let applications reconnect to and continue existing work."
+  },
+  "continue": {
+    "support": "full",
+    "source_url": "https://developers.openai.com/api/docs/guides/agents-api/sessions#continue-a-session:~:text=follow-up",
+    "comment": "Applications can send follow-up messages and steering input to an existing session."
+  },
+  "non_interactive": {
+    "support": "full",
+    "source_url": "https://developers.openai.com/api/docs/guides/agents-api/overview#overview:~:text=API",
+    "comment": "The product is an API designed for programmatic and asynchronous agent execution."
+  },
+  "output_format": {
+    "support": "full",
+    "source_url": "https://developers.openai.com/api/docs/guides/agents-api/configuration#output:~:text=output",
+    "comment": "Agent configurations support output controls, while session event streams provide structured responses."
+  },
+  "statusline": {
+    "support": "none",
+    "source_url": "https://developers.openai.com/api/docs/guides/agents-api/overview#overview:~:text=API",
+    "comment": "The API has no terminal statusline."
+  },
+  "telemetry": {
+    "support": "full",
+    "source_url": "https://developers.openai.com/api/docs/guides/agents-api/tracing#tracing:~:text=trace",
+    "comment": "Runs expose structured traces and observability data for application monitoring."
+  },
+  "custom_model_provider": {
+    "support": "none",
+    "source_url": "https://developers.openai.com/api/docs/guides/agents-api/configuration#model:~:text=OpenAI",
+    "comment": "The public Agents API documentation supports OpenAI models and does not document arbitrary external model providers."
+  },
+  "notes": "Public-beta managed agent API powered by the open-source Codex harness. It is listed separately from Codex CLI because it is an independently launched hosted API surface. It has no installable local command, so no agent-launch backend is added.",
+  "pricing": {
+    "value": "No additional Agents API fee; model tokens, tools, and hosted containers billed at API rates",
+    "source_url": "https://openai.com/index/introducing-the-agents-api/#start-building:~:text=no%20additional%20cost",
+    "comment": "OpenAI states there is no separate Agents API charge; normal model, tool, and hosted-container usage rates apply."
+  },
+  "some_free_usage": {
+    "support": "none",
+    "source_url": "https://openai.com/index/introducing-the-agents-api/#start-building:~:text=API%20pricing",
+    "comment": "The public launch describes usage-based API billing and does not document a product-specific free tier."
+  },
+  "no_account_required": {
+    "support": "none",
+    "source_url": "https://developers.openai.com/api/docs/guides/agents-api/overview#quickstart:~:text=API%20key",
+    "comment": "An OpenAI API account and API key are required."
+  },
+  "can_use_other_subscriptions": {
+    "support": "none",
+    "source_url": "https://openai.com/index/introducing-the-agents-api/#start-building:~:text=API%20pricing",
+    "comment": "The hosted API is billed as API usage; ChatGPT subscription authentication is not documented for this surface."
+  },
+  "hosted_agent": {
+    "support": "full",
+    "source_url": "https://developers.openai.com/api/docs/guides/agents-api/environments/openai-hosted#openai-hosted-environments:~:text=OpenAI-hosted",
+    "comment": "OpenAI provides managed isolated environments for cloud agent execution."
+  },
+  "transcripts": {
+    "support": "full",
+    "source_url": "https://developers.openai.com/api/docs/guides/agents-api/sessions#session-items:~:text=items",
+    "comment": "Sessions persist their input, output, tool, and event items for later retrieval."
+  },
+  "keyboard_shortcuts": {
+    "support": "none",
+    "source_url": "https://developers.openai.com/api/docs/guides/agents-api/overview#overview:~:text=API",
+    "comment": "The API has no interactive keyboard interface."
+  },
+  "theme_customization": {
+    "support": "none",
+    "source_url": "https://developers.openai.com/api/docs/guides/agents-api/overview#overview:~:text=API",
+    "comment": "The API has no product UI theme."
+  },
+  "auto_save": {
+    "support": "full",
+    "source_url": "https://developers.openai.com/api/docs/guides/agents-api/sessions#sessions:~:text=persist",
+    "comment": "Session state and items are persisted by the managed service."
+  },
+  "debugging_output": {
+    "support": "full",
+    "source_url": "https://developers.openai.com/api/docs/guides/agents-api/observability#observability:~:text=events",
+    "comment": "Live event streams and traces expose tool calls, outputs, errors, and run state."
+  },
+  "context_window": {
+    "support": "partial",
+    "source_url": "https://developers.openai.com/api/docs/guides/agents-api/sessions#context-management:~:text=context",
+    "comment": "The service manages long-running session context and compaction, but does not expose an arbitrary context-window size control."
+  },
+  "code_formatting": {
+    "support": "none",
+    "source_url": "https://developers.openai.com/api/docs/guides/agents-api/overview#overview:~:text=API",
+    "comment": "No built-in formatter setting is documented; agents can invoke tools supplied by the environment."
+  },
+  "git_integration": {
+    "support": "partial",
+    "source_url": "https://developers.openai.com/api/docs/guides/agents-api/environments/openai-hosted#files-and-code:~:text=repository",
+    "comment": "Hosted environments can work with repository files and code, but the API docs do not document a dedicated pull-request integration."
+  },
+  "performance_mode": {
+    "support": "partial",
+    "source_url": "https://developers.openai.com/api/docs/guides/agents-api/configuration#reasoning:~:text=effort",
+    "comment": "Model and reasoning-effort configuration can trade latency for capability, but there is no separate named performance mode."
+  },
+  "ui_customization": {
+    "support": "none",
+    "source_url": "https://developers.openai.com/api/docs/guides/agents-api/overview#overview:~:text=API",
+    "comment": "The API supplies no end-user interface to customize."
+  }
+}

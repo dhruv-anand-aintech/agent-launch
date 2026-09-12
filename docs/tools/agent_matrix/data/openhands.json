@@ -30,9 +30,9 @@
     "comment": "Launched March 12, 2024 as 'OpenDevin' (replicating Devin). First tagged GitHub release v0.6.1 on 2024-06-04 (earlier 0.1-0.5 history predates the public releases page). Renamed to OpenHands in mid-2024, and the GitHub org All-Hands-AI was renamed to OpenHands on 2025-10-20."
   },
   "latest_major_update": {
-    "value": "Aug '26",
-    "source_url": "https://github.com/OpenHands/OpenHands/releases/tag/v1.16.0#source:~:text=select%20supported%20LLM%20providers",
-    "comment": "Latest stable OpenHands release v1.16.0 (August 27, 2026) adds selection of supported LLM providers and related platform improvements. The project now publishes unified semver releases rather than relying on a cloud-only tag for the newest row."
+    "value": "Sep '26",
+    "source_url": "https://github.com/OpenHands/OpenHands/releases/tag/v1.18.0#source:~:text=allow%20editing%20automations%20on%20cloud%20backends",
+    "comment": "OpenHands v1.18.0 shipped September 11, 2026 with cloud automation editing and run-identity visibility, database-driven free/default model flags in Canvas, full-size image attachment viewing, explicit ACP harness-registry decisions, and cloud settings and usage-panel fixes."
   },
   "rules": {
     "support": "full",

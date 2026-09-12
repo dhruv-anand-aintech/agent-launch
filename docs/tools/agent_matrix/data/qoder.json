@@ -35,9 +35,9 @@
   },
   "latest_major_update": {
     "value": "Sep '26",
-    "source_url": "https://docs.qoder.com/release-notes/qoder#september-7-2026:~:text=Qoder%200.2.1",
-    "comment": "Qoder 0.2.1 shipped September 7, 2026 with synchronized mobile remote control for desktop tasks, drag-and-drop session references, lower multitasking memory and messaging overhead, expanded conversation output, and session-continuation and rendering fixes.",
-    "sort_date": "2026-09-07"
+    "source_url": "https://docs.qoder.com/release-notes/qoder#september-12-2026:~:text=Qoder%200.2.5",
+    "comment": "Qoder 0.2.5 shipped September 12, 2026 with remembered file-opening behavior, more reliable realtime voice, lower file-review CPU use, browser-login reuse, streaming-scroll fixes, and Chinese Computer Use fixes. Versions 0.2.2-0.2.3 added proxy configuration, Goal turn limits, model-choice persistence, and safer Computer Use actions.",
+    "sort_date": "2026-09-12"
   },
   "rules": {
     "support": "full",

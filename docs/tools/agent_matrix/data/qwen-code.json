@@ -11,15 +11,19 @@
       "CLI",
       "Extension",
       "SDK",
-      "Desktop App"
+      "Desktop App",
+      "Web",
+      "Mobile"
     ],
-    "source_url": "https://github.com/QwenLM/qwen-code#how-to-use-qwen-code:~:text=Desktop%20%E2%80%94%20Qwen%20Code%20Desktop%20%E2%80%94%20GUI%20for%20macOS%2C%20Windows%2C%20Linux",
-    "comment": "CLI + VS Code/Zed/JetBrains IDE integrations + official Qwen Code Desktop + daemon mode + SDKs + IM bots/channels. Per-form-factor links: CLI: https://qwenlm.github.io/qwen-code-docs/en/users/quickstart/; Extension: https://qwenlm.github.io/qwen-code-docs/en/users/extension/introduction/; SDK: https://qwenlm-qwen-code.mintlify.app/sdk/quick-start; Desktop App: https://github.com/QwenLM/qwen-code#how-to-use-qwen-code.",
+    "source_url": "https://qwenlm.github.io/qwen-code-docs/en/developers/architecture/#cli-and-presentation-surfaces:~:text=packages%2Fweb-shell",
+    "comment": "CLI + VS Code/Zed/JetBrains IDE integrations + official Qwen Code Desktop + daemon mode + SDKs + browser Web Shell and phone Local Control + IM bots/channels. Per-form-factor links: CLI: https://qwenlm.github.io/qwen-code-docs/en/users/quickstart/; Extension: https://qwenlm.github.io/qwen-code-docs/en/users/extension/introduction/; SDK: https://qwenlm-qwen-code.mintlify.app/sdk/quick-start; Desktop App: https://github.com/QwenLM/qwen-code#how-to-use-qwen-code; Web: https://qwenlm.github.io/qwen-code-docs/en/developers/architecture/; Mobile: https://qwenlm.github.io/qwen-code-docs/en/blog/quickstart/feat-qwen-serve-mobile/.",
     "links": {
       "CLI": "https://qwenlm.github.io/qwen-code-docs/en/users/quickstart/",
       "Extension": "https://qwenlm.github.io/qwen-code-docs/en/users/extension/introduction/",
       "SDK": "https://qwenlm-qwen-code.mintlify.app/sdk/quick-start",
-      "Desktop App": "https://github.com/QwenLM/qwen-code#how-to-use-qwen-code"
+      "Desktop App": "https://github.com/QwenLM/qwen-code#how-to-use-qwen-code",
+      "Web": "https://qwenlm.github.io/qwen-code-docs/en/developers/architecture/",
+      "Mobile": "https://qwenlm.github.io/qwen-code-docs/en/blog/quickstart/feat-qwen-serve-mobile/"
     }
   },
   "released_in": {
@@ -29,8 +33,8 @@
   },
   "latest_major_update": {
     "value": "Sep '26",
-    "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.23.0#source:~:text=The%20branch%20picker%20now%20displays%20git%20state%20hints",
-    "comment": "Latest stable Qwen Code release v0.23.0 (September 3, 2026) adds Git-state hints, a deterministic parallel review workflow emitter, scoped workspace-memory tasks, Local Control pairing, scheduled Web Shell sessions, and named cross-session messaging."
+    "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.23.3#source:~:text=delegate%20a%20subagent%20turn%20to%20an%20external%20agent%20over%20ACP",
+    "comment": "Qwen Code v0.23.3 shipped September 10, 2026 with external ACP-agent delegation, an OpenAI Responses provider, unified Web Shell session sources, daemon-managed peer messaging, a bounded self-review pass, richer Kimi/Qwen/DeepSeek reasoning presets, and broad review, permission, session, desktop, and Windows PTY fixes."
   },
   "rules": {
     "support": "full",

@@ -1,12 +1,12 @@
 # Coding Agent Feature Matrix
-> Compare 37 coding agents, CLIs, and IDEs across features.
-> https://compare.ainorthstar.tech | Updated 2026-09-08
+> Compare 38 coding agents, CLIs, and IDEs across features.
+> https://compare.ainorthstar.tech | Updated 2026-09-12
 
 Agent                   Rel    FF     Fre   NoA   Oth   Rul   Skl   Hks   MCP   Cmd   Gol   Sub   Mon   Trn   Mod   App   San   Res   Con   Hdl   Fmt   Sta   Tel   Hst  BYOM
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Aider                   Jun '2 CLI        Y     Y     Y     ~     ~     ~     N     N     N     ~     N     ~     Y     ~     N     N     ~     Y     N     N     Y     N     Y
 Amazon Q Developer CLI  Mar '2 CLI        Y     N     N     Y     ~     Y     Y     ~     N     N     N     ~     Y     Y     N     Y     Y     Y     N     N     Y     N     N
-Amp                     May '2 CLI/SDK    Y                 Y     Y     Y     Y     N     N     Y     ~     ?     ~     ~     N     Y     Y     Y     Y     N     ?     Y     ~
+Amp                     May '2 CLI/SDK    Y           Y     Y     Y     Y     Y     N     N     Y     ~     ?     Y     ~     N     Y     Y     Y     Y     N     ?     Y     ~
 Antigravity             2025  CLI/IDE    Y                 Y     Y     Y     Y     ~     N     ?     ?     ~     ?     ~     ~     Y     Y     Y     ?     ?     ?     N     ?
 Claude Code             Feb '2 CLI/Ext                      Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     ~     Y     Y     Y     Y     Y     Y     ~     ~
 Cline                   Jul '2 CLI/Ext    Y     Y     Y     Y     Y     Y     Y     Y     N     Y     ~     ?     Y     Y     ~     Y     ~     Y     Y     N     Y     N     Y
@@ -14,7 +14,7 @@ OpenAI Codex CLI        Apr '2 CLI/Ext    Y           Y     Y     Y     Y     Y 
 Cohere North            Jan '2 SDK/Web                      ~     ~     Y     Y     N     N     Y     ~     ~     ~     ~     Y     ~     ~     ~     ~     N     ~     Y     N
 Command Code            Jul '2 CLI/Ext    ~     N     Y     Y     Y     Y     Y     Y     Y     Y     ~     Y     Y     Y     ~     Y     Y     Y     ~     Y     Y     N     Y
 Crush                   Jul '2 CLI/TUI    Y     Y     Y     Y     Y     ~     Y     Y     N     Y     ~     Y     Y     Y     N     Y     Y     Y     ~     N     Y     N     Y
-Cursor                  2023  CLI/IDE    Y                 Y     Y     Y     Y     Y     N     Y     ~     Y     Y     Y     Y     Y     Y     Y     ~     ~     Y     Y     Y
+Cursor                  2023  CLI/IDE    Y                 Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     ~     ~     Y     Y     Y
 Devin                   Dec '2 CLI/Ext    Y                 Y     Y     Y     Y     Y     N     Y     ~     ~     ?     ~     Y     Y     Y     Y     ~     N     ?     Y     ?
 Factory Droid           2025  CLI/Ext          ~     Y     Y     Y     Y     Y     Y     N     Y     ~     ~     Y     Y     Y     Y     Y     Y     Y     Y     ?     Y     Y
 Gemini CLI              Jun '2 CLI        Y           Y     Y     ~     Y     Y     Y     N     Y     ~     ?     Y     Y     Y     Y     Y     Y     ~     ?     Y     N     ~
@@ -30,6 +30,7 @@ Kiro Crew               Aug '2 CLI/Web    Y     N     N     Y     Y     Y     Y 
 Kiro                    Jul '2 CLI/IDE    Y                 Y     Y     Y     Y     Y     N     Y     ~     ~     Y     Y     ~     Y     Y     Y     ~     ?     ?     Y     N
 MiMo Code               Jun '2 CLI/IDE    Y     Y     Y     Y     Y     ~     Y     Y     Y     Y     ~     Y     Y     Y     ~     Y     Y     Y     Y     ?     ?     N     Y
 Muse Code               Aug '2 CLI        ?     N     N     Y     Y     ?     ?     ~     N     Y     ~     Y     Y     Y     Y     Y     Y     Y     Y     ?     ?     N     ~
+OpenAI Agents API       Sep '2 SDK/Hos    N     N     N     ~     Y     Y     Y     N     N     Y     Y     Y     Y     ~     Y     Y     Y     Y     Y     N     Y     Y     N
 OpenCode                2025  CLI/Ext    Y     Y     Y     Y     Y     Y     Y     Y     N     Y     ~     Y     Y     Y     ~     Y     Y     Y     Y     ?     Y     N     Y
 OpenHands               Mar '2 CLI/IDE    Y     Y     Y     Y     Y     Y     Y     ~     N     N     N     Y     Y     Y     Y     Y     Y     Y     Y     N     ~     Y     Y
 Pi                      May '2 CLI/SDK          Y     Y     Y     Y     Y     N     Y     N     N     N     Y     Y     N     N     Y     Y     Y     Y     N     ~     N     Y
@@ -123,7 +124,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Latest update: Sep '26
 - Some Free Usage: full — Amp documents a free mode for interactive editor/CLI use, with limits and availability caveats.
 - No Account Required: blank
-- Can Use Other Subscriptions: blank
+- Can Use Other Subscriptions: full — Amp can run Dial models through the user's own API key or ChatGPT subscription, with billing following those provider connections.
 - Rules: full — Full support via AGENTS.md files (plural). Scanned from cwd, parent dirs, subtrees, $HOME/.config/amp/, /etc/ampcode/. Supports @-mentions, globs, YAML frontmatter. Location: no public disk folder/file location found in docs reviewed.
 - Skills: full — Full support. Skills are directories with SKILL.md + YAML frontmatter. Locations: .agents/skills/ (project), ~/.config/agents/skills/ (user). Can bundle MCP servers via mcp.json. Location: no public disk folder/file location found in docs reviewed.
 - Hooks: full — Full support via Plugin API (TypeScript). Events: session.start, agent.start, tool.call, tool.result, agent.end. Plugins can respond with allow/reject/modify/synthesize actions.
@@ -133,7 +134,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Subagents: full — Full support. Spawned via Task tool. Built-in specialized subagents: Oracle (GPT-5.4), Librarian (code search), Painter (image gen), Review, Search.
 - Monitor: partial — Task/subagent execution and stream-json/headless operation cover some wait-for-result workflows, but no dedicated background command/log/WebSocket monitor primitive was found in the manual.
 - Transcripts: unknown — Location: transcript/session disk storage was not found in public docs reviewed.
-- Model Selection: partial — Pre-set modes (smart=Claude Opus 4.7, deep=GPT-5.5 reasoning, rush=GPT-5.5 no-reasoning, free=mixed). You choose the mode, not the exact model.
+- Model Selection: full — Tune Modes selects the exact model and reasoning effort independently for a built-in mode's main agent, Oracle, and subagents; Auto remains available for Amp-managed routing.
 - Approval Mode: partial — Default: no approval (dangerously-allow-all is now default). Custom approval policies possible via Plugin API (tool.call event).
 - Sandbox Mode: none — No built-in sandbox. Documentation suggests external isolated dev environments for untrusted code.
 - Resume: full — Full support. 'amp threads continue [thread id]' documented. Thread referencing (@T-xxx or URL) across sessions.
@@ -143,7 +144,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Statusline: none — Not supported. Custom themes removed in the May 6, 2026 rebuild. No statusline customization.
 - Telemetry: unknown — No explicit telemetry settings found in documentation. No on/off telemetry toggle mentioned in manual or settings.
 - Hosted Agent: full — Amp provides hosted orbs with durable execution and web/mobile control of running agents, in addition to local CLI execution.
-- Custom Model Provider: partial — No BYOM for the main agent (picks models per mode from providers). MCP servers can connect to external tools, and Plugin API allows custom tool registration.
+- Custom Model Provider: partial — Amp can run selectable supported models through connected API keys or ChatGPT subscriptions, but the public announcement does not establish arbitrary OpenAI-compatible endpoint configuration.
 - Pricing: Usage-based LLM billing with free tier
 - Notes: Amp is opinionated and aggressively removes features it considers obsolete (custom commands, slash commands, themes). Focuses on frontier models. Plugin API provides extensive extensibility for those who need it. Closed-source product; some auxiliary tools open source on GitHub.
 
@@ -346,7 +347,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Website: https://charm.land/crush
 - Form factor: CLI, TUI
 - Released: Jul '25
-- Latest update: Aug '26
+- Latest update: Sep '26
 - Some Free Usage: full — Local model backends (Ollama, LM Studio, MLX, LiteLLM) and some free-tier provider plans allow free agent usage without paying for hosted inference.
 - No Account Required: full — Can run entirely against local Ollama/LM Studio/MLX models without any Crush account or vendor sign-in; the CLI itself requires no account to install or run.
 - Can Use Other Subscriptions: full — Routes through the user's own API keys/accounts for any supported provider (Anthropic, OpenAI, etc.) or coding-plan subscriptions (GLM Coding Plan, Kimi Code, MiniMax Coding Plan, Synthetic) rather than a Crush-owned subscription.
@@ -387,9 +388,9 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Hooks: full — Dedicated hooks surface: sessionStart/sessionEnd, preToolUse/postToolUse/postToolUseFailure, subagentStart/subagentStop, beforeShellExecution/afterShellExecution, beforeMCPExecution/afterMCPExecution, beforeReadFile/afterFileEdit, beforeSubmitPrompt, preCompact, stop, afterAgentResponse/afterAgentThought, Tab hooks, and workspaceOpen. Configured via .cursor/hooks.json at project, user, team, and enterprise levels; cloud agents run project/team/enterprise command-based hooks. Third-party Claude Code hooks are also supported.
 - Mcp Servers: full — Supports MCP servers in both IDE and CLI. Location: `.cursor/mcp.json` for project MCP servers or user-level Cursor MCP settings.
 - Custom Commands: full — CLI exposes full command controls; IDE has reusable rule/workflow patterns. Location: custom command support is through Cursor features/SDK rather than a repo command folder.
-- Goal Command: none — Cursor Agent CLI documents `/plan`, `/ask`, and `/resume` slash commands but no built-in `/goal` for persistent completion conditions.
-- Subagents: full — Full support in Cursor SDK as of June 2026: agents can nest subagents to any depth. IDE agent tasks remain available.
-- Monitor: partial — Cursor supports hooks, cloud agents, and nested subagents, giving partial task/status monitoring, but reviewed docs do not show a dedicated command/log/WebSocket Monitor tool.
+- Goal Command: full — Built-in `/goal` gives an agent a long-lived objective and keeps it working until completion; it can be combined with custom modes and `/loop`.
+- Subagents: full — Cursor supports nested SDK subagents and Project coordinators that create, manage, and parallelize large numbers of implementation agents on the user's behalf.
+- Monitor: full — Cloud-agent subscriptions monitor pull requests or Slack threads and wake the agent when events occur; Projects also support recurring work and schedule or channel subscriptions without a new prompt.
 - Transcripts: full — Location: Cursor CLI transcripts live under `~/.cursor/projects/<slug>/agent-transcripts/<agentId>/<agentId>.jsonl`; Cursor IDE composer data is in SQLite `~/Library/Application Support/Cursor/User/globalStorage/state.vscdb`.
 - Model Selection: full — Supports model settings in IDE and CLI.
 - Approval Mode: full — Agent modes and CLI yolo/force controls expose approval controls.
@@ -894,6 +895,39 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Pricing: Meta Model API usage billing; API key required
 - Notes: Muse Code is Meta's terminal coding agent powered by Muse Spark 1.2. Local verification on this Mac used Muse Code 0.1.0-R708.1 and returned a successful headless response.
 
+### OpenAI Agents API
+- Docs: https://developers.openai.com/api/docs/guides/agents-api/overview
+- GitHub: https://github.com/openai/codex
+- Website: https://openai.com/index/introducing-the-agents-api/
+- Form factor: SDK, Hosted Agent
+- Released: Sep '26
+- Latest update: Sep '26
+- Some Free Usage: none — The public launch describes usage-based API billing and does not document a product-specific free tier.
+- No Account Required: none — An OpenAI API account and API key are required.
+- Can Use Other Subscriptions: none — The hosted API is billed as API usage; ChatGPT subscription authentication is not documented for this surface.
+- Rules: partial — Saved agent configurations support reusable instructions and behavior, but the API docs do not define a repository instruction-file convention.
+- Skills: full — Plugins can package discoverable skill directories and supporting resources for the Codex harness.
+- Hooks: full — Session lifecycle events can be delivered to application webhook endpoints.
+- Mcp Servers: full — Agent configurations can connect the harness to remote MCP servers.
+- Custom Commands: none — The hosted API has no documented slash-command or command-file interface.
+- Goal Command: none — Sessions accept tasks and follow-up input, but no persistent `/goal` command is documented.
+- Subagents: full — The Codex harness can delegate work to specialized subagents within an agent run.
+- Monitor: full — Applications can stream run events live, inspect traces, and subscribe to lifecycle webhooks.
+- Transcripts: full — Sessions persist their input, output, tool, and event items for later retrieval.
+- Model Selection: full — Saved agent configurations specify an OpenAI model and reasoning settings.
+- Approval Mode: partial — Applications control tool and environment permissions, but the public API docs do not describe a built-in interactive per-action approval UI.
+- Sandbox Mode: full — Runs can use isolated OpenAI-hosted containers with network policy or application-managed self-hosted environments.
+- Resume: full — Persistent session IDs let applications reconnect to and continue existing work.
+- Continue: full — Applications can send follow-up messages and steering input to an existing session.
+- Non Interactive: full — The product is an API designed for programmatic and asynchronous agent execution.
+- Output Format: full — Agent configurations support output controls, while session event streams provide structured responses.
+- Statusline: none — The API has no terminal statusline.
+- Telemetry: full — Runs expose structured traces and observability data for application monitoring.
+- Hosted Agent: full — OpenAI provides managed isolated environments for cloud agent execution.
+- Custom Model Provider: none — The public Agents API documentation supports OpenAI models and does not document arbitrary external model providers.
+- Pricing: No additional Agents API fee; model tokens, tools, and hosted containers billed at API rates
+- Notes: Public-beta managed agent API powered by the open-source Codex harness. It is listed separately from Codex CLI because it is an independently launched hosted API surface. It has no installable local command, so no agent-launch backend is added.
+
 ### OpenCode
 - Docs: https://opencode.ai/docs/
 - GitHub: https://github.com/sst/opencode
@@ -1061,7 +1095,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Docs: https://qwenlm.github.io/qwen-code-docs/en/users/overview
 - GitHub: https://github.com/QwenLM/qwen-code
 - Website: https://qwenlm.github.io/qwen-code-docs/
-- Form factor: CLI, Extension, SDK, Desktop App
+- Form factor: CLI, Extension, SDK, Web, Desktop App, Mobile
 - Released: Jun '25
 - Latest update: Sep '26
 - Some Free Usage: blank
