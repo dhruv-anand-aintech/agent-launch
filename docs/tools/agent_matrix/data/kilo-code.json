@@ -25,8 +25,8 @@
   },
   "latest_major_update": {
     "value": "Sep '26",
-    "source_url": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.5.15#source:~:text=No%20notable%20changes",
-    "comment": "Latest stable main-product release v7.5.15 (September 6, 2026) reports no notable changes. Version 7.5.11 added Kilo Swarm, richer Agent Manager pull-request workflows, /update-from-base, unified @ search, and agent-defined default answers to questions; later patches improved hidden-panel polling and workspace indexing."
+    "source_url": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.6.2#source:~:text=Enable%20the%20experimental%20shared%20agent%20board",
+    "comment": "Kilo Code v7.6.2 shipped September 10, 2026 and lets users enable the experimental shared-agent board, Kilo Swarm, through either its dedicated environment variable, the umbrella experimental flag, or the existing configuration key."
   },
   "rules": {
     "support": "full",

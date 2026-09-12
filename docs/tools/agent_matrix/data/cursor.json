@@ -31,8 +31,8 @@
   },
   "latest_major_update": {
     "value": "Sep '26",
-    "source_url": "https://cursor.com/changelog#self-hosted-machines:~:text=Cursor%20supports%20self-hosted%20machines",
-    "comment": "Cursor's September 2, 2026 update adds self-hosted machines and team pools for Cloud Agent execution inside customer networks, including Linux and Mac computer use and integrations with major sandbox providers."
+    "source_url": "https://cursor.com/changelog#cursor-projects:~:text=Today%20we're%20launching%20Projects%20in%20Cursor",
+    "comment": "Cursor launched Projects in beta on September 10, 2026: durable cloud workspaces that retain shared context for months, coordinate and delegate to large numbers of agents, and run recurring work from subscriptions without requiring prompts."
   },
   "rules": {
     "support": "full",
@@ -60,19 +60,19 @@
     "comment": "CLI exposes full command controls; IDE has reusable rule/workflow patterns. Location: custom command support is through Cursor features/SDK rather than a repo command folder."
   },
   "goal_command": {
-    "support": "none",
-    "source_url": "https://cursor.com/docs/cli/using#use-plan:~:text=%2Fplan",
-    "comment": "Cursor Agent CLI documents `/plan`, `/ask`, and `/resume` slash commands but no built-in `/goal` for persistent completion conditions."
+    "support": "full",
+    "source_url": "https://cursor.com/changelog#goal:~:text=Use%20%60%2Fgoal%60%20to%20give%20the%20agent%20a%20long-lived%20objective",
+    "comment": "Built-in `/goal` gives an agent a long-lived objective and keeps it working until completion; it can be combined with custom modes and `/loop`."
   },
   "subagents": {
     "support": "full",
-    "source_url": "https://cursor.com/changelog/sdk-updates-jun-2026#custom-stores-custom-tools-and-auto-review-for-the-cursor-sdk:~:text=nest%20subagents%20to%20any%20depth",
-    "comment": "Full support in Cursor SDK as of June 2026: agents can nest subagents to any depth. IDE agent tasks remain available."
+    "source_url": "https://cursor.com/changelog#cursor-projects:~:text=delegates%20tasks%20to%20thousands%20of%20subagents",
+    "comment": "Cursor supports nested SDK subagents and Project coordinators that create, manage, and parallelize large numbers of implementation agents on the user's behalf."
   },
   "monitor": {
-    "support": "partial",
-    "source_url": "https://cursor.com/changelog/sdk-updates-jun-2026#custom-stores-custom-tools-and-auto-review-for-the-cursor-sdk:~:text=nest%20subagents%20to%20any%20depth",
-    "comment": "Cursor supports hooks, cloud agents, and nested subagents, giving partial task/status monitoring, but reviewed docs do not show a dedicated command/log/WebSocket Monitor tool."
+    "support": "full",
+    "source_url": "https://cursor.com/changelog#subscriptions:~:text=monitor%20your%20PRs%2C%20watch%20a%20Slack%20thread%2C%20or%20run%20scheduled%20tasks",
+    "comment": "Cloud-agent subscriptions monitor pull requests or Slack threads and wake the agent when events occur; Projects also support recurring work and schedule or channel subscriptions without a new prompt."
   },
   "model_selection": {
     "support": "full",

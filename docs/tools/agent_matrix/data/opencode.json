@@ -29,8 +29,8 @@
   },
   "latest_major_update": {
     "value": "Sep '26",
-    "source_url": "https://github.com/anomalyco/opencode/releases/tag/v1.18.29#source:~:text=Allow%20Codex%20OAuth%20model%20filtering%20to%20recognize%20integer%20GPT%20versions",
-    "comment": "Latest release v1.18.29 (September 4, 2026) fixes Codex OAuth model filtering for integer GPT versions and restores GPT-6 Astra visibility for OpenAI subscription users."
+    "source_url": "https://github.com/anomalyco/opencode/releases/tag/v1.18.30#source:~:text=Added%20the%20Astra%20system%20prompt",
+    "comment": "OpenCode v1.18.30 shipped September 9, 2026 with the Astra system prompt for GPT-6 models, preserved Bedrock DeepSeek identifiers, provider SDK compatibility updates, and new reasoning-effort variants for supported GitLab GPT and Claude models."
   },
   "rules": {
     "support": "full",

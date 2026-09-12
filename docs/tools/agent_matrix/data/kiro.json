@@ -27,8 +27,8 @@
   },
   "latest_major_update": {
     "value": "Sep '26",
-    "source_url": "https://kiro.dev/changelog/#kiro-web-is-now-generally-available:~:text=Kiro%20Web%20Is%20Now%20Generally%20Available",
-    "comment": "Kiro Web became generally available September 1, 2026. The same update wave added cloud-configuration sync across Web, IDE, and CLI plus a CLI session dashboard and consolidated configuration panel."
+    "source_url": "https://kiro.dev/changelog/cli/2-21/#patch-2-21-3:~:text=2.21.3",
+    "comment": "Kiro Web became generally available September 1, 2026. CLI 2.21.3 followed September 10 with Powers in the V3 command picker, persisted model, mode, and effort settings, richer tool results, session-list fixes, and usage details in non-interactive output."
   },
   "rules": {
     "support": "full",

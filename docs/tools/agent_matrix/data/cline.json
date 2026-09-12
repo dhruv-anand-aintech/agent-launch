@@ -29,8 +29,8 @@
   },
   "latest_major_update": {
     "value": "Sep '26",
-    "source_url": "https://github.com/cline/cline/releases/tag/desktop-v0.0.23#source:~:text=Agent%20Plugins%20are%20now%20discovered%20and%20run%20by%20the%20shared%20Hub",
-    "comment": "Latest desktop release v0.0.23 shipped September 3, 2026 with shared-Hub discovery for Agent Plugins, including their skills and MCP servers, plus Hub update, sign-in, scheduled-task, and MCP shutdown fixes."
+    "source_url": "https://github.com/cline/cline/releases/tag/desktop-v0.0.26#source:~:text=The%20composer%20now%20shows%20the%20current%20branch's%20GitHub%20pull%20request",
+    "comment": "Cline Desktop v0.0.26 shipped September 11, 2026 with live pull-request and CI status in the composer, unified Tools/Plugins/Skills/Rules management, skill enablement controls, scheduled-session reliability fixes, safer provider authentication guidance, and broad session and terminal fixes."
   },
   "rules": {
     "support": "full",
@@ -185,8 +185,8 @@
   },
   "git_integration": {
     "support": "full",
-    "source_url": "https://github.com/cline/cline#configuration:~:text=git",
-    "comment": "VS Code git integration; full git workflow support."
+    "source_url": "https://github.com/cline/cline/releases/tag/desktop-v0.0.26#source:~:text=The%20composer%20now%20shows%20the%20current%20branch's%20GitHub%20pull%20request",
+    "comment": "The desktop composer shows the current branch's GitHub PR, merge state, changed-line totals, and CI checks, can inspect individual check logs, and opens GitHub's comparison form to create a PR when none exists."
   },
   "performance_mode": {
     "support": "partial",

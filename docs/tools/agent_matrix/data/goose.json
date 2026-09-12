@@ -25,8 +25,8 @@
   },
   "latest_major_update": {
     "value": "Sep '26",
-    "source_url": "https://github.com/aaif-goose/goose/releases/tag/v1.49.0#source:~:text=Auto-updater%20for%20desktop%20application",
-    "comment": "Latest release v1.49.0 (September 3, 2026) adds desktop auto-updates and Linux ARM64 packages, background extension loading, built-in web-search and browser-use skills, PreToolUse hook improvements, scheduled-session UI, and new providers."
+    "source_url": "https://github.com/aaif-goose/goose/releases/tag/v1.50.0#source:~:text=Support%20GPT-6%20Astra%20models",
+    "comment": "Goose v1.50.0 shipped September 8, 2026 with GPT-6 Astra support, tool calling for goose-agent, new gateway/provider integration, separate ACP packages, an observability tutorial, and security and reliability fixes for tracing, approvals, permissions, subagents, background turns, and launchers."
   },
   "rules": {
     "support": "full",

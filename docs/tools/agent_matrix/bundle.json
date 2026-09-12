@@ -426,8 +426,8 @@
     },
     "latest_major_update": {
       "value": "Sep '26",
-      "source_url": "https://ampcode.com/news/desktop#desktop:~:text=See%20and%20control%20the%20desktop%20in%20your%20orb",
-      "comment": "September 4, 2026 - Amp added the ability to see and control the remote desktop inside an orb. September updates also added Fable 5.1 ultra mode and intelligently ordered diffs.",
+      "source_url": "https://ampcode.com/news/restack-your-changes#source:~:text=We've%20added%20a%20Restack%20button",
+      "comment": "Amp added Restack on September 11, 2026 to reorganize committed and uncommitted thread changes into logical commits without changing final file contents. The September 10 Dial update also added exact model and reasoning selection plus custom plugin-agent modes.",
       "sort_date": "2026-09-01"
     },
     "rules": {
@@ -471,9 +471,9 @@
       "comment": "Task/subagent execution and stream-json/headless operation cover some wait-for-result workflows, but no dedicated background command/log/WebSocket monitor primitive was found in the manual."
     },
     "model_selection": {
-      "support": "partial",
-      "source_url": "https://ampcode.com/models#agent-modes:~:text=Agent%20Modes",
-      "comment": "Pre-set modes (smart=Claude Opus 4.7, deep=GPT-5.5 reasoning, rush=GPT-5.5 no-reasoning, free=mixed). You choose the mode, not the exact model."
+      "support": "full",
+      "source_url": "https://ampcode.com/news/build-your-own-dial#tune-your-modes:~:text=choose%20the%20model%20and%20reasoning%20effort",
+      "comment": "Tune Modes selects the exact model and reasoning effort independently for a built-in mode's main agent, Oracle, and subagents; Auto remains available for Amp-managed routing."
     },
     "approval_mode": {
       "support": "partial",
@@ -517,8 +517,13 @@
     },
     "custom_model_provider": {
       "support": "partial",
-      "source_url": "https://ampcode.com/manual#mcp:~:text=You%20can%20add%20additional%20tools%20using%20MCP%20(Model%20Context%20Protocol)%20servers%2C%20which%20can%20be%20either%20local%20or%20remote.",
-      "comment": "No BYOM for the main agent (picks models per mode from providers). MCP servers can connect to external tools, and Plugin API allows custom tool registration."
+      "source_url": "https://ampcode.com/news/build-your-own-dial#tune-your-modes:~:text=Connect%20your%20key%20or%20subscription%20in%20Model%20Routing",
+      "comment": "Amp can run selectable supported models through connected API keys or ChatGPT subscriptions, but the public announcement does not establish arbitrary OpenAI-compatible endpoint configuration."
+    },
+    "can_use_other_subscriptions": {
+      "support": "full",
+      "source_url": "https://ampcode.com/news/build-your-own-dial#tune-your-modes:~:text=through%20your%20own%20API%20key%20or%20ChatGPT%20subscription",
+      "comment": "Amp can run Dial models through the user's own API key or ChatGPT subscription, with billing following those provider connections."
     },
     "notes": "Amp is opinionated and aggressively removes features it considers obsolete (custom commands, slash commands, themes). Focuses on frontier models. Plugin API provides extensive extensibility for those who need it. Closed-source product; some auxiliary tools open source on GitHub.",
     "pricing": {
@@ -572,9 +577,9 @@
       "comment": "Research needed. Check for formatter/linter integration or auto-format options."
     },
     "git_integration": {
-      "support": "unknown",
-      "source_url": "https://docs.example.com/#documentation:~:text=git",
-      "comment": "Research needed. Check for git command support or version control integration."
+      "support": "full",
+      "source_url": "https://ampcode.com/news/restack-your-changes#source:~:text=split%20a%20large%20diff%20into%20logical%20pieces%20for%20review",
+      "comment": "Restack organizes all committed and uncommitted thread changes into logical commits for review or merge, including splitting, combining, or cleaning intermediate commits while preserving final files."
     },
     "performance_mode": {
       "support": "unknown",
@@ -812,9 +817,9 @@
     },
     "latest_major_update": {
       "value": "Sep '26",
-      "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.263#source:~:text=Bug%20fixes%20and%20reliability%20improvements",
-      "comment": "Latest stable release v2.1.263 (September 6, 2026) contains bug fixes and reliability improvements. Version 2.1.261 added organization-policy diagnostics, configurable inline command-output limits, file-based subagent system prompts, /skill-doctor, and extensive reliability and security fixes.",
-      "sort_date": "2026-09-06"
+      "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.269#source:~:text=Added%20%60claude%20plugin%20eval%60",
+      "comment": "Claude Code v2.1.269 shipped September 11, 2026 with plugin evaluation reports, output-style switching across local and remote sessions, configurable Workflow-agent concurrency, Bash edit diffs, repository-tagged OpenTelemetry data, a VS Code agent map, and broad security, cache, resume, background-task, and reliability fixes.",
+      "sort_date": "2026-09-11"
     },
     "rules": {
       "support": "full",
@@ -1000,9 +1005,9 @@
     },
     "latest_major_update": {
       "value": "Sep '26",
-      "source_url": "https://github.com/cline/cline/releases/tag/desktop-v0.0.23#source:~:text=Agent%20Plugins%20are%20now%20discovered%20and%20run%20by%20the%20shared%20Hub",
-      "comment": "Latest desktop release v0.0.23 shipped September 3, 2026 with shared-Hub discovery for Agent Plugins, including their skills and MCP servers, plus Hub update, sign-in, scheduled-task, and MCP shutdown fixes.",
-      "sort_date": "2026-09-08"
+      "source_url": "https://github.com/cline/cline/releases/tag/desktop-v0.0.26#source:~:text=The%20composer%20now%20shows%20the%20current%20branch's%20GitHub%20pull%20request",
+      "comment": "Cline Desktop v0.0.26 shipped September 11, 2026 with live pull-request and CI status in the composer, unified Tools/Plugins/Skills/Rules management, skill enablement controls, scheduled-session reliability fixes, safer provider authentication guidance, and broad session and terminal fixes.",
+      "sort_date": "2026-09-11"
     },
     "rules": {
       "support": "full",
@@ -1157,8 +1162,8 @@
     },
     "git_integration": {
       "support": "full",
-      "source_url": "https://github.com/cline/cline#configuration:~:text=git",
-      "comment": "VS Code git integration; full git workflow support."
+      "source_url": "https://github.com/cline/cline/releases/tag/desktop-v0.0.26#source:~:text=The%20composer%20now%20shows%20the%20current%20branch's%20GitHub%20pull%20request",
+      "comment": "The desktop composer shows the current branch's GitHub PR, merge state, changed-line totals, and CI checks, can inspect individual check logs, and opens GitHub's comparison form to create a PR when none exists."
     },
     "performance_mode": {
       "support": "partial",
@@ -1205,9 +1210,9 @@
     },
     "latest_major_update": {
       "value": "Sep '26",
-      "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.153.4#source:~:text=Fixed%20Astra%E2%80%99s%20visibility%20in%20the%20bundled%20model%20picker",
-      "comment": "Latest stable Codex CLI release rust-v0.153.4 (September 4, 2026) restores Astra visibility in the bundled model picker, makes Astra the bundled default when no model is configured, and limits asynchronous-question guidance to sessions where that tool is available.",
-      "sort_date": "2026-09-08"
+      "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.154.0#source:~:text=Experimental%20worktree%20support",
+      "comment": "Codex CLI rust-v0.154.0 shipped September 9, 2026 with managed worktree creation and resume, inline question answering while work continues, a shared Windows background server, improved copy and Vim editing, plugin refreshes, safer workspace trust and macOS sandboxing, and stronger remote resume, permission, and automatic-approval handling.",
+      "sort_date": "2026-09-12"
     },
     "rules": {
       "support": "full",
@@ -1356,9 +1361,9 @@
       "comment": "Research needed. Check for formatter/linter integration or auto-format options."
     },
     "git_integration": {
-      "support": "unknown",
-      "source_url": "https://docs.example.com/#documentation:~:text=git",
-      "comment": "Research needed. Check for git command support or version control integration."
+      "support": "full",
+      "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.154.0#source:~:text=Experimental%20worktree%20support",
+      "comment": "Codex works directly in Git repositories and now creates isolated Git worktrees for new or forked sessions with `--worktree` or `/worktree`, including browsing and resuming those worktree sessions."
     },
     "performance_mode": {
       "support": "unknown",
@@ -1587,8 +1592,8 @@
     },
     "latest_major_update": {
       "value": "Sep '26",
-      "source_url": "https://commandcode.ai/changelog#september:~:text=v1.49.0",
-      "comment": "The September 2026 changelog lists CLI v1.49.0, which adds GPT-6 Astra. Version 1.48.0 added the max effort tier for Standard Muse Spark 1.3, and v1.47.1 improved provider and model configuration handling.",
+      "source_url": "https://commandcode.ai/changelog#september:~:text=v1.53.1",
+      "comment": "Command Code CLI v1.53.1 shipped September 12, 2026 with DeepSeek V4.1 Flash as the default compaction model, improved BYOK reasoning-effort controls, and clearer Extra Credits reporting.",
       "sort_date": "2026-09-01"
     },
     "pricing": {
@@ -1785,10 +1790,10 @@
       "sort_date": "2025-07-29"
     },
     "latest_major_update": {
-      "value": "Aug '26",
-      "source_url": "https://github.com/charmbracelet/crush/releases/tag/v0.92.0#source:~:text=Compact%20Exit%20Banner",
-      "comment": "Latest stable release v0.92.0 (August 31, 2026) adds compact exit-banner configuration and related UI fixes. Recent releases also added text selection, improved mouse support, MCP OAuth fixes, LSP tools, and .crushrc configuration.",
-      "sort_date": "2026-08-31"
+      "value": "Sep '26",
+      "source_url": "https://github.com/charmbracelet/crush/releases/tag/v0.94.1#source:~:text=Use%20your%20ChatGPT%20subscription%20in%20Crush",
+      "comment": "Crush v0.94.1 shipped September 12, 2026 with ChatGPT subscription sign-in, a non-interactive reasoning-effort flag, performance and binary-size improvements, and session, tool-result, OAuth, UI, and provider-catalog fixes.",
+      "sort_date": "2026-09-12"
     },
     "rules": {
       "support": "full",
@@ -1991,8 +1996,8 @@
     },
     "latest_major_update": {
       "value": "Sep '26",
-      "source_url": "https://cursor.com/changelog#self-hosted-machines:~:text=Cursor%20supports%20self-hosted%20machines",
-      "comment": "Cursor's September 2, 2026 update adds self-hosted machines and team pools for Cloud Agent execution inside customer networks, including Linux and Mac computer use and integrations with major sandbox providers.",
+      "source_url": "https://cursor.com/changelog#cursor-projects:~:text=Today%20we're%20launching%20Projects%20in%20Cursor",
+      "comment": "Cursor launched Projects in beta on September 10, 2026: durable cloud workspaces that retain shared context for months, coordinate and delegate to large numbers of agents, and run recurring work from subscriptions without requiring prompts.",
       "sort_date": "2026-09-01"
     },
     "rules": {
@@ -2021,19 +2026,19 @@
       "comment": "CLI exposes full command controls; IDE has reusable rule/workflow patterns. Location: custom command support is through Cursor features/SDK rather than a repo command folder."
     },
     "goal_command": {
-      "support": "none",
-      "source_url": "https://cursor.com/docs/cli/using#use-plan:~:text=%2Fplan",
-      "comment": "Cursor Agent CLI documents `/plan`, `/ask`, and `/resume` slash commands but no built-in `/goal` for persistent completion conditions."
+      "support": "full",
+      "source_url": "https://cursor.com/changelog#goal:~:text=Use%20%60%2Fgoal%60%20to%20give%20the%20agent%20a%20long-lived%20objective",
+      "comment": "Built-in `/goal` gives an agent a long-lived objective and keeps it working until completion; it can be combined with custom modes and `/loop`."
     },
     "subagents": {
       "support": "full",
-      "source_url": "https://cursor.com/changelog/sdk-updates-jun-2026#custom-stores-custom-tools-and-auto-review-for-the-cursor-sdk:~:text=nest%20subagents%20to%20any%20depth",
-      "comment": "Full support in Cursor SDK as of June 2026: agents can nest subagents to any depth. IDE agent tasks remain available."
+      "source_url": "https://cursor.com/changelog#cursor-projects:~:text=delegates%20tasks%20to%20thousands%20of%20subagents",
+      "comment": "Cursor supports nested SDK subagents and Project coordinators that create, manage, and parallelize large numbers of implementation agents on the user's behalf."
     },
     "monitor": {
-      "support": "partial",
-      "source_url": "https://cursor.com/changelog/sdk-updates-jun-2026#custom-stores-custom-tools-and-auto-review-for-the-cursor-sdk:~:text=nest%20subagents%20to%20any%20depth",
-      "comment": "Cursor supports hooks, cloud agents, and nested subagents, giving partial task/status monitoring, but reviewed docs do not show a dedicated command/log/WebSocket Monitor tool."
+      "support": "full",
+      "source_url": "https://cursor.com/changelog#subscriptions:~:text=monitor%20your%20PRs%2C%20watch%20a%20Slack%20thread%2C%20or%20run%20scheduled%20tasks",
+      "comment": "Cloud-agent subscriptions monitor pull requests or Slack threads and wake the agent when events occur; Projects also support recurring work and schedule or channel subscriptions without a new prompt."
     },
     "model_selection": {
       "support": "full",
@@ -2572,8 +2577,8 @@
     },
     "latest_major_update": {
       "value": "Sep '26",
-      "source_url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.58.0#source:~:text=ensure%20consistent%20symlink%20evaluation",
-      "comment": "Latest stable Gemini CLI release v0.58.0 (September 1, 2026) tightens symlink evaluation and isolates Docker or container runtime sockets in sandboxed execution, alongside release and reliability fixes. Nightly and preview tags are excluded.",
+      "source_url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.59.0#source:~:text=prevent%20SSRF%20in%20MCP%20OAuth%20metadata%20discovery",
+      "comment": "Gemini CLI v0.59.0 shipped September 8, 2026 with SSRF protection in MCP OAuth discovery and authentication plus fail-closed workspace trust that filters MCP servers in restricted mode. Nightly and preview tags are excluded.",
       "sort_date": "2026-09-01"
     },
     "rules": {
@@ -3155,9 +3160,9 @@
     },
     "latest_major_update": {
       "value": "Sep '26",
-      "source_url": "https://github.com/aaif-goose/goose/releases/tag/v1.49.0#source:~:text=Auto-updater%20for%20desktop%20application",
-      "comment": "Latest release v1.49.0 (September 3, 2026) adds desktop auto-updates and Linux ARM64 packages, background extension loading, built-in web-search and browser-use skills, PreToolUse hook improvements, scheduled-session UI, and new providers.",
-      "sort_date": "2026-09-05"
+      "source_url": "https://github.com/aaif-goose/goose/releases/tag/v1.50.0#source:~:text=Support%20GPT-6%20Astra%20models",
+      "comment": "Goose v1.50.0 shipped September 8, 2026 with GPT-6 Astra support, tool calling for goose-agent, new gateway/provider integration, separate ACP packages, an observability tutorial, and security and reliability fixes for tracing, approvals, permissions, subagents, background turns, and launchers.",
+      "sort_date": "2026-09-11"
     },
     "rules": {
       "support": "full",
@@ -3912,9 +3917,9 @@
     },
     "latest_major_update": {
       "value": "Sep '26",
-      "source_url": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.5.15#source:~:text=No%20notable%20changes",
-      "comment": "Latest stable main-product release v7.5.15 (September 6, 2026) reports no notable changes. Version 7.5.11 added Kilo Swarm, richer Agent Manager pull-request workflows, /update-from-base, unified @ search, and agent-defined default answers to questions; later patches improved hidden-panel polling and workspace indexing.",
-      "sort_date": "2026-09-08"
+      "source_url": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.6.2#source:~:text=Enable%20the%20experimental%20shared%20agent%20board",
+      "comment": "Kilo Code v7.6.2 shipped September 10, 2026 and lets users enable the experimental shared-agent board, Kilo Swarm, through either its dedicated environment variable, the umbrella experimental flag, or the existing configuration key.",
+      "sort_date": "2026-09-11"
     },
     "rules": {
       "support": "full",
@@ -4111,9 +4116,9 @@
     },
     "latest_major_update": {
       "value": "Sep '26",
-      "source_url": "https://github.com/MoonshotAI/kimi-code/releases/tag/%40moonshot-ai%2Fkimi-code%400.41.0#source:~:text=Remind%20the%20model%20of%20its%20context%20budget",
-      "comment": "Kimi Code 0.41.0 shipped September 4, 2026 with context-budget reminders around automatic compaction, always-on turn-level file history, experimental Tower multi-agent collaboration in the web UI, cross-process subagent resume, background-question fixes, and permission-mode and review-interface improvements.",
-      "sort_date": "2026-09-08"
+      "source_url": "https://github.com/MoonshotAI/kimi-code/releases/tag/%40moonshot-ai%2Fkimi-code%400.42.0#source:~:text=Add%20read-only%20tools%20to%20the%20%2Fbtw%20side%20agent",
+      "comment": "Kimi Code 0.42.0 shipped September 9, 2026 with read-only tools for the /btw side agent, an experimental progress panel for main and subagents, always-on secondary-model pools and Remote Control, live skill-catalog refresh, richer media support, and long-session performance, compaction, and task-status fixes.",
+      "sort_date": "2026-09-11"
     },
     "rules": {
       "support": "full",
@@ -4299,9 +4304,9 @@
     },
     "latest_major_update": {
       "value": "Sep '26",
-      "source_url": "https://github.com/kirodotdev/KiroCrew/releases/tag/v0.5.0#source:~:text=Your%20AWS%20account%20gets%20a%20control%20room",
-      "comment": "Kiro Crew 0.5.0 shipped September 5, 2026 with AWS Control, centrally published fleet security policies, no-install local dictation, session tabs, bulk and per-call approval controls, peer-session steering and conductor workflows, atomic self-update, improved mobile access, paginated transcripts, and extensive security and performance fixes.",
-      "sort_date": "2026-09-08"
+      "source_url": "https://github.com/kirodotdev/KiroCrew/releases/tag/v0.6.0#source:~:text=Pick%20the%20harness%20that%20runs%20your%20sessions",
+      "comment": "Kiro Crew 0.6.0 shipped September 11, 2026 with selectable Kiro, Claude Code, and Codex harnesses, remote-crew chat, agent-managed monitor loops, cross-backend worker dispatch, longer turn and subagent limits, a Launchpad, richer session organization, and expanded sandbox and installer controls.",
+      "sort_date": "2026-09-12"
     },
     "rules": {
       "support": "full",
@@ -4500,8 +4505,8 @@
     },
     "latest_major_update": {
       "value": "Sep '26",
-      "source_url": "https://kiro.dev/changelog/#kiro-web-is-now-generally-available:~:text=Kiro%20Web%20Is%20Now%20Generally%20Available",
-      "comment": "Kiro Web became generally available September 1, 2026. The same update wave added cloud-configuration sync across Web, IDE, and CLI plus a CLI session dashboard and consolidated configuration panel.",
+      "source_url": "https://kiro.dev/changelog/cli/2-21/#patch-2-21-3:~:text=2.21.3",
+      "comment": "Kiro Web became generally available September 1, 2026. CLI 2.21.3 followed September 10 with Powers in the V3 command picker, persisted model, mode, and effort settings, richer tool results, session-list fixes, and usage details in non-interactive output.",
       "sort_date": "2026-09-01"
     },
     "rules": {
@@ -4693,7 +4698,7 @@
       "value": "Sep '26",
       "source_url": "https://github.com/XiaomiMiMo/MiMo-Code/releases/tag/v0.1.14#source:~:text=Interrupted%20or%20errored%20turns%20stay%20recoverable",
       "comment": "Latest release v0.1.14 (September 2, 2026) adds append-only /recover for interrupted turns, title generation APIs, tool-driven TUI voice input, revised compaction, replayable nested tool calls, inherited subagent permissions, and optional auto-worktree guidance.",
-      "sort_date": "2026-09-08"
+      "sort_date": "2026-09-12"
     },
     "rules": {
       "support": "full",
@@ -5062,6 +5067,205 @@
     "notes": "Muse Code is Meta's terminal coding agent powered by Muse Spark 1.2. Local verification on this Mac used Muse Code 0.1.0-R708.1 and returned a successful headless response."
   },
   {
+    "name": "OpenAI Agents API",
+    "links": {
+      "docs": "https://developers.openai.com/api/docs/guides/agents-api/overview",
+      "github": "https://github.com/openai/codex",
+      "website": "https://openai.com/index/introducing-the-agents-api/",
+      "slug": "openai-agents-api"
+    },
+    "form_factor": {
+      "values": [
+        "SDK",
+        "Hosted Agent"
+      ],
+      "source_url": "https://openai.com/index/introducing-the-agents-api/#build-cloud-agents-with-the-same-harness-that-powers-codex:~:text=Agents%20API",
+      "comment": "Managed coding-agent API accessed through official SDKs and hosted OpenAI environments. Per-form-factor links: SDK: https://developers.openai.com/api/docs/guides/agents-api/overview; Hosted Agent: https://developers.openai.com/api/docs/guides/agents-api/environments/openai-hosted.",
+      "links": {
+        "SDK": "https://developers.openai.com/api/docs/guides/agents-api/overview",
+        "Hosted Agent": "https://developers.openai.com/api/docs/guides/agents-api/environments/openai-hosted"
+      }
+    },
+    "released_in": {
+      "value": "Sep '26",
+      "source_url": "https://openai.com/index/introducing-the-agents-api/#build-cloud-agents-with-the-same-harness-that-powers-codex:~:text=public%20beta",
+      "comment": "OpenAI launched the Agents API in public beta on September 10, 2026.",
+      "sort_date": "2026-09-01"
+    },
+    "latest_major_update": {
+      "value": "Sep '26",
+      "source_url": "https://openai.com/index/introducing-the-agents-api/#build-cloud-agents-with-the-same-harness-that-powers-codex:~:text=Build%20cloud%20agents",
+      "comment": "The September 10, 2026 public beta introduced persistent sessions, versioned agent configurations, built-in tools, skills, MCP, subagents, hosted or self-hosted execution, live observability, and webhooks.",
+      "sort_date": "2026-09-10"
+    },
+    "rules": {
+      "support": "partial",
+      "source_url": "https://developers.openai.com/api/docs/guides/agents-api/configuration#behavior:~:text=instructions",
+      "comment": "Saved agent configurations support reusable instructions and behavior, but the API docs do not define a repository instruction-file convention."
+    },
+    "skills": {
+      "support": "full",
+      "source_url": "https://developers.openai.com/api/docs/guides/agents-api/tools/plugins#plugins:~:text=skills",
+      "comment": "Plugins can package discoverable skill directories and supporting resources for the Codex harness."
+    },
+    "hooks": {
+      "support": "full",
+      "source_url": "https://developers.openai.com/api/docs/guides/agents-api/sessions/webhooks#webhooks:~:text=webhook",
+      "comment": "Session lifecycle events can be delivered to application webhook endpoints."
+    },
+    "mcp_servers": {
+      "support": "full",
+      "source_url": "https://developers.openai.com/api/docs/guides/agents-api/tools/mcp#model-context-protocol-mcp:~:text=MCP",
+      "comment": "Agent configurations can connect the harness to remote MCP servers."
+    },
+    "custom_commands": {
+      "support": "none",
+      "source_url": "https://developers.openai.com/api/docs/guides/agents-api/overview#overview:~:text=API",
+      "comment": "The hosted API has no documented slash-command or command-file interface."
+    },
+    "goal_command": {
+      "support": "none",
+      "source_url": "https://developers.openai.com/api/docs/guides/agents-api/sessions#sessions:~:text=session",
+      "comment": "Sessions accept tasks and follow-up input, but no persistent `/goal` command is documented."
+    },
+    "subagents": {
+      "support": "full",
+      "source_url": "https://developers.openai.com/api/docs/guides/agents-api/multi-agent#multi-agent:~:text=subagent",
+      "comment": "The Codex harness can delegate work to specialized subagents within an agent run."
+    },
+    "monitor": {
+      "support": "full",
+      "source_url": "https://developers.openai.com/api/docs/guides/agents-api/observability#observability:~:text=live",
+      "comment": "Applications can stream run events live, inspect traces, and subscribe to lifecycle webhooks."
+    },
+    "model_selection": {
+      "support": "full",
+      "source_url": "https://developers.openai.com/api/docs/guides/agents-api/configuration#model:~:text=model",
+      "comment": "Saved agent configurations specify an OpenAI model and reasoning settings."
+    },
+    "approval_mode": {
+      "support": "partial",
+      "source_url": "https://developers.openai.com/api/docs/guides/agents-api/environments/self-hosted#permissions:~:text=permission",
+      "comment": "Applications control tool and environment permissions, but the public API docs do not describe a built-in interactive per-action approval UI."
+    },
+    "sandbox_mode": {
+      "support": "full",
+      "source_url": "https://developers.openai.com/api/docs/guides/agents-api/environments/openai-hosted#openai-hosted-environments:~:text=isolated",
+      "comment": "Runs can use isolated OpenAI-hosted containers with network policy or application-managed self-hosted environments."
+    },
+    "resume": {
+      "support": "full",
+      "source_url": "https://developers.openai.com/api/docs/guides/agents-api/sessions#continue-a-session:~:text=session",
+      "comment": "Persistent session IDs let applications reconnect to and continue existing work."
+    },
+    "continue": {
+      "support": "full",
+      "source_url": "https://developers.openai.com/api/docs/guides/agents-api/sessions#continue-a-session:~:text=follow-up",
+      "comment": "Applications can send follow-up messages and steering input to an existing session."
+    },
+    "non_interactive": {
+      "support": "full",
+      "source_url": "https://developers.openai.com/api/docs/guides/agents-api/overview#overview:~:text=API",
+      "comment": "The product is an API designed for programmatic and asynchronous agent execution."
+    },
+    "output_format": {
+      "support": "full",
+      "source_url": "https://developers.openai.com/api/docs/guides/agents-api/configuration#output:~:text=output",
+      "comment": "Agent configurations support output controls, while session event streams provide structured responses."
+    },
+    "statusline": {
+      "support": "none",
+      "source_url": "https://developers.openai.com/api/docs/guides/agents-api/overview#overview:~:text=API",
+      "comment": "The API has no terminal statusline."
+    },
+    "telemetry": {
+      "support": "full",
+      "source_url": "https://developers.openai.com/api/docs/guides/agents-api/tracing#tracing:~:text=trace",
+      "comment": "Runs expose structured traces and observability data for application monitoring."
+    },
+    "custom_model_provider": {
+      "support": "none",
+      "source_url": "https://developers.openai.com/api/docs/guides/agents-api/configuration#model:~:text=OpenAI",
+      "comment": "The public Agents API documentation supports OpenAI models and does not document arbitrary external model providers."
+    },
+    "notes": "Public-beta managed agent API powered by the open-source Codex harness. It is listed separately from Codex CLI because it is an independently launched hosted API surface. It has no installable local command, so no agent-launch backend is added.",
+    "pricing": {
+      "value": "No additional Agents API fee; model tokens, tools, and hosted containers billed at API rates",
+      "source_url": "https://openai.com/index/introducing-the-agents-api/#start-building:~:text=no%20additional%20cost",
+      "comment": "OpenAI states there is no separate Agents API charge; normal model, tool, and hosted-container usage rates apply."
+    },
+    "some_free_usage": {
+      "support": "none",
+      "source_url": "https://openai.com/index/introducing-the-agents-api/#start-building:~:text=API%20pricing",
+      "comment": "The public launch describes usage-based API billing and does not document a product-specific free tier."
+    },
+    "no_account_required": {
+      "support": "none",
+      "source_url": "https://developers.openai.com/api/docs/guides/agents-api/overview#quickstart:~:text=API%20key",
+      "comment": "An OpenAI API account and API key are required."
+    },
+    "can_use_other_subscriptions": {
+      "support": "none",
+      "source_url": "https://openai.com/index/introducing-the-agents-api/#start-building:~:text=API%20pricing",
+      "comment": "The hosted API is billed as API usage; ChatGPT subscription authentication is not documented for this surface."
+    },
+    "hosted_agent": {
+      "support": "full",
+      "source_url": "https://developers.openai.com/api/docs/guides/agents-api/environments/openai-hosted#openai-hosted-environments:~:text=OpenAI-hosted",
+      "comment": "OpenAI provides managed isolated environments for cloud agent execution."
+    },
+    "transcripts": {
+      "support": "full",
+      "source_url": "https://developers.openai.com/api/docs/guides/agents-api/sessions#session-items:~:text=items",
+      "comment": "Sessions persist their input, output, tool, and event items for later retrieval."
+    },
+    "keyboard_shortcuts": {
+      "support": "none",
+      "source_url": "https://developers.openai.com/api/docs/guides/agents-api/overview#overview:~:text=API",
+      "comment": "The API has no interactive keyboard interface."
+    },
+    "theme_customization": {
+      "support": "none",
+      "source_url": "https://developers.openai.com/api/docs/guides/agents-api/overview#overview:~:text=API",
+      "comment": "The API has no product UI theme."
+    },
+    "auto_save": {
+      "support": "full",
+      "source_url": "https://developers.openai.com/api/docs/guides/agents-api/sessions#sessions:~:text=persist",
+      "comment": "Session state and items are persisted by the managed service."
+    },
+    "debugging_output": {
+      "support": "full",
+      "source_url": "https://developers.openai.com/api/docs/guides/agents-api/observability#observability:~:text=events",
+      "comment": "Live event streams and traces expose tool calls, outputs, errors, and run state."
+    },
+    "context_window": {
+      "support": "partial",
+      "source_url": "https://developers.openai.com/api/docs/guides/agents-api/sessions#context-management:~:text=context",
+      "comment": "The service manages long-running session context and compaction, but does not expose an arbitrary context-window size control."
+    },
+    "code_formatting": {
+      "support": "none",
+      "source_url": "https://developers.openai.com/api/docs/guides/agents-api/overview#overview:~:text=API",
+      "comment": "No built-in formatter setting is documented; agents can invoke tools supplied by the environment."
+    },
+    "git_integration": {
+      "support": "partial",
+      "source_url": "https://developers.openai.com/api/docs/guides/agents-api/environments/openai-hosted#files-and-code:~:text=repository",
+      "comment": "Hosted environments can work with repository files and code, but the API docs do not document a dedicated pull-request integration."
+    },
+    "performance_mode": {
+      "support": "partial",
+      "source_url": "https://developers.openai.com/api/docs/guides/agents-api/configuration#reasoning:~:text=effort",
+      "comment": "Model and reasoning-effort configuration can trade latency for capability, but there is no separate named performance mode."
+    },
+    "ui_customization": {
+      "support": "none",
+      "source_url": "https://developers.openai.com/api/docs/guides/agents-api/overview#overview:~:text=API",
+      "comment": "The API supplies no end-user interface to customize."
+    }
+  },
+  {
     "name": "OpenCode",
     "links": {
       "docs": "https://opencode.ai/docs/",
@@ -5093,9 +5297,9 @@
     },
     "latest_major_update": {
       "value": "Sep '26",
-      "source_url": "https://github.com/anomalyco/opencode/releases/tag/v1.18.29#source:~:text=Allow%20Codex%20OAuth%20model%20filtering%20to%20recognize%20integer%20GPT%20versions",
-      "comment": "Latest release v1.18.29 (September 4, 2026) fixes Codex OAuth model filtering for integer GPT versions and restores GPT-6 Astra visibility for OpenAI subscription users.",
-      "sort_date": "2026-09-08"
+      "source_url": "https://github.com/anomalyco/opencode/releases/tag/v1.18.30#source:~:text=Added%20the%20Astra%20system%20prompt",
+      "comment": "OpenCode v1.18.30 shipped September 9, 2026 with the Astra system prompt for GPT-6 models, preserved Bedrock DeepSeek identifiers, provider SDK compatibility updates, and new reasoning-effort variants for supported GitLab GPT and Claude models.",
+      "sort_date": "2026-09-11"
     },
     "rules": {
       "support": "full",
@@ -5298,9 +5502,9 @@
     },
     "latest_major_update": {
       "value": "Sep '26",
-      "source_url": "https://github.com/OpenHands/OpenHands/releases/tag/v1.16.0#source:~:text=select%20supported%20LLM%20providers",
-      "comment": "Latest stable OpenHands release v1.16.0 (August 27, 2026) adds selection of supported LLM providers and related platform improvements. The project now publishes unified semver releases rather than relying on a cloud-only tag for the newest row.",
-      "sort_date": "2026-09-05"
+      "source_url": "https://github.com/OpenHands/OpenHands/releases/tag/v1.18.0#source:~:text=allow%20editing%20automations%20on%20cloud%20backends",
+      "comment": "OpenHands v1.18.0 shipped September 11, 2026 with cloud automation editing and run-identity visibility, database-driven free/default model flags in Canvas, full-size image attachment viewing, explicit ACP harness-registry decisions, and cloud settings and usage-panel fixes.",
+      "sort_date": "2026-09-12"
     },
     "rules": {
       "support": "full",
@@ -5499,7 +5703,7 @@
       "value": "Sep '26",
       "source_url": "https://github.com/earendil-works/pi/releases/tag/v0.85.1#source:~:text=GPT-6%20Astra",
       "comment": "Latest release v0.85.1 (September 5, 2026) adds GPT-6 Astra through OpenAI API keys and Codex subscriptions, faster fullscreen scrolling, and fixes for selector keybindings, SDK packaging, prompt caching, and mouse selection.",
-      "sort_date": "2026-09-08"
+      "sort_date": "2026-09-11"
     },
     "rules": {
       "support": "full",
@@ -5898,9 +6102,9 @@
     },
     "latest_major_update": {
       "value": "Sep '26",
-      "source_url": "https://docs.qoder.com/release-notes/qoder#september-7-2026:~:text=Qoder%200.2.1",
-      "comment": "Qoder 0.2.1 shipped September 7, 2026 with synchronized mobile remote control for desktop tasks, drag-and-drop session references, lower multitasking memory and messaging overhead, expanded conversation output, and session-continuation and rendering fixes.",
-      "sort_date": "2026-09-07"
+      "source_url": "https://docs.qoder.com/release-notes/qoder#september-12-2026:~:text=Qoder%200.2.5",
+      "comment": "Qoder 0.2.5 shipped September 12, 2026 with remembered file-opening behavior, more reliable realtime voice, lower file-review CPU use, browser-login reuse, streaming-scroll fixes, and Chinese Computer Use fixes. Versions 0.2.2-0.2.3 added proxy configuration, Goal turn limits, model-choice persistence, and safer Computer Use actions.",
+      "sort_date": "2026-09-12"
     },
     "rules": {
       "support": "full",
@@ -6067,15 +6271,19 @@
         "CLI",
         "Extension",
         "SDK",
-        "Desktop App"
+        "Desktop App",
+        "Web",
+        "Mobile"
       ],
-      "source_url": "https://github.com/QwenLM/qwen-code#how-to-use-qwen-code:~:text=Desktop%20%E2%80%94%20Qwen%20Code%20Desktop%20%E2%80%94%20GUI%20for%20macOS%2C%20Windows%2C%20Linux",
-      "comment": "CLI + VS Code/Zed/JetBrains IDE integrations + official Qwen Code Desktop + daemon mode + SDKs + IM bots/channels. Per-form-factor links: CLI: https://qwenlm.github.io/qwen-code-docs/en/users/quickstart/; Extension: https://qwenlm.github.io/qwen-code-docs/en/users/extension/introduction/; SDK: https://qwenlm-qwen-code.mintlify.app/sdk/quick-start; Desktop App: https://github.com/QwenLM/qwen-code#how-to-use-qwen-code.",
+      "source_url": "https://qwenlm.github.io/qwen-code-docs/en/developers/architecture/#cli-and-presentation-surfaces:~:text=packages%2Fweb-shell",
+      "comment": "CLI + VS Code/Zed/JetBrains IDE integrations + official Qwen Code Desktop + daemon mode + SDKs + browser Web Shell and phone Local Control + IM bots/channels. Per-form-factor links: CLI: https://qwenlm.github.io/qwen-code-docs/en/users/quickstart/; Extension: https://qwenlm.github.io/qwen-code-docs/en/users/extension/introduction/; SDK: https://qwenlm-qwen-code.mintlify.app/sdk/quick-start; Desktop App: https://github.com/QwenLM/qwen-code#how-to-use-qwen-code; Web: https://qwenlm.github.io/qwen-code-docs/en/developers/architecture/; Mobile: https://qwenlm.github.io/qwen-code-docs/en/blog/quickstart/feat-qwen-serve-mobile/.",
       "links": {
         "CLI": "https://qwenlm.github.io/qwen-code-docs/en/users/quickstart/",
         "Extension": "https://qwenlm.github.io/qwen-code-docs/en/users/extension/introduction/",
         "SDK": "https://qwenlm-qwen-code.mintlify.app/sdk/quick-start",
-        "Desktop App": "https://github.com/QwenLM/qwen-code#how-to-use-qwen-code"
+        "Desktop App": "https://github.com/QwenLM/qwen-code#how-to-use-qwen-code",
+        "Web": "https://qwenlm.github.io/qwen-code-docs/en/developers/architecture/",
+        "Mobile": "https://qwenlm.github.io/qwen-code-docs/en/blog/quickstart/feat-qwen-serve-mobile/"
       }
     },
     "released_in": {
@@ -6086,9 +6294,9 @@
     },
     "latest_major_update": {
       "value": "Sep '26",
-      "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.23.0#source:~:text=The%20branch%20picker%20now%20displays%20git%20state%20hints",
-      "comment": "Latest stable Qwen Code release v0.23.0 (September 3, 2026) adds Git-state hints, a deterministic parallel review workflow emitter, scoped workspace-memory tasks, Local Control pairing, scheduled Web Shell sessions, and named cross-session messaging.",
-      "sort_date": "2026-09-08"
+      "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.23.3#source:~:text=delegate%20a%20subagent%20turn%20to%20an%20external%20agent%20over%20ACP",
+      "comment": "Qwen Code v0.23.3 shipped September 10, 2026 with external ACP-agent delegation, an OpenAI Responses provider, unified Web Shell session sources, daemon-managed peer messaging, a bounded self-review pass, richer Kimi/Qwen/DeepSeek reasoning presets, and broad review, permission, session, desktop, and Windows PTY fixes.",
+      "sort_date": "2026-09-12"
     },
     "rules": {
       "support": "full",

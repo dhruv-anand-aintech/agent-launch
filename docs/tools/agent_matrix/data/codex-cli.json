@@ -31,8 +31,8 @@
   },
   "latest_major_update": {
     "value": "Sep '26",
-    "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.153.4#source:~:text=Fixed%20Astra%E2%80%99s%20visibility%20in%20the%20bundled%20model%20picker",
-    "comment": "Latest stable Codex CLI release rust-v0.153.4 (September 4, 2026) restores Astra visibility in the bundled model picker, makes Astra the bundled default when no model is configured, and limits asynchronous-question guidance to sessions where that tool is available."
+    "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.154.0#source:~:text=Experimental%20worktree%20support",
+    "comment": "Codex CLI rust-v0.154.0 shipped September 9, 2026 with managed worktree creation and resume, inline question answering while work continues, a shared Windows background server, improved copy and Vim editing, plugin refreshes, safer workspace trust and macOS sandboxing, and stronger remote resume, permission, and automatic-approval handling."
   },
   "rules": {
     "support": "full",
@@ -181,9 +181,9 @@
     "comment": "Research needed. Check for formatter/linter integration or auto-format options."
   },
   "git_integration": {
-    "support": "unknown",
-    "source_url": "https://docs.example.com/#documentation:~:text=git",
-    "comment": "Research needed. Check for git command support or version control integration."
+    "support": "full",
+    "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.154.0#source:~:text=Experimental%20worktree%20support",
+    "comment": "Codex works directly in Git repositories and now creates isolated Git worktrees for new or forked sessions with `--worktree` or `/worktree`, including browsing and resuming those worktree sessions."
   },
   "performance_mode": {
     "support": "unknown",

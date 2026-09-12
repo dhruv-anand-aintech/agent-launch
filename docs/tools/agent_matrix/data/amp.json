@@ -29,8 +29,8 @@
   },
   "latest_major_update": {
     "value": "Sep '26",
-    "source_url": "https://ampcode.com/news/desktop#desktop:~:text=See%20and%20control%20the%20desktop%20in%20your%20orb",
-    "comment": "September 4, 2026 - Amp added the ability to see and control the remote desktop inside an orb. September updates also added Fable 5.1 ultra mode and intelligently ordered diffs."
+    "source_url": "https://ampcode.com/news/restack-your-changes#source:~:text=We've%20added%20a%20Restack%20button",
+    "comment": "Amp added Restack on September 11, 2026 to reorganize committed and uncommitted thread changes into logical commits without changing final file contents. The September 10 Dial update also added exact model and reasoning selection plus custom plugin-agent modes."
   },
   "rules": {
     "support": "full",
@@ -73,9 +73,9 @@
     "comment": "Task/subagent execution and stream-json/headless operation cover some wait-for-result workflows, but no dedicated background command/log/WebSocket monitor primitive was found in the manual."
   },
   "model_selection": {
-    "support": "partial",
-    "source_url": "https://ampcode.com/models#agent-modes:~:text=Agent%20Modes",
-    "comment": "Pre-set modes (smart=Claude Opus 4.7, deep=GPT-5.5 reasoning, rush=GPT-5.5 no-reasoning, free=mixed). You choose the mode, not the exact model."
+    "support": "full",
+    "source_url": "https://ampcode.com/news/build-your-own-dial#tune-your-modes:~:text=choose%20the%20model%20and%20reasoning%20effort",
+    "comment": "Tune Modes selects the exact model and reasoning effort independently for a built-in mode's main agent, Oracle, and subagents; Auto remains available for Amp-managed routing."
   },
   "approval_mode": {
     "support": "partial",
@@ -119,8 +119,13 @@
   },
   "custom_model_provider": {
     "support": "partial",
-    "source_url": "https://ampcode.com/manual#mcp:~:text=You%20can%20add%20additional%20tools%20using%20MCP%20(Model%20Context%20Protocol)%20servers%2C%20which%20can%20be%20either%20local%20or%20remote.",
-    "comment": "No BYOM for the main agent (picks models per mode from providers). MCP servers can connect to external tools, and Plugin API allows custom tool registration."
+    "source_url": "https://ampcode.com/news/build-your-own-dial#tune-your-modes:~:text=Connect%20your%20key%20or%20subscription%20in%20Model%20Routing",
+    "comment": "Amp can run selectable supported models through connected API keys or ChatGPT subscriptions, but the public announcement does not establish arbitrary OpenAI-compatible endpoint configuration."
+  },
+  "can_use_other_subscriptions": {
+    "support": "full",
+    "source_url": "https://ampcode.com/news/build-your-own-dial#tune-your-modes:~:text=through%20your%20own%20API%20key%20or%20ChatGPT%20subscription",
+    "comment": "Amp can run Dial models through the user's own API key or ChatGPT subscription, with billing following those provider connections."
   },
   "notes": "Amp is opinionated and aggressively removes features it considers obsolete (custom commands, slash commands, themes). Focuses on frontier models. Plugin API provides extensive extensibility for those who need it. Closed-source product; some auxiliary tools open source on GitHub.",
   "pricing": {
@@ -174,9 +179,9 @@
     "comment": "Research needed. Check for formatter/linter integration or auto-format options."
   },
   "git_integration": {
-    "support": "unknown",
-    "source_url": "https://docs.example.com/#documentation:~:text=git",
-    "comment": "Research needed. Check for git command support or version control integration."
+    "support": "full",
+    "source_url": "https://ampcode.com/news/restack-your-changes#source:~:text=split%20a%20large%20diff%20into%20logical%20pieces%20for%20review",
+    "comment": "Restack organizes all committed and uncommitted thread changes into logical commits for review or merge, including splitting, combining, or cleaning intermediate commits while preserving final files."
   },
   "performance_mode": {
     "support": "unknown",

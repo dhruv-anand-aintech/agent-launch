@@ -24,8 +24,8 @@
   },
   "latest_major_update": {
     "value": "Sep '26",
-    "source_url": "https://github.com/kirodotdev/KiroCrew/releases/tag/v0.5.0#source:~:text=Your%20AWS%20account%20gets%20a%20control%20room",
-    "comment": "Kiro Crew 0.5.0 shipped September 5, 2026 with AWS Control, centrally published fleet security policies, no-install local dictation, session tabs, bulk and per-call approval controls, peer-session steering and conductor workflows, atomic self-update, improved mobile access, paginated transcripts, and extensive security and performance fixes."
+    "source_url": "https://github.com/kirodotdev/KiroCrew/releases/tag/v0.6.0#source:~:text=Pick%20the%20harness%20that%20runs%20your%20sessions",
+    "comment": "Kiro Crew 0.6.0 shipped September 11, 2026 with selectable Kiro, Claude Code, and Codex harnesses, remote-crew chat, agent-managed monitor loops, cross-backend worker dispatch, longer turn and subagent limits, a Launchpad, richer session organization, and expanded sandbox and installer controls."
   },
   "rules": {
     "support": "full",

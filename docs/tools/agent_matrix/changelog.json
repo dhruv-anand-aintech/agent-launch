@@ -1,6 +1,125 @@
 {
-  "entry_count": 1808,
+  "entry_count": 1836,
   "entries": [
+    {
+      "date": "2026-09-12",
+      "commit": "c3698be",
+      "title": "Scheduled coding agent matrix update",
+      "items": [
+        {
+          "summary": "Amp: Can Use Other Subscriptions now supported",
+          "target": "cell-amp-can-use-other-subscriptions"
+        },
+        {
+          "summary": "Amp: Arbitrary Models evidence refreshed",
+          "target": "cell-amp-custom-model-provider"
+        },
+        {
+          "summary": "Amp: Git Integration now supported",
+          "target": "cell-amp-git-integration"
+        },
+        {
+          "summary": "Amp: Latest Major Update evidence refreshed",
+          "target": "cell-amp-latest-major-update"
+        },
+        {
+          "summary": "Amp: Model now supported",
+          "target": "cell-amp-model-selection"
+        },
+        {
+          "summary": "Claude Code: Latest Major Update evidence refreshed",
+          "target": "cell-claude-code-latest-major-update"
+        },
+        {
+          "summary": "Cline: Git Integration evidence refreshed",
+          "target": "cell-cline-git-integration"
+        },
+        {
+          "summary": "Cline: Latest Major Update evidence refreshed",
+          "target": "cell-cline-latest-major-update"
+        },
+        {
+          "summary": "OpenAI Codex CLI: Git Integration now supported",
+          "target": "cell-codex-cli-git-integration"
+        },
+        {
+          "summary": "OpenAI Codex CLI: Latest Major Update evidence refreshed",
+          "target": "cell-codex-cli-latest-major-update"
+        },
+        {
+          "summary": "Command Code: Latest Major Update evidence refreshed",
+          "target": "cell-command-code-latest-major-update"
+        },
+        {
+          "summary": "Crush: Latest Major Update updated to Sep '26",
+          "target": "cell-crush-latest-major-update"
+        },
+        {
+          "summary": "Cursor: /goal now supported",
+          "target": "cell-cursor-goal-command"
+        },
+        {
+          "summary": "Cursor: Latest Major Update evidence refreshed",
+          "target": "cell-cursor-latest-major-update"
+        },
+        {
+          "summary": "Cursor: Monitor now supported",
+          "target": "cell-cursor-monitor"
+        },
+        {
+          "summary": "Cursor: Subagents evidence refreshed",
+          "target": "cell-cursor-subagents"
+        },
+        {
+          "summary": "Gemini CLI: Latest Major Update evidence refreshed",
+          "target": "cell-gemini-cli-latest-major-update"
+        },
+        {
+          "summary": "Goose: Latest Major Update evidence refreshed",
+          "target": "cell-goose-latest-major-update"
+        },
+        {
+          "summary": "Kilo Code: Latest Major Update evidence refreshed",
+          "target": "cell-kilo-code-latest-major-update"
+        },
+        {
+          "summary": "Kimi Code CLI: Latest Major Update evidence refreshed",
+          "target": "cell-kimi-cli-latest-major-update"
+        },
+        {
+          "summary": "Kiro Crew: Latest Major Update evidence refreshed",
+          "target": "cell-kiro-crew-latest-major-update"
+        },
+        {
+          "summary": "Kiro: Latest Major Update evidence refreshed",
+          "target": "cell-kiro-latest-major-update"
+        },
+        {
+          "summary": "OpenAI Agents API added to the comparison",
+          "target": "cell-openai-agents-api-form-factor"
+        },
+        {
+          "summary": "OpenCode: Latest Major Update evidence refreshed",
+          "target": "cell-opencode-latest-major-update"
+        },
+        {
+          "summary": "OpenHands: Latest Major Update updated to Sep '26",
+          "target": "cell-openhands-latest-major-update"
+        },
+        {
+          "summary": "Qoder: Latest Major Update evidence refreshed",
+          "target": "cell-qoder-latest-major-update"
+        },
+        {
+          "summary": "Qwen Code: Form Factor updated to CLI, Extension, SDK, Desktop App, Web, Mobile",
+          "target": "cell-qwen-code-form-factor"
+        },
+        {
+          "summary": "Qwen Code: Latest Major Update evidence refreshed",
+          "target": "cell-qwen-code-latest-major-update"
+        }
+      ]
+    },
     {
       "date": "2026-09-08",
       "commit": "2db300c",

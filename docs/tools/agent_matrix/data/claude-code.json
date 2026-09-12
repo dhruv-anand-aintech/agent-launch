@@ -31,8 +31,8 @@
   },
   "latest_major_update": {
     "value": "Sep '26",
-    "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.263#source:~:text=Bug%20fixes%20and%20reliability%20improvements",
-    "comment": "Latest stable release v2.1.263 (September 6, 2026) contains bug fixes and reliability improvements. Version 2.1.261 added organization-policy diagnostics, configurable inline command-output limits, file-based subagent system prompts, /skill-doctor, and extensive reliability and security fixes."
+    "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.269#source:~:text=Added%20%60claude%20plugin%20eval%60",
+    "comment": "Claude Code v2.1.269 shipped September 11, 2026 with plugin evaluation reports, output-style switching across local and remote sessions, configurable Workflow-agent concurrency, Bash edit diffs, repository-tagged OpenTelemetry data, a VS Code agent map, and broad security, cache, resume, background-task, and reliability fixes."
   },
   "rules": {
     "support": "full",
