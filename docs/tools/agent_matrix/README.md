@@ -44,6 +44,7 @@ Form factor values are deliberately strict: each value should have a concrete pe
 | Google Jules | Web | Aug '25 | Mar '26 |  |  |  | unknown | none | partial | partial | partial | partial | full | none |
 | Goose | CLI, Desktop App | Jan '25 | Sep '26 | full | full | full | full | full | partial | full | full | full | none | full |
 | Grok Build | CLI, Web, Mobile | May '26 | Aug '26 |  |  |  | full | full | unknown | unknown | full | full | full | partial |
+| JetBrains Air | IDE, Web, Desktop App | Mar '26 | Sep '26 | full | partial | full | full | full | full | partial | partial | full | full | full |
 | JetBrains Junie | CLI, IDE, Web, GitHub Action, GitLab CI/CD | Jan '25 | Aug '26 |  |  |  | full | full | partial | full | full | full | partial | full |
 | Kilo Code | CLI, Extension | Feb '26 | Sep '26 | full | full | full | full | full | partial | unknown | full | full | partial | full |
 | Kimi Code CLI | CLI, Extension | May '26 | Sep '26 |  |  |  | full | full | partial | unknown | partial | full | none | full |

@@ -31,8 +31,8 @@
   },
   "latest_major_update": {
     "value": "Sep '26",
-    "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.269#source:~:text=Added%20%60claude%20plugin%20eval%60",
-    "comment": "Claude Code v2.1.269 shipped September 11, 2026 with plugin evaluation reports, output-style switching across local and remote sessions, configurable Workflow-agent concurrency, Bash edit diffs, repository-tagged OpenTelemetry data, a VS Code agent map, and broad security, cache, resume, background-task, and reliability fixes."
+    "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.270#source:~:text=Fixed%20read-only%20git%20commands",
+    "comment": "Claude Code v2.1.270 shipped September 12, 2026 and fixed a v2.1.269 regression that caused read-only Git commands in Bash to request permission after a session had been running for a while."
   },
   "rules": {
     "support": "full",

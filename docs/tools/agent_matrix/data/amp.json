@@ -29,8 +29,8 @@
   },
   "latest_major_update": {
     "value": "Sep '26",
-    "source_url": "https://ampcode.com/news/restack-your-changes#source:~:text=We've%20added%20a%20Restack%20button",
-    "comment": "Amp added Restack on September 11, 2026 to reorganize committed and uncommitted thread changes into logical commits without changing final file contents. The September 10 Dial update also added exact model and reasoning selection plus custom plugin-agent modes."
+    "source_url": "https://ampcode.com/news/free-agent#free-agent:~:text=Amp%20is%20now%20free%20to%20use%20when%20you%20bring%20your%20own%20compute%20and%20model%20subscriptions%2Fkeys",
+    "comment": "Amp's September 13, 2026 Free Agent update introduced the free Hobby tier, removed monthly-plan and Amp token fees for ChatGPT-subscription and BYOK use, made Teams available at no extra charge, and kept first-party inference available without markup."
   },
   "rules": {
     "support": "full",
@@ -124,19 +124,19 @@
   },
   "can_use_other_subscriptions": {
     "support": "full",
-    "source_url": "https://ampcode.com/news/build-your-own-dial#tune-your-modes:~:text=through%20your%20own%20API%20key%20or%20ChatGPT%20subscription",
-    "comment": "Amp can run Dial models through the user's own API key or ChatGPT subscription, with billing following those provider connections."
+    "source_url": "https://ampcode.com/news/free-agent#free-agent:~:text=Use%20your%20ChatGPT%20sub%20%26%20other%20subs",
+    "comment": "Amp supports ChatGPT and other subscriptions, BYOK, shared team routing, and additional provider or gateway connections, with no Amp token fees outside custom Enterprise terms."
   },
   "notes": "Amp is opinionated and aggressively removes features it considers obsolete (custom commands, slash commands, themes). Focuses on frontier models. Plugin API provides extensive extensibility for those who need it. Closed-source product; some auxiliary tools open source on GitHub.",
   "pricing": {
-    "value": "Usage-based LLM billing with free tier",
-    "source_url": "https://ampcode.com/manual#pricing:~:text=Amp%20charges%20you%20based%20on%20your%20actual%20usage%20of%20LLMs",
-    "comment": "Amp charges based on actual LLM usage and documents a free tier; no separate fixed first-party model-plan row is needed."
+    "value": "Hobby free; Individual $20/mo; Teams no extra charge; Enterprise custom; pay-as-you-go or included orb time; BYOK/subscriptions with no Amp token fees",
+    "source_url": "https://ampcode.com/pricing#pricing:~:text=Hobby,Free",
+    "comment": "Amp lists a free Hobby tier, $20/month Individual tier, Teams at no extra charge, and custom Enterprise pricing. Users can run on their own machines for free, pay for orbs, use included orb time, or bring subscriptions and API keys without Amp token fees."
   },
   "some_free_usage": {
     "support": "full",
-    "source_url": "https://ampcode.com/news/amp-free#amp-free:~:text=Amp%20has%20a%20new%20mode%3A%20%60free%60",
-    "comment": "Amp documents a free mode for interactive editor/CLI use, with limits and availability caveats."
+    "source_url": "https://ampcode.com/news/free-agent#free-agent:~:text=Hobby,Free",
+    "comment": "The Hobby tier is free and includes all product features, free self-hosted runners, subscriptions/BYOK without Amp token fees, and public or private repositories; remote orbs remain pay-as-you-go."
   },
   "hosted_agent": {
     "support": "full",

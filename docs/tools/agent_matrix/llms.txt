@@ -1,6 +1,6 @@
 # Coding Agent Feature Matrix
-> Compare 38 coding agents, CLIs, and IDEs across features.
-> https://compare.ainorthstar.tech | Updated 2026-09-12
+> Compare 39 coding agents, CLIs, and IDEs across features.
+> https://compare.ainorthstar.tech | Updated 2026-09-14
 
 Agent                   Rel    FF     Fre   NoA   Oth   Rul   Skl   Hks   MCP   Cmd   Gol   Sub   Mon   Trn   Mod   App   San   Res   Con   Hdl   Fmt   Sta   Tel   Hst  BYOM
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -22,6 +22,7 @@ GitHub Copilot CLI      Sep '2 CLI        ~     N     Y     Y     Y     Y     Y 
 GitHub Copilot          Jun '2 CLI/IDE                      Y     Y     Y     Y     ~     N     Y     ~     ?     Y     ~     ~     Y     Y     Y     ~     N     ~     Y     Y
 Goose                   Jan '2 CLI/Des    Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     ~     Y     Y     Y     Y     Y     ~     Y     Y     N     Y     N     Y
 Grok Build              May '2 CLI/Web                      Y     Y     Y     Y     ~     Y     Y     ?     ?     ~     Y     ~     ?     ?     Y     ?     ?     ?     Y     ~
+JetBrains Air           Mar '2 IDE/Web    Y     ~     Y     Y     Y     ~     Y     Y     N     ~     Y     ~     Y     Y     Y     Y     Y     N     N     N     ?     Y     Y
 Google Jules            Aug '2 Web                          ?     N     ~     ~     N     N     ~     ~     ~     ~     Y     Y     ~     ~     ~     ~     N     ?     Y     N
 JetBrains Junie         Jan '2 CLI/IDE                      Y     Y     Y     Y     Y     N     Y     ~     Y     Y     Y     ~     Y     ~     Y     ?     N     ~     ~     Y
 Kilo Code               Feb '2 CLI/Ext    Y     Y     Y     Y     Y     Y     Y     Y     N     Y     ~     ?     Y     Y     ~     Y     Y     Y     Y     N     Y     ~     Y
@@ -122,9 +123,9 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Form factor: CLI, SDK, Web, Mobile
 - Released: May '25
 - Latest update: Sep '26
-- Some Free Usage: full — Amp documents a free mode for interactive editor/CLI use, with limits and availability caveats.
+- Some Free Usage: full — The Hobby tier is free and includes all product features, free self-hosted runners, subscriptions/BYOK without Amp token fees, and public or private repositories; remote orbs remain pay-as-you-go.
 - No Account Required: blank
-- Can Use Other Subscriptions: full — Amp can run Dial models through the user's own API key or ChatGPT subscription, with billing following those provider connections.
+- Can Use Other Subscriptions: full — Amp supports ChatGPT and other subscriptions, BYOK, shared team routing, and additional provider or gateway connections, with no Amp token fees outside custom Enterprise terms.
 - Rules: full — Full support via AGENTS.md files (plural). Scanned from cwd, parent dirs, subtrees, $HOME/.config/amp/, /etc/ampcode/. Supports @-mentions, globs, YAML frontmatter. Location: no public disk folder/file location found in docs reviewed.
 - Skills: full — Full support. Skills are directories with SKILL.md + YAML frontmatter. Locations: .agents/skills/ (project), ~/.config/agents/skills/ (user). Can bundle MCP servers via mcp.json. Location: no public disk folder/file location found in docs reviewed.
 - Hooks: full — Full support via Plugin API (TypeScript). Events: session.start, agent.start, tool.call, tool.result, agent.end. Plugins can respond with allow/reject/modify/synthesize actions.
@@ -145,7 +146,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Telemetry: unknown — No explicit telemetry settings found in documentation. No on/off telemetry toggle mentioned in manual or settings.
 - Hosted Agent: full — Amp provides hosted orbs with durable execution and web/mobile control of running agents, in addition to local CLI execution.
 - Custom Model Provider: partial — Amp can run selectable supported models through connected API keys or ChatGPT subscriptions, but the public announcement does not establish arbitrary OpenAI-compatible endpoint configuration.
-- Pricing: Usage-based LLM billing with free tier
+- Pricing: Hobby free; Individual $20/mo; Teams no extra charge; Enterprise custom; pay-as-you-go or included orb time; BYOK/subscriptions with no Amp token fees
 - Notes: Amp is opinionated and aggressively removes features it considers obsolete (custom commands, slash commands, themes). Focuses on frontier models. Plugin API provides extensive extensibility for those who need it. Closed-source product; some auxiliary tools open source on GitHub.
 
 ### Antigravity
@@ -634,6 +635,38 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Custom Model Provider: partial — Config references models and API keys, but arbitrary OpenAI-compatible provider support is not documented.
 - Pricing: Included across Grok plans, including Free; higher usage on paid SuperGrok, X Premium Plus, Business, and Enterprise plans
 - Notes: Early beta. Strong documented parity on AGENTS.md, skills, hooks, MCP, headless mode, ACP, and parallel subagents; lower confidence for session management and telemetry because public docs are still sparse.
+
+### JetBrains Air
+- Docs: https://www.jetbrains.com/help/air/
+- Website: https://air.dev/
+- Form factor: IDE, Web, Desktop App
+- Released: Mar '26
+- Latest update: Sep '26
+- Some Free Usage: full — JetBrains AI has a free tier with limited monthly credits; local Air tasks can also use separately free or locally hosted ACP-compatible agents where supported.
+- No Account Required: partial — The provider sign-in step can be skipped for an already installed ACP-compatible agent; JetBrains-managed, provider-subscription, web, and cloud use require their corresponding accounts.
+- Can Use Other Subscriptions: full — Local desktop tasks can use ChatGPT, Claude, Google, or API-billed provider accounts, and arbitrary locally installed ACP-compatible agents keep their own subscriptions.
+- Rules: full — Air recognizes project instruction files such as CLAUDE.md and AGENTS.md; exact agent-specific instruction behavior follows the selected harness.
+- Skills: full — Shared SKILL.md modules live under .agents/skills, with additional agent-specific skill directories for Claude Agent, Codex, Gemini CLI, and Junie.
+- Hooks: partial — Air preserves agent-specific configuration behavior, but reviewed Air documentation does not expose a platform-wide lifecycle-hook API.
+- Mcp Servers: full — Settings can enable MCP, launch workspace MCP servers, and add global MCP server configurations.
+- Custom Commands: full — Air exposes built-in and custom commands in the slash menu alongside skills.
+- Goal Command: none — Tasks are goal-oriented, but no built-in persistent /goal command is documented for Air itself.
+- Subagents: partial — Air runs several independent tasks in parallel and can launch a separate fresh-agent review task; subagent delegation inside a task depends on the selected agent harness.
+- Monitor: full — Cloud automations react to issue and repository events, schedules, and CI or delivery workflows without manual task starts.
+- Transcripts: partial — Air retains task chats for continuation and review, but public documentation does not expose a portable local transcript format or path.
+- Model Selection: full — Each new task selects an agent and model; the model can change within a task while its provider stays fixed.
+- Approval Mode: full — Per-task permission modes cover Plan, Ask, Edit, and Full Access, with names mapped to the selected agent's native behavior.
+- Sandbox Mode: full — Tasks can run in the local workspace, an isolated Git worktree, Docker, or a JetBrains-managed cloud environment.
+- Resume: full — Saved tasks can be reopened and continued from the Chat task history.
+- Continue: full — Follow-up messages continue the current task and can incorporate diff-review comments.
+- Non Interactive: none — Air exposes desktop and web user interfaces; no installable local headless Air command with verified prompt flags is documented.
+- Output Format: none — No Air-level JSON or structured-output mode is documented.
+- Statusline: none — Air has task controls and status in its UI, but no user-configurable CLI-style status line is documented.
+- Telemetry: unknown — Reviewed public settings documentation did not provide enough evidence for an Air-specific telemetry control.
+- Hosted Agent: full — JetBrains-managed cloud tasks clone the repository into isolated remote environments, run agents in parallel, commit and push task branches, and support web automations.
+- Custom Model Provider: full — Air connects first-party and external provider accounts and accepts arbitrary locally installed ACP-compatible agents, including agents backed by local models or custom providers.
+- Pricing: JetBrains AI Free, Pro, Ultimate, or organization credits; local tasks can use existing provider subscriptions or BYOK/API billing
+- Notes: JetBrains Air is an agentic development environment and multi-harness surface, not a standalone local agent executable. It hosts Codex, Claude Agent, Gemini CLI, Junie, and user-added ACP agents, so no agent-launch backend was added.
 
 ### Google Jules
 - Docs: https://jules.google/

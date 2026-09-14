@@ -1,6 +1,45 @@
 {
-  "entry_count": 1836,
+  "entry_count": 1844,
   "entries": [
+    {
+      "date": "2026-09-14",
+      "commit": "2ba8e10",
+      "title": "Scheduled coding agent matrix update",
+      "items": [
+        {
+          "summary": "Amp: Can Use Other Subscriptions evidence refreshed",
+          "target": "cell-amp-can-use-other-subscriptions"
+        },
+        {
+          "summary": "Amp: Latest Major Update evidence refreshed",
+          "target": "cell-amp-latest-major-update"
+        },
+        {
+          "summary": "Amp: Pricing updated to Hobby free; Individual $20/mo; Teams no extra charge; Enterprise custom…",
+          "target": "cell-amp-pricing"
+        },
+        {
+          "summary": "Amp: Some Free Usage evidence refreshed",
+          "target": "cell-amp-some-free-usage"
+        },
+        {
+          "summary": "Claude Code: Latest Major Update evidence refreshed",
+          "target": "cell-claude-code-latest-major-update"
+        },
+        {
+          "summary": "Cline: Latest Major Update evidence refreshed",
+          "target": "cell-cline-latest-major-update"
+        },
+        {
+          "summary": "JetBrains Air added to the comparison",
+          "target": "cell-jetbrains-air-form-factor"
+        },
+        {
+          "summary": "Kiro: Latest Major Update evidence refreshed",
+          "target": "cell-kiro-latest-major-update"
+        }
+      ]
+    },
     {
       "date": "2026-09-12",
       "commit": "c3698be",

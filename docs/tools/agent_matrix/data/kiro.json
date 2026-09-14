@@ -27,8 +27,8 @@
   },
   "latest_major_update": {
     "value": "Sep '26",
-    "source_url": "https://kiro.dev/changelog/cli/2-21/#patch-2-21-3:~:text=2.21.3",
-    "comment": "Kiro Web became generally available September 1, 2026. CLI 2.21.3 followed September 10 with Powers in the V3 command picker, persisted model, mode, and effort settings, richer tool results, session-list fixes, and usage details in non-interactive output."
+    "source_url": "https://kiro.dev/changelog/#changelog:~:text=2.21.4%20CLI,Session%20Search%20Scope",
+    "comment": "Kiro CLI 2.21.4 shipped September 11, 2026 with configurable session-search scope, a per-run --v2 flag that selects the V2 harness without changing the saved default, and unified keyboard behavior across settings menus."
   },
   "rules": {
     "support": "full",
