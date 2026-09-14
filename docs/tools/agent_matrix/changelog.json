@@ -1,10 +1,10 @@
 {
-  "entry_count": 1843,
+  "entry_count": 1844,
   "entries": [
     {
       "date": "2026-09-14",
-      "commit": "",
-      "title": "Unreleased matrix update",
+      "commit": "2ba8e10",
+      "title": "Scheduled coding agent matrix update",
       "items": [
         {
           "summary": "Amp: Can Use Other Subscriptions evidence refreshed",
@@ -29,6 +29,10 @@
         {
           "summary": "Cline: Latest Major Update evidence refreshed",
           "target": "cell-cline-latest-major-update"
+        },
+        {
+          "summary": "JetBrains Air added to the comparison",
+          "target": "cell-jetbrains-air-form-factor"
         },
         {
           "summary": "Kiro: Latest Major Update evidence refreshed",
