@@ -426,8 +426,8 @@
     },
     "latest_major_update": {
       "value": "Sep '26",
-      "source_url": "https://ampcode.com/news/restack-your-changes#source:~:text=We've%20added%20a%20Restack%20button",
-      "comment": "Amp added Restack on September 11, 2026 to reorganize committed and uncommitted thread changes into logical commits without changing final file contents. The September 10 Dial update also added exact model and reasoning selection plus custom plugin-agent modes.",
+      "source_url": "https://ampcode.com/news/free-agent#free-agent:~:text=Amp%20is%20now%20free%20to%20use%20when%20you%20bring%20your%20own%20compute%20and%20model%20subscriptions%2Fkeys",
+      "comment": "Amp's September 13, 2026 Free Agent update introduced the free Hobby tier, removed monthly-plan and Amp token fees for ChatGPT-subscription and BYOK use, made Teams available at no extra charge, and kept first-party inference available without markup.",
       "sort_date": "2026-09-01"
     },
     "rules": {
@@ -522,19 +522,19 @@
     },
     "can_use_other_subscriptions": {
       "support": "full",
-      "source_url": "https://ampcode.com/news/build-your-own-dial#tune-your-modes:~:text=through%20your%20own%20API%20key%20or%20ChatGPT%20subscription",
-      "comment": "Amp can run Dial models through the user's own API key or ChatGPT subscription, with billing following those provider connections."
+      "source_url": "https://ampcode.com/news/free-agent#free-agent:~:text=Use%20your%20ChatGPT%20sub%20%26%20other%20subs",
+      "comment": "Amp supports ChatGPT and other subscriptions, BYOK, shared team routing, and additional provider or gateway connections, with no Amp token fees outside custom Enterprise terms."
     },
     "notes": "Amp is opinionated and aggressively removes features it considers obsolete (custom commands, slash commands, themes). Focuses on frontier models. Plugin API provides extensive extensibility for those who need it. Closed-source product; some auxiliary tools open source on GitHub.",
     "pricing": {
-      "value": "Usage-based LLM billing with free tier",
-      "source_url": "https://ampcode.com/manual#pricing:~:text=Amp%20charges%20you%20based%20on%20your%20actual%20usage%20of%20LLMs",
-      "comment": "Amp charges based on actual LLM usage and documents a free tier; no separate fixed first-party model-plan row is needed."
+      "value": "Hobby free; Individual $20/mo; Teams no extra charge; Enterprise custom; pay-as-you-go or included orb time; BYOK/subscriptions with no Amp token fees",
+      "source_url": "https://ampcode.com/pricing#pricing:~:text=Hobby,Free",
+      "comment": "Amp lists a free Hobby tier, $20/month Individual tier, Teams at no extra charge, and custom Enterprise pricing. Users can run on their own machines for free, pay for orbs, use included orb time, or bring subscriptions and API keys without Amp token fees."
     },
     "some_free_usage": {
       "support": "full",
-      "source_url": "https://ampcode.com/news/amp-free#amp-free:~:text=Amp%20has%20a%20new%20mode%3A%20%60free%60",
-      "comment": "Amp documents a free mode for interactive editor/CLI use, with limits and availability caveats."
+      "source_url": "https://ampcode.com/news/free-agent#free-agent:~:text=Hobby,Free",
+      "comment": "The Hobby tier is free and includes all product features, free self-hosted runners, subscriptions/BYOK without Amp token fees, and public or private repositories; remote orbs remain pay-as-you-go."
     },
     "hosted_agent": {
       "support": "full",
@@ -817,9 +817,9 @@
     },
     "latest_major_update": {
       "value": "Sep '26",
-      "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.269#source:~:text=Added%20%60claude%20plugin%20eval%60",
-      "comment": "Claude Code v2.1.269 shipped September 11, 2026 with plugin evaluation reports, output-style switching across local and remote sessions, configurable Workflow-agent concurrency, Bash edit diffs, repository-tagged OpenTelemetry data, a VS Code agent map, and broad security, cache, resume, background-task, and reliability fixes.",
-      "sort_date": "2026-09-11"
+      "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.270#source:~:text=Fixed%20read-only%20git%20commands",
+      "comment": "Claude Code v2.1.270 shipped September 12, 2026 and fixed a v2.1.269 regression that caused read-only Git commands in Bash to request permission after a session had been running for a while.",
+      "sort_date": "2026-09-14"
     },
     "rules": {
       "support": "full",
@@ -1005,9 +1005,9 @@
     },
     "latest_major_update": {
       "value": "Sep '26",
-      "source_url": "https://github.com/cline/cline/releases/tag/desktop-v0.0.26#source:~:text=The%20composer%20now%20shows%20the%20current%20branch's%20GitHub%20pull%20request",
-      "comment": "Cline Desktop v0.0.26 shipped September 11, 2026 with live pull-request and CI status in the composer, unified Tools/Plugins/Skills/Rules management, skill enablement controls, scheduled-session reliability fixes, safer provider authentication guidance, and broad session and terminal fixes.",
-      "sort_date": "2026-09-11"
+      "source_url": "https://github.com/cline/cline/releases/tag/desktop-v0.0.27#source:~:text=An%20expired%20Cline%20sign-in%20now%20produces%20one%20actionable%20error",
+      "comment": "Cline Desktop v0.0.27 shipped September 13, 2026 with actionable sign-in and credential recovery, reliable sign-out, clearer API-provider settings, better voice-input errors, repaired OpenCode Go routing, a new Crusoe provider, and accessible shared settings switches.",
+      "sort_date": "2026-09-14"
     },
     "rules": {
       "support": "full",
@@ -1212,7 +1212,7 @@
       "value": "Sep '26",
       "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.154.0#source:~:text=Experimental%20worktree%20support",
       "comment": "Codex CLI rust-v0.154.0 shipped September 9, 2026 with managed worktree creation and resume, inline question answering while work continues, a shared Windows background server, improved copy and Vim editing, plugin refreshes, safer workspace trust and macOS sandboxing, and stronger remote resume, permission, and automatic-approval handling.",
-      "sort_date": "2026-09-12"
+      "sort_date": "2026-09-14"
     },
     "rules": {
       "support": "full",
@@ -3518,6 +3518,208 @@
     }
   },
   {
+    "name": "JetBrains Air",
+    "links": {
+      "docs": "https://www.jetbrains.com/help/air/",
+      "github": "",
+      "website": "https://air.dev/",
+      "company_website": "https://www.jetbrains.com/",
+      "slug": "jetbrains-air"
+    },
+    "form_factor": {
+      "values": [
+        "IDE",
+        "Desktop App",
+        "Web"
+      ],
+      "source_url": "https://www.jetbrains.com/help/air/set-up.html#desktop-and-web-versions:~:text=Desktop%20app,Web%20version",
+      "comment": "Agentic development environment with a desktop IDE-like app for macOS, Linux, and Windows plus an organization-only web version for cloud tasks and automations. Per-form-factor links: IDE: https://air.dev/; Desktop App: https://www.jetbrains.com/help/air/quick-start-with-air.html; Web: https://air.jetbrains.cloud/.",
+      "links": {
+        "IDE": "https://air.dev/",
+        "Desktop App": "https://www.jetbrains.com/help/air/quick-start-with-air.html",
+        "Web": "https://air.jetbrains.cloud/"
+      }
+    },
+    "released_in": {
+      "value": "Mar '26",
+      "source_url": "https://blog.jetbrains.com/air/2026/03/air-launches-as-public-preview-a-new-wave-of-dev-tooling-built-on-26-years-of-experience/#a-real-agentic-development-environment-not-a-chat-window:~:text=today%20marks%20the%20launch%20of%20its%20Public%20Preview",
+      "comment": "JetBrains launched Air as a public-preview agentic development environment in March 2026.",
+      "sort_date": "2026-03-01"
+    },
+    "latest_major_update": {
+      "value": "Sep '26",
+      "source_url": "https://www.jetbrains.com/help/air/set-up.html#desktop-and-web-versions:~:text=Web%20version,cloud%20tasks%20and%20automations",
+      "comment": "By September 10, 2026, Air documented desktop and organization web surfaces, JetBrains-managed cloud tasks and automations, organization repository connections, AI governance, and multiple built-in or ACP-compatible agents.",
+      "sort_date": "2026-09-01"
+    },
+    "pricing": {
+      "value": "JetBrains AI Free, Pro, Ultimate, or organization credits; local tasks can use existing provider subscriptions or BYOK/API billing",
+      "source_url": "https://www.jetbrains.com/help/air/ai-credits.html#credits-and-usage:~:text=Every%20task%20you%20run%20consumes%20credits",
+      "comment": "Air uses JetBrains AI credits for JetBrains-provided and cloud execution. Local desktop tasks can instead use connected Anthropic, OpenAI, or Google subscriptions or API billing, while user-added ACP agents retain their own metering."
+    },
+    "some_free_usage": {
+      "support": "full",
+      "source_url": "https://www.jetbrains.com/help/ai-assistant/licensing-and-subscriptions.html#available-license-tiers:~:text=AI%20Free,Free",
+      "comment": "JetBrains AI has a free tier with limited monthly credits; local Air tasks can also use separately free or locally hosted ACP-compatible agents where supported."
+    },
+    "no_account_required": {
+      "support": "partial",
+      "source_url": "https://www.jetbrains.com/help/air/quick-start-with-air.html#sign-in-to-an-agent-provider:~:text=If%20you%20plan%20to%20use%20ACP-compatible%20agents%20only%2C%20you%20can%20skip%20this%20step",
+      "comment": "The provider sign-in step can be skipped for an already installed ACP-compatible agent; JetBrains-managed, provider-subscription, web, and cloud use require their corresponding accounts."
+    },
+    "can_use_other_subscriptions": {
+      "support": "full",
+      "source_url": "https://www.jetbrains.com/help/air/supported-agents.html#supported-agents:~:text=Your%20own%20account%20can%20be%20a%20subscription%20you%20already%20pay%20for",
+      "comment": "Local desktop tasks can use ChatGPT, Claude, Google, or API-billed provider accounts, and arbitrary locally installed ACP-compatible agents keep their own subscriptions."
+    },
+    "rules": {
+      "support": "full",
+      "source_url": "https://www.jetbrains.com/help/air/define-tasks.html#check-project-instructions:~:text=CLAUDE.md%20or%20AGENTS.md",
+      "comment": "Air recognizes project instruction files such as CLAUDE.md and AGENTS.md; exact agent-specific instruction behavior follows the selected harness."
+    },
+    "skills": {
+      "support": "full",
+      "source_url": "https://www.jetbrains.com/help/air/skills.html#shared-skills:~:text=Shared%20skills%20are%20stored%20in%20%60.agents%2Fskills%60",
+      "comment": "Shared SKILL.md modules live under .agents/skills, with additional agent-specific skill directories for Claude Agent, Codex, Gemini CLI, and Junie."
+    },
+    "hooks": {
+      "support": "partial",
+      "source_url": "https://www.jetbrains.com/help/air/skills.html#skills:~:text=For%20agent-specific%20details",
+      "comment": "Air preserves agent-specific configuration behavior, but reviewed Air documentation does not expose a platform-wide lifecycle-hook API."
+    },
+    "mcp_servers": {
+      "support": "full",
+      "source_url": "https://www.jetbrains.com/help/air/settings.html#mcp-servers:~:text=Enable%20MCP%20support",
+      "comment": "Settings can enable MCP, launch workspace MCP servers, and add global MCP server configurations."
+    },
+    "custom_commands": {
+      "support": "full",
+      "source_url": "https://www.jetbrains.com/help/air/skills.html#skills:~:text=Skills%20appear%20there%20after%20built-in%20commands%20and%20custom%20commands",
+      "comment": "Air exposes built-in and custom commands in the slash menu alongside skills."
+    },
+    "goal_command": {
+      "support": "none",
+      "source_url": "https://www.jetbrains.com/help/air/define-tasks.html#define-tasks:~:text=describe%20the%20goal",
+      "comment": "Tasks are goal-oriented, but no built-in persistent /goal command is documented for Air itself."
+    },
+    "subagents": {
+      "support": "partial",
+      "source_url": "https://www.jetbrains.com/help/air/quick-start-with-air.html#where-to-go-next:~:text=Multitasking,run%20several%20tasks%20in%20parallel",
+      "comment": "Air runs several independent tasks in parallel and can launch a separate fresh-agent review task; subagent delegation inside a task depends on the selected agent harness."
+    },
+    "monitor": {
+      "support": "full",
+      "source_url": "https://www.jetbrains.com/help/air/automations.html#why-use-automations:~:text=react%20to%20external%20events,run%20scheduled%20maintenance",
+      "comment": "Cloud automations react to issue and repository events, schedules, and CI or delivery workflows without manual task starts."
+    },
+    "transcripts": {
+      "support": "partial",
+      "source_url": "https://www.jetbrains.com/help/air/chat.html#chat:~:text=create%20and%20continue%20tasks",
+      "comment": "Air retains task chats for continuation and review, but public documentation does not expose a portable local transcript format or path."
+    },
+    "model_selection": {
+      "support": "full",
+      "source_url": "https://www.jetbrains.com/help/air/select-agents-and-models.html#select-an-agent-and-model-for-a-new-task:~:text=select%20an%20agent%20and%20a%20model%20per%20task",
+      "comment": "Each new task selects an agent and model; the model can change within a task while its provider stays fixed."
+    },
+    "approval_mode": {
+      "support": "full",
+      "source_url": "https://www.jetbrains.com/help/air/permission-modes.html#select-permission-mode-and-effort:~:text=Plan,Full%20Access",
+      "comment": "Per-task permission modes cover Plan, Ask, Edit, and Full Access, with names mapped to the selected agent's native behavior."
+    },
+    "sandbox_mode": {
+      "support": "full",
+      "source_url": "https://www.jetbrains.com/help/air/execution-environments.html#task-run-environments:~:text=Local%20Workspace,Git%20Worktree,Docker",
+      "comment": "Tasks can run in the local workspace, an isolated Git worktree, Docker, or a JetBrains-managed cloud environment."
+    },
+    "resume": {
+      "support": "full",
+      "source_url": "https://www.jetbrains.com/help/air/chat.html#chat:~:text=create%20and%20continue%20tasks",
+      "comment": "Saved tasks can be reopened and continued from the Chat task history."
+    },
+    "continue": {
+      "support": "full",
+      "source_url": "https://www.jetbrains.com/help/air/chat.html#chat-toolbar:~:text=Send%20starts%20the%20task%20or%20sends%20a%20follow-up%20message",
+      "comment": "Follow-up messages continue the current task and can incorporate diff-review comments."
+    },
+    "non_interactive": {
+      "support": "none",
+      "source_url": "https://www.jetbrains.com/help/air/set-up.html#desktop-and-web-versions:~:text=Desktop%20app,Web%20version",
+      "comment": "Air exposes desktop and web user interfaces; no installable local headless Air command with verified prompt flags is documented."
+    },
+    "output_format": {
+      "support": "none",
+      "source_url": "https://www.jetbrains.com/help/air/chat.html#chat:~:text=Chat%20tool",
+      "comment": "No Air-level JSON or structured-output mode is documented."
+    },
+    "statusline": {
+      "support": "none",
+      "source_url": "https://www.jetbrains.com/help/air/chat.html#chat-toolbar:~:text=Chat%20toolbar",
+      "comment": "Air has task controls and status in its UI, but no user-configurable CLI-style status line is documented."
+    },
+    "telemetry": {
+      "support": "unknown",
+      "source_url": "https://www.jetbrains.com/help/air/settings.html#settings:~:text=Settings",
+      "comment": "Reviewed public settings documentation did not provide enough evidence for an Air-specific telemetry control."
+    },
+    "keyboard_shortcuts": {
+      "support": "full",
+      "source_url": "https://www.jetbrains.com/help/air/permission-modes.html#select-permission-mode-and-effort:~:text=Shift%2BTab",
+      "comment": "Air documents keyboard shortcuts for changing modes, opening settings and actions, tools, and other editor workflows."
+    },
+    "theme_customization": {
+      "support": "full",
+      "source_url": "https://www.jetbrains.com/help/air/settings.html#appearance-behavior:~:text=Theme",
+      "comment": "Appearance settings include UI theme, editor color scheme, contrast, transparency, and interface scaling."
+    },
+    "auto_save": {
+      "support": "unknown",
+      "source_url": "https://www.jetbrains.com/help/air/settings.html#settings:~:text=Settings",
+      "comment": "Reviewed public documentation did not expose a clear user-facing auto-save control."
+    },
+    "debugging_output": {
+      "support": "unknown",
+      "source_url": "https://www.jetbrains.com/help/air/settings.html#settings:~:text=Settings",
+      "comment": "Reviewed public documentation did not expose a clear Air-level debug or verbose-output mode."
+    },
+    "context_window": {
+      "support": "partial",
+      "source_url": "https://www.jetbrains.com/help/air/select-agents-and-models.html#agents-and-models:~:text=select%20a%20provider%20through%20the%20agent%20selector",
+      "comment": "Context limits follow the selected agent and model; no Air-level configurable token-window control is documented."
+    },
+    "code_formatting": {
+      "support": "unknown",
+      "source_url": "https://www.jetbrains.com/help/air/tools.html#tools:~:text=Terminal",
+      "comment": "Agents can run project tools in Air's terminal, but reviewed documentation did not establish a built-in configurable formatter integration."
+    },
+    "git_integration": {
+      "support": "full",
+      "source_url": "https://www.jetbrains.com/help/air/quick-start-with-air.html#apply-the-changes:~:text=commit%20and%20push",
+      "comment": "Air can clone repositories, isolate tasks in worktrees or task branches, review diffs, generate commit messages, commit, push, and apply isolated changes locally."
+    },
+    "performance_mode": {
+      "support": "partial",
+      "source_url": "https://www.jetbrains.com/help/air/permission-modes.html#select-permission-mode-and-effort:~:text=Effort%20controls%20how%20much%20reasoning",
+      "comment": "Reasoning effort and optional fast modes are selectable where the chosen agent supports them; there is no universal Air performance switch."
+    },
+    "ui_customization": {
+      "support": "partial",
+      "source_url": "https://www.jetbrains.com/help/air/settings.html#appearance-behavior:~:text=Zoom",
+      "comment": "Air exposes theme, color scheme, scaling, transparency, font, and tool-panel settings, but does not document arbitrary UI layout extensions."
+    },
+    "hosted_agent": {
+      "support": "full",
+      "source_url": "https://www.jetbrains.com/help/air/execution-environments.html#cloud:~:text=JetBrains%20Air%20provisions%20a%20containerized%20cloud%20environment",
+      "comment": "JetBrains-managed cloud tasks clone the repository into isolated remote environments, run agents in parallel, commit and push task branches, and support web automations."
+    },
+    "custom_model_provider": {
+      "support": "full",
+      "source_url": "https://www.jetbrains.com/help/air/select-agents-and-models.html#add-your-own-agent:~:text=Any%20agent%20that%20supports%20the%20Agent%20Client%20Protocol",
+      "comment": "Air connects first-party and external provider accounts and accepts arbitrary locally installed ACP-compatible agents, including agents backed by local models or custom providers."
+    },
+    "notes": "JetBrains Air is an agentic development environment and multi-harness surface, not a standalone local agent executable. It hosts Codex, Claude Agent, Gemini CLI, Junie, and user-added ACP agents, so no agent-launch backend was added."
+  },
+  {
     "name": "Google Jules",
     "links": {
       "docs": "https://jules.google/",
@@ -3919,7 +4121,7 @@
       "value": "Sep '26",
       "source_url": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.6.2#source:~:text=Enable%20the%20experimental%20shared%20agent%20board",
       "comment": "Kilo Code v7.6.2 shipped September 10, 2026 and lets users enable the experimental shared-agent board, Kilo Swarm, through either its dedicated environment variable, the umbrella experimental flag, or the existing configuration key.",
-      "sort_date": "2026-09-11"
+      "sort_date": "2026-09-14"
     },
     "rules": {
       "support": "full",
@@ -4118,7 +4320,7 @@
       "value": "Sep '26",
       "source_url": "https://github.com/MoonshotAI/kimi-code/releases/tag/%40moonshot-ai%2Fkimi-code%400.42.0#source:~:text=Add%20read-only%20tools%20to%20the%20%2Fbtw%20side%20agent",
       "comment": "Kimi Code 0.42.0 shipped September 9, 2026 with read-only tools for the /btw side agent, an experimental progress panel for main and subagents, always-on secondary-model pools and Remote Control, live skill-catalog refresh, richer media support, and long-session performance, compaction, and task-status fixes.",
-      "sort_date": "2026-09-11"
+      "sort_date": "2026-09-14"
     },
     "rules": {
       "support": "full",
@@ -4306,7 +4508,7 @@
       "value": "Sep '26",
       "source_url": "https://github.com/kirodotdev/KiroCrew/releases/tag/v0.6.0#source:~:text=Pick%20the%20harness%20that%20runs%20your%20sessions",
       "comment": "Kiro Crew 0.6.0 shipped September 11, 2026 with selectable Kiro, Claude Code, and Codex harnesses, remote-crew chat, agent-managed monitor loops, cross-backend worker dispatch, longer turn and subagent limits, a Launchpad, richer session organization, and expanded sandbox and installer controls.",
-      "sort_date": "2026-09-12"
+      "sort_date": "2026-09-14"
     },
     "rules": {
       "support": "full",
@@ -4505,8 +4707,8 @@
     },
     "latest_major_update": {
       "value": "Sep '26",
-      "source_url": "https://kiro.dev/changelog/cli/2-21/#patch-2-21-3:~:text=2.21.3",
-      "comment": "Kiro Web became generally available September 1, 2026. CLI 2.21.3 followed September 10 with Powers in the V3 command picker, persisted model, mode, and effort settings, richer tool results, session-list fixes, and usage details in non-interactive output.",
+      "source_url": "https://kiro.dev/changelog/#changelog:~:text=2.21.4%20CLI,Session%20Search%20Scope",
+      "comment": "Kiro CLI 2.21.4 shipped September 11, 2026 with configurable session-search scope, a per-run --v2 flag that selects the V2 harness without changing the saved default, and unified keyboard behavior across settings menus.",
       "sort_date": "2026-09-01"
     },
     "rules": {
@@ -4698,7 +4900,7 @@
       "value": "Sep '26",
       "source_url": "https://github.com/XiaomiMiMo/MiMo-Code/releases/tag/v0.1.14#source:~:text=Interrupted%20or%20errored%20turns%20stay%20recoverable",
       "comment": "Latest release v0.1.14 (September 2, 2026) adds append-only /recover for interrupted turns, title generation APIs, tool-driven TUI voice input, revised compaction, replayable nested tool calls, inherited subagent permissions, and optional auto-worktree guidance.",
-      "sort_date": "2026-09-12"
+      "sort_date": "2026-09-14"
     },
     "rules": {
       "support": "full",
@@ -5299,7 +5501,7 @@
       "value": "Sep '26",
       "source_url": "https://github.com/anomalyco/opencode/releases/tag/v1.18.30#source:~:text=Added%20the%20Astra%20system%20prompt",
       "comment": "OpenCode v1.18.30 shipped September 9, 2026 with the Astra system prompt for GPT-6 models, preserved Bedrock DeepSeek identifiers, provider SDK compatibility updates, and new reasoning-effort variants for supported GitLab GPT and Claude models.",
-      "sort_date": "2026-09-11"
+      "sort_date": "2026-09-14"
     },
     "rules": {
       "support": "full",
@@ -5504,7 +5706,7 @@
       "value": "Sep '26",
       "source_url": "https://github.com/OpenHands/OpenHands/releases/tag/v1.18.0#source:~:text=allow%20editing%20automations%20on%20cloud%20backends",
       "comment": "OpenHands v1.18.0 shipped September 11, 2026 with cloud automation editing and run-identity visibility, database-driven free/default model flags in Canvas, full-size image attachment viewing, explicit ACP harness-registry decisions, and cloud settings and usage-panel fixes.",
-      "sort_date": "2026-09-12"
+      "sort_date": "2026-09-14"
     },
     "rules": {
       "support": "full",
@@ -5703,7 +5905,7 @@
       "value": "Sep '26",
       "source_url": "https://github.com/earendil-works/pi/releases/tag/v0.85.1#source:~:text=GPT-6%20Astra",
       "comment": "Latest release v0.85.1 (September 5, 2026) adds GPT-6 Astra through OpenAI API keys and Codex subscriptions, faster fullscreen scrolling, and fixes for selector keybindings, SDK packaging, prompt caching, and mouse selection.",
-      "sort_date": "2026-09-11"
+      "sort_date": "2026-09-14"
     },
     "rules": {
       "support": "full",
@@ -6296,7 +6498,7 @@
       "value": "Sep '26",
       "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.23.3#source:~:text=delegate%20a%20subagent%20turn%20to%20an%20external%20agent%20over%20ACP",
       "comment": "Qwen Code v0.23.3 shipped September 10, 2026 with external ACP-agent delegation, an OpenAI Responses provider, unified Web Shell session sources, daemon-managed peer messaging, a bounded self-review pass, richer Kimi/Qwen/DeepSeek reasoning presets, and broad review, permission, session, desktop, and Windows PTY fixes.",
-      "sort_date": "2026-09-12"
+      "sort_date": "2026-09-14"
     },
     "rules": {
       "support": "full",
