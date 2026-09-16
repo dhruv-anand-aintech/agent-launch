@@ -33,8 +33,9 @@
   },
   "latest_major_update": {
     "value": "Sep '26",
-    "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.23.3#source:~:text=delegate%20a%20subagent%20turn%20to%20an%20external%20agent%20over%20ACP",
-    "comment": "Qwen Code v0.23.3 shipped September 10, 2026 with external ACP-agent delegation, an OpenAI Responses provider, unified Web Shell session sources, daemon-managed peer messaging, a bounded self-review pass, richer Kimi/Qwen/DeepSeek reasoning presets, and broad review, permission, session, desktop, and Windows PTY fixes."
+    "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.23.4#source:~:text=Lets%20approved%20Web%20Shell%20Goal%20proposals%20start%20automatically",
+    "comment": "Qwen Code v0.23.4 shipped September 14, 2026 with automatic approved Goal starts and configurable Goal limits, external peer messaging, a Codex subagent executor, Web Shell scheduling and preview improvements, richer hook context, recoverable interrupted-session continuation, and breaking changes to channel prefix filtering and hook timeout units.",
+    "sort_date": "2026-09-14"
   },
   "rules": {
     "support": "full",

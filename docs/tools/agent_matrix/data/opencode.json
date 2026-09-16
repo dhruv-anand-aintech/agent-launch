@@ -29,8 +29,9 @@
   },
   "latest_major_update": {
     "value": "Sep '26",
-    "source_url": "https://github.com/anomalyco/opencode/releases/tag/v1.18.30#source:~:text=Added%20the%20Astra%20system%20prompt",
-    "comment": "OpenCode v1.18.30 shipped September 9, 2026 with the Astra system prompt for GPT-6 models, preserved Bedrock DeepSeek identifiers, provider SDK compatibility updates, and new reasoning-effort variants for supported GitLab GPT and Claude models."
+    "source_url": "https://github.com/anomalyco/opencode/releases/tag/v1.18.31#source:~:text=Restored%20ACP%20session%20model",
+    "comment": "OpenCode v1.18.31 shipped September 14, 2026 with restored ACP session model, effort, mode, and reasoning boundaries on load, resume, and fork; visible remote-config authentication failures at startup; and summarized adaptive thinking for GitHub Copilot models.",
+    "sort_date": "2026-09-14"
   },
   "rules": {
     "support": "full",

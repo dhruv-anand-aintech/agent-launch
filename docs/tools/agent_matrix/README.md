@@ -43,7 +43,7 @@ Form factor values are deliberately strict: each value should have a concrete pe
 | GitHub Copilot CLI | CLI | Sep '25 | Sep '26 | partial | none | full | full | full | partial | full | full | full | none | full |
 | Google Jules | Web | Aug '25 | Mar '26 |  |  |  | unknown | none | partial | partial | partial | partial | full | none |
 | Goose | CLI, Desktop App | Jan '25 | Sep '26 | full | full | full | full | full | partial | full | full | full | none | full |
-| Grok Build | CLI, Web, Mobile | May '26 | Aug '26 |  |  |  | full | full | unknown | unknown | full | full | full | partial |
+| Grok Build | CLI, Web, Mobile | May '26 | Sep '26 |  |  |  | full | full | unknown | unknown | full | full | full | partial |
 | JetBrains Air | IDE, Web, Desktop App | Mar '26 | Sep '26 | full | partial | full | full | full | full | partial | partial | full | full | full |
 | JetBrains Junie | CLI, IDE, Web, GitHub Action, GitLab CI/CD | Jan '25 | Aug '26 |  |  |  | full | full | partial | full | full | full | partial | full |
 | Kilo Code | CLI, Extension | Feb '26 | Sep '26 | full | full | full | full | full | partial | unknown | full | full | partial | full |
@@ -60,7 +60,7 @@ Form factor values are deliberately strict: each value should have a concrete pe
 | Pier Code | CLI | Jun '26 | Jul '26 | none | partial | none | full | partial | partial | full | partial | full | full | partial |
 | Qoder | CLI, IDE, Extension, SDK, Web, Desktop App, Mobile | Oct '25 | Sep '26 |  |  |  | full | full | partial | full | full | full | full | full |
 | Qwen Code | CLI, Extension, SDK, Web, Desktop App, Mobile | Jun '25 | Sep '26 |  |  |  | full | full | partial | unknown | full | full | partial | full |
-| Replit Agent | Web | Sep '24 | Aug '26 |  |  |  | partial | full | partial | partial | partial | unknown | full | none |
+| Replit Agent | Web | Sep '24 | Sep '26 |  |  |  | partial | full | partial | partial | partial | unknown | full | none |
 | Roo Code | Extension | Mid-2025 | May '26 |  |  |  | full | full | partial | unknown | none | full | none | full |
 | Trae Agent | CLI | Jun '25 | Feb '26 | full | full | full | partial | none | none | full | none | partial | none | full |
 | Windsurf Cascade | CLI, IDE, Extension | Nov '24 | Aug '26 |  |  |  | full | full | partial | unknown | full | full | full | partial |

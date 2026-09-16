@@ -27,8 +27,9 @@
   },
   "latest_major_update": {
     "value": "Sep '26",
-    "source_url": "https://antigravity.google/changelog#version:~:text=2.12.2,September%203%2C%202026",
-    "comment": "Antigravity 2.12.2 shipped September 3, 2026 with enterprise Gemini 3.8 Flash access through ADC. Version 2.12.0 added response quoting, /boost multi-agent reasoning, and settings and reliability improvements."
+    "source_url": "https://antigravity.google/changelog#version:~:text=2.14.0,September%2015%2C%202026",
+    "comment": "Antigravity 2.14.0 shipped September 15, 2026 with an updated permissions system, integrated terminal and Git version control for Enterprise and Business accounts, lower memory use in long conversations, faster customization loading, and stability and accessibility fixes.",
+    "sort_date": "2026-09-15"
   },
   "rules": {
     "support": "full",

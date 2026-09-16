@@ -26,9 +26,10 @@
     "comment": "xAI launch announcement for the early beta."
   },
   "latest_major_update": {
-    "value": "Aug '26",
-    "source_url": "https://x.ai/news/grok-build-everywhere#grok-build-everywhere:~:text=web%20and%20mobile",
-    "comment": "On August 19, 2026, xAI expanded Grok Build to web and mobile and made it available across Grok plans; CLI v1.0.3 shipped August 12."
+    "value": "Sep '26",
+    "source_url": "https://x.ai/build/changelog#changelog:~:text=Latest%20v1.0.30,Sep%2011%2C%202026",
+    "comment": "Grok Build v1.0.30 shipped September 11, 2026 with a compact session header, hour-scale elapsed time, visible next-run times for Watchers and Loops, clickable workflow status, and reduced tmux lag.",
+    "sort_date": "2026-09-11"
   },
   "rules": {
     "support": "full",
@@ -127,7 +128,7 @@
   },
   "pricing": {
     "value": "Included across Grok plans, including Free; higher usage on paid SuperGrok, X Premium Plus, Business, and Enterprise plans",
-    "source_url": "https://x.ai/news/grok-build-everywhere#grok-build-everywhere:~:text=every%20Grok%20plan",
+    "source_url": "https://x.ai/news/grok-build-for-everyone#grok-build-on-web-and-mobile:~:text=available%20on%20every%20plan",
     "comment": "xAI says Grok Build is available on every Grok plan, with plan-based limits."
   },
   "notes": "Early beta. Strong documented parity on AGENTS.md, skills, hooks, MCP, headless mode, ACP, and parallel subagents; lower confidence for session management and telemetry because public docs are still sparse.",

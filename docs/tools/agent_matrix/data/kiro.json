@@ -27,8 +27,9 @@
   },
   "latest_major_update": {
     "value": "Sep '26",
-    "source_url": "https://kiro.dev/changelog/#changelog:~:text=2.21.4%20CLI,Session%20Search%20Scope",
-    "comment": "Kiro CLI 2.21.4 shipped September 11, 2026 with configurable session-search scope, a per-run --v2 flag that selects the V2 harness without changing the saved default, and unified keyboard behavior across settings menus."
+    "source_url": "https://kiro.dev/changelog/#changelog:~:text=1.1%20IDE,Agent%20Artifacts%20and%20Native%20ARM64%20Builds",
+    "comment": "Kiro IDE 1.1 shipped September 14, 2026 with durable agent artifacts, native Windows and Linux ARM64 builds, a Code OSS 1.131 base, more reliable compacted context, MCP and Hook fixes, and enterprise region routing. The same day's model update added experimental 1M-token context for GPT-5.6 Sol, Terra, and Luna across IDE, CLI, and Web.",
+    "sort_date": "2026-09-14"
   },
   "rules": {
     "support": "full",

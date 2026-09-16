@@ -1,6 +1,81 @@
 {
-  "entry_count": 1844,
+  "entry_count": 1861,
   "entries": [
+    {
+      "date": "2026-09-16",
+      "commit": "",
+      "title": "Unreleased matrix update",
+      "items": [
+        {
+          "summary": "Antigravity: Latest Major Update evidence refreshed",
+          "target": "cell-antigravity-latest-major-update"
+        },
+        {
+          "summary": "Claude Code: Latest Major Update evidence refreshed",
+          "target": "cell-claude-code-latest-major-update"
+        },
+        {
+          "summary": "Cline: Latest Major Update evidence refreshed",
+          "target": "cell-cline-latest-major-update"
+        },
+        {
+          "summary": "Crush: Latest Major Update evidence refreshed",
+          "target": "cell-crush-latest-major-update"
+        },
+        {
+          "summary": "Gemini CLI: Latest Major Update evidence refreshed",
+          "target": "cell-gemini-cli-latest-major-update"
+        },
+        {
+          "summary": "GitHub Copilot CLI: Latest Major Update evidence refreshed",
+          "target": "cell-github-copilot-cli-latest-major-update"
+        },
+        {
+          "summary": "Goose: Latest Major Update evidence refreshed",
+          "target": "cell-goose-latest-major-update"
+        },
+        {
+          "summary": "Grok Build: Latest Major Update updated to Sep '26",
+          "target": "cell-grok-build-latest-major-update"
+        },
+        {
+          "summary": "Grok Build: Pricing evidence refreshed",
+          "target": "cell-grok-build-pricing"
+        },
+        {
+          "summary": "Kilo Code: Latest Major Update evidence refreshed",
+          "target": "cell-kilo-code-latest-major-update"
+        },
+        {
+          "summary": "Kimi Code CLI: Latest Major Update evidence refreshed",
+          "target": "cell-kimi-cli-latest-major-update"
+        },
+        {
+          "summary": "Kiro: Latest Major Update evidence refreshed",
+          "target": "cell-kiro-latest-major-update"
+        },
+        {
+          "summary": "OpenCode: Latest Major Update evidence refreshed",
+          "target": "cell-opencode-latest-major-update"
+        },
+        {
+          "summary": "Qoder: Latest Major Update evidence refreshed",
+          "target": "cell-qoder-latest-major-update"
+        },
+        {
+          "summary": "Qwen Code: Latest Major Update evidence refreshed",
+          "target": "cell-qwen-code-latest-major-update"
+        },
+        {
+          "summary": "Replit Agent: Latest Major Update updated to Sep '26",
+          "target": "cell-replit-agent-latest-major-update"
+        },
+        {
+          "summary": "Replit Agent: Pricing updated to Core $20/mo; Pro from $100/mo with $100-$4,000 monthly credit tiers; En…",
+          "target": "cell-replit-agent-pricing"
+        }
+      ]
+    },
     {
       "date": "2026-09-14",
       "commit": "2ba8e10",

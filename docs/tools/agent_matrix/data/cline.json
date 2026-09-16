@@ -29,8 +29,9 @@
   },
   "latest_major_update": {
     "value": "Sep '26",
-    "source_url": "https://github.com/cline/cline/releases/tag/desktop-v0.0.27#source:~:text=An%20expired%20Cline%20sign-in%20now%20produces%20one%20actionable%20error",
-    "comment": "Cline Desktop v0.0.27 shipped September 13, 2026 with actionable sign-in and credential recovery, reliable sign-out, clearer API-provider settings, better voice-input errors, repaired OpenCode Go routing, a new Crusoe provider, and accessible shared settings switches."
+    "source_url": "https://github.com/cline/cline/releases/tag/desktop-v0.0.28#source:~:text=The%20app%20no%20longer%20gets%20stuck",
+    "comment": "Cline Desktop v0.0.28 shipped September 15, 2026 with resilient desktop-backend reconnection, IME-safe message composition, live model-picker refresh, clearer Cline Pass onboarding and defaults, transient-provider retries, faster streaming, and an expanded provider catalog.",
+    "sort_date": "2026-09-15"
   },
   "rules": {
     "support": "full",

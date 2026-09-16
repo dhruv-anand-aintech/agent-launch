@@ -22,9 +22,10 @@
     "comment": "Replit Agent launched publicly in 2024; Agent 3 followed in September 2025."
   },
   "latest_major_update": {
-    "value": "Aug '26",
-    "source_url": "https://replit.com/blog/replit-introduces-free-mode#create-up-to-30x-more-on-free-mode:~:text=Free%20Mode",
-    "comment": "Replit introduced Agent Free Mode on August 18, 2026, powered by GPT-5.6 Luna and designed to extend included monthly usage."
+    "value": "Sep '26",
+    "source_url": "https://replit.com/blog/pro-plan#summary:~:text=New%20Pro%20plan%20(%24100%2Fmonth)",
+    "comment": "Replit updated its plans September 15, 2026: Pro adds Turbo Mode, tiered credits, rollover, priority support, and up to 15 builders; Core dropped to $20/month and supports up to five collaborators; Economy and Power Agent modes are available across plans.",
+    "sort_date": "2026-09-15"
   },
   "rules": {
     "support": "partial",
@@ -122,9 +123,9 @@
     "comment": "No BYO model/provider support found."
   },
   "pricing": {
-    "value": "Included in Replit plan/usage model; Agent limits vary by plan",
-    "source_url": "https://replit.com/pricing#source:~:text=Agent",
-    "comment": "Replit pricing exposes Agent as part of Replit plans/usage rather than a separate standalone model-plan price."
+    "value": "Core $20/mo; Pro from $100/mo with $100-$4,000 monthly credit tiers; Enterprise custom; Agent modes and limits vary by plan",
+    "source_url": "https://replit.com/blog/pro-plan#summary:~:text=Core%3A%20more%20features%2C%20lower%20price%20(%2420%2Fmonth)",
+    "comment": "Replit's September 2026 plan update lists Core at $20/month and Pro starting at $100/month, with tiered credits, pooled collaboration, and plan-specific Agent modes."
   },
   "notes": "Best for hosted app prototyping/build-deploy workflows, not for local repo terminal automation.",
   "transcripts": {
