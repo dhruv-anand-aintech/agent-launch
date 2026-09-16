@@ -31,8 +31,9 @@
   },
   "latest_major_update": {
     "value": "Sep '26",
-    "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.270#source:~:text=Fixed%20read-only%20git%20commands",
-    "comment": "Claude Code v2.1.270 shipped September 12, 2026 and fixed a v2.1.269 regression that caused read-only Git commands in Bash to request permission after a session had been running for a while."
+    "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.273#source:~:text=Added%20%60x-claude-code-request-class%60",
+    "comment": "Claude Code v2.1.273 shipped September 15, 2026 with opt-in gateway hint headers, Remote Control session forking, MCP disconnect notifications, fixes for permission and managed-setting enforcement, reliable background-agent results, complete stream-JSON subagent output, and broad remote, artifact, proxy, and long-session reliability improvements.",
+    "sort_date": "2026-09-15"
   },
   "rules": {
     "support": "full",

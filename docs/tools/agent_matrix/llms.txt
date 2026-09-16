@@ -1,6 +1,6 @@
 # Coding Agent Feature Matrix
 > Compare 39 coding agents, CLIs, and IDEs across features.
-> https://compare.ainorthstar.tech | Updated 2026-09-14
+> https://compare.ainorthstar.tech | Updated 2026-09-16
 
 Agent                   Rel    FF     Fre   NoA   Oth   Rul   Skl   Hks   MCP   Cmd   Gol   Sub   Mon   Trn   Mod   App   San   Res   Con   Hdl   Fmt   Sta   Tel   Hst  BYOM
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -609,7 +609,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Website: https://x.ai/news/grok-build-cli
 - Form factor: CLI, Web, Mobile
 - Released: May '26
-- Latest update: Aug '26
+- Latest update: Sep '26
 - Some Free Usage: blank
 - No Account Required: blank
 - Can Use Other Subscriptions: blank
@@ -1162,7 +1162,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Website: https://replit.com/ai
 - Form factor: Web
 - Released: Sep '24
-- Latest update: Aug '26
+- Latest update: Sep '26
 - Some Free Usage: blank
 - No Account Required: blank
 - Can Use Other Subscriptions: blank
@@ -1186,7 +1186,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Telemetry: unknown — No Agent-specific telemetry toggle found.
 - Hosted Agent: full — Hosted app-building agent in Replit.
 - Custom Model Provider: none — No BYO model/provider support found.
-- Pricing: Included in Replit plan/usage model; Agent limits vary by plan
+- Pricing: Core $20/mo; Pro from $100/mo with $100-$4,000 monthly credit tiers; Enterprise custom; Agent modes and limits vary by plan
 - Notes: Best for hosted app prototyping/build-deploy workflows, not for local repo terminal automation.
 
 ### Roo Code

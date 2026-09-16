@@ -35,9 +35,9 @@
   },
   "latest_major_update": {
     "value": "Sep '26",
-    "source_url": "https://docs.qoder.com/release-notes/qoder#september-12-2026:~:text=Qoder%200.2.5",
-    "comment": "Qoder 0.2.5 shipped September 12, 2026 with remembered file-opening behavior, more reliable realtime voice, lower file-review CPU use, browser-login reuse, streaming-scroll fixes, and Chinese Computer Use fixes. Versions 0.2.2-0.2.3 added proxy configuration, Goal turn limits, model-choice persistence, and safer Computer Use actions.",
-    "sort_date": "2026-09-12"
+    "source_url": "https://docs.qoder.com/release-notes/qoder-cli#september-15-2026:~:text=CLI%201.1.53",
+    "comment": "Qoder CLI 1.1.53 shipped September 15, 2026 with immediate custom-session-name display and restoration plus richer /btw history browsing controls. Version 1.1.52 added automatic /rename and persistent side-question history.",
+    "sort_date": "2026-09-15"
   },
   "rules": {
     "support": "full",

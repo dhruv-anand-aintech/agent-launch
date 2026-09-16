@@ -26,9 +26,9 @@
   },
   "latest_major_update": {
     "value": "Sep '26",
-    "source_url": "https://github.com/charmbracelet/crush/releases/tag/v0.94.1#source:~:text=Use%20your%20ChatGPT%20subscription%20in%20Crush",
-    "comment": "Crush v0.94.1 shipped September 12, 2026 with ChatGPT subscription sign-in, a non-interactive reasoning-effort flag, performance and binary-size improvements, and session, tool-result, OAuth, UI, and provider-catalog fixes.",
-    "sort_date": "2026-09-12"
+    "source_url": "https://github.com/charmbracelet/crush/releases/tag/v0.94.2#source:~:text=Lil%E2%80%99%20OpenAI-Compatible%20Protocol%20Fix",
+    "comment": "Crush v0.94.2 shipped September 14, 2026 with a fix for reasoning-only turns interrupted partway through on OpenAI-compatible endpoints and safer home-directory path shortening and expansion.",
+    "sort_date": "2026-09-14"
   },
   "rules": {
     "support": "full",

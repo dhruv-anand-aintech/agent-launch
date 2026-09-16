@@ -25,8 +25,9 @@
   },
   "latest_major_update": {
     "value": "Sep '26",
-    "source_url": "https://github.com/aaif-goose/goose/releases/tag/v1.50.0#source:~:text=Support%20GPT-6%20Astra%20models",
-    "comment": "Goose v1.50.0 shipped September 8, 2026 with GPT-6 Astra support, tool calling for goose-agent, new gateway/provider integration, separate ACP packages, an observability tutorial, and security and reliability fixes for tracing, approvals, permissions, subagents, background turns, and launchers."
+    "source_url": "https://github.com/aaif-goose/goose/releases/tag/v1.50.1#source:~:text=Revert%20model%20updates%20for%20patch%20release",
+    "comment": "Goose v1.50.1 shipped September 14, 2026 as a corrective patch that reverted model updates and rolled back the MCP default-version selection change from v1.50.0.",
+    "sort_date": "2026-09-14"
   },
   "rules": {
     "support": "full",

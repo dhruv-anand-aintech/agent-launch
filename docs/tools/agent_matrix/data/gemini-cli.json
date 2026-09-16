@@ -24,8 +24,9 @@
   },
   "latest_major_update": {
     "value": "Sep '26",
-    "source_url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.59.0#source:~:text=prevent%20SSRF%20in%20MCP%20OAuth%20metadata%20discovery",
-    "comment": "Gemini CLI v0.59.0 shipped September 8, 2026 with SSRF protection in MCP OAuth discovery and authentication plus fail-closed workspace trust that filters MCP servers in restricted mode. Nightly and preview tags are excluded."
+    "source_url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.60.0#source:~:text=improve%20destination%20validation%20and%20connection%20routing",
+    "comment": "Gemini CLI v0.60.0 shipped September 15, 2026 with hardened web-fetch routing, MCP OAuth issuer checks, stricter extension and system-configuration path validation, isolated sandbox temporary and settings directories, and provenance enforcement for untrusted tool output. Nightly and preview tags are excluded.",
+    "sort_date": "2026-09-15"
   },
   "rules": {
     "support": "full",
