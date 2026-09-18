@@ -1,6 +1,6 @@
 # Coding Agent Feature Matrix
-> Compare 39 coding agents, CLIs, and IDEs across features.
-> https://compare.ainorthstar.tech | Updated 2026-09-16
+> Compare 40 coding agents, CLIs, and IDEs across features.
+> https://compare.ainorthstar.tech | Updated 2026-09-18
 
 Agent                   Rel    FF     Fre   NoA   Oth   Rul   Skl   Hks   MCP   Cmd   Gol   Sub   Mon   Trn   Mod   App   San   Res   Con   Hdl   Fmt   Sta   Tel   Hst  BYOM
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -17,6 +17,7 @@ Crush                   Jul '2 CLI/TUI    Y     Y     Y     Y     Y     ~     Y 
 Cursor                  2023  CLI/IDE    Y                 Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     ~     ~     Y     Y     Y
 Devin                   Dec '2 CLI/Ext    Y                 Y     Y     Y     Y     Y     N     Y     ~     ~     ?     ~     Y     Y     Y     Y     ~     N     ?     Y     ?
 Factory Droid           2025  CLI/Ext          ~     Y     Y     Y     Y     Y     Y     N     Y     ~     ~     Y     Y     Y     Y     Y     Y     Y     Y     ?     Y     Y
+Fx                      Aug '2 CLI/SDK    ?     ~     Y     Y     Y     ?     Y     ~     N     Y     ~     Y     Y     Y     ~     Y     Y     Y     Y     Y     ?     N     ~
 Gemini CLI              Jun '2 CLI        Y           Y     Y     ~     Y     Y     Y     N     Y     ~     ?     Y     Y     Y     Y     Y     Y     ~     ?     Y     N     ~
 GitHub Copilot CLI      Sep '2 CLI        ~     N     Y     Y     Y     Y     Y     ~     ~     Y     ~     Y     Y     Y     Y     Y     Y     Y     Y     ~     ~     N     Y
 GitHub Copilot          Jun '2 CLI/IDE                      Y     Y     Y     Y     ~     N     Y     ~     ?     Y     ~     ~     Y     Y     Y     ~     N     ~     Y     Y
@@ -471,6 +472,39 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Pricing: Pro $20/mo; Plus $100/mo; Max $200/mo; Teams $60 base plus $40/seat/mo; Extra Usage prepaid; Droid Core free
 - Notes: One of the most feature-dense CLI surfaces in this update: autonomy levels, worktrees, custom droids, plugins, MCP, statusline, skills, hooks, and headless exec.
 
+### Fx
+- Docs: https://fx.sh/docs
+- GitHub: https://github.com/vercel-labs/fx
+- Website: https://fx.sh/
+- Form factor: CLI, SDK
+- Released: Aug '26
+- Latest update: Sep '26
+- Some Free Usage: unknown — The reviewed public sources do not establish a bundled free model allowance.
+- No Account Required: partial — Preview custom connections can use anonymous local inference, while built-in cloud providers require authentication.
+- Can Use Other Subscriptions: full — Fx supports ChatGPT and Grok subscription sign-in, Vercel AI Gateway, and configurable OpenAI-compatible endpoints.
+- Rules: full — Fx loads scoped project instruction files and related workspace context.
+- Skills: full — Fx supports reusable SKILL.md-based capabilities.
+- Hooks: unknown — No public lifecycle-hook contract was established in the reviewed Fx documentation.
+- Mcp Servers: full — Fx connects external tools through MCP and provides interactive management and health diagnostics.
+- Custom Commands: partial — Fx provides an extensive built-in slash-command surface; a user-defined custom-command format was not established.
+- Goal Command: none — No first-party persistent /goal command is documented.
+- Subagents: full — Fx supports one-off and named session-backed subagents with inherited permission restrictions.
+- Monitor: partial — Fx can list and inspect background commands, but the reviewed sources do not establish a general event-driven monitor primitive.
+- Transcripts: full — Location: Fx saves session transcripts under `~/.fx/sessions/`; they can be listed, inspected as JSON, resumed, migrated, and recovered.
+- Model Selection: full — Fx saves a model per provider and supports process-level FX_MODEL overrides; the stable v0.0.10 `fx ask` help does not expose a launch-time --model flag.
+- Approval Mode: full — Permission modes include ask, automatic review, and explicit full-access bypass, with remembered allow, ask, and deny rules.
+- Sandbox Mode: partial — Fx enforces permission checks and command safety controls, but the reviewed stable documentation does not establish a configurable filesystem or network sandbox mode.
+- Resume: full — Supports latest-session and exact-session resume flows in both interactive and headless modes.
+- Continue: full — Supports continuing the latest workspace session with -c or --continue.
+- Non Interactive: full — `fx ask` runs one request and exits, with argument or stdin prompts for scripts and CI.
+- Output Format: full — `fx ask --json` returns one structured result object with output, final output, exit code, session, model, usage, and tool-call fields.
+- Statusline: full — The status line can independently show context, session, and workspace information.
+- Telemetry: unknown — Fx documents an opt-out for local Herdr lifecycle reporting, but the reviewed public sources do not establish a complete product telemetry contract.
+- Hosted Agent: none — Fx is a local native CLI; model access may be local or cloud, but the harness itself is not a hosted workspace.
+- Custom Model Provider: partial — Fx documents Ollama, vLLM, OpenRouter, and BYOK OpenAI-compatible connections, but marks this configurable-provider surface as a preview that may require a newer build.
+- Pricing: Apache-2.0 CLI; model-provider usage is billed separately
+- Notes: Fx is Vercel Labs' experimental Unix-like native coding-agent CLI and embeddable harness. Fx 0.0.10 was installed locally from the official setup script and its help and version surfaces were verified.
+
 ### Gemini CLI
 - Docs: https://google-gemini.github.io/gemini-cli/
 - GitHub: https://github.com/google-gemini/gemini-cli
@@ -705,7 +739,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Website: https://junie.jetbrains.com/
 - Form factor: CLI, IDE, Web, GitHub Action, GitLab CI/CD
 - Released: Jan '25
-- Latest update: Aug '26
+- Latest update: Sep '26
 - Some Free Usage: blank
 - No Account Required: blank
 - Can Use Other Subscriptions: blank
@@ -769,7 +803,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Docs: https://moonshotai.github.io/kimi-code/en/
 - GitHub: https://github.com/MoonshotAI/kimi-code
 - Website: https://code.kimi.com/
-- Form factor: CLI, Extension
+- Form factor: CLI, Extension, Web, Desktop App
 - Released: May '26
 - Latest update: Sep '26
 - Some Free Usage: blank

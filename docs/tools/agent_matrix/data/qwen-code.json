@@ -33,9 +33,9 @@
   },
   "latest_major_update": {
     "value": "Sep '26",
-    "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.23.4#source:~:text=Lets%20approved%20Web%20Shell%20Goal%20proposals%20start%20automatically",
-    "comment": "Qwen Code v0.23.4 shipped September 14, 2026 with automatic approved Goal starts and configurable Goal limits, external peer messaging, a Codex subagent executor, Web Shell scheduling and preview improvements, richer hook context, recoverable interrupted-session continuation, and breaking changes to channel prefix filtering and hook timeout units.",
-    "sort_date": "2026-09-14"
+    "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.24.0#source:~:text=add%20bwrap%20kernel%20sandbox%20backend%20for%20Linux",
+    "comment": "Qwen Code v0.24.0 shipped September 16, 2026 with a Linux bwrap sandbox backend, complete OpenTUI hook controls and progress, extension workflows and skills, shared output channels, remote Web Shell connections, ACP admission budgets, goal budgets, and multimodal pipeline integration.",
+    "sort_date": "2026-09-16"
   },
   "rules": {
     "support": "full",

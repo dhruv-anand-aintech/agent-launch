@@ -31,9 +31,9 @@
   },
   "latest_major_update": {
     "value": "Sep '26",
-    "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.273#source:~:text=Added%20%60x-claude-code-request-class%60",
-    "comment": "Claude Code v2.1.273 shipped September 15, 2026 with opt-in gateway hint headers, Remote Control session forking, MCP disconnect notifications, fixes for permission and managed-setting enforcement, reliable background-agent results, complete stream-JSON subagent output, and broad remote, artifact, proxy, and long-session reliability improvements.",
-    "sort_date": "2026-09-15"
+    "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.276#source:~:text=Fixed%20every%20request%20failing",
+    "comment": "Claude Code v2.1.276 shipped September 18, 2026 with a fix for requests failing through ANTHROPIC_BASE_URL proxies or gateways after the v2.1.275 advisor-tag regression.",
+    "sort_date": "2026-09-18"
   },
   "rules": {
     "support": "full",

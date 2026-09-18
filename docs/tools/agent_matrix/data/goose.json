@@ -25,9 +25,9 @@
   },
   "latest_major_update": {
     "value": "Sep '26",
-    "source_url": "https://github.com/aaif-goose/goose/releases/tag/v1.50.1#source:~:text=Revert%20model%20updates%20for%20patch%20release",
-    "comment": "Goose v1.50.1 shipped September 14, 2026 as a corrective patch that reverted model updates and rolled back the MCP default-version selection change from v1.50.0.",
-    "sort_date": "2026-09-14"
+    "source_url": "https://github.com/aaif-goose/goose/releases/tag/v1.51.0#source:~:text=GPT-live%20API%20support",
+    "comment": "Goose v1.51.0 shipped September 17, 2026 with Desktop state-machine routing, external ACP backend sockets, GPT-live support, Gateway pairing controls, terminal-bell notifications, and fixes across MCP, headless exits, session security, streaming, and scheduled recipes.",
+    "sort_date": "2026-09-17"
   },
   "rules": {
     "support": "full",

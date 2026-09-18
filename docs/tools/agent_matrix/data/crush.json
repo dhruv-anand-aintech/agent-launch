@@ -26,9 +26,9 @@
   },
   "latest_major_update": {
     "value": "Sep '26",
-    "source_url": "https://github.com/charmbracelet/crush/releases/tag/v0.94.2#source:~:text=Lil%E2%80%99%20OpenAI-Compatible%20Protocol%20Fix",
-    "comment": "Crush v0.94.2 shipped September 14, 2026 with a fix for reasoning-only turns interrupted partway through on OpenAI-compatible endpoints and safer home-directory path shortening and expansion.",
-    "sort_date": "2026-09-14"
+    "source_url": "https://github.com/charmbracelet/crush/releases/tag/v0.95.0#source:~:text=Plan%20Mode",
+    "comment": "Crush v0.95.0 shipped September 16, 2026 with a new Shift+Tab Plan Mode and performance improvements for compacted-session loading, prompt history, and transcript reads.",
+    "sort_date": "2026-09-16"
   },
   "rules": {
     "support": "full",
