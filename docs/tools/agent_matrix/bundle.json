@@ -817,9 +817,9 @@
     },
     "latest_major_update": {
       "value": "Sep '26",
-      "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.273#source:~:text=Added%20%60x-claude-code-request-class%60",
-      "comment": "Claude Code v2.1.273 shipped September 15, 2026 with opt-in gateway hint headers, Remote Control session forking, MCP disconnect notifications, fixes for permission and managed-setting enforcement, reliable background-agent results, complete stream-JSON subagent output, and broad remote, artifact, proxy, and long-session reliability improvements.",
-      "sort_date": "2026-09-15"
+      "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.276#source:~:text=Fixed%20every%20request%20failing",
+      "comment": "Claude Code v2.1.276 shipped September 18, 2026 with a fix for requests failing through ANTHROPIC_BASE_URL proxies or gateways after the v2.1.275 advisor-tag regression.",
+      "sort_date": "2026-09-18"
     },
     "rules": {
       "support": "full",
@@ -1005,9 +1005,9 @@
     },
     "latest_major_update": {
       "value": "Sep '26",
-      "source_url": "https://github.com/cline/cline/releases/tag/desktop-v0.0.28#source:~:text=The%20app%20no%20longer%20gets%20stuck",
-      "comment": "Cline Desktop v0.0.28 shipped September 15, 2026 with resilient desktop-backend reconnection, IME-safe message composition, live model-picker refresh, clearer Cline Pass onboarding and defaults, transient-provider retries, faster streaming, and an expanded provider catalog.",
-      "sort_date": "2026-09-15"
+      "source_url": "https://github.com/cline/cline/releases/tag/desktop-v0.0.32#source:~:text=Cline%20starts%20again%20after%20updating",
+      "comment": "Cline Desktop v0.0.32 shipped September 18, 2026 with a startup fix for the desktop and embedded Hub build-identity mismatch introduced in v0.0.31, plus end-to-end compiled-backend CI coverage.",
+      "sort_date": "2026-09-18"
     },
     "rules": {
       "support": "full",
@@ -1210,9 +1210,9 @@
     },
     "latest_major_update": {
       "value": "Sep '26",
-      "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.154.0#source:~:text=Experimental%20worktree%20support",
-      "comment": "Codex CLI rust-v0.154.0 shipped September 9, 2026 with managed worktree creation and resume, inline question answering while work continues, a shared Windows background server, improved copy and Vim editing, plugin refreshes, safer workspace trust and macOS sandboxing, and stronger remote resume, permission, and automatic-approval handling.",
-      "sort_date": "2026-09-14"
+      "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.155.0#source:~:text=Added%20experimental%20%60%2Fvoice%60%20conversations",
+      "comment": "Codex CLI rust-v0.155.0 shipped September 17, 2026 with experimental voice conversations, live reasoning status, agent-task archive and deletion controls, Touch ID verification for local MCP requests, recoverable daemon updates, Bedrock credential commands, and security and session-recovery fixes.",
+      "sort_date": "2026-09-17"
     },
     "rules": {
       "support": "full",
@@ -1592,8 +1592,8 @@
     },
     "latest_major_update": {
       "value": "Sep '26",
-      "source_url": "https://commandcode.ai/changelog#september:~:text=v1.53.1",
-      "comment": "Command Code CLI v1.53.1 shipped September 12, 2026 with DeepSeek V4.1 Flash as the default compaction model, improved BYOK reasoning-effort controls, and clearer Extra Credits reporting.",
+      "source_url": "https://commandcode.ai/changelog#september:~:text=v1.54.0,first-class%20herdr%20support",
+      "comment": "Command Code CLI v1.54.0 shipped in September 2026 with first-class Herdr support.",
       "sort_date": "2026-09-01"
     },
     "pricing": {
@@ -1791,9 +1791,9 @@
     },
     "latest_major_update": {
       "value": "Sep '26",
-      "source_url": "https://github.com/charmbracelet/crush/releases/tag/v0.94.2#source:~:text=Lil%E2%80%99%20OpenAI-Compatible%20Protocol%20Fix",
-      "comment": "Crush v0.94.2 shipped September 14, 2026 with a fix for reasoning-only turns interrupted partway through on OpenAI-compatible endpoints and safer home-directory path shortening and expansion.",
-      "sort_date": "2026-09-14"
+      "source_url": "https://github.com/charmbracelet/crush/releases/tag/v0.95.0#source:~:text=Plan%20Mode",
+      "comment": "Crush v0.95.0 shipped September 16, 2026 with a new Shift+Tab Plan Mode and performance improvements for compacted-session loading, prompt history, and transcript reads.",
+      "sort_date": "2026-09-16"
     },
     "rules": {
       "support": "full",
@@ -2384,9 +2384,9 @@
     },
     "latest_major_update": {
       "value": "Sep '26",
-      "source_url": "https://docs.factory.ai/changelog/release-notes#september-2026:~:text=CLI%20v0.209.0",
-      "comment": "Factory's September 1, 2026 changelog lists Droid CLI v0.209.0 and desktop v0.166.0.",
-      "sort_date": "2026-09-01"
+      "source_url": "https://docs.factory.ai/changelog/release-notes#september-2026:~:text=CLI%20v0.221.0%20Desktop%20v0.178.0%20September%2017%2C%202026",
+      "comment": "Factory's September 17, 2026 release lists Droid CLI v0.221.0 and Desktop v0.178.0, with settings proposals in chat, session draft indicators, custom-model capability inheritance, MCP readiness fixes, completed-task result recovery, and oversized-request compaction and retry.",
+      "sort_date": "2026-09-17"
     },
     "rules": {
       "support": "full",
@@ -2549,6 +2549,206 @@
       "source_url": "https://docs.example.com/#documentation:~:text=ui-customization",
       "comment": "Research needed. Check for UI layout, sidebar, or panel customization."
     }
+  },
+  {
+    "name": "Fx",
+    "links": {
+      "docs": "https://fx.sh/docs",
+      "github": "https://github.com/vercel-labs/fx",
+      "website": "https://fx.sh/",
+      "company_website": "https://vercel.com/",
+      "slug": "fx"
+    },
+    "form_factor": {
+      "values": [
+        "CLI",
+        "SDK"
+      ],
+      "source_url": "https://github.com/vercel-labs/fx#readme:~:text=fx%20is%20a%20coding%20agent%20CLI%20written%20in%20Zig",
+      "comment": "Native terminal CLI with an experimental WebAssembly embedding SDK and an ACP server. Per-form-factor links: CLI: https://fx.sh/docs/getting-started/install; SDK: https://github.com/vercel-labs/fx/tree/main/sdk.",
+      "links": {
+        "CLI": "https://fx.sh/docs/getting-started/install",
+        "SDK": "https://github.com/vercel-labs/fx/tree/main/sdk"
+      }
+    },
+    "released_in": {
+      "value": "Aug '26",
+      "source_url": "https://github.com/vercel-labs/fx/releases/tag/v0.0.3#release:~:text=v0.0.3",
+      "comment": "Fx's first public stable release line is dated August 2026.",
+      "sort_date": "2026-08-18"
+    },
+    "latest_major_update": {
+      "value": "Sep '26",
+      "source_url": "https://github.com/vercel-labs/fx/releases/tag/v0.0.10#source:~:text=fx%20now%20completes%20turns%20up%20to%201.6%C3%97%20faster",
+      "comment": "Fx v0.0.10 shipped September 14, 2026 with faster turns and model-request startup, clearer shell recovery, improved trace diagnostics, more reliable session resume and scrollback, and stronger secret protection in MCP errors.",
+      "sort_date": "2026-09-14"
+    },
+    "pricing": {
+      "value": "Apache-2.0 CLI; model-provider usage is billed separately",
+      "source_url": "https://github.com/vercel-labs/fx#license:~:text=Apache-2.0",
+      "comment": "The harness is open source. Model access uses Vercel AI Gateway, ChatGPT or Grok subscriptions, or configured local or OpenAI-compatible inference."
+    },
+    "some_free_usage": {
+      "support": "unknown",
+      "source_url": "https://github.com/vercel-labs/fx#highlights:~:text=Any%20model",
+      "comment": "The reviewed public sources do not establish a bundled free model allowance."
+    },
+    "no_account_required": {
+      "support": "partial",
+      "source_url": "https://fx.sh/docs/configure-fx/custom-model-connections#ollama:~:text=Anonymous%20connections%20send%20no%20Authorization%20header",
+      "comment": "Preview custom connections can use anonymous local inference, while built-in cloud providers require authentication."
+    },
+    "can_use_other_subscriptions": {
+      "support": "full",
+      "source_url": "https://github.com/vercel-labs/fx#highlights:~:text=ChatGPT%20or%20Grok%20subscriptions",
+      "comment": "Fx supports ChatGPT and Grok subscription sign-in, Vercel AI Gateway, and configurable OpenAI-compatible endpoints."
+    },
+    "rules": {
+      "support": "full",
+      "source_url": "https://github.com/vercel-labs/fx#extend-fx:~:text=project%20instructions",
+      "comment": "Fx loads scoped project instruction files and related workspace context."
+    },
+    "skills": {
+      "support": "full",
+      "source_url": "https://fx.sh/docs/capabilities/skills#skills:~:text=Skills",
+      "comment": "Fx supports reusable SKILL.md-based capabilities."
+    },
+    "hooks": {
+      "support": "unknown",
+      "source_url": "https://github.com/vercel-labs/fx#extend-fx:~:text=Extend%20fx",
+      "comment": "No public lifecycle-hook contract was established in the reviewed Fx documentation."
+    },
+    "mcp_servers": {
+      "support": "full",
+      "source_url": "https://fx.sh/docs/capabilities/mcp#mcp:~:text=MCP",
+      "comment": "Fx connects external tools through MCP and provides interactive management and health diagnostics."
+    },
+    "custom_commands": {
+      "support": "partial",
+      "source_url": "https://fx.sh/docs/using-fx/slash-commands#slash-commands:~:text=Slash%20commands",
+      "comment": "Fx provides an extensive built-in slash-command surface; a user-defined custom-command format was not established."
+    },
+    "goal_command": {
+      "support": "none",
+      "source_url": "https://fx.sh/docs/using-fx/slash-commands#slash-commands:~:text=Slash%20commands",
+      "comment": "No first-party persistent /goal command is documented."
+    },
+    "subagents": {
+      "support": "full",
+      "source_url": "https://fx.sh/docs/capabilities/subagents#subagents:~:text=A%20subagent%20handles%20a%20task%20in%20its%20own%20conversation",
+      "comment": "Fx supports one-off and named session-backed subagents with inherited permission restrictions."
+    },
+    "monitor": {
+      "support": "partial",
+      "source_url": "https://github.com/vercel-labs/fx#readme:~:text=background",
+      "comment": "Fx can list and inspect background commands, but the reviewed sources do not establish a general event-driven monitor primitive."
+    },
+    "transcripts": {
+      "support": "full",
+      "source_url": "https://fx.sh/docs/using-fx/sessions#sessions:~:text=fx%20saves%20interactive%20conversations%20under",
+      "comment": "Location: Fx saves session transcripts under `~/.fx/sessions/`; they can be listed, inspected as JSON, resumed, migrated, and recovered."
+    },
+    "model_selection": {
+      "support": "full",
+      "source_url": "https://fx.sh/docs/configure-fx/configuration#agent-and-model-settings:~:text=models",
+      "comment": "Fx saves a model per provider and supports process-level FX_MODEL overrides; the stable v0.0.10 `fx ask` help does not expose a launch-time --model flag."
+    },
+    "approval_mode": {
+      "support": "full",
+      "source_url": "https://fx.sh/docs/configure-fx/permissions#permissions:~:text=permission",
+      "comment": "Permission modes include ask, automatic review, and explicit full-access bypass, with remembered allow, ask, and deny rules."
+    },
+    "sandbox_mode": {
+      "support": "partial",
+      "source_url": "https://fx.sh/docs/using-fx/fx-ask#handle-permissions-in-noninteractive-runs:~:text=full-access",
+      "comment": "Fx enforces permission checks and command safety controls, but the reviewed stable documentation does not establish a configurable filesystem or network sandbox mode."
+    },
+    "resume": {
+      "support": "full",
+      "source_url": "https://fx.sh/docs/using-fx/sessions#resume:~:text=Resume%20the%20latest%20workspace%20session",
+      "comment": "Supports latest-session and exact-session resume flows in both interactive and headless modes."
+    },
+    "continue": {
+      "support": "full",
+      "source_url": "https://fx.sh/docs/using-fx/sessions#resume:~:text=continue",
+      "comment": "Supports continuing the latest workspace session with -c or --continue."
+    },
+    "non_interactive": {
+      "support": "full",
+      "source_url": "https://fx.sh/docs/using-fx/fx-ask#fx-ask:~:text=runs%20one%20noninteractive%20request%20and%20exits",
+      "comment": "`fx ask` runs one request and exits, with argument or stdin prompts for scripts and CI."
+    },
+    "output_format": {
+      "support": "full",
+      "source_url": "https://fx.sh/docs/using-fx/fx-ask#use-fx-ask-in-scripts:~:text=Use%20%60--json%60",
+      "comment": "`fx ask --json` returns one structured result object with output, final output, exit code, session, model, usage, and tool-call fields."
+    },
+    "statusline": {
+      "support": "full",
+      "source_url": "https://fx.sh/docs/configure-fx/configuration#interface-and-update-settings:~:text=statusLine.context",
+      "comment": "The status line can independently show context, session, and workspace information."
+    },
+    "telemetry": {
+      "support": "unknown",
+      "source_url": "https://fx.sh/docs/configure-fx/configuration#environment-variables:~:text=FX_HERDR",
+      "comment": "Fx documents an opt-out for local Herdr lifecycle reporting, but the reviewed public sources do not establish a complete product telemetry contract."
+    },
+    "keyboard_shortcuts": {
+      "support": "full",
+      "source_url": "https://fx.sh/docs/using-fx/keyboard-shortcuts#keyboard-shortcuts:~:text=Keyboard",
+      "comment": "Interactive Fx documents keyboard shortcuts for editing, interruption, pickers, transcript review, and navigation."
+    },
+    "theme_customization": {
+      "support": "full",
+      "source_url": "https://fx.sh/docs/configure-fx/configuration#terminal-themes:~:text=Custom%20themes%20are%20JSON%20files",
+      "comment": "Fx follows terminal light or dark mode, ships built-in themes, and loads custom VS Code-format JSON themes from `~/.fx/themes/`."
+    },
+    "auto_save": {
+      "support": "full",
+      "source_url": "https://fx.sh/docs/using-fx/sessions#sessions:~:text=saves%20interactive%20conversations",
+      "comment": "Fx automatically saves workspace sessions for inspection, resume, recovery, and compaction."
+    },
+    "debugging_output": {
+      "support": "full",
+      "source_url": "https://github.com/vercel-labs/fx#documentation:~:text=status",
+      "comment": "`fx status`, `fx doctor`, and `/trace` provide configuration, preflight, and private diagnostic output."
+    },
+    "context_window": {
+      "support": "full",
+      "source_url": "https://fx.sh/docs/configure-fx/configuration#agent-and-model-settings:~:text=context_limits",
+      "comment": "Fx exposes configurable context-input limits and model metadata for automatic compaction budgets."
+    },
+    "code_formatting": {
+      "support": "unknown",
+      "source_url": "https://github.com/vercel-labs/fx#readme:~:text=coding%20agent",
+      "comment": "No dedicated built-in formatter or linter integration was established."
+    },
+    "git_integration": {
+      "support": "partial",
+      "source_url": "https://github.com/vercel-labs/fx#readme:~:text=pr",
+      "comment": "Fx exposes pull-request and issue workflows and works in Git repositories; a dedicated branch and diff-management UI was not established."
+    },
+    "performance_mode": {
+      "support": "partial",
+      "source_url": "https://github.com/vercel-labs/fx/releases/tag/v0.0.10#source:~:text=1.6%C3%97%20faster",
+      "comment": "Fx is a small native Zig binary with measured startup and turn-performance work, but no separate stable user-facing performance mode was established."
+    },
+    "ui_customization": {
+      "support": "partial",
+      "source_url": "https://fx.sh/docs/configure-fx/configuration#interface-and-update-settings:~:text=collapse_tool_calls",
+      "comment": "Fx supports theme, grouped-tool-call, status-line, notification, slash-menu, and startup-scrollback preferences, but not arbitrary panel layout."
+    },
+    "hosted_agent": {
+      "support": "none",
+      "source_url": "https://github.com/vercel-labs/fx#install:~:text=curl",
+      "comment": "Fx is a local native CLI; model access may be local or cloud, but the harness itself is not a hosted workspace."
+    },
+    "custom_model_provider": {
+      "support": "partial",
+      "source_url": "https://fx.sh/docs/configure-fx/custom-model-connections#custom-model-connections:~:text=Preview%20build%20required",
+      "comment": "Fx documents Ollama, vLLM, OpenRouter, and BYOK OpenAI-compatible connections, but marks this configurable-provider surface as a preview that may require a newer build."
+    },
+    "notes": "Fx is Vercel Labs' experimental Unix-like native coding-agent CLI and embeddable harness. Fx 0.0.10 was installed locally from the official setup script and its help and version surfaces were verified."
   },
   {
     "name": "Gemini CLI",
@@ -2769,9 +2969,9 @@
     },
     "latest_major_update": {
       "value": "Sep '26",
-      "source_url": "https://github.com/github/copilot-cli/releases/tag/v1.0.85#source:~:text=Vim%20mode%20is%20now%20available%20to%20everyone",
-      "comment": "Copilot CLI v1.0.85 shipped September 16, 2026 with generally available Vim mode, a /config sidebar, concise transcript views, context-management controls, sandbox network allow and deny rules, semantic JSONL session and memory import, expanded JSON plugin commands, GPT-6 Astra support, and extensive sandbox, MCP, scheduling, and session fixes.",
-      "sort_date": "2026-09-16"
+      "source_url": "https://github.com/github/copilot-cli/releases/tag/v1.0.86#source:~:text=Custom%20agents%20can%20opt%20into%20repository%20instruction%20files",
+      "comment": "Copilot CLI v1.0.86 shipped September 17, 2026 with opt-in repository instructions for custom agents, more reliable plugin and skill restoration on resume, local-network sandbox status, background-shell status, corrupt-transcript recovery, and corrected Autopilot completion stopping.",
+      "sort_date": "2026-09-17"
     },
     "rules": {
       "support": "full",
@@ -3160,9 +3360,9 @@
     },
     "latest_major_update": {
       "value": "Sep '26",
-      "source_url": "https://github.com/aaif-goose/goose/releases/tag/v1.50.1#source:~:text=Revert%20model%20updates%20for%20patch%20release",
-      "comment": "Goose v1.50.1 shipped September 14, 2026 as a corrective patch that reverted model updates and rolled back the MCP default-version selection change from v1.50.0.",
-      "sort_date": "2026-09-14"
+      "source_url": "https://github.com/aaif-goose/goose/releases/tag/v1.51.0#source:~:text=GPT-live%20API%20support",
+      "comment": "Goose v1.51.0 shipped September 17, 2026 with Desktop state-machine routing, external ACP backend sockets, GPT-live support, Gateway pairing controls, terminal-bell notifications, and fixes across MCP, headless exits, session security, streaming, and scheduled recipes.",
+      "sort_date": "2026-09-17"
     },
     "rules": {
       "support": "full",
@@ -3934,10 +4134,10 @@
       "sort_date": "2025-01-01"
     },
     "latest_major_update": {
-      "value": "Aug '26",
-      "source_url": "https://blog.jetbrains.com/junie/2026/08/junie-local-launch/#our-first-step-into-on-device-coding-agents:~:text=Introducing%20Junie%20Local",
-      "comment": "JetBrains introduced Junie Local on August 24, 2026, a free fully local coding-agent mode for Mac.",
-      "sort_date": "2026-08-01"
+      "value": "Sep '26",
+      "source_url": "https://junie.jetbrains.com/blog/demo-agent/#introducing-demo-in-junie-cli:~:text=Introducing%20%60%2Fdemo%60%20in%20Junie%20CLI",
+      "comment": "JetBrains introduced Junie CLI /demo on September 17, 2026, adding disposable-VM computer-use demonstrations with live interaction, screenshots, video, HTML reports, and a non-interactive --demo mode for CI.",
+      "sort_date": "2026-09-17"
     },
     "rules": {
       "support": "full",
@@ -4119,9 +4319,9 @@
     },
     "latest_major_update": {
       "value": "Sep '26",
-      "source_url": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.7.2#source:~:text=Move%20marketplace%20catalog%2C%20installation%2C%20removal",
-      "comment": "Kilo Code v7.7.2 shipped September 15, 2026 with a shared CLI-backed marketplace API, custom OpenAI-compatible speech-to-text endpoints, smoother subagent transcript streaming, scheduled wake keep-awake behavior, Kilo Swarm promoted from experimental settings, and protection against repeated malformed tool-call loops.",
-      "sort_date": "2026-09-15"
+      "source_url": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.7.4#source:~:text=Open%20Mermaid%20diagrams%20in%20a%20fullscreen%20zoom%20viewer",
+      "comment": "Kilo Code v7.7.4 shipped September 18, 2026 with a full-screen Mermaid viewer, safer background cleanup of leftover worktrees across IDEs, experimental programmatic MCP tool calling, improved session titles, and tighter sandbox escalation behavior.",
+      "sort_date": "2026-09-18"
     },
     "rules": {
       "support": "full",
@@ -4301,13 +4501,17 @@
     "form_factor": {
       "values": [
         "CLI",
-        "Extension"
+        "Extension",
+        "Web",
+        "Desktop App"
       ],
-      "source_url": "https://github.com/MoonshotAI/kimi-code#what-is-kimi-code-cli:~:text=AI%20coding%20agent%20that%20runs%20in%20your%20terminal",
-      "comment": "The successor Kimi Code CLI runs in the terminal and integrates with ACP-compatible editors and IDEs such as Zed and JetBrains. Per-form-factor links: CLI: https://moonshotai.github.io/kimi-code/en/guides/getting-started; Extension: https://moonshotai.github.io/kimi-code/en/guides/ides.",
+      "source_url": "https://moonshotai.github.io/kimi-code/en/guides/web.html#using-kimi-code-in-the-browser:~:text=Kimi%20Code%20Web%20is%20the%20browser-based%20graphical%20interface",
+      "comment": "Kimi Code runs as a terminal CLI, integrates with ACP-compatible editors, serves a local browser UI, and links to the Kimi Code desktop app. Per-form-factor links: CLI: https://moonshotai.github.io/kimi-code/en/guides/getting-started; Extension: https://moonshotai.github.io/kimi-code/en/guides/ides; Web: https://moonshotai.github.io/kimi-code/en/guides/web.html; Desktop App: https://www.kimi.com/code.",
       "links": {
         "CLI": "https://moonshotai.github.io/kimi-code/en/guides/getting-started",
-        "Extension": "https://moonshotai.github.io/kimi-code/en/guides/ides"
+        "Extension": "https://moonshotai.github.io/kimi-code/en/guides/ides",
+        "Web": "https://moonshotai.github.io/kimi-code/en/guides/web.html",
+        "Desktop App": "https://www.kimi.com/code"
       }
     },
     "released_in": {
@@ -4318,9 +4522,9 @@
     },
     "latest_major_update": {
       "value": "Sep '26",
-      "source_url": "https://github.com/MoonshotAI/kimi-code/releases/tag/%40moonshot-ai%2Fkimi-code%400.43.1#source:~:text=Update%20the%20terminal%20UI%20engine",
-      "comment": "Kimi Code 0.43.1 shipped September 15, 2026 with native Linux X11 clipboard support, better wrapped-table links and file completion, memory and rendering fixes for large subagent swarms, safer Ctrl+C interruption, and corrected tower-mode agent rosters.",
-      "sort_date": "2026-09-15"
+      "source_url": "https://github.com/MoonshotAI/kimi-code/releases/tag/%40moonshot-ai%2Fkimi-code%402.0.0#source:~:text=Add%20the%20%2Fdesktop%20slash%20command",
+      "comment": "Kimi Code 2.0.0 shipped September 17, 2026 as a Node.js and native-binary generation with a redesigned TUI, automatic legacy migration, a local Web UI, desktop-app discovery, Mermaid rendering, and broad steering, subagent, MCP, media, and transcript reliability fixes.",
+      "sort_date": "2026-09-17"
     },
     "rules": {
       "support": "full",
@@ -4508,7 +4712,7 @@
       "value": "Sep '26",
       "source_url": "https://github.com/kirodotdev/KiroCrew/releases/tag/v0.6.0#source:~:text=Pick%20the%20harness%20that%20runs%20your%20sessions",
       "comment": "Kiro Crew 0.6.0 shipped September 11, 2026 with selectable Kiro, Claude Code, and Codex harnesses, remote-crew chat, agent-managed monitor loops, cross-backend worker dispatch, longer turn and subagent limits, a Launchpad, richer session organization, and expanded sandbox and installer controls.",
-      "sort_date": "2026-09-14"
+      "sort_date": "2026-09-18"
     },
     "rules": {
       "support": "full",
@@ -4900,7 +5104,7 @@
       "value": "Sep '26",
       "source_url": "https://github.com/XiaomiMiMo/MiMo-Code/releases/tag/v0.1.14#source:~:text=Interrupted%20or%20errored%20turns%20stay%20recoverable",
       "comment": "Latest release v0.1.14 (September 2, 2026) adds append-only /recover for interrupted turns, title generation APIs, tool-driven TUI voice input, revised compaction, replayable nested tool calls, inherited subagent permissions, and optional auto-worktree guidance.",
-      "sort_date": "2026-09-14"
+      "sort_date": "2026-09-18"
     },
     "rules": {
       "support": "full",
@@ -5704,9 +5908,9 @@
     },
     "latest_major_update": {
       "value": "Sep '26",
-      "source_url": "https://github.com/OpenHands/OpenHands/releases/tag/v1.18.0#source:~:text=allow%20editing%20automations%20on%20cloud%20backends",
-      "comment": "OpenHands v1.18.0 shipped September 11, 2026 with cloud automation editing and run-identity visibility, database-driven free/default model flags in Canvas, full-size image attachment viewing, explicit ACP harness-registry decisions, and cloud settings and usage-panel fixes.",
-      "sort_date": "2026-09-14"
+      "source_url": "https://github.com/OpenHands/OpenHands/releases/tag/v1.20.0#source:~:text=select%20secrets%20available%20to%20a%20profile",
+      "comment": "OpenHands v1.20.0 shipped September 17, 2026 with per-profile secret selection, forwarded Docker conversation runtime settings, and saved agent-profile selection for automations.",
+      "sort_date": "2026-09-17"
     },
     "rules": {
       "support": "full",
@@ -5905,7 +6109,7 @@
       "value": "Sep '26",
       "source_url": "https://github.com/earendil-works/pi/releases/tag/v0.85.1#source:~:text=GPT-6%20Astra",
       "comment": "Latest release v0.85.1 (September 5, 2026) adds GPT-6 Astra through OpenAI API keys and Codex subscriptions, faster fullscreen scrolling, and fixes for selector keybindings, SDK packaging, prompt caching, and mouse selection.",
-      "sort_date": "2026-09-14"
+      "sort_date": "2026-09-18"
     },
     "rules": {
       "support": "full",
@@ -6496,9 +6700,9 @@
     },
     "latest_major_update": {
       "value": "Sep '26",
-      "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.23.4#source:~:text=Lets%20approved%20Web%20Shell%20Goal%20proposals%20start%20automatically",
-      "comment": "Qwen Code v0.23.4 shipped September 14, 2026 with automatic approved Goal starts and configurable Goal limits, external peer messaging, a Codex subagent executor, Web Shell scheduling and preview improvements, richer hook context, recoverable interrupted-session continuation, and breaking changes to channel prefix filtering and hook timeout units.",
-      "sort_date": "2026-09-14"
+      "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.24.0#source:~:text=add%20bwrap%20kernel%20sandbox%20backend%20for%20Linux",
+      "comment": "Qwen Code v0.24.0 shipped September 16, 2026 with a Linux bwrap sandbox backend, complete OpenTUI hook controls and progress, extension workflows and skills, shared output channels, remote Web Shell connections, ACP admission budgets, goal budgets, and multimodal pipeline integration.",
+      "sort_date": "2026-09-16"
     },
     "rules": {
       "support": "full",
@@ -7429,9 +7633,9 @@
     },
     "latest_major_update": {
       "value": "Sep '26",
-      "source_url": "https://zcode.z.ai/en/changelog#release-v3112:~:text=3.11.2%20Released%20Sep%204%2C%202026",
-      "comment": "ZCode 3.11.2 shipped September 4, 2026 with PDF upload, reading, and preview; media previews; workspace-scoped plugins and update notifications; clearer action-block reasons; draft-task sidebar access; browser improvements; and broad context, remote-workspace, SSH, Linux, and reliability fixes.",
-      "sort_date": "2026-09-01"
+      "source_url": "https://zcode.z.ai/en/changelog#release-v3123:~:text=3.12.3%20Released%20Sep%2017%2C%202026",
+      "comment": "ZCode 3.12.3 shipped September 17, 2026 with improved model management and multi-provider compatibility, better Plan mode and queued messages, an OpenCode Go provider template, safer database upgrades, and broad provider, session, remote-workspace, MCP, plugin, browser, and Linux reliability fixes.",
+      "sort_date": "2026-09-17"
     },
     "rules": {
       "support": "full",

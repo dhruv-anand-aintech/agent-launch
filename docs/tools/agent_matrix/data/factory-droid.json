@@ -31,8 +31,9 @@
   },
   "latest_major_update": {
     "value": "Sep '26",
-    "source_url": "https://docs.factory.ai/changelog/release-notes#september-2026:~:text=CLI%20v0.209.0",
-    "comment": "Factory's September 1, 2026 changelog lists Droid CLI v0.209.0 and desktop v0.166.0."
+    "source_url": "https://docs.factory.ai/changelog/release-notes#september-2026:~:text=CLI%20v0.221.0%20Desktop%20v0.178.0%20September%2017%2C%202026",
+    "comment": "Factory's September 17, 2026 release lists Droid CLI v0.221.0 and Desktop v0.178.0, with settings proposals in chat, session draft indicators, custom-model capability inheritance, MCP readiness fixes, completed-task result recovery, and oversized-request compaction and retry.",
+    "sort_date": "2026-09-17"
   },
   "rules": {
     "support": "full",

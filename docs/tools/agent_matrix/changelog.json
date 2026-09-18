@@ -1,6 +1,73 @@
 {
-  "entry_count": 1861,
+  "entry_count": 1876,
   "entries": [
+    {
+      "date": "2026-09-18",
+      "commit": "",
+      "title": "Unreleased matrix update",
+      "items": [
+        {
+          "summary": "Claude Code: Latest Major Update evidence refreshed",
+          "target": "cell-claude-code-latest-major-update"
+        },
+        {
+          "summary": "Cline: Latest Major Update evidence refreshed",
+          "target": "cell-cline-latest-major-update"
+        },
+        {
+          "summary": "OpenAI Codex CLI: Latest Major Update evidence refreshed",
+          "target": "cell-codex-cli-latest-major-update"
+        },
+        {
+          "summary": "Command Code: Latest Major Update evidence refreshed",
+          "target": "cell-command-code-latest-major-update"
+        },
+        {
+          "summary": "Crush: Latest Major Update evidence refreshed",
+          "target": "cell-crush-latest-major-update"
+        },
+        {
+          "summary": "Factory Droid: Latest Major Update evidence refreshed",
+          "target": "cell-factory-droid-latest-major-update"
+        },
+        {
+          "summary": "GitHub Copilot CLI: Latest Major Update evidence refreshed",
+          "target": "cell-github-copilot-cli-latest-major-update"
+        },
+        {
+          "summary": "Goose: Latest Major Update evidence refreshed",
+          "target": "cell-goose-latest-major-update"
+        },
+        {
+          "summary": "JetBrains Junie: Latest Major Update updated to Sep '26",
+          "target": "cell-junie-latest-major-update"
+        },
+        {
+          "summary": "Kilo Code: Latest Major Update evidence refreshed",
+          "target": "cell-kilo-code-latest-major-update"
+        },
+        {
+          "summary": "Kimi Code CLI: Form Factor updated to CLI, Extension, Web, Desktop App",
+          "target": "cell-kimi-cli-form-factor"
+        },
+        {
+          "summary": "Kimi Code CLI: Latest Major Update evidence refreshed",
+          "target": "cell-kimi-cli-latest-major-update"
+        },
+        {
+          "summary": "OpenHands: Latest Major Update evidence refreshed",
+          "target": "cell-openhands-latest-major-update"
+        },
+        {
+          "summary": "Qwen Code: Latest Major Update evidence refreshed",
+          "target": "cell-qwen-code-latest-major-update"
+        },
+        {
+          "summary": "ZCode: Latest Major Update evidence refreshed",
+          "target": "cell-zcode-latest-major-update"
+        }
+      ]
+    },
     {
       "date": "2026-09-16",
       "commit": "0aefe8c",

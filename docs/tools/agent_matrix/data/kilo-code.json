@@ -25,9 +25,9 @@
   },
   "latest_major_update": {
     "value": "Sep '26",
-    "source_url": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.7.2#source:~:text=Move%20marketplace%20catalog%2C%20installation%2C%20removal",
-    "comment": "Kilo Code v7.7.2 shipped September 15, 2026 with a shared CLI-backed marketplace API, custom OpenAI-compatible speech-to-text endpoints, smoother subagent transcript streaming, scheduled wake keep-awake behavior, Kilo Swarm promoted from experimental settings, and protection against repeated malformed tool-call loops.",
-    "sort_date": "2026-09-15"
+    "source_url": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.7.4#source:~:text=Open%20Mermaid%20diagrams%20in%20a%20fullscreen%20zoom%20viewer",
+    "comment": "Kilo Code v7.7.4 shipped September 18, 2026 with a full-screen Mermaid viewer, safer background cleanup of leftover worktrees across IDEs, experimental programmatic MCP tool calling, improved session titles, and tighter sandbox escalation behavior.",
+    "sort_date": "2026-09-18"
   },
   "rules": {
     "support": "full",

@@ -31,8 +31,9 @@
   },
   "latest_major_update": {
     "value": "Sep '26",
-    "source_url": "https://github.com/OpenHands/OpenHands/releases/tag/v1.18.0#source:~:text=allow%20editing%20automations%20on%20cloud%20backends",
-    "comment": "OpenHands v1.18.0 shipped September 11, 2026 with cloud automation editing and run-identity visibility, database-driven free/default model flags in Canvas, full-size image attachment viewing, explicit ACP harness-registry decisions, and cloud settings and usage-panel fixes."
+    "source_url": "https://github.com/OpenHands/OpenHands/releases/tag/v1.20.0#source:~:text=select%20secrets%20available%20to%20a%20profile",
+    "comment": "OpenHands v1.20.0 shipped September 17, 2026 with per-profile secret selection, forwarded Docker conversation runtime settings, and saved agent-profile selection for automations.",
+    "sort_date": "2026-09-17"
   },
   "rules": {
     "support": "full",

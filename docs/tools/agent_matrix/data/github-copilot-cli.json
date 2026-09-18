@@ -23,9 +23,9 @@
   },
   "latest_major_update": {
     "value": "Sep '26",
-    "source_url": "https://github.com/github/copilot-cli/releases/tag/v1.0.85#source:~:text=Vim%20mode%20is%20now%20available%20to%20everyone",
-    "comment": "Copilot CLI v1.0.85 shipped September 16, 2026 with generally available Vim mode, a /config sidebar, concise transcript views, context-management controls, sandbox network allow and deny rules, semantic JSONL session and memory import, expanded JSON plugin commands, GPT-6 Astra support, and extensive sandbox, MCP, scheduling, and session fixes.",
-    "sort_date": "2026-09-16"
+    "source_url": "https://github.com/github/copilot-cli/releases/tag/v1.0.86#source:~:text=Custom%20agents%20can%20opt%20into%20repository%20instruction%20files",
+    "comment": "Copilot CLI v1.0.86 shipped September 17, 2026 with opt-in repository instructions for custom agents, more reliable plugin and skill restoration on resume, local-network sandbox status, background-shell status, corrupt-transcript recovery, and corrected Autopilot completion stopping.",
+    "sort_date": "2026-09-17"
   },
   "rules": {
     "support": "full",

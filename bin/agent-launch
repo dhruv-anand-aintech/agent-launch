@@ -43,6 +43,7 @@ AGENTS: dict[str, AgentSpec] = {
     "copilot": AgentSpec("copilot", "", "", "pro"),
     "crush": AgentSpec("crush", "", "", "pro"),
     "droid": AgentSpec("droid", "claude-opus-4-8-fast", "claude-opus-4-8", "pro"),
+    "fx": AgentSpec("fx", "", "", "pro"),
     "gemini": AgentSpec("gemini", "gemini-2.5-flash", "gemini-2.5-pro", "pro"),
     "goose": AgentSpec("goose", "", "", "pro"),
     "grok": AgentSpec("grok", "", "grok-4.5", "pro"),
@@ -72,6 +73,7 @@ RANDOM_AGENTS = (
     "muse",
     "pi",
     "pier",
+    "fx",
 )
 DEFAULT_AGENT_ORDER = (
     "codex",
@@ -80,6 +82,7 @@ DEFAULT_AGENT_ORDER = (
     "opencode",
     "muse",
     "pier",
+    "fx",
     "antigravity",
     "gemini",
     "aider",
@@ -749,6 +752,12 @@ def mode_flags(agent: str, mode: str, non_interactive: bool) -> list[str]:
             "auto": ["--force"],
             "danger": ["--yolo", "--sandbox", "disabled"],
         },
+        "fx": {
+            "ask": [],
+            "plan": [],
+            "auto": ["--auto"] if non_interactive else [],
+            "danger": ["--full-access"] if non_interactive else [],
+        },
         "amazonq": {
             "ask": [],
             "plan": [],
@@ -1288,6 +1297,22 @@ def build_command(args: argparse.Namespace) -> list[str]:
         if prompt:
             cmd.append(prompt)
 
+    elif agent == "fx":
+        # fx accepts prompts through `fx ask`; its interactive command does
+        # not accept an initial positional prompt.
+        if non_interactive or prompt:
+            cmd += ["ask"]
+            cmd += mode_flags(agent, args.mode, non_interactive)
+            if resume_requested:
+                cmd += ["--resume", resume_id or "last"]
+            elif continue_session:
+                cmd += ["--resume", "last"]
+            append_passthrough(cmd, args)
+            if prompt:
+                cmd.append(prompt)
+        else:
+            append_passthrough(cmd, args)
+
     return cmd
 
 
@@ -1304,6 +1329,8 @@ def print_mappings() -> None:
             print(f"  {name}: executable={spec.executable}, no built-in model default; supports explicit --model")
         elif name == "openhands":
             print(f"  {name}: executable={spec.executable}, no --model flag; --model sets LLM_MODEL env + --override-with-envs")
+        elif name == "fx":
+            print(f"  {name}: executable={spec.executable}, model configured by fx; no launch-time --model flag")
         else:
             print(f"  {name}: executable={spec.executable}, model flag unsupported")
     print(

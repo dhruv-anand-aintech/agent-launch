@@ -38,6 +38,7 @@ Form factor values are deliberately strict: each value should have a concrete pe
 | Cursor | CLI, IDE, SDK, Web, Mobile | 2023 | Sep '26 | full |  |  | full | full | full | full | full | full | full | full |
 | Devin | CLI, Extension, SDK, Web | Dec '24 | Sep '26 | full |  |  | full | full | partial | partial | full | full | full | unknown |
 | Factory Droid | CLI, Extension, SDK, Web, Desktop App | 2025 | Sep '26 |  | partial | full | full | full | partial | partial | full | full | full | full |
+| Fx | CLI, SDK | Aug '26 | Sep '26 | unknown | partial | full | full | full | partial | full | unknown | full | none | partial |
 | Gemini CLI | CLI | Jun '25 | Sep '26 | full |  | full | full | partial | partial | unknown | full | full | none | partial |
 | GitHub Copilot | CLI, IDE, Extension, SDK, Web, Desktop App | Jun '25 | Sep '26 |  |  |  | full | full | partial | unknown | full | full | full | full |
 | GitHub Copilot CLI | CLI | Sep '25 | Sep '26 | partial | none | full | full | full | partial | full | full | full | none | full |
@@ -45,9 +46,9 @@ Form factor values are deliberately strict: each value should have a concrete pe
 | Goose | CLI, Desktop App | Jan '25 | Sep '26 | full | full | full | full | full | partial | full | full | full | none | full |
 | Grok Build | CLI, Web, Mobile | May '26 | Sep '26 |  |  |  | full | full | unknown | unknown | full | full | full | partial |
 | JetBrains Air | IDE, Web, Desktop App | Mar '26 | Sep '26 | full | partial | full | full | full | full | partial | partial | full | full | full |
-| JetBrains Junie | CLI, IDE, Web, GitHub Action, GitLab CI/CD | Jan '25 | Aug '26 |  |  |  | full | full | partial | full | full | full | partial | full |
+| JetBrains Junie | CLI, IDE, Web, GitHub Action, GitLab CI/CD | Jan '25 | Sep '26 |  |  |  | full | full | partial | full | full | full | partial | full |
 | Kilo Code | CLI, Extension | Feb '26 | Sep '26 | full | full | full | full | full | partial | unknown | full | full | partial | full |
-| Kimi Code CLI | CLI, Extension | May '26 | Sep '26 |  |  |  | full | full | partial | unknown | partial | full | none | full |
+| Kimi Code CLI | CLI, Extension, Web, Desktop App | May '26 | Sep '26 |  |  |  | full | full | partial | unknown | partial | full | none | full |
 | Kiro | CLI, IDE, Web | Jul '25 | Sep '26 | full |  |  | full | full | partial | partial | full | full | full | none |
 | Kiro Crew | CLI, Web, Desktop App, Mobile | Aug '26 | Sep '26 | full | none | none | full | full | full | full | full | full | none | none |
 | MiMo Code | CLI, IDE, Extension | Jun '26 | Sep '26 | full | full | full | full | full | partial | full | partial | full | none | full |

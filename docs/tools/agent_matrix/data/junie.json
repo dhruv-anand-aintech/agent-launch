@@ -30,9 +30,10 @@
     "comment": "Introduced by JetBrains as a coding agent in early 2025."
   },
   "latest_major_update": {
-    "value": "Aug '26",
-    "source_url": "https://blog.jetbrains.com/junie/2026/08/junie-local-launch/#our-first-step-into-on-device-coding-agents:~:text=Introducing%20Junie%20Local",
-    "comment": "JetBrains introduced Junie Local on August 24, 2026, a free fully local coding-agent mode for Mac."
+    "value": "Sep '26",
+    "source_url": "https://junie.jetbrains.com/blog/demo-agent/#introducing-demo-in-junie-cli:~:text=Introducing%20%60%2Fdemo%60%20in%20Junie%20CLI",
+    "comment": "JetBrains introduced Junie CLI /demo on September 17, 2026, adding disposable-VM computer-use demonstrations with live interaction, screenshots, video, HTML reports, and a non-interactive --demo mode for CI.",
+    "sort_date": "2026-09-17"
   },
   "rules": {
     "support": "full",

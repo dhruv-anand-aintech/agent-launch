@@ -1,0 +1,200 @@
+{
+  "name": "Fx",
+  "links": {
+    "docs": "https://fx.sh/docs",
+    "github": "https://github.com/vercel-labs/fx",
+    "website": "https://fx.sh/",
+    "company_website": "https://vercel.com/",
+    "slug": "fx"
+  },
+  "form_factor": {
+    "values": [
+      "CLI",
+      "SDK"
+    ],
+    "source_url": "https://github.com/vercel-labs/fx#readme:~:text=fx%20is%20a%20coding%20agent%20CLI%20written%20in%20Zig",
+    "comment": "Native terminal CLI with an experimental WebAssembly embedding SDK and an ACP server. Per-form-factor links: CLI: https://fx.sh/docs/getting-started/install; SDK: https://github.com/vercel-labs/fx/tree/main/sdk.",
+    "links": {
+      "CLI": "https://fx.sh/docs/getting-started/install",
+      "SDK": "https://github.com/vercel-labs/fx/tree/main/sdk"
+    }
+  },
+  "released_in": {
+    "value": "Aug '26",
+    "source_url": "https://github.com/vercel-labs/fx/releases/tag/v0.0.3#release:~:text=v0.0.3",
+    "comment": "Fx's first public stable release line is dated August 2026.",
+    "sort_date": "2026-08-18"
+  },
+  "latest_major_update": {
+    "value": "Sep '26",
+    "source_url": "https://github.com/vercel-labs/fx/releases/tag/v0.0.10#source:~:text=fx%20now%20completes%20turns%20up%20to%201.6%C3%97%20faster",
+    "comment": "Fx v0.0.10 shipped September 14, 2026 with faster turns and model-request startup, clearer shell recovery, improved trace diagnostics, more reliable session resume and scrollback, and stronger secret protection in MCP errors.",
+    "sort_date": "2026-09-14"
+  },
+  "pricing": {
+    "value": "Apache-2.0 CLI; model-provider usage is billed separately",
+    "source_url": "https://github.com/vercel-labs/fx#license:~:text=Apache-2.0",
+    "comment": "The harness is open source. Model access uses Vercel AI Gateway, ChatGPT or Grok subscriptions, or configured local or OpenAI-compatible inference."
+  },
+  "some_free_usage": {
+    "support": "unknown",
+    "source_url": "https://github.com/vercel-labs/fx#highlights:~:text=Any%20model",
+    "comment": "The reviewed public sources do not establish a bundled free model allowance."
+  },
+  "no_account_required": {
+    "support": "partial",
+    "source_url": "https://fx.sh/docs/configure-fx/custom-model-connections#ollama:~:text=Anonymous%20connections%20send%20no%20Authorization%20header",
+    "comment": "Preview custom connections can use anonymous local inference, while built-in cloud providers require authentication."
+  },
+  "can_use_other_subscriptions": {
+    "support": "full",
+    "source_url": "https://github.com/vercel-labs/fx#highlights:~:text=ChatGPT%20or%20Grok%20subscriptions",
+    "comment": "Fx supports ChatGPT and Grok subscription sign-in, Vercel AI Gateway, and configurable OpenAI-compatible endpoints."
+  },
+  "rules": {
+    "support": "full",
+    "source_url": "https://github.com/vercel-labs/fx#extend-fx:~:text=project%20instructions",
+    "comment": "Fx loads scoped project instruction files and related workspace context."
+  },
+  "skills": {
+    "support": "full",
+    "source_url": "https://fx.sh/docs/capabilities/skills#skills:~:text=Skills",
+    "comment": "Fx supports reusable SKILL.md-based capabilities."
+  },
+  "hooks": {
+    "support": "unknown",
+    "source_url": "https://github.com/vercel-labs/fx#extend-fx:~:text=Extend%20fx",
+    "comment": "No public lifecycle-hook contract was established in the reviewed Fx documentation."
+  },
+  "mcp_servers": {
+    "support": "full",
+    "source_url": "https://fx.sh/docs/capabilities/mcp#mcp:~:text=MCP",
+    "comment": "Fx connects external tools through MCP and provides interactive management and health diagnostics."
+  },
+  "custom_commands": {
+    "support": "partial",
+    "source_url": "https://fx.sh/docs/using-fx/slash-commands#slash-commands:~:text=Slash%20commands",
+    "comment": "Fx provides an extensive built-in slash-command surface; a user-defined custom-command format was not established."
+  },
+  "goal_command": {
+    "support": "none",
+    "source_url": "https://fx.sh/docs/using-fx/slash-commands#slash-commands:~:text=Slash%20commands",
+    "comment": "No first-party persistent /goal command is documented."
+  },
+  "subagents": {
+    "support": "full",
+    "source_url": "https://fx.sh/docs/capabilities/subagents#subagents:~:text=A%20subagent%20handles%20a%20task%20in%20its%20own%20conversation",
+    "comment": "Fx supports one-off and named session-backed subagents with inherited permission restrictions."
+  },
+  "monitor": {
+    "support": "partial",
+    "source_url": "https://github.com/vercel-labs/fx#readme:~:text=background",
+    "comment": "Fx can list and inspect background commands, but the reviewed sources do not establish a general event-driven monitor primitive."
+  },
+  "transcripts": {
+    "support": "full",
+    "source_url": "https://fx.sh/docs/using-fx/sessions#sessions:~:text=fx%20saves%20interactive%20conversations%20under",
+    "comment": "Location: Fx saves session transcripts under `~/.fx/sessions/`; they can be listed, inspected as JSON, resumed, migrated, and recovered."
+  },
+  "model_selection": {
+    "support": "full",
+    "source_url": "https://fx.sh/docs/configure-fx/configuration#agent-and-model-settings:~:text=models",
+    "comment": "Fx saves a model per provider and supports process-level FX_MODEL overrides; the stable v0.0.10 `fx ask` help does not expose a launch-time --model flag."
+  },
+  "approval_mode": {
+    "support": "full",
+    "source_url": "https://fx.sh/docs/configure-fx/permissions#permissions:~:text=permission",
+    "comment": "Permission modes include ask, automatic review, and explicit full-access bypass, with remembered allow, ask, and deny rules."
+  },
+  "sandbox_mode": {
+    "support": "partial",
+    "source_url": "https://fx.sh/docs/using-fx/fx-ask#handle-permissions-in-noninteractive-runs:~:text=full-access",
+    "comment": "Fx enforces permission checks and command safety controls, but the reviewed stable documentation does not establish a configurable filesystem or network sandbox mode."
+  },
+  "resume": {
+    "support": "full",
+    "source_url": "https://fx.sh/docs/using-fx/sessions#resume:~:text=Resume%20the%20latest%20workspace%20session",
+    "comment": "Supports latest-session and exact-session resume flows in both interactive and headless modes."
+  },
+  "continue": {
+    "support": "full",
+    "source_url": "https://fx.sh/docs/using-fx/sessions#resume:~:text=continue",
+    "comment": "Supports continuing the latest workspace session with -c or --continue."
+  },
+  "non_interactive": {
+    "support": "full",
+    "source_url": "https://fx.sh/docs/using-fx/fx-ask#fx-ask:~:text=runs%20one%20noninteractive%20request%20and%20exits",
+    "comment": "`fx ask` runs one request and exits, with argument or stdin prompts for scripts and CI."
+  },
+  "output_format": {
+    "support": "full",
+    "source_url": "https://fx.sh/docs/using-fx/fx-ask#use-fx-ask-in-scripts:~:text=Use%20%60--json%60",
+    "comment": "`fx ask --json` returns one structured result object with output, final output, exit code, session, model, usage, and tool-call fields."
+  },
+  "statusline": {
+    "support": "full",
+    "source_url": "https://fx.sh/docs/configure-fx/configuration#interface-and-update-settings:~:text=statusLine.context",
+    "comment": "The status line can independently show context, session, and workspace information."
+  },
+  "telemetry": {
+    "support": "unknown",
+    "source_url": "https://fx.sh/docs/configure-fx/configuration#environment-variables:~:text=FX_HERDR",
+    "comment": "Fx documents an opt-out for local Herdr lifecycle reporting, but the reviewed public sources do not establish a complete product telemetry contract."
+  },
+  "keyboard_shortcuts": {
+    "support": "full",
+    "source_url": "https://fx.sh/docs/using-fx/keyboard-shortcuts#keyboard-shortcuts:~:text=Keyboard",
+    "comment": "Interactive Fx documents keyboard shortcuts for editing, interruption, pickers, transcript review, and navigation."
+  },
+  "theme_customization": {
+    "support": "full",
+    "source_url": "https://fx.sh/docs/configure-fx/configuration#terminal-themes:~:text=Custom%20themes%20are%20JSON%20files",
+    "comment": "Fx follows terminal light or dark mode, ships built-in themes, and loads custom VS Code-format JSON themes from `~/.fx/themes/`."
+  },
+  "auto_save": {
+    "support": "full",
+    "source_url": "https://fx.sh/docs/using-fx/sessions#sessions:~:text=saves%20interactive%20conversations",
+    "comment": "Fx automatically saves workspace sessions for inspection, resume, recovery, and compaction."
+  },
+  "debugging_output": {
+    "support": "full",
+    "source_url": "https://github.com/vercel-labs/fx#documentation:~:text=status",
+    "comment": "`fx status`, `fx doctor`, and `/trace` provide configuration, preflight, and private diagnostic output."
+  },
+  "context_window": {
+    "support": "full",
+    "source_url": "https://fx.sh/docs/configure-fx/configuration#agent-and-model-settings:~:text=context_limits",
+    "comment": "Fx exposes configurable context-input limits and model metadata for automatic compaction budgets."
+  },
+  "code_formatting": {
+    "support": "unknown",
+    "source_url": "https://github.com/vercel-labs/fx#readme:~:text=coding%20agent",
+    "comment": "No dedicated built-in formatter or linter integration was established."
+  },
+  "git_integration": {
+    "support": "partial",
+    "source_url": "https://github.com/vercel-labs/fx#readme:~:text=pr",
+    "comment": "Fx exposes pull-request and issue workflows and works in Git repositories; a dedicated branch and diff-management UI was not established."
+  },
+  "performance_mode": {
+    "support": "partial",
+    "source_url": "https://github.com/vercel-labs/fx/releases/tag/v0.0.10#source:~:text=1.6%C3%97%20faster",
+    "comment": "Fx is a small native Zig binary with measured startup and turn-performance work, but no separate stable user-facing performance mode was established."
+  },
+  "ui_customization": {
+    "support": "partial",
+    "source_url": "https://fx.sh/docs/configure-fx/configuration#interface-and-update-settings:~:text=collapse_tool_calls",
+    "comment": "Fx supports theme, grouped-tool-call, status-line, notification, slash-menu, and startup-scrollback preferences, but not arbitrary panel layout."
+  },
+  "hosted_agent": {
+    "support": "none",
+    "source_url": "https://github.com/vercel-labs/fx#install:~:text=curl",
+    "comment": "Fx is a local native CLI; model access may be local or cloud, but the harness itself is not a hosted workspace."
+  },
+  "custom_model_provider": {
+    "support": "partial",
+    "source_url": "https://fx.sh/docs/configure-fx/custom-model-connections#custom-model-connections:~:text=Preview%20build%20required",
+    "comment": "Fx documents Ollama, vLLM, OpenRouter, and BYOK OpenAI-compatible connections, but marks this configurable-provider surface as a preview that may require a newer build."
+  },
+  "notes": "Fx is Vercel Labs' experimental Unix-like native coding-agent CLI and embeddable harness. Fx 0.0.10 was installed locally from the official setup script and its help and version surfaces were verified."
+}

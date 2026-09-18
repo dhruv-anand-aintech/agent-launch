@@ -30,6 +30,7 @@ agents=(
   'codex:Codex CLI'
   'cursor:Cursor Agent'
   'droid:Factory Droid'
+  'fx:Fx'
   'gemini:Gemini CLI'
   'grok:Grok Build'
   'kilo:Kilo Code'

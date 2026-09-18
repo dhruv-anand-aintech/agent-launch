@@ -27,8 +27,9 @@
   },
   "latest_major_update": {
     "value": "Sep '26",
-    "source_url": "https://zcode.z.ai/en/changelog#release-v3112:~:text=3.11.2%20Released%20Sep%204%2C%202026",
-    "comment": "ZCode 3.11.2 shipped September 4, 2026 with PDF upload, reading, and preview; media previews; workspace-scoped plugins and update notifications; clearer action-block reasons; draft-task sidebar access; browser improvements; and broad context, remote-workspace, SSH, Linux, and reliability fixes."
+    "source_url": "https://zcode.z.ai/en/changelog#release-v3123:~:text=3.12.3%20Released%20Sep%2017%2C%202026",
+    "comment": "ZCode 3.12.3 shipped September 17, 2026 with improved model management and multi-provider compatibility, better Plan mode and queued messages, an OpenCode Go provider template, safer database upgrades, and broad provider, session, remote-workspace, MCP, plugin, browser, and Linux reliability fixes.",
+    "sort_date": "2026-09-17"
   },
   "rules": {
     "support": "full",
