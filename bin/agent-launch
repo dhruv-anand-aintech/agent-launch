@@ -14,6 +14,7 @@ import shutil
 import subprocess
 import sys
 import tempfile
+from concurrent.futures import ThreadPoolExecutor
 from dataclasses import dataclass
 
 
@@ -53,9 +54,10 @@ AGENTS: dict[str, AgentSpec] = {
     "kirocrew": AgentSpec("kirocrew", "", "", "pro"),
     "mimo": AgentSpec("mimo", "", "", "pro"),
     "muse": AgentSpec("muse", "muse-spark-1.2", "muse-spark-1.2", "pro"),
-    "opencode": AgentSpec("opencode", "opencode-go/deepseek-v4-flash", "opencode-go/qwen3.7-max", "pro"),
+    "opencode": AgentSpec("opencode", "opencode-go/deepseek-v4-flash", "opencode-go/muse-spark-1.3-contributor", "pro"),
+    "opencode2": AgentSpec("opencode2", "opencode-go/deepseek-v4-flash", "opencode-go/muse-spark-1.3-contributor", "pro"),
     "openhands": AgentSpec("openhands", "", "", "pro"),
-    "pi": AgentSpec("pi", "opencode-go/deepseek-v4-flash", "opencode-go/qwen3.7-max", "pro"),
+    "pi": AgentSpec("pi", "opencode-go/deepseek-v4-flash", "opencode/muse-spark-1.3", "pro"),
     "pier": AgentSpec("pier", "sarvam-30b", "pier-hybrid", "pro"),
     "qoder": AgentSpec("qoder", "lite", "performance", "pro"),
     "qwen": AgentSpec("qwen", "", "", "pro"),
@@ -219,6 +221,7 @@ MODEL_FLAG_AGENTS = {
     "mimo",
     "muse",
     "opencode",
+    "opencode2",
     "pi",
     "pier",
     "qoder",
@@ -371,6 +374,12 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
         action="store_true",
         help="Print normalized mode/model mappings and exit.",
     )
+    parser.add_argument(
+        "--version",
+        action="store_true",
+        dest="show_versions",
+        help="Print the installed version of every agent CLI and exit.",
+    )
     args, unknown_args = parser.parse_known_args(argv)
     if args.agent not in AGENT_CHOICES:
         parser.error(f"unknown agent {args.agent!r}; expected one of: {', '.join(AGENT_CHOICES)}")
@@ -380,6 +389,9 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
         parser.error("--prompt-file cannot be combined with --prompt or positional prompt text")
     args.passthrough_args = unknown_args + passthrough_args
     if args.print_mappings:
+        args.agent_order = None
+        return args
+    if args.show_versions:
         args.agent_order = None
         return args
     prefer = parse_agent_list(args.prefer or os.environ.get("AGENT_LAUNCH_PREFER"), "--prefer")
@@ -715,6 +727,12 @@ def mode_flags(agent: str, mode: str, non_interactive: bool) -> list[str]:
             "plan": ["--agent", "plan"],
             "auto": [],
             "danger": ["--dangerously-skip-permissions"] if non_interactive else [],
+        },
+        "opencode2": {
+            "ask": [],
+            "plan": ["--agent", "plan"],
+            "auto": ["--auto"],
+            "danger": ["--auto"],
         },
         "pi": {
             "ask": [],
@@ -1115,6 +1133,26 @@ def build_command(args: argparse.Namespace) -> list[str]:
             else:
                 cmd += ["--prompt", prompt]
 
+    elif agent == "opencode2":
+        if non_interactive:
+            cmd += ["run"]
+        else:
+            cmd += [args.cwd]
+        cmd += mode_flags(agent, args.mode, non_interactive)
+        if non_interactive:
+            append_model(cmd, agent, model)
+        append_passthrough(cmd, args)
+        if resume_requested or continue_session:
+            if resume_id:
+                cmd += ["--session", resume_id]
+            else:
+                cmd += ["--continue"]
+        if prompt:
+            if non_interactive:
+                cmd.append(prompt)
+            else:
+                cmd += ["--prompt", prompt]
+
     elif agent == "pi":
         cmd += mode_flags(agent, args.mode, non_interactive)
         append_model(cmd, agent, model)
@@ -1298,8 +1336,8 @@ def build_command(args: argparse.Namespace) -> list[str]:
             cmd.append(prompt)
 
     elif agent == "fx":
-        # fx accepts prompts through `fx ask`; its interactive command does
-        # not accept an initial positional prompt.
+        # fx accepts prompts through `fx ask`; its top-level interactive
+        # command does not accept an initial positional prompt.
         if non_interactive or prompt:
             cmd += ["ask"]
             cmd += mode_flags(agent, args.mode, non_interactive)
@@ -1307,13 +1345,65 @@ def build_command(args: argparse.Namespace) -> list[str]:
                 cmd += ["--resume", resume_id or "last"]
             elif continue_session:
                 cmd += ["--resume", "last"]
+            if non_interactive:
+                cmd += ["--no-color"]
             append_passthrough(cmd, args)
             if prompt:
                 cmd.append(prompt)
         else:
+            if resume_id:
+                cmd += ["--resume", resume_id]
+            elif continue_session:
+                cmd += ["--continue"]
             append_passthrough(cmd, args)
 
     return cmd
+
+
+VERSION_TIMEOUT_SECONDS = 10.0
+
+
+def agent_version(agent: str) -> str | None:
+    """Return the installed version string for an agent CLI.
+
+    None means the executable is not installed; an empty string means it is
+    installed but did not report a usable version.
+    """
+    executable = shutil.which(AGENTS[agent].executable)
+    if not executable:
+        return None
+    try:
+        result = subprocess.run(
+            [executable, "--version"],
+            capture_output=True,
+            text=True,
+            timeout=VERSION_TIMEOUT_SECONDS,
+        )
+    except (OSError, subprocess.SubprocessError):
+        return ""
+    output = "\n".join(part for part in (result.stdout, result.stderr) if part).strip()
+    if not output:
+        return ""
+    return output.splitlines()[0].strip()
+
+
+def print_versions() -> None:
+    agents = list(AGENTS)
+    with ThreadPoolExecutor(max_workers=min(8, len(agents))) as executor:
+        versions = dict(zip(agents, executor.map(agent_version, agents)))
+    width = max(len(name) for name in agents)
+    installed = 0
+    for name in agents:
+        version = versions[name]
+        if version is None:
+            print(f"{name:<{width}}  not installed ({AGENTS[name].executable})")
+            continue
+        installed += 1
+        if version == "":
+            print(f"{name:<{width}}  installed (version unavailable)")
+        else:
+            print(f"{name:<{width}}  {version}")
+    print(f"\n{installed}/{len(agents)} agent CLIs installed")
 
 
 def print_mappings() -> None:
@@ -1396,6 +1486,9 @@ def main() -> int:
     args = parse_args()
     if args.print_mappings:
         print_mappings()
+        return 0
+    if args.show_versions:
+        print_versions()
         return 0
     maybe_route_cwd(args)
     if args.agent_order:

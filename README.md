@@ -20,6 +20,7 @@ One command for launching the local coding-agent CLIs installed on this machine:
 - Kiro Crew (`kirocrew`, exposed as `--agent kirocrew`)
 - Muse Code (`muse`)
 - OpenCode (`opencode`)
+- OpenCode 2 (`opencode2`, beta)
 - Pi Coding Agent (`pi`)
 - Pier Code (`pier`)
 - Qoder CLI (`qoder`)
@@ -140,7 +141,7 @@ agent-launch -a claude -i -m plan -C ~/Code/my-repo 'review this change'
 
 | Option | Meaning |
 | --- | --- |
-| `--agent` / `-a` | Any built-in agent key, including `aider`, `amp`, `antigravity`, `amazonq`, `claude`, `cline`, `codex`, `copilot`, `crush`, `cursor`, `droid`, `fx`, `gemini`, `goose`, `grok`, `kilo`, `kimi`, `kiro`, `kirocrew`, `mimo`, `muse`, `opencode`, `openhands`, `pi`, `pier`, `qoder`, `qwen`, `trae`, or `random`; defaults to `random` |
+| `--agent` / `-a` | Any built-in agent key, including `aider`, `amp`, `antigravity`, `amazonq`, `claude`, `cline`, `codex`, `copilot`, `crush`, `cursor`, `droid`, `fx`, `gemini`, `goose`, `grok`, `kilo`, `kimi`, `kiro`, `kirocrew`, `mimo`, `muse`, `opencode`, `opencode2`, `openhands`, `pi`, `pier`, `qoder`, `qwen`, `trae`, or `random`; defaults to `random` |
 | `--agent-order` | Non-interactive failover order. Pass comma-separated agents, use without a value for the built-in default, or set `AGENT_LAUNCH_AGENT_ORDER` |
 | `--prefer` | Non-interactive preferred agents. Moves the comma-separated agents to the front of the default failover order, or set `AGENT_LAUNCH_PREFER` |
 | `--interactive` / `-i` | Start an interactive TUI/session |
@@ -162,6 +163,7 @@ agent-launch -a claude -i -m plan -C ~/Code/my-repo 'review this change'
 | `--extra` | Append raw backend arguments; repeat as needed |
 | `--` | Pass all following arguments through to the selected backend CLI |
 | `--print-mappings` | Show built-in agent/model mappings |
+| `--version` | Print the installed version of every agent CLI and exit |
 
 ## Backend Argument Pass-Through
 
@@ -313,6 +315,7 @@ Built-in defaults:
 | Claude Code | `sonnet` | `opus` | `pro` |
 | Gemini CLI | `gemini-2.5-flash` | `gemini-2.5-pro` | `pro` |
 | OpenCode | `opencode-go/deepseek-v4-flash` | `opencode-go/kimi-k2.6` | `pro` |
+| OpenCode 2 (beta) | `opencode-go/deepseek-v4-flash` | `opencode-go/kimi-k2.6` | `pro` |
 | Muse Code | `muse-spark-1.2` | `muse-spark-1.2` | `pro` |
 | Pi Coding Agent | `opencode-go/deepseek-v4-flash` | `opencode-go/kimi-k2.6` | `pro` |
 | Pier Code | `sarvam-30b` | `pier-hybrid` | `pro` |

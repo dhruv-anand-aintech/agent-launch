@@ -40,6 +40,7 @@ agents=(
   'mimo:MiMo Code'
   'muse:Muse Code'
   'opencode:OpenCode'
+  'opencode2:OpenCode 2 (beta)'
   'pi:Pi Coding Agent'
   'pier:Pier Code'
   'qoder:Qoder CLI'
@@ -106,6 +107,7 @@ _arguments -s -S \
   '--attempt-timeout[timeout seconds for each non-interactive backend attempt]:seconds:' \
   '--extra[append raw backend arguments]:backend args:' \
   '--print-mappings[show built-in agent/model mappings]' \
+  '--version[show installed agent CLI versions]' \
   '1:command or prompt:(export)' \
   '*:prompt text:'
 
