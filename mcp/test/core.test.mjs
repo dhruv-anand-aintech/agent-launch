@@ -60,6 +60,32 @@ test("serializes concurrent sends for one session", async () => {
   assert.equal(maximum, 1);
 });
 
+test("persists MCP parent metadata and records the child linkage", async () => {
+  const { dir, registry, calls } = await fixture();
+  const recorded = [];
+  const service = new SessionService({
+    registry,
+    adapters: {
+      cursor: {
+        async create(input) {
+          calls.push(["create", input]);
+          return { providerSessionId: "cursor-child", status: "idle" };
+        },
+      },
+    },
+    parentContext: { provider: "codex", sessionId: "codex-parent", evidence: "host_environment:CODEX_THREAD_ID" },
+    lineageStore: { async record(link) { recorded.push(link); return { captured: true, link }; } },
+  });
+  const created = await service.create({ provider: "cursor", cwd: "/tmp/project", title: "Child" });
+  assert.equal(created.session.parentSessionId, "codex-parent");
+  assert.equal(created.session.parentProvider, "codex");
+  assert.equal(created.session.spawnMechanism, "agent-launch-mcp");
+  assert.equal(created.session.lineageCaptured, true);
+  assert.equal(recorded[0].providerSessionId, "cursor-child");
+  const persisted = JSON.parse(await readFile(join(dir, "sessions.json"), "utf8"));
+  assert.equal(persisted.sessions[0].parentSessionId, "codex-parent");
+});
+
 test("reports unsupported capabilities as structured errors", async () => {
   const { service } = await fixture();
   service.adapters.claude.create = async () => { throw new UnsupportedCapabilityError("claude", "createWithoutPrompt", "initial prompt required"); };

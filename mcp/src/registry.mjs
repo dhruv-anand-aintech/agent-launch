@@ -53,6 +53,10 @@ export class SessionRegistry {
       cwd: input.cwd,
       title: input.title ?? null,
       status: input.status ?? "idle",
+      spawnMechanism: input.spawnMechanism ?? "agent-launch-mcp",
+      parentSessionId: input.parentSessionId ?? null,
+      parentProvider: input.parentProvider ?? null,
+      lineageCaptured: input.lineageCaptured ?? false,
       createdAt: now,
       updatedAt: now,
     };

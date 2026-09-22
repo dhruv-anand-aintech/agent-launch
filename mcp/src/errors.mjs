@@ -22,6 +22,8 @@ export function asAgentMcpError(error, fallbackCode = "provider_error") {
   const message = error instanceof Error ? error.message : String(error);
   return new AgentMcpError(fallbackCode, message, {
     providerError: error instanceof Error ? error.name : typeof error,
+    ...(error?.code !== undefined ? { providerCode: error.code } : {}),
+    ...(error?.data !== undefined ? { providerDetails: error.data } : {}),
   });
 }
 

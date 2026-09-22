@@ -2,11 +2,12 @@ import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { z } from "zod/v4";
 import { errorPayload } from "./errors.mjs";
-import { createDefaultAdapters } from "./adapters.mjs";
+import { CAPABILITIES, createDefaultAdapters } from "./adapters.mjs";
 import { SessionRegistry } from "./registry.mjs";
 import { SessionService, normalizeToolError } from "./core.mjs";
+import { SessionLineageStore, resolveParentContext } from "./lineage.mjs";
 
-const provider = z.enum(["cursor", "opencode", "codex", "claude"]);
+const provider = z.enum(Object.keys(CAPABILITIES));
 const common = { sessionId: z.string().min(1) };
 
 function result(value) {
@@ -29,8 +30,13 @@ export function createServer({ service } = {}) {
     process.env.AGENT_MCP_STATE_FILE || `${process.env.XDG_STATE_HOME || `${process.env.HOME}/.local/state`}/agent-launch/mcp-sessions.json`,
     process.env.AGENT_MCP_OWNER_ID,
   );
-  const sessionService = service ?? new SessionService({ registry, adapters: createDefaultAdapters() });
-  const server = new McpServer({ name: "agent-launch-unified", version: "0.1.0" });
+  const sessionService = service ?? new SessionService({
+    registry,
+    adapters: createDefaultAdapters(),
+    lineageStore: new SessionLineageStore(),
+    parentContext: resolveParentContext(),
+  });
+  const server = new McpServer({ name: "agent-launch-unified", version: "0.3.0" });
 
   server.registerTool("agent_capabilities", {
     description: "Report provider-specific supported session operations. Unsupported operations are never simulated.",
@@ -46,6 +52,8 @@ export function createServer({ service } = {}) {
       model: z.string().optional(),
       mode: z.enum(["default", "ask", "plan", "auto", "danger"]).optional(),
       title: z.string().optional(),
+      parentSessionId: z.string().min(1).optional(),
+      parentProvider: z.string().min(1).optional(),
       timeoutMs: z.number().int().positive().max(900_000).optional(),
     },
   }, guarded((input) => sessionService.create(input)));

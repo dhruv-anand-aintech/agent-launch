@@ -16,9 +16,11 @@ function capability(provider, name) {
 }
 
 export class SessionService {
-  constructor({ registry, adapters }) {
+  constructor({ registry, adapters, lineageStore = null, parentContext = null }) {
     this.registry = registry;
     this.adapters = adapters;
+    this.lineageStore = lineageStore;
+    this.parentContext = parentContext;
     this.activeTurns = new Map();
   }
 
@@ -34,9 +36,35 @@ export class SessionService {
     if (!input.prompt && !CAPABILITIES[input.provider].createWithoutPrompt) capability(input.provider, "createWithoutPrompt");
     const adapter = this.adapters[input.provider];
     if (!adapter) throw new AgentMcpError("provider_unavailable", `No adapter configured for ${input.provider}`);
+    const parent = input.parentSessionId
+      ? { sessionId: input.parentSessionId, provider: input.parentProvider || "unknown", evidence: "explicit_tool_input" }
+      : this.parentContext;
     const created = await adapter.create(input);
-    const record = await this.registry.create({ ...input, providerSessionId: created.providerSessionId, status: created.status });
-    return { session: record, result: created.result ?? null };
+    let record = await this.registry.create({
+      ...input,
+      providerSessionId: created.providerSessionId,
+      status: created.status,
+      spawnMechanism: "agent-launch-mcp",
+      parentSessionId: parent?.sessionId,
+      parentProvider: parent?.provider,
+    });
+    let lineage = { captured: false, reason: "parent_context_unavailable" };
+    if (this.lineageStore && parent?.sessionId) {
+      try {
+        lineage = await this.lineageStore.record({
+          mcpSessionId: record.id,
+          provider: input.provider,
+          providerSessionId: created.providerSessionId,
+          cwd: input.cwd,
+          title: input.title,
+          parent,
+        });
+      } catch {
+        lineage = { captured: false, reason: "lineage_write_failed" };
+      }
+      if (lineage.captured) record = await this.registry.update(record.id, { lineageCaptured: true });
+    }
+    return { session: record, result: created.result ?? null, lineage };
   }
 
   async send(input) {
