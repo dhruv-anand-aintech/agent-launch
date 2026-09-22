@@ -18,6 +18,7 @@
 - Matrix validation: `npm run matrix:validate`
 - Matrix bundle generation: `npm run matrix:bundle`
 - LLM text generation: `npm run matrix:llms-txt`
+- Matrix changelog generation: `npm run matrix:changelog`
 - Matrix deploy pipeline: `npm run deploy:matrix`
 - Dry-run backend mapping: `./bin/agent-launch --dry-run -a codex -n -m danger -C /tmp -p hello`
 - Installed wrapper check after install: `agl --dry-run ...`
@@ -28,7 +29,7 @@
 - When wrapper behavior differs from expectations, inspect `bin/agent-launch` and current `--dry-run` output before trusting docs.
 - The installed user-facing binaries may be stale copies in `~/.local/bin`; use `./install.sh` before verifying installed `agl`.
 - Cloudflare custom domain deploys should use `custom_domain = true` in `wrangler.toml`.
-- Matrix updates are not done until deployed and verified. After any change under `docs/tools/agent_matrix/`, `worker/matrix.js`, or `wrangler.toml`, run `npm run deploy:matrix`, then verify `https://compare.ainorthstar.tech/api/deployment-info` reports `git_commit` equal to `git rev-parse HEAD` and smoke-hit the production page plus `/bundle.json`.
+- Matrix site changes are deploy-on-change work. For every change under `docs/tools/agent_matrix/**`, `worker/matrix.js`, or `wrangler.toml`, run the validation and generation commands, then deploy through the existing path: after the change is committed and pushed to `main`, confirm `.github/workflows/deploy-matrix.yml` completes with `CLOUDFLARE_DEPLOY_ENABLED=true`; for an explicitly authorized local deployment, run `npm run deploy:matrix`. Never report the matrix change complete until `https://compare.ainorthstar.tech/api/deployment-info` reports `git_commit` equal to the deployed commit and the production page plus `/bundle.json` smoke-test successfully. If deployment is blocked by uncommitted state, missing auth, secrets, or the workflow gate, report the exact blocker instead of claiming completion.
 
 ## Verification Note
 Commands above are discovered from repo docs/manifests. They were not run while creating this file.

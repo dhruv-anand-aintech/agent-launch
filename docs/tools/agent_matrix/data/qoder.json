@@ -145,6 +145,11 @@
     "source_url": "https://docs.qoder.com/cli/cli-reference#session-management:~:text=--list-sessions",
     "comment": "Sessions persist by default and can be listed, resumed, continued, deleted, or disabled for a one-shot run with --no-session-persistence."
   },
+  "transcript_location": {
+    "value": "Local session store; list/resume via --list-sessions; exact path undocumented",
+    "source_url": "https://docs.qoder.com/cli/cli-reference#session-management:~:text=--list-sessions",
+    "comment": "Sessions persist by default and can be listed, resumed, continued, deleted, or disabled for a one-shot run with --no-session-persistence."
+  },
   "keyboard_shortcuts": {
     "support": "unknown",
     "source_url": "https://docs.qoder.com/cli/interface#keyboard-shortcuts:~:text=Run%20%60%2Fshortcuts%60%20in%20the%20interactive%20interface",

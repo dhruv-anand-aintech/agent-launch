@@ -151,6 +151,11 @@
     "source_url": "https://mimo.xiaomi.com/mimocode/sessions#session-storage:~:text=Session%20data%20is%20saved%20in%20MiMo%20Code%27s%20data%20directory",
     "comment": "MiMo persists every conversation as a session, with session data saved under MIMOCODE_HOME/data."
   },
+  "transcript_location": {
+    "value": "$MIMOCODE_HOME/data",
+    "source_url": "https://mimo.xiaomi.com/mimocode/sessions#session-storage:~:text=Session%20data%20is%20saved%20in%20MiMo%20Code%27s%20data%20directory",
+    "comment": "MiMo persists every conversation as a session, with session data saved under MIMOCODE_HOME/data."
+  },
   "keyboard_shortcuts": {
     "support": "full",
     "source_url": "https://mimo.xiaomi.com/mimocode/keybinds#keybinds:~:text=keybindings",

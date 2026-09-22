@@ -148,6 +148,11 @@
     "source_url": "https://ampcode.com/manual#sessionstart-run-setup-when-a-thread-starts:~:text=session",
     "comment": "Location: transcript/session disk storage was not found in public docs reviewed."
   },
+  "transcript_location": {
+    "value": "Undocumented",
+    "source_url": "https://ampcode.com/manual#sessionstart-run-setup-when-a-thread-starts:~:text=session",
+    "comment": "Location: transcript/session disk storage was not found in public docs reviewed."
+  },
   "keyboard_shortcuts": {
     "support": "unknown",
     "source_url": "https://docs.example.com/#documentation:~:text=keybindings",

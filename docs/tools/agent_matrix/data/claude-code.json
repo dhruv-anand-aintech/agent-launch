@@ -141,6 +141,11 @@
     "source_url": "https://code.claude.com/docs/en/settings#source:~:text=transcript",
     "comment": "Location: Claude Code CLI transcripts are JSONL under `~/.claude/projects/<proj-path-dashes>/<sessionId>.jsonl`."
   },
+  "transcript_location": {
+    "value": "~/.claude/projects/<proj-path-dashes>/<sessionId>.jsonl",
+    "source_url": "https://code.claude.com/docs/en/settings#source:~:text=transcript",
+    "comment": "Location: Claude Code CLI transcripts are JSONL under `~/.claude/projects/<proj-path-dashes>/<sessionId>.jsonl`."
+  },
   "keyboard_shortcuts": {
     "support": "full",
     "source_url": "https://code.claude.com/docs/en/settings#settings:~:text=keybindings",

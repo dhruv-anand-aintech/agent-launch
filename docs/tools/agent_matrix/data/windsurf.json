@@ -136,6 +136,11 @@
     "source_url": "https://docs.windsurf.com/#source:~:text=session",
     "comment": "Location: transcript/session disk storage was not found in public docs reviewed."
   },
+  "transcript_location": {
+    "value": "~/.windsurf/transcripts/{trajectory_id}.jsonl when transcript hook is enabled; default store undocumented",
+    "source_url": "https://docs.windsurf.com/#source:~:text=session",
+    "comment": "Location: transcript/session disk storage was not found in public docs reviewed."
+  },
   "keyboard_shortcuts": {
     "support": "unknown",
     "source_url": "https://docs.example.com/#documentation:~:text=keybindings",

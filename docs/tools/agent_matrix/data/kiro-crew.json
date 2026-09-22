@@ -7,7 +7,12 @@
     "slug": "kiro-crew"
   },
   "form_factor": {
-    "values": ["CLI", "Desktop App", "Web", "Mobile"],
+    "values": [
+      "CLI",
+      "Desktop App",
+      "Web",
+      "Mobile"
+    ],
     "source_url": "https://github.com/kirodotdev/KiroCrew#quick-start:~:text=desktop%20app%2C%20web%20dashboard%2C%20and%20CLI",
     "comment": "Kiro Crew provides a local CLI, desktop app, responsive web dashboard, and mobile access through the dashboard and messaging integrations. Per-form-factor links: CLI: https://kiro.dev/docs/crew/; Desktop App: https://github.com/kirodotdev/KiroCrew/releases; Web: https://kiro.dev/crew/; Mobile: https://kiro.dev/crew/.",
     "links": {
@@ -144,6 +149,11 @@
   },
   "transcripts": {
     "support": "full",
+    "source_url": "https://github.com/kirodotdev/KiroCrew#why-kiro-crew:~:text=remembers%20across%20sessions",
+    "comment": "Persistent workspace history and checkpoints are core Crew features and are stored under the Crew data home."
+  },
+  "transcript_location": {
+    "value": "Persistent workspace history under the Crew data home; exact path undocumented",
     "source_url": "https://github.com/kirodotdev/KiroCrew#why-kiro-crew:~:text=remembers%20across%20sessions",
     "comment": "Persistent workspace history and checkpoints are core Crew features and are stored under the Crew data home."
   },

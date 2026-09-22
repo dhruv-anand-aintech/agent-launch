@@ -72,6 +72,11 @@
     "source_url": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-chat.html#source:~:text=q%20chat%20--resume",
     "comment": "Conversation history is auto-saved per working directory to support `--resume`, but there is no documented user-facing export/transcript file format akin to a JSONL log."
   },
+  "transcript_location": {
+    "value": "Per-working-directory saved history; internal path undocumented",
+    "source_url": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-chat.html#source:~:text=q%20chat%20--resume",
+    "comment": "Conversation history is auto-saved per working directory to support `--resume`, but there is no documented user-facing export/transcript file format akin to a JSONL log."
+  },
   "model_selection": {
     "support": "full",
     "source_url": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-chat-models.html#source:~:text=/model",

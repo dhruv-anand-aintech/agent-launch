@@ -133,6 +133,11 @@
     "source_url": "https://replit.com/ai#introducing-replit-agent:~:text=agent",
     "comment": "Location: hosted/web/API-managed session history; no local transcript directory documented."
   },
+  "transcript_location": {
+    "value": "Hosted service; no local default",
+    "source_url": "https://replit.com/ai#introducing-replit-agent:~:text=agent",
+    "comment": "Location: hosted/web/API-managed session history; no local transcript directory documented."
+  },
   "keyboard_shortcuts": {
     "support": "unknown",
     "source_url": "https://docs.example.com/#documentation:~:text=keybindings",

@@ -8,7 +8,9 @@
     "slug": "muse-code"
   },
   "form_factor": {
-    "values": ["CLI"],
+    "values": [
+      "CLI"
+    ],
     "source_url": "https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2#availability:~:text=Install%20Muse%20Code",
     "comment": "Terminal-native coding agent for macOS and Linux. Install with the official dev.meta.ai shell installer.",
     "links": {
@@ -90,6 +92,11 @@
   },
   "transcripts": {
     "support": "full",
+    "source_url": "https://developer.meta.com/ai/products/muse-code#sessions:~:text=sessions",
+    "comment": "Sessions and event logs are persisted locally by default; --no-session-log disables persistence for a run."
+  },
+  "transcript_location": {
+    "value": "Local session/event logs; exact path undocumented",
     "source_url": "https://developer.meta.com/ai/products/muse-code#sessions:~:text=sessions",
     "comment": "Sessions and event logs are persisted locally by default; --no-session-log disables persistence for a run."
   },

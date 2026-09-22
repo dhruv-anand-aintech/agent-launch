@@ -20,7 +20,7 @@ const columns = Object.entries(schema.properties)
   });
 
 const groups = [...new Set(columns.map(c => c.group))];
-const META_COLUMN_KEYS = ["name", "form_factor", "released_in", "latest_major_update", "pricing", "notes"];
+const META_COLUMN_KEYS = ["name", "form_factor", "released_in", "latest_major_update", "pricing", "transcript_location", "notes"];
 const featureCount = columns.filter(c => !META_COLUMN_KEYS.includes(c.key)).length;
 
 function htmlEscape(v) { return String(v ?? "").replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;").replaceAll('"',"&quot;"); }
@@ -33,6 +33,14 @@ function agentDomain(agent) {
 const FAVICON_OVERRIDES = {
   aider: "/aider.png",
   amp: "/amp.svg",
+  "claude-code": "https://cdn.simpleicons.org/claude",
+  cline: "https://cdn.simpleicons.org/cline",
+  cursor: "https://cdn.simpleicons.org/cursor",
+  "gemini-cli": "https://cdn.simpleicons.org/googlegemini",
+  "github-copilot-cli": "https://cdn.simpleicons.org/githubcopilot",
+  "github-copilot-coding-agent": "https://cdn.simpleicons.org/githubcopilot",
+  opencode: "https://cdn.simpleicons.org/opencode",
+  "replit-agent": "https://cdn.simpleicons.org/replit",
 };
 
 const COMPANY_LOGO_OVERRIDES = {
@@ -46,9 +54,10 @@ const COMPANY_LOGO_OVERRIDES = {
   "cohere-north": { website: "https://cohere.com/", name: "Cohere" },
   "command-code": { website: "https://commandcode.ai/", name: "Command Code" },
   crush: { website: "https://charm.land/", name: "Charm" },
-  cursor: { website: "https://cursor.com/", name: "Anysphere" },
+  cursor: { website: "https://anysphere.inc/", name: "Anysphere" },
   devin: { website: "https://cognition.ai/", name: "Cognition" },
   "factory-droid": { website: "https://factory.ai/", name: "Factory" },
+  fx: { website: "https://vercel.com/", name: "Vercel", logo: "https://cdn.simpleicons.org/vercel" },
   "gemini-cli": { website: "https://google.com/", name: "Google" },
   "github-copilot-cli": { website: "https://github.com/", name: "GitHub" },
   "github-copilot-coding-agent": { website: "https://github.com/", name: "GitHub" },
@@ -61,7 +70,7 @@ const COMPANY_LOGO_OVERRIDES = {
   kiro: { website: "https://aws.amazon.com/", name: "AWS" },
   "mimo-code": { website: "https://xiaomi.com/", name: "Xiaomi" },
   "muse-code": { website: "https://about.meta.com/", name: "Meta" },
-  opencode: { website: "https://github.com/anomalyco/", name: "Anomaly" },
+  opencode: { website: "https://anoma.ly/", name: "Anomaly" },
   openhands: { website: "https://www.all-hands.dev/", name: "OpenHands" },
   pi: { website: "https://pi.dev/", name: "Pi" },
   "pier-code": { website: "https://piercode.com/", name: "Pier" },
@@ -263,7 +272,7 @@ th {
 th.corner { position: sticky; left: 0; z-index: 25; background: #e8decc; min-width: 156px; width: 156px; }
 th.agent-col {
   width: var(--agent-col-w, 88px); min-width: var(--agent-col-w, 88px); max-width: var(--agent-col-w, 88px);
-  min-height: 64px; height: auto; cursor: grab; transition: opacity .15s;
+  min-height: 92px; height: auto; cursor: grab; transition: opacity .15s;
   padding: 5px 6px 7px; vertical-align: bottom;
 }
 th.agent-col.hidden-col { cursor: default; }
@@ -276,11 +285,10 @@ th.agent-col.hidden-col {
 th.agent-col.hidden-col .agent-name { display: none; }
 .agent-head {
   display: flex; flex-direction: column; align-items: center; justify-content: flex-end;
-  gap: 4px; min-height: 48px; width: 100%;
+  gap: 5px; min-height: 78px; width: 100%;
 }
 .agent-brand-link {
-  display: flex; flex-direction: column; align-items: center; justify-content: flex-end;
-  gap: 4px; width: 100%; text-decoration: none; color: inherit; border-radius: 4px;
+  display: block; width: 100%; text-decoration: none; color: inherit; border-radius: 4px;
 }
 .agent-brand-link:hover { background: rgba(42, 36, 27, 0.06); }
 .agent-brand-link:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
@@ -289,17 +297,19 @@ a.docs-link:hover { text-decoration: none; }
 .agent-name {
   width: 100%; box-sizing: border-box; font-weight: 700; line-height: 1.15; color: var(--ink);
   text-align: center; overflow-wrap: anywhere; word-break: break-word; hyphens: auto;
-  overflow: hidden; max-height: 2.6em;
+  font-size: 9px;
 }
+.agent-brand-lockup { display: flex; align-items: center; justify-content: center; gap: 4px; min-height: 32px; }
+.agent-brand-lockup .by { color: var(--muted); font-size: 8px; font-weight: 500; }
+.agent-brand-lockup .company-logo .fav,
+.agent-brand-lockup .company-logo .fav-box { width: 22px; height: 22px; }
+.agent-brand-lockup .company-logo svg { width: 22px; height: 22px; }
 .row-label.dragging { opacity: .4; }
 .row-label.drag-over { outline: 2px dashed var(--accent); outline-offset: -2px; }
 .fav-box { display: inline-block; background: #fff; border-radius: 6px; line-height: 0; box-shadow: inset 0 0 0 1px var(--line); }
 th.agent-col .fav { width: 32px; height: 32px; vertical-align: middle; border-radius: 6px; }
-.logo-cell { height: 40px; background: #fffdf8; }
-.logo-cell .fav { width: 32px; height: 32px; vertical-align: middle; border-radius: 6px; }
 .logo-link { display: inline-flex; line-height: 0; border-radius: 6px; }
 .logo-link:hover { outline: 2px solid var(--accent); outline-offset: 1px; }
-.logo-row .row-label { background: #faf7ef; }
 th.agent-col.deprecated-col { opacity: .42; }
 th.agent-col.deprecated-col .agent-name::after { content: " (deprecated)"; font-weight: 400; font-size: 8px; }
 th.agent-col .eye {
@@ -431,7 +441,7 @@ td.value .cell-value {
 </header>
 <main id="matrixView" class="view-panel matrix-view">
 <section class="hero">
-  <p>Compare ${htmlEscape(matrix.length)} AI coding agents across ${htmlEscape(featureCount)} features. <strong>Agent logo</strong> opens the product site and <strong>Company logo</strong> opens its publisher; <strong>⊙</strong> hides or shows a column; drag headers to reorder; use the <strong>API docs</strong> row for official references.</p>
+  <p>Compare ${htmlEscape(matrix.length)} AI coding agents across ${htmlEscape(featureCount)} features. Product and publisher logos are combined in each header; <strong>⊙</strong> hides or shows a column; drag headers to reorder; use the <strong>API docs</strong> row for official references.</p>
   <div class="meta-row">
     <span class="pill">${htmlEscape(matrix.length)} agents</span>
     <span class="pill" id="updatedPill" data-updated-at="${htmlEscape(updatedAt)}">${htmlEscape(formatUpdatedLabel(updatedAt))}</span>
@@ -465,11 +475,26 @@ function agentBrandUrl(agent) {
 }
 function agentBrandHeadHtml(agent, idx) {
   var url = agentBrandUrl(agent);
-  var inner = '<span class="agent-name">'+esc(agent.name)+'</span>';
-  if (!url) return '<div class="agent-head">'+inner+'</div>';
+  var slug = (agent.links && agent.links.slug) || '';
+  var company = companyLogoOverrides[slug] || {};
+  var companyUrl = (agent.links && agent.links.company_website) || company.website || '';
+  var agentSrc = logoSource(agent, 'agent');
+  var companySrc = logoSource(agent, 'company');
+  var productDomain = '', companyDomain = '';
+  try { productDomain = new URL(url).hostname.replace(/^www\\./, ''); } catch(e) {}
+  try { companyDomain = new URL(companyUrl).hostname.replace(/^www\\./, ''); } catch(e) {}
+  var agentNameKey = String(agent.name || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+  var companyNameKey = String(company.name || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+  var distinctPublisher = productDomain !== companyDomain || (faviconOverrides[slug] && companyNameKey && !agentNameKey.includes(companyNameKey));
+  var showCompany = Boolean(companySrc && companyUrl && distinctPublisher && companySrc !== agentSrc);
+  var logos = '<div class="agent-brand-lockup">'+
+    (url ? '<a class="logo-link" href="'+esc(url)+'" target="_blank" rel="noopener noreferrer" title="Open product site">'+favimg(agent, idx, 'agent')+'</a>' : favimg(agent, idx, 'agent'))+
+    (showCompany ? '<span class="by">by</span><a class="logo-link company-logo" href="'+esc(companyUrl)+'" target="_blank" rel="noopener noreferrer" title="Open '+esc(company.name || 'publisher')+' site">'+favimg(agent, idx, 'company')+'</a>' : '')+
+    '</div>';
+  if (!url) return '<div class="agent-head">'+logos+'<span class="agent-name">'+esc(agent.name)+'</span></div>';
   var host = agentDomain(agent);
   var title = host ? ('Open ' + host) : 'Open product site';
-  return '<div class="agent-head"><a class="agent-brand-link" href="'+esc(url)+'" target="_blank" rel="noopener noreferrer" draggable="false" title="'+esc(title)+'">'+inner+'</a></div>';
+  return '<div class="agent-head">'+logos+'<a class="agent-brand-link" href="'+esc(url)+'" target="_blank" rel="noopener noreferrer" draggable="false" title="'+esc(title)+'"><span class="agent-name">'+esc(agent.name)+'</span></a></div>';
 }
 function providerDocsCell(agent) {
   var url = agent.links && agent.links.docs;
@@ -707,6 +732,17 @@ function avatarSvg(ini, c, size) {
   var s = size||32, r = Math.round(s/5), fs = Math.round(s*0.44);
   return '<svg width="'+s+'" height="'+s+'" viewBox="0 0 '+s+' '+s+'" xmlns="http://www.w3.org/2000/svg"><rect width="'+s+'" height="'+s+'" rx="'+r+'" fill="'+c+'"/><text x="'+s/2+'" y="'+s/2+'" text-anchor="middle" dominant-baseline="central" fill="white" font-size="'+fs+'" font-weight="700" font-family="Inter,sans-serif">'+ini+'</text></svg>';
 }
+function logoSource(agent, kind) {
+  kind = kind || 'agent';
+  var slug = (agent.links && agent.links.slug) || '';
+  var company = companyLogoOverrides[slug] || {};
+  if (kind === 'agent' && faviconOverrides[slug]) return faviconOverrides[slug];
+  if (kind === 'company' && company.logo) return company.logo;
+  var website = kind === 'company' ? company.website : agentBrandUrl(agent);
+  var domain = '';
+  try { domain = new URL(website).hostname.replace(/^www\\./, ''); } catch(e) {}
+  return domain ? 'https://www.google.com/s2/favicons?domain='+encodeURIComponent(domain)+'&sz=64' : '';
+}
 function favimg(agent, idx, kind) {
   kind = kind || 'agent';
   var slug = (agent.links && agent.links.slug) || '';
@@ -714,26 +750,9 @@ function favimg(agent, idx, kind) {
   var displayName = kind === 'company' ? (company.name || agent.name) : agent.name;
   var ini = agentInitials(displayName), c = COLORS[idx%COLORS.length];
   var fallback = avatarSvg(ini, c, 32);
-  var src = (function(){
-    if (kind === 'agent' && faviconOverrides[slug]) return faviconOverrides[slug];
-    var d = kind === 'company' ? company.website : agentDomain(agent);
-    try { d = new URL(d).hostname.replace(/^www\\./, ''); } catch(e) { d = ''; }
-    return d ? 'https://www.google.com/s2/favicons?domain='+esc(encodeURIComponent(d))+'&sz=64' : '';
-  })();
+  var src = logoSource(agent, kind);
   if (!src) return '<span class="fav-box">'+fallback+'</span>';
   return '<span class="fav-box" style="position:relative"><img class="fav" src="'+esc(src)+'" alt="" width="32" height="32" loading="lazy" onerror="var p=this.parentElement;this.style.display=\\x27none\\x27;var s=p.querySelector(\\x27.fav-av\\x27);if(s)s.style.display=\\x27inline\\x27"><span class="fav-av" style="display:none">'+fallback+'</span></span>';
-}
-function logoCell(agent, idx, kind) {
-  var slug = (agent.links && agent.links.slug) || '';
-  var company = companyLogoOverrides[slug] || {};
-  var url = kind === 'company' ? (agent.links && agent.links.company_website) || company.website : agentBrandUrl(agent);
-  var title = kind === 'company' ? 'Open company site' : 'Open product site';
-  var content = favimg(agent, idx, kind);
-  var id = cellId(agent, kind + '_logo');
-  return '<td id="'+id+'" class="logo-cell">'+(url ? '<a class="logo-link" href="'+esc(url)+'" target="_blank" rel="noopener noreferrer" title="'+title+'">'+content+'</a>' : content)+'</td>';
-}
-function logoRow(label, kind, cols) {
-  return '<tr class="logo-row">'+rowLabelCell(label,'','')+cols.map(function(i){return hidden.has(i) ? hiddenBodyCell() : logoCell(matrix[i], i, kind);}).join('')+'</tr>';
 }
 function cell(agent, col) {
   var v = agent[col.key];
@@ -779,17 +798,7 @@ function updateColWidths() {
 }
 function fitAgentHeaderNames() {
   document.querySelectorAll('th.agent-col:not(.hidden-col) .agent-name').forEach(function(el) {
-    el.style.fontSize = '';
-    var box = el.closest('.agent-head');
-    if (!box) return;
-    var maxW = Math.max(0, box.clientWidth - 2);
-    var maxH = 34;
-    var fs = 10;
-    el.style.fontSize = fs + 'px';
-    while (fs > 5.5 && (el.scrollWidth > maxW + 1 || el.scrollHeight > maxH)) {
-      fs -= 0.5;
-      el.style.fontSize = fs + 'px';
-    }
+    el.style.fontSize = '9px';
   });
 }
 function scheduleFitAgentHeaderNames() {
@@ -841,8 +850,6 @@ function renderBody() {
   var cols = bodyColOrder();
   var rows = [];
   rows.push('<tr class="group-head">'+rowLabelCell('About',' group-row-label','')+cols.map(function(i){return hidden.has(i) ? hiddenBodyCell() : '<td class="group-spacer"></td>';}).join('')+'</tr>');
-  rows.push(logoRow('Agent logo', 'agent', cols));
-  rows.push(logoRow('Company logo', 'company', cols));
   rows.push('<tr>'+rowLabelCell('API docs','',' title="Official documentation for this product"')+cols.map(function(i){
     if (hidden.has(i)) return hiddenBodyCell();
     return providerDocsCell(matrix[i]);

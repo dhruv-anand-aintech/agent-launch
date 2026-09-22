@@ -148,6 +148,11 @@
     "source_url": "https://www.piercode.com/#product:~:text=Built%20for%20long%20coding%20sessions",
     "comment": "Verified locally: Pier persists sessions for resume/archive/delete/fork flows under its local Pier state."
   },
+  "transcript_location": {
+    "value": "Local Pier state; exact path undocumented",
+    "source_url": "https://www.piercode.com/#product:~:text=Built%20for%20long%20coding%20sessions",
+    "comment": "Verified locally: Pier persists sessions for resume/archive/delete/fork flows under its local Pier state."
+  },
   "keyboard_shortcuts": {
     "support": "unknown",
     "source_url": "https://www.piercode.com/faq#questions-answered:~:text=Questions%2C%20answered",

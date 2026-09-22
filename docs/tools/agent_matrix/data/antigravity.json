@@ -142,6 +142,11 @@
     "source_url": "https://antigravity.google/docs/getting-started#basic-navigation:~:text=conversation",
     "comment": "Location: Antigravity brain/trajectory summaries are under `~/.gemini/antigravity/brain/<uuid>/*.md`; index data is in `~/Library/Application Support/Antigravity/User/globalStorage/state.vscdb`."
   },
+  "transcript_location": {
+    "value": "~/.gemini/antigravity/brain/<uuid>/*.md; ~/Library/Application Support/Antigravity/User/globalStorage/state.vscdb",
+    "source_url": "https://antigravity.google/docs/getting-started#basic-navigation:~:text=conversation",
+    "comment": "Location: Antigravity brain/trajectory summaries are under `~/.gemini/antigravity/brain/<uuid>/*.md`; index data is in `~/Library/Application Support/Antigravity/User/globalStorage/state.vscdb`."
+  },
   "keyboard_shortcuts": {
     "support": "unknown",
     "source_url": "https://docs.example.com/#documentation:~:text=keybindings",

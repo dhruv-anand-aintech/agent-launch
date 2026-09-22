@@ -96,6 +96,11 @@
     "source_url": "https://www.jetbrains.com/help/air/chat.html#chat:~:text=create%20and%20continue%20tasks",
     "comment": "Air retains task chats for continuation and review, but public documentation does not expose a portable local transcript format or path."
   },
+  "transcript_location": {
+    "value": "Task chats retained in-app; no portable local transcript path documented",
+    "source_url": "https://www.jetbrains.com/help/air/chat.html#chat:~:text=create%20and%20continue%20tasks",
+    "comment": "Air retains task chats for continuation and review, but public documentation does not expose a portable local transcript format or path."
+  },
   "model_selection": {
     "support": "full",
     "source_url": "https://www.jetbrains.com/help/air/select-agents-and-models.html#select-an-agent-and-model-for-a-new-task:~:text=select%20an%20agent%20and%20a%20model%20per%20task",

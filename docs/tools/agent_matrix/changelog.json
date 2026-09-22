@@ -1,6 +1,173 @@
 {
-  "entry_count": 1877,
+  "entry_count": 1917,
   "entries": [
+    {
+      "date": "2026-09-22",
+      "commit": "",
+      "title": "Unreleased matrix update",
+      "items": [
+        {
+          "summary": "Aider: Default Transcript Location updated to .aider.chat.history.md (workspace/configured)",
+          "target": "cell-aider-transcript-location"
+        },
+        {
+          "summary": "Amazon Q Developer CLI: Default Transcript Location updated to Per-working-directory saved history; internal path undocumented",
+          "target": "cell-amazon-q-developer-cli-transcript-location"
+        },
+        {
+          "summary": "Amp: Default Transcript Location updated to Undocumented",
+          "target": "cell-amp-transcript-location"
+        },
+        {
+          "summary": "Antigravity: Default Transcript Location updated to ~/.gemini/antigravity/brain/<uuid>/*.md; ~/Library/Application Support/…",
+          "target": "cell-antigravity-transcript-location"
+        },
+        {
+          "summary": "Claude Code: Default Transcript Location updated to ~/.claude/projects/<proj-path-dashes>/<sessionId>.jsonl",
+          "target": "cell-claude-code-transcript-location"
+        },
+        {
+          "summary": "Cline: Default Transcript Location updated to Undocumented",
+          "target": "cell-cline-transcript-location"
+        },
+        {
+          "summary": "OpenAI Codex CLI: Default Transcript Location updated to ~/.codex/sessions/YYYY/MM/DD/rollout-<iso>-<id>.jsonl",
+          "target": "cell-codex-cli-transcript-location"
+        },
+        {
+          "summary": "Cohere North: Default Transcript Location updated to Hosted service; no local default",
+          "target": "cell-cohere-north-transcript-location"
+        },
+        {
+          "summary": "Command Code: Default Transcript Location updated to /session-file (runtime-resolved path)",
+          "target": "cell-command-code-transcript-location"
+        },
+        {
+          "summary": "Crush: Default Transcript Location updated to Local SQLite; exact path undocumented",
+          "target": "cell-crush-transcript-location"
+        },
+        {
+          "summary": "Cursor: Default Transcript Location updated to ~/.cursor/projects/<slug>/agent-transcripts/<agentId>/<agentId>.jsonl;…",
+          "target": "cell-cursor-transcript-location"
+        },
+        {
+          "summary": "Devin: Default Transcript Location updated to Hosted service; no local default",
+          "target": "cell-devin-transcript-location"
+        },
+        {
+          "summary": "Factory Droid: Default Transcript Location updated to Factory-managed local session store; exact path undocumented",
+          "target": "cell-factory-droid-transcript-location"
+        },
+        {
+          "summary": "Fx: Default Transcript Location updated to Per-workspace saved sessions; exact path undocumented",
+          "target": "cell-fx-transcript-location"
+        },
+        {
+          "summary": "Gemini CLI: Default Transcript Location updated to Undocumented",
+          "target": "cell-gemini-cli-transcript-location"
+        },
+        {
+          "summary": "GitHub Copilot CLI: Default Transcript Location updated to ~/.copilot/logs/ (logs); --share=PATH exports Markdown",
+          "target": "cell-github-copilot-cli-transcript-location"
+        },
+        {
+          "summary": "GitHub Copilot: Default Transcript Location updated to Hosted service; no local default documented",
+          "target": "cell-github-copilot-coding-agent-transcript-location"
+        },
+        {
+          "summary": "Goose: Default Transcript Location updated to ~/.local/share/goose/sessions/sessions.db (Unix); %APPDATA%\\Block\\goose…",
+          "target": "cell-goose-transcript-location"
+        },
+        {
+          "summary": "Grok Build: Default Transcript Location updated to Undocumented",
+          "target": "cell-grok-build-transcript-location"
+        },
+        {
+          "summary": "JetBrains Air: Default Transcript Location updated to Task chats retained in-app; no portable local transcript path documented",
+          "target": "cell-jetbrains-air-transcript-location"
+        },
+        {
+          "summary": "Google Jules: Default Transcript Location updated to Hosted service; no local default",
+          "target": "cell-jules-transcript-location"
+        },
+        {
+          "summary": "JetBrains Junie: Default Transcript Location updated to Undocumented; /history and Ctrl+T expose saved/current sessions",
+          "target": "cell-junie-transcript-location"
+        },
+        {
+          "summary": "Kilo Code: Default Transcript Location updated to Undocumented",
+          "target": "cell-kilo-code-transcript-location"
+        },
+        {
+          "summary": "Kimi Code CLI: Default Transcript Location updated to Undocumented",
+          "target": "cell-kimi-cli-transcript-location"
+        },
+        {
+          "summary": "Kiro Crew: Default Transcript Location updated to Persistent workspace history under the Crew data home; exact path undoc…",
+          "target": "cell-kiro-crew-transcript-location"
+        },
+        {
+          "summary": "Kiro: Default Transcript Location updated to Directory-based conversation store; exact path undocumented",
+          "target": "cell-kiro-transcript-location"
+        },
+        {
+          "summary": "MiMo Code: Default Transcript Location updated to $MIMOCODE_HOME/data",
+          "target": "cell-mimo-code-transcript-location"
+        },
+        {
+          "summary": "Muse Code: Default Transcript Location updated to Local session/event logs; exact path undocumented",
+          "target": "cell-muse-code-transcript-location"
+        },
+        {
+          "summary": "OpenAI Agents API: Default Transcript Location updated to Hosted service sessions; input/output/tool/event items retrieved via API",
+          "target": "cell-openai-agents-api-transcript-location"
+        },
+        {
+          "summary": "OpenCode: Default Transcript Location updated to ~/.local/share/opencode/opencode.db; legacy: ~/.local/share/opencode/st…",
+          "target": "cell-opencode-transcript-location"
+        },
+        {
+          "summary": "OpenHands: Default Transcript Location updated to ~/.openhands/conversations/",
+          "target": "cell-openhands-transcript-location"
+        },
+        {
+          "summary": "Pi: Default Transcript Location updated to ~/.pi/agent/sessions/",
+          "target": "cell-pi-transcript-location"
+        },
+        {
+          "summary": "Pier Code: Default Transcript Location updated to Local Pier state; exact path undocumented",
+          "target": "cell-pier-code-transcript-location"
+        },
+        {
+          "summary": "Qoder: Default Transcript Location updated to Local session store; list/resume via --list-sessions; exact path undocu…",
+          "target": "cell-qoder-transcript-location"
+        },
+        {
+          "summary": "Qwen Code: Default Transcript Location updated to Undocumented",
+          "target": "cell-qwen-code-transcript-location"
+        },
+        {
+          "summary": "Replit Agent: Default Transcript Location updated to Hosted service; no local default",
+          "target": "cell-replit-agent-transcript-location"
+        },
+        {
+          "summary": "Roo Code: Default Transcript Location updated to Undocumented",
+          "target": "cell-roo-code-transcript-location"
+        },
+        {
+          "summary": "Trae Agent: Default Transcript Location updated to Trajectory JSON at auto-generated or custom path",
+          "target": "cell-trae-agent-transcript-location"
+        },
+        {
+          "summary": "Windsurf Cascade: Default Transcript Location updated to ~/.windsurf/transcripts/{trajectory_id}.jsonl when transcript hook is e…",
+          "target": "cell-windsurf-transcript-location"
+        },
+        {
+          "summary": "ZCode: Default Transcript Location updated to Desktop task/conversation history; exact path undocumented",
+          "target": "cell-zcode-transcript-location"
+        }
+      ]
+    },
     {
       "date": "2026-09-18",
       "commit": "5369b0d",

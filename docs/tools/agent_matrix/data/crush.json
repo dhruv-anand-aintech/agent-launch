@@ -75,6 +75,11 @@
     "source_url": "https://github.com/charmbracelet/crush/blob/main/internal/cmd/session.go#source:~:text=Manage%20Crush%20sessions",
     "comment": "Local SQLite-backed session storage with a dedicated `crush session` CLI subcommand: `list`, `show <id>`, `last`, `delete`, `rename`, each supporting `--json` for machine-readable transcripts including full message parts (text, reasoning, tool calls/results)."
   },
+  "transcript_location": {
+    "value": "Local SQLite; exact path undocumented",
+    "source_url": "https://github.com/charmbracelet/crush/blob/main/internal/cmd/session.go#source:~:text=Manage%20Crush%20sessions",
+    "comment": "Local SQLite-backed session storage with a dedicated `crush session` CLI subcommand: `list`, `show <id>`, `last`, `delete`, `rename`, each supporting `--json` for machine-readable transcripts including full message parts (text, reasoning, tool calls/results)."
+  },
   "model_selection": {
     "support": "full",
     "source_url": "https://github.com/charmbracelet/crush/blob/main/internal/cmd/run.go#source:~:text=runCmd.Flags().StringP(%22model%22%2C%20%22m%22%2C%20%22%22%2C%20%22Model%20to%20use",

@@ -141,6 +141,11 @@
     "source_url": "https://junie.jetbrains.com/docs/slash-commands.html#navigation:~:text=%60Ctrl%2BT%20%60%20Open%20the%20full%20transcript%20of%20the%20current%20session",
     "comment": "Interactive CLI exposes the full current-session transcript with Ctrl+T and session history with `/history`; public docs do not specify the disk storage path."
   },
+  "transcript_location": {
+    "value": "Undocumented; /history and Ctrl+T expose saved/current sessions",
+    "source_url": "https://junie.jetbrains.com/docs/slash-commands.html#navigation:~:text=%60Ctrl%2BT%20%60%20Open%20the%20full%20transcript%20of%20the%20current%20session",
+    "comment": "Interactive CLI exposes the full current-session transcript with Ctrl+T and session history with `/history`; public docs do not specify the disk storage path."
+  },
   "keyboard_shortcuts": {
     "support": "unknown",
     "source_url": "https://docs.example.com/#documentation:~:text=keybindings",

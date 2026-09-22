@@ -142,6 +142,11 @@
     "source_url": "https://docs.github.com/en/copilot/concepts/agents/cloud-agent/about-cloud-agent#benefits-over-traditional-ai-workflows:~:text=session",
     "comment": "Location: transcript/session disk storage was not found in public docs reviewed."
   },
+  "transcript_location": {
+    "value": "Hosted service; no local default documented",
+    "source_url": "https://docs.github.com/en/copilot/concepts/agents/cloud-agent/about-cloud-agent#benefits-over-traditional-ai-workflows:~:text=session",
+    "comment": "Location: transcript/session disk storage was not found in public docs reviewed."
+  },
   "keyboard_shortcuts": {
     "support": "unknown",
     "source_url": "https://docs.example.com/#documentation:~:text=keybindings",

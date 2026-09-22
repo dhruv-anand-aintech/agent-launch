@@ -96,6 +96,11 @@
     "source_url": "https://fx.sh/docs/using-fx/sessions#sessions:~:text=fx%20saves%20interactive%20conversations%20under",
     "comment": "Location: Fx saves session transcripts under `~/.fx/sessions/`; they can be listed, inspected as JSON, resumed, migrated, and recovered."
   },
+  "transcript_location": {
+    "value": "Per-workspace saved sessions; exact path undocumented",
+    "source_url": "https://fx.sh/docs/using-fx/sessions#sessions:~:text=fx%20saves%20interactive%20conversations%20under",
+    "comment": "Location: Fx saves session transcripts under `~/.fx/sessions/`; they can be listed, inspected as JSON, resumed, migrated, and recovered."
+  },
   "model_selection": {
     "support": "full",
     "source_url": "https://fx.sh/docs/configure-fx/configuration#agent-and-model-settings:~:text=models",

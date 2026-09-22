@@ -146,6 +146,11 @@
     "source_url": "https://github.com/bytedance/trae-agent#trajectory-recording:~:text=Trajectory%20files%20contain%20LLM%20interactions%2C%20agent%20steps%2C%20tool%20usage%2C%20and%20execution%20metadata",
     "comment": "Trajectory recording is first-class, with auto-generated or custom trajectory JSON files."
   },
+  "transcript_location": {
+    "value": "Trajectory JSON at auto-generated or custom path",
+    "source_url": "https://github.com/bytedance/trae-agent#trajectory-recording:~:text=Trajectory%20files%20contain%20LLM%20interactions%2C%20agent%20steps%2C%20tool%20usage%2C%20and%20execution%20metadata",
+    "comment": "Trajectory recording is first-class, with auto-generated or custom trajectory JSON files."
+  },
   "keyboard_shortcuts": {
     "support": "unknown",
     "source_url": "https://docs.example.com/#documentation:~:text=unknown",

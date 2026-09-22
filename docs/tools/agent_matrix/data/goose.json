@@ -74,6 +74,11 @@
     "source_url": "https://goose-docs.ai/docs/guides/managing-goose-sessions/#source:~:text=Unix-like%3A%20~/.local/share/goose/sessions/sessions.db",
     "comment": "Sessions stored in SQLite (v1.10.0+) at ~/.local/share/goose/sessions/sessions.db (Unix) or %APPDATA%\\Block\\goose\\data\\sessions\\sessions.db (Windows); pre-v1.10.0 used per-session .jsonl files under ~/.local/share/goose/sessions/. `session export` can output markdown/json/yaml; `session list`/`session diagnostics` also available."
   },
+  "transcript_location": {
+    "value": "~/.local/share/goose/sessions/sessions.db (Unix); %APPDATA%\\Block\\goose\\data\\sessions\\sessions.db (Windows)",
+    "source_url": "https://goose-docs.ai/docs/guides/managing-goose-sessions/#source:~:text=Unix-like%3A%20~/.local/share/goose/sessions/sessions.db",
+    "comment": "Sessions stored in SQLite (v1.10.0+) at ~/.local/share/goose/sessions/sessions.db (Unix) or %APPDATA%\\Block\\goose\\data\\sessions\\sessions.db (Windows); pre-v1.10.0 used per-session .jsonl files under ~/.local/share/goose/sessions/. `session export` can output markdown/json/yaml; `session list`/`session diagnostics` also available."
+  },
   "model_selection": {
     "support": "full",
     "source_url": "https://goose-docs.ai/docs/guides/environment-variables/#source:~:text=GOOSE_MODEL%20overrides%20the%20configured%20model",

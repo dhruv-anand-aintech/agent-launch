@@ -33,6 +33,7 @@
     "subagents": {"allOf": [{"$ref": "#/$defs/featureWithSource"}], "$comment": "Automation | Subagents | First-class custom or delegated subagent support."},
     "monitor": {"allOf": [{"$ref": "#/$defs/featureWithSource"}], "$comment": "Automation | Monitor | Background monitor/watch capability that lets the agent wait on, observe, or react to long-running commands, subagents, jobs, logs, WebSockets, or task status changes without blocking normal interaction."},
     "transcripts": {"allOf": [{"$ref": "#/$defs/featureWithSource"}], "$comment": "Context | Transcripts | Local or exported conversation/session transcript storage."},
+    "transcript_location": {"allOf": [{"$ref": "#/$defs/stringWithSource"}], "$comment": "Context | Default Transcript Location | Default local path, hosted location, runtime-resolved path, or explicit undocumented status."},
     "model_selection": {"allOf": [{"$ref": "#/$defs/featureWithSource"}], "$comment": "Settings | Model | Explicit model selection in CLI/settings."},
     "approval_mode": {"allOf": [{"$ref": "#/$defs/featureWithSource"}], "$comment": "Settings | Approvals | Approval or permission-mode controls."},
     "sandbox_mode": {"allOf": [{"$ref": "#/$defs/featureWithSource"}], "$comment": "Settings | Sandbox | Filesystem/network/terminal sandbox controls."},

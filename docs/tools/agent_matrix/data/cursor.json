@@ -145,6 +145,11 @@
     "source_url": "https://docs.cursor.com/en/cli/overview#source:~:text=Resume%20previous%20conversations",
     "comment": "Location: Cursor CLI transcripts live under `~/.cursor/projects/<slug>/agent-transcripts/<agentId>/<agentId>.jsonl`; Cursor IDE composer data is in SQLite `~/Library/Application Support/Cursor/User/globalStorage/state.vscdb`."
   },
+  "transcript_location": {
+    "value": "~/.cursor/projects/<slug>/agent-transcripts/<agentId>/<agentId>.jsonl; IDE: ~/Library/Application Support/Cursor/User/globalStorage/state.vscdb",
+    "source_url": "https://docs.cursor.com/en/cli/overview#source:~:text=Resume%20previous%20conversations",
+    "comment": "Location: Cursor CLI transcripts live under `~/.cursor/projects/<slug>/agent-transcripts/<agentId>/<agentId>.jsonl`; Cursor IDE composer data is in SQLite `~/Library/Application Support/Cursor/User/globalStorage/state.vscdb`."
+  },
   "keyboard_shortcuts": {
     "support": "full",
     "source_url": "https://docs.cursor.com/keybindings#keybindings:~:text=customize",

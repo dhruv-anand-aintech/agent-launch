@@ -141,6 +141,11 @@
     "source_url": "https://zcode.z.ai/en/docs/agents#workspace-entry:~:text=task%20list",
     "comment": "Task list/conversation history is first-class in the desktop UI, but public docs do not expose disk transcript paths."
   },
+  "transcript_location": {
+    "value": "Desktop task/conversation history; exact path undocumented",
+    "source_url": "https://zcode.z.ai/en/docs/agents#workspace-entry:~:text=task%20list",
+    "comment": "Task list/conversation history is first-class in the desktop UI, but public docs do not expose disk transcript paths."
+  },
   "keyboard_shortcuts": {
     "support": "full",
     "source_url": "https://zcode.z.ai/en/docs/ADE-tools#command-center:~:text=Press%20Command%20%2B%20K",

@@ -154,6 +154,11 @@
     "source_url": "https://opencode.ai/docs/share/#for-enterprises:~:text=session",
     "comment": "Location: OpenCode stores sessions/messages in SQLite `~/.local/share/opencode/opencode.db`; legacy storage uses `~/.local/share/opencode/storage/session|message|part/`."
   },
+  "transcript_location": {
+    "value": "~/.local/share/opencode/opencode.db; legacy: ~/.local/share/opencode/storage/session|message|part/",
+    "source_url": "https://opencode.ai/docs/share/#for-enterprises:~:text=session",
+    "comment": "Location: OpenCode stores sessions/messages in SQLite `~/.local/share/opencode/opencode.db`; legacy storage uses `~/.local/share/opencode/storage/session|message|part/`."
+  },
   "keyboard_shortcuts": {
     "support": "unknown",
     "source_url": "https://docs.example.com/#documentation:~:text=keybindings",

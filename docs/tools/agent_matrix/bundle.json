@@ -150,6 +150,11 @@
       "source_url": "https://aider.chat/docs/config/aider_conf.html#source:~:text=chat-history-file",
       "comment": "Location: optional chat history/transcript files are configured with Aider history settings such as `.aider.chat.history.md`."
     },
+    "transcript_location": {
+      "value": ".aider.chat.history.md (workspace/configured)",
+      "source_url": "https://aider.chat/docs/config/aider_conf.html#source:~:text=chat-history-file",
+      "comment": "Location: optional chat history/transcript files are configured with Aider history settings such as `.aider.chat.history.md`."
+    },
     "keyboard_shortcuts": {
       "support": "partial",
       "source_url": "https://aider.chat/docs/config.html#configuration:~:text=keybindings",
@@ -269,6 +274,11 @@
     },
     "transcripts": {
       "support": "partial",
+      "source_url": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-chat.html#source:~:text=q%20chat%20--resume",
+      "comment": "Conversation history is auto-saved per working directory to support `--resume`, but there is no documented user-facing export/transcript file format akin to a JSONL log."
+    },
+    "transcript_location": {
+      "value": "Per-working-directory saved history; internal path undocumented",
       "source_url": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-chat.html#source:~:text=q%20chat%20--resume",
       "comment": "Conversation history is auto-saved per working directory to support `--resume`, but there is no documented user-facing export/transcript file format akin to a JSONL log."
     },
@@ -546,6 +556,11 @@
       "source_url": "https://ampcode.com/manual#sessionstart-run-setup-when-a-thread-starts:~:text=session",
       "comment": "Location: transcript/session disk storage was not found in public docs reviewed."
     },
+    "transcript_location": {
+      "value": "Undocumented",
+      "source_url": "https://ampcode.com/manual#sessionstart-run-setup-when-a-thread-starts:~:text=session",
+      "comment": "Location: transcript/session disk storage was not found in public docs reviewed."
+    },
     "keyboard_shortcuts": {
       "support": "unknown",
       "source_url": "https://docs.example.com/#documentation:~:text=keybindings",
@@ -737,6 +752,11 @@
       "source_url": "https://antigravity.google/docs/getting-started#basic-navigation:~:text=conversation",
       "comment": "Location: Antigravity brain/trajectory summaries are under `~/.gemini/antigravity/brain/<uuid>/*.md`; index data is in `~/Library/Application Support/Antigravity/User/globalStorage/state.vscdb`."
     },
+    "transcript_location": {
+      "value": "~/.gemini/antigravity/brain/<uuid>/*.md; ~/Library/Application Support/Antigravity/User/globalStorage/state.vscdb",
+      "source_url": "https://antigravity.google/docs/getting-started#basic-navigation:~:text=conversation",
+      "comment": "Location: Antigravity brain/trajectory summaries are under `~/.gemini/antigravity/brain/<uuid>/*.md`; index data is in `~/Library/Application Support/Antigravity/User/globalStorage/state.vscdb`."
+    },
     "keyboard_shortcuts": {
       "support": "unknown",
       "source_url": "https://docs.example.com/#documentation:~:text=keybindings",
@@ -924,6 +944,11 @@
     },
     "transcripts": {
       "support": "full",
+      "source_url": "https://code.claude.com/docs/en/settings#source:~:text=transcript",
+      "comment": "Location: Claude Code CLI transcripts are JSONL under `~/.claude/projects/<proj-path-dashes>/<sessionId>.jsonl`."
+    },
+    "transcript_location": {
+      "value": "~/.claude/projects/<proj-path-dashes>/<sessionId>.jsonl",
       "source_url": "https://code.claude.com/docs/en/settings#source:~:text=transcript",
       "comment": "Location: Claude Code CLI transcripts are JSONL under `~/.claude/projects/<proj-path-dashes>/<sessionId>.jsonl`."
     },
@@ -1130,6 +1155,11 @@
       "source_url": "https://docs.cline.bot/#source:~:text=session",
       "comment": "Location: transcript/session disk storage was not found in public docs reviewed."
     },
+    "transcript_location": {
+      "value": "Undocumented",
+      "source_url": "https://docs.cline.bot/#source:~:text=session",
+      "comment": "Location: transcript/session disk storage was not found in public docs reviewed."
+    },
     "keyboard_shortcuts": {
       "support": "partial",
       "source_url": "https://github.com/cline/cline#configuration:~:text=keybindings",
@@ -1330,6 +1360,11 @@
       "source_url": "https://github.com/openai/codex#source:~:text=sessions",
       "comment": "Location: Codex session event streams are JSONL under `~/.codex/sessions/YYYY/MM/DD/rollout-<iso>-<id>.jsonl`."
     },
+    "transcript_location": {
+      "value": "~/.codex/sessions/YYYY/MM/DD/rollout-<iso>-<id>.jsonl",
+      "source_url": "https://github.com/openai/codex#source:~:text=sessions",
+      "comment": "Location: Codex session event streams are JSONL under `~/.codex/sessions/YYYY/MM/DD/rollout-<iso>-<id>.jsonl`."
+    },
     "keyboard_shortcuts": {
       "support": "unknown",
       "source_url": "https://docs.example.com/#documentation:~:text=keybindings",
@@ -1514,6 +1549,11 @@
       "source_url": "https://cohere.com/north#empower-your-workforce-with-ai-agents-that-operate-in-lockstep-with-your-people-data-and-tools:~:text=agent",
       "comment": "Location: hosted/web/API-managed session history; no local transcript directory documented."
     },
+    "transcript_location": {
+      "value": "Hosted service; no local default",
+      "source_url": "https://cohere.com/north#empower-your-workforce-with-ai-agents-that-operate-in-lockstep-with-your-people-data-and-tools:~:text=agent",
+      "comment": "Location: hosted/web/API-managed session history; no local transcript directory documented."
+    },
     "keyboard_shortcuts": {
       "support": "unknown",
       "source_url": "https://docs.example.com/#documentation:~:text=keybindings",
@@ -1658,6 +1698,11 @@
     },
     "transcripts": {
       "support": "full",
+      "source_url": "https://commandcode.ai/docs/reference/cli#cli-slash-commands:~:text=%2Fsession-file%20Show%20the%20current%20session%20id%20and%20path%20to%20the%20on-disk%20session%20file",
+      "comment": "`/session-file` reveals the current session id and on-disk session path."
+    },
+    "transcript_location": {
+      "value": "/session-file (runtime-resolved path)",
       "source_url": "https://commandcode.ai/docs/reference/cli#cli-slash-commands:~:text=%2Fsession-file%20Show%20the%20current%20session%20id%20and%20path%20to%20the%20on-disk%20session%20file",
       "comment": "`/session-file` reveals the current session id and on-disk session path."
     },
@@ -1837,6 +1882,11 @@
     },
     "transcripts": {
       "support": "full",
+      "source_url": "https://github.com/charmbracelet/crush/blob/main/internal/cmd/session.go#source:~:text=Manage%20Crush%20sessions",
+      "comment": "Local SQLite-backed session storage with a dedicated `crush session` CLI subcommand: `list`, `show <id>`, `last`, `delete`, `rename`, each supporting `--json` for machine-readable transcripts including full message parts (text, reasoning, tool calls/results)."
+    },
+    "transcript_location": {
+      "value": "Local SQLite; exact path undocumented",
       "source_url": "https://github.com/charmbracelet/crush/blob/main/internal/cmd/session.go#source:~:text=Manage%20Crush%20sessions",
       "comment": "Local SQLite-backed session storage with a dedicated `crush session` CLI subcommand: `list`, `show <id>`, `last`, `delete`, `rename`, each supporting `--json` for machine-readable transcripts including full message parts (text, reasoning, tool calls/results)."
     },
@@ -2111,6 +2161,11 @@
       "source_url": "https://docs.cursor.com/en/cli/overview#source:~:text=Resume%20previous%20conversations",
       "comment": "Location: Cursor CLI transcripts live under `~/.cursor/projects/<slug>/agent-transcripts/<agentId>/<agentId>.jsonl`; Cursor IDE composer data is in SQLite `~/Library/Application Support/Cursor/User/globalStorage/state.vscdb`."
     },
+    "transcript_location": {
+      "value": "~/.cursor/projects/<slug>/agent-transcripts/<agentId>/<agentId>.jsonl; IDE: ~/Library/Application Support/Cursor/User/globalStorage/state.vscdb",
+      "source_url": "https://docs.cursor.com/en/cli/overview#source:~:text=Resume%20previous%20conversations",
+      "comment": "Location: Cursor CLI transcripts live under `~/.cursor/projects/<slug>/agent-transcripts/<agentId>/<agentId>.jsonl`; Cursor IDE composer data is in SQLite `~/Library/Application Support/Cursor/User/globalStorage/state.vscdb`."
+    },
     "keyboard_shortcuts": {
       "support": "full",
       "source_url": "https://docs.cursor.com/keybindings#keybindings:~:text=customize",
@@ -2301,6 +2356,11 @@
     },
     "transcripts": {
       "support": "partial",
+      "source_url": "https://devin.ai/#source:~:text=agent",
+      "comment": "Location: hosted/web/API-managed session history; no local transcript directory documented."
+    },
+    "transcript_location": {
+      "value": "Hosted service; no local default",
       "source_url": "https://devin.ai/#source:~:text=agent",
       "comment": "Location: hosted/web/API-managed session history; no local transcript directory documented."
     },
@@ -2504,6 +2564,11 @@
       "source_url": "https://docs.factory.ai/reference/cli-reference#droid-search-flags:~:text=droid%20search",
       "comment": "Location: local searchable Droid session data is managed by Factory CLI; exact transcript database path is not documented in the CLI reference."
     },
+    "transcript_location": {
+      "value": "Factory-managed local session store; exact path undocumented",
+      "source_url": "https://docs.factory.ai/reference/cli-reference#droid-search-flags:~:text=droid%20search",
+      "comment": "Location: local searchable Droid session data is managed by Factory CLI; exact transcript database path is not documented in the CLI reference."
+    },
     "keyboard_shortcuts": {
       "support": "unknown",
       "source_url": "https://docs.example.com/#documentation:~:text=keybindings",
@@ -2645,6 +2710,11 @@
     },
     "transcripts": {
       "support": "full",
+      "source_url": "https://fx.sh/docs/using-fx/sessions#sessions:~:text=fx%20saves%20interactive%20conversations%20under",
+      "comment": "Location: Fx saves session transcripts under `~/.fx/sessions/`; they can be listed, inspected as JSON, resumed, migrated, and recovered."
+    },
+    "transcript_location": {
+      "value": "Per-workspace saved sessions; exact path undocumented",
       "source_url": "https://fx.sh/docs/using-fx/sessions#sessions:~:text=fx%20saves%20interactive%20conversations%20under",
       "comment": "Location: Fx saves session transcripts under `~/.fx/sessions/`; they can be listed, inspected as JSON, resumed, migrated, and recovered."
     },
@@ -2897,6 +2967,11 @@
       "source_url": "https://antigravity.google/docs/getting-started#slash-commands:~:text=session",
       "comment": "Location: transcript/session disk storage was not found in public docs reviewed."
     },
+    "transcript_location": {
+      "value": "Undocumented",
+      "source_url": "https://antigravity.google/docs/getting-started#slash-commands:~:text=session",
+      "comment": "Location: transcript/session disk storage was not found in public docs reviewed."
+    },
     "keyboard_shortcuts": {
       "support": "unknown",
       "source_url": "https://docs.example.com/#documentation:~:text=keybindings",
@@ -3015,6 +3090,11 @@
     },
     "transcripts": {
       "support": "full",
+      "source_url": "https://docs.github.com/en/copilot/reference/copilot-cli-reference/cli-command-reference#source:~:text=--share%3DPATH",
+      "comment": "Local session logs under ~/.copilot/logs/ (configurable via --log-dir). Sessions can be exported with --share=PATH (Markdown file) or --share-gist (secret GitHub gist) after a programmatic run."
+    },
+    "transcript_location": {
+      "value": "~/.copilot/logs/ (logs); --share=PATH exports Markdown",
       "source_url": "https://docs.github.com/en/copilot/reference/copilot-cli-reference/cli-command-reference#source:~:text=--share%3DPATH",
       "comment": "Local session logs under ~/.copilot/logs/ (configurable via --log-dir). Sessions can be exported with --share=PATH (Markdown file) or --share-gist (secret GitHub gist) after a programmatic run."
     },
@@ -3286,6 +3366,11 @@
       "source_url": "https://docs.github.com/en/copilot/concepts/agents/cloud-agent/about-cloud-agent#benefits-over-traditional-ai-workflows:~:text=session",
       "comment": "Location: transcript/session disk storage was not found in public docs reviewed."
     },
+    "transcript_location": {
+      "value": "Hosted service; no local default documented",
+      "source_url": "https://docs.github.com/en/copilot/concepts/agents/cloud-agent/about-cloud-agent#benefits-over-traditional-ai-workflows:~:text=session",
+      "comment": "Location: transcript/session disk storage was not found in public docs reviewed."
+    },
     "keyboard_shortcuts": {
       "support": "unknown",
       "source_url": "https://docs.example.com/#documentation:~:text=keybindings",
@@ -3406,6 +3491,11 @@
     },
     "transcripts": {
       "support": "full",
+      "source_url": "https://goose-docs.ai/docs/guides/managing-goose-sessions/#source:~:text=Unix-like%3A%20~/.local/share/goose/sessions/sessions.db",
+      "comment": "Sessions stored in SQLite (v1.10.0+) at ~/.local/share/goose/sessions/sessions.db (Unix) or %APPDATA%\\Block\\goose\\data\\sessions\\sessions.db (Windows); pre-v1.10.0 used per-session .jsonl files under ~/.local/share/goose/sessions/. `session export` can output markdown/json/yaml; `session list`/`session diagnostics` also available."
+    },
+    "transcript_location": {
+      "value": "~/.local/share/goose/sessions/sessions.db (Unix); %APPDATA%\\Block\\goose\\data\\sessions\\sessions.db (Windows)",
       "source_url": "https://goose-docs.ai/docs/guides/managing-goose-sessions/#source:~:text=Unix-like%3A%20~/.local/share/goose/sessions/sessions.db",
       "comment": "Sessions stored in SQLite (v1.10.0+) at ~/.local/share/goose/sessions/sessions.db (Unix) or %APPDATA%\\Block\\goose\\data\\sessions\\sessions.db (Windows); pre-v1.10.0 used per-session .jsonl files under ~/.local/share/goose/sessions/. `session export` can output markdown/json/yaml; `session list`/`session diagnostics` also available."
     },
@@ -3671,6 +3761,11 @@
       "source_url": "https://x.ai/news/grok-build-cli#introducing-grok-build:~:text=grok-build",
       "comment": "Location: transcript/session disk storage is not documented in the public beta launch page."
     },
+    "transcript_location": {
+      "value": "Undocumented",
+      "source_url": "https://x.ai/news/grok-build-cli#introducing-grok-build:~:text=grok-build",
+      "comment": "Location: transcript/session disk storage is not documented in the public beta launch page."
+    },
     "keyboard_shortcuts": {
       "support": "unknown",
       "source_url": "https://docs.example.com/#documentation:~:text=keybindings",
@@ -3814,6 +3909,11 @@
     },
     "transcripts": {
       "support": "partial",
+      "source_url": "https://www.jetbrains.com/help/air/chat.html#chat:~:text=create%20and%20continue%20tasks",
+      "comment": "Air retains task chats for continuation and review, but public documentation does not expose a portable local transcript format or path."
+    },
+    "transcript_location": {
+      "value": "Task chats retained in-app; no portable local transcript path documented",
       "source_url": "https://www.jetbrains.com/help/air/chat.html#chat:~:text=create%20and%20continue%20tasks",
       "comment": "Air retains task chats for continuation and review, but public documentation does not expose a portable local transcript format or path."
     },
@@ -4055,6 +4155,11 @@
       "source_url": "https://jules.google/#an-autonomous-coding-agent:~:text=agent",
       "comment": "Location: hosted/web/API-managed session history; no local transcript directory documented."
     },
+    "transcript_location": {
+      "value": "Hosted service; no local default",
+      "source_url": "https://jules.google/#an-autonomous-coding-agent:~:text=agent",
+      "comment": "Location: hosted/web/API-managed session history; no local transcript directory documented."
+    },
     "keyboard_shortcuts": {
       "support": "unknown",
       "source_url": "https://docs.example.com/#documentation:~:text=keybindings",
@@ -4242,6 +4347,11 @@
     "notes": "Strong fit for JetBrains users, debugger-aware workflows, CLI/headless CI, and JetBrains IDE integration. June 2026 docs now expose extensibility details for guidelines, extensions, MCP, subagents, commands, hooks, BYOK/custom models, and CI/CD.",
     "transcripts": {
       "support": "full",
+      "source_url": "https://junie.jetbrains.com/docs/slash-commands.html#navigation:~:text=%60Ctrl%2BT%20%60%20Open%20the%20full%20transcript%20of%20the%20current%20session",
+      "comment": "Interactive CLI exposes the full current-session transcript with Ctrl+T and session history with `/history`; public docs do not specify the disk storage path."
+    },
+    "transcript_location": {
+      "value": "Undocumented; /history and Ctrl+T expose saved/current sessions",
       "source_url": "https://junie.jetbrains.com/docs/slash-commands.html#navigation:~:text=%60Ctrl%2BT%20%60%20Open%20the%20full%20transcript%20of%20the%20current%20session",
       "comment": "Interactive CLI exposes the full current-session transcript with Ctrl+T and session history with `/history`; public docs do not specify the disk storage path."
     },
@@ -4444,6 +4554,11 @@
       "source_url": "https://kilo.ai/docs/getting-started#what-kilo-can-do:~:text=session",
       "comment": "Location: transcript/session disk storage was not found in public docs reviewed."
     },
+    "transcript_location": {
+      "value": "Undocumented",
+      "source_url": "https://kilo.ai/docs/getting-started#what-kilo-can-do:~:text=session",
+      "comment": "Location: transcript/session disk storage was not found in public docs reviewed."
+    },
     "keyboard_shortcuts": {
       "support": "unknown",
       "source_url": "https://docs.example.com/#documentation:~:text=keybindings",
@@ -4632,6 +4747,11 @@
       "source_url": "https://www.kimi.com/code/docs/en/kimi-code-cli/getting-started.html#first-launch:~:text=session",
       "comment": "Location: transcript/session disk storage was not found in public docs reviewed."
     },
+    "transcript_location": {
+      "value": "Undocumented",
+      "source_url": "https://www.kimi.com/code/docs/en/kimi-code-cli/getting-started.html#first-launch:~:text=session",
+      "comment": "Location: transcript/session disk storage was not found in public docs reviewed."
+    },
     "keyboard_shortcuts": {
       "support": "unknown",
       "source_url": "https://docs.example.com/#documentation:~:text=keybindings",
@@ -4712,7 +4832,7 @@
       "value": "Sep '26",
       "source_url": "https://github.com/kirodotdev/KiroCrew/releases/tag/v0.6.0#source:~:text=Pick%20the%20harness%20that%20runs%20your%20sessions",
       "comment": "Kiro Crew 0.6.0 shipped September 11, 2026 with selectable Kiro, Claude Code, and Codex harnesses, remote-crew chat, agent-managed monitor loops, cross-backend worker dispatch, longer turn and subagent limits, a Launchpad, richer session organization, and expanded sandbox and installer controls.",
-      "sort_date": "2026-09-18"
+      "sort_date": "2026-09-22"
     },
     "rules": {
       "support": "full",
@@ -4831,6 +4951,11 @@
     },
     "transcripts": {
       "support": "full",
+      "source_url": "https://github.com/kirodotdev/KiroCrew#why-kiro-crew:~:text=remembers%20across%20sessions",
+      "comment": "Persistent workspace history and checkpoints are core Crew features and are stored under the Crew data home."
+    },
+    "transcript_location": {
+      "value": "Persistent workspace history under the Crew data home; exact path undocumented",
       "source_url": "https://github.com/kirodotdev/KiroCrew#why-kiro-crew:~:text=remembers%20across%20sessions",
       "comment": "Persistent workspace history and checkpoints are core Crew features and are stored under the Crew data home."
     },
@@ -5026,6 +5151,11 @@
       "source_url": "https://kiro.dev/cli/#source:~:text=conversation%20persistence",
       "comment": "Location: Kiro CLI uses directory-based conversation persistence; exact transcript directory is not specified in the public docs reviewed."
     },
+    "transcript_location": {
+      "value": "Directory-based conversation store; exact path undocumented",
+      "source_url": "https://kiro.dev/cli/#source:~:text=conversation%20persistence",
+      "comment": "Location: Kiro CLI uses directory-based conversation persistence; exact transcript directory is not specified in the public docs reviewed."
+    },
     "keyboard_shortcuts": {
       "support": "unknown",
       "source_url": "https://docs.example.com/#documentation:~:text=keybindings",
@@ -5104,7 +5234,7 @@
       "value": "Sep '26",
       "source_url": "https://github.com/XiaomiMiMo/MiMo-Code/releases/tag/v0.1.14#source:~:text=Interrupted%20or%20errored%20turns%20stay%20recoverable",
       "comment": "Latest release v0.1.14 (September 2, 2026) adds append-only /recover for interrupted turns, title generation APIs, tool-driven TUI voice input, revised compaction, replayable nested tool calls, inherited subagent permissions, and optional auto-worktree guidance.",
-      "sort_date": "2026-09-18"
+      "sort_date": "2026-09-22"
     },
     "rules": {
       "support": "full",
@@ -5224,6 +5354,11 @@
     },
     "transcripts": {
       "support": "full",
+      "source_url": "https://mimo.xiaomi.com/mimocode/sessions#session-storage:~:text=Session%20data%20is%20saved%20in%20MiMo%20Code%27s%20data%20directory",
+      "comment": "MiMo persists every conversation as a session, with session data saved under MIMOCODE_HOME/data."
+    },
+    "transcript_location": {
+      "value": "$MIMOCODE_HOME/data",
       "source_url": "https://mimo.xiaomi.com/mimocode/sessions#session-storage:~:text=Session%20data%20is%20saved%20in%20MiMo%20Code%27s%20data%20directory",
       "comment": "MiMo persists every conversation as a session, with session data saved under MIMOCODE_HOME/data."
     },
@@ -5367,6 +5502,11 @@
     },
     "transcripts": {
       "support": "full",
+      "source_url": "https://developer.meta.com/ai/products/muse-code#sessions:~:text=sessions",
+      "comment": "Sessions and event logs are persisted locally by default; --no-session-log disables persistence for a run."
+    },
+    "transcript_location": {
+      "value": "Local session/event logs; exact path undocumented",
       "source_url": "https://developer.meta.com/ai/products/muse-code#sessions:~:text=sessions",
       "comment": "Sessions and event logs are persisted locally by default; --no-session-log disables persistence for a run."
     },
@@ -5625,6 +5765,11 @@
       "source_url": "https://developers.openai.com/api/docs/guides/agents-api/sessions#session-items:~:text=items",
       "comment": "Sessions persist their input, output, tool, and event items for later retrieval."
     },
+    "transcript_location": {
+      "value": "Hosted service sessions; input/output/tool/event items retrieved via API",
+      "source_url": "https://developers.openai.com/api/docs/guides/agents-api/sessions#session-items:~:text=items",
+      "comment": "Sessions persist their input, output, tool, and event items for later retrieval."
+    },
     "keyboard_shortcuts": {
       "support": "none",
       "source_url": "https://developers.openai.com/api/docs/guides/agents-api/overview#overview:~:text=API",
@@ -5828,6 +5973,11 @@
       "source_url": "https://opencode.ai/docs/share/#for-enterprises:~:text=session",
       "comment": "Location: OpenCode stores sessions/messages in SQLite `~/.local/share/opencode/opencode.db`; legacy storage uses `~/.local/share/opencode/storage/session|message|part/`."
     },
+    "transcript_location": {
+      "value": "~/.local/share/opencode/opencode.db; legacy: ~/.local/share/opencode/storage/session|message|part/",
+      "source_url": "https://opencode.ai/docs/share/#for-enterprises:~:text=session",
+      "comment": "Location: OpenCode stores sessions/messages in SQLite `~/.local/share/opencode/opencode.db`; legacy storage uses `~/.local/share/opencode/storage/session|message|part/`."
+    },
     "keyboard_shortcuts": {
       "support": "unknown",
       "source_url": "https://docs.example.com/#documentation:~:text=keybindings",
@@ -5954,6 +6104,11 @@
     },
     "transcripts": {
       "support": "full",
+      "source_url": "https://github.com/OpenHands/docs/blob/main/openhands/usage/cli/installation.mdx#first-run:~:text=The%20conversation%20history%20will%20be%20saved%20in%20%60~/.openhands/conversations%60",
+      "comment": "Conversation history automatically saved locally. Location: `~/.openhands/conversations/`. `--resume` lists and reopens prior conversations."
+    },
+    "transcript_location": {
+      "value": "~/.openhands/conversations/",
       "source_url": "https://github.com/OpenHands/docs/blob/main/openhands/usage/cli/installation.mdx#first-run:~:text=The%20conversation%20history%20will%20be%20saved%20in%20%60~/.openhands/conversations%60",
       "comment": "Conversation history automatically saved locally. Location: `~/.openhands/conversations/`. `--resume` lists and reopens prior conversations."
     },
@@ -6109,7 +6264,7 @@
       "value": "Sep '26",
       "source_url": "https://github.com/earendil-works/pi/releases/tag/v0.85.1#source:~:text=GPT-6%20Astra",
       "comment": "Latest release v0.85.1 (September 5, 2026) adds GPT-6 Astra through OpenAI API keys and Codex subscriptions, faster fullscreen scrolling, and fixes for selector keybindings, SDK packaging, prompt caching, and mouse selection.",
-      "sort_date": "2026-09-18"
+      "sort_date": "2026-09-22"
     },
     "rules": {
       "support": "full",
@@ -6224,6 +6379,11 @@
     },
     "transcripts": {
       "support": "full",
+      "source_url": "https://pi.dev/docs/latest/usage#source:~:text=session",
+      "comment": "Sessions are saved automatically to `~/.pi/agent/sessions/` with session IDs and `/session` command showing file and metadata."
+    },
+    "transcript_location": {
+      "value": "~/.pi/agent/sessions/",
       "source_url": "https://pi.dev/docs/latest/usage#source:~:text=session",
       "comment": "Sessions are saved automatically to `~/.pi/agent/sessions/` with session IDs and `/session` command showing file and metadata."
     },
@@ -6423,6 +6583,11 @@
       "source_url": "https://www.piercode.com/#product:~:text=Built%20for%20long%20coding%20sessions",
       "comment": "Verified locally: Pier persists sessions for resume/archive/delete/fork flows under its local Pier state."
     },
+    "transcript_location": {
+      "value": "Local Pier state; exact path undocumented",
+      "source_url": "https://www.piercode.com/#product:~:text=Built%20for%20long%20coding%20sessions",
+      "comment": "Verified locally: Pier persists sessions for resume/archive/delete/fork flows under its local Pier state."
+    },
     "keyboard_shortcuts": {
       "support": "unknown",
       "source_url": "https://www.piercode.com/faq#questions-answered:~:text=Questions%2C%20answered",
@@ -6618,6 +6783,11 @@
       "source_url": "https://docs.qoder.com/cli/cli-reference#session-management:~:text=--list-sessions",
       "comment": "Sessions persist by default and can be listed, resumed, continued, deleted, or disabled for a one-shot run with --no-session-persistence."
     },
+    "transcript_location": {
+      "value": "Local session store; list/resume via --list-sessions; exact path undocumented",
+      "source_url": "https://docs.qoder.com/cli/cli-reference#session-management:~:text=--list-sessions",
+      "comment": "Sessions persist by default and can be listed, resumed, continued, deleted, or disabled for a one-shot run with --no-session-persistence."
+    },
     "keyboard_shortcuts": {
       "support": "unknown",
       "source_url": "https://docs.qoder.com/cli/interface#keyboard-shortcuts:~:text=Run%20%60%2Fshortcuts%60%20in%20the%20interactive%20interface",
@@ -6810,6 +6980,11 @@
       "source_url": "https://qwenlm.github.io/qwen-code-docs/en/users/overview#qwen-code-overview:~:text=Qwen%20Code",
       "comment": "Location: transcript/session disk storage was not found in public docs reviewed."
     },
+    "transcript_location": {
+      "value": "Undocumented",
+      "source_url": "https://qwenlm.github.io/qwen-code-docs/en/users/overview#qwen-code-overview:~:text=Qwen%20Code",
+      "comment": "Location: transcript/session disk storage was not found in public docs reviewed."
+    },
     "keyboard_shortcuts": {
       "support": "unknown",
       "source_url": "https://docs.example.com/#documentation:~:text=keybindings",
@@ -6992,6 +7167,11 @@
       "source_url": "https://replit.com/ai#introducing-replit-agent:~:text=agent",
       "comment": "Location: hosted/web/API-managed session history; no local transcript directory documented."
     },
+    "transcript_location": {
+      "value": "Hosted service; no local default",
+      "source_url": "https://replit.com/ai#introducing-replit-agent:~:text=agent",
+      "comment": "Location: hosted/web/API-managed session history; no local transcript directory documented."
+    },
     "keyboard_shortcuts": {
       "support": "unknown",
       "source_url": "https://docs.example.com/#documentation:~:text=keybindings",
@@ -7171,6 +7351,11 @@
     },
     "transcripts": {
       "support": "unknown",
+      "source_url": "https://docs.roocode.com/#source:~:text=session",
+      "comment": "Location: transcript/session disk storage was not found in public docs reviewed."
+    },
+    "transcript_location": {
+      "value": "Undocumented",
       "source_url": "https://docs.roocode.com/#source:~:text=session",
       "comment": "Location: transcript/session disk storage was not found in public docs reviewed."
     },
@@ -7370,6 +7555,11 @@
       "source_url": "https://github.com/bytedance/trae-agent#trajectory-recording:~:text=Trajectory%20files%20contain%20LLM%20interactions%2C%20agent%20steps%2C%20tool%20usage%2C%20and%20execution%20metadata",
       "comment": "Trajectory recording is first-class, with auto-generated or custom trajectory JSON files."
     },
+    "transcript_location": {
+      "value": "Trajectory JSON at auto-generated or custom path",
+      "source_url": "https://github.com/bytedance/trae-agent#trajectory-recording:~:text=Trajectory%20files%20contain%20LLM%20interactions%2C%20agent%20steps%2C%20tool%20usage%2C%20and%20execution%20metadata",
+      "comment": "Trajectory recording is first-class, with auto-generated or custom trajectory JSON files."
+    },
     "keyboard_shortcuts": {
       "support": "unknown",
       "source_url": "https://docs.example.com/#documentation:~:text=unknown",
@@ -7554,6 +7744,11 @@
     },
     "transcripts": {
       "support": "unknown",
+      "source_url": "https://docs.windsurf.com/#source:~:text=session",
+      "comment": "Location: transcript/session disk storage was not found in public docs reviewed."
+    },
+    "transcript_location": {
+      "value": "~/.windsurf/transcripts/{trajectory_id}.jsonl when transcript hook is enabled; default store undocumented",
       "source_url": "https://docs.windsurf.com/#source:~:text=session",
       "comment": "Location: transcript/session disk storage was not found in public docs reviewed."
     },
@@ -7744,6 +7939,11 @@
     },
     "transcripts": {
       "support": "partial",
+      "source_url": "https://zcode.z.ai/en/docs/agents#workspace-entry:~:text=task%20list",
+      "comment": "Task list/conversation history is first-class in the desktop UI, but public docs do not expose disk transcript paths."
+    },
+    "transcript_location": {
+      "value": "Desktop task/conversation history; exact path undocumented",
       "source_url": "https://zcode.z.ai/en/docs/agents#workspace-entry:~:text=task%20list",
       "comment": "Task list/conversation history is first-class in the desktop UI, but public docs do not expose disk transcript paths."
     },

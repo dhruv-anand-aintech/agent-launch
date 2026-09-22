@@ -151,6 +151,11 @@
     "source_url": "https://github.com/openai/codex#source:~:text=sessions",
     "comment": "Location: Codex session event streams are JSONL under `~/.codex/sessions/YYYY/MM/DD/rollout-<iso>-<id>.jsonl`."
   },
+  "transcript_location": {
+    "value": "~/.codex/sessions/YYYY/MM/DD/rollout-<iso>-<id>.jsonl",
+    "source_url": "https://github.com/openai/codex#source:~:text=sessions",
+    "comment": "Location: Codex session event streams are JSONL under `~/.codex/sessions/YYYY/MM/DD/rollout-<iso>-<id>.jsonl`."
+  },
   "keyboard_shortcuts": {
     "support": "unknown",
     "source_url": "https://docs.example.com/#documentation:~:text=keybindings",

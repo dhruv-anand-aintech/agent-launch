@@ -151,6 +151,11 @@
     "source_url": "https://docs.factory.ai/reference/cli-reference#droid-search-flags:~:text=droid%20search",
     "comment": "Location: local searchable Droid session data is managed by Factory CLI; exact transcript database path is not documented in the CLI reference."
   },
+  "transcript_location": {
+    "value": "Factory-managed local session store; exact path undocumented",
+    "source_url": "https://docs.factory.ai/reference/cli-reference#droid-search-flags:~:text=droid%20search",
+    "comment": "Location: local searchable Droid session data is managed by Factory CLI; exact transcript database path is not documented in the CLI reference."
+  },
   "keyboard_shortcuts": {
     "support": "unknown",
     "source_url": "https://docs.example.com/#documentation:~:text=keybindings",

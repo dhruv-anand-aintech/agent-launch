@@ -142,6 +142,11 @@
     "source_url": "https://kiro.dev/cli/#source:~:text=conversation%20persistence",
     "comment": "Location: Kiro CLI uses directory-based conversation persistence; exact transcript directory is not specified in the public docs reviewed."
   },
+  "transcript_location": {
+    "value": "Directory-based conversation store; exact path undocumented",
+    "source_url": "https://kiro.dev/cli/#source:~:text=conversation%20persistence",
+    "comment": "Location: Kiro CLI uses directory-based conversation persistence; exact transcript directory is not specified in the public docs reviewed."
+  },
   "keyboard_shortcuts": {
     "support": "unknown",
     "source_url": "https://docs.example.com/#documentation:~:text=keybindings",

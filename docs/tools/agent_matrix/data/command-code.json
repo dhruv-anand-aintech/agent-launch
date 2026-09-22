@@ -97,6 +97,11 @@
     "source_url": "https://commandcode.ai/docs/reference/cli#cli-slash-commands:~:text=%2Fsession-file%20Show%20the%20current%20session%20id%20and%20path%20to%20the%20on-disk%20session%20file",
     "comment": "`/session-file` reveals the current session id and on-disk session path."
   },
+  "transcript_location": {
+    "value": "/session-file (runtime-resolved path)",
+    "source_url": "https://commandcode.ai/docs/reference/cli#cli-slash-commands:~:text=%2Fsession-file%20Show%20the%20current%20session%20id%20and%20path%20to%20the%20on-disk%20session%20file",
+    "comment": "`/session-file` reveals the current session id and on-disk session path."
+  },
   "model_selection": {
     "support": "full",
     "source_url": "https://commandcode.ai/docs/reference/cli#cli-flags:~:text=-m%60%2C%20%60--model%20%3Cmodel%3E%60",

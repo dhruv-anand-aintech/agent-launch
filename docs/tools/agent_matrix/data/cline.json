@@ -154,6 +154,11 @@
     "source_url": "https://docs.cline.bot/#source:~:text=session",
     "comment": "Location: transcript/session disk storage was not found in public docs reviewed."
   },
+  "transcript_location": {
+    "value": "Undocumented",
+    "source_url": "https://docs.cline.bot/#source:~:text=session",
+    "comment": "Location: transcript/session disk storage was not found in public docs reviewed."
+  },
   "keyboard_shortcuts": {
     "support": "partial",
     "source_url": "https://github.com/cline/cline#configuration:~:text=keybindings",

@@ -80,6 +80,11 @@
     "source_url": "https://github.com/OpenHands/docs/blob/main/openhands/usage/cli/installation.mdx#first-run:~:text=The%20conversation%20history%20will%20be%20saved%20in%20%60~/.openhands/conversations%60",
     "comment": "Conversation history automatically saved locally. Location: `~/.openhands/conversations/`. `--resume` lists and reopens prior conversations."
   },
+  "transcript_location": {
+    "value": "~/.openhands/conversations/",
+    "source_url": "https://github.com/OpenHands/docs/blob/main/openhands/usage/cli/installation.mdx#first-run:~:text=The%20conversation%20history%20will%20be%20saved%20in%20%60~/.openhands/conversations%60",
+    "comment": "Conversation history automatically saved locally. Location: `~/.openhands/conversations/`. `--resume` lists and reopens prior conversations."
+  },
   "model_selection": {
     "support": "full",
     "source_url": "https://github.com/OpenHands/docs/blob/main/openhands/usage/cli/command-reference.mdx#changing-your-model:~:text=Via%20Configuration%20File",

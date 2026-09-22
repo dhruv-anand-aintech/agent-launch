@@ -147,6 +147,11 @@
     "source_url": "https://aider.chat/docs/config/aider_conf.html#source:~:text=chat-history-file",
     "comment": "Location: optional chat history/transcript files are configured with Aider history settings such as `.aider.chat.history.md`."
   },
+  "transcript_location": {
+    "value": ".aider.chat.history.md (workspace/configured)",
+    "source_url": "https://aider.chat/docs/config/aider_conf.html#source:~:text=chat-history-file",
+    "comment": "Location: optional chat history/transcript files are configured with Aider history settings such as `.aider.chat.history.md`."
+  },
   "keyboard_shortcuts": {
     "support": "partial",
     "source_url": "https://aider.chat/docs/config.html#configuration:~:text=keybindings",
