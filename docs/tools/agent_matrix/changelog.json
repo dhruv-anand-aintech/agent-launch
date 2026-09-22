@@ -3,8 +3,8 @@
   "entries": [
     {
       "date": "2026-09-22",
-      "commit": "",
-      "title": "Unreleased matrix update",
+      "commit": "bbac7d8",
+      "title": "feat(matrix): add transcript_location field and Fx agent",
       "items": [
         {
           "summary": "Aider: Default Transcript Location updated to .aider.chat.history.md (workspace/configured)",
