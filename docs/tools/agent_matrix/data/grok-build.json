@@ -13,11 +13,11 @@
       "Mobile"
     ],
     "source_url": "https://x.ai/news/grok-build-cli#source:~:text=CLI",
-    "comment": "Grok Build is available as a terminal-native CLI and through Grok on web and mobile. Per-form-factor links: CLI: https://x.ai/news/grok-build-cli; Web: https://grok.com/; Mobile: https://x.ai/news/grok-build-everywhere.",
+    "comment": "Grok Build is available as a terminal-native CLI and through Grok on web and mobile. Per-form-factor links: CLI: https://x.ai/news/grok-build-cli; Web: https://grok.com/; Mobile: https://x.ai/news/grok-build-for-everyone.",
     "links": {
       "CLI": "https://x.ai/news/grok-build-cli",
       "Web": "https://grok.com/",
-      "Mobile": "https://x.ai/news/grok-build-everywhere"
+      "Mobile": "https://x.ai/news/grok-build-for-everyone"
     }
   },
   "released_in": {
@@ -27,9 +27,9 @@
   },
   "latest_major_update": {
     "value": "Sep '26",
-    "source_url": "https://x.ai/build/changelog#changelog:~:text=Latest%20v1.0.30,Sep%2011%2C%202026",
-    "comment": "Grok Build v1.0.30 shipped September 11, 2026 with a compact session header, hour-scale elapsed time, visible next-run times for Watchers and Loops, clickable workflow status, and reduced tmux lag.",
-    "sort_date": "2026-09-11"
+    "source_url": "https://x.ai/build/changelog#changelog:~:text=Latest%20v1.0.40,Sep%2020%2C%202026",
+    "comment": "Grok Build v1.0.40 shipped September 20, 2026 with Grok 4.7 support; the preceding v1.0.39 update also improved subagent model inheritance, compaction, custom profiles, permission repair, live effort levels, and local worktree capture.",
+    "sort_date": "2026-09-20"
   },
   "rules": {
     "support": "full",

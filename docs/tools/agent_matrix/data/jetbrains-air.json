@@ -28,8 +28,8 @@
   },
   "latest_major_update": {
     "value": "Sep '26",
-    "source_url": "https://www.jetbrains.com/help/air/set-up.html#desktop-and-web-versions:~:text=Web%20version,cloud%20tasks%20and%20automations",
-    "comment": "By September 10, 2026, Air documented desktop and organization web surfaces, JetBrains-managed cloud tasks and automations, organization repository connections, AI governance, and multiple built-in or ACP-compatible agents."
+    "source_url": "https://blog.jetbrains.com/blog/2026/09/22/introducing-jetbrains-air/#from-one-product-to-an-open-system-of-products:~:text=Air%20in%20JetBrains%20IDEs,Air%20Governance",
+    "comment": "JetBrains formally introduced Air on September 22, 2026 as an open system spanning agentic experiences in JetBrains IDEs, Air Teams coordination and automation, and Air Governance for policy, auditability, cost management, and accountability."
   },
   "pricing": {
     "value": "JetBrains AI Free, Pro, Ultimate, or organization credits; local tasks can use existing provider subscriptions or BYOK/API billing",

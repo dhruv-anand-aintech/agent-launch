@@ -33,9 +33,9 @@
   },
   "latest_major_update": {
     "value": "Sep '26",
-    "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.24.0#source:~:text=add%20bwrap%20kernel%20sandbox%20backend%20for%20Linux",
-    "comment": "Qwen Code v0.24.0 shipped September 16, 2026 with a Linux bwrap sandbox backend, complete OpenTUI hook controls and progress, extension workflows and skills, shared output channels, remote Web Shell connections, ACP admission budgets, goal budgets, and multimodal pipeline integration.",
-    "sort_date": "2026-09-16"
+    "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.24.4#source:~:text=add%20monitor%20tool%20to%20system%20prompt%20guidance",
+    "comment": "Qwen Code v0.24.4 shipped September 22, 2026 with monitor-tool guidance, batched workspace session catalogs, plan-drift reporting, SSH workspaces without a remote daemon, encrypted mobile connection profiles, managed runtime attestation, and extensive Web Shell and CLI fixes.",
+    "sort_date": "2026-09-22"
   },
   "rules": {
     "support": "full",
@@ -73,9 +73,9 @@
     "comment": "Full subagent system: named subagents with YAML frontmatter, fork subagents (context-inheriting), per-agent model/permission/tool config, extension subagents."
   },
   "monitor": {
-    "support": "partial",
-    "source_url": "https://qwenlm.github.io/qwen-code-docs/en/users/features/sub-agents/#limits:~:text=Subagents%20are%20specialized%20AI%20assistants%20that%20handle%20specific%20types%20of%20tasks%20within%20Qwen%20Code",
-    "comment": "Qwen Code has subagents, hooks, headless mode, and status surfaces, but reviewed docs do not show a dedicated Monitor-style arbitrary command/log/WebSocket watcher."
+    "support": "full",
+    "source_url": "https://github.com/QwenLM/qwen-code/blob/main/docs/developers/tools/monitor.md#description:~:text=Use%20%60monitor%60%20to%20start%20a%20long-running%20shell%20command",
+    "comment": "The dedicated `monitor` tool runs long-lived shell commands in the background, streams throttled stdout and stderr lines back as task notifications, supports event and idle limits, and can be inspected or stopped through the background-task surfaces."
   },
   "model_selection": {
     "support": "full",

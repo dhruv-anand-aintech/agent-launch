@@ -31,9 +31,9 @@
   },
   "latest_major_update": {
     "value": "Sep '26",
-    "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.276#source:~:text=Fixed%20every%20request%20failing",
-    "comment": "Claude Code v2.1.276 shipped September 18, 2026 with a fix for requests failing through ANTHROPIC_BASE_URL proxies or gateways after the v2.1.275 advisor-tag regression.",
-    "sort_date": "2026-09-18"
+    "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.280#source:~:text=Added%20Claude%20Opus%205.5",
+    "comment": "Claude Code v2.1.280 shipped September 22, 2026 with Claude Opus 5.5, broader mouse support, configurable MCP-description limits, safer symlinked writes and auto-mode retries, extensive background-agent reliability fixes, and new VS Code status, sandbox, export, skills, and plan surfaces.",
+    "sort_date": "2026-09-22"
   },
   "rules": {
     "support": "full",

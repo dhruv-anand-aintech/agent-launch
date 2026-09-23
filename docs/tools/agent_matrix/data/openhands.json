@@ -31,9 +31,9 @@
   },
   "latest_major_update": {
     "value": "Sep '26",
-    "source_url": "https://github.com/OpenHands/OpenHands/releases/tag/v1.20.0#source:~:text=select%20secrets%20available%20to%20a%20profile",
-    "comment": "OpenHands v1.20.0 shipped September 17, 2026 with per-profile secret selection, forwarded Docker conversation runtime settings, and saved agent-profile selection for automations.",
-    "sort_date": "2026-09-17"
+    "source_url": "https://github.com/OpenHands/OpenHands/releases/tag/v1.22.0#source:~:text=test%20remote%20MCP%20servers%20on%20cloud%20backends",
+    "comment": "OpenHands v1.22.0 shipped September 22, 2026 with cloud-backend remote MCP testing, Git Sync access for organization admins, automation-menu access for members, and fixes that preserve sibling MCP servers and automation links.",
+    "sort_date": "2026-09-22"
   },
   "rules": {
     "support": "full",

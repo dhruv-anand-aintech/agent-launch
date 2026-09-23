@@ -29,8 +29,8 @@
   },
   "latest_major_update": {
     "value": "Sep '26",
-    "source_url": "https://commandcode.ai/changelog#september:~:text=v1.54.0,first-class%20herdr%20support",
-    "comment": "Command Code CLI v1.54.0 shipped in September 2026 with first-class Herdr support."
+    "source_url": "https://commandcode.ai/changelog#september:~:text=v1.62.0,MiMo%20V2.6%20Flash",
+    "comment": "Command Code CLI v1.62.0 shipped in September 2026 with MiMo V2.6 Flash, MiMo V2.6 Pro, and MiMo V2.6 Pro UltraSpeed support."
   },
   "pricing": {
     "value": "Go $1/mo, Pro $15/mo, Max 10x $100/mo, Max 20x $200/mo; monthly credits and top-ups; BYOK/provider options documented",
