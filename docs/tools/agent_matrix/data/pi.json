@@ -25,8 +25,9 @@
   },
   "latest_major_update": {
     "value": "Sep '26",
-    "source_url": "https://github.com/earendil-works/pi/releases/tag/v0.85.1#source:~:text=GPT-6%20Astra",
-    "comment": "Latest release v0.85.1 (September 5, 2026) adds GPT-6 Astra through OpenAI API keys and Codex subscriptions, faster fullscreen scrolling, and fixes for selector keybindings, SDK packaging, prompt caching, and mouse selection."
+    "source_url": "https://github.com/earendil-works/pi/releases/tag/v0.87.1#source:~:text=Latest%20frontier%20models",
+    "comment": "Pi v0.87.1 shipped September 22, 2026 with Claude Opus 5.5, GPT-6 Sol, and GPT-6 Luna across supported providers, Grok 4.7 as the xAI default, and fixes for compaction, mode validation, image-only messages, and Anthropic OAuth requests.",
+    "sort_date": "2026-09-22"
   },
   "rules": {
     "support": "full",

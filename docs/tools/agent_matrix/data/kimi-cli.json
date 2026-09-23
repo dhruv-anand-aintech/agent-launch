@@ -29,9 +29,9 @@
   },
   "latest_major_update": {
     "value": "Sep '26",
-    "source_url": "https://github.com/MoonshotAI/kimi-code/releases/tag/%40moonshot-ai%2Fkimi-code%402.0.0#source:~:text=Add%20the%20%2Fdesktop%20slash%20command",
-    "comment": "Kimi Code 2.0.0 shipped September 17, 2026 as a Node.js and native-binary generation with a redesigned TUI, automatic legacy migration, a local Web UI, desktop-app discovery, Mermaid rendering, and broad steering, subagent, MCP, media, and transcript reliability fixes.",
-    "sort_date": "2026-09-17"
+    "source_url": "https://github.com/MoonshotAI/kimi-code/releases/tag/%40moonshot-ai%2Fkimi-code%402.0.2#source:~:text=Fix%20new%20messages%20occasionally%20landing",
+    "comment": "Kimi Code 2.0.2 shipped September 19, 2026 with fixes for resumed-session message ordering, compaction after switching to a smaller-context model, project-root assumptions, duplicated in-flight messages, and Web UI interactions.",
+    "sort_date": "2026-09-19"
   },
   "rules": {
     "support": "full",

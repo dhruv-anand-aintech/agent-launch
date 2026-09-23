@@ -60,7 +60,7 @@ Form factor values are deliberately strict: each value should have a concrete pe
 | Pi | CLI, SDK | May '26 | Sep '26 |  | full | full | full | full | none | full | full | none | none | full |
 | Pier Code | CLI | Jun '26 | Jul '26 | none | partial | none | full | partial | partial | full | partial | full | full | partial |
 | Qoder | CLI, IDE, Extension, SDK, Web, Desktop App, Mobile | Oct '25 | Sep '26 |  |  |  | full | full | partial | full | full | full | full | full |
-| Qwen Code | CLI, Extension, SDK, Web, Desktop App, Mobile | Jun '25 | Sep '26 |  |  |  | full | full | partial | unknown | full | full | partial | full |
+| Qwen Code | CLI, Extension, SDK, Web, Desktop App, Mobile | Jun '25 | Sep '26 |  |  |  | full | full | full | unknown | full | full | partial | full |
 | Replit Agent | Web | Sep '24 | Sep '26 |  |  |  | partial | full | partial | partial | partial | unknown | full | none |
 | Roo Code | Extension | Mid-2025 | May '26 |  |  |  | full | full | partial | unknown | none | full | none | full |
 | Trae Agent | CLI | Jun '25 | Feb '26 | full | full | full | partial | none | none | full | none | partial | none | full |

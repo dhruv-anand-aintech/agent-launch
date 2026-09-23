@@ -26,9 +26,9 @@
   },
   "latest_major_update": {
     "value": "Sep '26",
-    "source_url": "https://github.com/charmbracelet/crush/releases/tag/v0.95.0#source:~:text=Plan%20Mode",
-    "comment": "Crush v0.95.0 shipped September 16, 2026 with a new Shift+Tab Plan Mode and performance improvements for compacted-session loading, prompt history, and transcript reads.",
-    "sort_date": "2026-09-16"
+    "source_url": "https://github.com/charmbracelet/crush/releases/tag/v0.96.1#source:~:text=Quick%20little%20theme%20API%20adjustment",
+    "comment": "Crush v0.96.1 shipped September 21, 2026 with a small breaking adjustment to the new custom-theme API, renaming the insert and delete code-background keys before wider adoption.",
+    "sort_date": "2026-09-21"
   },
   "rules": {
     "support": "full",
@@ -131,9 +131,9 @@
     "comment": "Built-in keybindings (e.g. `/` or Ctrl+P for command palette, Ctrl+O to open editor) exist and are documented in-app, but no general user-remappable keybindings config has been confirmed; some keybinding behavior is still being refined (open issues)."
   },
   "theme_customization": {
-    "support": "none",
-    "source_url": "https://github.com/charmbracelet/crush/blob/main/internal/config/config.go#source:~:text=Here%20we%20can%20add%20themes%20later",
-    "comment": "Colors are auto-derived per model provider and dark/light terminal background detection (via charmtone/lipgloss); a TODO comment in config.go notes themes may be added later, but no user-selectable theme config exists yet. `transparent` TUI background toggle is supported."
+    "support": "full",
+    "source_url": "https://github.com/charmbracelet/crush/blob/main/README.md#themes:~:text=Crush%20ships%20with%20built-in%20color%20themes",
+    "comment": "Crush provides built-in themes, live theme previews and editing, an `active_theme` setting, and global user-authored JSON palettes under `~/.config/crush/themes/`."
   },
   "auto_save": {
     "support": "full",

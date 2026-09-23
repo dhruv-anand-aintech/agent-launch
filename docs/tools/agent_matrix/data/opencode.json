@@ -29,9 +29,9 @@
   },
   "latest_major_update": {
     "value": "Sep '26",
-    "source_url": "https://github.com/anomalyco/opencode/releases/tag/v1.18.31#source:~:text=Restored%20ACP%20session%20model",
-    "comment": "OpenCode v1.18.31 shipped September 14, 2026 with restored ACP session model, effort, mode, and reasoning boundaries on load, resume, and fork; visible remote-config authentication failures at startup; and summarized adaptive thinking for GitHub Copilot models.",
-    "sort_date": "2026-09-14"
+    "source_url": "https://github.com/anomalyco/opencode/releases/tag/v1.18.32#source:~:text=Fixed%20Bedrock%20image%20attachments",
+    "comment": "OpenCode v1.18.32 shipped September 21, 2026 with corrected Bedrock image handling for supported model families and fixed Together AI streaming-usage reporting.",
+    "sort_date": "2026-09-21"
   },
   "rules": {
     "support": "full",

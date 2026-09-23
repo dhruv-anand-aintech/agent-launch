@@ -27,9 +27,9 @@
   },
   "latest_major_update": {
     "value": "Sep '26",
-    "source_url": "https://zcode.z.ai/en/changelog#release-v3123:~:text=3.12.3%20Released%20Sep%2017%2C%202026",
-    "comment": "ZCode 3.12.3 shipped September 17, 2026 with improved model management and multi-provider compatibility, better Plan mode and queued messages, an OpenCode Go provider template, safer database upgrades, and broad provider, session, remote-workspace, MCP, plugin, browser, and Linux reliability fixes.",
-    "sort_date": "2026-09-17"
+    "source_url": "https://zcode.z.ai/en/changelog#release-v3143:~:text=3.14.3%20Released%20Sep%2022%2C%202026",
+    "comment": "ZCode 3.14.3 shipped September 22, 2026 with adjustable workflow concurrency, improved workflow restart and script-submission behavior, better large-workflow status, lower workflow context and token use, and workflow and interface reliability fixes.",
+    "sort_date": "2026-09-22"
   },
   "rules": {
     "support": "full",
@@ -63,8 +63,8 @@
   },
   "subagents": {
     "support": "full",
-    "source_url": "https://zcode.z.ai/en/docs/subagents#custom-subagents-beta:~:text=You%20can%20now%20create%20your%20own%20subagents%20from%20Settings",
-    "comment": "Built-in general-purpose and Explore subagents plus beta user-level custom subagents under `~/.zcode/agents/<name>.md`, with custom model/tool permissions/instructions."
+    "source_url": "https://zcode.z.ai/en/changelog#release-v3140:~:text=Added%20dynamic%20workflows%20that%20use%20a%20single%20script%20to%20orchestrate%20multiple%20sub-agents",
+    "comment": "Built-in, custom, and workflow-orchestrated subagents are supported. Dynamic workflows can coordinate multiple subagents from one script, while custom agents support their own model, tool permissions, and instructions."
   },
   "monitor": {
     "support": "partial",
@@ -128,8 +128,8 @@
   },
   "some_free_usage": {
     "support": "full",
-    "source_url": "https://zcode.z.ai/en/docs#glm-52-and-exclusive-benefits:~:text=First-time%20ZCode%20users%20get%205%20days%20of%20free%20benefits",
-    "comment": "First-time ZCode users receive a 5-day free trial with daily GLM-5.2/GLM-5-Turbo token benefits."
+    "source_url": "https://zcode.z.ai/en/docs/welcome#glm-53-and-exclusive-benefits:~:text=First-time%20ZCode%20users%20get%205%20days%20of%20free%20benefits",
+    "comment": "First-time ZCode users receive a 5-day free trial with daily GLM-5.3 and GLM-5-turbo token benefits; subscribers can also run gradually rolling-out idle-time tasks without consuming plan quota."
   },
   "hosted_agent": {
     "support": "none",
@@ -148,8 +148,8 @@
   },
   "keyboard_shortcuts": {
     "support": "full",
-    "source_url": "https://zcode.z.ai/en/docs/ADE-tools#command-center:~:text=Press%20Command%20%2B%20K",
-    "comment": "Command Center is opened with Command+K; docs include keyboard shortcut support."
+    "source_url": "https://zcode.z.ai/en/changelog#release-v3140:~:text=New%20keyboard%20shortcut%20settings",
+    "comment": "ZCode 3.14.0 added keyboard-shortcut settings that record custom key combinations and apply them immediately; Command Center also exposes shortcut-driven actions."
   },
   "theme_customization": {
     "support": "full",
@@ -168,8 +168,8 @@
   },
   "context_window": {
     "support": "full",
-    "source_url": "https://zcode.z.ai/en/docs#core-capabilities:~:text=stable%201M%20context",
-    "comment": "ZCode is built around GLM-5.2 long-context coding workflows and usage stats show context-window breakdown."
+    "source_url": "https://zcode.z.ai/en/docs/agents#deep-integration-with-glm-53:~:text=Stable%201M%20context",
+    "comment": "ZCode is deeply integrated with GLM-5.3's stable 1M-token context for long-horizon coding; custom-provider windows are editable while Coding Plan built-in windows are server-managed."
   },
   "code_formatting": {
     "support": "unknown",
@@ -191,5 +191,5 @@
     "source_url": "https://zcode.z.ai/en/changelog#release-v314:~:text=Interface%20scaling%20supports%20a%20larger%20magnification%20ratio",
     "comment": "Desktop UI supports interface scaling and theme switching; deeper layout customization is not documented."
   },
-  "notes": "Z.ai/Zhipu desktop ADE with in-house ZCode Agent, GLM-5.2 focus, AGENTS.md, skills, commands, MCP, subagents, plugins, goal mode, mobile remote control, bot channels, and remote SSH/Docker development. No local CLI command was found, so no agent-launch backend was added."
+  "notes": "Z.ai/Zhipu desktop ADE and official GLM-5.3 harness with in-house ZCode Agent, AGENTS.md, skills, commands, MCP, subagents, dynamic workflows, plugins, goal mode, mobile remote control, bot channels, and remote SSH/Docker development. No officially documented standalone local prompt CLI command was found, so no agent-launch backend was added."
 }

@@ -25,9 +25,9 @@
   },
   "latest_major_update": {
     "value": "Sep '26",
-    "source_url": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.7.4#source:~:text=Open%20Mermaid%20diagrams%20in%20a%20fullscreen%20zoom%20viewer",
-    "comment": "Kilo Code v7.7.4 shipped September 18, 2026 with a full-screen Mermaid viewer, safer background cleanup of leftover worktrees across IDEs, experimental programmatic MCP tool calling, improved session titles, and tighter sandbox escalation behavior.",
-    "sort_date": "2026-09-18"
+    "source_url": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.7.7#source:~:text=Retry%20transient%20connection%20drops",
+    "comment": "Kilo Code v7.7.7 shipped September 22, 2026 with OpenCode compaction, reasoning-effort, provider, retry, locale, TUI, and message-ordering improvements plus retries for transient permission-approval connection drops.",
+    "sort_date": "2026-09-22"
   },
   "rules": {
     "support": "full",

@@ -1,6 +1,109 @@
 {
-  "entry_count": 1917,
+  "entry_count": 1941,
   "entries": [
+    {
+      "date": "2026-09-23",
+      "commit": "",
+      "title": "Unreleased matrix update",
+      "items": [
+        {
+          "summary": "Antigravity: Latest Major Update evidence refreshed",
+          "target": "cell-antigravity-latest-major-update"
+        },
+        {
+          "summary": "Claude Code: Latest Major Update evidence refreshed",
+          "target": "cell-claude-code-latest-major-update"
+        },
+        {
+          "summary": "Cline: Latest Major Update evidence refreshed",
+          "target": "cell-cline-latest-major-update"
+        },
+        {
+          "summary": "OpenAI Codex CLI: Latest Major Update evidence refreshed",
+          "target": "cell-codex-cli-latest-major-update"
+        },
+        {
+          "summary": "Command Code: Latest Major Update evidence refreshed",
+          "target": "cell-command-code-latest-major-update"
+        },
+        {
+          "summary": "Crush: Latest Major Update evidence refreshed",
+          "target": "cell-crush-latest-major-update"
+        },
+        {
+          "summary": "Crush: Theme now supported",
+          "target": "cell-crush-theme-customization"
+        },
+        {
+          "summary": "Factory Droid: Latest Major Update evidence refreshed",
+          "target": "cell-factory-droid-latest-major-update"
+        },
+        {
+          "summary": "GitHub Copilot CLI: Latest Major Update evidence refreshed",
+          "target": "cell-github-copilot-cli-latest-major-update"
+        },
+        {
+          "summary": "Grok Build: Form Factor evidence refreshed",
+          "target": "cell-grok-build-form-factor"
+        },
+        {
+          "summary": "Grok Build: Latest Major Update evidence refreshed",
+          "target": "cell-grok-build-latest-major-update"
+        },
+        {
+          "summary": "JetBrains Air: Latest Major Update evidence refreshed",
+          "target": "cell-jetbrains-air-latest-major-update"
+        },
+        {
+          "summary": "Kilo Code: Latest Major Update evidence refreshed",
+          "target": "cell-kilo-code-latest-major-update"
+        },
+        {
+          "summary": "Kimi Code CLI: Latest Major Update evidence refreshed",
+          "target": "cell-kimi-cli-latest-major-update"
+        },
+        {
+          "summary": "OpenCode: Latest Major Update evidence refreshed",
+          "target": "cell-opencode-latest-major-update"
+        },
+        {
+          "summary": "OpenHands: Latest Major Update evidence refreshed",
+          "target": "cell-openhands-latest-major-update"
+        },
+        {
+          "summary": "Pi: Latest Major Update evidence refreshed",
+          "target": "cell-pi-latest-major-update"
+        },
+        {
+          "summary": "Qwen Code: Latest Major Update evidence refreshed",
+          "target": "cell-qwen-code-latest-major-update"
+        },
+        {
+          "summary": "Qwen Code: Monitor now supported",
+          "target": "cell-qwen-code-monitor"
+        },
+        {
+          "summary": "ZCode: Context Window evidence refreshed",
+          "target": "cell-zcode-context-window"
+        },
+        {
+          "summary": "ZCode: Keybindings evidence refreshed",
+          "target": "cell-zcode-keyboard-shortcuts"
+        },
+        {
+          "summary": "ZCode: Latest Major Update evidence refreshed",
+          "target": "cell-zcode-latest-major-update"
+        },
+        {
+          "summary": "ZCode: Some Free Usage evidence refreshed",
+          "target": "cell-zcode-some-free-usage"
+        },
+        {
+          "summary": "ZCode: Subagents evidence refreshed",
+          "target": "cell-zcode-subagents"
+        }
+      ]
+    },
     {
       "date": "2026-09-22",
       "commit": "bbac7d8",

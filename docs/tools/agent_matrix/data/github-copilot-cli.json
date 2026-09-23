@@ -23,9 +23,9 @@
   },
   "latest_major_update": {
     "value": "Sep '26",
-    "source_url": "https://github.com/github/copilot-cli/releases/tag/v1.0.86#source:~:text=Custom%20agents%20can%20opt%20into%20repository%20instruction%20files",
-    "comment": "Copilot CLI v1.0.86 shipped September 17, 2026 with opt-in repository instructions for custom agents, more reliable plugin and skill restoration on resume, local-network sandbox status, background-shell status, corrupt-transcript recovery, and corrected Autopilot completion stopping.",
-    "sort_date": "2026-09-17"
+    "source_url": "https://github.com/github/copilot-cli/releases/tag/v1.0.88#source:~:text=Add%20optional%20OSC%20777%20terminal%20notifications",
+    "comment": "Copilot CLI v1.0.88 shipped September 22, 2026 with optional terminal notifications, safer exact-path approvals, custom-agent reasoning effort, more reliable deferred MCP tools and resume behavior, managed settings in ACP and server modes, namespaced skills, active-turn forking, and bounded transcript memory.",
+    "sort_date": "2026-09-22"
   },
   "rules": {
     "support": "full",

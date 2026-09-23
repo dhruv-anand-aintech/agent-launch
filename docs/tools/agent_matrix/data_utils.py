@@ -448,7 +448,7 @@ def generate_llms_txt(bundle_path: str, output_path: str) -> None:
             label = key.replace("_", " ").title()
             line = f"- {label}: {support if support else 'blank'}"
             if c:
-                line += f" — {c}"
+                line += f" - {c}"
             lines.append(line)
         if row.get("pricing", {}).get("value"):
             lines.append(f"- Pricing: {row['pricing']['value']}")

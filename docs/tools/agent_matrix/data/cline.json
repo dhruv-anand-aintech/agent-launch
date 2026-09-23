@@ -29,9 +29,9 @@
   },
   "latest_major_update": {
     "value": "Sep '26",
-    "source_url": "https://github.com/cline/cline/releases/tag/desktop-v0.0.32#source:~:text=Cline%20starts%20again%20after%20updating",
-    "comment": "Cline Desktop v0.0.32 shipped September 18, 2026 with a startup fix for the desktop and embedded Hub build-identity mismatch introduced in v0.0.31, plus end-to-end compiled-backend CI coverage.",
-    "sort_date": "2026-09-18"
+    "source_url": "https://github.com/cline/cline/releases/tag/desktop-v0.0.34#source:~:text=Composio%20connectors%20now%20load%20all%20their%20tools",
+    "comment": "Cline Desktop v0.0.34 shipped September 22, 2026 with complete Composio tool loading, Mac-to-Mac SSH remotes, persistent transcript errors across clients, and immediate cancellation while retrying empty model responses.",
+    "sort_date": "2026-09-22"
   },
   "rules": {
     "support": "full",
