@@ -29,8 +29,9 @@
   },
   "latest_major_update": {
     "value": "Sep '26",
-    "source_url": "https://github.com/kirodotdev/KiroCrew/releases/tag/v0.6.0#source:~:text=Pick%20the%20harness%20that%20runs%20your%20sessions",
-    "comment": "Kiro Crew 0.6.0 shipped September 11, 2026 with selectable Kiro, Claude Code, and Codex harnesses, remote-crew chat, agent-managed monitor loops, cross-backend worker dispatch, longer turn and subagent limits, a Launchpad, richer session organization, and expanded sandbox and installer controls."
+    "source_url": "https://github.com/kirodotdev/KiroCrew/releases/tag/v0.7.1#source:~:text=Sessions%20and%20subagents",
+    "comment": "Kiro Crew v0.7.1 shipped September 25, 2026 with bounded cleanup for per-agent view files and transcript reads, preventing large histories from slowing new chats, subagents, and tab switching.",
+    "sort_date": "2026-09-25"
   },
   "rules": {
     "support": "full",

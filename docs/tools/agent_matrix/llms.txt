@@ -1,6 +1,6 @@
 # Coding Agent Feature Matrix
 > Compare 40 coding agents, CLIs, and IDEs across features.
-> https://compare.ainorthstar.tech | Updated 2026-09-23
+> https://compare.ainorthstar.tech | Updated 2026-09-27
 
 Agent                   Rel    FF     Fre   NoA   Oth   Rul   Skl   Hks   MCP   Cmd   Gol   Sub   Mon   Trn   Mod   App   San   Res   Con   Hdl   Fmt   Sta   Tel   Hst  BYOM
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -17,10 +17,10 @@ Crush                   Jul '2 CLI/TUI    Y     Y     Y     Y     Y     ~     Y 
 Cursor                  2023  CLI/IDE    Y                 Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     ~     ~     Y     Y     Y
 Devin                   Dec '2 CLI/Ext    Y                 Y     Y     Y     Y     Y     N     Y     ~     ~     ?     ~     Y     Y     Y     Y     ~     N     ?     Y     ?
 Factory Droid           2025  CLI/Ext          ~     Y     Y     Y     Y     Y     Y     N     Y     ~     ~     Y     Y     Y     Y     Y     Y     Y     Y     ?     Y     Y
-Fx                      Aug '2 CLI/SDK    ?     ~     Y     Y     Y     ?     Y     ~     N     Y     ~     Y     Y     Y     ~     Y     Y     Y     Y     Y     ?     N     ~
+Fx                      Aug '2 CLI/SDK    ?     ~     Y     Y     Y     ?     Y     ~     N     Y     ~     Y     Y     Y     ~     Y     N     Y     Y     Y     ?     N     Y
 Gemini CLI              Jun '2 CLI        Y           Y     Y     ~     Y     Y     Y     N     Y     ~     ?     Y     Y     Y     Y     Y     Y     ~     ?     Y     N     ~
 GitHub Copilot CLI      Sep '2 CLI        ~     N     Y     Y     Y     Y     Y     ~     ~     Y     ~     Y     Y     Y     Y     Y     Y     Y     Y     ~     ~     N     Y
-GitHub Copilot          Jun '2 CLI/IDE                      Y     Y     Y     Y     ~     N     Y     ~     ?     Y     ~     ~     Y     Y     Y     ~     N     ~     Y     Y
+GitHub Copilot          Jun '2 CLI/IDE                      Y     Y     Y     Y     ~     N     Y     ~     ?     Y     ~     Y     Y     Y     Y     ~     N     ~     Y     Y
 Goose                   Jan '2 CLI/Des    Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     ~     Y     Y     Y     Y     Y     ~     Y     Y     N     Y     N     Y
 Grok Build              May '2 CLI/Web                      Y     Y     Y     Y     ~     Y     Y     ?     ?     ~     Y     ~     ?     ?     Y     ?     ?     ?     Y     ~
 JetBrains Air           Mar '2 IDE/Web    Y     ~     Y     Y     Y     ~     Y     Y     N     ~     Y     ~     Y     Y     Y     Y     Y     N     N     N     ?     Y     Y
@@ -43,7 +43,7 @@ Replit Agent            Sep '2 Web                          ~     Y     ~     ? 
 Roo Code                Mid-20 Extensi                      Y     Y     N     Y     Y     N     Y     ~     ?     Y     Y     N     ~     Y     Y     ~     N     Y     N     Y
 Trae Agent              Jun '2 CLI        Y     Y     Y     ~     N     N     ~     N     N     N     N     Y     Y     N     ~     N     N     Y     ~     N     N     N     Y
 Windsurf Cascade        Nov '2 CLI/IDE                      Y     Y     Y     Y     Y     N     Y     ~     ?     Y     Y     ~     Y     Y     ~     ~     ~     ~     Y     ~
-ZCode                   2026  IDE/Des    Y                 Y     Y     ~     Y     Y     Y     Y     ~     ~     Y     Y     ~     ~     ~     N     N     ~     ?     N     Y
+ZCode                   2026  CLI/IDE    Y                 Y     Y     Y     Y     Y     Y     Y     ~     ~     Y     Y     ~     Y     Y     Y     Y     ~     ?     N     Y
 
 ## Feature legend
 Code = Y: full | ~: partial | N: none | ?: unknown |  : 
@@ -491,19 +491,19 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Subagents: full - Fx supports one-off and named session-backed subagents with inherited permission restrictions.
 - Monitor: partial - Fx can list and inspect background commands, but the reviewed sources do not establish a general event-driven monitor primitive.
 - Transcripts: full - Location: Fx saves session transcripts under `~/.fx/sessions/`; they can be listed, inspected as JSON, resumed, migrated, and recovered.
-- Model Selection: full - Fx saves a model per provider and supports process-level FX_MODEL overrides; the stable v0.0.10 `fx ask` help does not expose a launch-time --model flag.
+- Model Selection: full - Fx saves a model per provider and supports `--provider`, `--model`, `--effort`, and `--fast` for interactive sessions; `fx ask` accepts model, effort, and fast overrides for a single run.
 - Approval Mode: full - Permission modes include ask, automatic review, and explicit full-access bypass, with remembered allow, ask, and deny rules.
 - Sandbox Mode: partial - Fx enforces permission checks and command safety controls, but the reviewed stable documentation does not establish a configurable filesystem or network sandbox mode.
 - Resume: full - Supports latest-session and exact-session resume flows in both interactive and headless modes.
-- Continue: full - Supports continuing the latest workspace session with -c or --continue.
+- Continue: none - Fx v0.0.11 removed `/continue`; transient failures now retry and continue automatically. Session selection and resume remain available through `/resume`.
 - Non Interactive: full - `fx ask` runs one request and exits, with argument or stdin prompts for scripts and CI.
 - Output Format: full - `fx ask --json` returns one structured result object with output, final output, exit code, session, model, usage, and tool-call fields.
 - Statusline: full - The status line can independently show context, session, and workspace information.
 - Telemetry: unknown - Fx documents an opt-out for local Herdr lifecycle reporting, but the reviewed public sources do not establish a complete product telemetry contract.
 - Hosted Agent: none - Fx is a local native CLI; model access may be local or cloud, but the harness itself is not a hosted workspace.
-- Custom Model Provider: partial - Fx documents Ollama, vLLM, OpenRouter, and BYOK OpenAI-compatible connections, but marks this configurable-provider surface as a preview that may require a newer build.
+- Custom Model Provider: full - Fx supports named OpenAI Chat Completions connections for local servers and other gateways, configured in `~/.fx/settings.json` and selected with `fx provider`, `--provider`, or `FX_PROVIDER`.
 - Pricing: Apache-2.0 CLI; model-provider usage is billed separately
-- Notes: Fx is Vercel Labs' experimental Unix-like native coding-agent CLI and embeddable harness. Fx 0.0.10 was installed locally from the official setup script and its help and version surfaces were verified.
+- Notes: Fx is Vercel Labs' experimental Unix-like native coding-agent CLI and embeddable harness. Fx 0.0.10 was previously installed locally from the official setup script; this run verified v0.0.11 from the official release metadata but did not replace the existing binary.
 
 ### Gemini CLI
 - Docs: https://google-gemini.github.io/gemini-cli/
@@ -593,7 +593,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Transcripts: unknown - Location: transcript/session disk storage was not found in public docs reviewed.
 - Model Selection: full - Models from Anthropic, Google, OpenAI, xAI, Microsoft, and GitHub-tuned models. Auto model selection is available; current billing uses token-based AI Credits by model, with legacy premium-request multipliers only for qualifying annual Pro/Pro+ subscribers.
 - Approval Mode: partial - Desktop app has Interactive, Plan, and Autopilot modes. preToolUse hook can approve/deny. No universal 'always ask before X' toggle.
-- Sandbox Mode: partial - Cloud agent runs in ephemeral GitHub Actions environment (natural sandbox). CLI has tool permission controls. No explicit sandbox toggle.
+- Sandbox Mode: full - Cloud agents run in ephemeral GitHub Actions environments, while the Copilot app now has explicit per-project local sandbox controls for filesystem, network, and credentials plus a `/sandbox on` session command. Copilot CLI sandbox settings remain separate.
 - Resume: full - CLI: copilot --resume opens session picker, copilot --resume SESSION-ID jumps to specific session. /resume during interactive session.
 - Continue: full - CLI: copilot --continue resumes most recent session directly. IDE agent sessions persistent. Desktop app sessions in sidebar.
 - Non Interactive: full - CLI programmatic/scripted usage in GitHub Actions. --non-interactive mode. The GitHub CLI extension entrypoint is `gh copilot -- ...`; standalone payload availability can depend on the extension downloader/auth state. Copilot SDK for API-based integration.
@@ -1324,7 +1324,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 ### ZCode
 - Docs: https://zcode.z.ai/en/docs
 - Website: https://zcode.z.ai/en
-- Form factor: IDE, Desktop App, Mobile
+- Form factor: CLI, IDE, Web, Desktop App, Mobile
 - Released: 2026
 - Latest update: Sep '26
 - Some Free Usage: full - First-time ZCode users receive a 5-day free trial with daily GLM-5.3 and GLM-5-turbo token benefits; subscribers can also run gradually rolling-out idle-time tasks without consuming plan quota.
@@ -1332,7 +1332,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Can Use Other Subscriptions: blank
 - Rules: full - Reads user global `~/.zcode/AGENTS.md` and workspace `AGENTS.md`; workspace instructions are primary and CLAUDE.md is only a one-time onboarding migration source.
 - Skills: full - First-class `SKILL.md` skills under `~/.zcode/skills/<skill-name>/SKILL.md`, with Settings management and import from other agents.
-- Hooks: partial - Plugin system advertises Hook plugin types, but current public docs do not expose a full standalone hook API like some CLIs.
+- Hooks: full - ZCode documents a local subprocess hook protocol with session, model, tool, and stop events, JSON stdin and stdout contracts, exit-code behavior, user configuration, plugin packaging, and explicit trust controls.
 - Mcp Servers: full - Supports stdio, HTTP, and SSE MCP servers, full JSON config import, env vars/headers, plugin MCP servers, and importing MCP config from Claude Code, Codex CLI, OpenCode, and `.agents`.
 - Custom Commands: full - User/workspace custom slash commands can be created in settings and invoked from `/` in ZCode Agent.
 - Goal Command: full - Built-in `/goal` supports set, replace, pause, resume, and clear; the agent automatically verifies each round and continues until the goal is complete.
@@ -1342,13 +1342,13 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Model Selection: full - Model selector and model settings support Z.ai, BigModel, GLM Coding Plan, and API-key providers.
 - Approval Mode: full - Execution modes include Default, Confirm Before Changes, and Auto Edit; safety confirmation pauses risky actions for approval.
 - Sandbox Mode: partial - Remote development can run workspaces in SSH hosts or local Docker containers; no standalone local sandbox flag is documented.
-- Resume: partial - Desktop task list/conversation history supports returning to prior work, but no CLI-style `--resume` flag is documented.
-- Continue: partial - Existing tasks can be continued from desktop or mobile Remote Control; no headless continue command is documented.
-- Non Interactive: none - ZCode is a desktop ADE; no local headless CLI entry point was found.
-- Output Format: none - No JSON/structured output mode documented for the desktop agent.
+- Resume: full - The official ZCode CLI defines `--resume <session>` and uses the requested session for both terminal and headless prompt runs.
+- Continue: full - The official ZCode CLI defines `-c` and `--continue` to continue the latest applicable session, including with headless prompt runs.
+- Non Interactive: full - The official unified command includes headless `zcode --prompt` execution in addition to the terminal UI and local Web interface.
+- Output Format: full - Headless prompt runs accept `--json` and `--output-format`, including text, JSON, and streaming JSON event output.
 - Statusline: partial - Goal summary panel shows status, elapsed time, tokens, and iteration count, but no custom statusline API is documented.
 - Telemetry: unknown - Usage Stats exists; no telemetry opt-out/control docs found.
 - Hosted Agent: none - Runtime remains the desktop workspace or remote SSH/Docker target; mobile remote only controls the open desktop workspace.
 - Custom Model Provider: full - Supports third-party compatible model services through Anthropic/OpenAI protocols and API key mode.
 - Pricing: 5-day free trial quota; GLM Coding Lite $12.60/mo ($18 list), Pro $56/mo ($80 list), Max $117.60/mo ($168 list); weekly credit limits; API/resource package billing also available
-- Notes: Z.ai/Zhipu desktop ADE and official GLM-5.3 harness with in-house ZCode Agent, AGENTS.md, skills, commands, MCP, subagents, dynamic workflows, plugins, goal mode, mobile remote control, bot channels, and remote SSH/Docker development. No officially documented standalone local prompt CLI command was found, so no agent-launch backend was added.
+- Notes: Z.ai/Zhipu's official GLM-5.3 harness is one unified ZCode product with desktop, browser, terminal, and mobile-control interfaces. Its official repository includes an Agent CLI with headless prompt, resume, continue, and structured-output flags. No distinct official GLM Coding CLI or GLM Code product was found, and the current release assets provide desktop installers rather than a standalone CLI installer, so no agent-launch backend was added.

@@ -33,8 +33,8 @@
   },
   "latest_major_update": {
     "value": "Sep '26",
-    "source_url": "https://code.visualstudio.com/updates/v1_136#_agents:~:text=This%20release%20helps%20you%20finish%20pull%20requests%20with%20agents",
-    "comment": "VS Code 1.136 shipped September 2, 2026 with Agent Merge, multi-root Copilot and Claude sessions, hierarchical related chats, a redesigned agent-session input, and agent-host improvements."
+    "source_url": "https://github.blog/changelog/2026-09-25-github-copilot-weekly-releases-september-21/#github-copilot-app:~:text=Limit%20agents'%20access%20to%20files",
+    "comment": "GitHub's September 25, 2026 weekly release added Claude Opus 5.5, GPT-6 Sol and Luna, and Grok 4.7, local sandboxing and OpenTelemetry in the Copilot app, improved Slack and Teams model and long-task controls, assisted approvals and shared skills in JetBrains, and remote Dev Container agents in VS Code 1.139."
   },
   "rules": {
     "support": "full",
@@ -87,9 +87,9 @@
     "comment": "Desktop app has Interactive, Plan, and Autopilot modes. preToolUse hook can approve/deny. No universal 'always ask before X' toggle."
   },
   "sandbox_mode": {
-    "support": "partial",
-    "source_url": "https://docs.github.com/en/copilot/concepts/coding-agent/coding-agent#source:~:text=Copilot%20cloud%20agent%20has%20access%20to%20its%20own%20ephemeral%20development%20environment%2C%20powered%20by%20GitHub%20Actions",
-    "comment": "Cloud agent runs in ephemeral GitHub Actions environment (natural sandbox). CLI has tool permission controls. No explicit sandbox toggle."
+    "support": "full",
+    "source_url": "https://github.blog/changelog/2026-09-23-local-sandboxing-in-the-github-copilot-app/#get-started:~:text=%2Fsandbox%20on",
+    "comment": "Cloud agents run in ephemeral GitHub Actions environments, while the Copilot app now has explicit per-project local sandbox controls for filesystem, network, and credentials plus a `/sandbox on` session command. Copilot CLI sandbox settings remain separate."
   },
   "resume": {
     "support": "full",

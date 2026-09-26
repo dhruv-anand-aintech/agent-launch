@@ -29,9 +29,9 @@
   },
   "latest_major_update": {
     "value": "Sep '26",
-    "source_url": "https://github.com/MoonshotAI/kimi-code/releases/tag/%40moonshot-ai%2Fkimi-code%402.0.2#source:~:text=Fix%20new%20messages%20occasionally%20landing",
-    "comment": "Kimi Code 2.0.2 shipped September 19, 2026 with fixes for resumed-session message ordering, compaction after switching to a smaller-context model, project-root assumptions, duplicated in-flight messages, and Web UI interactions.",
-    "sort_date": "2026-09-19"
+    "source_url": "https://github.com/MoonshotAI/kimi-code/releases/tag/%40moonshot-ai%2Fkimi-code%402.1.1#source:~:text=Revert%20filesystem%20watchers",
+    "comment": "Kimi Code 2.1.1 shipped September 24, 2026, rolling back overly defensive 2.1.0 changes and restoring filesystem watchers for configuration and workspace files by default, with an opt-out through `[watch] enabled = false` or `KIMI_CODE_WATCH=0`.",
+    "sort_date": "2026-09-24"
   },
   "rules": {
     "support": "full",
