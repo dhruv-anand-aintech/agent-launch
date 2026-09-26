@@ -31,9 +31,9 @@
   },
   "latest_major_update": {
     "value": "Sep '26",
-    "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.280#source:~:text=Added%20Claude%20Opus%205.5",
-    "comment": "Claude Code v2.1.280 shipped September 22, 2026 with Claude Opus 5.5, broader mouse support, configurable MCP-description limits, safer symlinked writes and auto-mode retries, extensive background-agent reliability fixes, and new VS Code status, sandbox, export, skills, and plan surfaces.",
-    "sort_date": "2026-09-22"
+    "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.283#source:~:text=Added%20%60%2Fdoctor%20prompt-audit%60",
+    "comment": "Claude Code v2.1.283 shipped September 25, 2026 with prompt-audit diagnostics, stricter managed model controls, richer OpenTelemetry tool output, improved background MCP progress and cleanup, broad plugin validation fixes, faster startup and first-response latency, and extensive terminal, sandbox, Remote Control, cloud-session, and code-review reliability work.",
+    "sort_date": "2026-09-25"
   },
   "rules": {
     "support": "full",

@@ -31,9 +31,9 @@
   },
   "latest_major_update": {
     "value": "Sep '26",
-    "source_url": "https://docs.factory.ai/changelog/release-notes#september-2026:~:text=CLI%20v0.224.0%20Desktop%20v0.181.0%20September%2021%2C%202026",
-    "comment": "Factory's September 21, 2026 release lists Droid CLI v0.224.0 and Desktop v0.181.0, with session computer management, role-aware computer secrets, onboarding plan selection, downloadable specifications, self-reviewed QA setup, preserved resumed history and reasoning, and whole-process sandbox coverage for child Droid processes.",
-    "sort_date": "2026-09-21"
+    "source_url": "https://docs.factory.ai/changelog/release-notes#september-2026:~:text=CLI%20v0.226.1%20Desktop%20v0.183.1%20September%2024%2C%202026",
+    "comment": "Factory's September 24, 2026 release lists Droid CLI v0.226.1 and Desktop v0.183.1, fixing leftover hook entries so removed capabilities no longer start sessions. The preceding v0.226.0 and v0.183.0 release added notification-volume settings, draft-copy shortcuts, ServiceNow connectors, cross-computer session access, and session and chat reliability improvements.",
+    "sort_date": "2026-09-24"
   },
   "rules": {
     "support": "full",

@@ -31,8 +31,8 @@
   },
   "latest_major_update": {
     "value": "Sep '26",
-    "source_url": "https://cursor.com/changelog#cursor-projects:~:text=Today%20we're%20launching%20Projects%20in%20Cursor",
-    "comment": "Cursor launched Projects in beta on September 10, 2026: durable cloud workspaces that retain shared context for months, coordinate and delegate to large numbers of agents, and run recurring work from subscriptions without requiring prompts."
+    "source_url": "https://cursor.com/changelog#rollouts-and-security-review:~:text=Today%20we're%20launching%20two%20Cursor%20bots",
+    "comment": "Cursor launched Rollouts and Security Review on September 23, 2026. Rollouts watches deployments and reports change health per environment, while Security Review analyzes pull requests for exploitable vulnerabilities and can enforce team-specific security rules."
   },
   "rules": {
     "support": "full",

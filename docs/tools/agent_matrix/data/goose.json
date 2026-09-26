@@ -25,9 +25,9 @@
   },
   "latest_major_update": {
     "value": "Sep '26",
-    "source_url": "https://github.com/aaif-goose/goose/releases/tag/v1.51.0#source:~:text=GPT-live%20API%20support",
-    "comment": "Goose v1.51.0 shipped September 17, 2026 with Desktop state-machine routing, external ACP backend sockets, GPT-live support, Gateway pairing controls, terminal-bell notifications, and fixes across MCP, headless exits, session security, streaming, and scheduled recipes.",
-    "sort_date": "2026-09-17"
+    "source_url": "https://github.com/aaif-goose/goose/releases/tag/v1.52.0#source:~:text=Live%20voice%20conversations",
+    "comment": "Goose v1.52.0 shipped September 23, 2026 with live voice conversations in Desktop, Z.AI Coding Plan support, OpenRouter and Jev decision providers, custom OpenAI base URLs in the SDK, updated frontier-model support, safer recipe and provider configuration, and extensive installer, MCP, scheduling, subagent, and session fixes.",
+    "sort_date": "2026-09-23"
   },
   "rules": {
     "support": "full",

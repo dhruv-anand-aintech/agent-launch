@@ -38,7 +38,7 @@ Form factor values are deliberately strict: each value should have a concrete pe
 | Cursor | CLI, IDE, SDK, Web, Mobile | 2023 | Sep '26 | full |  |  | full | full | full | full | full | full | full | full |
 | Devin | CLI, Extension, SDK, Web | Dec '24 | Sep '26 | full |  |  | full | full | partial | partial | full | full | full | unknown |
 | Factory Droid | CLI, Extension, SDK, Web, Desktop App | 2025 | Sep '26 |  | partial | full | full | full | partial | partial | full | full | full | full |
-| Fx | CLI, SDK | Aug '26 | Sep '26 | unknown | partial | full | full | full | partial | full | unknown | full | none | partial |
+| Fx | CLI, SDK | Aug '26 | Sep '26 | unknown | partial | full | full | full | partial | full | unknown | full | none | full |
 | Gemini CLI | CLI | Jun '25 | Sep '26 | full |  | full | full | partial | partial | unknown | full | full | none | partial |
 | GitHub Copilot | CLI, IDE, Extension, SDK, Web, Desktop App | Jun '25 | Sep '26 |  |  |  | full | full | partial | unknown | full | full | full | full |
 | GitHub Copilot CLI | CLI | Sep '25 | Sep '26 | partial | none | full | full | full | partial | full | full | full | none | full |
@@ -65,7 +65,7 @@ Form factor values are deliberately strict: each value should have a concrete pe
 | Roo Code | Extension | Mid-2025 | May '26 |  |  |  | full | full | partial | unknown | none | full | none | full |
 | Trae Agent | CLI | Jun '25 | Feb '26 | full | full | full | partial | none | none | full | none | partial | none | full |
 | Windsurf Cascade | CLI, IDE, Extension | Nov '24 | Aug '26 |  |  |  | full | full | partial | unknown | full | full | full | partial |
-| ZCode | IDE, Desktop App, Mobile | 2026 | Sep '26 | full |  |  | full | full | partial | partial | partial | full | none | full |
+| ZCode | CLI, IDE, Web, Desktop App, Mobile | 2026 | Sep '26 | full |  |  | full | full | partial | partial | full | full | none | full |
 
 ## Suggested Next Columns
 

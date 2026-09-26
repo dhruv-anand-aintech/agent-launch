@@ -33,9 +33,9 @@
   },
   "latest_major_update": {
     "value": "Sep '26",
-    "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.24.4#source:~:text=add%20monitor%20tool%20to%20system%20prompt%20guidance",
-    "comment": "Qwen Code v0.24.4 shipped September 22, 2026 with monitor-tool guidance, batched workspace session catalogs, plan-drift reporting, SSH workspaces without a remote daemon, encrypted mobile connection profiles, managed runtime attestation, and extensive Web Shell and CLI fixes.",
-    "sort_date": "2026-09-22"
+    "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.24.6#source:~:text=Add%20the%20Hosted%20Harness%20private%20client",
+    "comment": "Qwen Code v0.24.6 shipped September 26, 2026 with managed and hosted runtime contracts, durable managed-session failover, managed Agent View session listing, model and reasoning selection at session creation, an agent-prepared Batch API workflow, a native Advisor tool, and major CLI startup and memory improvements.",
+    "sort_date": "2026-09-26"
   },
   "rules": {
     "support": "full",

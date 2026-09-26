@@ -8,15 +8,19 @@
   },
   "form_factor": {
     "values": [
+      "CLI",
       "IDE",
       "Desktop App",
+      "Web",
       "Mobile"
     ],
-    "source_url": "https://zcode.z.ai/en/docs/install#download:~:text=Currently%20supported%20platforms%20include%20macOS%20(Apple%20Silicon%20%2F%20Intel)%20and%20Windows",
-    "comment": "Desktop agentic development environment for macOS and Windows, Linux beta group, plus mobile Remote Control for directing an open desktop workspace. Per-form-factor links: IDE: https://zcode.z.ai/en; Desktop App: https://zcode.z.ai/en/docs/install; Mobile: https://zcode.z.ai/en/docs/remote-control.",
+    "source_url": "https://github.com/zai-org/ZCode#readme:~:text=desktop%2C%20browser%2C%20and%20terminal%20interfaces",
+    "comment": "Unified ZCode product with terminal, desktop ADE, local browser, and mobile Remote Control surfaces. The official repository documents `zcode`, `zcode --web`, and `zcode --prompt`, but the release publishes desktop installers rather than a separately installable CLI package. Per-form-factor links: CLI: https://github.com/zai-org/ZCode#cli-source-development; IDE: https://zcode.z.ai/en; Desktop App: https://zcode.z.ai/en/docs/install; Web: https://github.com/zai-org/ZCode#setup; Mobile: https://zcode.z.ai/en/docs/remote-control.",
     "links": {
+      "CLI": "https://github.com/zai-org/ZCode#cli-source-development",
       "IDE": "https://zcode.z.ai/en",
       "Desktop App": "https://zcode.z.ai/en/docs/install",
+      "Web": "https://github.com/zai-org/ZCode#setup",
       "Mobile": "https://zcode.z.ai/en/docs/remote-control"
     }
   },
@@ -42,9 +46,9 @@
     "comment": "First-class `SKILL.md` skills under `~/.zcode/skills/<skill-name>/SKILL.md`, with Settings management and import from other agents."
   },
   "hooks": {
-    "support": "partial",
-    "source_url": "https://zcode.z.ai/en/docs/legacy/plugin#plugin-types:~:text=Hook%20Hooks%20that%20auto-execute%20on%20specific%20events",
-    "comment": "Plugin system advertises Hook plugin types, but current public docs do not expose a full standalone hook API like some CLIs."
+    "support": "full",
+    "source_url": "https://zcode.z.ai/en/docs/hooks#configuration-sources:~:text=hooks.enabled%3A%20true",
+    "comment": "ZCode documents a local subprocess hook protocol with session, model, tool, and stop events, JSON stdin and stdout contracts, exit-code behavior, user configuration, plugin packaging, and explicit trust controls."
   },
   "mcp_servers": {
     "support": "full",
@@ -87,24 +91,24 @@
     "comment": "Remote development can run workspaces in SSH hosts or local Docker containers; no standalone local sandbox flag is documented."
   },
   "resume": {
-    "support": "partial",
-    "source_url": "https://zcode.z.ai/en/docs/agents#workspace-entry:~:text=task%20list",
-    "comment": "Desktop task list/conversation history supports returning to prior work, but no CLI-style `--resume` flag is documented."
+    "support": "full",
+    "source_url": "https://github.com/zai-org/ZCode/blob/main/apps/zcode-cli/packages/cli/src/arguments.ts#L50:~:text=resume",
+    "comment": "The official ZCode CLI defines `--resume <session>` and uses the requested session for both terminal and headless prompt runs."
   },
   "continue": {
-    "support": "partial",
-    "source_url": "https://zcode.z.ai/en/docs/remote-control#control-model:~:text=Confirm%2C%20continue%2C%20or%20stop%20a%20long-running%20task",
-    "comment": "Existing tasks can be continued from desktop or mobile Remote Control; no headless continue command is documented."
+    "support": "full",
+    "source_url": "https://github.com/zai-org/ZCode/blob/main/apps/zcode-cli/packages/cli/src/arguments.ts#L59:~:text=continue",
+    "comment": "The official ZCode CLI defines `-c` and `--continue` to continue the latest applicable session, including with headless prompt runs."
   },
   "non_interactive": {
-    "support": "none",
-    "source_url": "https://zcode.z.ai/en/docs/install#verify-installation:~:text=Open%20the%20app%20and%20complete%20sign-in",
-    "comment": "ZCode is a desktop ADE; no local headless CLI entry point was found."
+    "support": "full",
+    "source_url": "https://github.com/zai-org/ZCode/blob/main/README.en.md#setup:~:text=zcode%20--help",
+    "comment": "The official unified command includes headless `zcode --prompt` execution in addition to the terminal UI and local Web interface."
   },
   "output_format": {
-    "support": "none",
-    "source_url": "https://zcode.z.ai/en/docs/agents#workspace-entry:~:text=chat%20input",
-    "comment": "No JSON/structured output mode documented for the desktop agent."
+    "support": "full",
+    "source_url": "https://github.com/zai-org/ZCode/blob/main/apps/zcode-cli/packages/cli/src/prompt-command.ts#L37:~:text=output-format",
+    "comment": "Headless prompt runs accept `--json` and `--output-format`, including text, JSON, and streaming JSON event output."
   },
   "statusline": {
     "support": "partial",
@@ -191,5 +195,5 @@
     "source_url": "https://zcode.z.ai/en/changelog#release-v314:~:text=Interface%20scaling%20supports%20a%20larger%20magnification%20ratio",
     "comment": "Desktop UI supports interface scaling and theme switching; deeper layout customization is not documented."
   },
-  "notes": "Z.ai/Zhipu desktop ADE and official GLM-5.3 harness with in-house ZCode Agent, AGENTS.md, skills, commands, MCP, subagents, dynamic workflows, plugins, goal mode, mobile remote control, bot channels, and remote SSH/Docker development. No officially documented standalone local prompt CLI command was found, so no agent-launch backend was added."
+  "notes": "Z.ai/Zhipu's official GLM-5.3 harness is one unified ZCode product with desktop, browser, terminal, and mobile-control interfaces. Its official repository includes an Agent CLI with headless prompt, resume, continue, and structured-output flags. No distinct official GLM Coding CLI or GLM Code product was found, and the current release assets provide desktop installers rather than a standalone CLI installer, so no agent-launch backend was added."
 }

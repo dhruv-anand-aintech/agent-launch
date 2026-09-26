@@ -1,6 +1,117 @@
 {
-  "entry_count": 1941,
+  "entry_count": 1967,
   "entries": [
+    {
+      "date": "2026-09-27",
+      "commit": "",
+      "title": "Unreleased matrix update",
+      "items": [
+        {
+          "summary": "Antigravity: Latest Major Update evidence refreshed",
+          "target": "cell-antigravity-latest-major-update"
+        },
+        {
+          "summary": "Antigravity: Theme now supported",
+          "target": "cell-antigravity-theme-customization"
+        },
+        {
+          "summary": "Claude Code: Latest Major Update evidence refreshed",
+          "target": "cell-claude-code-latest-major-update"
+        },
+        {
+          "summary": "Cline: Latest Major Update evidence refreshed",
+          "target": "cell-cline-latest-major-update"
+        },
+        {
+          "summary": "OpenAI Codex CLI: Latest Major Update evidence refreshed",
+          "target": "cell-codex-cli-latest-major-update"
+        },
+        {
+          "summary": "Cursor: Latest Major Update evidence refreshed",
+          "target": "cell-cursor-latest-major-update"
+        },
+        {
+          "summary": "Factory Droid: Latest Major Update evidence refreshed",
+          "target": "cell-factory-droid-latest-major-update"
+        },
+        {
+          "summary": "Fx: Continue now marked unsupported",
+          "target": "cell-fx-continue"
+        },
+        {
+          "summary": "Fx: Arbitrary Models now supported",
+          "target": "cell-fx-custom-model-provider"
+        },
+        {
+          "summary": "Fx: Latest Major Update evidence refreshed",
+          "target": "cell-fx-latest-major-update"
+        },
+        {
+          "summary": "Fx: Model evidence refreshed",
+          "target": "cell-fx-model-selection"
+        },
+        {
+          "summary": "Gemini CLI: Latest Major Update evidence refreshed",
+          "target": "cell-gemini-cli-latest-major-update"
+        },
+        {
+          "summary": "GitHub Copilot: Latest Major Update evidence refreshed",
+          "target": "cell-github-copilot-coding-agent-latest-major-update"
+        },
+        {
+          "summary": "GitHub Copilot: Sandbox now supported",
+          "target": "cell-github-copilot-coding-agent-sandbox-mode"
+        },
+        {
+          "summary": "Goose: Latest Major Update evidence refreshed",
+          "target": "cell-goose-latest-major-update"
+        },
+        {
+          "summary": "Kilo Code: Latest Major Update evidence refreshed",
+          "target": "cell-kilo-code-latest-major-update"
+        },
+        {
+          "summary": "Kimi Code CLI: Latest Major Update evidence refreshed",
+          "target": "cell-kimi-cli-latest-major-update"
+        },
+        {
+          "summary": "Kiro Crew: Latest Major Update evidence refreshed",
+          "target": "cell-kiro-crew-latest-major-update"
+        },
+        {
+          "summary": "OpenHands: Latest Major Update evidence refreshed",
+          "target": "cell-openhands-latest-major-update"
+        },
+        {
+          "summary": "Qwen Code: Latest Major Update evidence refreshed",
+          "target": "cell-qwen-code-latest-major-update"
+        },
+        {
+          "summary": "ZCode: Continue now supported",
+          "target": "cell-zcode-continue"
+        },
+        {
+          "summary": "ZCode: Form Factor updated to CLI, IDE, Desktop App, Web, Mobile",
+          "target": "cell-zcode-form-factor"
+        },
+        {
+          "summary": "ZCode: Hooks now supported",
+          "target": "cell-zcode-hooks"
+        },
+        {
+          "summary": "ZCode: Headless now supported",
+          "target": "cell-zcode-non-interactive"
+        },
+        {
+          "summary": "ZCode: Output Format now supported",
+          "target": "cell-zcode-output-format"
+        },
+        {
+          "summary": "ZCode: Resume now supported",
+          "target": "cell-zcode-resume"
+        }
+      ]
+    },
     {
       "date": "2026-09-23",
       "commit": "53a07a1",

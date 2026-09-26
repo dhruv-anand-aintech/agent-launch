@@ -29,9 +29,9 @@
   },
   "latest_major_update": {
     "value": "Sep '26",
-    "source_url": "https://github.com/cline/cline/releases/tag/desktop-v0.0.34#source:~:text=Composio%20connectors%20now%20load%20all%20their%20tools",
-    "comment": "Cline Desktop v0.0.34 shipped September 22, 2026 with complete Composio tool loading, Mac-to-Mac SSH remotes, persistent transcript errors across clients, and immediate cancellation while retrying empty model responses.",
-    "sort_date": "2026-09-22"
+    "source_url": "https://github.com/cline/cline/releases/tag/desktop-v0.0.37#source:~:text=Settings%20has%20a%20new%20About%20page",
+    "comment": "Cline Desktop v0.0.37 shipped September 26, 2026 with an About and update-management page, a post-update What's New dialog covering SSH remotes, worktrees, pull-request status, and parallel subagents, direct macOS diagnostic export, and a Bedrock reasoning fix.",
+    "sort_date": "2026-09-26"
   },
   "rules": {
     "support": "full",

@@ -25,9 +25,9 @@
   },
   "latest_major_update": {
     "value": "Sep '26",
-    "source_url": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.7.7#source:~:text=Retry%20transient%20connection%20drops",
-    "comment": "Kilo Code v7.7.7 shipped September 22, 2026 with OpenCode compaction, reasoning-effort, provider, retry, locale, TUI, and message-ordering improvements plus retries for transient permission-approval connection drops.",
-    "sort_date": "2026-09-22"
+    "source_url": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.8.1#source:~:text=Publish%20CycloneDX%20software%20bills%20of%20materials",
+    "comment": "Kilo Code v7.8.1 shipped September 25, 2026 with signed CycloneDX software bills of materials for release artifacts. The v7.8 line also added streamed Agent Manager browser previews, stoppable session cleanup, subagent model selection by default, MCP companion skills, Azure Entra sign-in, and stronger offline recovery.",
+    "sort_date": "2026-09-25"
   },
   "rules": {
     "support": "full",

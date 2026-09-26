@@ -27,8 +27,8 @@
   },
   "latest_major_update": {
     "value": "Sep '26",
-    "source_url": "https://www.antigravity.google/changelog#version:~:text=2.16.0,September%2022%2C%202026",
-    "comment": "Antigravity 2.16.0 shipped September 22, 2026 with WSL connections, native Office-document prompt attachments, live stoppable subagent cards, image save and copy actions, and interface, accessibility, and reliability fixes.",
+    "source_url": "https://www.antigravity.google/changelog#version:~:text=2.17.0,September%2022%2C%202026",
+    "comment": "Antigravity 2.17.0 shipped September 22, 2026 with an editable `/plan` workflow and Plan Review Policy, Finder and Explorer project reveals, a light/dark theme toggle, safer plugin cleanup, improved terminal rendering, and more reliable headless background-task reporting.",
     "sort_date": "2026-09-22"
   },
   "rules": {
@@ -153,9 +153,9 @@
     "comment": "Research needed. Check official documentation for keybinding customization options."
   },
   "theme_customization": {
-    "support": "unknown",
-    "source_url": "https://docs.example.com/#documentation:~:text=theme",
-    "comment": "Research needed. Check for theme/appearance customization options."
+    "support": "full",
+    "source_url": "https://www.antigravity.google/changelog#version:~:text=Toggle%20theme%20from%20the%20command%20palette",
+    "comment": "Antigravity 2.17.0 added a command-palette action that toggles directly between light and dark themes."
   },
   "auto_save": {
     "support": "unknown",

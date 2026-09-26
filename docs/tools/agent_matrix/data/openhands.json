@@ -31,9 +31,9 @@
   },
   "latest_major_update": {
     "value": "Sep '26",
-    "source_url": "https://github.com/OpenHands/OpenHands/releases/tag/v1.22.0#source:~:text=test%20remote%20MCP%20servers%20on%20cloud%20backends",
-    "comment": "OpenHands v1.22.0 shipped September 22, 2026 with cloud-backend remote MCP testing, Git Sync access for organization admins, automation-menu access for members, and fixes that preserve sibling MCP servers and automation links.",
-    "sort_date": "2026-09-22"
+    "source_url": "https://github.com/OpenHands/OpenHands/releases/tag/v1.24.0#source:~:text=toggle%20all%20workspace%20folders",
+    "comment": "OpenHands v1.24.0 shipped September 25, 2026 with workspace-folder toggles, backend-scoped subscription caches, read-only shared automation conversations in cloud, improved MCP OAuth persistence, ACP tool-call rendering, model-profile warnings, and history and settings reliability fixes.",
+    "sort_date": "2026-09-25"
   },
   "rules": {
     "support": "full",

@@ -27,9 +27,9 @@
   },
   "latest_major_update": {
     "value": "Sep '26",
-    "source_url": "https://github.com/vercel-labs/fx/releases/tag/v0.0.10#source:~:text=fx%20now%20completes%20turns%20up%20to%201.6%C3%97%20faster",
-    "comment": "Fx v0.0.10 shipped September 14, 2026 with faster turns and model-request startup, clearer shell recovery, improved trace diagnostics, more reliable session resume and scrollback, and stronger secret protection in MCP errors.",
-    "sort_date": "2026-09-14"
+    "source_url": "https://github.com/vercel-labs/fx/releases/tag/v0.0.11#source:~:text=fx%20now%20supports%20custom%20model%20connections%20and%20themes",
+    "comment": "Fx v0.0.11 shipped September 24, 2026 with stable custom OpenAI-compatible connections, custom themes, launch-time provider, model, effort, and fast controls, Slack bot management, image reading, expanded libfx controls, much faster resume and lookup, and sharply lower memory use on long turns.",
+    "sort_date": "2026-09-24"
   },
   "pricing": {
     "value": "Apache-2.0 CLI; model-provider usage is billed separately",
@@ -103,8 +103,8 @@
   },
   "model_selection": {
     "support": "full",
-    "source_url": "https://fx.sh/docs/configure-fx/configuration#agent-and-model-settings:~:text=models",
-    "comment": "Fx saves a model per provider and supports process-level FX_MODEL overrides; the stable v0.0.10 `fx ask` help does not expose a launch-time --model flag."
+    "source_url": "https://github.com/vercel-labs/fx/releases/tag/v0.0.11#source:~:text=Interactive%20flags",
+    "comment": "Fx saves a model per provider and supports `--provider`, `--model`, `--effort`, and `--fast` for interactive sessions; `fx ask` accepts model, effort, and fast overrides for a single run."
   },
   "approval_mode": {
     "support": "full",
@@ -122,9 +122,9 @@
     "comment": "Supports latest-session and exact-session resume flows in both interactive and headless modes."
   },
   "continue": {
-    "support": "full",
-    "source_url": "https://fx.sh/docs/using-fx/sessions#resume:~:text=continue",
-    "comment": "Supports continuing the latest workspace session with -c or --continue."
+    "support": "none",
+    "source_url": "https://github.com/vercel-labs/fx/releases/tag/v0.0.11#source:~:text=%60%2Fcontinue%60%20has%20been%20removed",
+    "comment": "Fx v0.0.11 removed `/continue`; transient failures now retry and continue automatically. Session selection and resume remain available through `/resume`."
   },
   "non_interactive": {
     "support": "full",
@@ -197,9 +197,9 @@
     "comment": "Fx is a local native CLI; model access may be local or cloud, but the harness itself is not a hosted workspace."
   },
   "custom_model_provider": {
-    "support": "partial",
-    "source_url": "https://fx.sh/docs/configure-fx/custom-model-connections#custom-model-connections:~:text=Preview%20build%20required",
-    "comment": "Fx documents Ollama, vLLM, OpenRouter, and BYOK OpenAI-compatible connections, but marks this configurable-provider surface as a preview that may require a newer build."
+    "support": "full",
+    "source_url": "https://github.com/vercel-labs/fx/releases/tag/v0.0.11#source:~:text=Custom%20connections",
+    "comment": "Fx supports named OpenAI Chat Completions connections for local servers and other gateways, configured in `~/.fx/settings.json` and selected with `fx provider`, `--provider`, or `FX_PROVIDER`."
   },
-  "notes": "Fx is Vercel Labs' experimental Unix-like native coding-agent CLI and embeddable harness. Fx 0.0.10 was installed locally from the official setup script and its help and version surfaces were verified."
+  "notes": "Fx is Vercel Labs' experimental Unix-like native coding-agent CLI and embeddable harness. Fx 0.0.10 was previously installed locally from the official setup script; this run verified v0.0.11 from the official release metadata but did not replace the existing binary."
 }
