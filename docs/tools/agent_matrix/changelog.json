@@ -3,8 +3,8 @@
   "entries": [
     {
       "date": "2026-09-30",
-      "commit": "",
-      "title": "Unreleased matrix update",
+      "commit": "e20e7cf",
+      "title": "Scheduled coding agent matrix update",
       "items": [
         {
           "summary": "Antigravity: Arbitrary Models now supported",
