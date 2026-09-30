@@ -31,9 +31,9 @@
   },
   "latest_major_update": {
     "value": "Sep '26",
-    "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.157.1#source:~:text=Release%20highlights%20could%20not%20be%20determined",
-    "comment": "Codex CLI rust-v0.157.1 shipped September 26, 2026 as the latest stable release. Its official release entry contains no feature highlights and links only to the v0.157.0 to v0.157.1 comparison.",
-    "sort_date": "2026-09-26"
+    "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.159.2#source:~:text=Suppressed%20console%20windows%20flashing%20on%20Windows",
+    "comment": "Codex CLI rust-v0.159.2 shipped September 29, 2026 with a Windows fix that prevents console windows from flashing when Codex launches background processes and sandboxed commands.",
+    "sort_date": "2026-09-29"
   },
   "rules": {
     "support": "full",

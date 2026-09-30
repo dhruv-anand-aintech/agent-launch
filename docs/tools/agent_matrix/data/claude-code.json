@@ -31,9 +31,9 @@
   },
   "latest_major_update": {
     "value": "Sep '26",
-    "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.283#source:~:text=Added%20%60%2Fdoctor%20prompt-audit%60",
-    "comment": "Claude Code v2.1.283 shipped September 25, 2026 with prompt-audit diagnostics, stricter managed model controls, richer OpenTelemetry tool output, improved background MCP progress and cleanup, broad plugin validation fixes, faster startup and first-response latency, and extensive terminal, sandbox, Remote Control, cloud-session, and code-review reliability work.",
-    "sort_date": "2026-09-25"
+    "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.285#source:~:text=Added%20%60CLAUDE_CODE_DISABLE_WEB_FETCH%60",
+    "comment": "Claude Code v2.1.285 shipped September 29, 2026 with WebFetch disablement, `claude --desktop`, plugin configuration over stdin, managed provider allowlists, improved subagent execution, safer redaction, and fixes across Remote Control, plugins, MCP, model switching, SSH, and cloud sessions.",
+    "sort_date": "2026-09-29"
   },
   "rules": {
     "support": "full",

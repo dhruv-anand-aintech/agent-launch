@@ -33,8 +33,8 @@
   },
   "latest_major_update": {
     "value": "Sep '26",
-    "source_url": "https://github.blog/changelog/2026-09-25-github-copilot-weekly-releases-september-21/#github-copilot-app:~:text=Limit%20agents'%20access%20to%20files",
-    "comment": "GitHub's September 25, 2026 weekly release added Claude Opus 5.5, GPT-6 Sol and Luna, and Grok 4.7, local sandboxing and OpenTelemetry in the Copilot app, improved Slack and Teams model and long-task controls, assisted approvals and shared skills in JetBrains, and remote Dev Container agents in VS Code 1.139."
+    "source_url": "https://github.blog/changelog/2026-09-29-gpt-6-1-sol-in-github-copilot/#availability-in-github-copilot:~:text=GitHub%20Copilot%20coding%20agent",
+    "comment": "GitHub made GPT-6.1 Sol generally available on September 29, 2026 for agentic coding and terminal workflows across the Copilot coding agent, CLI, app, github.com, mobile, and supported IDEs, with rollout to Pro+, Max, Business, and Enterprise users."
   },
   "rules": {
     "support": "full",

@@ -14,12 +14,12 @@
       "Desktop App"
     ],
     "source_url": "https://marketplace.visualstudio.com/items?itemName=saoudrizwan.claude-dev#add-a-tool-that:~:text=Extension",
-    "comment": "VS Code extension, JetBrains plugin, CLI, desktop app, and @cline/sdk for embedding the agent runtime in apps and CI. Per-form-factor links: Extension: https://marketplace.visualstudio.com/items?itemName=saoudrizwan.claude-dev; CLI: https://docs.cline.bot/cli/overview; SDK: https://docs.cline.bot/sdk/overview; Desktop App: https://github.com/cline/cline/releases/tag/desktop-v0.0.23.",
+    "comment": "VS Code extension, JetBrains plugin, CLI, desktop app, and @cline/sdk for embedding the agent runtime in apps and CI. Per-form-factor links: Extension: https://marketplace.visualstudio.com/items?itemName=saoudrizwan.claude-dev; CLI: https://docs.cline.bot/cli/overview; SDK: https://docs.cline.bot/sdk/overview; Desktop App: https://github.com/cline/cline/releases.",
     "links": {
       "Extension": "https://marketplace.visualstudio.com/items?itemName=saoudrizwan.claude-dev",
       "CLI": "https://docs.cline.bot/cli/overview",
       "SDK": "https://docs.cline.bot/sdk/overview",
-      "Desktop App": "https://github.com/cline/cline/releases/tag/desktop-v0.0.23"
+      "Desktop App": "https://github.com/cline/cline/releases"
     }
   },
   "released_in": {
@@ -29,9 +29,9 @@
   },
   "latest_major_update": {
     "value": "Sep '26",
-    "source_url": "https://github.com/cline/cline/releases/tag/desktop-v0.0.37#source:~:text=Settings%20has%20a%20new%20About%20page",
-    "comment": "Cline Desktop v0.0.37 shipped September 26, 2026 with an About and update-management page, a post-update What's New dialog covering SSH remotes, worktrees, pull-request status, and parallel subagents, direct macOS diagnostic export, and a Bedrock reasoning fix.",
-    "sort_date": "2026-09-26"
+    "source_url": "https://github.com/cline/cline/releases/tag/v4.1.22#source:~:text=New%20providers%3A%20Bee",
+    "comment": "Cline v4.1.22 shipped September 30, 2026 with Bee and Pareto providers, refusal fallback for Anthropic requests, refreshed model defaults, clearer content-filter recovery, and fixes for checkpoints, cancellation, sign-in recovery, and reasoning-token accounting. Desktop v0.0.39 also fixed Linux NVIDIA rendering and package metadata.",
+    "sort_date": "2026-09-30"
   },
   "rules": {
     "support": "full",

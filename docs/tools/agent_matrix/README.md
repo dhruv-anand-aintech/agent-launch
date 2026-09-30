@@ -29,7 +29,7 @@ Form factor values are deliberately strict: each value should have a concrete pe
 | Aider | CLI | Jun '23 | May '26 | full | full | full | partial | partial | none | partial | partial | none | none | full |
 | Amazon Q Developer CLI | CLI | Mar '25 | Nov '25 | full | none | none | full | partial | none | partial | full | full | none | none |
 | Amp | CLI, SDK, Web, Mobile | May '25 | Sep '26 | full |  | full | full | full | partial | unknown | full | full | full | partial |
-| Antigravity | CLI, IDE, Web | 2025 | Sep '26 | full |  |  | full | full | unknown | partial | full | full | none | unknown |
+| Antigravity | CLI, IDE, Extension, SDK, Web | 2025 | Sep '26 | full |  |  | full | full | unknown | full | full | full | full | full |
 | Claude Code | CLI, Extension, SDK, Web, Mac App | Feb '25 | Sep '26 |  |  |  | full | full | full | full | full | full | partial | partial |
 | Cline | CLI, Extension, SDK, Desktop App | Jul '24 | Sep '26 | full | full | full | full | full | partial | unknown | full | full | none | full |
 | Cohere North | SDK, Web | Jan '25 | Jun '26 |  |  |  | partial | partial | partial | partial | full | full | full | none |
@@ -57,7 +57,7 @@ Form factor values are deliberately strict: each value should have a concrete pe
 | OpenAI Codex CLI | CLI, Extension, SDK, Web, Mac App | Apr '25 | Sep '26 | full |  | full | full | full | partial | full | full | full | full | full |
 | OpenCode | CLI, Extension, SDK, Mac App | 2025 | Sep '26 | full | full | full | full | full | partial | full | full | full | none | full |
 | OpenHands | CLI, IDE, Web, Docker, Hosted Agent | Mar '24 | Sep '26 | full | full | full | full | full | none | full | full | full | full | full |
-| Pi | CLI, SDK | May '26 | Sep '26 |  | full | full | full | full | none | full | full | none | none | full |
+| Pi | CLI, SDK | May '26 | Sep '26 |  | full | full | full | full | none | full | full | full | none | full |
 | Pier Code | CLI | Jun '26 | Jul '26 | none | partial | none | full | partial | partial | full | partial | full | full | partial |
 | Qoder | CLI, IDE, Extension, SDK, Web, Desktop App, Mobile | Oct '25 | Sep '26 |  |  |  | full | full | partial | full | full | full | full | full |
 | Qwen Code | CLI, Extension, SDK, Web, Desktop App, Mobile | Jun '25 | Sep '26 |  |  |  | full | full | full | unknown | full | full | partial | full |

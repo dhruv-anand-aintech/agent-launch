@@ -26,9 +26,9 @@
   },
   "latest_major_update": {
     "value": "Sep '26",
-    "source_url": "https://github.com/charmbracelet/crush/releases/tag/v0.96.1#source:~:text=Quick%20little%20theme%20API%20adjustment",
-    "comment": "Crush v0.96.1 shipped September 21, 2026 with a small breaking adjustment to the new custom-theme API, renaming the insert and delete code-background keys before wider adoption.",
-    "sort_date": "2026-09-21"
+    "source_url": "https://github.com/charmbracelet/crush/releases/tag/v0.97.1#source:~:text=Removed%20the%20glyph%20for%20Git%20branch%20display",
+    "comment": "Crush v0.97.1 shipped September 29, 2026 with a terminal compatibility fix that removes the Git-branch powerline glyph when Nerd Fonts are unavailable.",
+    "sort_date": "2026-09-29"
   },
   "rules": {
     "support": "full",

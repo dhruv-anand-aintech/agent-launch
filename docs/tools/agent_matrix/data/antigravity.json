@@ -10,14 +10,18 @@
     "values": [
       "CLI",
       "IDE",
+      "Extension",
+      "SDK",
       "Web"
     ],
-    "source_url": "https://antigravity.google/docs/getting-started#clip0_6001_463:~:text=CLI",
-    "comment": "Google Antigravity IDE plus standalone agy CLI and Remote Control in a browser. Remote Control connects back to the user's running desktop agent. Per-form-factor links: CLI: https://antigravity.google/docs/cli-getting-started; IDE: https://antigravity.google/download; Web: https://antigravity.google/docs/remote-control.",
+    "source_url": "https://www.antigravity.google/docs/sdk/overview/#google-antigravity-sdk:~:text=Python%20SDK%20for%20building%20autonomous%20AI%20agents",
+    "comment": "Google Antigravity IDE, standalone agy CLI, IDE extensions, Python SDK, and Remote Control in a browser. Remote Control connects back to the user's running desktop agent. Per-form-factor links: CLI: https://www.antigravity.google/docs/cli/overview/; IDE: https://antigravity.google/download; Extension: https://www.antigravity.google/docs/ide/extensions/; SDK: https://www.antigravity.google/docs/sdk/overview/; Web: https://www.antigravity.google/docs/remote-control/.",
     "links": {
-      "CLI": "https://antigravity.google/docs/cli-getting-started",
+      "CLI": "https://www.antigravity.google/docs/cli/overview/",
       "IDE": "https://antigravity.google/download",
-      "Web": "https://antigravity.google/docs/remote-control"
+      "Extension": "https://www.antigravity.google/docs/ide/extensions/",
+      "SDK": "https://www.antigravity.google/docs/sdk/overview/",
+      "Web": "https://www.antigravity.google/docs/remote-control/"
     }
   },
   "released_in": {
@@ -27,9 +31,9 @@
   },
   "latest_major_update": {
     "value": "Sep '26",
-    "source_url": "https://www.antigravity.google/changelog#version:~:text=2.17.0,September%2022%2C%202026",
-    "comment": "Antigravity 2.17.0 shipped September 22, 2026 with an editable `/plan` workflow and Plan Review Policy, Finder and Explorer project reveals, a light/dark theme toggle, safer plugin cleanup, improved terminal rendering, and more reliable headless background-task reporting.",
-    "sort_date": "2026-09-22"
+    "source_url": "https://www.antigravity.google/docs/changelog#v2181:~:text=v2.18.1,September%2028%2C%202026",
+    "comment": "Antigravity 2.18.1 shipped September 28, 2026 with an in-product plugin marketplace and Customizations tab, archived-conversation filtering, safer permission prompts for hidden workspace files, and fixes for subagent worktree classification, prompt editing, focus, and conversation reliability.",
+    "sort_date": "2026-09-28"
   },
   "rules": {
     "support": "full",
@@ -62,9 +66,9 @@
     "comment": "Antigravity CLI docs cover plugins, sandbox, and slash commands but do not document a Codex-style `/goal` primitive."
   },
   "subagents": {
-    "support": "unknown",
-    "source_url": "https://antigravity.google/docs/cli-features#source:~:text=subagents",
-    "comment": ""
+    "support": "full",
+    "source_url": "https://www.antigravity.google/docs/sdk/subagents/#multi-agent-subagent-delegation:~:text=dynamic%20self-cloning%20subagents,static%20custom%20subagents",
+    "comment": "The SDK supports dynamic self-cloning subagents and static custom subagents with isolated context windows, toolsets, permissions, and system instructions."
   },
   "monitor": {
     "support": "unknown",
@@ -102,14 +106,14 @@
     "comment": "CLI supports --print / --prompt; IDE is interactive-first."
   },
   "output_format": {
-    "support": "unknown",
-    "source_url": "https://antigravity.google/docs/cli-features#source:~:text=output",
-    "comment": ""
+    "support": "full",
+    "source_url": "https://www.antigravity.google/docs/sdk/structured-output/#outputs-inputs-and-streaming:~:text=Pydantic%20schema%20validation%20for%20structured%20JSON%20output",
+    "comment": "The Antigravity SDK supports real-time token and reasoning streams plus Pydantic-validated structured JSON output."
   },
   "statusline": {
-    "support": "unknown",
-    "source_url": "https://antigravity.google/docs/cli-features#source:~:text=status%20line",
-    "comment": ""
+    "support": "full",
+    "source_url": "https://www.antigravity.google/docs/cli/statusline/#custom-status-line-scripting:~:text=route%20active%20agent%20metadata%20into%20a%20custom%20script",
+    "comment": "The CLI can pipe detailed live agent state as JSON to a user script and render its ANSI output in a custom TUI status line."
   },
   "telemetry": {
     "support": "unknown",
@@ -117,11 +121,11 @@
     "comment": ""
   },
   "custom_model_provider": {
-    "support": "unknown",
-    "source_url": "https://antigravity.google/docs/#source:~:text=providers",
-    "comment": "No arbitrary provider configuration found in public CLI help/docs."
+    "support": "full",
+    "source_url": "https://www.antigravity.google/docs/sdk/local-models/#external-openai-compatible-servers:~:text=Ollama%2C%20LM%20Studio%2C%20or%20vLLM",
+    "comment": "The SDK runs local LiteRT checkpoints or connects to arbitrary local OpenAI-compatible servers with configurable model and base URL, including Ollama, LM Studio, and vLLM."
   },
-  "notes": "Google Antigravity spans an agentic IDE and the agy CLI. Distinct from deprecated Gemini CLI. No published programmatic SDK.",
+  "notes": "Google Antigravity spans an agentic IDE, IDE extensions, the agy CLI, Remote Control, and a Python agent SDK with a related managed REST/gRPC API. It is distinct from deprecated Gemini CLI.",
   "pricing": {
     "value": "Free $0/month; Google AI Pro/Ultra credits for overage; Organization via Google Cloud consumption",
     "source_url": "https://antigravity.google/pricing#for-individuals-0month:~:text=For%20Individuals",
@@ -133,24 +137,24 @@
     "comment": "Google announced Antigravity public preview availability at no charge with rate limits."
   },
   "hosted_agent": {
-    "support": "none",
-    "source_url": "https://antigravity.google/docs/cli-features#source:~:text=plugins",
-    "comment": "Local IDE and CLI surfaces."
+    "support": "full",
+    "source_url": "https://www.antigravity.google/docs/sdk/overview/#google-antigravity-sdk:~:text=managed%20cloud%20REST%2FgRPC%20API",
+    "comment": "Google documents a managed cloud REST/gRPC Antigravity Agent API alongside the local Python SDK runtime."
   },
   "transcripts": {
-    "support": "partial",
-    "source_url": "https://antigravity.google/docs/getting-started#basic-navigation:~:text=conversation",
-    "comment": "Location: Antigravity brain/trajectory summaries are under `~/.gemini/antigravity/brain/<uuid>/*.md`; index data is in `~/Library/Application Support/Antigravity/User/globalStorage/state.vscdb`."
+    "support": "full",
+    "source_url": "https://www.antigravity.google/docs/cli/statusline/#available-json-fields:~:text=transcript_path,Absolute%20path%20to%20the%20active%20conversation%20transcript%20log%20file",
+    "comment": "The CLI exposes the absolute active JSONL transcript path to status-line scripts. Conversation artifacts and summaries also live under the Antigravity brain directory."
   },
   "transcript_location": {
-    "value": "~/.gemini/antigravity/brain/<uuid>/*.md; ~/Library/Application Support/Antigravity/User/globalStorage/state.vscdb",
-    "source_url": "https://antigravity.google/docs/getting-started#basic-navigation:~:text=conversation",
-    "comment": "Location: Antigravity brain/trajectory summaries are under `~/.gemini/antigravity/brain/<uuid>/*.md`; index data is in `~/Library/Application Support/Antigravity/User/globalStorage/state.vscdb`."
+    "value": "~/.gemini/antigravity/brain/<uuid>/.system_generated/logs/transcript.jsonl",
+    "source_url": "https://www.antigravity.google/docs/cli/statusline/#json-payload-example:~:text=transcript_path",
+    "comment": "Official status-line documentation shows the active conversation transcript as JSONL under the conversation's Antigravity brain directory."
   },
   "keyboard_shortcuts": {
-    "support": "unknown",
-    "source_url": "https://docs.example.com/#documentation:~:text=keybindings",
-    "comment": "Research needed. Check official documentation for keybinding customization options."
+    "support": "full",
+    "source_url": "https://www.antigravity.google/docs/cli/settings/#settings-rendering-keybindings:~:text=keybindings",
+    "comment": "Official CLI settings documentation includes customizable keybindings, and the IDE exposes keyboard-shortcut settings."
   },
   "theme_customization": {
     "support": "full",

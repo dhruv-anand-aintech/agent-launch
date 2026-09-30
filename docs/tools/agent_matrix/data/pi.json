@@ -25,9 +25,9 @@
   },
   "latest_major_update": {
     "value": "Sep '26",
-    "source_url": "https://github.com/earendil-works/pi/releases/tag/v0.87.1#source:~:text=Latest%20frontier%20models",
-    "comment": "Pi v0.87.1 shipped September 22, 2026 with Claude Opus 5.5, GPT-6 Sol, and GPT-6 Luna across supported providers, Grok 4.7 as the xAI default, and fixes for compaction, mode validation, image-only messages, and Anthropic OAuth requests.",
-    "sort_date": "2026-09-22"
+    "source_url": "https://github.com/earendil-works/pi/releases/tag/v0.99.1#source:~:text=GPT-6.1%20Sol",
+    "comment": "Pi v0.99.1 shipped September 29, 2026 with GPT-6.1 Sol support and a bundled OpenAI login fix, following v0.99.0's first-class MCP and codemode tools, ChatGPT sign-in, virtual and classifier models, and system-derived and custom themes.",
+    "sort_date": "2026-09-29"
   },
   "rules": {
     "support": "full",
@@ -45,9 +45,9 @@
     "comment": "Extension API supports lifecycle/tool hooks via TypeScript extensions, including tool event hooks and custom event handlers. Full extension-based hook model from docs and examples."
   },
   "mcp_servers": {
-    "support": "none",
-    "source_url": "https://github.com/earendil-works/pi/blob/main/packages/coding-agent/README.md#source:~:text=MCP",
-    "comment": "README explicitly states no MCP. MCP-like capabilities can be built via extensions instead."
+    "support": "full",
+    "source_url": "https://github.com/earendil-works/pi/releases/tag/v0.99.0#source:~:text=MCP%20servers%20over%20stdio%20or%20streamable%20HTTP",
+    "comment": "Pi v0.99.0 added built-in MCP over stdio and streamable HTTP with OAuth, global or project `mcp.json`, runtime registration, and `pi mcp` management commands."
   },
   "custom_commands": {
     "support": "full",
@@ -156,9 +156,9 @@
     "comment": "Research needed. Check official documentation for keybinding customization options."
   },
   "theme_customization": {
-    "support": "unknown",
-    "source_url": "https://docs.example.com/#documentation:~:text=theme",
-    "comment": "Research needed. Check for theme/appearance customization options."
+    "support": "full",
+    "source_url": "https://github.com/earendil-works/pi/releases/tag/v0.99.0#source:~:text=Added%20the%20%60system%60%20theme",
+    "comment": "Pi supports custom theme files and a system theme derived from the terminal palette, including appearance metadata and RGB, OKLCH, and OKHSL colors."
   },
   "auto_save": {
     "support": "unknown",

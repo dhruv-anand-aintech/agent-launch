@@ -1,6 +1,117 @@
 {
-  "entry_count": 1967,
+  "entry_count": 1993,
   "entries": [
+    {
+      "date": "2026-09-30",
+      "commit": "e20e7cf",
+      "title": "Scheduled coding agent matrix update",
+      "items": [
+        {
+          "summary": "Antigravity: Arbitrary Models now supported",
+          "target": "cell-antigravity-custom-model-provider"
+        },
+        {
+          "summary": "Antigravity: Form Factor updated to CLI, IDE, Extension, SDK, Web",
+          "target": "cell-antigravity-form-factor"
+        },
+        {
+          "summary": "Antigravity: Hosted Agent now supported",
+          "target": "cell-antigravity-hosted-agent"
+        },
+        {
+          "summary": "Antigravity: Keybindings now supported",
+          "target": "cell-antigravity-keyboard-shortcuts"
+        },
+        {
+          "summary": "Antigravity: Latest Major Update evidence refreshed",
+          "target": "cell-antigravity-latest-major-update"
+        },
+        {
+          "summary": "Antigravity: Output Format now supported",
+          "target": "cell-antigravity-output-format"
+        },
+        {
+          "summary": "Antigravity: Status Line now supported",
+          "target": "cell-antigravity-statusline"
+        },
+        {
+          "summary": "Antigravity: Subagents now supported",
+          "target": "cell-antigravity-subagents"
+        },
+        {
+          "summary": "Antigravity: Default Transcript Location updated to ~/.gemini/antigravity/brain/<uuid>/.system_generated/logs/transcript.js…",
+          "target": "cell-antigravity-transcript-location"
+        },
+        {
+          "summary": "Antigravity: Transcripts now supported",
+          "target": "cell-antigravity-transcripts"
+        },
+        {
+          "summary": "Claude Code: Latest Major Update evidence refreshed",
+          "target": "cell-claude-code-latest-major-update"
+        },
+        {
+          "summary": "Cline: Form Factor evidence refreshed",
+          "target": "cell-cline-form-factor"
+        },
+        {
+          "summary": "Cline: Latest Major Update evidence refreshed",
+          "target": "cell-cline-latest-major-update"
+        },
+        {
+          "summary": "OpenAI Codex CLI: Latest Major Update evidence refreshed",
+          "target": "cell-codex-cli-latest-major-update"
+        },
+        {
+          "summary": "Crush: Latest Major Update evidence refreshed",
+          "target": "cell-crush-latest-major-update"
+        },
+        {
+          "summary": "Factory Droid: Latest Major Update evidence refreshed",
+          "target": "cell-factory-droid-latest-major-update"
+        },
+        {
+          "summary": "Fx: Latest Major Update evidence refreshed",
+          "target": "cell-fx-latest-major-update"
+        },
+        {
+          "summary": "Gemini CLI: Latest Major Update evidence refreshed",
+          "target": "cell-gemini-cli-latest-major-update"
+        },
+        {
+          "summary": "GitHub Copilot CLI: Latest Major Update evidence refreshed",
+          "target": "cell-github-copilot-cli-latest-major-update"
+        },
+        {
+          "summary": "GitHub Copilot: Latest Major Update evidence refreshed",
+          "target": "cell-github-copilot-coding-agent-latest-major-update"
+        },
+        {
+          "summary": "Kiro Crew: Latest Major Update evidence refreshed",
+          "target": "cell-kiro-crew-latest-major-update"
+        },
+        {
+          "summary": "OpenCode: Latest Major Update evidence refreshed",
+          "target": "cell-opencode-latest-major-update"
+        },
+        {
+          "summary": "Pi: Latest Major Update evidence refreshed",
+          "target": "cell-pi-latest-major-update"
+        },
+        {
+          "summary": "Pi: MCP now supported",
+          "target": "cell-pi-mcp-servers"
+        },
+        {
+          "summary": "Pi: Theme now supported",
+          "target": "cell-pi-theme-customization"
+        },
+        {
+          "summary": "Qwen Code: Latest Major Update evidence refreshed",
+          "target": "cell-qwen-code-latest-major-update"
+        }
+      ]
+    },
     {
       "date": "2026-09-27",
       "commit": "c8ecfe2",
