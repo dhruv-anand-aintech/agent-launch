@@ -23,9 +23,9 @@
   },
   "latest_major_update": {
     "value": "Sep '26",
-    "source_url": "https://github.com/github/copilot-cli/releases/tag/v1.0.88#source:~:text=Add%20optional%20OSC%20777%20terminal%20notifications",
-    "comment": "Copilot CLI v1.0.88 shipped September 22, 2026 with optional terminal notifications, safer exact-path approvals, custom-agent reasoning effort, more reliable deferred MCP tools and resume behavior, managed settings in ACP and server modes, namespaced skills, active-turn forking, and bounded transcript memory.",
-    "sort_date": "2026-09-22"
+    "source_url": "https://github.com/github/copilot-cli/releases/tag/v1.0.89#source:~:text=Add%20support%20for%20Claude%20Code%20rule%20files",
+    "comment": "Copilot CLI v1.0.89 shipped September 28, 2026 with Claude Code rule-file support, model-routing tiers, GPT-6 Sol and Luna and Claude Opus 5.5, stronger MCP and sandbox behavior, session-sidebar notifications, PR-template support, plugin toggles, and broad queue, shell, ACP, and recovery fixes.",
+    "sort_date": "2026-09-28"
   },
   "rules": {
     "support": "full",

@@ -1,13 +1,13 @@
 # Coding Agent Feature Matrix
 > Compare 40 coding agents, CLIs, and IDEs across features.
-> https://compare.ainorthstar.tech | Updated 2026-09-27
+> https://compare.ainorthstar.tech | Updated 2026-09-30
 
 Agent                   Rel    FF     Fre   NoA   Oth   Rul   Skl   Hks   MCP   Cmd   Gol   Sub   Mon   Trn   Mod   App   San   Res   Con   Hdl   Fmt   Sta   Tel   Hst  BYOM
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Aider                   Jun '2 CLI        Y     Y     Y     ~     ~     ~     N     N     N     ~     N     ~     Y     ~     N     N     ~     Y     N     N     Y     N     Y
 Amazon Q Developer CLI  Mar '2 CLI        Y     N     N     Y     ~     Y     Y     ~     N     N     N     ~     Y     Y     N     Y     Y     Y     N     N     Y     N     N
 Amp                     May '2 CLI/SDK    Y           Y     Y     Y     Y     Y     N     N     Y     ~     ?     Y     ~     N     Y     Y     Y     Y     N     ?     Y     ~
-Antigravity             2025  CLI/IDE    Y                 Y     Y     Y     Y     ~     N     ?     ?     ~     ?     ~     ~     Y     Y     Y     ?     ?     ?     N     ?
+Antigravity             2025  CLI/IDE    Y                 Y     Y     Y     Y     ~     N     Y     ?     Y     ?     ~     ~     Y     Y     Y     Y     Y     ?     Y     Y
 Claude Code             Feb '2 CLI/Ext                      Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     ~     Y     Y     Y     Y     Y     Y     ~     ~
 Cline                   Jul '2 CLI/Ext    Y     Y     Y     Y     Y     Y     Y     Y     N     Y     ~     ?     Y     Y     ~     Y     ~     Y     Y     N     Y     N     Y
 OpenAI Codex CLI        Apr '2 CLI/Ext    Y           Y     Y     Y     Y     Y     ~     Y     Y     ~     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y
@@ -35,7 +35,7 @@ Muse Code               Aug '2 CLI        ?     N     N     Y     Y     ?     ? 
 OpenAI Agents API       Sep '2 SDK/Hos    N     N     N     ~     Y     Y     Y     N     N     Y     Y     Y     Y     ~     Y     Y     Y     Y     Y     N     Y     Y     N
 OpenCode                2025  CLI/Ext    Y     Y     Y     Y     Y     Y     Y     Y     N     Y     ~     Y     Y     Y     ~     Y     Y     Y     Y     ?     Y     N     Y
 OpenHands               Mar '2 CLI/IDE    Y     Y     Y     Y     Y     Y     Y     ~     N     N     N     Y     Y     Y     Y     Y     Y     Y     Y     N     ~     Y     Y
-Pi                      May '2 CLI/SDK          Y     Y     Y     Y     Y     N     Y     N     N     N     Y     Y     N     N     Y     Y     Y     Y     N     ~     N     Y
+Pi                      May '2 CLI/SDK          Y     Y     Y     Y     Y     Y     Y     N     N     N     Y     Y     N     N     Y     Y     Y     Y     N     ~     N     Y
 Pier Code               Jun '2 CLI        N     ~     N     Y     ~     ~     Y     ?     Y     Y     ~     Y     Y     Y     Y     Y     Y     Y     Y     ?     Y     Y     ~
 Qoder                   Oct '2 CLI/IDE                      Y     Y     Y     Y     Y     Y     Y     ~     Y     Y     Y     Y     Y     Y     Y     Y     Y     ?     Y     Y
 Qwen Code               Jun '2 CLI/Ext                      Y     Y     Y     Y     Y     Y     Y     Y     ?     Y     Y     Y     Y     Y     Y     Y     Y     Y     ~     Y
@@ -153,7 +153,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 ### Antigravity
 - Docs: https://antigravity.google/docs/
 - Website: https://antigravity.google/
-- Form factor: CLI, IDE, Web
+- Form factor: CLI, IDE, Extension, SDK, Web
 - Released: 2025
 - Latest update: Sep '26
 - Some Free Usage: full - Google announced Antigravity public preview availability at no charge with rate limits.
@@ -165,22 +165,22 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Mcp Servers: full - CLI plugin mcp_config.json; IDE also ships MCP configuration. Location: plugin `mcp_config.json` files and IDE/CLI MCP configuration.
 - Custom Commands: partial - CLI via plugin capabilities; IDE via global workflows rather than classic slash-command folders. Location: command-like behavior is via plugins/workflows rather than a documented standalone command folder.
 - Goal Command: none - Antigravity CLI docs cover plugins, sandbox, and slash commands but do not document a Codex-style `/goal` primitive.
-- Subagents: unknown
+- Subagents: full - The SDK supports dynamic self-cloning subagents and static custom subagents with isolated context windows, toolsets, permissions, and system instructions.
 - Monitor: unknown - Public Antigravity CLI/plugin docs reviewed here do not establish whether an agent-side background monitor/watch primitive exists.
-- Transcripts: partial - Location: Antigravity brain/trajectory summaries are under `~/.gemini/antigravity/brain/<uuid>/*.md`; index data is in `~/Library/Application Support/Antigravity/User/globalStorage/state.vscdb`.
+- Transcripts: full - The CLI exposes the absolute active JSONL transcript path to status-line scripts. Conversation artifacts and summaries also live under the Antigravity brain directory.
 - Model Selection: unknown - IDE model UI exists; agy --help does not expose a model flag as of this dataset.
 - Approval Mode: partial - CLI supports --dangerously-skip-permissions; IDE approval behavior not fully documented.
 - Sandbox Mode: partial - CLI supports --sandbox for terminal restrictions.
 - Resume: full - CLI --continue/--conversation; IDE stores conversation/brain state.
 - Continue: full - CLI --continue for latest conversation; IDE continues from existing history.
 - Non Interactive: full - CLI supports --print / --prompt; IDE is interactive-first.
-- Output Format: unknown
-- Statusline: unknown
+- Output Format: full - The Antigravity SDK supports real-time token and reasoning streams plus Pydantic-validated structured JSON output.
+- Statusline: full - The CLI can pipe detailed live agent state as JSON to a user script and render its ANSI output in a custom TUI status line.
 - Telemetry: unknown
-- Hosted Agent: none - Local IDE and CLI surfaces.
-- Custom Model Provider: unknown - No arbitrary provider configuration found in public CLI help/docs.
+- Hosted Agent: full - Google documents a managed cloud REST/gRPC Antigravity Agent API alongside the local Python SDK runtime.
+- Custom Model Provider: full - The SDK runs local LiteRT checkpoints or connects to arbitrary local OpenAI-compatible servers with configurable model and base URL, including Ollama, LM Studio, and vLLM.
 - Pricing: Free $0/month; Google AI Pro/Ultra credits for overage; Organization via Google Cloud consumption
-- Notes: Google Antigravity spans an agentic IDE and the agy CLI. Distinct from deprecated Gemini CLI. No published programmatic SDK.
+- Notes: Google Antigravity spans an agentic IDE, IDE extensions, the agy CLI, Remote Control, and a Python agent SDK with a related managed REST/gRPC API. It is distinct from deprecated Gemini CLI.
 
 ### Claude Code
 - Docs: https://docs.anthropic.com/en/docs/claude-code/overview
@@ -503,7 +503,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Hosted Agent: none - Fx is a local native CLI; model access may be local or cloud, but the harness itself is not a hosted workspace.
 - Custom Model Provider: full - Fx supports named OpenAI Chat Completions connections for local servers and other gateways, configured in `~/.fx/settings.json` and selected with `fx provider`, `--provider`, or `FX_PROVIDER`.
 - Pricing: Apache-2.0 CLI; model-provider usage is billed separately
-- Notes: Fx is Vercel Labs' experimental Unix-like native coding-agent CLI and embeddable harness. Fx 0.0.10 was previously installed locally from the official setup script; this run verified v0.0.11 from the official release metadata but did not replace the existing binary.
+- Notes: Fx is Vercel Labs' experimental Unix-like native coding-agent CLI and embeddable harness. Fx 0.0.10 was previously installed locally from the official setup script; this run verified v0.0.12 from official release metadata but did not replace the existing binary.
 
 ### Gemini CLI
 - Docs: https://google-gemini.github.io/gemini-cli/
@@ -1073,7 +1073,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Rules: full - Loads `AGENTS.md` and `CLAUDE.md` from `~/.pi/agent/`, ancestors, and cwd. Supports global and project context files with path-based precedence.
 - Skills: full - Discovers skills from `~/.pi/agent/skills/`, `~/.agents/skills/`, `.pi/skills/`, and `.agents/skills/`, including `SKILL.md` directories. Supports `/skill:name` command registration and cross-harness imports (e.g. Claude/ Codex).
 - Hooks: full - Extension API supports lifecycle/tool hooks via TypeScript extensions, including tool event hooks and custom event handlers. Full extension-based hook model from docs and examples.
-- Mcp Servers: none - README explicitly states no MCP. MCP-like capabilities can be built via extensions instead.
+- Mcp Servers: full - Pi v0.99.0 added built-in MCP over stdio and streamable HTTP with OAuth, global or project `mcp.json`, runtime registration, and `pi mcp` management commands.
 - Custom Commands: full - Rich slash-command UI includes built-ins like `/model`, `/resume`, `/tree`, `/fork`, `/clone`, `/compact`, `/export`, `/share`, `/settings`, and `/login`.
 - Goal Command: none - No `/goal` concept is documented; README is explicit about what is *not* built in (including plan mode and no-permission prompts).
 - Subagents: none - README says "No sub-agents." suggests using spawned pi instances/context tools instead of native subagent orchestration.

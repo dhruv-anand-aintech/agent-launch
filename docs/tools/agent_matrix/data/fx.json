@@ -27,9 +27,9 @@
   },
   "latest_major_update": {
     "value": "Sep '26",
-    "source_url": "https://github.com/vercel-labs/fx/releases/tag/v0.0.11#source:~:text=fx%20now%20supports%20custom%20model%20connections%20and%20themes",
-    "comment": "Fx v0.0.11 shipped September 24, 2026 with stable custom OpenAI-compatible connections, custom themes, launch-time provider, model, effort, and fast controls, Slack bot management, image reading, expanded libfx controls, much faster resume and lookup, and sharply lower memory use on long turns.",
-    "sort_date": "2026-09-24"
+    "source_url": "https://github.com/vercel-labs/fx/releases/tag/v0.0.12#source:~:text=Session%20listing%20is%20up%20to%20560%C3%97%20faster",
+    "comment": "Fx v0.0.12 shipped September 30, 2026 with dramatically faster session listing and resume, durable detached processes, interactive MCP listing, GitHub-flavored Markdown, stronger compaction and recovery, image resizing, custom-model fixes, and tightened Slack OAuth and symlinked-skill security.",
+    "sort_date": "2026-09-30"
   },
   "pricing": {
     "value": "Apache-2.0 CLI; model-provider usage is billed separately",
@@ -201,5 +201,5 @@
     "source_url": "https://github.com/vercel-labs/fx/releases/tag/v0.0.11#source:~:text=Custom%20connections",
     "comment": "Fx supports named OpenAI Chat Completions connections for local servers and other gateways, configured in `~/.fx/settings.json` and selected with `fx provider`, `--provider`, or `FX_PROVIDER`."
   },
-  "notes": "Fx is Vercel Labs' experimental Unix-like native coding-agent CLI and embeddable harness. Fx 0.0.10 was previously installed locally from the official setup script; this run verified v0.0.11 from the official release metadata but did not replace the existing binary."
+  "notes": "Fx is Vercel Labs' experimental Unix-like native coding-agent CLI and embeddable harness. Fx 0.0.10 was previously installed locally from the official setup script; this run verified v0.0.12 from official release metadata but did not replace the existing binary."
 }

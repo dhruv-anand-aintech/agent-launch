@@ -619,14 +619,18 @@
       "values": [
         "CLI",
         "IDE",
+        "Extension",
+        "SDK",
         "Web"
       ],
-      "source_url": "https://antigravity.google/docs/getting-started#clip0_6001_463:~:text=CLI",
-      "comment": "Google Antigravity IDE plus standalone agy CLI and Remote Control in a browser. Remote Control connects back to the user's running desktop agent. Per-form-factor links: CLI: https://antigravity.google/docs/cli-getting-started; IDE: https://antigravity.google/download; Web: https://antigravity.google/docs/remote-control.",
+      "source_url": "https://www.antigravity.google/docs/sdk/overview/#google-antigravity-sdk:~:text=Python%20SDK%20for%20building%20autonomous%20AI%20agents",
+      "comment": "Google Antigravity IDE, standalone agy CLI, IDE extensions, Python SDK, and Remote Control in a browser. Remote Control connects back to the user's running desktop agent. Per-form-factor links: CLI: https://www.antigravity.google/docs/cli/overview/; IDE: https://antigravity.google/download; Extension: https://www.antigravity.google/docs/ide/extensions/; SDK: https://www.antigravity.google/docs/sdk/overview/; Web: https://www.antigravity.google/docs/remote-control/.",
       "links": {
-        "CLI": "https://antigravity.google/docs/cli-getting-started",
+        "CLI": "https://www.antigravity.google/docs/cli/overview/",
         "IDE": "https://antigravity.google/download",
-        "Web": "https://antigravity.google/docs/remote-control"
+        "Extension": "https://www.antigravity.google/docs/ide/extensions/",
+        "SDK": "https://www.antigravity.google/docs/sdk/overview/",
+        "Web": "https://www.antigravity.google/docs/remote-control/"
       }
     },
     "released_in": {
@@ -637,9 +641,9 @@
     },
     "latest_major_update": {
       "value": "Sep '26",
-      "source_url": "https://www.antigravity.google/changelog#version:~:text=2.17.0,September%2022%2C%202026",
-      "comment": "Antigravity 2.17.0 shipped September 22, 2026 with an editable `/plan` workflow and Plan Review Policy, Finder and Explorer project reveals, a light/dark theme toggle, safer plugin cleanup, improved terminal rendering, and more reliable headless background-task reporting.",
-      "sort_date": "2026-09-22"
+      "source_url": "https://www.antigravity.google/docs/changelog#v2181:~:text=v2.18.1,September%2028%2C%202026",
+      "comment": "Antigravity 2.18.1 shipped September 28, 2026 with an in-product plugin marketplace and Customizations tab, archived-conversation filtering, safer permission prompts for hidden workspace files, and fixes for subagent worktree classification, prompt editing, focus, and conversation reliability.",
+      "sort_date": "2026-09-28"
     },
     "rules": {
       "support": "full",
@@ -672,9 +676,9 @@
       "comment": "Antigravity CLI docs cover plugins, sandbox, and slash commands but do not document a Codex-style `/goal` primitive."
     },
     "subagents": {
-      "support": "unknown",
-      "source_url": "https://antigravity.google/docs/cli-features#source:~:text=subagents",
-      "comment": ""
+      "support": "full",
+      "source_url": "https://www.antigravity.google/docs/sdk/subagents/#multi-agent-subagent-delegation:~:text=dynamic%20self-cloning%20subagents,static%20custom%20subagents",
+      "comment": "The SDK supports dynamic self-cloning subagents and static custom subagents with isolated context windows, toolsets, permissions, and system instructions."
     },
     "monitor": {
       "support": "unknown",
@@ -712,14 +716,14 @@
       "comment": "CLI supports --print / --prompt; IDE is interactive-first."
     },
     "output_format": {
-      "support": "unknown",
-      "source_url": "https://antigravity.google/docs/cli-features#source:~:text=output",
-      "comment": ""
+      "support": "full",
+      "source_url": "https://www.antigravity.google/docs/sdk/structured-output/#outputs-inputs-and-streaming:~:text=Pydantic%20schema%20validation%20for%20structured%20JSON%20output",
+      "comment": "The Antigravity SDK supports real-time token and reasoning streams plus Pydantic-validated structured JSON output."
     },
     "statusline": {
-      "support": "unknown",
-      "source_url": "https://antigravity.google/docs/cli-features#source:~:text=status%20line",
-      "comment": ""
+      "support": "full",
+      "source_url": "https://www.antigravity.google/docs/cli/statusline/#custom-status-line-scripting:~:text=route%20active%20agent%20metadata%20into%20a%20custom%20script",
+      "comment": "The CLI can pipe detailed live agent state as JSON to a user script and render its ANSI output in a custom TUI status line."
     },
     "telemetry": {
       "support": "unknown",
@@ -727,11 +731,11 @@
       "comment": ""
     },
     "custom_model_provider": {
-      "support": "unknown",
-      "source_url": "https://antigravity.google/docs/#source:~:text=providers",
-      "comment": "No arbitrary provider configuration found in public CLI help/docs."
+      "support": "full",
+      "source_url": "https://www.antigravity.google/docs/sdk/local-models/#external-openai-compatible-servers:~:text=Ollama%2C%20LM%20Studio%2C%20or%20vLLM",
+      "comment": "The SDK runs local LiteRT checkpoints or connects to arbitrary local OpenAI-compatible servers with configurable model and base URL, including Ollama, LM Studio, and vLLM."
     },
-    "notes": "Google Antigravity spans an agentic IDE and the agy CLI. Distinct from deprecated Gemini CLI. No published programmatic SDK.",
+    "notes": "Google Antigravity spans an agentic IDE, IDE extensions, the agy CLI, Remote Control, and a Python agent SDK with a related managed REST/gRPC API. It is distinct from deprecated Gemini CLI.",
     "pricing": {
       "value": "Free $0/month; Google AI Pro/Ultra credits for overage; Organization via Google Cloud consumption",
       "source_url": "https://antigravity.google/pricing#for-individuals-0month:~:text=For%20Individuals",
@@ -743,24 +747,24 @@
       "comment": "Google announced Antigravity public preview availability at no charge with rate limits."
     },
     "hosted_agent": {
-      "support": "none",
-      "source_url": "https://antigravity.google/docs/cli-features#source:~:text=plugins",
-      "comment": "Local IDE and CLI surfaces."
+      "support": "full",
+      "source_url": "https://www.antigravity.google/docs/sdk/overview/#google-antigravity-sdk:~:text=managed%20cloud%20REST%2FgRPC%20API",
+      "comment": "Google documents a managed cloud REST/gRPC Antigravity Agent API alongside the local Python SDK runtime."
     },
     "transcripts": {
-      "support": "partial",
-      "source_url": "https://antigravity.google/docs/getting-started#basic-navigation:~:text=conversation",
-      "comment": "Location: Antigravity brain/trajectory summaries are under `~/.gemini/antigravity/brain/<uuid>/*.md`; index data is in `~/Library/Application Support/Antigravity/User/globalStorage/state.vscdb`."
+      "support": "full",
+      "source_url": "https://www.antigravity.google/docs/cli/statusline/#available-json-fields:~:text=transcript_path,Absolute%20path%20to%20the%20active%20conversation%20transcript%20log%20file",
+      "comment": "The CLI exposes the absolute active JSONL transcript path to status-line scripts. Conversation artifacts and summaries also live under the Antigravity brain directory."
     },
     "transcript_location": {
-      "value": "~/.gemini/antigravity/brain/<uuid>/*.md; ~/Library/Application Support/Antigravity/User/globalStorage/state.vscdb",
-      "source_url": "https://antigravity.google/docs/getting-started#basic-navigation:~:text=conversation",
-      "comment": "Location: Antigravity brain/trajectory summaries are under `~/.gemini/antigravity/brain/<uuid>/*.md`; index data is in `~/Library/Application Support/Antigravity/User/globalStorage/state.vscdb`."
+      "value": "~/.gemini/antigravity/brain/<uuid>/.system_generated/logs/transcript.jsonl",
+      "source_url": "https://www.antigravity.google/docs/cli/statusline/#json-payload-example:~:text=transcript_path",
+      "comment": "Official status-line documentation shows the active conversation transcript as JSONL under the conversation's Antigravity brain directory."
     },
     "keyboard_shortcuts": {
-      "support": "unknown",
-      "source_url": "https://docs.example.com/#documentation:~:text=keybindings",
-      "comment": "Research needed. Check official documentation for keybinding customization options."
+      "support": "full",
+      "source_url": "https://www.antigravity.google/docs/cli/settings/#settings-rendering-keybindings:~:text=keybindings",
+      "comment": "Official CLI settings documentation includes customizable keybindings, and the IDE exposes keyboard-shortcut settings."
     },
     "theme_customization": {
       "support": "full",
@@ -837,9 +841,9 @@
     },
     "latest_major_update": {
       "value": "Sep '26",
-      "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.283#source:~:text=Added%20%60%2Fdoctor%20prompt-audit%60",
-      "comment": "Claude Code v2.1.283 shipped September 25, 2026 with prompt-audit diagnostics, stricter managed model controls, richer OpenTelemetry tool output, improved background MCP progress and cleanup, broad plugin validation fixes, faster startup and first-response latency, and extensive terminal, sandbox, Remote Control, cloud-session, and code-review reliability work.",
-      "sort_date": "2026-09-25"
+      "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.285#source:~:text=Added%20%60CLAUDE_CODE_DISABLE_WEB_FETCH%60",
+      "comment": "Claude Code v2.1.285 shipped September 29, 2026 with WebFetch disablement, `claude --desktop`, plugin configuration over stdin, managed provider allowlists, improved subagent execution, safer redaction, and fixes across Remote Control, plugins, MCP, model switching, SSH, and cloud sessions.",
+      "sort_date": "2026-09-29"
     },
     "rules": {
       "support": "full",
@@ -1014,12 +1018,12 @@
         "Desktop App"
       ],
       "source_url": "https://marketplace.visualstudio.com/items?itemName=saoudrizwan.claude-dev#add-a-tool-that:~:text=Extension",
-      "comment": "VS Code extension, JetBrains plugin, CLI, desktop app, and @cline/sdk for embedding the agent runtime in apps and CI. Per-form-factor links: Extension: https://marketplace.visualstudio.com/items?itemName=saoudrizwan.claude-dev; CLI: https://docs.cline.bot/cli/overview; SDK: https://docs.cline.bot/sdk/overview; Desktop App: https://github.com/cline/cline/releases/tag/desktop-v0.0.23.",
+      "comment": "VS Code extension, JetBrains plugin, CLI, desktop app, and @cline/sdk for embedding the agent runtime in apps and CI. Per-form-factor links: Extension: https://marketplace.visualstudio.com/items?itemName=saoudrizwan.claude-dev; CLI: https://docs.cline.bot/cli/overview; SDK: https://docs.cline.bot/sdk/overview; Desktop App: https://github.com/cline/cline/releases.",
       "links": {
         "Extension": "https://marketplace.visualstudio.com/items?itemName=saoudrizwan.claude-dev",
         "CLI": "https://docs.cline.bot/cli/overview",
         "SDK": "https://docs.cline.bot/sdk/overview",
-        "Desktop App": "https://github.com/cline/cline/releases/tag/desktop-v0.0.23"
+        "Desktop App": "https://github.com/cline/cline/releases"
       }
     },
     "released_in": {
@@ -1030,9 +1034,9 @@
     },
     "latest_major_update": {
       "value": "Sep '26",
-      "source_url": "https://github.com/cline/cline/releases/tag/desktop-v0.0.37#source:~:text=Settings%20has%20a%20new%20About%20page",
-      "comment": "Cline Desktop v0.0.37 shipped September 26, 2026 with an About and update-management page, a post-update What's New dialog covering SSH remotes, worktrees, pull-request status, and parallel subagents, direct macOS diagnostic export, and a Bedrock reasoning fix.",
-      "sort_date": "2026-09-26"
+      "source_url": "https://github.com/cline/cline/releases/tag/v4.1.22#source:~:text=New%20providers%3A%20Bee",
+      "comment": "Cline v4.1.22 shipped September 30, 2026 with Bee and Pareto providers, refusal fallback for Anthropic requests, refreshed model defaults, clearer content-filter recovery, and fixes for checkpoints, cancellation, sign-in recovery, and reasoning-token accounting. Desktop v0.0.39 also fixed Linux NVIDIA rendering and package metadata.",
+      "sort_date": "2026-09-30"
     },
     "rules": {
       "support": "full",
@@ -1240,9 +1244,9 @@
     },
     "latest_major_update": {
       "value": "Sep '26",
-      "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.157.1#source:~:text=Release%20highlights%20could%20not%20be%20determined",
-      "comment": "Codex CLI rust-v0.157.1 shipped September 26, 2026 as the latest stable release. Its official release entry contains no feature highlights and links only to the v0.157.0 to v0.157.1 comparison.",
-      "sort_date": "2026-09-26"
+      "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.159.2#source:~:text=Suppressed%20console%20windows%20flashing%20on%20Windows",
+      "comment": "Codex CLI rust-v0.159.2 shipped September 29, 2026 with a Windows fix that prevents console windows from flashing when Codex launches background processes and sandboxed commands.",
+      "sort_date": "2026-09-29"
     },
     "rules": {
       "support": "full",
@@ -1836,9 +1840,9 @@
     },
     "latest_major_update": {
       "value": "Sep '26",
-      "source_url": "https://github.com/charmbracelet/crush/releases/tag/v0.96.1#source:~:text=Quick%20little%20theme%20API%20adjustment",
-      "comment": "Crush v0.96.1 shipped September 21, 2026 with a small breaking adjustment to the new custom-theme API, renaming the insert and delete code-background keys before wider adoption.",
-      "sort_date": "2026-09-21"
+      "source_url": "https://github.com/charmbracelet/crush/releases/tag/v0.97.1#source:~:text=Removed%20the%20glyph%20for%20Git%20branch%20display",
+      "comment": "Crush v0.97.1 shipped September 29, 2026 with a terminal compatibility fix that removes the Git-branch powerline glyph when Nerd Fonts are unavailable.",
+      "sort_date": "2026-09-29"
     },
     "rules": {
       "support": "full",
@@ -2444,9 +2448,9 @@
     },
     "latest_major_update": {
       "value": "Sep '26",
-      "source_url": "https://docs.factory.ai/changelog/release-notes#september-2026:~:text=CLI%20v0.226.1%20Desktop%20v0.183.1%20September%2024%2C%202026",
-      "comment": "Factory's September 24, 2026 release lists Droid CLI v0.226.1 and Desktop v0.183.1, fixing leftover hook entries so removed capabilities no longer start sessions. The preceding v0.226.0 and v0.183.0 release added notification-volume settings, draft-copy shortcuts, ServiceNow connectors, cross-computer session access, and session and chat reliability improvements.",
-      "sort_date": "2026-09-24"
+      "source_url": "https://docs.factory.ai/changelog/release-notes#september-2026:~:text=CLI%20v0.228.0%20Desktop%20v0.185.0%20September%2026%2C%202026",
+      "comment": "Factory's September 26, 2026 release lists Droid CLI v0.228.0 and Desktop v0.185.0 with a `/migrate` workflow, skills anywhere in messages, plan retention across compaction, safer session resume, background-task reports, delegation audit events, image-model selection, Slack uploads, and terminal and desktop reliability fixes.",
+      "sort_date": "2026-09-26"
     },
     "rules": {
       "support": "full",
@@ -2644,9 +2648,9 @@
     },
     "latest_major_update": {
       "value": "Sep '26",
-      "source_url": "https://github.com/vercel-labs/fx/releases/tag/v0.0.11#source:~:text=fx%20now%20supports%20custom%20model%20connections%20and%20themes",
-      "comment": "Fx v0.0.11 shipped September 24, 2026 with stable custom OpenAI-compatible connections, custom themes, launch-time provider, model, effort, and fast controls, Slack bot management, image reading, expanded libfx controls, much faster resume and lookup, and sharply lower memory use on long turns.",
-      "sort_date": "2026-09-24"
+      "source_url": "https://github.com/vercel-labs/fx/releases/tag/v0.0.12#source:~:text=Session%20listing%20is%20up%20to%20560%C3%97%20faster",
+      "comment": "Fx v0.0.12 shipped September 30, 2026 with dramatically faster session listing and resume, durable detached processes, interactive MCP listing, GitHub-flavored Markdown, stronger compaction and recovery, image resizing, custom-model fixes, and tightened Slack OAuth and symlinked-skill security.",
+      "sort_date": "2026-09-30"
     },
     "pricing": {
       "value": "Apache-2.0 CLI; model-provider usage is billed separately",
@@ -2818,7 +2822,7 @@
       "source_url": "https://github.com/vercel-labs/fx/releases/tag/v0.0.11#source:~:text=Custom%20connections",
       "comment": "Fx supports named OpenAI Chat Completions connections for local servers and other gateways, configured in `~/.fx/settings.json` and selected with `fx provider`, `--provider`, or `FX_PROVIDER`."
     },
-    "notes": "Fx is Vercel Labs' experimental Unix-like native coding-agent CLI and embeddable harness. Fx 0.0.10 was previously installed locally from the official setup script; this run verified v0.0.11 from the official release metadata but did not replace the existing binary."
+    "notes": "Fx is Vercel Labs' experimental Unix-like native coding-agent CLI and embeddable harness. Fx 0.0.10 was previously installed locally from the official setup script; this run verified v0.0.12 from official release metadata but did not replace the existing binary."
   },
   {
     "name": "Gemini CLI",
@@ -2847,9 +2851,9 @@
     },
     "latest_major_update": {
       "value": "Sep '26",
-      "source_url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.61.0#source:~:text=prevent%20indirect%20prompt%20injection",
-      "comment": "Gemini CLI v0.61.0 shipped September 23, 2026 with fixes that preserve versioned Flash model IDs, prevent indirect prompt injection through modified build files and untrusted flags, harden sandbox filesystem boundaries and runtime-state isolation, and preserve AgentLoopContext properties. Nightly and preview tags are excluded.",
-      "sort_date": "2026-09-23"
+      "source_url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.62.0#source:~:text=Feat%2Fgemini%203.8%20flash%203.5%20flash%20lite",
+      "comment": "Gemini CLI v0.62.0 shipped September 29, 2026 with Gemini 3.8 Flash and 3.5 Flash Lite support plus fixes for OAuth token refresh, PTY lifecycle and memory management, proxy resolution, ACP permission event ordering, terminal focus, and MCP tool-call presentation. Nightly and preview tags are excluded.",
+      "sort_date": "2026-09-29"
     },
     "rules": {
       "support": "full",
@@ -3044,9 +3048,9 @@
     },
     "latest_major_update": {
       "value": "Sep '26",
-      "source_url": "https://github.com/github/copilot-cli/releases/tag/v1.0.88#source:~:text=Add%20optional%20OSC%20777%20terminal%20notifications",
-      "comment": "Copilot CLI v1.0.88 shipped September 22, 2026 with optional terminal notifications, safer exact-path approvals, custom-agent reasoning effort, more reliable deferred MCP tools and resume behavior, managed settings in ACP and server modes, namespaced skills, active-turn forking, and bounded transcript memory.",
-      "sort_date": "2026-09-22"
+      "source_url": "https://github.com/github/copilot-cli/releases/tag/v1.0.89#source:~:text=Add%20support%20for%20Claude%20Code%20rule%20files",
+      "comment": "Copilot CLI v1.0.89 shipped September 28, 2026 with Claude Code rule-file support, model-routing tiers, GPT-6 Sol and Luna and Claude Opus 5.5, stronger MCP and sandbox behavior, session-sidebar notifications, PR-template support, plugin toggles, and broad queue, shell, ACP, and recovery fixes.",
+      "sort_date": "2026-09-28"
     },
     "rules": {
       "support": "full",
@@ -3256,8 +3260,8 @@
     },
     "latest_major_update": {
       "value": "Sep '26",
-      "source_url": "https://github.blog/changelog/2026-09-25-github-copilot-weekly-releases-september-21/#github-copilot-app:~:text=Limit%20agents'%20access%20to%20files",
-      "comment": "GitHub's September 25, 2026 weekly release added Claude Opus 5.5, GPT-6 Sol and Luna, and Grok 4.7, local sandboxing and OpenTelemetry in the Copilot app, improved Slack and Teams model and long-task controls, assisted approvals and shared skills in JetBrains, and remote Dev Container agents in VS Code 1.139.",
+      "source_url": "https://github.blog/changelog/2026-09-29-gpt-6-1-sol-in-github-copilot/#availability-in-github-copilot:~:text=GitHub%20Copilot%20coding%20agent",
+      "comment": "GitHub made GPT-6.1 Sol generally available on September 29, 2026 for agentic coding and terminal workflows across the Copilot coding agent, CLI, app, github.com, mobile, and supported IDEs, with rollout to Pro+, Max, Business, and Enterprise users.",
       "sort_date": "2026-09-01"
     },
     "rules": {
@@ -4830,9 +4834,9 @@
     },
     "latest_major_update": {
       "value": "Sep '26",
-      "source_url": "https://github.com/kirodotdev/KiroCrew/releases/tag/v0.7.1#source:~:text=Sessions%20and%20subagents",
-      "comment": "Kiro Crew v0.7.1 shipped September 25, 2026 with bounded cleanup for per-agent view files and transcript reads, preventing large histories from slowing new chats, subagents, and tab switching.",
-      "sort_date": "2026-09-25"
+      "source_url": "https://github.com/kirodotdev/KiroCrew/releases/tag/v0.7.2#source:~:text=stable%20cut",
+      "comment": "Kiro Crew v0.7.2 shipped September 29, 2026 as a small stable maintenance cut following v0.7.1.",
+      "sort_date": "2026-09-29"
     },
     "rules": {
       "support": "full",
@@ -5234,7 +5238,7 @@
       "value": "Sep '26",
       "source_url": "https://github.com/XiaomiMiMo/MiMo-Code/releases/tag/v0.1.14#source:~:text=Interrupted%20or%20errored%20turns%20stay%20recoverable",
       "comment": "Latest release v0.1.14 (September 2, 2026) adds append-only /recover for interrupted turns, title generation APIs, tool-driven TUI voice input, revised compaction, replayable nested tool calls, inherited subagent permissions, and optional auto-worktree guidance.",
-      "sort_date": "2026-09-26"
+      "sort_date": "2026-09-30"
     },
     "rules": {
       "support": "full",
@@ -5848,9 +5852,9 @@
     },
     "latest_major_update": {
       "value": "Sep '26",
-      "source_url": "https://github.com/anomalyco/opencode/releases/tag/v1.18.32#source:~:text=Fixed%20Bedrock%20image%20attachments",
-      "comment": "OpenCode v1.18.32 shipped September 21, 2026 with corrected Bedrock image handling for supported model families and fixed Together AI streaming-usage reporting.",
-      "sort_date": "2026-09-21"
+      "source_url": "https://github.com/anomalyco/opencode/releases/tag/v1.18.33#source:~:text=Cloudflare%20AI%20Gateway%20models%20now%20honor%20provider%20response%20and%20stream%20timeouts",
+      "comment": "OpenCode v1.18.33 shipped September 28, 2026 with Cloudflare AI Gateway timeout handling, surfaced MCP browser-launch failures, redacted debug configuration, and corrected Gemini thinking defaults and effort controls.",
+      "sort_date": "2026-09-28"
     },
     "rules": {
       "support": "full",
@@ -6262,9 +6266,9 @@
     },
     "latest_major_update": {
       "value": "Sep '26",
-      "source_url": "https://github.com/earendil-works/pi/releases/tag/v0.87.1#source:~:text=Latest%20frontier%20models",
-      "comment": "Pi v0.87.1 shipped September 22, 2026 with Claude Opus 5.5, GPT-6 Sol, and GPT-6 Luna across supported providers, Grok 4.7 as the xAI default, and fixes for compaction, mode validation, image-only messages, and Anthropic OAuth requests.",
-      "sort_date": "2026-09-22"
+      "source_url": "https://github.com/earendil-works/pi/releases/tag/v0.99.1#source:~:text=GPT-6.1%20Sol",
+      "comment": "Pi v0.99.1 shipped September 29, 2026 with GPT-6.1 Sol support and a bundled OpenAI login fix, following v0.99.0's first-class MCP and codemode tools, ChatGPT sign-in, virtual and classifier models, and system-derived and custom themes.",
+      "sort_date": "2026-09-29"
     },
     "rules": {
       "support": "full",
@@ -6282,9 +6286,9 @@
       "comment": "Extension API supports lifecycle/tool hooks via TypeScript extensions, including tool event hooks and custom event handlers. Full extension-based hook model from docs and examples."
     },
     "mcp_servers": {
-      "support": "none",
-      "source_url": "https://github.com/earendil-works/pi/blob/main/packages/coding-agent/README.md#source:~:text=MCP",
-      "comment": "README explicitly states no MCP. MCP-like capabilities can be built via extensions instead."
+      "support": "full",
+      "source_url": "https://github.com/earendil-works/pi/releases/tag/v0.99.0#source:~:text=MCP%20servers%20over%20stdio%20or%20streamable%20HTTP",
+      "comment": "Pi v0.99.0 added built-in MCP over stdio and streamable HTTP with OAuth, global or project `mcp.json`, runtime registration, and `pi mcp` management commands."
     },
     "custom_commands": {
       "support": "full",
@@ -6393,9 +6397,9 @@
       "comment": "Research needed. Check official documentation for keybinding customization options."
     },
     "theme_customization": {
-      "support": "unknown",
-      "source_url": "https://docs.example.com/#documentation:~:text=theme",
-      "comment": "Research needed. Check for theme/appearance customization options."
+      "support": "full",
+      "source_url": "https://github.com/earendil-works/pi/releases/tag/v0.99.0#source:~:text=Added%20the%20%60system%60%20theme",
+      "comment": "Pi supports custom theme files and a system theme derived from the terminal palette, including appearance metadata and RGB, OKLCH, and OKHSL colors."
     },
     "auto_save": {
       "support": "unknown",
@@ -6870,9 +6874,9 @@
     },
     "latest_major_update": {
       "value": "Sep '26",
-      "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.24.6#source:~:text=Add%20the%20Hosted%20Harness%20private%20client",
-      "comment": "Qwen Code v0.24.6 shipped September 26, 2026 with managed and hosted runtime contracts, durable managed-session failover, managed Agent View session listing, model and reasoning selection at session creation, an agent-prepared Batch API workflow, a native Advisor tool, and major CLI startup and memory improvements.",
-      "sort_date": "2026-09-26"
+      "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.24.7#source:~:text=admit%20workspace-bound%20sessions%20without%20execution",
+      "comment": "Qwen Code v0.24.7 shipped September 29, 2026 with workspace-bound managed sessions, managed-runtime tools running in the session workspace, routing between legacy and managed engines, and private Hosted Harness text turns without tools.",
+      "sort_date": "2026-09-29"
     },
     "rules": {
       "support": "full",
