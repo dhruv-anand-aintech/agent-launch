@@ -28,10 +28,10 @@
     "comment": "AWS and Kiro introduced Kiro Crew as an open-source persistent development workspace in August 2026."
   },
   "latest_major_update": {
-    "value": "Sep '26",
-    "source_url": "https://github.com/kirodotdev/KiroCrew/releases/tag/v0.7.2#source:~:text=stable%20cut",
-    "comment": "Kiro Crew v0.7.2 shipped September 29, 2026 as a small stable maintenance cut following v0.7.1.",
-    "sort_date": "2026-09-29"
+    "value": "Oct '26",
+    "source_url": "https://github.com/kirodotdev/KiroCrew/releases/tag/v0.8.0#source:~:text=A%20wake%20judge%20screens%20a%20monitoring%20loop",
+    "comment": "Kiro Crew v0.8.0 shipped October 9, 2026 with judged monitoring loops, a bundled agent CLI in the desktop app, folder-level steering, configurable transcript layout, agent templates, session forking and nesting, remote-crew chaining, richer redaction controls, and expanded conductor and crewmate management.",
+    "sort_date": "2026-10-09"
   },
   "rules": {
     "support": "full",

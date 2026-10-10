@@ -28,9 +28,9 @@
     "comment": "Launch announcement presents Command Code as a newly launched coding agent CLI with taste learning."
   },
   "latest_major_update": {
-    "value": "Sep '26",
-    "source_url": "https://commandcode.ai/changelog#september:~:text=v1.62.0,MiMo%20V2.6%20Flash",
-    "comment": "Command Code CLI v1.62.0 shipped in September 2026 with MiMo V2.6 Flash, MiMo V2.6 Pro, and MiMo V2.6 Pro UltraSpeed support."
+    "value": "Oct '26",
+    "source_url": "https://commandcode.ai/changelog#october:~:text=v1.79.0,Add%20Glyph%20Cluster%20as%20a%20free%20model",
+    "comment": "Command Code CLI v1.79.0 added the free Glyph Cluster model with 100 requests per day. October releases also added Claude Haiku 5.5, Chinese localization, and `cmd acp` for running Command Code as an ACP agent in compatible editors such as Zed."
   },
   "pricing": {
     "value": "Go $1/mo, Pro $15/mo, Max 10x $100/mo, Max 20x $200/mo; monthly credits and top-ups; BYOK/provider options documented",
@@ -38,9 +38,9 @@
     "comment": "Pricing page lists Go, Pro, Max 10x, and Max 20x tiers with monthly credits, model access, 1M context, and top-up behavior."
   },
   "some_free_usage": {
-    "support": "partial",
-    "source_url": "https://commandcode.ai/docs/#models-all-of-them:~:text=Tencent%2FHY3%20Free%20until%20July%2021%2C%202026",
-    "comment": "Docs advertise temporary free model deals, but ordinary agent use requires signing in and a paid/credit-backed plan."
+    "support": "full",
+    "source_url": "https://commandcode.ai/changelog#october:~:text=Add%20Glyph%20Cluster%20as%20a%20free%20model%2C%20100%20requests%20a%20day",
+    "comment": "Command Code includes Glyph Cluster as a free model with 100 requests per day."
   },
   "no_account_required": {
     "support": "none",
@@ -158,9 +158,9 @@
     "comment": "Quickstart points users to `?` for all keyboard shortcuts."
   },
   "theme_customization": {
-    "support": "unknown",
-    "source_url": "https://docs.example.com/#documentation:~:text=unknown",
-    "comment": "Research needed. Public docs did not expose enough detail in this run."
+    "support": "full",
+    "source_url": "https://commandcode.ai/changelog#october:~:text=%2Ftheme%2C%20%2Feffort%2C%20%2Fclone%2C%20%2Freload",
+    "comment": "The interactive CLI exposes a built-in `/theme` command for changing its appearance."
   },
   "auto_save": {
     "support": "partial",

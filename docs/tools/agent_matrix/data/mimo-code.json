@@ -27,8 +27,9 @@
   },
   "latest_major_update": {
     "value": "Sep '26",
-    "source_url": "https://github.com/XiaomiMiMo/MiMo-Code/releases/tag/v0.1.14#source:~:text=Interrupted%20or%20errored%20turns%20stay%20recoverable",
-    "comment": "Latest release v0.1.14 (September 2, 2026) adds append-only /recover for interrupted turns, title generation APIs, tool-driven TUI voice input, revised compaction, replayable nested tool calls, inherited subagent permissions, and optional auto-worktree guidance."
+    "source_url": "https://github.com/XiaomiMiMo/MiMo-Code/releases/tag/v0.1.15#source:~:text=bump%20version%20to%200.1.15",
+    "comment": "MiMo Code v0.1.15 shipped September 22, 2026 with more robust session resume and subagent-status ownership, bounded unknown-error retries, safer multi-tool sequencing and flood protection, PascalCase tool exposure for MiMo V2.6, and regenerated SDK types.",
+    "sort_date": "2026-09-22"
   },
   "rules": {
     "support": "full",

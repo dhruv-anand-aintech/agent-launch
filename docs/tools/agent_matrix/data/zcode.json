@@ -30,10 +30,10 @@
     "comment": "Public ZCode docs and desktop downloads are live in 2026; exact public launch date not confirmed in accessible docs."
   },
   "latest_major_update": {
-    "value": "Sep '26",
-    "source_url": "https://zcode.z.ai/en/changelog#release-v3143:~:text=3.14.3%20Released%20Sep%2022%2C%202026",
-    "comment": "ZCode 3.14.3 shipped September 22, 2026 with adjustable workflow concurrency, improved workflow restart and script-submission behavior, better large-workflow status, lower workflow context and token use, and workflow and interface reliability fixes.",
-    "sort_date": "2026-09-22"
+    "value": "Oct '26",
+    "source_url": "https://zcode.z.ai/en/changelog#release-v3145:~:text=3.14.5%20Released%20Oct%209%2C%202026",
+    "comment": "ZCode 3.14.5 shipped October 9, 2026 with a fix that preserves the displayed number of remaining reset chances after a manual reset. Version 3.14.4 disabled CAPTCHA verification for model requests to improve the free-tier experience.",
+    "sort_date": "2026-10-09"
   },
   "rules": {
     "support": "full",

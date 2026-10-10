@@ -24,10 +24,10 @@
     "comment": "Block's Open Source Program Office publicly announced \"codename goose\" on January 28, 2025, after ~9 months of internal development."
   },
   "latest_major_update": {
-    "value": "Sep '26",
-    "source_url": "https://github.com/aaif-goose/goose/releases/tag/v1.52.0#source:~:text=Live%20voice%20conversations",
-    "comment": "Goose v1.52.0 shipped September 23, 2026 with live voice conversations in Desktop, Z.AI Coding Plan support, OpenRouter and Jev decision providers, custom OpenAI base URLs in the SDK, updated frontier-model support, safer recipe and provider configuration, and extensive installer, MCP, scheduling, subagent, and session fixes.",
-    "sort_date": "2026-09-23"
+    "value": "Oct '26",
+    "source_url": "https://github.com/aaif-goose/goose/releases/tag/v1.54.0#source:~:text=HTML%20session%20export%20with%20an%20interactive%20viewer",
+    "comment": "Goose v1.54.0 shipped October 8, 2026 with interactive HTML session export, first-run mode selection, adaptive thinking for Claude Sonnet and Haiku 5.5, improved subagent state handling, extension leases, and fixes across Copilot authentication, model effort aliases, updates, usage accounting, and provider configuration.",
+    "sort_date": "2026-10-08"
   },
   "rules": {
     "support": "full",

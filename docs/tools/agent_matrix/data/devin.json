@@ -28,9 +28,10 @@
     "comment": "First publicly demoed March 2024. Made Generally Available (GA) on December 10, 2024."
   },
   "latest_major_update": {
-    "value": "Sep '26",
-    "source_url": "https://docs.devin.ai/release-notes/2026#september-2-2026:~:text=September%202%2C%202026",
-    "comment": "September 2, 2026 updates added session grouping and filters, cleanup code scans, the /scan composer command, scheduled scan automations, a redesigned findings tab, and richer automation trigger details."
+    "value": "Oct '26",
+    "source_url": "https://docs.devin.ai/release-notes/2026#october-7-2026:~:text=Notification%20Inbox",
+    "comment": "Devin's October 7, 2026 update added a notification inbox with mobile push controls, richer command-palette actions, merge-queue status across the app, stricter private-key redaction, improved Teams and Slack integration, refreshed plugin surfaces, and role-based Devin Review controls.",
+    "sort_date": "2026-10-07"
   },
   "rules": {
     "support": "full",
