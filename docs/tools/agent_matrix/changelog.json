@@ -3,8 +3,8 @@
   "entries": [
     {
       "date": "2026-10-10",
-      "commit": "",
-      "title": "Unreleased matrix update",
+      "commit": "ccb1e70",
+      "title": "Scheduled coding agent matrix update",
       "items": [
         {
           "summary": "Antigravity: Latest Major Update updated to Oct '26",
