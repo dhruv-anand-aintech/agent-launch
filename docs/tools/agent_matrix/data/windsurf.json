@@ -26,9 +26,10 @@
     "comment": "Originally launched as 'Codeium' IDE, rebranded to 'Windsurf' ~November 2024. Windsurf 2.0 shipped April 15, 2026."
   },
   "latest_major_update": {
-    "value": "Aug '26",
-    "source_url": "https://docs.devin.ai/desktop/changelog#v3820:~:text=August%2021%2C%202026",
-    "comment": "Devin Desktop/Windsurf v3.8.20 (August 21, 2026) adds multi-window Agent Command Center behavior, faster Agent/Editor switching, improved workspace trust, split plan review, individually stoppable subagents, worktree setup hooks, and stronger cloud-session filtering and terminal streaming."
+    "value": "Sep '26",
+    "source_url": "https://docs.devin.ai/desktop/changelog#v31048:~:text=September%2029%2C%202026",
+    "comment": "Devin Desktop/Windsurf v3.10.48 shipped September 29, 2026 with ChatGPT plan sign-in for eligible GPT usage, language-server diagnostic profiles, bounded Agent-window memory for noisy terminals, preserved multi-folder workspaces, smaller model settings, and slower hidden-session polling.",
+    "sort_date": "2026-09-29"
   },
   "rules": {
     "support": "full",

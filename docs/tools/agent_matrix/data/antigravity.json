@@ -30,10 +30,10 @@
     "comment": "IDE public release in 2025; standalone agy CLI documented May 2026."
   },
   "latest_major_update": {
-    "value": "Sep '26",
-    "source_url": "https://www.antigravity.google/docs/changelog#v2181:~:text=v2.18.1,September%2028%2C%202026",
-    "comment": "Antigravity 2.18.1 shipped September 28, 2026 with an in-product plugin marketplace and Customizations tab, archived-conversation filtering, safer permission prompts for hidden workspace files, and fixes for subagent worktree classification, prompt editing, focus, and conversation reliability.",
-    "sort_date": "2026-09-28"
+    "value": "Oct '26",
+    "source_url": "https://www.antigravity.google/docs/changelog#v2220:~:text=v2.22.0,October%208%2C%202026",
+    "comment": "Antigravity 2.22.0 shipped October 8, 2026 with plugin-provided UI extensions in the conversation side panel, drag-and-drop conversation organization, and localized conversation timestamps. Version 2.21.1 also added advanced conversation search, on-demand and scheduled Automations, grouped agent actions, and a Gruvbox Material theme.",
+    "sort_date": "2026-10-08"
   },
   "rules": {
     "support": "full",
@@ -192,8 +192,8 @@
     "comment": "Research needed. Check for caching, optimization, or resource management settings."
   },
   "ui_customization": {
-    "support": "unknown",
-    "source_url": "https://docs.example.com/#documentation:~:text=ui-customization",
-    "comment": "Research needed. Check for UI layout, sidebar, or panel customization."
+    "support": "full",
+    "source_url": "https://www.antigravity.google/docs/changelog#v2220:~:text=Construct%20and%20display%20custom%20user%20interfaces%20inside%20the%20side%20panel",
+    "comment": "Plugins can construct custom interfaces in the conversation side panel, conversations can be reorganized by drag and drop, and the product exposes theme and sidebar customization."
   }
 }

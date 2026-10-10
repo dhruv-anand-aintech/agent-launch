@@ -32,9 +32,9 @@
     "comment": "Announced at GitHub Universe (Oct/Nov 2024) in preview. GA billing launch: June 18, 2025 when premium request billing began."
   },
   "latest_major_update": {
-    "value": "Sep '26",
-    "source_url": "https://github.blog/changelog/2026-09-29-gpt-6-1-sol-in-github-copilot/#availability-in-github-copilot:~:text=GitHub%20Copilot%20coding%20agent",
-    "comment": "GitHub made GPT-6.1 Sol generally available on September 29, 2026 for agentic coding and terminal workflows across the Copilot coding agent, CLI, app, github.com, mobile, and supported IDEs, with rollout to Pro+, Max, Business, and Enterprise users."
+    "value": "Oct '26",
+    "source_url": "https://github.blog/changelog/2026-10-09-github-copilot-weekly-releases-october-5/#github-copilot-weekly-releases-october-5:~:text=more%20control%20over%20what%20agents%20can%20access",
+    "comment": "GitHub's October 5 weekly release added Claude Haiku 5.5, broader account and environment controls, generally available local sandboxing across Agent Host surfaces, and local-model discovery in Copilot CLI. Dynamic workflows also arrived in the Copilot app and CLI on October 1."
   },
   "rules": {
     "support": "full",

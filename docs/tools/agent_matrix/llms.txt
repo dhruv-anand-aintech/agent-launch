@@ -1,6 +1,6 @@
 # Coding Agent Feature Matrix
 > Compare 40 coding agents, CLIs, and IDEs across features.
-> https://compare.ainorthstar.tech | Updated 2026-09-30
+> https://compare.ainorthstar.tech | Updated 2026-10-10
 
 Agent                   Rel    FF     Fre   NoA   Oth   Rul   Skl   Hks   MCP   Cmd   Gol   Sub   Mon   Trn   Mod   App   San   Res   Con   Hdl   Fmt   Sta   Tel   Hst  BYOM
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -12,7 +12,7 @@ Claude Code             Feb '2 CLI/Ext                      Y     Y     Y     Y 
 Cline                   Jul '2 CLI/Ext    Y     Y     Y     Y     Y     Y     Y     Y     N     Y     ~     ?     Y     Y     ~     Y     ~     Y     Y     N     Y     N     Y
 OpenAI Codex CLI        Apr '2 CLI/Ext    Y           Y     Y     Y     Y     Y     ~     Y     Y     ~     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y
 Cohere North            Jan '2 SDK/Web                      ~     ~     Y     Y     N     N     Y     ~     ~     ~     ~     Y     ~     ~     ~     ~     N     ~     Y     N
-Command Code            Jul '2 CLI/Ext    ~     N     Y     Y     Y     Y     Y     Y     Y     Y     ~     Y     Y     Y     ~     Y     Y     Y     ~     Y     Y     N     Y
+Command Code            Jul '2 CLI/Ext    Y     N     Y     Y     Y     Y     Y     Y     Y     Y     ~     Y     Y     Y     ~     Y     Y     Y     ~     Y     Y     N     Y
 Crush                   Jul '2 CLI/TUI    Y     Y     Y     Y     Y     ~     Y     Y     N     Y     ~     Y     Y     Y     N     Y     Y     Y     ~     N     Y     N     Y
 Cursor                  2023  CLI/IDE    Y                 Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     ~     ~     Y     Y     Y
 Devin                   Dec '2 CLI/Ext    Y                 Y     Y     Y     Y     Y     N     Y     ~     ~     ?     ~     Y     Y     Y     Y     ~     N     ?     Y     ?
@@ -25,7 +25,7 @@ Goose                   Jan '2 CLI/Des    Y     Y     Y     Y     Y     Y     Y 
 Grok Build              May '2 CLI/Web                      Y     Y     Y     Y     ~     Y     Y     ?     ?     ~     Y     ~     ?     ?     Y     ?     ?     ?     Y     ~
 JetBrains Air           Mar '2 IDE/Web    Y     ~     Y     Y     Y     ~     Y     Y     N     ~     Y     ~     Y     Y     Y     Y     Y     N     N     N     ?     Y     Y
 Google Jules            Aug '2 Web                          ?     N     ~     ~     N     N     ~     ~     ~     ~     Y     Y     ~     ~     ~     ~     N     ?     Y     N
-JetBrains Junie         Jan '2 CLI/IDE                      Y     Y     Y     Y     Y     N     Y     ~     Y     Y     Y     ~     Y     ~     Y     ?     N     ~     ~     Y
+JetBrains Junie         Jan '2 CLI/IDE    Y                 Y     Y     Y     Y     Y     N     Y     ~     Y     Y     Y     ~     Y     ~     Y     ?     N     ~     ~     Y
 Kilo Code               Feb '2 CLI/Ext    Y     Y     Y     Y     Y     Y     Y     Y     N     Y     ~     ?     Y     Y     ~     Y     Y     Y     Y     N     Y     ~     Y
 Kimi Code CLI           May '2 CLI/Ext                      Y     Y     ~     Y     ~     N     Y     ~     ?     Y     Y     N     Y     Y     Y     Y     Y     ?     N     Y
 Kiro Crew               Aug '2 CLI/Web    Y     N     N     Y     Y     Y     Y     ~     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     ~     N     Y     N     N
@@ -155,7 +155,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Website: https://antigravity.google/
 - Form factor: CLI, IDE, Extension, SDK, Web
 - Released: 2025
-- Latest update: Sep '26
+- Latest update: Oct '26
 - Some Free Usage: full - Google announced Antigravity public preview availability at no charge with rate limits.
 - No Account Required: blank
 - Can Use Other Subscriptions: blank
@@ -188,7 +188,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Website: https://www.anthropic.com/claude-code
 - Form factor: CLI, Extension, SDK, Web, Mac App
 - Released: Feb '25
-- Latest update: Sep '26
+- Latest update: Oct '26
 - Some Free Usage: blank
 - No Account Required: blank
 - Can Use Other Subscriptions: blank
@@ -220,7 +220,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Website: https://cline.bot/
 - Form factor: CLI, Extension, SDK, Desktop App
 - Released: Jul '24
-- Latest update: Sep '26
+- Latest update: Oct '26
 - Some Free Usage: full - Cline is free for individual developers; AI inference is paid separately or BYOK/local.
 - No Account Required: full - Can run with local models via Ollama or LM Studio without a Cline-hosted account.
 - Can Use Other Subscriptions: full - Cline documents OpenAI Codex OAuth so users can bring a ChatGPT subscription, and also supports BYOK providers.
@@ -253,7 +253,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Website: https://openai.com/codex/
 - Form factor: CLI, Extension, SDK, Web, Mac App
 - Released: Apr '25
-- Latest update: Sep '26
+- Latest update: Oct '26
 - Some Free Usage: full - Codex pricing documents limited access included on the ChatGPT Free plan.
 - No Account Required: blank
 - Can Use Other Subscriptions: full - Codex CLI can authenticate with a ChatGPT plan instead of only an API key flow.
@@ -316,8 +316,8 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Website: https://commandcode.ai/
 - Form factor: CLI, Extension, Web, Desktop App
 - Released: Jul '26
-- Latest update: Sep '26
-- Some Free Usage: partial - Docs advertise temporary free model deals, but ordinary agent use requires signing in and a paid/credit-backed plan.
+- Latest update: Oct '26
+- Some Free Usage: full - Command Code includes Glyph Cluster as a free model with 100 requests per day.
 - No Account Required: none - Quickstart requires `cmd login` before normal coding use.
 - Can Use Other Subscriptions: full - CLI exposes `/provider` and pricing/docs describe provider/API-key surfaces, so usage can route through non-default providers where configured.
 - Rules: full - CLI has `/init` for AGENTS.md and Taste/memory features for persistent project guidance.
@@ -349,7 +349,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Website: https://charm.land/crush
 - Form factor: CLI, TUI
 - Released: Jul '25
-- Latest update: Sep '26
+- Latest update: Oct '26
 - Some Free Usage: full - Local model backends (Ollama, LM Studio, MLX, LiteLLM) and some free-tier provider plans allow free agent usage without paying for hosted inference.
 - No Account Required: full - Can run entirely against local Ollama/LM Studio/MLX models without any Crush account or vendor sign-in; the CLI itself requires no account to install or run.
 - Can Use Other Subscriptions: full - Routes through the user's own API keys/accounts for any supported provider (Anthropic, OpenAI, etc.) or coding-plan subscriptions (GLM Coding Plan, Kimi Code, MiniMax Coding Plan, Synthetic) rather than a Crush-owned subscription.
@@ -381,7 +381,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Website: https://cursor.com/
 - Form factor: CLI, IDE, SDK, Web, Mobile
 - Released: 2023
-- Latest update: Sep '26
+- Latest update: Oct '26
 - Some Free Usage: full - Cursor pricing documents a Hobby Free plan with limited Agent requests and Tab completions.
 - No Account Required: blank
 - Can Use Other Subscriptions: blank
@@ -413,7 +413,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Website: https://devin.ai/
 - Form factor: CLI, Extension, SDK, Web
 - Released: Dec '24
-- Latest update: Sep '26
+- Latest update: Oct '26
 - Some Free Usage: full - Cognition announced a Free self-serve Devin plan with limited access.
 - No Account Required: blank
 - Can Use Other Subscriptions: blank
@@ -445,7 +445,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Website: https://factory.ai/
 - Form factor: CLI, Extension, SDK, Web, Desktop App
 - Released: 2025
-- Latest update: Sep '26
+- Latest update: Oct '26
 - Some Free Usage: blank
 - No Account Required: partial - Droid BYOK supports local models, but normal Droid CLI setup still documents Factory authentication, so account-free use is not confirmed end-to-end.
 - Can Use Other Subscriptions: full - Droid BYOK supports external provider keys, open-source providers, and local models.
@@ -478,7 +478,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Website: https://fx.sh/
 - Form factor: CLI, SDK
 - Released: Aug '26
-- Latest update: Sep '26
+- Latest update: Oct '26
 - Some Free Usage: unknown - The reviewed public sources do not establish a bundled free model allowance.
 - No Account Required: partial - Preview custom connections can use anonymous local inference, while built-in cloud providers require authentication.
 - Can Use Other Subscriptions: full - Fx supports ChatGPT and Grok subscription sign-in, Vercel AI Gateway, and configurable OpenAI-compatible endpoints.
@@ -512,7 +512,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Form factor: CLI
 - Status: Deprecated
 - Released: Jun '25
-- Latest update: Sep '26
+- Latest update: Oct '26
 - Some Free Usage: full - Gemini CLI documents a free tier when signing in with a Google account.
 - No Account Required: blank
 - Can Use Other Subscriptions: full - Gemini CLI can use quotas from Gemini Code Assist editions, and also supports API-key pay-as-you-go.
@@ -545,7 +545,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Website: https://github.com/features/copilot/cli
 - Form factor: CLI
 - Released: Sep '25
-- Latest update: Sep '26
+- Latest update: Oct '26
 - Some Free Usage: partial - GitHub Copilot Free plan includes limited chat/agent requests (e.g. 50 chat requests/mo) usable via the CLI, but no unlimited free local-model path is documented for Copilot CLI itself.
 - No Account Required: none - Requires sign-in with a GitHub account holding an active Copilot subscription/seat; `/login` flow inside the CLI.
 - Can Use Other Subscriptions: full - BYOK support for Anthropic, OpenAI, Azure OpenAI, AWS Bedrock, Google AI Studio, xAI/Microsoft Foundry, any OpenAI-compatible endpoint, and local models via Ollama, configured with COPILOT_PROVIDER_TYPE / COPILOT_PROVIDER_BASE_URL / COPILOT_PROVIDER_API_KEY / COPILOT_MODEL env vars.
@@ -560,7 +560,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Transcripts: full - Local session logs under ~/.copilot/logs/ (configurable via --log-dir). Sessions can be exported with --share=PATH (Markdown file) or --share-gist (secret GitHub gist) after a programmatic run.
 - Model Selection: full - --model=MODEL flag or COPILOT_MODEL env var, plus in-session /model picker. Choices include Anthropic Claude, OpenAI GPT, and Google Gemini family models; `auto` lets Copilot pick automatically. BYOK external models also appear in the picker.
 - Approval Mode: full - Per-action approval prompts by default (Yes / Yes-and-approve-for-session / No-and-redirect). Granular flags: --allow-tool, --deny-tool, --allow-all-tools, --allow-all-paths, --allow-all-urls, --allow-url/--deny-url, --add-dir, plus --allow-all/--yolo to bypass everything. Enterprises can disable bypass via permissions.disableBypassPermissionsMode.
-- Sandbox Mode: full - Public preview (as of mid-2026): local sandbox via /sandbox enable restricts filesystem/network/system access (built on Microsoft MXC, included in standard seat); cloud sandbox via `copilot --cloud` runs a fully isolated, ephemeral GitHub-hosted Linux environment (Azure Container Apps Sandboxes) resumable from any device.
+- Sandbox Mode: full - Generally available local sandboxing restricts filesystem, network, and system access in Copilot CLI and other Agent Host surfaces. `copilot --cloud` also provides an isolated ephemeral GitHub-hosted Linux sandbox.
 - Resume: full - -r/--resume[=VALUE] picks from a session list or jumps to a session ID/prefix/name; /resume in-session. --connect[=SESSION-ID] attaches to a remote session; --remote enables resuming a remote task locally.
 - Continue: full - --continue resumes the most recent session in the current working directory, falling back to the globally most recent session, without needing a session ID.
 - Non Interactive: full - -p/--prompt=PROMPT executes a prompt programmatically and exits; --allow-all-tools is required for unattended runs. -i/--interactive=PROMPT starts interactive with an initial prompt. Documented for use in scripts and GitHub Actions workflows.
@@ -578,7 +578,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Website: https://github.com/features/copilot
 - Form factor: CLI, IDE, Extension, SDK, Web, Desktop App
 - Released: Jun '25
-- Latest update: Sep '26
+- Latest update: Oct '26
 - Some Free Usage: blank
 - No Account Required: blank
 - Can Use Other Subscriptions: blank
@@ -611,7 +611,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Website: https://goose-docs.ai/
 - Form factor: CLI, Desktop App
 - Released: Jan '25
-- Latest update: Sep '26
+- Latest update: Oct '26
 - Some Free Usage: full - Google Gemini's free tier and free local Ollama models give a documented no-cost usage path alongside paid providers.
 - No Account Required: full - Can run entirely against local Ollama models with no Goose account and no cloud provider account required.
 - Can Use Other Subscriptions: full - Routes agent usage through the user's own provider account/API key (Anthropic, OpenAI, Azure, Bedrock, Databricks, Groq, OpenRouter, etc.) or local inference (Ollama) rather than a Goose-owned subscription.
@@ -739,8 +739,8 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Website: https://junie.jetbrains.com/
 - Form factor: CLI, IDE, Web, GitHub Action, GitLab CI/CD
 - Released: Jan '25
-- Latest update: Sep '26
-- Some Free Usage: blank
+- Latest update: Oct '26
+- Some Free Usage: full - Junie Lite is a free model tier for routine coding work.
 - No Account Required: blank
 - Can Use Other Subscriptions: blank
 - Rules: full - Full guideline support. Junie CLI reads `.junie/AGENTS.md`, project `AGENTS.md`, legacy `.junie/guidelines.md` or `.junie/guidelines/`, and global `~/.junie/AGENTS.md`.
@@ -763,7 +763,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Telemetry: partial - Feedback flow attaches current session logs; no broader telemetry-disable setting was found in docs reviewed.
 - Hosted Agent: partial - Junie can run from GitHub Action and GitLab CI/CD on issues, PRs, or MRs; this is CI-hosted automation rather than a managed always-on cloud worker.
 - Custom Model Provider: full - Full custom model/BYOK support through custom JSON model profiles, local providers such as Ollama, enterprise proxies, and supported API-compatible endpoints.
-- Pricing: Bundled with JetBrains AI tiers/free credits; paid JetBrains AI plans apply
+- Pricing: Junie Lite free model tier; bundled with JetBrains AI tiers and credits; paid JetBrains AI plans apply
 - Notes: Strong fit for JetBrains users, debugger-aware workflows, CLI/headless CI, and JetBrains IDE integration. June 2026 docs now expose extensibility details for guidelines, extensions, MCP, subagents, commands, hooks, BYOK/custom models, and CI/CD.
 
 ### Kilo Code
@@ -772,7 +772,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Website: https://kilo.ai/
 - Form factor: CLI, Extension
 - Released: Feb '26
-- Latest update: Sep '26
+- Latest update: Oct '26
 - Some Free Usage: full - Kilo Code documents free/open-source access plus Auto Free/BYOK/local inference options.
 - No Account Required: full - Can run local models via Ollama, LM Studio, or Atomic Chat without a Kilo-hosted account.
 - Can Use Other Subscriptions: full - Kilo documents use of an existing ChatGPT Plus/Pro subscription and BYOK/local provider options.
@@ -838,7 +838,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Website: https://kiro.dev/crew/
 - Form factor: CLI, Web, Desktop App, Mobile
 - Released: Aug '26
-- Latest update: Sep '26
+- Latest update: Oct '26
 - Some Free Usage: full - Kiro offers a perpetual Free tier that can be used with the open-source Kiro Crew workspace.
 - No Account Required: none - First launch guides Kiro device-code sign-in.
 - Can Use Other Subscriptions: none - Current setup uses Kiro authentication rather than other model-provider subscriptions.
@@ -870,7 +870,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Website: https://kiro.dev/
 - Form factor: CLI, IDE, Web
 - Released: Jul '25
-- Latest update: Sep '26
+- Latest update: Oct '26
 - Some Free Usage: full - Kiro billing docs say new users start on the perpetual Kiro Free tier.
 - No Account Required: blank
 - Can Use Other Subscriptions: blank
@@ -1001,7 +1001,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Website: https://opencode.ai/
 - Form factor: CLI, Extension, SDK, Mac App
 - Released: 2025
-- Latest update: Sep '26
+- Latest update: Oct '26
 - Some Free Usage: full - OpenCode homepage documents free models included.
 - No Account Required: full - OpenCode supports running local models, so it can be used without an OpenCode-hosted account when configured locally.
 - Can Use Other Subscriptions: full - OpenCode supports 75+ LLM providers and local models via provider configuration/API keys.
@@ -1033,7 +1033,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Website: https://www.openhands.dev/
 - Form factor: CLI, IDE, Web, Docker, Hosted Agent
 - Released: Mar '24
-- Latest update: Sep '26
+- Latest update: Oct '26
 - Some Free Usage: full - OpenHands Cloud Individual tier is free to use (capped at 10 daily conversations) and self-hosted CLI is entirely free software; cost is only the LLM provider's own usage.
 - No Account Required: full - Local CLI installed via uv/pip/binary runs fully on your machine; first-run setup just configures your own LLM provider/API key in ~/.openhands/settings.json, no OpenHands account needed unless using `openhands login`/OpenHands Cloud.
 - Can Use Other Subscriptions: full - Connects to any LiteLLM-supported provider (Anthropic, OpenAI, OpenRouter, local Ollama/vLLM/SGLang, etc.) via your own API key, configured through Settings UI, ~/.openhands/agent_settings.json, or LLM_API_KEY/LLM_MODEL/LLM_BASE_URL env vars with --override-with-envs.
@@ -1066,7 +1066,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Website: https://pi.dev
 - Form factor: CLI, SDK
 - Released: May '26
-- Latest update: Sep '26
+- Latest update: Oct '26
 - Some Free Usage: blank
 - No Account Required: full - Pi supports custom providers/models including Ollama, vLLM, LM Studio, and proxies, so local usage need not require a Pi-hosted account.
 - Can Use Other Subscriptions: full - Pi documents subscription-based providers via OAuth plus API-key providers and auth-file/env configuration.
@@ -1131,7 +1131,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Website: https://qoder.com/
 - Form factor: CLI, IDE, Extension, SDK, Web, Desktop App, Mobile
 - Released: Oct '25
-- Latest update: Sep '26
+- Latest update: Oct '26
 - Some Free Usage: blank
 - No Account Required: blank
 - Can Use Other Subscriptions: blank
@@ -1294,7 +1294,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Website: https://windsurf.com/
 - Form factor: CLI, IDE, Extension
 - Released: Nov '24
-- Latest update: Aug '26
+- Latest update: Sep '26
 - Some Free Usage: blank
 - No Account Required: blank
 - Can Use Other Subscriptions: blank
@@ -1326,7 +1326,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Website: https://zcode.z.ai/en
 - Form factor: CLI, IDE, Web, Desktop App, Mobile
 - Released: 2026
-- Latest update: Sep '26
+- Latest update: Oct '26
 - Some Free Usage: full - First-time ZCode users receive a 5-day free trial with daily GLM-5.3 and GLM-5-turbo token benefits; subscribers can also run gradually rolling-out idle-time tasks without consuming plan quota.
 - No Account Required: blank
 - Can Use Other Subscriptions: blank

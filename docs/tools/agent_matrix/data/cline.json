@@ -28,10 +28,10 @@
     "comment": "Initial release was v1.0.4 on July 28, 2024 (originally named 'Claude Dev' by Saoud Rizwan). 8M+ installs by May 2026."
   },
   "latest_major_update": {
-    "value": "Sep '26",
-    "source_url": "https://github.com/cline/cline/releases/tag/v4.1.22#source:~:text=New%20providers%3A%20Bee",
-    "comment": "Cline v4.1.22 shipped September 30, 2026 with Bee and Pareto providers, refusal fallback for Anthropic requests, refreshed model defaults, clearer content-filter recovery, and fixes for checkpoints, cancellation, sign-in recovery, and reasoning-token accounting. Desktop v0.0.39 also fixed Linux NVIDIA rendering and package metadata.",
-    "sort_date": "2026-09-30"
+    "value": "Oct '26",
+    "source_url": "https://github.com/cline/cline/releases/tag/v4.1.23#source:~:text=If%20a%20model's%20response%20ends%20without%20a%20recognized%20finish%20reason",
+    "comment": "Cline v4.1.23 shipped October 7, 2026 with one-shot recovery for unrecognized model finish reasons and a refreshed model catalog. Desktop v0.0.45 and CLI v3.0.70 followed October 8 with SSH, MCP, reasoning compatibility, credential migration, and dashboard-command fixes.",
+    "sort_date": "2026-10-08"
   },
   "rules": {
     "support": "full",

@@ -1,6 +1,141 @@
 {
-  "entry_count": 1993,
+  "entry_count": 2025,
   "entries": [
+    {
+      "date": "2026-10-10",
+      "commit": "ccb1e70",
+      "title": "Scheduled coding agent matrix update",
+      "items": [
+        {
+          "summary": "Antigravity: Latest Major Update updated to Oct '26",
+          "target": "cell-antigravity-latest-major-update"
+        },
+        {
+          "summary": "Antigravity: UI Customization now supported",
+          "target": "cell-antigravity-ui-customization"
+        },
+        {
+          "summary": "Claude Code: Latest Major Update updated to Oct '26",
+          "target": "cell-claude-code-latest-major-update"
+        },
+        {
+          "summary": "Cline: Latest Major Update updated to Oct '26",
+          "target": "cell-cline-latest-major-update"
+        },
+        {
+          "summary": "OpenAI Codex CLI: Latest Major Update updated to Oct '26",
+          "target": "cell-codex-cli-latest-major-update"
+        },
+        {
+          "summary": "Command Code: Latest Major Update updated to Oct '26",
+          "target": "cell-command-code-latest-major-update"
+        },
+        {
+          "summary": "Command Code: Some Free Usage now supported",
+          "target": "cell-command-code-some-free-usage"
+        },
+        {
+          "summary": "Command Code: Theme now supported",
+          "target": "cell-command-code-theme-customization"
+        },
+        {
+          "summary": "Crush: Latest Major Update updated to Oct '26",
+          "target": "cell-crush-latest-major-update"
+        },
+        {
+          "summary": "Cursor: Latest Major Update updated to Oct '26",
+          "target": "cell-cursor-latest-major-update"
+        },
+        {
+          "summary": "Devin: Latest Major Update updated to Oct '26",
+          "target": "cell-devin-latest-major-update"
+        },
+        {
+          "summary": "Factory Droid: Latest Major Update updated to Oct '26",
+          "target": "cell-factory-droid-latest-major-update"
+        },
+        {
+          "summary": "Fx: Latest Major Update updated to Oct '26",
+          "target": "cell-fx-latest-major-update"
+        },
+        {
+          "summary": "Gemini CLI: Latest Major Update updated to Oct '26",
+          "target": "cell-gemini-cli-latest-major-update"
+        },
+        {
+          "summary": "GitHub Copilot CLI: Latest Major Update updated to Oct '26",
+          "target": "cell-github-copilot-cli-latest-major-update"
+        },
+        {
+          "summary": "GitHub Copilot CLI: Sandbox evidence refreshed",
+          "target": "cell-github-copilot-cli-sandbox-mode"
+        },
+        {
+          "summary": "GitHub Copilot: Latest Major Update updated to Oct '26",
+          "target": "cell-github-copilot-coding-agent-latest-major-update"
+        },
+        {
+          "summary": "Goose: Latest Major Update updated to Oct '26",
+          "target": "cell-goose-latest-major-update"
+        },
+        {
+          "summary": "Grok Build: Latest Major Update evidence refreshed",
+          "target": "cell-grok-build-latest-major-update"
+        },
+        {
+          "summary": "JetBrains Junie: Latest Major Update updated to Oct '26",
+          "target": "cell-junie-latest-major-update"
+        },
+        {
+          "summary": "JetBrains Junie: Pricing updated to Junie Lite free model tier; bundled with JetBrains AI tiers and credits…",
+          "target": "cell-junie-pricing"
+        },
+        {
+          "summary": "JetBrains Junie: Some Free Usage now supported",
+          "target": "cell-junie-some-free-usage"
+        },
+        {
+          "summary": "Kilo Code: Latest Major Update updated to Oct '26",
+          "target": "cell-kilo-code-latest-major-update"
+        },
+        {
+          "summary": "Kiro Crew: Latest Major Update updated to Oct '26",
+          "target": "cell-kiro-crew-latest-major-update"
+        },
+        {
+          "summary": "Kiro: Latest Major Update updated to Oct '26",
+          "target": "cell-kiro-latest-major-update"
+        },
+        {
+          "summary": "MiMo Code: Latest Major Update evidence refreshed",
+          "target": "cell-mimo-code-latest-major-update"
+        },
+        {
+          "summary": "OpenCode: Latest Major Update updated to Oct '26",
+          "target": "cell-opencode-latest-major-update"
+        },
+        {
+          "summary": "OpenHands: Latest Major Update updated to Oct '26",
+          "target": "cell-openhands-latest-major-update"
+        },
+        {
+          "summary": "Pi: Latest Major Update updated to Oct '26",
+          "target": "cell-pi-latest-major-update"
+        },
+        {
+          "summary": "Qoder: Latest Major Update updated to Oct '26",
+          "target": "cell-qoder-latest-major-update"
+        },
+        {
+          "summary": "Windsurf Cascade: Latest Major Update updated to Sep '26",
+          "target": "cell-windsurf-latest-major-update"
+        },
+        {
+          "summary": "ZCode: Latest Major Update updated to Oct '26",
+          "target": "cell-zcode-latest-major-update"
+        }
+      ]
+    },
     {
       "date": "2026-09-30",
       "commit": "e20e7cf",

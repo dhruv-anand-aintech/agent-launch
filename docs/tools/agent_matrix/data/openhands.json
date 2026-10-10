@@ -30,10 +30,10 @@
     "comment": "Launched March 12, 2024 as 'OpenDevin' (replicating Devin). First tagged GitHub release v0.6.1 on 2024-06-04 (earlier 0.1-0.5 history predates the public releases page). Renamed to OpenHands in mid-2024, and the GitHub org All-Hands-AI was renamed to OpenHands on 2025-10-20."
   },
   "latest_major_update": {
-    "value": "Sep '26",
-    "source_url": "https://github.com/OpenHands/OpenHands/releases/tag/v1.24.0#source:~:text=toggle%20all%20workspace%20folders",
-    "comment": "OpenHands v1.24.0 shipped September 25, 2026 with workspace-folder toggles, backend-scoped subscription caches, read-only shared automation conversations in cloud, improved MCP OAuth persistence, ACP tool-call rendering, model-profile warnings, and history and settings reliability fixes.",
-    "sort_date": "2026-09-25"
+    "value": "Oct '26",
+    "source_url": "https://github.com/OpenHands/OpenHands/releases/tag/v1.26.0#source:~:text=verify-openhands%20skill%20with%20control-openhands%20CLI",
+    "comment": "OpenHands v1.26.0 shipped October 8, 2026 with a verify-openhands skill and control CLI, authenticated backend helpers, clearer suspended-workspace switching, improved enterprise onboarding and automation review states, and extensive accessibility, MCP, telemetry, Canvas, cloud-sandbox, and settings fixes.",
+    "sort_date": "2026-10-08"
   },
   "rules": {
     "support": "full",

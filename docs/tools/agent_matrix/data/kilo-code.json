@@ -24,10 +24,10 @@
     "comment": "Repository created 2025-03-10. First stable public release effectively Feb 2026 (v1.0.25). v7 rewrite announced May 2026."
   },
   "latest_major_update": {
-    "value": "Sep '26",
-    "source_url": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.8.1#source:~:text=Publish%20CycloneDX%20software%20bills%20of%20materials",
-    "comment": "Kilo Code v7.8.1 shipped September 25, 2026 with signed CycloneDX software bills of materials for release artifacts. The v7.8 line also added streamed Agent Manager browser previews, stoppable session cleanup, subagent model selection by default, MCP companion skills, Azure Entra sign-in, and stronger offline recovery.",
-    "sort_date": "2026-09-25"
+    "value": "Oct '26",
+    "source_url": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.8.8#source:~:text=Pin%20worktrees%20in%20the%20Agent%20Manager%20sidebar",
+    "comment": "Kilo Code v7.8.8 shipped October 7, 2026 with pinnable Agent Manager worktrees, in-app opening for chat web links, and related session-management refinements. Version 7.8.7 made the multi-project Agent Manager the default experience.",
+    "sort_date": "2026-10-07"
   },
   "rules": {
     "support": "full",

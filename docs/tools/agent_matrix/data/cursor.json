@@ -30,9 +30,9 @@
     "comment": "IDE launched ~2023; CLI surface added later (2025)."
   },
   "latest_major_update": {
-    "value": "Sep '26",
-    "source_url": "https://cursor.com/changelog#rollouts-and-security-review:~:text=Today%20we're%20launching%20two%20Cursor%20bots",
-    "comment": "Cursor launched Rollouts and Security Review on September 23, 2026. Rollouts watches deployments and reports change health per environment, while Security Review analyzes pull requests for exploitable vulnerabilities and can enforce team-specific security rules."
+    "value": "Oct '26",
+    "source_url": "https://cursor.com/changelog#remote-control-for-local-agents:~:text=see%20and%20reply%20to%20the%20local%20agents%20running%20on%20your%20computer",
+    "comment": "Cursor added remote control for local agents on October 6, 2026. The iOS app can list local agents, show their activity, and send follow-up messages while execution remains on the paired computer."
   },
   "rules": {
     "support": "full",

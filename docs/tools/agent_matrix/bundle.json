@@ -640,10 +640,10 @@
       "sort_date": "2025-01-01"
     },
     "latest_major_update": {
-      "value": "Sep '26",
-      "source_url": "https://www.antigravity.google/docs/changelog#v2181:~:text=v2.18.1,September%2028%2C%202026",
-      "comment": "Antigravity 2.18.1 shipped September 28, 2026 with an in-product plugin marketplace and Customizations tab, archived-conversation filtering, safer permission prompts for hidden workspace files, and fixes for subagent worktree classification, prompt editing, focus, and conversation reliability.",
-      "sort_date": "2026-09-28"
+      "value": "Oct '26",
+      "source_url": "https://www.antigravity.google/docs/changelog#v2220:~:text=v2.22.0,October%208%2C%202026",
+      "comment": "Antigravity 2.22.0 shipped October 8, 2026 with plugin-provided UI extensions in the conversation side panel, drag-and-drop conversation organization, and localized conversation timestamps. Version 2.21.1 also added advanced conversation search, on-demand and scheduled Automations, grouped agent actions, and a Gruvbox Material theme.",
+      "sort_date": "2026-10-08"
     },
     "rules": {
       "support": "full",
@@ -802,9 +802,9 @@
       "comment": "Research needed. Check for caching, optimization, or resource management settings."
     },
     "ui_customization": {
-      "support": "unknown",
-      "source_url": "https://docs.example.com/#documentation:~:text=ui-customization",
-      "comment": "Research needed. Check for UI layout, sidebar, or panel customization."
+      "support": "full",
+      "source_url": "https://www.antigravity.google/docs/changelog#v2220:~:text=Construct%20and%20display%20custom%20user%20interfaces%20inside%20the%20side%20panel",
+      "comment": "Plugins can construct custom interfaces in the conversation side panel, conversations can be reorganized by drag and drop, and the product exposes theme and sidebar customization."
     }
   },
   {
@@ -840,10 +840,10 @@
       "sort_date": "2025-02-01"
     },
     "latest_major_update": {
-      "value": "Sep '26",
-      "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.285#source:~:text=Added%20%60CLAUDE_CODE_DISABLE_WEB_FETCH%60",
-      "comment": "Claude Code v2.1.285 shipped September 29, 2026 with WebFetch disablement, `claude --desktop`, plugin configuration over stdin, managed provider allowlists, improved subagent execution, safer redaction, and fixes across Remote Control, plugins, MCP, model switching, SSH, and cloud sessions.",
-      "sort_date": "2026-09-29"
+      "value": "Oct '26",
+      "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.296#source:~:text=Added%20%60autoCompactWindow%60%20to%20subagent%20frontmatter",
+      "comment": "Claude Code v2.1.296 shipped October 9, 2026 with desktop Code-tab gateway policy, configurable subagent auto-compaction, a workflow-subagent model override, and overloaded-request retry controls. The preceding release added fail-closed command and HTTP hooks plus terminal program-status reporting.",
+      "sort_date": "2026-10-09"
     },
     "rules": {
       "support": "full",
@@ -1033,10 +1033,10 @@
       "sort_date": "2024-07-01"
     },
     "latest_major_update": {
-      "value": "Sep '26",
-      "source_url": "https://github.com/cline/cline/releases/tag/v4.1.22#source:~:text=New%20providers%3A%20Bee",
-      "comment": "Cline v4.1.22 shipped September 30, 2026 with Bee and Pareto providers, refusal fallback for Anthropic requests, refreshed model defaults, clearer content-filter recovery, and fixes for checkpoints, cancellation, sign-in recovery, and reasoning-token accounting. Desktop v0.0.39 also fixed Linux NVIDIA rendering and package metadata.",
-      "sort_date": "2026-09-30"
+      "value": "Oct '26",
+      "source_url": "https://github.com/cline/cline/releases/tag/v4.1.23#source:~:text=If%20a%20model's%20response%20ends%20without%20a%20recognized%20finish%20reason",
+      "comment": "Cline v4.1.23 shipped October 7, 2026 with one-shot recovery for unrecognized model finish reasons and a refreshed model catalog. Desktop v0.0.45 and CLI v3.0.70 followed October 8 with SSH, MCP, reasoning compatibility, credential migration, and dashboard-command fixes.",
+      "sort_date": "2026-10-08"
     },
     "rules": {
       "support": "full",
@@ -1243,10 +1243,10 @@
       "sort_date": "2025-04-01"
     },
     "latest_major_update": {
-      "value": "Sep '26",
-      "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.159.2#source:~:text=Suppressed%20console%20windows%20flashing%20on%20Windows",
-      "comment": "Codex CLI rust-v0.159.2 shipped September 29, 2026 with a Windows fix that prevents console windows from flashing when Codex launches background processes and sandboxed commands.",
-      "sort_date": "2026-09-29"
+      "value": "Oct '26",
+      "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.162.1#source:~:text=Fixed%20a%20TUI%20crash%20when%20asynchronous%20questions%20contain%20multiple%20lines",
+      "comment": "Codex CLI rust-v0.162.1 shipped October 9, 2026 with fixes for multiline asynchronous-question rendering and startup failures caused by background-server feature settings differing from CLI defaults.",
+      "sort_date": "2026-10-09"
     },
     "rules": {
       "support": "full",
@@ -1635,10 +1635,10 @@
       "sort_date": "2026-07-01"
     },
     "latest_major_update": {
-      "value": "Sep '26",
-      "source_url": "https://commandcode.ai/changelog#september:~:text=v1.62.0,MiMo%20V2.6%20Flash",
-      "comment": "Command Code CLI v1.62.0 shipped in September 2026 with MiMo V2.6 Flash, MiMo V2.6 Pro, and MiMo V2.6 Pro UltraSpeed support.",
-      "sort_date": "2026-09-01"
+      "value": "Oct '26",
+      "source_url": "https://commandcode.ai/changelog#october:~:text=v1.79.0,Add%20Glyph%20Cluster%20as%20a%20free%20model",
+      "comment": "Command Code CLI v1.79.0 added the free Glyph Cluster model with 100 requests per day. October releases also added Claude Haiku 5.5, Chinese localization, and `cmd acp` for running Command Code as an ACP agent in compatible editors such as Zed.",
+      "sort_date": "2026-10-01"
     },
     "pricing": {
       "value": "Go $1/mo, Pro $15/mo, Max 10x $100/mo, Max 20x $200/mo; monthly credits and top-ups; BYOK/provider options documented",
@@ -1646,9 +1646,9 @@
       "comment": "Pricing page lists Go, Pro, Max 10x, and Max 20x tiers with monthly credits, model access, 1M context, and top-up behavior."
     },
     "some_free_usage": {
-      "support": "partial",
-      "source_url": "https://commandcode.ai/docs/#models-all-of-them:~:text=Tencent%2FHY3%20Free%20until%20July%2021%2C%202026",
-      "comment": "Docs advertise temporary free model deals, but ordinary agent use requires signing in and a paid/credit-backed plan."
+      "support": "full",
+      "source_url": "https://commandcode.ai/changelog#october:~:text=Add%20Glyph%20Cluster%20as%20a%20free%20model%2C%20100%20requests%20a%20day",
+      "comment": "Command Code includes Glyph Cluster as a free model with 100 requests per day."
     },
     "no_account_required": {
       "support": "none",
@@ -1766,9 +1766,9 @@
       "comment": "Quickstart points users to `?` for all keyboard shortcuts."
     },
     "theme_customization": {
-      "support": "unknown",
-      "source_url": "https://docs.example.com/#documentation:~:text=unknown",
-      "comment": "Research needed. Public docs did not expose enough detail in this run."
+      "support": "full",
+      "source_url": "https://commandcode.ai/changelog#october:~:text=%2Ftheme%2C%20%2Feffort%2C%20%2Fclone%2C%20%2Freload",
+      "comment": "The interactive CLI exposes a built-in `/theme` command for changing its appearance."
     },
     "auto_save": {
       "support": "partial",
@@ -1839,10 +1839,10 @@
       "sort_date": "2025-07-29"
     },
     "latest_major_update": {
-      "value": "Sep '26",
-      "source_url": "https://github.com/charmbracelet/crush/releases/tag/v0.97.1#source:~:text=Removed%20the%20glyph%20for%20Git%20branch%20display",
-      "comment": "Crush v0.97.1 shipped September 29, 2026 with a terminal compatibility fix that removes the Git-branch powerline glyph when Nerd Fonts are unavailable.",
-      "sort_date": "2026-09-29"
+      "value": "Oct '26",
+      "source_url": "https://github.com/charmbracelet/crush/releases/tag/v0.98.1#source:~:text=route%20newer%20Copilot%20models%20through%20the%20Responses%20API",
+      "comment": "Crush v0.98.1 shipped October 9, 2026 with corrected routing for newer GPT-6 models served through GitHub Copilot's Responses API.",
+      "sort_date": "2026-10-09"
     },
     "rules": {
       "support": "full",
@@ -2049,10 +2049,10 @@
       "sort_date": "2023-01-01"
     },
     "latest_major_update": {
-      "value": "Sep '26",
-      "source_url": "https://cursor.com/changelog#rollouts-and-security-review:~:text=Today%20we're%20launching%20two%20Cursor%20bots",
-      "comment": "Cursor launched Rollouts and Security Review on September 23, 2026. Rollouts watches deployments and reports change health per environment, while Security Review analyzes pull requests for exploitable vulnerabilities and can enforce team-specific security rules.",
-      "sort_date": "2026-09-01"
+      "value": "Oct '26",
+      "source_url": "https://cursor.com/changelog#remote-control-for-local-agents:~:text=see%20and%20reply%20to%20the%20local%20agents%20running%20on%20your%20computer",
+      "comment": "Cursor added remote control for local agents on October 6, 2026. The iOS app can list local agents, show their activity, and send follow-up messages while execution remains on the paired computer.",
+      "sort_date": "2026-10-01"
     },
     "rules": {
       "support": "full",
@@ -2247,10 +2247,10 @@
       "sort_date": "2024-12-01"
     },
     "latest_major_update": {
-      "value": "Sep '26",
-      "source_url": "https://docs.devin.ai/release-notes/2026#september-2-2026:~:text=September%202%2C%202026",
-      "comment": "September 2, 2026 updates added session grouping and filters, cleanup code scans, the /scan composer command, scheduled scan automations, a redesigned findings tab, and richer automation trigger details.",
-      "sort_date": "2026-09-01"
+      "value": "Oct '26",
+      "source_url": "https://docs.devin.ai/release-notes/2026#october-7-2026:~:text=Notification%20Inbox",
+      "comment": "Devin's October 7, 2026 update added a notification inbox with mobile push controls, richer command-palette actions, merge-queue status across the app, stricter private-key redaction, improved Teams and Slack integration, refreshed plugin surfaces, and role-based Devin Review controls.",
+      "sort_date": "2026-10-07"
     },
     "rules": {
       "support": "full",
@@ -2447,10 +2447,10 @@
       "sort_date": "2025-01-01"
     },
     "latest_major_update": {
-      "value": "Sep '26",
-      "source_url": "https://docs.factory.ai/changelog/release-notes#september-2026:~:text=CLI%20v0.228.0%20Desktop%20v0.185.0%20September%2026%2C%202026",
-      "comment": "Factory's September 26, 2026 release lists Droid CLI v0.228.0 and Desktop v0.185.0 with a `/migrate` workflow, skills anywhere in messages, plan retention across compaction, safer session resume, background-task reports, delegation audit events, image-model selection, Slack uploads, and terminal and desktop reliability fixes.",
-      "sort_date": "2026-09-26"
+      "value": "Oct '26",
+      "source_url": "https://docs.factory.com/changelog/release-notes#october-2026:~:text=CLI%20v0.237.0%20Desktop%20v0.194.0%20October%209%2C%202026",
+      "comment": "Factory Droid CLI v0.237.0 and Desktop v0.194.0 shipped October 9, 2026 with pre-execution Script approvals that show fixed inputs, connector-tool recovery after slow loads, and correct transcript display for images produced by Script tool calls.",
+      "sort_date": "2026-10-09"
     },
     "rules": {
       "support": "full",
@@ -2647,10 +2647,10 @@
       "sort_date": "2026-08-18"
     },
     "latest_major_update": {
-      "value": "Sep '26",
-      "source_url": "https://github.com/vercel-labs/fx/releases/tag/v0.0.12#source:~:text=Session%20listing%20is%20up%20to%20560%C3%97%20faster",
-      "comment": "Fx v0.0.12 shipped September 30, 2026 with dramatically faster session listing and resume, durable detached processes, interactive MCP listing, GitHub-flavored Markdown, stronger compaction and recovery, image resizing, custom-model fixes, and tightened Slack OAuth and symlinked-skill security.",
-      "sort_date": "2026-09-30"
+      "value": "Oct '26",
+      "source_url": "https://github.com/vercel-labs/fx/releases/tag/v0.0.13#source:~:text=fx%20now%20supports%20Ultrafast%20on%20supported%20OpenAI%20models",
+      "comment": "Fx v0.0.13 shipped October 4, 2026 with Ultrafast model execution, substantially faster launch, shell, exit, and MCP performance, configurable compaction thresholds, one-command Slack MCP setup, image checkpointing, and expanded ACP steering and MCP-host support.",
+      "sort_date": "2026-10-04"
     },
     "pricing": {
       "value": "Apache-2.0 CLI; model-provider usage is billed separately",
@@ -2850,10 +2850,10 @@
       "sort_date": "2025-06-01"
     },
     "latest_major_update": {
-      "value": "Sep '26",
-      "source_url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.62.0#source:~:text=Feat%2Fgemini%203.8%20flash%203.5%20flash%20lite",
-      "comment": "Gemini CLI v0.62.0 shipped September 29, 2026 with Gemini 3.8 Flash and 3.5 Flash Lite support plus fixes for OAuth token refresh, PTY lifecycle and memory management, proxy resolution, ACP permission event ordering, terminal focus, and MCP tool-call presentation. Nightly and preview tags are excluded.",
-      "sort_date": "2026-09-29"
+      "value": "Oct '26",
+      "source_url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.63.0#source:~:text=enable%20autonomous%20plan%20execution%20in%20non-interactive%20mode",
+      "comment": "Gemini CLI v0.63.0 shipped October 6, 2026 with autonomous plan execution in non-interactive mode and fixes for connection recovery, MCP configuration validation, stdin restoration, long-running agent memory, temporary-directory cleanup, ACP session initialization, and headless authentication loops.",
+      "sort_date": "2026-10-06"
     },
     "rules": {
       "support": "full",
@@ -3047,10 +3047,10 @@
       "sort_date": "2025-09-01"
     },
     "latest_major_update": {
-      "value": "Sep '26",
-      "source_url": "https://github.com/github/copilot-cli/releases/tag/v1.0.89#source:~:text=Add%20support%20for%20Claude%20Code%20rule%20files",
-      "comment": "Copilot CLI v1.0.89 shipped September 28, 2026 with Claude Code rule-file support, model-routing tiers, GPT-6 Sol and Luna and Claude Opus 5.5, stronger MCP and sandbox behavior, session-sidebar notifications, PR-template support, plugin toggles, and broad queue, shell, ACP, and recovery fixes.",
-      "sort_date": "2026-09-28"
+      "value": "Oct '26",
+      "source_url": "https://github.com/github/copilot-cli/releases/tag/v1.0.95#source:~:text=Use%20native%20Microsoft%20Entra%20broker%20authentication%20on%20macOS",
+      "comment": "Copilot CLI v1.0.95 shipped October 9, 2026 with native Microsoft Entra broker authentication on macOS, sandbox credential host injection controls, correct `--context` handling for new and resumed ACP sessions, and less noisy managed-plugin setup retries.",
+      "sort_date": "2026-10-09"
     },
     "rules": {
       "support": "full",
@@ -3114,8 +3114,8 @@
     },
     "sandbox_mode": {
       "support": "full",
-      "source_url": "https://docs.github.com/en/copilot/concepts/about-cloud-and-local-sandboxes#source:~:text=Local%20sandboxing%20lets%20Copilot%20run%20in%20a%20sandboxed%20environment%20directly%20on%20your%20machine",
-      "comment": "Public preview (as of mid-2026): local sandbox via /sandbox enable restricts filesystem/network/system access (built on Microsoft MXC, included in standard seat); cloud sandbox via `copilot --cloud` runs a fully isolated, ephemeral GitHub-hosted Linux environment (Azure Container Apps Sandboxes) resumable from any device."
+      "source_url": "https://github.blog/changelog/2026-10-07-local-sandboxing-for-github-copilot-now-generally-available/#local-sandboxing-for-github-copilot-now-generally-available:~:text=Local%20sandboxing%20for%20GitHub%20Copilot%20is%20now%20generally%20available",
+      "comment": "Generally available local sandboxing restricts filesystem, network, and system access in Copilot CLI and other Agent Host surfaces. `copilot --cloud` also provides an isolated ephemeral GitHub-hosted Linux sandbox."
     },
     "resume": {
       "support": "full",
@@ -3259,10 +3259,10 @@
       "sort_date": "2025-06-01"
     },
     "latest_major_update": {
-      "value": "Sep '26",
-      "source_url": "https://github.blog/changelog/2026-09-29-gpt-6-1-sol-in-github-copilot/#availability-in-github-copilot:~:text=GitHub%20Copilot%20coding%20agent",
-      "comment": "GitHub made GPT-6.1 Sol generally available on September 29, 2026 for agentic coding and terminal workflows across the Copilot coding agent, CLI, app, github.com, mobile, and supported IDEs, with rollout to Pro+, Max, Business, and Enterprise users.",
-      "sort_date": "2026-09-01"
+      "value": "Oct '26",
+      "source_url": "https://github.blog/changelog/2026-10-09-github-copilot-weekly-releases-october-5/#github-copilot-weekly-releases-october-5:~:text=more%20control%20over%20what%20agents%20can%20access",
+      "comment": "GitHub's October 5 weekly release added Claude Haiku 5.5, broader account and environment controls, generally available local sandboxing across Agent Host surfaces, and local-model discovery in Copilot CLI. Dynamic workflows also arrived in the Copilot app and CLI on October 1.",
+      "sort_date": "2026-10-01"
     },
     "rules": {
       "support": "full",
@@ -3448,10 +3448,10 @@
       "sort_date": "2025-01-01"
     },
     "latest_major_update": {
-      "value": "Sep '26",
-      "source_url": "https://github.com/aaif-goose/goose/releases/tag/v1.52.0#source:~:text=Live%20voice%20conversations",
-      "comment": "Goose v1.52.0 shipped September 23, 2026 with live voice conversations in Desktop, Z.AI Coding Plan support, OpenRouter and Jev decision providers, custom OpenAI base URLs in the SDK, updated frontier-model support, safer recipe and provider configuration, and extensive installer, MCP, scheduling, subagent, and session fixes.",
-      "sort_date": "2026-09-23"
+      "value": "Oct '26",
+      "source_url": "https://github.com/aaif-goose/goose/releases/tag/v1.54.0#source:~:text=HTML%20session%20export%20with%20an%20interactive%20viewer",
+      "comment": "Goose v1.54.0 shipped October 8, 2026 with interactive HTML session export, first-run mode selection, adaptive thinking for Claude Sonnet and Haiku 5.5, improved subagent state handling, extension leases, and fixes across Copilot authentication, model effort aliases, updates, usage accounting, and provider configuration.",
+      "sort_date": "2026-10-08"
     },
     "rules": {
       "support": "full",
@@ -3655,9 +3655,9 @@
     },
     "latest_major_update": {
       "value": "Sep '26",
-      "source_url": "https://x.ai/build/changelog#changelog:~:text=Latest%20v1.0.40,Sep%2020%2C%202026",
-      "comment": "Grok Build v1.0.40 shipped September 20, 2026 with Grok 4.7 support; the preceding v1.0.39 update also improved subagent model inheritance, compaction, custom profiles, permission repair, live effort levels, and local worktree capture.",
-      "sort_date": "2026-09-20"
+      "source_url": "https://x.ai/changelog/build#changelog:~:text=Latest%20v1.0.46,Sep%2030%2C%202026",
+      "comment": "Grok Build v1.0.46 shipped September 30, 2026 with corrected MCP source reporting, clearer tool-search activity, preserved client rules after prompt rebuilds, symlink-safe permission matching, accurate post-compaction token counts, and improved terminal video-card handling.",
+      "sort_date": "2026-09-30"
     },
     "rules": {
       "support": "full",
@@ -4243,10 +4243,10 @@
       "sort_date": "2025-01-01"
     },
     "latest_major_update": {
-      "value": "Sep '26",
-      "source_url": "https://junie.jetbrains.com/blog/demo-agent/#introducing-demo-in-junie-cli:~:text=Introducing%20%60%2Fdemo%60%20in%20Junie%20CLI",
-      "comment": "JetBrains introduced Junie CLI /demo on September 17, 2026, adding disposable-VM computer-use demonstrations with live interaction, screenshots, video, HTML reports, and a non-interactive --demo mode for CI.",
-      "sort_date": "2026-09-17"
+      "value": "Oct '26",
+      "source_url": "https://junie.jetbrains.com/blog/junie-lite/#junie-lite:~:text=free%20model%20tier%20for%20Junie",
+      "comment": "JetBrains introduced Junie Lite on October 2, 2026, adding a free model tier for routine coding work so users can reserve frontier-model credits for harder tasks.",
+      "sort_date": "2026-10-02"
     },
     "rules": {
       "support": "full",
@@ -4344,9 +4344,14 @@
       "comment": "Full custom model/BYOK support through custom JSON model profiles, local providers such as Ollama, enterprise proxies, and supported API-compatible endpoints."
     },
     "pricing": {
-      "value": "Bundled with JetBrains AI tiers/free credits; paid JetBrains AI plans apply",
-      "source_url": "https://blog.jetbrains.com/blog/2025/04/16/jetbrains-ides-go-ai/#all-jetbrains-ai-tools-under-a-single-subscription-with-a-free-tier:~:text=AI%20Free%20tier",
-      "comment": "JetBrains positions Junie under JetBrains AI subscription/credit tiers; no separate public Junie-only self-serve price was found."
+      "value": "Junie Lite free model tier; bundled with JetBrains AI tiers and credits; paid JetBrains AI plans apply",
+      "source_url": "https://junie.jetbrains.com/blog/junie-lite/#junie-lite:~:text=free%20model%20tier%20for%20Junie",
+      "comment": "Junie Lite provides free routine-task usage, while frontier models continue to use JetBrains AI subscription credits."
+    },
+    "some_free_usage": {
+      "support": "full",
+      "source_url": "https://junie.jetbrains.com/blog/junie-lite/#junie-lite:~:text=free%20model%20tier%20for%20Junie",
+      "comment": "Junie Lite is a free model tier for routine coding work."
     },
     "notes": "Strong fit for JetBrains users, debugger-aware workflows, CLI/headless CI, and JetBrains IDE integration. June 2026 docs now expose extensibility details for guidelines, extensions, MCP, subagents, commands, hooks, BYOK/custom models, and CI/CD.",
     "transcripts": {
@@ -4432,10 +4437,10 @@
       "sort_date": "2026-02-01"
     },
     "latest_major_update": {
-      "value": "Sep '26",
-      "source_url": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.8.1#source:~:text=Publish%20CycloneDX%20software%20bills%20of%20materials",
-      "comment": "Kilo Code v7.8.1 shipped September 25, 2026 with signed CycloneDX software bills of materials for release artifacts. The v7.8 line also added streamed Agent Manager browser previews, stoppable session cleanup, subagent model selection by default, MCP companion skills, Azure Entra sign-in, and stronger offline recovery.",
-      "sort_date": "2026-09-25"
+      "value": "Oct '26",
+      "source_url": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.8.8#source:~:text=Pin%20worktrees%20in%20the%20Agent%20Manager%20sidebar",
+      "comment": "Kilo Code v7.8.8 shipped October 7, 2026 with pinnable Agent Manager worktrees, in-app opening for chat web links, and related session-management refinements. Version 7.8.7 made the multi-project Agent Manager the default experience.",
+      "sort_date": "2026-10-07"
     },
     "rules": {
       "support": "full",
@@ -4833,10 +4838,10 @@
       "sort_date": "2026-08-01"
     },
     "latest_major_update": {
-      "value": "Sep '26",
-      "source_url": "https://github.com/kirodotdev/KiroCrew/releases/tag/v0.7.2#source:~:text=stable%20cut",
-      "comment": "Kiro Crew v0.7.2 shipped September 29, 2026 as a small stable maintenance cut following v0.7.1.",
-      "sort_date": "2026-09-29"
+      "value": "Oct '26",
+      "source_url": "https://github.com/kirodotdev/KiroCrew/releases/tag/v0.8.0#source:~:text=A%20wake%20judge%20screens%20a%20monitoring%20loop",
+      "comment": "Kiro Crew v0.8.0 shipped October 9, 2026 with judged monitoring loops, a bundled agent CLI in the desktop app, folder-level steering, configurable transcript layout, agent templates, session forking and nesting, remote-crew chaining, richer redaction controls, and expanded conductor and crewmate management.",
+      "sort_date": "2026-10-09"
     },
     "rules": {
       "support": "full",
@@ -5039,10 +5044,10 @@
       "sort_date": "2025-07-01"
     },
     "latest_major_update": {
-      "value": "Sep '26",
-      "source_url": "https://kiro.dev/changelog/#changelog:~:text=1.1%20IDE,Agent%20Artifacts%20and%20Native%20ARM64%20Builds",
-      "comment": "Kiro IDE 1.1 shipped September 14, 2026 with durable agent artifacts, native Windows and Linux ARM64 builds, a Code OSS 1.131 base, more reliable compacted context, MCP and Hook fixes, and enterprise region routing. The same day's model update added experimental 1M-token context for GPT-5.6 Sol, Terra, and Luna across IDE, CLI, and Web.",
-      "sort_date": "2026-09-14"
+      "value": "Oct '26",
+      "source_url": "https://kiro.dev/changelog/#changelog:~:text=2.29.0%20CLI,Memory%20Across%20Chat%20Sessions",
+      "comment": "Kiro CLI 2.29.0 shipped October 9, 2026 with managed cross-session Memory for local V3 sessions, including read-write, read-only, and off controls plus automatic updates. Kiro IDE 1.2.56 also improved multi-agent Workflows, power search, Hook matching, and chat, terminal, and source-control reliability.",
+      "sort_date": "2026-10-09"
     },
     "rules": {
       "support": "full",
@@ -5236,9 +5241,9 @@
     },
     "latest_major_update": {
       "value": "Sep '26",
-      "source_url": "https://github.com/XiaomiMiMo/MiMo-Code/releases/tag/v0.1.14#source:~:text=Interrupted%20or%20errored%20turns%20stay%20recoverable",
-      "comment": "Latest release v0.1.14 (September 2, 2026) adds append-only /recover for interrupted turns, title generation APIs, tool-driven TUI voice input, revised compaction, replayable nested tool calls, inherited subagent permissions, and optional auto-worktree guidance.",
-      "sort_date": "2026-09-30"
+      "source_url": "https://github.com/XiaomiMiMo/MiMo-Code/releases/tag/v0.1.15#source:~:text=bump%20version%20to%200.1.15",
+      "comment": "MiMo Code v0.1.15 shipped September 22, 2026 with more robust session resume and subagent-status ownership, bounded unknown-error retries, safer multi-tool sequencing and flood protection, PascalCase tool exposure for MiMo V2.6, and regenerated SDK types.",
+      "sort_date": "2026-09-22"
     },
     "rules": {
       "support": "full",
@@ -5851,10 +5856,10 @@
       "sort_date": "2025-01-01"
     },
     "latest_major_update": {
-      "value": "Sep '26",
-      "source_url": "https://github.com/anomalyco/opencode/releases/tag/v1.18.33#source:~:text=Cloudflare%20AI%20Gateway%20models%20now%20honor%20provider%20response%20and%20stream%20timeouts",
-      "comment": "OpenCode v1.18.33 shipped September 28, 2026 with Cloudflare AI Gateway timeout handling, surfaced MCP browser-launch failures, redacted debug configuration, and corrected Gemini thinking defaults and effort controls.",
-      "sort_date": "2026-09-28"
+      "value": "Oct '26",
+      "source_url": "https://github.com/anomalyco/opencode/releases/tag/v1.18.35#source:~:text=Added%20canonical%20redirects%20and%20JSON%20and%20Markdown%20data%20formats",
+      "comment": "OpenCode v1.18.35 shipped October 6, 2026 with canonical redirects and machine-readable JSON and Markdown formats for agent statistics, plus corrected xAI tool-result image handling.",
+      "sort_date": "2026-10-06"
     },
     "rules": {
       "support": "full",
@@ -6061,10 +6066,10 @@
       "sort_date": "2024-03-01"
     },
     "latest_major_update": {
-      "value": "Sep '26",
-      "source_url": "https://github.com/OpenHands/OpenHands/releases/tag/v1.24.0#source:~:text=toggle%20all%20workspace%20folders",
-      "comment": "OpenHands v1.24.0 shipped September 25, 2026 with workspace-folder toggles, backend-scoped subscription caches, read-only shared automation conversations in cloud, improved MCP OAuth persistence, ACP tool-call rendering, model-profile warnings, and history and settings reliability fixes.",
-      "sort_date": "2026-09-25"
+      "value": "Oct '26",
+      "source_url": "https://github.com/OpenHands/OpenHands/releases/tag/v1.26.0#source:~:text=verify-openhands%20skill%20with%20control-openhands%20CLI",
+      "comment": "OpenHands v1.26.0 shipped October 8, 2026 with a verify-openhands skill and control CLI, authenticated backend helpers, clearer suspended-workspace switching, improved enterprise onboarding and automation review states, and extensive accessibility, MCP, telemetry, Canvas, cloud-sandbox, and settings fixes.",
+      "sort_date": "2026-10-08"
     },
     "rules": {
       "support": "full",
@@ -6265,10 +6270,10 @@
       "sort_date": "2026-05-01"
     },
     "latest_major_update": {
-      "value": "Sep '26",
-      "source_url": "https://github.com/earendil-works/pi/releases/tag/v0.99.1#source:~:text=GPT-6.1%20Sol",
-      "comment": "Pi v0.99.1 shipped September 29, 2026 with GPT-6.1 Sol support and a bundled OpenAI login fix, following v0.99.0's first-class MCP and codemode tools, ChatGPT sign-in, virtual and classifier models, and system-derived and custom themes.",
-      "sort_date": "2026-09-29"
+      "value": "Oct '26",
+      "source_url": "https://github.com/earendil-works/pi/releases/tag/v1.1.0#source:~:text=Program%20status%20reporting",
+      "comment": "Pi v1.1.0 shipped October 7, 2026 with OSC 7501 program-status reporting, additive and subtractive default-tool selection, Claude Haiku 5.5, GPT-6 Luna image classifiers, native llama.cpp decision models, execution-duration events, and broad MCP, session, provider, context, and terminal fixes.",
+      "sort_date": "2026-10-07"
     },
     "rules": {
       "support": "full",
@@ -6676,10 +6681,10 @@
       "sort_date": "2025-10-01"
     },
     "latest_major_update": {
-      "value": "Sep '26",
-      "source_url": "https://docs.qoder.com/release-notes/qoder-cli#september-15-2026:~:text=CLI%201.1.53",
-      "comment": "Qoder CLI 1.1.53 shipped September 15, 2026 with immediate custom-session-name display and restoration plus richer /btw history browsing controls. Version 1.1.52 added automatic /rename and persistent side-question history.",
-      "sort_date": "2026-09-15"
+      "value": "Oct '26",
+      "source_url": "https://docs.qoder.com/release-notes/qoder-cli#october-9-2026:~:text=CLI%201.1.67",
+      "comment": "Qoder CLI 1.1.67 shipped October 9, 2026 with improved model-information display. Version 1.1.66 added the built-in qoder-plugins marketplace and fixed context accounting after compaction plus ACP history-replay completion semantics.",
+      "sort_date": "2026-10-09"
     },
     "rules": {
       "support": "full",
@@ -7640,10 +7645,10 @@
       "sort_date": "2024-11-01"
     },
     "latest_major_update": {
-      "value": "Aug '26",
-      "source_url": "https://docs.devin.ai/desktop/changelog#v3820:~:text=August%2021%2C%202026",
-      "comment": "Devin Desktop/Windsurf v3.8.20 (August 21, 2026) adds multi-window Agent Command Center behavior, faster Agent/Editor switching, improved workspace trust, split plan review, individually stoppable subagents, worktree setup hooks, and stronger cloud-session filtering and terminal streaming.",
-      "sort_date": "2026-08-01"
+      "value": "Sep '26",
+      "source_url": "https://docs.devin.ai/desktop/changelog#v31048:~:text=September%2029%2C%202026",
+      "comment": "Devin Desktop/Windsurf v3.10.48 shipped September 29, 2026 with ChatGPT plan sign-in for eligible GPT usage, language-server diagnostic profiles, bounded Agent-window memory for noisy terminals, preserved multi-folder workspaces, smaller model settings, and slower hidden-session polling.",
+      "sort_date": "2026-09-29"
     },
     "rules": {
       "support": "full",
@@ -7835,10 +7840,10 @@
       "sort_date": "2026-01-01"
     },
     "latest_major_update": {
-      "value": "Sep '26",
-      "source_url": "https://zcode.z.ai/en/changelog#release-v3143:~:text=3.14.3%20Released%20Sep%2022%2C%202026",
-      "comment": "ZCode 3.14.3 shipped September 22, 2026 with adjustable workflow concurrency, improved workflow restart and script-submission behavior, better large-workflow status, lower workflow context and token use, and workflow and interface reliability fixes.",
-      "sort_date": "2026-09-22"
+      "value": "Oct '26",
+      "source_url": "https://zcode.z.ai/en/changelog#release-v3145:~:text=3.14.5%20Released%20Oct%209%2C%202026",
+      "comment": "ZCode 3.14.5 shipped October 9, 2026 with a fix that preserves the displayed number of remaining reset chances after a manual reset. Version 3.14.4 disabled CAPTCHA verification for model requests to improve the free-tier experience.",
+      "sort_date": "2026-10-09"
     },
     "rules": {
       "support": "full",

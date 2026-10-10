@@ -28,10 +28,10 @@
     "comment": "Exact public launch month not confirmed in public docs captured for this dataset."
   },
   "latest_major_update": {
-    "value": "Sep '26",
-    "source_url": "https://github.com/anomalyco/opencode/releases/tag/v1.18.33#source:~:text=Cloudflare%20AI%20Gateway%20models%20now%20honor%20provider%20response%20and%20stream%20timeouts",
-    "comment": "OpenCode v1.18.33 shipped September 28, 2026 with Cloudflare AI Gateway timeout handling, surfaced MCP browser-launch failures, redacted debug configuration, and corrected Gemini thinking defaults and effort controls.",
-    "sort_date": "2026-09-28"
+    "value": "Oct '26",
+    "source_url": "https://github.com/anomalyco/opencode/releases/tag/v1.18.35#source:~:text=Added%20canonical%20redirects%20and%20JSON%20and%20Markdown%20data%20formats",
+    "comment": "OpenCode v1.18.35 shipped October 6, 2026 with canonical redirects and machine-readable JSON and Markdown formats for agent statistics, plus corrected xAI tool-result image handling.",
+    "sort_date": "2026-10-06"
   },
   "rules": {
     "support": "full",

@@ -30,10 +30,10 @@
     "comment": "Public docs cover current Droid CLI and Factory platform surfaces."
   },
   "latest_major_update": {
-    "value": "Sep '26",
-    "source_url": "https://docs.factory.ai/changelog/release-notes#september-2026:~:text=CLI%20v0.228.0%20Desktop%20v0.185.0%20September%2026%2C%202026",
-    "comment": "Factory's September 26, 2026 release lists Droid CLI v0.228.0 and Desktop v0.185.0 with a `/migrate` workflow, skills anywhere in messages, plan retention across compaction, safer session resume, background-task reports, delegation audit events, image-model selection, Slack uploads, and terminal and desktop reliability fixes.",
-    "sort_date": "2026-09-26"
+    "value": "Oct '26",
+    "source_url": "https://docs.factory.com/changelog/release-notes#october-2026:~:text=CLI%20v0.237.0%20Desktop%20v0.194.0%20October%209%2C%202026",
+    "comment": "Factory Droid CLI v0.237.0 and Desktop v0.194.0 shipped October 9, 2026 with pre-execution Script approvals that show fixed inputs, connector-tool recovery after slow loads, and correct transcript display for images produced by Script tool calls.",
+    "sort_date": "2026-10-09"
   },
   "rules": {
     "support": "full",

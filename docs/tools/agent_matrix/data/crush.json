@@ -25,10 +25,10 @@
     "sort_date": "2025-07-29"
   },
   "latest_major_update": {
-    "value": "Sep '26",
-    "source_url": "https://github.com/charmbracelet/crush/releases/tag/v0.97.1#source:~:text=Removed%20the%20glyph%20for%20Git%20branch%20display",
-    "comment": "Crush v0.97.1 shipped September 29, 2026 with a terminal compatibility fix that removes the Git-branch powerline glyph when Nerd Fonts are unavailable.",
-    "sort_date": "2026-09-29"
+    "value": "Oct '26",
+    "source_url": "https://github.com/charmbracelet/crush/releases/tag/v0.98.1#source:~:text=route%20newer%20Copilot%20models%20through%20the%20Responses%20API",
+    "comment": "Crush v0.98.1 shipped October 9, 2026 with corrected routing for newer GPT-6 models served through GitHub Copilot's Responses API.",
+    "sort_date": "2026-10-09"
   },
   "rules": {
     "support": "full",

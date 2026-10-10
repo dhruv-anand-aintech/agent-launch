@@ -22,10 +22,10 @@
     "comment": "Public preview announced September 25, 2025, authenticated with existing GitHub account, usable with existing Copilot Pro/Pro+/Business/Enterprise plans."
   },
   "latest_major_update": {
-    "value": "Sep '26",
-    "source_url": "https://github.com/github/copilot-cli/releases/tag/v1.0.89#source:~:text=Add%20support%20for%20Claude%20Code%20rule%20files",
-    "comment": "Copilot CLI v1.0.89 shipped September 28, 2026 with Claude Code rule-file support, model-routing tiers, GPT-6 Sol and Luna and Claude Opus 5.5, stronger MCP and sandbox behavior, session-sidebar notifications, PR-template support, plugin toggles, and broad queue, shell, ACP, and recovery fixes.",
-    "sort_date": "2026-09-28"
+    "value": "Oct '26",
+    "source_url": "https://github.com/github/copilot-cli/releases/tag/v1.0.95#source:~:text=Use%20native%20Microsoft%20Entra%20broker%20authentication%20on%20macOS",
+    "comment": "Copilot CLI v1.0.95 shipped October 9, 2026 with native Microsoft Entra broker authentication on macOS, sandbox credential host injection controls, correct `--context` handling for new and resumed ACP sessions, and less noisy managed-plugin setup retries.",
+    "sort_date": "2026-10-09"
   },
   "rules": {
     "support": "full",
@@ -89,8 +89,8 @@
   },
   "sandbox_mode": {
     "support": "full",
-    "source_url": "https://docs.github.com/en/copilot/concepts/about-cloud-and-local-sandboxes#source:~:text=Local%20sandboxing%20lets%20Copilot%20run%20in%20a%20sandboxed%20environment%20directly%20on%20your%20machine",
-    "comment": "Public preview (as of mid-2026): local sandbox via /sandbox enable restricts filesystem/network/system access (built on Microsoft MXC, included in standard seat); cloud sandbox via `copilot --cloud` runs a fully isolated, ephemeral GitHub-hosted Linux environment (Azure Container Apps Sandboxes) resumable from any device."
+    "source_url": "https://github.blog/changelog/2026-10-07-local-sandboxing-for-github-copilot-now-generally-available/#local-sandboxing-for-github-copilot-now-generally-available:~:text=Local%20sandboxing%20for%20GitHub%20Copilot%20is%20now%20generally%20available",
+    "comment": "Generally available local sandboxing restricts filesystem, network, and system access in Copilot CLI and other Agent Host surfaces. `copilot --cloud` also provides an isolated ephemeral GitHub-hosted Linux sandbox."
   },
   "resume": {
     "support": "full",

@@ -30,10 +30,10 @@
     "comment": "Claude Code was introduced as a limited research preview."
   },
   "latest_major_update": {
-    "value": "Sep '26",
-    "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.285#source:~:text=Added%20%60CLAUDE_CODE_DISABLE_WEB_FETCH%60",
-    "comment": "Claude Code v2.1.285 shipped September 29, 2026 with WebFetch disablement, `claude --desktop`, plugin configuration over stdin, managed provider allowlists, improved subagent execution, safer redaction, and fixes across Remote Control, plugins, MCP, model switching, SSH, and cloud sessions.",
-    "sort_date": "2026-09-29"
+    "value": "Oct '26",
+    "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.296#source:~:text=Added%20%60autoCompactWindow%60%20to%20subagent%20frontmatter",
+    "comment": "Claude Code v2.1.296 shipped October 9, 2026 with desktop Code-tab gateway policy, configurable subagent auto-compaction, a workflow-subagent model override, and overloaded-request retry controls. The preceding release added fail-closed command and HTTP hooks plus terminal program-status reporting.",
+    "sort_date": "2026-10-09"
   },
   "rules": {
     "support": "full",

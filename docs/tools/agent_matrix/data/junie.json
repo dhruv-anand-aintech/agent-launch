@@ -30,10 +30,10 @@
     "comment": "Introduced by JetBrains as a coding agent in early 2025."
   },
   "latest_major_update": {
-    "value": "Sep '26",
-    "source_url": "https://junie.jetbrains.com/blog/demo-agent/#introducing-demo-in-junie-cli:~:text=Introducing%20%60%2Fdemo%60%20in%20Junie%20CLI",
-    "comment": "JetBrains introduced Junie CLI /demo on September 17, 2026, adding disposable-VM computer-use demonstrations with live interaction, screenshots, video, HTML reports, and a non-interactive --demo mode for CI.",
-    "sort_date": "2026-09-17"
+    "value": "Oct '26",
+    "source_url": "https://junie.jetbrains.com/blog/junie-lite/#junie-lite:~:text=free%20model%20tier%20for%20Junie",
+    "comment": "JetBrains introduced Junie Lite on October 2, 2026, adding a free model tier for routine coding work so users can reserve frontier-model credits for harder tasks.",
+    "sort_date": "2026-10-02"
   },
   "rules": {
     "support": "full",
@@ -131,9 +131,14 @@
     "comment": "Full custom model/BYOK support through custom JSON model profiles, local providers such as Ollama, enterprise proxies, and supported API-compatible endpoints."
   },
   "pricing": {
-    "value": "Bundled with JetBrains AI tiers/free credits; paid JetBrains AI plans apply",
-    "source_url": "https://blog.jetbrains.com/blog/2025/04/16/jetbrains-ides-go-ai/#all-jetbrains-ai-tools-under-a-single-subscription-with-a-free-tier:~:text=AI%20Free%20tier",
-    "comment": "JetBrains positions Junie under JetBrains AI subscription/credit tiers; no separate public Junie-only self-serve price was found."
+    "value": "Junie Lite free model tier; bundled with JetBrains AI tiers and credits; paid JetBrains AI plans apply",
+    "source_url": "https://junie.jetbrains.com/blog/junie-lite/#junie-lite:~:text=free%20model%20tier%20for%20Junie",
+    "comment": "Junie Lite provides free routine-task usage, while frontier models continue to use JetBrains AI subscription credits."
+  },
+  "some_free_usage": {
+    "support": "full",
+    "source_url": "https://junie.jetbrains.com/blog/junie-lite/#junie-lite:~:text=free%20model%20tier%20for%20Junie",
+    "comment": "Junie Lite is a free model tier for routine coding work."
   },
   "notes": "Strong fit for JetBrains users, debugger-aware workflows, CLI/headless CI, and JetBrains IDE integration. June 2026 docs now expose extensibility details for guidelines, extensions, MCP, subagents, commands, hooks, BYOK/custom models, and CI/CD.",
   "transcripts": {
