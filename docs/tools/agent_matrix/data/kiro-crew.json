@@ -29,9 +29,9 @@
   },
   "latest_major_update": {
     "value": "Oct '26",
-    "source_url": "https://github.com/kirodotdev/KiroCrew/releases/tag/v0.8.0#source:~:text=A%20wake%20judge%20screens%20a%20monitoring%20loop",
-    "comment": "Kiro Crew v0.8.0 shipped October 9, 2026 with judged monitoring loops, a bundled agent CLI in the desktop app, folder-level steering, configurable transcript layout, agent templates, session forking and nesting, remote-crew chaining, richer redaction controls, and expanded conductor and crewmate management.",
-    "sort_date": "2026-10-09"
+    "source_url": "https://github.com/kirodotdev/KiroCrew/releases/tag/v0.9.0#source:~:text=Crew%20Mode",
+    "comment": "Kiro Crew v0.9.0 shipped October 16, 2026 with Crew Mode multi-topic orchestration, deeper Slack, Teams, Telegram, voice, schedule, memory, export, terminal, layout, governance, and usage surfaces, plus broad reliability and performance work.",
+    "sort_date": "2026-10-16"
   },
   "rules": {
     "support": "full",

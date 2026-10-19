@@ -33,8 +33,9 @@
   },
   "latest_major_update": {
     "value": "Oct '26",
-    "source_url": "https://github.blog/changelog/2026-10-09-github-copilot-weekly-releases-october-5/#github-copilot-weekly-releases-october-5:~:text=more%20control%20over%20what%20agents%20can%20access",
-    "comment": "GitHub's October 5 weekly release added Claude Haiku 5.5, broader account and environment controls, generally available local sandboxing across Agent Host surfaces, and local-model discovery in Copilot CLI. Dynamic workflows also arrived in the Copilot app and CLI on October 1."
+    "source_url": "https://github.blog/changelog/2026-10-15-copilot-in-slack-and-teams-adds-model-and-repository-updates/#multi-repo-support-in-slack-and-microsoft-teams:~:text=working%20across%20multiple%20repositories%20in%20a%20single%20conversation",
+    "comment": "GitHub Copilot's October 15, 2026 update added multi-repository conversations in Slack and Microsoft Teams, smoother repository switching, shared Slack thread context, and improved task startup and interruption recovery.",
+    "sort_date": "2026-10-15"
   },
   "rules": {
     "support": "full",

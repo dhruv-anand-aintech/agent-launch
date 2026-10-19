@@ -10,14 +10,16 @@
     "values": [
       "CLI",
       "IDE",
-      "Web"
+      "Web",
+      "Mobile"
     ],
     "source_url": "https://kiro.dev/cli/#get-started-with-kiro-cli:~:text=CLI",
-    "comment": "Kiro spans IDE, CLI, Web, ACP-compatible IDE use, and automation. Per-form-factor links: CLI: https://kiro.dev/cli/; IDE: https://kiro.dev/downloads/; Web: https://app.kiro.dev/.",
+    "comment": "Kiro spans IDE, CLI, Web, ACP-compatible IDE use, automation, and a native iOS app in limited TestFlight preview. Per-form-factor links: CLI: https://kiro.dev/cli/; IDE: https://kiro.dev/downloads/; Web: https://app.kiro.dev/; Mobile: https://kiro.dev/mobile/.",
     "links": {
       "CLI": "https://kiro.dev/cli/",
       "IDE": "https://kiro.dev/downloads/",
-      "Web": "https://app.kiro.dev/"
+      "Web": "https://app.kiro.dev/",
+      "Mobile": "https://kiro.dev/mobile/"
     }
   },
   "released_in": {
@@ -27,9 +29,9 @@
   },
   "latest_major_update": {
     "value": "Oct '26",
-    "source_url": "https://kiro.dev/changelog/#changelog:~:text=2.29.0%20CLI,Memory%20Across%20Chat%20Sessions",
-    "comment": "Kiro CLI 2.29.0 shipped October 9, 2026 with managed cross-session Memory for local V3 sessions, including read-write, read-only, and off controls plus automatic updates. Kiro IDE 1.2.56 also improved multi-agent Workflows, power search, Hook matching, and chat, terminal, and source-control reliability.",
-    "sort_date": "2026-10-09"
+    "source_url": "https://kiro.dev/changelog/#changelog:~:text=2.31.1%20CLI,Mermaid%20Diagram%20in%20Chat",
+    "comment": "Kiro CLI 2.31.1 shipped October 14, 2026 with Mermaid rendering in chat, saved settings in headless V3 runs, and fixes across prompts, model fallback, compaction, setup, sign-in, and workflow output. CLI 2.31.0 and IDE 1.3.0 also introduced local command sandboxing.",
+    "sort_date": "2026-10-14"
   },
   "rules": {
     "support": "full",
@@ -82,9 +84,9 @@
     "comment": "Custom agents can use predefined tool permissions and approved plans."
   },
   "sandbox_mode": {
-    "support": "partial",
-    "source_url": "https://kiro.dev/cli/#multi-step-workflows:~:text=tool%20permissions",
-    "comment": "Permissioning is documented; explicit local filesystem/network sandbox modes are not clear."
+    "support": "full",
+    "source_url": "https://kiro.dev/changelog/#changelog:~:text=Contain%20agent-run%20shell%20commands%20in%20a%20sandbox",
+    "comment": "Kiro CLI V3 and IDE expose a local command sandbox for agent-run shell commands and child processes, with blocked, development-host-only, or open outbound network modes. Local stdio MCP servers can run inside the same sandbox."
   },
   "resume": {
     "support": "full",

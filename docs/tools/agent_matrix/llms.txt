@@ -1,6 +1,6 @@
 # Coding Agent Feature Matrix
 > Compare 40 coding agents, CLIs, and IDEs across features.
-> https://compare.ainorthstar.tech | Updated 2026-10-10
+> https://compare.ainorthstar.tech | Updated 2026-10-19
 
 Agent                   Rel    FF     Fre   NoA   Oth   Rul   Skl   Hks   MCP   Cmd   Gol   Sub   Mon   Trn   Mod   App   San   Res   Con   Hdl   Fmt   Sta   Tel   Hst  BYOM
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -9,7 +9,7 @@ Amazon Q Developer CLI  Mar '2 CLI        Y     N     N     Y     ~     Y     Y 
 Amp                     May '2 CLI/SDK    Y           Y     Y     Y     Y     Y     N     N     Y     ~     ?     Y     ~     N     Y     Y     Y     Y     N     ?     Y     ~
 Antigravity             2025  CLI/IDE    Y                 Y     Y     Y     Y     ~     N     Y     ?     Y     ?     ~     ~     Y     Y     Y     Y     Y     ?     Y     Y
 Claude Code             Feb '2 CLI/Ext                      Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     ~     Y     Y     Y     Y     Y     Y     ~     ~
-Cline                   Jul '2 CLI/Ext    Y     Y     Y     Y     Y     Y     Y     Y     N     Y     ~     ?     Y     Y     ~     Y     ~     Y     Y     N     Y     N     Y
+Cline                   Jul '2 CLI/Ext    Y     Y     Y     Y     Y     Y     Y     Y     N     Y     ~     ?     Y     Y     ~     Y     ~     Y     Y     N     Y     Y     Y
 OpenAI Codex CLI        Apr '2 CLI/Ext    Y           Y     Y     Y     Y     Y     ~     Y     Y     ~     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y
 Cohere North            Jan '2 SDK/Web                      ~     ~     Y     Y     N     N     Y     ~     ~     ~     ~     Y     ~     ~     ~     ~     N     ~     Y     N
 Command Code            Jul '2 CLI/Ext    Y     N     Y     Y     Y     Y     Y     Y     Y     Y     ~     Y     Y     Y     ~     Y     Y     Y     ~     Y     Y     N     Y
@@ -29,7 +29,7 @@ JetBrains Junie         Jan '2 CLI/IDE    Y                 Y     Y     Y     Y 
 Kilo Code               Feb '2 CLI/Ext    Y     Y     Y     Y     Y     Y     Y     Y     N     Y     ~     ?     Y     Y     ~     Y     Y     Y     Y     N     Y     ~     Y
 Kimi Code CLI           May '2 CLI/Ext                      Y     Y     ~     Y     ~     N     Y     ~     ?     Y     Y     N     Y     Y     Y     Y     Y     ?     N     Y
 Kiro Crew               Aug '2 CLI/Web    Y     N     N     Y     Y     Y     Y     ~     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     ~     N     Y     N     N
-Kiro                    Jul '2 CLI/IDE    Y                 Y     Y     Y     Y     Y     N     Y     ~     ~     Y     Y     ~     Y     Y     Y     ~     ?     ?     Y     N
+Kiro                    Jul '2 CLI/IDE    Y                 Y     Y     Y     Y     Y     N     Y     ~     ~     Y     Y     Y     Y     Y     Y     ~     ?     ?     Y     N
 MiMo Code               Jun '2 CLI/IDE    Y     Y     Y     Y     Y     ~     Y     Y     Y     Y     ~     Y     Y     Y     ~     Y     Y     Y     Y     ?     ?     N     Y
 Muse Code               Aug '2 CLI        ?     N     N     Y     Y     ?     ?     ~     N     Y     ~     Y     Y     Y     Y     Y     Y     Y     Y     ?     ?     N     ~
 OpenAI Agents API       Sep '2 SDK/Hos    N     N     N     ~     Y     Y     Y     N     N     Y     Y     Y     Y     ~     Y     Y     Y     Y     Y     N     Y     Y     N
@@ -38,7 +38,7 @@ OpenHands               Mar '2 CLI/IDE    Y     Y     Y     Y     Y     Y     Y 
 Pi                      May '2 CLI/SDK          Y     Y     Y     Y     Y     Y     Y     N     N     N     Y     Y     N     N     Y     Y     Y     Y     N     ~     N     Y
 Pier Code               Jun '2 CLI        N     ~     N     Y     ~     ~     Y     ?     Y     Y     ~     Y     Y     Y     Y     Y     Y     Y     Y     ?     Y     Y     ~
 Qoder                   Oct '2 CLI/IDE                      Y     Y     Y     Y     Y     Y     Y     ~     Y     Y     Y     Y     Y     Y     Y     Y     Y     ?     Y     Y
-Qwen Code               Jun '2 CLI/Ext                      Y     Y     Y     Y     Y     Y     Y     Y     ?     Y     Y     Y     Y     Y     Y     Y     Y     Y     ~     Y
+Qwen Code               Jun '2 CLI/Ext                      Y     Y     Y     Y     Y     Y     Y     Y     ?     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y     Y
 Replit Agent            Sep '2 Web                          ~     Y     ~     ?     N     N     ~     ~     ~     N     ~     Y     ~     ~     N     N     N     ?     Y     N
 Roo Code                Mid-20 Extensi                      Y     Y     N     Y     Y     N     Y     ~     ?     Y     Y     N     ~     Y     Y     ~     N     Y     N     Y
 Trae Agent              Jun '2 CLI        Y     Y     Y     ~     N     N     ~     N     N     N     N     Y     Y     N     ~     N     N     Y     ~     N     N     N     Y
@@ -242,7 +242,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Output Format: full - Full JSON output via --json flag. Newline-delimited JSON objects with type, text, ts, say/ask subtype, reasoning, partial.
 - Statusline: none - No customizable status line found in documentation or CLI reference.
 - Telemetry: full - Anonymous telemetry with user toggle. Never captures code/file contents. Enterprise: OpenTelemetry integration (OTLP export to Datadog/Grafana/Splunk).
-- Hosted Agent: none - Runs locally as VS Code extension or CLI.
+- Hosted Agent: full - Cline Cloud sessions run a task in a hosted sandbox against a selected GitHub repository and branch, keep running after the editor closes, and report status in Recent and History. The feature is rolling out gradually.
 - Custom Model Provider: full - Any OpenAI-compatible API endpoint supported. 30+ documented providers. BYOK model.
 - Pricing: Free for individuals; pay only for AI inference credits or BYOK; Enterprise custom
 - Notes: Cline has the most comprehensive feature set of any coding agent in this matrix: 17/20 fields at full support. Open source (Apache 2.0), originally 'Claude Dev'. Started as VS Code extension, expanded to CLI and SDK. 8M+ installs.
@@ -643,7 +643,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Website: https://x.ai/news/grok-build-cli
 - Form factor: CLI, Web, Mobile
 - Released: May '26
-- Latest update: Sep '26
+- Latest update: Oct '26
 - Some Free Usage: blank
 - No Account Required: blank
 - Can Use Other Subscriptions: blank
@@ -868,7 +868,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 ### Kiro
 - Docs: https://kiro.dev/docs/
 - Website: https://kiro.dev/
-- Form factor: CLI, IDE, Web
+- Form factor: CLI, IDE, Web, Mobile
 - Released: Jul '25
 - Latest update: Oct '26
 - Some Free Usage: full - Kiro billing docs say new users start on the perpetual Kiro Free tier.
@@ -885,7 +885,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Transcripts: partial - Location: Kiro CLI uses directory-based conversation persistence; exact transcript directory is not specified in the public docs reviewed.
 - Model Selection: full - CLI /model displays and selects available models.
 - Approval Mode: full - Custom agents can use predefined tool permissions and approved plans.
-- Sandbox Mode: partial - Permissioning is documented; explicit local filesystem/network sandbox modes are not clear.
+- Sandbox Mode: full - Kiro CLI V3 and IDE expose a local command sandbox for agent-run shell commands and child processes, with blocked, development-host-only, or open outbound network modes. Local stdio MCP servers can run inside the same sandbox.
 - Resume: full - Directory-based conversation persistence and /save /load.
 - Continue: full - kiro chat preserves project conversation history for continuing work.
 - Non Interactive: full - Headless --print examples are documented for CI/CD automation.
@@ -1164,7 +1164,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Website: https://qwenlm.github.io/qwen-code-docs/
 - Form factor: CLI, Extension, SDK, Web, Desktop App, Mobile
 - Released: Jun '25
-- Latest update: Sep '26
+- Latest update: Oct '26
 - Some Free Usage: blank
 - No Account Required: blank
 - Can Use Other Subscriptions: blank
@@ -1186,7 +1186,7 @@ FF = Form factor (CLI/IDE/Ext/SDK/Web)
 - Output Format: full - Three formats: text (default), json (structured array), stream-json (line-delimited, real-time). --include-partial-messages for granular streaming.
 - Statusline: full - Custom status line via ui.statusLine in settings.json. Shell command receives JSON context. Multi-line support, hot reload, refreshInterval for timer-based updates.
 - Telemetry: full - OpenTelemetry-based: traces, logs, metrics. Export to local file, OTLP collector, Alibaba Cloud Managed Service. Privacy opt-out via privacy.usageStatisticsEnabled.
-- Hosted Agent: partial - Can use Alibaba Cloud Coding Plan for hosted model access; agent runs locally.
+- Hosted Agent: full - Qwen Code managed sessions run on hosted runtimes with workspace creation, approval policy, model selection, static skills, pinned MCP and Hook catalogs, snapshot-isolated child agents, and persistent Kubernetes workspace storage.
 - Custom Model Provider: full - modelProviders config with openai/anthropic/gemini auth types. Local models via any OpenAI-compatible endpoint (Ollama, vLLM, LM Studio). OpenRouter, Fireworks AI.
 - Pricing: Free open-source CLI; Alibaba Cloud auth supports Token Plan (Team), Coding Plan fixed monthly, or pay-as-you-go; Qwen Cloud free quota/API pricing also available
 - Notes: Qwen Code by Alibaba (QwenLM) is the most feature-complete open-source coding agent in this matrix -- 20/20 fields at full (tied with Cline). Standout features: macOS Seatbelt + Docker sandbox, OpenTelemetry telemetry, custom status line, three output formats. Apache-2.0, 24.6k stars.

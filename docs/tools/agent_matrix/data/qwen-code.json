@@ -32,10 +32,10 @@
     "comment": "GitHub repo created June 26, 2025, with the earliest public releases following shortly afterward."
   },
   "latest_major_update": {
-    "value": "Sep '26",
-    "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.24.7#source:~:text=admit%20workspace-bound%20sessions%20without%20execution",
-    "comment": "Qwen Code v0.24.7 shipped September 29, 2026 with workspace-bound managed sessions, managed-runtime tools running in the session workspace, routing between legacy and managed engines, and private Hosted Harness text turns without tools.",
-    "sort_date": "2026-09-29"
+    "value": "Oct '26",
+    "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.25.3#source:~:text=Managed%20sessions%20created%20from%20published%20AgentDefinitions",
+    "comment": "Qwen Code v0.25.3 shipped October 19, 2026 with hosted managed sessions, published AgentDefinition skills and catalog selections, snapshot-isolated hosted child agents, resident Kubernetes workspaces, richer Web Shell execution and file panels, and managed-session model and approval controls.",
+    "sort_date": "2026-10-19"
   },
   "rules": {
     "support": "full",
@@ -134,9 +134,9 @@
     "comment": "Fresh search found Alibaba Cloud Qwen Code docs with three billing plans: Token Plan, Coding Plan, and pay-as-you-go. Alibaba also documents Coding Plan as fixed monthly access to Qwen/GLM/Kimi/MiniMax models in coding tools."
   },
   "hosted_agent": {
-    "support": "partial",
-    "source_url": "https://github.com/QwenLM/qwen-code#usage:~:text=As%20an%20open-source%20terminal%20agent",
-    "comment": "Can use Alibaba Cloud Coding Plan for hosted model access; agent runs locally."
+    "support": "full",
+    "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.25.3#source:~:text=Hosted%20Runtimes",
+    "comment": "Qwen Code managed sessions run on hosted runtimes with workspace creation, approval policy, model selection, static skills, pinned MCP and Hook catalogs, snapshot-isolated child agents, and persistent Kubernetes workspace storage."
   },
   "transcripts": {
     "support": "unknown",

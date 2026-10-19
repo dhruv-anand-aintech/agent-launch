@@ -25,9 +25,9 @@
   },
   "latest_major_update": {
     "value": "Oct '26",
-    "source_url": "https://github.com/aaif-goose/goose/releases/tag/v1.54.0#source:~:text=HTML%20session%20export%20with%20an%20interactive%20viewer",
-    "comment": "Goose v1.54.0 shipped October 8, 2026 with interactive HTML session export, first-run mode selection, adaptive thinking for Claude Sonnet and Haiku 5.5, improved subagent state handling, extension leases, and fixes across Copilot authentication, model effort aliases, updates, usage accounting, and provider configuration.",
-    "sort_date": "2026-10-08"
+    "source_url": "https://github.com/aaif-goose/goose/releases/tag/v1.55.0#source:~:text=AIgateway%20declarative%20provider",
+    "comment": "Goose v1.55.0 shipped October 16, 2026 with a declarative AI Gateway provider, W3C trace propagation from ACP prompts to MCP calls, provider request IDs, live OpenAI model metadata, Responses API preference, custom-provider vision metadata, and a bounded auto-compaction default.",
+    "sort_date": "2026-10-16"
   },
   "rules": {
     "support": "full",

@@ -23,9 +23,9 @@
   },
   "latest_major_update": {
     "value": "Oct '26",
-    "source_url": "https://github.com/github/copilot-cli/releases/tag/v1.0.95#source:~:text=Use%20native%20Microsoft%20Entra%20broker%20authentication%20on%20macOS",
-    "comment": "Copilot CLI v1.0.95 shipped October 9, 2026 with native Microsoft Entra broker authentication on macOS, sandbox credential host injection controls, correct `--context` handling for new and resumed ACP sessions, and less noisy managed-plugin setup retries.",
-    "sort_date": "2026-10-09"
+    "source_url": "https://github.com/github/copilot-cli/releases/tag/v1.0.98#source:~:text=Add%20support%20for%20Gemini%204%20Argon",
+    "comment": "GitHub Copilot CLI v1.0.98 shipped October 14, 2026 with Gemini 4 Argon support, more reliable command hooks, session-correct MCP status after split-view switches, safer resume behavior for pending permissions, and improved /ask expansion and copying.",
+    "sort_date": "2026-10-14"
   },
   "rules": {
     "support": "full",

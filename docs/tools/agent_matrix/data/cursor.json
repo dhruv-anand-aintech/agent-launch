@@ -31,8 +31,9 @@
   },
   "latest_major_update": {
     "value": "Oct '26",
-    "source_url": "https://cursor.com/changelog#remote-control-for-local-agents:~:text=see%20and%20reply%20to%20the%20local%20agents%20running%20on%20your%20computer",
-    "comment": "Cursor added remote control for local agents on October 6, 2026. The iOS app can list local agents, show their activity, and send follow-up messages while execution remains on the paired computer."
+    "source_url": "https://cursor.com/changelog/cloud-agent-canvases-and-environments#cloud-agent-canvases-and-environment-improvements:~:text=Oct%2016%2C%202026",
+    "comment": "Cursor's October 16, 2026 update added shareable interactive canvases from cloud agents, a beta Environments API for programmatic cloud-environment management, support for up to 300 repositories per environment, and faster large-environment loading.",
+    "sort_date": "2026-10-16"
   },
   "rules": {
     "support": "full",

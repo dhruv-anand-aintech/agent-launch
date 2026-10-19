@@ -31,9 +31,9 @@
   },
   "latest_major_update": {
     "value": "Oct '26",
-    "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.162.1#source:~:text=Fixed%20a%20TUI%20crash%20when%20asynchronous%20questions%20contain%20multiple%20lines",
-    "comment": "Codex CLI rust-v0.162.1 shipped October 9, 2026 with fixes for multiline asynchronous-question rendering and startup failures caused by background-server feature settings differing from CLI defaults.",
-    "sort_date": "2026-10-09"
+    "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.163.0#source:~:text=Open%20%60%2Fconfig%60%20to%20search%20preferences",
+    "comment": "Codex CLI rust-v0.163.0 shipped October 15, 2026 with searchable live configuration, immediate steering and interruption, configurable leader keys, managed daemon restarts, parallel read-only tool calls, restored resume permissions, and network-proxy hardening.",
+    "sort_date": "2026-10-15"
   },
   "rules": {
     "support": "full",

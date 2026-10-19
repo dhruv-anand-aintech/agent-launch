@@ -31,9 +31,9 @@
   },
   "latest_major_update": {
     "value": "Oct '26",
-    "source_url": "https://github.com/OpenHands/OpenHands/releases/tag/v1.26.0#source:~:text=verify-openhands%20skill%20with%20control-openhands%20CLI",
-    "comment": "OpenHands v1.26.0 shipped October 8, 2026 with a verify-openhands skill and control CLI, authenticated backend helpers, clearer suspended-workspace switching, improved enterprise onboarding and automation review states, and extensive accessibility, MCP, telemetry, Canvas, cloud-sandbox, and settings fixes.",
-    "sort_date": "2026-10-08"
+    "source_url": "https://github.com/OpenHands/OpenHands/releases/tag/v1.27.1#source:~:text=copy%20MARS%20web%20bridge%20modules",
+    "comment": "OpenHands v1.27.1 shipped October 12, 2026 with Docker image fixes for MARS web bridge modules, theme-aware warning feedback, and refreshed verify-openhands maintenance guidance.",
+    "sort_date": "2026-10-12"
   },
   "rules": {
     "support": "full",

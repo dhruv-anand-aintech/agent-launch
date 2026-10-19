@@ -29,9 +29,9 @@
   },
   "latest_major_update": {
     "value": "Sep '26",
-    "source_url": "https://github.com/MoonshotAI/kimi-code/releases/tag/%40moonshot-ai%2Fkimi-code%402.1.1#source:~:text=Revert%20filesystem%20watchers",
-    "comment": "Kimi Code 2.1.1 shipped September 24, 2026, rolling back overly defensive 2.1.0 changes and restoring filesystem watchers for configuration and workspace files by default, with an opt-out through `[watch] enabled = false` or `KIMI_CODE_WATCH=0`.",
-    "sort_date": "2026-09-24"
+    "source_url": "https://github.com/MoonshotAI/kimi-code/releases/tag/%40moonshot-ai%2Fkimi-code%402.2.0#source:~:text=Add%20an%20opt-in%20NotifyUser%20progress%20update%20feature",
+    "comment": "Kimi Code 2.2.0 shipped October 14, 2026 with opt-in mid-turn progress notices, `kimi app` desktop-chat launching, bounded interruptible background waits, deterministic Tower orchestration, workspace trust controls, and improved skill-prompt presentation.",
+    "sort_date": "2026-10-14"
   },
   "rules": {
     "support": "full",

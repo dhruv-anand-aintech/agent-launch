@@ -24,9 +24,9 @@
   },
   "latest_major_update": {
     "value": "Oct '26",
-    "source_url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.63.0#source:~:text=enable%20autonomous%20plan%20execution%20in%20non-interactive%20mode",
-    "comment": "Gemini CLI v0.63.0 shipped October 6, 2026 with autonomous plan execution in non-interactive mode and fixes for connection recovery, MCP configuration validation, stdin restoration, long-running agent memory, temporary-directory cleanup, ACP session initialization, and headless authentication loops.",
-    "sort_date": "2026-10-06"
+    "source_url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.64.0#source:~:text=propagate%20resolved%20folder%20trust%20state%20in%20headless%20mode",
+    "comment": "Gemini CLI v0.64.0 shipped October 13, 2026 with A2A settings migration, ACP usage notifications, headless folder-trust propagation, atomic file operations and state persistence, bounded recording history, and terminal input reliability fixes.",
+    "sort_date": "2026-10-13"
   },
   "rules": {
     "support": "full",

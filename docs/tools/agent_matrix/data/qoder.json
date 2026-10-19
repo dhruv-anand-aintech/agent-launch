@@ -35,9 +35,9 @@
   },
   "latest_major_update": {
     "value": "Oct '26",
-    "source_url": "https://docs.qoder.com/release-notes/qoder-cli#october-9-2026:~:text=CLI%201.1.67",
-    "comment": "Qoder CLI 1.1.67 shipped October 9, 2026 with improved model-information display. Version 1.1.66 added the built-in qoder-plugins marketplace and fixed context accounting after compaction plus ACP history-replay completion semantics.",
-    "sort_date": "2026-10-09"
+    "source_url": "https://docs.qoder.com/release-notes/qoder-cli#october-16-2026:~:text=CLI%201.1.73",
+    "comment": "Qoder CLI 1.1.73 shipped October 16, 2026 with `qoder sites` subcommands for site capabilities. The intervening releases improved subagent startup, session cleanup, model loading, response retries, MCP stability, and input preservation.",
+    "sort_date": "2026-10-16"
   },
   "rules": {
     "support": "full",
