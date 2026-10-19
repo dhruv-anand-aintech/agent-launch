@@ -1,6 +1,121 @@
 {
-  "entry_count": 2025,
+  "entry_count": 2052,
   "entries": [
+    {
+      "date": "2026-10-19",
+      "commit": "0d51bd9",
+      "title": "Scheduled coding agent matrix update",
+      "items": [
+        {
+          "summary": "Antigravity: Latest Major Update evidence refreshed",
+          "target": "cell-antigravity-latest-major-update"
+        },
+        {
+          "summary": "Claude Code: Latest Major Update evidence refreshed",
+          "target": "cell-claude-code-latest-major-update"
+        },
+        {
+          "summary": "Cline: Hosted Agent now supported",
+          "target": "cell-cline-hosted-agent"
+        },
+        {
+          "summary": "Cline: Latest Major Update evidence refreshed",
+          "target": "cell-cline-latest-major-update"
+        },
+        {
+          "summary": "OpenAI Codex CLI: Latest Major Update evidence refreshed",
+          "target": "cell-codex-cli-latest-major-update"
+        },
+        {
+          "summary": "Cursor: Latest Major Update evidence refreshed",
+          "target": "cell-cursor-latest-major-update"
+        },
+        {
+          "summary": "Devin: Latest Major Update evidence refreshed",
+          "target": "cell-devin-latest-major-update"
+        },
+        {
+          "summary": "Fx: Latest Major Update evidence refreshed",
+          "target": "cell-fx-latest-major-update"
+        },
+        {
+          "summary": "Gemini CLI: Latest Major Update evidence refreshed",
+          "target": "cell-gemini-cli-latest-major-update"
+        },
+        {
+          "summary": "GitHub Copilot CLI: Latest Major Update evidence refreshed",
+          "target": "cell-github-copilot-cli-latest-major-update"
+        },
+        {
+          "summary": "GitHub Copilot: Latest Major Update evidence refreshed",
+          "target": "cell-github-copilot-coding-agent-latest-major-update"
+        },
+        {
+          "summary": "Goose: Latest Major Update evidence refreshed",
+          "target": "cell-goose-latest-major-update"
+        },
+        {
+          "summary": "Grok Build: Latest Major Update updated to Oct '26",
+          "target": "cell-grok-build-latest-major-update"
+        },
+        {
+          "summary": "JetBrains Junie: Latest Major Update evidence refreshed",
+          "target": "cell-junie-latest-major-update"
+        },
+        {
+          "summary": "Kilo Code: Latest Major Update evidence refreshed",
+          "target": "cell-kilo-code-latest-major-update"
+        },
+        {
+          "summary": "Kimi Code CLI: Latest Major Update evidence refreshed",
+          "target": "cell-kimi-cli-latest-major-update"
+        },
+        {
+          "summary": "Kiro Crew: Latest Major Update evidence refreshed",
+          "target": "cell-kiro-crew-latest-major-update"
+        },
+        {
+          "summary": "Kiro: Form Factor updated to CLI, IDE, Web, Mobile",
+          "target": "cell-kiro-form-factor"
+        },
+        {
+          "summary": "Kiro: Latest Major Update evidence refreshed",
+          "target": "cell-kiro-latest-major-update"
+        },
+        {
+          "summary": "Kiro: Sandbox now supported",
+          "target": "cell-kiro-sandbox-mode"
+        },
+        {
+          "summary": "OpenCode: Latest Major Update evidence refreshed",
+          "target": "cell-opencode-latest-major-update"
+        },
+        {
+          "summary": "OpenHands: Latest Major Update evidence refreshed",
+          "target": "cell-openhands-latest-major-update"
+        },
+        {
+          "summary": "Pi: Latest Major Update evidence refreshed",
+          "target": "cell-pi-latest-major-update"
+        },
+        {
+          "summary": "Qoder: Latest Major Update evidence refreshed",
+          "target": "cell-qoder-latest-major-update"
+        },
+        {
+          "summary": "Qwen Code: Hosted Agent now supported",
+          "target": "cell-qwen-code-hosted-agent"
+        },
+        {
+          "summary": "Qwen Code: Latest Major Update updated to Oct '26",
+          "target": "cell-qwen-code-latest-major-update"
+        },
+        {
+          "summary": "ZCode: Latest Major Update evidence refreshed",
+          "target": "cell-zcode-latest-major-update"
+        }
+      ]
+    },
     {
       "date": "2026-10-10",
       "commit": "ccb1e70",

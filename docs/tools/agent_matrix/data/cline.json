@@ -29,9 +29,9 @@
   },
   "latest_major_update": {
     "value": "Oct '26",
-    "source_url": "https://github.com/cline/cline/releases/tag/v4.1.23#source:~:text=If%20a%20model's%20response%20ends%20without%20a%20recognized%20finish%20reason",
-    "comment": "Cline v4.1.23 shipped October 7, 2026 with one-shot recovery for unrecognized model finish reasons and a refreshed model catalog. Desktop v0.0.45 and CLI v3.0.70 followed October 8 with SSH, MCP, reasoning compatibility, credential migration, and dashboard-command fixes.",
-    "sort_date": "2026-10-08"
+    "source_url": "https://github.com/cline/cline/releases/tag/v4.1.25#source:~:text=Cline%20Cloud%20sessions",
+    "comment": "Cline v4.1.25 shipped October 16, 2026 with gradually rolling Cline Cloud sessions that run tasks in hosted GitHub-backed sandboxes after the editor closes, plus refreshed provider defaults and local-model request reliability fixes.",
+    "sort_date": "2026-10-16"
   },
   "rules": {
     "support": "full",
@@ -145,9 +145,9 @@
     "comment": "Cline documents OpenAI Codex OAuth so users can bring a ChatGPT subscription, and also supports BYOK providers."
   },
   "hosted_agent": {
-    "support": "none",
-    "source_url": "https://cline.bot/#the-open-coding-agent:~:text=One%20open%20source%20agent%20runtime",
-    "comment": "Runs locally as VS Code extension or CLI."
+    "support": "full",
+    "source_url": "https://github.com/cline/cline/releases/tag/v4.1.25#source:~:text=Cline%20Cloud%20sessions",
+    "comment": "Cline Cloud sessions run a task in a hosted sandbox against a selected GitHub repository and branch, keep running after the editor closes, and report status in Recent and History. The feature is rolling out gradually."
   },
   "transcripts": {
     "support": "unknown",

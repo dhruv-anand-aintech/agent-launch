@@ -25,9 +25,9 @@
   },
   "latest_major_update": {
     "value": "Oct '26",
-    "source_url": "https://github.com/earendil-works/pi/releases/tag/v1.1.0#source:~:text=Program%20status%20reporting",
-    "comment": "Pi v1.1.0 shipped October 7, 2026 with OSC 7501 program-status reporting, additive and subtractive default-tool selection, Claude Haiku 5.5, GPT-6 Luna image classifiers, native llama.cpp decision models, execution-duration events, and broad MCP, session, provider, context, and terminal fixes.",
-    "sort_date": "2026-10-07"
+    "source_url": "https://github.com/earendil-works/pi/releases/tag/v1.3.0#source:~:text=Choose%20where%20%60%2Fshare%60%20uploads",
+    "comment": "Pi v1.3.0 shipped October 15, 2026 with configurable session-share destinations, cache-preserving GPT-6 thinking-level changes, improved Kimi Code protocol support, cleaner model switching, and correct restoration of active tools when resuming sessions.",
+    "sort_date": "2026-10-15"
   },
   "rules": {
     "support": "full",

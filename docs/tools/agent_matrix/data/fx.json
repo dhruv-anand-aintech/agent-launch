@@ -27,9 +27,9 @@
   },
   "latest_major_update": {
     "value": "Oct '26",
-    "source_url": "https://github.com/vercel-labs/fx/releases/tag/v0.0.13#source:~:text=fx%20now%20supports%20Ultrafast%20on%20supported%20OpenAI%20models",
-    "comment": "Fx v0.0.13 shipped October 4, 2026 with Ultrafast model execution, substantially faster launch, shell, exit, and MCP performance, configurable compaction thresholds, one-command Slack MCP setup, image checkpointing, and expanded ACP steering and MCP-host support.",
-    "sort_date": "2026-10-04"
+    "source_url": "https://github.com/vercel-labs/fx/releases/tag/v0.0.14#source:~:text=libfx%20is%20now%20durable%20out%20of%20the%20box",
+    "comment": "Fx v0.0.14 shipped October 16, 2026 with durable libfx sessions across crashes, redeploys, and timeouts; multiple named agents; queued and reconnectable server-side sessions; custom providers; subscription sign-in; lifecycle hooks; session conversion; and richer status and usage reporting.",
+    "sort_date": "2026-10-16"
   },
   "pricing": {
     "value": "Apache-2.0 CLI; model-provider usage is billed separately",

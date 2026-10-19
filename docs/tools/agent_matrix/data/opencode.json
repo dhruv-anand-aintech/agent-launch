@@ -29,9 +29,9 @@
   },
   "latest_major_update": {
     "value": "Oct '26",
-    "source_url": "https://github.com/anomalyco/opencode/releases/tag/v1.18.35#source:~:text=Added%20canonical%20redirects%20and%20JSON%20and%20Markdown%20data%20formats",
-    "comment": "OpenCode v1.18.35 shipped October 6, 2026 with canonical redirects and machine-readable JSON and Markdown formats for agent statistics, plus corrected xAI tool-result image handling.",
-    "sort_date": "2026-10-06"
+    "source_url": "https://github.com/anomalyco/opencode/releases/tag/v1.19.3#source:~:text=Configure%20model%20reasoning%20options",
+    "comment": "OpenCode v1.19.3 shipped October 16, 2026 with configurable model reasoning options that generate reasoning variants while preserving user-configured variant overrides.",
+    "sort_date": "2026-10-16"
   },
   "rules": {
     "support": "full",

@@ -31,9 +31,9 @@
   },
   "latest_major_update": {
     "value": "Oct '26",
-    "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.296#source:~:text=Added%20%60autoCompactWindow%60%20to%20subagent%20frontmatter",
-    "comment": "Claude Code v2.1.296 shipped October 9, 2026 with desktop Code-tab gateway policy, configurable subagent auto-compaction, a workflow-subagent model override, and overloaded-request retry controls. The preceding release added fail-closed command and HTTP hooks plus terminal program-status reporting.",
-    "sort_date": "2026-10-09"
+    "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.303#source:~:text=Bug%20fixes%20and%20reliability%20improvements",
+    "comment": "Claude Code v2.1.303 shipped October 18, 2026 with bug fixes and reliability improvements, superseding the October 9 release previously captured here.",
+    "sort_date": "2026-10-18"
   },
   "rules": {
     "support": "full",

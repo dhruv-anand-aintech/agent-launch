@@ -31,9 +31,9 @@
   },
   "latest_major_update": {
     "value": "Oct '26",
-    "source_url": "https://www.antigravity.google/docs/changelog#v2220:~:text=v2.22.0,October%208%2C%202026",
-    "comment": "Antigravity 2.22.0 shipped October 8, 2026 with plugin-provided UI extensions in the conversation side panel, drag-and-drop conversation organization, and localized conversation timestamps. Version 2.21.1 also added advanced conversation search, on-demand and scheduled Automations, grouped agent actions, and a Gruvbox Material theme.",
-    "sort_date": "2026-10-08"
+    "source_url": "https://www.antigravity.google/docs/changelog#v2240:~:text=v2.24.0,October%2015%2C%202026",
+    "comment": "Antigravity 2.24.0 shipped October 15, 2026 with a redesigned conversation side panel, /compact for long conversations, model selection for automations, additional sorting and pinning controls, and improved permission and media-review interfaces.",
+    "sort_date": "2026-10-15"
   },
   "rules": {
     "support": "full",

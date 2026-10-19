@@ -31,9 +31,9 @@
   },
   "latest_major_update": {
     "value": "Oct '26",
-    "source_url": "https://zcode.z.ai/en/changelog#release-v3145:~:text=3.14.5%20Released%20Oct%209%2C%202026",
-    "comment": "ZCode 3.14.5 shipped October 9, 2026 with a fix that preserves the displayed number of remaining reset chances after a manual reset. Version 3.14.4 disabled CAPTCHA verification for model requests to improve the free-tier experience.",
-    "sort_date": "2026-10-09"
+    "source_url": "https://zcode.z.ai/en/changelog#release-v3153:~:text=3.15.3%20Released%20Oct%2013%2C%202026",
+    "comment": "ZCode 3.15.3 shipped October 13, 2026 with updater, authentication, onboarding, slow-network, and parallel-agent reliability fixes. Version 3.15.1 added MCP App UI plugins, per-subagent workflow models, tunable and replayable workflows, Feishu collaboration, and safer autonomous-command approvals.",
+    "sort_date": "2026-10-13"
   },
   "rules": {
     "support": "full",

@@ -26,10 +26,10 @@
     "comment": "xAI launch announcement for the early beta."
   },
   "latest_major_update": {
-    "value": "Sep '26",
-    "source_url": "https://x.ai/changelog/build#changelog:~:text=Latest%20v1.0.46,Sep%2030%2C%202026",
-    "comment": "Grok Build v1.0.46 shipped September 30, 2026 with corrected MCP source reporting, clearer tool-search activity, preserved client rules after prompt rebuilds, symlink-safe permission matching, accurate post-compaction token counts, and improved terminal video-card handling.",
-    "sort_date": "2026-09-30"
+    "value": "Oct '26",
+    "source_url": "https://x.ai/changelog/build#changelog:~:text=Latest%20v1.0.62,Oct%2016%2C%202026",
+    "comment": "Grok Build 1.0.62 shipped October 16, 2026 with headless waiting for follow-up turns from background tasks, correct failure status on background wait timeouts, more reliable cold resume overlays, improved slash-command execution, and pipe-safe CLI output.",
+    "sort_date": "2026-10-16"
   },
   "rules": {
     "support": "full",

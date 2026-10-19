@@ -29,9 +29,9 @@
   },
   "latest_major_update": {
     "value": "Oct '26",
-    "source_url": "https://docs.devin.ai/release-notes/2026#october-7-2026:~:text=Notification%20Inbox",
-    "comment": "Devin's October 7, 2026 update added a notification inbox with mobile push controls, richer command-palette actions, merge-queue status across the app, stricter private-key redaction, improved Teams and Slack integration, refreshed plugin surfaces, and role-based Devin Review controls.",
-    "sort_date": "2026-10-07"
+    "source_url": "https://docs.devin.ai/release-notes/2026#october-16-2026:~:text=Multiple%20Side%20Chats%20from%20One%20Message",
+    "comment": "Devin's October 16, 2026 update added multiple side chats per message, archived-session command-palette search, editable idle queues, browser-preview wakeups, GitLab merge-request commands, Bitbucket merge-readiness checks, cross-provider pull-request search, and expanded GitHub repository tools.",
+    "sort_date": "2026-10-16"
   },
   "rules": {
     "support": "full",
