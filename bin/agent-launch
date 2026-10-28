@@ -107,6 +107,11 @@ DEFAULT_AGENT_ORDER = (
     "openhands",
     "amazonq",
 )
+# Agents whose CLIs start an interactive browser sign-in when no credentials are
+# stored (antigravity opens Google OAuth; aider offers OpenRouter OAuth on a
+# localhost callback and then opens its docs). Unattended failover must never
+# reach them implicitly, or a network/auth outage opens login tabs for the user.
+UNATTENDED_LOGIN_AGENTS = frozenset({"aider", "antigravity"})
 MODES = ("default", "ask", "plan", "auto", "danger")
 DEFAULT_CWD_ROUTER_MODEL = "gpt-5.6-luna"
 DEFAULT_CWD_ROUTER_TIMEOUT = 45.0
@@ -265,7 +270,8 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
         default=None,
         help=(
             "Non-interactive preferred agents as a comma-separated list. "
-            "Moves those agents to the front of the default failover order."
+            "Moves those agents to the front of the default failover order. "
+            "Browser-login agents (aider, antigravity) are only used when named explicitly."
         ),
     )
     parser.add_argument(
@@ -432,7 +438,11 @@ def parse_agent_list(raw: str | None, option_name: str) -> tuple[str, ...] | Non
 def preferred_agent_order(preferred: tuple[str, ...] | None) -> tuple[str, ...] | None:
     if not preferred:
         return None
-    return preferred + tuple(agent for agent in DEFAULT_AGENT_ORDER if agent not in preferred)
+    return preferred + tuple(
+        agent
+        for agent in DEFAULT_AGENT_ORDER
+        if agent not in preferred and agent not in UNATTENDED_LOGIN_AGENTS
+    )
 
 
 def env_key(agent: str, model_class: str) -> str:
