@@ -820,13 +820,16 @@ def append_model(cmd: list[str], agent: str, model: str | None, model_class: str
     if agent in MODEL_FLAG_AGENTS:
         cmd += ["--model", model]
     # Codex uses service_tier config for fast speed, not a model name suffix
-    if agent == "codex" and model_class == "fast":
+    if agent == "codex" and model_class == "fast" and "exec" in cmd:
         cmd += ["-c", "service_tier=fast"]
 
 
 def append_thinking_level(cmd: list[str], agent: str, args: argparse.Namespace, model_class: str, model: str | None) -> None:
     level = resolve_thinking_level(args)
     if agent == "codex":
+        # Interactive config overrides force embedded mode instead of the daemon.
+        if not args.non_interactive:
+            return
         if level == "auto":
             if model_class == "pro" and model == "gpt-5.6-sol":
                 cmd += ["-c", "model_reasoning_effort=medium"]
@@ -885,9 +888,6 @@ def build_command(args: argparse.Namespace) -> list[str]:
                 cmd.append(prompt)
 
     elif agent == "codex":
-        # Launch-time config overrides require the embedded interactive runtime.
-        if not non_interactive:
-            cmd += ["--no-daemon"]
         if non_interactive:
             cmd += ["-c", "mcp_servers.work-voice-tts.enabled=false"]
         if resume_requested or continue_session:

@@ -37,11 +37,11 @@ if __name__ == "__main__":
     unittest.main()
 
 
-class CodexEmbeddedTests(unittest.TestCase):
-    def test_interactive_launch_and_resume_select_embedded_runtime(self):
+class CodexDaemonTests(unittest.TestCase):
+    def test_interactive_launch_and_resume_preserve_daemon_runtime(self):
         for extra in ([], ["--resume"], ["--continue"]):
             with self.subTest(extra=extra):
                 args = AGL.parse_args(["-a", "codex", "--dry-run", *extra])
                 command = AGL.build_command(args)
-                self.assertIn("--no-daemon", command)
-                self.assertIn("-c", command)
+                self.assertNotIn("--no-daemon", command)
+                self.assertNotIn("-c", command)
