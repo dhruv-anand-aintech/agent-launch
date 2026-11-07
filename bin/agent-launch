@@ -885,6 +885,9 @@ def build_command(args: argparse.Namespace) -> list[str]:
                 cmd.append(prompt)
 
     elif agent == "codex":
+        # Launch-time config overrides require the embedded interactive runtime.
+        if not non_interactive:
+            cmd += ["--no-daemon"]
         if non_interactive:
             cmd += ["-c", "mcp_servers.work-voice-tts.enabled=false"]
         if resume_requested or continue_session:
