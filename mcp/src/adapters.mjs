@@ -512,7 +512,7 @@ export class AcpAdapter {
 
   async history({ providerSessionId, cwd, limit }) {
     const active = this.clients.get(providerSessionId);
-    if (active?.alive !== false) {
+    if (active && active.alive !== false) {
       return { updates: active.sessionUpdates(providerSessionId, limit), protocol: "acp", source: "active_runtime" };
     }
     const client = await this.startClient(cwd);
