@@ -38,6 +38,10 @@ if __name__ == "__main__":
 
 
 class CodexDaemonTests(unittest.TestCase):
+    def test_default_model_is_gpt_6_1_terra(self):
+        args = AGL.parse_args(["-a", "codex"])
+        self.assertEqual(AGL.resolve_model("codex", args), "gpt-6.1-terra")
+
     def test_interactive_launch_and_resume_preserve_daemon_runtime(self):
         for extra in ([], ["--resume"], ["--continue"]):
             with self.subTest(extra=extra):
@@ -45,3 +49,9 @@ class CodexDaemonTests(unittest.TestCase):
                 command = AGL.build_command(args)
                 self.assertNotIn("--no-daemon", command)
                 self.assertNotIn("-c", command)
+
+
+class ClaudeModelDefaultsTests(unittest.TestCase):
+    def test_pro_default_is_opus_and_fast_is_haiku(self):
+        self.assertEqual(AGL.resolve_model("claude", AGL.parse_args(["-a", "claude"])), "opus")
+        self.assertEqual(AGL.AGENTS["claude"].fast_model, "haiku")
