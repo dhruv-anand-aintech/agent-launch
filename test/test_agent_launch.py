@@ -1,7 +1,9 @@
 import importlib.machinery
 import importlib.util
+import os
 import sys
 import unittest
+from unittest import mock
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -49,6 +51,14 @@ class CodexDaemonTests(unittest.TestCase):
                 command = AGL.build_command(args)
                 self.assertNotIn("--no-daemon", command)
                 self.assertNotIn("-c", command)
+
+    def test_interactive_launch_disables_cmux_hook_overrides(self):
+        args = AGL.parse_args(["-a", "codex"])
+        command = AGL.build_command(args)
+        with mock.patch.dict(os.environ, {}, clear=True), mock.patch.object(AGL.os, "execvp", side_effect=OSError("stop")):
+            with self.assertRaisesRegex(OSError, "stop"):
+                AGL.run_command(args, command)
+            self.assertEqual(os.environ.get("CMUX_CODEX_HOOKS_DISABLED"), "1")
 
 
 class ClaudeModelDefaultsTests(unittest.TestCase):

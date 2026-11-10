@@ -1467,6 +1467,10 @@ def run_command(args: argparse.Namespace, cmd: list[str]) -> int:
     os.chdir(args.cwd)
     if args.non_interactive:
         return call_command(cmd, args.attempt_timeout)
+    if args.agent == "codex":
+        # cmux otherwise injects launch-time `-c hooks.*` overrides after AGL
+        # builds the command, which makes interactive Codex use embedded mode.
+        os.environ["CMUX_CODEX_HOOKS_DISABLED"] = "1"
     # Replace this wrapper so Codex/Claude/Cursor inherit a real controlling TTY.
     os.execvp(cmd[0], cmd)
     return 127
